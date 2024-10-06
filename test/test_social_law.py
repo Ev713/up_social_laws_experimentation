@@ -15,10 +15,10 @@
 
 import unified_planning as up
 from unified_planning.shortcuts import *
-from unified_planning.test import TestCase, main
 import up_social_laws
 from up_social_laws.single_agent_projection import SingleAgentProjection
-from up_social_laws.robustness_verification import RobustnessVerifier, SimpleInstantaneousActionRobustnessVerifier, WaitingActionRobustnessVerifier
+from up_social_laws.robustness_verification import RobustnessVerifier, SimpleInstantaneousActionRobustnessVerifier, \
+    WaitingActionRobustnessVerifier
 from up_social_laws.robustness_checker import SocialLawRobustnessChecker, SocialLawRobustnessStatus
 from up_social_laws.social_law import SocialLaw
 from up_social_laws.waitfor_specification import WaitforSpecification
@@ -32,6 +32,12 @@ from unified_planning.engines import PlanGenerationResultStatus
 from collections import namedtuple
 import random
 import os
+from unified_planning.test import (
+    unittest_TestCase,
+    skipIfNoPlanValidatorForProblemKind,
+    skipIfNoOneshotPlannerForProblemKind,
+    skipIfEngineNotAvailable,
+)
 
 POSITIVE_OUTCOMES = frozenset(
     [
@@ -52,24 +58,25 @@ PDDL_DOMAINS_PATH = os.path.join(FILE_PATH, "pddl")
 
 Example = namedtuple("Example", ["problem", "plan"])
 
+
 class RobustnessTestCase:
-    def __init__(self, name, 
-                    expected_outcome : SocialLawRobustnessStatus, 
-                    cars = ["car-north", "car-south", "car-east", "car-west"], 
-                    yields_list = [], 
-                    wait_drive = True):
+    def __init__(self, name,
+                 expected_outcome: SocialLawRobustnessStatus,
+                 cars=["car-north", "car-south", "car-east", "car-west"],
+                 yields_list=[],
+                 wait_drive=True):
         self.name = name
         self.cars = cars
         self.yields_list = yields_list
         self.expected_outcome = expected_outcome
-        self.wait_drive = wait_drive        
+        self.wait_drive = wait_drive
 
 
 def get_intersection_problem(
-    cars = ["car-north", "car-south", "car-east", "car-west"], 
-    yields_list = [], 
-    wait_drive = True,
-    durative = False) -> MultiAgentProblemWithWaitfor:
+        cars=["car-north", "car-south", "car-east", "car-west"],
+        yields_list=[],
+        wait_drive=True,
+        durative=False) -> MultiAgentProblemWithWaitfor:
     # intersection multi agent
     problem = MultiAgentProblemWithWaitfor("intersection")
 
@@ -85,7 +92,7 @@ def get_intersection_problem(
         problem.ma_environment.add_fluent(yieldsto, default_initial_value=False)
         dummy_loc = unified_planning.model.Object("dummy", loc)
         problem.add_object(dummy_loc)
-    
+
     problem.ma_environment.add_fluent(connected, default_initial_value=False)
     problem.ma_environment.add_fluent(free, default_initial_value=True)
 
@@ -107,56 +114,56 @@ def get_intersection_problem(
     problem.add_objects(directions)
 
     for d, l in intersection_map.items():
-        for i in range(len(l)-1):            
-            problem.set_initial_value(connected(unified_planning.model.Object(l[i], loc), unified_planning.model.Object(l[i+1], loc), unified_planning.model.Object(d, direction)), True)
+        for i in range(len(l) - 1):
+            problem.set_initial_value(
+                connected(unified_planning.model.Object(l[i], loc), unified_planning.model.Object(l[i + 1], loc),
+                          unified_planning.model.Object(d, direction)), True)
 
     # Agents
-    at = Fluent('at', BoolType(), l1=loc)    
+    at = Fluent('at', BoolType(), l1=loc)
     arrived = Fluent('arrived', BoolType())
     not_arrived = Fluent('not-arrived', BoolType())
-    start = Fluent('start', BoolType(), l=loc)        
+    start = Fluent('start', BoolType(), l=loc)
     traveldirection = Fluent('traveldirection', BoolType(), d=direction)
-    
+
     #  (:action arrive
-        #     :agent    ?a - car 
-        #     :parameters  (?l - loc)
-        #     :precondition  (and  
-        #     	(start ?a ?l)
-        #     	(not (arrived ?a))
-        #     	(free ?l)      
-        #       )
-        #     :effect    (and     	
-        #     	(at ?a ?l)
-        #     	(not (free ?l))
-        #     	(arrived ?a)
-        #       )
-        #   )
+    #     :agent    ?a - car
+    #     :parameters  (?l - loc)
+    #     :precondition  (and
+    #     	(start ?a ?l)
+    #     	(not (arrived ?a))
+    #     	(free ?l)
+    #       )
+    #     :effect    (and
+    #     	(at ?a ?l)
+    #     	(not (free ?l))
+    #     	(arrived ?a)
+    #       )
+    #   )
     if durative:
         arrive = DurativeAction('arrive', l=loc)
-        arrive.set_fixed_duration(1)        
+        arrive.set_fixed_duration(1)
         l = arrive.parameter('l')
-        
-        arrive.add_condition(StartTiming(),start(l))
-        arrive.add_condition(StartTiming(),not_arrived())
-        arrive.add_condition(OpenTimeInterval(StartTiming(), EndTiming()),free(l))
+
+        arrive.add_condition(StartTiming(), start(l))
+        arrive.add_condition(StartTiming(), not_arrived())
+        arrive.add_condition(OpenTimeInterval(StartTiming(), EndTiming()), free(l))
         arrive.add_effect(EndTiming(), at(l), True)
         arrive.add_effect(EndTiming(), free(l), False)
-        arrive.add_effect(EndTiming(), arrived(), True)        
-        arrive.add_effect(EndTiming(), not_arrived(), False)        
+        arrive.add_effect(EndTiming(), arrived(), True)
+        arrive.add_effect(EndTiming(), not_arrived(), False)
     else:
-        arrive = InstantaneousAction('arrive', l=loc)    
+        arrive = InstantaneousAction('arrive', l=loc)
         l = arrive.parameter('l')
         arrive.add_precondition(start(l))
         arrive.add_precondition(not_arrived())
         arrive.add_precondition(free(l))
         arrive.add_effect(at(l), True)
         arrive.add_effect(free(l), False)
-        arrive.add_effect(arrived(), True)   
-        arrive.add_effect(not_arrived(), False)   
+        arrive.add_effect(arrived(), True)
+        arrive.add_effect(not_arrived(), False)
 
-
-
-    #   (:action drive
+        #   (:action drive
     #     :agent    ?a - car 
     #     :parameters  (?l1 - loc ?l2 - loc ?d - direction ?ly - loc)
     #     :precondition  (and      	
@@ -180,47 +187,45 @@ def get_intersection_problem(
             drive = DurativeAction('drive', l1=loc, l2=loc, d=direction, ly=loc)
         else:
             drive = DurativeAction('drive', l1=loc, l2=loc, d=direction)
-        drive.set_fixed_duration(1)        
+        drive.set_fixed_duration(1)
         l1 = drive.parameter('l1')
         l2 = drive.parameter('l2')
-        d = drive.parameter('d')        
+        d = drive.parameter('d')
         drive.add_condition(StartTiming(), at(l1))
-        if wait_drive:        
+        if wait_drive:
             drive.add_condition(ClosedTimeInterval(StartTiming(), EndTiming()), free(l2))
         drive.add_condition(StartTiming(), traveldirection(d))
-        drive.add_condition(EndTiming(), connected(l1,l2,d))        
-        drive.add_effect(EndTiming(), at(l2),True)
+        drive.add_condition(EndTiming(), connected(l1, l2, d))
+        drive.add_effect(EndTiming(), at(l2), True)
         drive.add_effect(EndTiming(), free(l2), False)
         drive.add_effect(StartTiming(), at(l1), False)
         drive.add_effect(EndTiming(), free(l1), True)
         if len(yields_list) > 0:
             ly = drive.parameter('ly')
-            drive.add_condition(StartTiming(), yieldsto(l1,ly))
+            drive.add_condition(StartTiming(), yieldsto(l1, ly))
             drive.add_condition(ClosedTimeInterval(StartTiming(), EndTiming()), free(ly))
 
     else:
         if len(yields_list) > 0:
-            drive = InstantaneousAction('drive', l1=loc, l2=loc, d=direction, ly=loc)    
+            drive = InstantaneousAction('drive', l1=loc, l2=loc, d=direction, ly=loc)
         else:
             drive = InstantaneousAction('drive', l1=loc, l2=loc, d=direction)
         l1 = drive.parameter('l1')
         l2 = drive.parameter('l2')
         d = drive.parameter('d')
-        #ly = drive.parameter('ly')
+        # ly = drive.parameter('ly')
         drive.add_precondition(at(l1))
         drive.add_precondition(free(l2))  # Remove for yield/wait
         drive.add_precondition(traveldirection(d))
-        drive.add_precondition(connected(l1,l2,d))
+        drive.add_precondition(connected(l1, l2, d))
         if len(yields_list) > 0:
             ly = drive.parameter('ly')
-            drive.add_precondition(yieldsto(l1,ly))
+            drive.add_precondition(yieldsto(l1, ly))
             drive.add_precondition(free(ly))
-        drive.add_effect(at(l2),True)
+        drive.add_effect(at(l2), True)
         drive.add_effect(free(l2), False)
         drive.add_effect(at(l1), False)
-        drive.add_effect(free(l1), True)    
-
-
+        drive.add_effect(free(l1), True)
 
     plan = up.plans.SequentialPlan([])
 
@@ -228,7 +233,7 @@ def get_intersection_problem(
         carname = "car-" + d
         if carname in cars:
             car = Agent(carname, problem)
-        
+
             problem.add_agent(car)
             car.add_fluent(at, default_initial_value=False)
             car.add_fluent(arrived, default_initial_value=False)
@@ -243,24 +248,24 @@ def get_intersection_problem(
 
             glname = l[-1]
             globj = unified_planning.model.Object(glname, loc)
-            
+
             dobj = unified_planning.model.Object(d, direction)
 
             problem.set_initial_value(Dot(car, car.fluent("start")(slobj)), True)
-            problem.set_initial_value(Dot(car, car.fluent("traveldirection")(dobj)), True)        
+            problem.set_initial_value(Dot(car, car.fluent("traveldirection")(dobj)), True)
             car.add_public_goal(car.fluent("at")(globj))
-            #problem.add_goal(Dot(car, car.fluent("at")(globj)))
+            # problem.add_goal(Dot(car, car.fluent("at")(globj)))
 
             if len(yields_list) > 0:
                 yields = set()
                 for l1_name, ly_name in yields_list:
-                    problem.set_initial_value(yieldsto(problem.object(l1_name), problem.object(ly_name)), True)     
+                    problem.set_initial_value(yieldsto(problem.object(l1_name), problem.object(ly_name)), True)
                     yields.add(problem.object(l1_name))
                 for l1 in problem.objects(loc):
                     if l1 not in yields:
-                        problem.set_initial_value(yieldsto(l1, dummy_loc), True)        
+                        problem.set_initial_value(yieldsto(l1, dummy_loc), True)
 
-            # slobjexp1 = (ObjectExp(slobj)),        
+                        # slobjexp1 = (ObjectExp(slobj)),
             # plan.actions.append(up.plans.ActionInstance(arrive, slobjexp1, car))
 
             # for i in range(1,len(l)):
@@ -273,44 +278,50 @@ def get_intersection_problem(
     # Add waitfor annotations
     for agent in problem.agents:
         drive = agent.action("drive")
-        l2 = drive.parameter("l2")        
+        l2 = drive.parameter("l2")
         if wait_drive:
             problem.waitfor.annotate_as_waitfor(agent.name, drive.name, free(l2))
         if len(yields_list) > 0:
             ly = drive.parameter("ly")
-            problem.waitfor.annotate_as_waitfor(agent.name, drive.name, free(ly)) 
-
-
+            problem.waitfor.annotate_as_waitfor(agent.name, drive.name, free(ly))
 
     intersection = Example(problem=problem, plan=plan)
     return intersection
 
 
-class TestProblem(TestCase):
+class TestProblem(unittest_TestCase):
     def setUp(self):
-        TestCase.setUp(self)        
-        self.test_cases = [         
-            RobustnessTestCase("4cars_crash", SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_FAIL, yields_list=[], wait_drive=False),   
-            RobustnessTestCase("4cars_deadlock", SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_DEADLOCK, yields_list=[]),
-            RobustnessTestCase("4cars_yield_deadlock", SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_DEADLOCK, yields_list=[("south-ent", "east-ent"),("east-ent", "north-ent"),("north-ent", "west-ent"),("west-ent", "south-ent")]),
-            RobustnessTestCase("4cars_robust", SocialLawRobustnessStatus.ROBUST_RATIONAL, yields_list=[("south-ent", "cross-ne"),("north-ent", "cross-sw"),("east-ent", "cross-nw"),("west-ent", "cross-se")]),
-            RobustnessTestCase("2cars_crash", SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_FAIL, cars=["car-north", "car-east"], yields_list=[], wait_drive=False),   
-            RobustnessTestCase("2cars_robust", SocialLawRobustnessStatus.ROBUST_RATIONAL, cars=["car-north", "car-south"], yields_list=[], wait_drive=False)            
+        unittest_TestCase.setUp(self)
+        self.test_cases = [
+            RobustnessTestCase("4cars_crash", SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_FAIL, yields_list=[],
+                               wait_drive=False),
+            RobustnessTestCase("4cars_deadlock", SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_DEADLOCK,
+                               yields_list=[]),
+            RobustnessTestCase("4cars_yield_deadlock", SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_DEADLOCK,
+                               yields_list=[("south-ent", "east-ent"), ("east-ent", "north-ent"),
+                                            ("north-ent", "west-ent"), ("west-ent", "south-ent")]),
+            RobustnessTestCase("4cars_robust", SocialLawRobustnessStatus.ROBUST_RATIONAL,
+                               yields_list=[("south-ent", "cross-ne"), ("north-ent", "cross-sw"),
+                                            ("east-ent", "cross-nw"), ("west-ent", "cross-se")]),
+            RobustnessTestCase("2cars_crash", SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_FAIL,
+                               cars=["car-north", "car-east"], yields_list=[], wait_drive=False),
+            RobustnessTestCase("2cars_robust", SocialLawRobustnessStatus.ROBUST_RATIONAL,
+                               cars=["car-north", "car-south"], yields_list=[], wait_drive=False)
         ]
 
     def test_synthesis(self):
         problem = MultiAgentProblemWithWaitfor()
-        
+
         loc = UserType("loc")
-    
+
         # Environment     
-        connected = Fluent('connected', BoolType(), l1=loc, l2=loc)        
+        connected = Fluent('connected', BoolType(), l1=loc, l2=loc)
         problem.ma_environment.add_fluent(connected, default_initial_value=False)
 
         free = Fluent('free', BoolType(), l=loc)
         problem.ma_environment.add_fluent(free, default_initial_value=True)
 
-        nw, ne, sw, se = Object("nw", loc), Object("ne", loc), Object("sw", loc), Object("se", loc)        
+        nw, ne, sw, se = Object("nw", loc), Object("ne", loc), Object("sw", loc), Object("se", loc)
         problem.add_objects([nw, ne, sw, se])
         problem.set_initial_value(connected(nw, ne), True)
         problem.set_initial_value(connected(nw, sw), True)
@@ -321,7 +332,6 @@ class TestProblem(TestCase):
         problem.set_initial_value(connected(se, sw), True)
         problem.set_initial_value(connected(se, ne), True)
 
-
         at = Fluent('at', BoolType(), l1=loc)
 
         move = InstantaneousAction('move', l1=loc, l2=loc)
@@ -329,11 +339,11 @@ class TestProblem(TestCase):
         l2 = move.parameter('l2')
         move.add_precondition(at(l1))
         move.add_precondition(free(l2))
-        move.add_precondition(connected(l1,l2))
-        move.add_effect(at(l2),True)
+        move.add_precondition(connected(l1, l2))
+        move.add_effect(at(l2), True)
         move.add_effect(free(l2), False)
         move.add_effect(at(l1), False)
-        move.add_effect(free(l1), True)    
+        move.add_effect(free(l1), True)
 
         agent1 = Agent("a1", problem)
         problem.add_agent(agent1)
@@ -357,90 +367,83 @@ class TestProblem(TestCase):
         # problem.add_goal(Dot(agent1, at(sw)))
         # problem.add_goal(Dot(agent2, at(ne)))
 
-
         fd_planner = OneshotPlanner(name="fast-downward")
 
         slrc = SocialLawRobustnessChecker(
             planner=fd_planner,
             robustness_verifier_name="SimpleInstantaneousActionRobustnessVerifier",
             save_pddl_prefix="synth"
-            )
+        )
         l = SocialLaw()
-        l.disallow_action("a1", "move", ("nw","ne"))
-        l.disallow_action("a1", "move", ("sw","se"))
-        l.disallow_action("a2", "move", ("ne","nw"))
-        l.disallow_action("a2", "move", ("se","sw"))
+        l.disallow_action("a1", "move", ("nw", "ne"))
+        l.disallow_action("a1", "move", ("sw", "se"))
+        l.disallow_action("a2", "move", ("ne", "nw"))
+        l.disallow_action("a2", "move", ("se", "sw"))
         pr = l.compile(problem).problem
         # prr = slrc.is_robust(pr)
         # self.assertEqual(prr.status,SocialLawRobustnessStatus.ROBUST_RATIONAL)
 
         l2 = SocialLaw()
-        l.disallow_action("a1", "move", ("nw","ne"))
-        l.disallow_action("a2", "move", ("ne","nw"))
+        l.disallow_action("a1", "move", ("nw", "ne"))
+        l.disallow_action("a2", "move", ("ne", "nw"))
 
         self.assertTrue(l.is_stricter_than(l2))
         self.assertFalse(l2.is_stricter_than(l))
 
-        # g1 = SocialLawGenerator(SocialLawGeneratorSearch.BFS)
-        # rprob1 = g1.generate_social_law(problem)
-        # self.assertIsNotNone(rprob1)
-
-        # g2 = SocialLawGenerator(SocialLawGeneratorSearch.DFS)
-        # rprob2 = g2.generate_social_law(problem)
-        # self.assertIsNotNone(rprob2)
-
         g3 = get_gbfs_social_law_generator()
         rprob3 = g3.generate_social_law(problem)
         self.assertIsNotNone(rprob3)
-        
 
     def test_social_law(self):
         fd_planner = OneshotPlanner(name="fast-downward")
 
         slrc = SocialLawRobustnessChecker(
             planner=fd_planner,
-            robustness_verifier_name="SimpleInstantaneousActionRobustnessVerifier"
-            )
+            robustness_verifier_name="WaitingActionRobustnessVerifier"
+        )
         p_4cars_crash = get_intersection_problem(wait_drive=False).problem
         l = SocialLaw()
         for agent in p_4cars_crash.agents:
-            l.add_waitfor_annotation(agent.name, "drive", "free", ("l2",)  )
-        
+            l.add_waitfor_annotation(agent.name, "drive", "free", ("l2",))
+
         res = l.compile(p_4cars_crash)
         p_4cars_deadlock = res.problem
         self.assertEqual(len(p_4cars_crash.waitfor.waitfor_map), 0)
         self.assertEqual(len(p_4cars_deadlock.waitfor.waitfor_map), 4)
 
         r_result = slrc.is_robust(p_4cars_deadlock)
-        self.assertEqual(r_result.status, SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_DEADLOCK)
+        self.assertEqual(r_result.status, SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_DEADLOCK)  # 1
+
         r_result = slrc.is_robust(p_4cars_crash)
-        self.assertEqual(r_result.status, SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_FAIL)        
+        self.assertEqual(r_result.status, SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_FAIL)  # 2
 
         l2 = SocialLaw()
-        l2.disallow_action("car-north", "drive", ("south-ent", "cross-se", "north") )
+        l2.disallow_action("car-north", "drive", ("south-ent", "cross-se", "north"))
         res = l2.compile(p_4cars_crash)
         p_nosap = res.problem
 
         r_result = slrc.is_robust(p_nosap)
         self.assertEqual(r_result.status, SocialLawRobustnessStatus.NON_ROBUST_SINGLE_AGENT)
 
-        l3 = SocialLaw()        
-        l3.add_new_fluent(None, "yieldsto", (("l1","loc"), ("l2","loc")), False)
+        l3 = SocialLaw()
+        l3.add_new_fluent(None, "yieldsto", (("l1", "loc"), ("l2", "loc")), False)
         l3.add_new_object("dummy_loc", "loc")
-        for loc1,loc2 in [("south-ent", "cross-ne"),("north-ent", "cross-sw"),("east-ent", "cross-nw"),("west-ent", "cross-se")]:
+        for loc1, loc2 in [("south-ent", "cross-ne"), ("north-ent", "cross-sw"), ("east-ent", "cross-nw"),
+                           ("west-ent", "cross-se")]:
             l3.set_initial_value_for_new_fluent(None, "yieldsto", (loc1, loc2), True)
         for loc in p_4cars_crash.objects(p_4cars_crash.user_type("loc")):
             if loc.name not in ["south-ent", "north-ent", "east-ent", "west-ent"]:
                 l3.set_initial_value_for_new_fluent(None, "yieldsto", (loc.name, "dummy_loc"), True)
         for agent in p_4cars_crash.agents:
-            l3.add_parameter_to_action(agent.name, "drive", "ly", "loc")            
-            l3.add_precondition_to_action(agent.name, "drive", "yieldsto", ("l1", "ly") )            
-            l3.add_precondition_to_action(agent.name, "drive", "free", ("ly",) )
-            l3.add_waitfor_annotation(agent.name, "drive", "free", ("ly",) )
+            l3.add_parameter_to_action(agent.name, "drive", "ly", "loc")
+            l3.add_precondition_to_action(agent.name, "drive", "yieldsto", ("l1", "ly"))
+            l3.add_precondition_to_action(agent.name, "drive", "free", ("ly",))
+            l3.add_waitfor_annotation(agent.name, "drive", "free", ("ly",))
         res = l3.compile(p_4cars_deadlock)
         p_robust = res.problem
         r_result = slrc.is_robust(p_robust)
-        self.assertEqual(r_result.status, SocialLawRobustnessStatus.ROBUST_RATIONAL)
+
+        self.assertEqual(r_result.status, SocialLawRobustnessStatus.ROBUST_RATIONAL)  # 3
         self.assertEqual(len(p_robust.ma_environment.fluents), len(p_4cars_deadlock.ma_environment.fluents) + 1)
 
     def test_all_cases(self):
@@ -450,7 +453,7 @@ class TestProblem(TestCase):
             slrc = SocialLawRobustnessChecker(
                 planner=fd_planner,
                 robustness_verifier_name="SimpleInstantaneousActionRobustnessVerifier"
-                )
+            )
             r_result = slrc.is_robust(problem)
             self.assertEqual(r_result.status, t.expected_outcome, t.name)
             if t.expected_outcome == SocialLawRobustnessStatus.ROBUST_RATIONAL:
@@ -470,33 +473,31 @@ class TestProblem(TestCase):
     #             presult = slrc.solve(problem)
     #             self.assertIn(presult.status, POSITIVE_OUTCOMES, t.name)
 
-
     def test_centralizer(self):
         for t in self.test_cases:
-            for durative in [False]:# True]:
+            for durative in [False]:  # True]:
                 problem = get_intersection_problem(t.cars, t.yields_list, t.wait_drive, durative=durative).problem
                 mac = MultiAgentProblemCentralizer()
                 cresult = mac.compile(problem)
                 with OneshotPlanner(problem_kind=cresult.problem.kind) as planner:
                     presult = planner.solve(cresult.problem)
                     self.assertIn(presult.status, POSITIVE_OUTCOMES, t.name)
- 
-        
+
     def test_all_cases_durative(self):
         for t in self.test_cases:
             problem = get_intersection_problem(t.cars, t.yields_list, t.wait_drive, durative=True).problem
             with open("waitfor.json", "w") as f:
                 f.write(str(problem.waitfor))
 
-            slrc = SocialLawRobustnessChecker(                                
+            slrc = SocialLawRobustnessChecker(
                 save_pddl_prefix=t.name
-                )
+            )
             self.assertEqual(slrc.is_robust(problem).status, t.expected_outcome, t.name)
 
     def test_sa_ma_converter(self):
         reader = PDDLReader()
         random.seed(2023)
-        
+
         domain_filename = os.path.join(PDDL_DOMAINS_PATH, "transport", "domain.pddl")
         problem_filename = os.path.join(PDDL_DOMAINS_PATH, "transport", "task10.pddl")
         problem = reader.parse_problem(domain_filename, problem_filename)
@@ -506,6 +507,3 @@ class TestProblem(TestCase):
         result = samac.compile(problem)
 
         print(result.problem)
-        
-
-            
