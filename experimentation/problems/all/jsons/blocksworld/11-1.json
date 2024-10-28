@@ -1,0 +1,40 @@
+{
+            "blocks": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"],
+            "agents": ["a1", "a2", "a3", "a4"],
+            "init_values": {
+                "global": [
+                    ["clear", ["i"]],
+                    ["clear", ["f"]],
+                    ["clear", ["d"]],
+                    ["clear", ["g"]],
+                    ["ontable", ["i"]],
+                    ["ontable", ["k"]],
+                    ["ontable", ["h"]],
+                    ["ontable", ["a"]],
+                    ["on", ["j", "i"]],
+                    ["on", ["f", "e"]],
+                    ["on", ["e", "k"]],
+                    ["on", ["d", "c"]],
+                    ["on", ["c", "h"]],
+                    ["on", ["g", "b"]],
+                    ["on", ["b", "a"]]
+
+                ],
+                "a1": [["handempty", []]],
+                "a2": [["handempty", []]],
+                "a3": [["handempty", []]],
+                "a4": [["handempty", []]]
+            },
+            "goals": [
+                ["on", ["b", "d"]],
+                ["on", ["d", "j"]],
+                ["on", ["j", "k"]],
+                ["on", ["k", "h"]],
+                ["on", ["h", "a"]],
+                ["on", ["a", "c"]],
+                ["on", ["c", "f"]],
+                ["on", ["f", "g"]],
+                ["on", ["g", "i"]],
+                ["on", ["i", "e"]]
+            ]
+        }

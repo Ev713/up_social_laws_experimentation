@@ -1,0 +1,175 @@
+problem name = sl_None
+
+types = [loc, direction]
+
+environment fluents = [
+  bool connected[l1=loc, l2=loc, d=direction]
+  bool free[l=loc]
+]
+
+agents = [
+  Agent name = car-0
+
+private fluents = [
+ bool at[l1=loc]
+ bool arrived
+ bool not-arrived
+ bool start[l=loc]
+ bool left
+ bool goal[l=loc]
+ bool allowed__drive[l1=loc, l2=loc, d=direction]
+]
+
+public fluents = [
+]
+
+actions = [
+ action arrive(loc l) {
+    preconditions = [
+      start(l)
+      not-arrived
+      free(l)
+    ]
+    effects = [
+      at(l) := true
+      free(l) := false
+      arrived := true
+      not-arrived := false
+    ]
+  }
+ action drive(loc l1, loc l2, direction d) {
+    preconditions = [
+      at(l1)
+      free(l2)
+      connected(l1, l2, d)
+      allowed__drive(l1, l2, d)
+    ]
+    effects = [
+      at(l2) := true
+      free(l2) := false
+      at(l1) := false
+      free(l1) := true
+    ]
+  }
+ action leave(loc l) {
+    preconditions = [
+      at(l)
+      goal(l)
+    ]
+    effects = [
+      at(l) := false
+      free(l) := true
+      left := true
+      not-arrived := false
+    ]
+  }
+]
+
+private goals = [
+]
+
+public goals = [
+ left
+]
+
+
+  Agent name = car-1
+
+private fluents = [
+ bool at[l1=loc]
+ bool arrived
+ bool not-arrived
+ bool start[l=loc]
+ bool left
+ bool goal[l=loc]
+ bool allowed__drive[l1=loc, l2=loc, d=direction]
+]
+
+public fluents = [
+]
+
+actions = [
+ action arrive(loc l) {
+    preconditions = [
+      start(l)
+      not-arrived
+      free(l)
+    ]
+    effects = [
+      at(l) := true
+      free(l) := false
+      arrived := true
+      not-arrived := false
+    ]
+  }
+ action drive(loc l1, loc l2, direction d) {
+    preconditions = [
+      at(l1)
+      free(l2)
+      connected(l1, l2, d)
+      allowed__drive(l1, l2, d)
+    ]
+    effects = [
+      at(l2) := true
+      free(l2) := false
+      at(l1) := false
+      free(l1) := true
+    ]
+  }
+ action leave(loc l) {
+    preconditions = [
+      at(l)
+      goal(l)
+    ]
+    effects = [
+      at(l) := false
+      free(l) := true
+      left := true
+      not-arrived := false
+    ]
+  }
+]
+
+private goals = [
+]
+
+public goals = [
+ left
+]
+
+
+]
+
+objects = [
+  loc: [(0, 0), (0, 1), (1, 0), (1, 1)]
+  direction: [north, east, south, west]
+]
+
+initial values = [
+  connected((0, 0), (0, 1), north) := true
+  connected((0, 0), (1, 0), east) := true
+  connected((0, 1), (0, 0), south) := true
+  connected((0, 1), (1, 1), east) := true
+  connected((1, 0), (0, 0), west) := true
+  connected((1, 0), (1, 1), north) := true
+  connected((1, 1), (0, 1), west) := true
+  connected((1, 1), (1, 0), south) := true
+  car-0.start((0, 1)) := true
+  car-0.goal((1, 1)) := true
+  car-1.start((0, 0)) := true
+  car-1.goal((0, 1)) := true
+  car-0.allowed__drive((0, 1), (0, 0), south) := false
+  car-0.allowed__drive((1, 1), (0, 1), west) := false
+  car-1.allowed__drive((0, 1), (0, 0), south) := false
+  car-1.allowed__drive((1, 1), (0, 1), west) := false
+  car-0.allowed__drive((1, 0), (1, 1), north) := false
+  car-0.allowed__drive((0, 0), (1, 0), east) := false
+  car-1.allowed__drive((1, 0), (1, 1), north) := false
+  car-1.allowed__drive((0, 0), (1, 0), east) := false
+]
+
+goals = [
+]
+
+
+waitfor: {('car-1', 'arrive'): ['free(l)'], ('car-1', 'drive'): ['free(l2)', 'allowed__drive(l1, l2, d)'], ('car-0', 'drive'): ['free(l2)', 'allowed__drive(l1, l2, d)'], ('car-0', 'arrive'): ['free(l)']}

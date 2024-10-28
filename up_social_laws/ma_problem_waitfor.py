@@ -1,3 +1,4 @@
+
 # Copyright 2022 Technion
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -76,4 +77,4 @@ class MultiAgentProblemWithWaitfor(MultiAgentProblem):
         new_p._goals = self._goals[:]
         new_p._initial_defaults = self._initial_defaults.copy()
         new_p._waitfor = self.waitfor.clone()
-        return new_p   
+        return new_p

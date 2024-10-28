@@ -1,0 +1,113 @@
+
+evgeny@evgeny-mishlyakov-u:~/SocialLaws/up-social-laws$ pip install -e .
+
+evgeny@evgeny-mishlyakov-u:~/SocialLaws/up-social-laws$ pytest-3 test/test_social_law.py 
+
+
+blueprints:
+### 1
+
+        rbv = Compiler(
+            name=slrc._robustness_verifier_name,
+            problem_kind=p_robust.kind,
+            compilation_kind=CompilationKind.MA_SL_ROBUSTNESS_VERIFICATION)
+
+        p = rbv.compile(p_robust).problem
+        with OneshotPlanner(problem_kind=p.kind) as planner:
+            result = planner.solve(p)
+            print(result)
+
+        '''plan = result.plan
+        print('Action 16:')
+        for prob in [p, ]:
+            with SequentialSimulator(prob) as simulator:
+                state = simulator.get_initial_state()
+                t = 0
+                for action in plan.actions:
+                    t += 1
+                    if t == 45:#16:
+                        break
+                    state = simulator.apply(state, action)
+                    print(f'Action {action} taken\n')'''
+
+        # print(state)
+###
+
+###
+        '''rbv = Compiler(
+            name=slrc._robustness_verifier_name,
+            problem_kind=p_4cars_crash.kind,
+            compilation_kind=CompilationKind.MA_SL_ROBUSTNESS_VERIFICATION)
+
+        p = rbv.compile(p_4cars_crash).problem
+        with OneshotPlanner(problem_kind=p.kind) as planner:
+            result = planner.solve(p)
+            # print(result)
+        for prob in [p, ]:
+            with SequentialSimulator(prob) as simulator:
+                state = simulator.get_initial_state()
+                t = 0
+                print(f't = {t}\nActions:')
+                actions = [a for a in simulator.get_applicable_actions(state)]
+                for a in actions:
+                    print(a[0].name, a[1])
+                action_sequence = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3,]
+                for choice in action_sequence:
+                    # print('trying to apply action...')
+                    a = actions[choice]
+                    try:
+                        state = simulator.apply(state, a[0], a[1])
+                    except:
+                        print('Applying action failed')
+                        break
+                    print(f'Action {a[0].name, a[1]} applied.')
+                    t += 1
+                    actions = [a for a in simulator.get_applicable_actions(state)]
+                    if len(actions) == 0:
+                        print('No legal actions')
+                        break
+                    print(f't = {t}\nActions:')
+                    for a in actions:
+                        print(a[0].name, a[1])
+'''
+        ###
+
+               ###
+
+        '''
+
+        rbv = Compiler(
+            name=slrc._robustness_verifier_name,
+            problem_kind=p_4cars_deadlock.kind,
+            compilation_kind=CompilationKind.MA_SL_ROBUSTNESS_VERIFICATION)
+
+        p = rbv.compile(p_4cars_deadlock).problem
+        with OneshotPlanner(problem_kind=p.kind) as planner:
+            result = planner.solve(p)
+            print(result)
+
+        for prob in [p, ]:
+            with SequentialSimulator(prob) as simulator:
+                state = simulator.get_initial_state()
+                t = 0
+                print(f't = {t}\nActions:')
+                actions = [a for a in simulator.get_applicable_actions(state)]
+                for a in actions:
+                    print(a[0].name, a[1])
+                action_sequence = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3]
+                for choice in action_sequence:
+                    # print('trying to apply action...')
+                    a = actions[choice]
+                    try:
+                        state = simulator.apply(state, a[0], a[1])
+                    except:
+                        print('Applying action failed')
+                        break
+                    print(f'Action {a[0].name, a[1]} applied.')
+                    t += 1
+                    actions = [a for a in simulator.get_applicable_actions(state)]
+                    print(f't = {t}\nActions:')
+                    for a in actions:
+                        print(a[0].name, a[1])
+'''
+        ###

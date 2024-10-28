@@ -1,0 +1,973 @@
+problem: problem name = wrbv_sl_None
+
+types = [loc, direction, agent]
+
+fluents = [
+  bool g-connected[l1=loc, l2=loc, d=direction]
+  bool g-free[l=loc]
+  bool g-car-0-at[l1=loc]
+  bool g-car-0-arrived
+  bool g-car-0-not-arrived
+  bool g-car-0-start[l=loc]
+  bool g-car-0-left
+  bool g-car-0-goal[l=loc]
+  bool g-car-0-allowed__drive[l1=loc, l2=loc, d=direction]
+  bool g-car-1-at[l1=loc]
+  bool g-car-1-arrived
+  bool g-car-1-not-arrived
+  bool g-car-1-start[l=loc]
+  bool g-car-1-left
+  bool g-car-1-goal[l=loc]
+  bool g-car-1-allowed__drive[l1=loc, l2=loc, d=direction]
+  bool l-car-0-connected[l1=loc, l2=loc, d=direction]
+  bool l-car-0-free[l=loc]
+  bool l-car-0-car-0-at[l1=loc]
+  bool l-car-0-car-0-arrived
+  bool l-car-0-car-0-not-arrived
+  bool l-car-0-car-0-start[l=loc]
+  bool l-car-0-car-0-left
+  bool l-car-0-car-0-goal[l=loc]
+  bool l-car-0-car-0-allowed__drive[l1=loc, l2=loc, d=direction]
+  bool l-car-0-car-1-at[l1=loc]
+  bool l-car-0-car-1-arrived
+  bool l-car-0-car-1-not-arrived
+  bool l-car-0-car-1-start[l=loc]
+  bool l-car-0-car-1-left
+  bool l-car-0-car-1-goal[l=loc]
+  bool l-car-0-car-1-allowed__drive[l1=loc, l2=loc, d=direction]
+  bool l-car-1-connected[l1=loc, l2=loc, d=direction]
+  bool l-car-1-free[l=loc]
+  bool l-car-1-car-0-at[l1=loc]
+  bool l-car-1-car-0-arrived
+  bool l-car-1-car-0-not-arrived
+  bool l-car-1-car-0-start[l=loc]
+  bool l-car-1-car-0-left
+  bool l-car-1-car-0-goal[l=loc]
+  bool l-car-1-car-0-allowed__drive[l1=loc, l2=loc, d=direction]
+  bool l-car-1-car-1-at[l1=loc]
+  bool l-car-1-car-1-arrived
+  bool l-car-1-car-1-not-arrived
+  bool l-car-1-car-1-start[l=loc]
+  bool l-car-1-car-1-left
+  bool l-car-1-car-1-goal[l=loc]
+  bool l-car-1-car-1-allowed__drive[l1=loc, l2=loc, d=direction]
+  bool w-connected[l1=loc, l2=loc, d=direction]
+  bool w-free[l=loc]
+  bool w-car-0-at[l1=loc]
+  bool w-car-0-arrived
+  bool w-car-0-not-arrived
+  bool w-car-0-start[l=loc]
+  bool w-car-0-left
+  bool w-car-0-goal[l=loc]
+  bool w-car-0-allowed__drive[l1=loc, l2=loc, d=direction]
+  bool w-car-1-at[l1=loc]
+  bool w-car-1-arrived
+  bool w-car-1-not-arrived
+  bool w-car-1-start[l=loc]
+  bool w-car-1-left
+  bool w-car-1-goal[l=loc]
+  bool w-car-1-allowed__drive[l1=loc, l2=loc, d=direction]
+  bool stage 1
+  bool stage 2
+  bool precondition violation
+  bool possible deadlock
+  bool conflict
+  bool fin[a=agent]
+  bool allow-car-0-arrive
+  bool allow-car-0-drive
+  bool allow-car-0-leave
+  bool allow-car-1-arrive
+  bool allow-car-1-drive
+  bool allow-car-1-leave
+]
+
+actions = [
+  action scar-0__car-0__arrive(loc l) {
+    preconditions = [
+      l-car-0-car-0-start(l)
+      l-car-0-car-0-not-arrived
+      l-car-0-free(l)
+      stage 1
+      allow-car-0-arrive
+      g-car-0-start(l)
+      g-car-0-not-arrived
+      g-free(l)
+    ]
+    effects = [
+      l-car-0-car-0-at(l) := true
+      l-car-0-free(l) := false
+      l-car-0-car-0-arrived := true
+      l-car-0-car-0-not-arrived := false
+      g-car-0-at(l) := true
+      g-free(l) := false
+      g-car-0-arrived := true
+      g-car-0-not-arrived := false
+    ]
+  }
+  action f0__car-0__arrive(loc l) {
+    preconditions = [
+      l-car-0-car-0-start(l)
+      l-car-0-car-0-not-arrived
+      l-car-0-free(l)
+      stage 1
+      allow-car-0-arrive
+      g-free(l)
+      (not g-car-0-start(l))
+    ]
+    effects = [
+      l-car-0-car-0-at(l) := true
+      l-car-0-free(l) := false
+      l-car-0-car-0-arrived := true
+      l-car-0-car-0-not-arrived := false
+      precondition violation := true
+      stage 2 := true
+      stage 1 := false
+    ]
+  }
+  action f1__car-0__arrive(loc l) {
+    preconditions = [
+      l-car-0-car-0-start(l)
+      l-car-0-car-0-not-arrived
+      l-car-0-free(l)
+      stage 1
+      allow-car-0-arrive
+      g-free(l)
+      (not g-car-0-not-arrived)
+    ]
+    effects = [
+      l-car-0-car-0-at(l) := true
+      l-car-0-free(l) := false
+      l-car-0-car-0-arrived := true
+      l-car-0-car-0-not-arrived := false
+      precondition violation := true
+      stage 2 := true
+      stage 1 := false
+    ]
+  }
+  action w0__car-0__arrive(loc l) {
+    preconditions = [
+      l-car-0-car-0-start(l)
+      l-car-0-car-0-not-arrived
+      l-car-0-free(l)
+      stage 1
+      allow-car-0-arrive
+      (not g-free(l))
+    ]
+    effects = [
+      allow-car-0-drive := false
+      allow-car-0-leave := false
+    ]
+  }
+  action d0__car-0__arrive(loc l) {
+    preconditions = [
+      l-car-0-car-0-start(l)
+      l-car-0-car-0-not-arrived
+      l-car-0-free(l)
+      (not g-free(l))
+      (not allow-car-0-drive)
+      (not allow-car-0-leave)
+    ]
+    effects = [
+      fin(car-0) := true
+      possible deadlock := true
+      stage 1 := false
+    ]
+  }
+  action l__car-0__arrive(loc l) {
+    preconditions = [
+      l-car-0-car-0-start(l)
+      l-car-0-car-0-not-arrived
+      l-car-0-free(l)
+      stage 2
+      allow-car-0-arrive
+    ]
+    effects = [
+      l-car-0-car-0-at(l) := true
+      l-car-0-free(l) := false
+      l-car-0-car-0-arrived := true
+      l-car-0-car-0-not-arrived := false
+      allow-car-0-arrive := true
+      allow-car-0-drive := true
+      allow-car-0-leave := true
+    ]
+  }
+  action scar-0__car-0__drive(loc l1, loc l2, direction d) {
+    preconditions = [
+      l-car-0-car-0-at(l1)
+      l-car-0-free(l2)
+      l-car-0-connected(l1, l2, d)
+      l-car-0-car-0-allowed__drive(l1, l2, d)
+      stage 1
+      allow-car-0-drive
+      g-car-0-at(l1)
+      g-free(l2)
+      g-connected(l1, l2, d)
+      g-car-0-allowed__drive(l1, l2, d)
+    ]
+    effects = [
+      l-car-0-car-0-at(l2) := true
+      l-car-0-free(l2) := false
+      l-car-0-car-0-at(l1) := false
+      l-car-0-free(l1) := true
+      g-car-0-at(l2) := true
+      g-free(l2) := false
+      g-car-0-at(l1) := false
+      g-free(l1) := true
+    ]
+  }
+  action f0__car-0__drive(loc l1, loc l2, direction d) {
+    preconditions = [
+      l-car-0-car-0-at(l1)
+      l-car-0-free(l2)
+      l-car-0-connected(l1, l2, d)
+      l-car-0-car-0-allowed__drive(l1, l2, d)
+      stage 1
+      allow-car-0-drive
+      g-free(l2)
+      g-car-0-allowed__drive(l1, l2, d)
+      (not g-car-0-at(l1))
+    ]
+    effects = [
+      l-car-0-car-0-at(l2) := true
+      l-car-0-free(l2) := false
+      l-car-0-car-0-at(l1) := false
+      l-car-0-free(l1) := true
+      precondition violation := true
+      stage 2 := true
+      stage 1 := false
+    ]
+  }
+  action f1__car-0__drive(loc l1, loc l2, direction d) {
+    preconditions = [
+      l-car-0-car-0-at(l1)
+      l-car-0-free(l2)
+      l-car-0-connected(l1, l2, d)
+      l-car-0-car-0-allowed__drive(l1, l2, d)
+      stage 1
+      allow-car-0-drive
+      g-free(l2)
+      g-car-0-allowed__drive(l1, l2, d)
+      (not g-connected(l1, l2, d))
+    ]
+    effects = [
+      l-car-0-car-0-at(l2) := true
+      l-car-0-free(l2) := false
+      l-car-0-car-0-at(l1) := false
+      l-car-0-free(l1) := true
+      precondition violation := true
+      stage 2 := true
+      stage 1 := false
+    ]
+  }
+  action w0__car-0__drive(loc l1, loc l2, direction d) {
+    preconditions = [
+      l-car-0-car-0-at(l1)
+      l-car-0-free(l2)
+      l-car-0-connected(l1, l2, d)
+      l-car-0-car-0-allowed__drive(l1, l2, d)
+      stage 1
+      allow-car-0-drive
+      (not g-free(l2))
+    ]
+    effects = [
+      allow-car-0-arrive := false
+      allow-car-0-leave := false
+    ]
+  }
+  action d0__car-0__drive(loc l1, loc l2, direction d) {
+    preconditions = [
+      l-car-0-car-0-at(l1)
+      l-car-0-free(l2)
+      l-car-0-connected(l1, l2, d)
+      l-car-0-car-0-allowed__drive(l1, l2, d)
+      (not g-free(l2))
+      (not allow-car-0-arrive)
+      (not allow-car-0-leave)
+    ]
+    effects = [
+      fin(car-0) := true
+      possible deadlock := true
+      stage 1 := false
+    ]
+  }
+  action w1__car-0__drive(loc l1, loc l2, direction d) {
+    preconditions = [
+      l-car-0-car-0-at(l1)
+      l-car-0-free(l2)
+      l-car-0-connected(l1, l2, d)
+      l-car-0-car-0-allowed__drive(l1, l2, d)
+      stage 1
+      allow-car-0-drive
+      (not g-car-0-allowed__drive(l1, l2, d))
+    ]
+    effects = [
+      allow-car-0-arrive := false
+      allow-car-0-leave := false
+    ]
+  }
+  action d1__car-0__drive(loc l1, loc l2, direction d) {
+    preconditions = [
+      l-car-0-car-0-at(l1)
+      l-car-0-free(l2)
+      l-car-0-connected(l1, l2, d)
+      l-car-0-car-0-allowed__drive(l1, l2, d)
+      (not g-car-0-allowed__drive(l1, l2, d))
+      (not allow-car-0-arrive)
+      (not allow-car-0-leave)
+    ]
+    effects = [
+      fin(car-0) := true
+      possible deadlock := true
+      stage 1 := false
+    ]
+  }
+  action l__car-0__drive(loc l1, loc l2, direction d) {
+    preconditions = [
+      l-car-0-car-0-at(l1)
+      l-car-0-free(l2)
+      l-car-0-connected(l1, l2, d)
+      l-car-0-car-0-allowed__drive(l1, l2, d)
+      stage 2
+      allow-car-0-drive
+    ]
+    effects = [
+      l-car-0-car-0-at(l2) := true
+      l-car-0-free(l2) := false
+      l-car-0-car-0-at(l1) := false
+      l-car-0-free(l1) := true
+      allow-car-0-arrive := true
+      allow-car-0-drive := true
+      allow-car-0-leave := true
+    ]
+  }
+  action scar-0__car-0__leave(loc l) {
+    preconditions = [
+      l-car-0-car-0-at(l)
+      l-car-0-car-0-goal(l)
+      stage 1
+      allow-car-0-leave
+      g-car-0-at(l)
+      g-car-0-goal(l)
+    ]
+    effects = [
+      l-car-0-car-0-at(l) := false
+      l-car-0-free(l) := true
+      l-car-0-car-0-left := true
+      l-car-0-car-0-not-arrived := false
+      g-car-0-at(l) := false
+      g-free(l) := true
+      g-car-0-left := true
+      g-car-0-not-arrived := false
+    ]
+  }
+  action f0__car-0__leave(loc l) {
+    preconditions = [
+      l-car-0-car-0-at(l)
+      l-car-0-car-0-goal(l)
+      stage 1
+      allow-car-0-leave
+      (not g-car-0-at(l))
+    ]
+    effects = [
+      l-car-0-car-0-at(l) := false
+      l-car-0-free(l) := true
+      l-car-0-car-0-left := true
+      l-car-0-car-0-not-arrived := false
+      precondition violation := true
+      stage 2 := true
+      stage 1 := false
+    ]
+  }
+  action f1__car-0__leave(loc l) {
+    preconditions = [
+      l-car-0-car-0-at(l)
+      l-car-0-car-0-goal(l)
+      stage 1
+      allow-car-0-leave
+      (not g-car-0-goal(l))
+    ]
+    effects = [
+      l-car-0-car-0-at(l) := false
+      l-car-0-free(l) := true
+      l-car-0-car-0-left := true
+      l-car-0-car-0-not-arrived := false
+      precondition violation := true
+      stage 2 := true
+      stage 1 := false
+    ]
+  }
+  action l__car-0__leave(loc l) {
+    preconditions = [
+      l-car-0-car-0-at(l)
+      l-car-0-car-0-goal(l)
+      stage 2
+      allow-car-0-leave
+    ]
+    effects = [
+      l-car-0-car-0-at(l) := false
+      l-car-0-free(l) := true
+      l-car-0-car-0-left := true
+      l-car-0-car-0-not-arrived := false
+      allow-car-0-arrive := true
+      allow-car-0-drive := true
+      allow-car-0-leave := true
+    ]
+  }
+  action end_s_car-0 {
+    preconditions = [
+      g-car-0-left
+    ]
+    effects = [
+      fin(car-0) := true
+      stage 1 := false
+    ]
+  }
+  action scar-1__car-1__arrive(loc l) {
+    preconditions = [
+      l-car-1-car-1-start(l)
+      l-car-1-car-1-not-arrived
+      l-car-1-free(l)
+      stage 1
+      allow-car-1-arrive
+      g-car-1-start(l)
+      g-car-1-not-arrived
+      g-free(l)
+    ]
+    effects = [
+      l-car-1-car-1-at(l) := true
+      l-car-1-free(l) := false
+      l-car-1-car-1-arrived := true
+      l-car-1-car-1-not-arrived := false
+      g-car-1-at(l) := true
+      g-free(l) := false
+      g-car-1-arrived := true
+      g-car-1-not-arrived := false
+    ]
+  }
+  action f0__car-1__arrive(loc l) {
+    preconditions = [
+      l-car-1-car-1-start(l)
+      l-car-1-car-1-not-arrived
+      l-car-1-free(l)
+      stage 1
+      allow-car-1-arrive
+      g-free(l)
+      (not g-car-1-start(l))
+    ]
+    effects = [
+      l-car-1-car-1-at(l) := true
+      l-car-1-free(l) := false
+      l-car-1-car-1-arrived := true
+      l-car-1-car-1-not-arrived := false
+      precondition violation := true
+      stage 2 := true
+      stage 1 := false
+    ]
+  }
+  action f1__car-1__arrive(loc l) {
+    preconditions = [
+      l-car-1-car-1-start(l)
+      l-car-1-car-1-not-arrived
+      l-car-1-free(l)
+      stage 1
+      allow-car-1-arrive
+      g-free(l)
+      (not g-car-1-not-arrived)
+    ]
+    effects = [
+      l-car-1-car-1-at(l) := true
+      l-car-1-free(l) := false
+      l-car-1-car-1-arrived := true
+      l-car-1-car-1-not-arrived := false
+      precondition violation := true
+      stage 2 := true
+      stage 1 := false
+    ]
+  }
+  action w0__car-1__arrive(loc l) {
+    preconditions = [
+      l-car-1-car-1-start(l)
+      l-car-1-car-1-not-arrived
+      l-car-1-free(l)
+      stage 1
+      allow-car-1-arrive
+      (not g-free(l))
+    ]
+    effects = [
+      allow-car-1-drive := false
+      allow-car-1-leave := false
+    ]
+  }
+  action d0__car-1__arrive(loc l) {
+    preconditions = [
+      l-car-1-car-1-start(l)
+      l-car-1-car-1-not-arrived
+      l-car-1-free(l)
+      (not g-free(l))
+      (not allow-car-1-drive)
+      (not allow-car-1-leave)
+    ]
+    effects = [
+      fin(car-1) := true
+      possible deadlock := true
+      stage 1 := false
+    ]
+  }
+  action l__car-1__arrive(loc l) {
+    preconditions = [
+      l-car-1-car-1-start(l)
+      l-car-1-car-1-not-arrived
+      l-car-1-free(l)
+      stage 2
+      allow-car-1-arrive
+    ]
+    effects = [
+      l-car-1-car-1-at(l) := true
+      l-car-1-free(l) := false
+      l-car-1-car-1-arrived := true
+      l-car-1-car-1-not-arrived := false
+      allow-car-1-arrive := true
+      allow-car-1-drive := true
+      allow-car-1-leave := true
+    ]
+  }
+  action scar-1__car-1__drive(loc l1, loc l2, direction d) {
+    preconditions = [
+      l-car-1-car-1-at(l1)
+      l-car-1-free(l2)
+      l-car-1-connected(l1, l2, d)
+      l-car-1-car-1-allowed__drive(l1, l2, d)
+      stage 1
+      allow-car-1-drive
+      g-car-1-at(l1)
+      g-free(l2)
+      g-connected(l1, l2, d)
+      g-car-1-allowed__drive(l1, l2, d)
+    ]
+    effects = [
+      l-car-1-car-1-at(l2) := true
+      l-car-1-free(l2) := false
+      l-car-1-car-1-at(l1) := false
+      l-car-1-free(l1) := true
+      g-car-1-at(l2) := true
+      g-free(l2) := false
+      g-car-1-at(l1) := false
+      g-free(l1) := true
+    ]
+  }
+  action f0__car-1__drive(loc l1, loc l2, direction d) {
+    preconditions = [
+      l-car-1-car-1-at(l1)
+      l-car-1-free(l2)
+      l-car-1-connected(l1, l2, d)
+      l-car-1-car-1-allowed__drive(l1, l2, d)
+      stage 1
+      allow-car-1-drive
+      g-free(l2)
+      g-car-1-allowed__drive(l1, l2, d)
+      (not g-car-1-at(l1))
+    ]
+    effects = [
+      l-car-1-car-1-at(l2) := true
+      l-car-1-free(l2) := false
+      l-car-1-car-1-at(l1) := false
+      l-car-1-free(l1) := true
+      precondition violation := true
+      stage 2 := true
+      stage 1 := false
+    ]
+  }
+  action f1__car-1__drive(loc l1, loc l2, direction d) {
+    preconditions = [
+      l-car-1-car-1-at(l1)
+      l-car-1-free(l2)
+      l-car-1-connected(l1, l2, d)
+      l-car-1-car-1-allowed__drive(l1, l2, d)
+      stage 1
+      allow-car-1-drive
+      g-free(l2)
+      g-car-1-allowed__drive(l1, l2, d)
+      (not g-connected(l1, l2, d))
+    ]
+    effects = [
+      l-car-1-car-1-at(l2) := true
+      l-car-1-free(l2) := false
+      l-car-1-car-1-at(l1) := false
+      l-car-1-free(l1) := true
+      precondition violation := true
+      stage 2 := true
+      stage 1 := false
+    ]
+  }
+  action w0__car-1__drive(loc l1, loc l2, direction d) {
+    preconditions = [
+      l-car-1-car-1-at(l1)
+      l-car-1-free(l2)
+      l-car-1-connected(l1, l2, d)
+      l-car-1-car-1-allowed__drive(l1, l2, d)
+      stage 1
+      allow-car-1-drive
+      (not g-free(l2))
+    ]
+    effects = [
+      allow-car-1-arrive := false
+      allow-car-1-leave := false
+    ]
+  }
+  action d0__car-1__drive(loc l1, loc l2, direction d) {
+    preconditions = [
+      l-car-1-car-1-at(l1)
+      l-car-1-free(l2)
+      l-car-1-connected(l1, l2, d)
+      l-car-1-car-1-allowed__drive(l1, l2, d)
+      (not g-free(l2))
+      (not allow-car-1-arrive)
+      (not allow-car-1-leave)
+    ]
+    effects = [
+      fin(car-1) := true
+      possible deadlock := true
+      stage 1 := false
+    ]
+  }
+  action w1__car-1__drive(loc l1, loc l2, direction d) {
+    preconditions = [
+      l-car-1-car-1-at(l1)
+      l-car-1-free(l2)
+      l-car-1-connected(l1, l2, d)
+      l-car-1-car-1-allowed__drive(l1, l2, d)
+      stage 1
+      allow-car-1-drive
+      (not g-car-1-allowed__drive(l1, l2, d))
+    ]
+    effects = [
+      allow-car-1-arrive := false
+      allow-car-1-leave := false
+    ]
+  }
+  action d1__car-1__drive(loc l1, loc l2, direction d) {
+    preconditions = [
+      l-car-1-car-1-at(l1)
+      l-car-1-free(l2)
+      l-car-1-connected(l1, l2, d)
+      l-car-1-car-1-allowed__drive(l1, l2, d)
+      (not g-car-1-allowed__drive(l1, l2, d))
+      (not allow-car-1-arrive)
+      (not allow-car-1-leave)
+    ]
+    effects = [
+      fin(car-1) := true
+      possible deadlock := true
+      stage 1 := false
+    ]
+  }
+  action l__car-1__drive(loc l1, loc l2, direction d) {
+    preconditions = [
+      l-car-1-car-1-at(l1)
+      l-car-1-free(l2)
+      l-car-1-connected(l1, l2, d)
+      l-car-1-car-1-allowed__drive(l1, l2, d)
+      stage 2
+      allow-car-1-drive
+    ]
+    effects = [
+      l-car-1-car-1-at(l2) := true
+      l-car-1-free(l2) := false
+      l-car-1-car-1-at(l1) := false
+      l-car-1-free(l1) := true
+      allow-car-1-arrive := true
+      allow-car-1-drive := true
+      allow-car-1-leave := true
+    ]
+  }
+  action scar-1__car-1__leave(loc l) {
+    preconditions = [
+      l-car-1-car-1-at(l)
+      l-car-1-car-1-goal(l)
+      stage 1
+      allow-car-1-leave
+      g-car-1-at(l)
+      g-car-1-goal(l)
+    ]
+    effects = [
+      l-car-1-car-1-at(l) := false
+      l-car-1-free(l) := true
+      l-car-1-car-1-left := true
+      l-car-1-car-1-not-arrived := false
+      g-car-1-at(l) := false
+      g-free(l) := true
+      g-car-1-left := true
+      g-car-1-not-arrived := false
+    ]
+  }
+  action f0__car-1__leave(loc l) {
+    preconditions = [
+      l-car-1-car-1-at(l)
+      l-car-1-car-1-goal(l)
+      stage 1
+      allow-car-1-leave
+      (not g-car-1-at(l))
+    ]
+    effects = [
+      l-car-1-car-1-at(l) := false
+      l-car-1-free(l) := true
+      l-car-1-car-1-left := true
+      l-car-1-car-1-not-arrived := false
+      precondition violation := true
+      stage 2 := true
+      stage 1 := false
+    ]
+  }
+  action f1__car-1__leave(loc l) {
+    preconditions = [
+      l-car-1-car-1-at(l)
+      l-car-1-car-1-goal(l)
+      stage 1
+      allow-car-1-leave
+      (not g-car-1-goal(l))
+    ]
+    effects = [
+      l-car-1-car-1-at(l) := false
+      l-car-1-free(l) := true
+      l-car-1-car-1-left := true
+      l-car-1-car-1-not-arrived := false
+      precondition violation := true
+      stage 2 := true
+      stage 1 := false
+    ]
+  }
+  action l__car-1__leave(loc l) {
+    preconditions = [
+      l-car-1-car-1-at(l)
+      l-car-1-car-1-goal(l)
+      stage 2
+      allow-car-1-leave
+    ]
+    effects = [
+      l-car-1-car-1-at(l) := false
+      l-car-1-free(l) := true
+      l-car-1-car-1-left := true
+      l-car-1-car-1-not-arrived := false
+      allow-car-1-arrive := true
+      allow-car-1-drive := true
+      allow-car-1-leave := true
+    ]
+  }
+  action end_s_car-1 {
+    preconditions = [
+      g-car-1-left
+    ]
+    effects = [
+      fin(car-1) := true
+      stage 1 := false
+    ]
+  }
+  action start_stage_2 {
+    preconditions = [
+      fin(car-0)
+      fin(car-1)
+    ]
+    effects = [
+      stage 2 := true
+      stage 1 := false
+    ]
+  }
+  action goals_not_achieved_car-0_0 {
+    preconditions = [
+      stage 2
+      (not g-car-0-left)
+      l-car-0-car-0-left
+    ]
+    effects = [
+      conflict := true
+    ]
+  }
+  action goals_not_achieved_car-1_0 {
+    preconditions = [
+      stage 2
+      (not g-car-1-left)
+      l-car-1-car-1-left
+    ]
+    effects = [
+      conflict := true
+    ]
+  }
+  action declare_deadlock {
+    preconditions = [
+      stage 2
+      possible deadlock
+      l-car-0-car-0-left
+      l-car-1-car-1-left
+    ]
+    effects = [
+      conflict := true
+    ]
+  }
+  action declare_fail {
+    preconditions = [
+      stage 2
+      precondition violation
+      l-car-0-car-0-left
+      l-car-1-car-1-left
+    ]
+    effects = [
+      conflict := true
+    ]
+  }
+]
+
+objects = [
+  loc: [(0, 0), (0, 1), (1, 0), (1, 1)]
+  direction: [north, east, south, west]
+  agent: [car-0, car-1]
+]
+
+initial fluents default = [
+  bool g-connected[l1=loc, l2=loc, d=direction] := false
+  bool g-free[l=loc] := true
+  bool g-car-0-at[l1=loc] := false
+  bool g-car-0-arrived := false
+  bool g-car-0-not-arrived := true
+  bool g-car-0-start[l=loc] := false
+  bool g-car-0-left := false
+  bool g-car-0-goal[l=loc] := false
+  bool g-car-0-allowed__drive[l1=loc, l2=loc, d=direction] := true
+  bool g-car-1-at[l1=loc] := false
+  bool g-car-1-arrived := false
+  bool g-car-1-not-arrived := true
+  bool g-car-1-start[l=loc] := false
+  bool g-car-1-left := false
+  bool g-car-1-goal[l=loc] := false
+  bool g-car-1-allowed__drive[l1=loc, l2=loc, d=direction] := true
+  bool l-car-0-connected[l1=loc, l2=loc, d=direction] := false
+  bool l-car-0-free[l=loc] := true
+  bool l-car-0-car-0-at[l1=loc] := false
+  bool l-car-0-car-0-arrived := false
+  bool l-car-0-car-0-not-arrived := true
+  bool l-car-0-car-0-start[l=loc] := false
+  bool l-car-0-car-0-left := false
+  bool l-car-0-car-0-goal[l=loc] := false
+  bool l-car-0-car-0-allowed__drive[l1=loc, l2=loc, d=direction] := true
+  bool l-car-0-car-1-at[l1=loc] := false
+  bool l-car-0-car-1-arrived := false
+  bool l-car-0-car-1-not-arrived := true
+  bool l-car-0-car-1-start[l=loc] := false
+  bool l-car-0-car-1-left := false
+  bool l-car-0-car-1-goal[l=loc] := false
+  bool l-car-0-car-1-allowed__drive[l1=loc, l2=loc, d=direction] := true
+  bool l-car-1-connected[l1=loc, l2=loc, d=direction] := false
+  bool l-car-1-free[l=loc] := true
+  bool l-car-1-car-0-at[l1=loc] := false
+  bool l-car-1-car-0-arrived := false
+  bool l-car-1-car-0-not-arrived := true
+  bool l-car-1-car-0-start[l=loc] := false
+  bool l-car-1-car-0-left := false
+  bool l-car-1-car-0-goal[l=loc] := false
+  bool l-car-1-car-0-allowed__drive[l1=loc, l2=loc, d=direction] := true
+  bool l-car-1-car-1-at[l1=loc] := false
+  bool l-car-1-car-1-arrived := false
+  bool l-car-1-car-1-not-arrived := true
+  bool l-car-1-car-1-start[l=loc] := false
+  bool l-car-1-car-1-left := false
+  bool l-car-1-car-1-goal[l=loc] := false
+  bool l-car-1-car-1-allowed__drive[l1=loc, l2=loc, d=direction] := true
+  bool w-connected[l1=loc, l2=loc, d=direction] := false
+  bool w-free[l=loc] := false
+  bool w-car-0-at[l1=loc] := false
+  bool w-car-0-arrived := false
+  bool w-car-0-not-arrived := false
+  bool w-car-0-start[l=loc] := false
+  bool w-car-0-left := false
+  bool w-car-0-goal[l=loc] := false
+  bool w-car-0-allowed__drive[l1=loc, l2=loc, d=direction] := false
+  bool w-car-1-at[l1=loc] := false
+  bool w-car-1-arrived := false
+  bool w-car-1-not-arrived := false
+  bool w-car-1-start[l=loc] := false
+  bool w-car-1-left := false
+  bool w-car-1-goal[l=loc] := false
+  bool w-car-1-allowed__drive[l1=loc, l2=loc, d=direction] := false
+  bool stage 1 := false
+  bool stage 2 := false
+  bool precondition violation := false
+  bool possible deadlock := false
+  bool conflict := false
+  bool fin[a=agent] := false
+  bool allow-car-0-arrive := true
+  bool allow-car-0-drive := true
+  bool allow-car-0-leave := true
+  bool allow-car-1-arrive := true
+  bool allow-car-1-drive := true
+  bool allow-car-1-leave := true
+]
+
+initial values = [
+  g-connected((0, 0), (0, 1), north) := true
+  l-car-0-connected((0, 0), (0, 1), north) := true
+  l-car-1-connected((0, 0), (0, 1), north) := true
+  g-connected((0, 0), (1, 0), east) := true
+  l-car-0-connected((0, 0), (1, 0), east) := true
+  l-car-1-connected((0, 0), (1, 0), east) := true
+  g-connected((0, 1), (0, 0), south) := true
+  l-car-0-connected((0, 1), (0, 0), south) := true
+  l-car-1-connected((0, 1), (0, 0), south) := true
+  g-connected((0, 1), (1, 1), east) := true
+  l-car-0-connected((0, 1), (1, 1), east) := true
+  l-car-1-connected((0, 1), (1, 1), east) := true
+  g-connected((1, 0), (0, 0), west) := true
+  l-car-0-connected((1, 0), (0, 0), west) := true
+  l-car-1-connected((1, 0), (0, 0), west) := true
+  g-connected((1, 0), (1, 1), north) := true
+  l-car-0-connected((1, 0), (1, 1), north) := true
+  l-car-1-connected((1, 0), (1, 1), north) := true
+  g-connected((1, 1), (0, 1), west) := true
+  l-car-0-connected((1, 1), (0, 1), west) := true
+  l-car-1-connected((1, 1), (0, 1), west) := true
+  g-connected((1, 1), (1, 0), south) := true
+  l-car-0-connected((1, 1), (1, 0), south) := true
+  l-car-1-connected((1, 1), (1, 0), south) := true
+  g-car-0-start((0, 1)) := true
+  l-car-0-car-0-start((0, 1)) := true
+  l-car-1-car-0-start((0, 1)) := true
+  g-car-0-goal((1, 1)) := true
+  l-car-0-car-0-goal((1, 1)) := true
+  l-car-1-car-0-goal((1, 1)) := true
+  g-car-1-start((0, 0)) := true
+  l-car-0-car-1-start((0, 0)) := true
+  l-car-1-car-1-start((0, 0)) := true
+  g-car-1-goal((0, 1)) := true
+  l-car-0-car-1-goal((0, 1)) := true
+  l-car-1-car-1-goal((0, 1)) := true
+  g-car-0-allowed__drive((0, 1), (0, 0), south) := false
+  l-car-0-car-0-allowed__drive((0, 1), (0, 0), south) := false
+  l-car-1-car-0-allowed__drive((0, 1), (0, 0), south) := false
+  g-car-0-allowed__drive((1, 1), (0, 1), west) := false
+  l-car-0-car-0-allowed__drive((1, 1), (0, 1), west) := false
+  l-car-1-car-0-allowed__drive((1, 1), (0, 1), west) := false
+  g-car-1-allowed__drive((0, 1), (0, 0), south) := false
+  l-car-0-car-1-allowed__drive((0, 1), (0, 0), south) := false
+  l-car-1-car-1-allowed__drive((0, 1), (0, 0), south) := false
+  g-car-1-allowed__drive((1, 1), (0, 1), west) := false
+  l-car-0-car-1-allowed__drive((1, 1), (0, 1), west) := false
+  l-car-1-car-1-allowed__drive((1, 1), (0, 1), west) := false
+  g-car-0-allowed__drive((1, 0), (1, 1), north) := false
+  l-car-0-car-0-allowed__drive((1, 0), (1, 1), north) := false
+  l-car-1-car-0-allowed__drive((1, 0), (1, 1), north) := false
+  g-car-0-allowed__drive((0, 0), (1, 0), east) := false
+  l-car-0-car-0-allowed__drive((0, 0), (1, 0), east) := false
+  l-car-1-car-0-allowed__drive((0, 0), (1, 0), east) := false
+  g-car-1-allowed__drive((1, 0), (1, 1), north) := false
+  l-car-0-car-1-allowed__drive((1, 0), (1, 1), north) := false
+  l-car-1-car-1-allowed__drive((1, 0), (1, 1), north) := false
+  g-car-1-allowed__drive((0, 0), (1, 0), east) := false
+  l-car-0-car-1-allowed__drive((0, 0), (1, 0), east) := false
+  l-car-1-car-1-allowed__drive((0, 0), (1, 0), east) := false
+  stage 1 := true
+]
+
+goals = [
+  conflict
+]
+
+
+engine: wrbv

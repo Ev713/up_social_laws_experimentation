@@ -1,0 +1,53 @@
+{"persons": ["person1", "person10", "person11", "person12", "person13", "person14", "person15", "person2", "person3", "person4", "person5", "person6", "person7", "person8", "person9"],
+"citys": ["city0", "city1", "city10", "city11", "city2", "city3", "city4", "city5", "city6", "city7", "city8", "city9"],
+"flevels": ["fl0", "fl1", "fl2", "fl3", "fl4", "fl5", "fl6"],
+"agents": ["plane1", "plane2", "plane3", "plane4", "plane5"],
+
+"init_values": {
+"global": [
+["person_at", ["person1", "city8"]],
+["person_at", ["person2", "city10"]],
+["person_at", ["person3", "city7"]],
+["person_at", ["person4", "city5"]],
+["person_at", ["person5", "city1"]],
+["person_at", ["person6", "city10"]],
+["person_at", ["person7", "city11"]],
+["person_at", ["person8", "city8"]],
+["person_at", ["person9", "city9"]],
+["person_at", ["person10", "city11"]],
+["person_at", ["person11", "city4"]],
+["person_at", ["person12", "city5"]],
+["person_at", ["person13", "city8"]],
+["person_at", ["person14", "city4"]],
+["person_at", ["person15", "city1"]],
+["next", ["fl0", "fl1"]],
+["next", ["fl1", "fl2"]],
+["next", ["fl2", "fl3"]],
+["next", ["fl3", "fl4"]],
+["next", ["fl4", "fl5"]],
+["next", ["fl5", "fl6"]]],
+
+"plane1":[["aircraft_at", ["city0"]], ["fuel-level", ["fl0"]]],
+"plane2":[["aircraft_at", ["city3"]], ["fuel-level", ["fl4"]]],
+"plane3":[["aircraft_at", ["city2"]], ["fuel-level", ["fl1"]]],
+"plane4":[["aircraft_at", ["city9"]], ["fuel-level", ["fl1"]]],
+"plane5":[["aircraft_at", ["city5"]], ["fuel-level", ["fl1"]]]
+
+},
+"goals": [
+["person_at", ["person1", "city1"]],
+["person_at", ["person2", "city4"]],
+["person_at", ["person3", "city7"]],
+["person_at", ["person4", "city6"]],
+["person_at", ["person5", "city8"]],
+["person_at", ["person6", "city11"]],
+["person_at", ["person7", "city2"]],
+["person_at", ["person8", "city11"]],
+["person_at", ["person10", "city9"]],
+["person_at", ["person11", "city6"]],
+["person_at", ["person12", "city4"]],
+["person_at", ["person13", "city11"]],
+["person_at", ["person14", "city4"]],
+["person_at", ["person15", "city6"]]
+
+]}

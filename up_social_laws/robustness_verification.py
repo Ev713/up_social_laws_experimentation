@@ -521,7 +521,8 @@ class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
                     a_w.add_precondition(Not(self.fsub.substitute(fact, self.global_fluent_map, agent)))
                     assert not fact.is_not()
                     a_w.clear_effects()
-                    for fluent in [allow_action_map[agent.name][a] for a in allow_action_map[agent.name].keys() if a != action.name]:
+                    for fluent in [allow_action_map[agent.name][a] for a in allow_action_map[agent.name].keys()
+                                   if a != action.name]:
                         a_w.add_effect(fluent, False)
                     new_problem.add_action(a_w)
                     new_to_old[a_w] = action
@@ -530,10 +531,10 @@ class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
                     a_deadlock = self.create_action_copy(problem, agent, action, "d" + str(i))
                     a_deadlock.add_precondition(Not(self.fsub.substitute(fact, self.global_fluent_map, agent)))
                     for another_action in allow_action_map[agent.name].keys():
-
                         if another_action != action.name:
-
                             a_deadlock.add_precondition(Not(allow_action_map[agent.name][another_action]))
+
+                    a_deadlock.clear_effects()
                     a_deadlock.add_effect(fin(self.get_agent_obj(agent)), True)
                     a_deadlock.add_effect(possible_deadlock, True)
                     a_deadlock.add_effect(stage_1, False)
@@ -553,7 +554,9 @@ class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
             end_s = InstantaneousAction("end_s_" + agent.name)
             for goal in self.get_agent_goal(problem, agent):
                 end_s.add_precondition(self.fsub.substitute(goal, self.global_fluent_map, agent))
-                end_s.add_precondition(self.fsub.substitute(goal, self.local_fluent_map[agent], agent))
+                ###
+                # end_s.add_precondition(self.fsub.substitute(goal, self.local_fluent_map[agent], agent))
+                ###
             end_s.add_effect(fin(self.get_agent_obj(agent)), True)
             end_s.add_effect(stage_1, False)
             new_problem.add_action(end_s)
@@ -569,16 +572,30 @@ class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
         new_to_old[start_stage_2] = None
 
         # goals_not_achieved
-        goals_not_achieved = InstantaneousAction("goals_not_achieved")
-        goals_not_achieved.add_precondition(stage_2)
+        ###
+        # goals_not_achieved = InstantaneousAction("goals_not_achieved")
+        #         goals_not_achieved.add_precondition(stage_2)
+        #         for agent in problem.agents:
+        #             for i, goal in enumerate(self.get_agent_goal(problem, agent)):
+        #                 goals_not_achieved.add_precondition(Not(self.fsub.substitute(goal, self.global_fluent_map, agent)))
+        #                 for g in self.get_agent_goal(problem, agent):
+        #                     goals_not_achieved.add_precondition(self.fsub.substitute(g, self.local_fluent_map[agent], agent))
+        #         goals_not_achieved.add_effect(conflict, True)
+        #         new_problem.add_action(goals_not_achieved)
+        #         new_to_old[goals_not_achieved] = None
+        ###
+
+
         for agent in problem.agents:
             for i, goal in enumerate(self.get_agent_goal(problem, agent)):
+                goals_not_achieved = InstantaneousAction(f"goals_not_achieved_{agent.name}_{i}")
+                goals_not_achieved.add_precondition(stage_2)
                 goals_not_achieved.add_precondition(Not(self.fsub.substitute(goal, self.global_fluent_map, agent)))
                 for g in self.get_agent_goal(problem, agent):
                     goals_not_achieved.add_precondition(self.fsub.substitute(g, self.local_fluent_map[agent], agent))
-        goals_not_achieved.add_effect(conflict, True)
-        new_problem.add_action(goals_not_achieved)
-        new_to_old[goals_not_achieved] = None
+            goals_not_achieved.add_effect(conflict, True)
+            new_problem.add_action(goals_not_achieved)
+            new_to_old[goals_not_achieved] = None
 
         # declare_deadlock
         declare_deadlock = InstantaneousAction("declare_deadlock")

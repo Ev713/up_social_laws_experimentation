@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: up-social-laws
+Version: 0.2.0
+Summary: Unified Planning Integration of Social Laws
+Home-page: https://github.com/aiplan4eu/up-social-laws
+Author: Technion Cognitive Robotics Lab
+Author-email: karpase@technion.ac.il
+License: APACHE
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.7
+License-File: LICENSE
+
+Integration of Social Laws into the Unified Planning Framework
+

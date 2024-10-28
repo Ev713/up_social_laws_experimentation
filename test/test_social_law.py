@@ -225,6 +225,7 @@ def get_intersection_problem(
         drive.add_effect(at(l2), True)
         drive.add_effect(free(l2), False)
         drive.add_effect(at(l1), False)
+
         drive.add_effect(free(l1), True)
 
     plan = up.plans.SequentialPlan([])
