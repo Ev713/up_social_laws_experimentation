@@ -557,6 +557,7 @@ class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
 
                     # deadlock version
                     a_deadlock = self.create_action_copy(problem, agent, action, f"d{i}")
+                    a_deadlock.clear_preconditions()
                     a_deadlock.add_precondition(Not(self.fsub.substitute(fact, self.global_fluent_map, agent)))
                     allow_action = allow_action_map[agent.name][action.name](*action.parameters)
                     restrict_actions = restrict_actions_map[agent.name]
