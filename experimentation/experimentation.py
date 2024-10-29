@@ -24,6 +24,9 @@ from multiprocessing import Process, Queue
 
 planner = OneshotPlanner()
 
+INIT_LOCS = [{0: '(1, 1)', 1: '(1, 1)'}, {0: '(2, 0)', 1: '(0, 2)', 2: '(1, 0)'}, {0: '(0, 2)', 1: '(1, 1)', 2: '(2, 3)', 3: '(1, 2)'}, {0: '(0, 2)', 1: '(1, 3)', 2: '(3, 0)', 3: '(2, 1)', 4: '(0, 3)'}, {0: '(3, 2)', 1: '(3, 1)', 2: '(0, 3)', 3: '(3, 2)', 4: '(0, 0)', 5: '(0, 3)'}, {0: '(1, 1)', 1: '(0, 0)', 2: '(2, 2)', 3: '(1, 3)', 4: '(3, 4)', 5: '(3, 0)'}, {0: '(3, 1)', 1: '(2, 4)', 2: '(4, 1)', 3: '(2, 0)', 4: '(3, 0)', 5: '(1, 4)', 6: '(3, 0)'}, {0: '(2, 5)', 1: '(1, 0)', 2: '(5, 4)', 3: '(5, 0)', 4: '(0, 4)', 5: '(1, 5)', 6: '(2, 1)', 7: '(0, 4)'}, {0: '(5, 3)', 1: '(1, 2)', 2: '(1, 3)', 3: '(2, 2)', 4: '(1, 6)', 5: '(1, 1)', 6: '(4, 3)', 7: '(4, 1)'}, {0: '(3, 0)', 1: '(4, 2)', 2: '(1, 1)', 3: '(6, 6)', 4: '(5, 5)', 5: '(4, 0)', 6: '(5, 6)'}, {0: '(2, 7)', 1: '(5, 5)', 2: '(6, 0)', 3: '(1, 3)', 4: '(0, 7)', 5: '(0, 3)', 6: '(4, 5)', 7: '(1, 2)', 8: '(0, 1)'}, {0: '(6, 1)', 1: '(3, 0)'}, {0: '(2, 2)', 1: '(5, 2)', 2: '(2, 0)'}, {0: '(4, 1)', 1: '(2, 0)', 2: '(0, 1)', 3: '(2, 3)', 4: '(0, 1)', 5: '(3, 2)'}, {0: '(0, 1)', 1: '(6, 1)', 2: '(0, 0)', 3: '(0, 4)', 4: '(5, 2)', 5: '(2, 2)', 6: '(5, 1)'}, {0: '(0, 4)', 1: '(7, 2)', 2: '(3, 2)', 3: '(4, 2)', 4: '(0, 3)', 5: '(5, 1)', 6: '(7, 3)', 7: '(6, 4)'}, {0: '(6, 6)', 1: '(4, 1)', 2: '(7, 1)', 3: '(5, 6)', 4: '(0, 4)', 5: '(1, 0)', 6: '(1, 1)', 7: '(2, 4)', 8: '(1, 1)', 9: '(5, 0)'}, {0: '(3, 3)', 1: '(3, 4)', 2: '(5, 3)', 3: '(4, 2)', 4: '(2, 7)', 5: '(1, 7)', 6: '(5, 4)', 7: '(1, 1)'}, {0: '(4, 6)', 1: '(2, 4)', 2: '(2, 5)', 3: '(2, 6)', 4: '(3, 1)', 5: '(4, 6)', 6: '(3, 7)', 7: '(4, 1)'}, {0: '(1, 4)', 1: '(0, 1)', 2: '(1, 1)'}]
+GOAL_LOCS = [{0: '(1, 2)', 1: '(0, 1)'}, {0: '(0, 2)', 1: '(2, 0)', 2: '(2, 2)'}, {0: '(1, 3)', 1: '(1, 3)', 2: '(2, 0)', 3: '(0, 0)'}, {0: '(2, 3)', 1: '(2, 3)', 2: '(3, 0)', 3: '(2, 1)', 4: '(3, 3)'}, {0: '(0, 4)', 1: '(3, 4)', 2: '(3, 2)', 3: '(2, 3)', 4: '(0, 1)', 5: '(1, 3)'}, {0: '(1, 1)', 1: '(3, 3)', 2: '(2, 4)', 3: '(4, 1)', 4: '(4, 2)', 5: '(0, 2)'}, {0: '(4, 2)', 1: '(3, 1)', 2: '(3, 1)', 3: '(3, 1)', 4: '(1, 1)', 5: '(0, 0)', 6: '(2, 1)'}, {0: '(1, 3)', 1: '(3, 1)', 2: '(5, 3)', 3: '(0, 1)', 4: '(4, 5)', 5: '(5, 0)', 6: '(1, 1)', 7: '(4, 2)'}, {0: '(3, 3)', 1: '(5, 2)', 2: '(3, 4)', 3: '(4, 1)', 4: '(3, 3)', 5: '(3, 6)', 6: '(1, 0)', 7: '(5, 4)'}, {0: '(4, 3)', 1: '(5, 2)', 2: '(0, 2)', 3: '(1, 0)', 4: '(1, 5)', 5: '(6, 4)', 6: '(2, 1)'}, {0: '(3, 1)', 1: '(4, 4)', 2: '(3, 3)', 3: '(1, 7)', 4: '(3, 2)', 5: '(1, 3)', 6: '(6, 2)', 7: '(6, 4)', 8: '(1, 7)'}, {0: '(1, 1)', 1: '(5, 0)'}, {0: '(4, 2)', 1: '(0, 0)', 2: '(5, 0)'}, {0: '(7, 1)', 1: '(5, 3)', 2: '(4, 1)', 3: '(2, 1)', 4: '(6, 2)', 5: '(0, 1)'}, {0: '(6, 0)', 1: '(4, 4)', 2: '(7, 2)', 3: '(0, 3)', 4: '(3, 1)', 5: '(5, 0)', 6: '(2, 2)'}, {0: '(5, 5)', 1: '(5, 5)', 2: '(7, 3)', 3: '(1, 3)', 4: '(5, 2)', 5: '(6, 1)', 6: '(6, 4)', 7: '(0, 0)'}, {0: '(5, 2)', 1: '(0, 2)', 2: '(7, 6)', 3: '(1, 5)', 4: '(6, 5)', 5: '(0, 3)', 6: '(4, 1)', 7: '(7, 5)', 8: '(7, 1)', 9: '(0, 6)'}, {0: '(0, 2)', 1: '(0, 2)', 2: '(4, 7)', 3: '(5, 6)', 4: '(4, 0)', 5: '(5, 5)', 6: '(0, 0)', 7: '(5, 5)'}, {0: '(4, 5)', 1: '(3, 4)', 2: '(2, 6)', 3: '(2, 3)', 4: '(2, 3)', 5: '(2, 1)', 6: '(2, 5)', 7: '(0, 5)'}, {0: '(1, 4)', 1: '(2, 3)', 2: '(2, 3)'}]
+
 
 class GridManager:
     def __init__(self, width, height, agents):
@@ -136,13 +139,15 @@ class GridManager:
         if agent in self.init_locs and self.init_locs[agent] in self.intersections:
             return str(self.init_locs[agent])
         else:
-            return str(random.choice(self.intersections))
+            self.init_locs[agent] = str(random.choice(self.intersections))
+            return self.init_locs[agent]
 
     def get_goal_loc(self, agent):
         if agent in self.goal_locs and self.goal_locs[agent] in self.intersections:
             return str(self.goal_locs[agent])
         else:
-            return str(random.choice(self.intersections))
+            self.goal_locs[agent] = str(random.choice(self.intersections))
+            return self.goal_locs[agent]
 
     def add_direction_law(self, problem):
         up_columns = []
@@ -628,7 +633,7 @@ def get_zenotravel(name):
     filepath = open(
         f"/home/evgeny/SocialLaws/up-social-laws/experimentation/problems/all/jsons/zenotravel/{name}.json").read()
     instance = json.loads(filepath)
-    zenotravel = MultiAgentProblem()
+    zenotravel = MultiAgentProblemWithWaitfor()
 
     # Object types
     city = UserType('city')
@@ -1094,84 +1099,107 @@ def run_experiment(func, args=(), memory_limit=8_192_000_000, cpu_limit=1800, ti
 
 
 def run_experiments():
-    for index in ['9-0', '9-1', '9-2', '10-0', '10-1', '10-2', '11-0', '11-1', '11-2', '12-0', '12-1', '13-0',
-                  '13-1', '14-0', '14-1', '15-0', '15-1', '16-1', '16-2', '17-0']:
-        filename = f'{index}'
-        try:
-            problem = get_blocksworld(filename)
-            slrc = get_old_slrc()
-            run_experiment(
-                func=check_robustness,
-                args=(slrc, problem),
-                memory_limit=8_192_000_000,  # 8 GB
-                cpu_limit=1800,  # 30 minutes CPU time
-                timeout=3600,  # 1 hour wall time
-                metadata=(filename, True, False)
-            )
-            time.sleep(30)
-        except:
-            pass
+    blocksworld_names = ['9-0', '9-1', '9-2', '10-0', '10-1', '10-2', '11-0', '11-1', '11-2', '12-0', '12-1', '13-0',
+                         '13-1', '14-0', '14-1', '15-0', '15-1', '16-1', '16-2', '17-0']
+    zenotravel_names = [f'pfile{i}' for i in range(3, 24)]
+    driverlog_names = [f'pfile{i}' for i in range(1, 21)]
+    grid_names = [
+        (2, 3, 2),
+        (3, 3, 3),
+        (3, 4, 4),
+        (4, 4, 5),
+        (4, 5, 6),
+        (5, 5, 6),
+        (5, 6, 7),
+        (6, 6, 8),
+        (6, 7, 8),
+        (7, 7, 7),
+        (7, 8, 9),
+        (8, 2, 2),
+        (8, 3, 3),
+        (8, 4, 6),
+        (8, 5, 7),
+        (8, 6, 8),
+        (8, 7, 10),
+        (6, 8, 8),
+        (5, 8, 8),
+        (3, 5, 3)
+    ]
+    problems = []
 
-        try:
-            problem = get_blocksworld(filename)
-            slrc = get_new_slrc()
-            run_experiment(
-                func=check_robustness,
-                args=(slrc, problem),
-                memory_limit=8_192_000_000,  # 8 GB
-                cpu_limit=1800,  # 30 minutes CPU time
-                timeout=3600,  # 1 hour wall time
-                metadata=(filename, False, False)
-            )
-            time.sleep(30)
-        except:
-            pass
+    blocksworld_problems = [(f'blocksworld_{name}', get_blocksworld(name), False) for name in blocksworld_names]
+    problems+=blocksworld_problems
+    zenotravel_problems = [(f'zenotravel_{name}', get_zenotravel(name), False) for name in zenotravel_names]
+    problems+=zenotravel_problems
+    zenotravel_problems_with_SL = [(f'zenotravel_{name}', zenotravel_add_sociallaw(get_zenotravel(name)), True) for name in zenotravel_names]
+    problems+=zenotravel_problems_with_SL
+    grid_problems = []
+    for i, name in enumerate(grid_names):
+        gm = GridManager(*grid_names)
+        gm.init_locs = INIT_LOCS[i]
+        gm.goal_locs = GOAL_LOCS[i]
+        grid_problems.append((f'grid_{name}', gm.get_grid_problem(), False))
+    problems+=grid_problems
+    grid_problems_with_SL = []
+    for i, name in enumerate(grid_names):
+        gm = GridManager(*grid_names)
+        gm.init_locs = INIT_LOCS[i]
+        gm.goal_locs = GOAL_LOCS[i]
+        grid_problems_with_SL.append((f'grid_{name}', gm.add_direction_law(gm.get_grid_problem()), True))
+    problems += grid_problems_with_SL
+    random.shuffle(problems)
 
-        continue
-
-        try:
-            problem = zenotravel_add_sociallaw(get_zenotravel(filename))
-            slrc = get_old_slrc()
-            run_experiment(
-                func=check_robustness,
-                args=(slrc, problem),
-                memory_limit=8_192_000_000,  # 8 GB
-                cpu_limit=1800,  # 30 minutes CPU time
-                timeout=3600,  # 1 hour wall time
-                metadata=(filename, True, True)
-            )
-            time.sleep(30)
-        except:
-            pass
-
-        try:
-            problem = zenotravel_add_sociallaw(get_zenotravel(filename))
-            slrc = get_new_slrc()
-            run_experiment(
-                func=check_robustness,
-                args=(slrc, problem),
-                memory_limit=8_192_000_000,  # 8 GB
-                cpu_limit=1800,  # 30 minutes CPU time
-                timeout=3600,  # 1 hour wall time
-                metadata=(filename, False, False)
-
-            )
-            time.sleep(30)
-        except:
-            pass
+    for name, problem, has_social_law in problems:
+        for slrc_is_old in [True, False]:
+            try:
+                problem = get_blocksworld(name)
+                if slrc_is_old:
+                    slrc = get_old_slrc()
+                else:
+                    slrc = get_new_slrc()
+                run_experiment(
+                    func=check_robustness,
+                    args=(slrc, problem),
+                    memory_limit=8_192_000_000,  # 8 GB
+                    cpu_limit=1800,  # 30 minutes CPU time
+                    timeout=3600,  # 1 hour wall time
+                    metadata=(name, slrc_is_old, has_social_law)
+                )
+                time.sleep(30)
+            except:
+                pass
 
 
 if __name__ == '__main__':
-    rv = WaitingActionRobustnessVerifier()
-    gm = GridManager(2, 2, 2)
-    #p = gm.get_grid_problem()
-    p = intersection_problem_add_sl3(get_intersection_problem())
-    # print(p)
-    compiled = rv.compile(p).problem
-    #print(compiled)
-    # planner = OneshotPlanner()
-    # print(planner.solve(compiled))
-    #simulate(compiled, trace_vars=[])
-    slrc = get_new_slrc()
-    #simulate(compiled)
-    print(check_robustness(slrc, p))
+    init_locs = []
+    goal_locs = []
+    for name in [
+        (2, 3, 2),
+        (3, 3, 3),
+        (3, 4, 4),
+        (4, 4, 5),
+        (4, 5, 6),
+        (5, 5, 6),
+        (5, 6, 7),
+        (6, 6, 8),
+        (6, 7, 8),
+        (7, 7, 7),
+        (7, 8, 9),
+        (8, 2, 2),
+        (8, 3, 3),
+        (8, 4, 6),
+        (8, 5, 7),
+        (8, 6, 8),
+        (8, 7, 10),
+        (6, 8, 8),
+        (5, 8, 8),
+        (3, 5, 3)]:
+        gm = GridManager(*name)
+        prob = gm.get_grid_problem()
+        init_locs.append(gm.init_locs)
+        goal_locs.append(gm.goal_locs)
+
+    print(f'init_locs = {init_locs}')
+    print(f'goal_locs = {goal_locs}')
+
+
