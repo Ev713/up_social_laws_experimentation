@@ -460,10 +460,10 @@ class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
         self.waiting_fluent_map.add_facts(problem, new_problem)
 
         # Add fluents
-        stage_1 = Fluent("stage 1")
-        stage_2 = Fluent("stage 2")
-        precondition_violation = Fluent("precondition violation")
-        possible_deadlock = Fluent("possible deadlock")
+        stage_1 = Fluent("stage-1")
+        stage_2 = Fluent("stage-2")
+        precondition_violation = Fluent("precondition-violation")
+        possible_deadlock = Fluent("possible-deadlock")
         conflict = Fluent("conflict")
         fin = Fluent("fin", _signature=[Parameter("a", self.agent_type)])
 
@@ -602,8 +602,7 @@ class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
         declare_deadlock.add_precondition(stage_2)
         declare_deadlock.add_precondition(possible_deadlock)
         for agent in problem.agents:
-            for i, goal in enumerate(self.get_agent_goal(problem, agent)):
-                for g in self.get_agent_goal(problem, agent):
+            for goal in self.get_agent_goal(problem, agent):
                     declare_deadlock.add_precondition(self.fsub.substitute(goal, self.local_fluent_map[agent], agent))
         declare_deadlock.add_effect(conflict, True)
         new_problem.add_action(declare_deadlock)
@@ -614,8 +613,7 @@ class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
         declare_fail.add_precondition(stage_2)
         declare_fail.add_precondition(precondition_violation)
         for agent in problem.agents:
-            for i, goal in enumerate(self.get_agent_goal(problem, agent)):
-                for g in self.get_agent_goal(problem, agent):
+            for goal in self.get_agent_goal(problem, agent):
                     declare_fail.add_precondition(self.fsub.substitute(goal, self.local_fluent_map[agent], agent))
         declare_fail.add_effect(conflict, True)
         new_problem.add_action(declare_fail)

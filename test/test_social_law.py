@@ -443,7 +443,12 @@ class TestProblem(unittest_TestCase):
         res = l3.compile(p_4cars_deadlock)
         p_robust = res.problem
         r_result = slrc.is_robust(p_robust)
-
+        rbv = WaitingActionRobustnessVerifier()
+        compiled = rbv.compile(p_robust).problem
+        print(compiled)
+        with OneshotPlanner()as planner:
+            plan = planner.solve(compiled)
+            print(plan)
         self.assertEqual(r_result.status, SocialLawRobustnessStatus.ROBUST_RATIONAL)  # 3
         self.assertEqual(len(p_robust.ma_environment.fluents), len(p_4cars_deadlock.ma_environment.fluents) + 1)
 

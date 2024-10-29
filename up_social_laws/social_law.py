@@ -307,7 +307,7 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
                 allowed_precondition = FluentExp(allowed_fluent, action.parameters)
                 action.add_precondition(allowed_precondition)
                 # Make sure to annotate this as waitfor, as otherwise the compilation can fail by trying a disallowed action
-                new_problem.waitfor.annotate_as_waitfor(agent_name, action_name, allowed_precondition)
+                # new_problem.waitfor.annotate_as_waitfor(agent_name, action_name, allowed_precondition)
             else:
                 allowed_fluent = agent.fluent(allowed_name)
 
