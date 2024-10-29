@@ -1171,35 +1171,4 @@ def run_experiments():
 
 
 if __name__ == '__main__':
-    init_locs = []
-    goal_locs = []
-    for name in [
-        (2, 3, 2),
-        (3, 3, 3),
-        (3, 4, 4),
-        (4, 4, 5),
-        (4, 5, 6),
-        (5, 5, 6),
-        (5, 6, 7),
-        (6, 6, 8),
-        (6, 7, 8),
-        (7, 7, 7),
-        (7, 8, 9),
-        (8, 2, 2),
-        (8, 3, 3),
-        (8, 4, 6),
-        (8, 5, 7),
-        (8, 6, 8),
-        (8, 7, 10),
-        (6, 8, 8),
-        (5, 8, 8),
-        (3, 5, 3)]:
-        gm = GridManager(*name)
-        prob = gm.get_grid_problem()
-        init_locs.append(gm.init_locs)
-        goal_locs.append(gm.goal_locs)
-
-    print(f'init_locs = {init_locs}')
-    print(f'goal_locs = {goal_locs}')
-
-
+    run_experiments()
