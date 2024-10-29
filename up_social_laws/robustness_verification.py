@@ -475,64 +475,93 @@ class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
         new_problem.add_fluent(fin, default_initial_value=False)
 
         allow_action_map = {}
+        restrict_actions_map = {}
         for agent in problem.agents:
+            restrict_actions = Fluent(f'restrict_actions_{agent.name}', BoolType())
+            restrict_actions_map[agent.name] = restrict_actions
+            new_problem.add_fluent(restrict_actions, default_initial_value=False)
             for action in agent.actions:
-                action_fluent = Fluent("allow-" + agent.name + "-" + action.name)
+                signature = {f'p{i}': p.type for i, p in enumerate(action.parameters)}
+                action_fluent = Fluent("allow-" + agent.name + "-" + action.name, BoolType(), **signature)
                 # allow_action_map.setdefault(action.agent, {}).update(action=action_fluent)
                 if agent.name not in allow_action_map.keys():
                     allow_action_map[agent.name] = {action.name: action_fluent}
                 else:
                     allow_action_map[agent.name][action.name] = action_fluent
-                new_problem.add_fluent(action_fluent, default_initial_value=True)
+                new_problem.add_fluent(action_fluent, default_initial_value=False)
 
         # Add actions
         for agent in problem.agents:
             for action in agent.actions:
                 # Success version - affects globals same way as original
-                a_s = self.create_action_copy(problem, agent, action, "s" + agent.name)
-                a_s.add_precondition(stage_1)
-                a_s.add_precondition(allow_action_map[agent.name][action.name])
-                for fact in self.get_action_preconditions(problem, agent, action, True, True):
-                    a_s.add_precondition(self.fsub.substitute(fact, self.global_fluent_map, agent))
-                for effect in action.effects:
-                    a_s.add_effect(self.fsub.substitute(effect.fluent, self.global_fluent_map, agent), effect.value)
-                new_problem.add_action(a_s)
-                new_to_old[a_s] = action
+                for all_actions in [True, False]:
+                    prefix = 'ra' if all_actions else 'a'
+                    a_s = self.create_action_copy(problem, agent, action, f"s_{prefix}_")
+                    a_s.add_precondition(stage_1)
+                    allow_action = allow_action_map[agent.name][action.name](*action.parameters)
+                    restrict_actions = restrict_actions_map[agent.name]
+                    if all_actions:
+                        a_s.add_precondition(Not(restrict_actions))
+                    else:
+                        a_s.add_precondition(allow_action)
+                    for fact in self.get_action_preconditions(problem, agent, action, True, True):
+                        a_s.add_precondition(self.fsub.substitute(fact, self.global_fluent_map, agent))
+                    for effect in action.effects:
+                        a_s.add_effect(self.fsub.substitute(effect.fluent, self.global_fluent_map, agent), effect.value)
+                    a_s.add_effect(allow_action, False)
+                    a_s.add_effect(restrict_actions, False)
+                    new_problem.add_action(a_s)
+                    new_to_old[a_s] = action
 
                 # Fail version
                 for i, fact in enumerate(self.get_action_preconditions(problem, agent, action, True, False)):
-                    a_f = self.create_action_copy(problem, agent, action, "f" + str(i))
-                    a_f.add_precondition(stage_1)
-                    a_f.add_precondition(allow_action_map[agent.name][action.name])
-                    for pre in self.get_action_preconditions(problem, agent, action, False, True):
-                        a_f.add_precondition(self.fsub.substitute(pre, self.global_fluent_map, agent))
-                    a_f.add_precondition(Not(self.fsub.substitute(fact, self.global_fluent_map, agent)))
-                    a_f.add_effect(precondition_violation, True)
-                    a_f.add_effect(stage_2, True)
-                    a_f.add_effect(stage_1, False)
-                    new_problem.add_action(a_f)
-                    new_to_old[a_f] = action
+                    for all_actions in [True, False]:
+                        prefix = 'ra' if all_actions else 'a'
+                        a_f = self.create_action_copy(problem, agent, action, f"f_{prefix}_{i}")
+                        if all_actions:
+                            restrict_actions = restrict_actions_map[agent.name]
+                            a_f.add_precondition(Not(restrict_actions))
+                        else:
+                            allow_action = allow_action_map[agent.name][action.name](*action.parameters)
+                            a_f.add_precondition(allow_action)
+                        a_f.add_precondition(stage_1)
+                        for pre in self.get_action_preconditions(problem, agent, action, False, True):
+                            a_f.add_precondition(self.fsub.substitute(pre, self.global_fluent_map, agent))
+                        a_f.add_precondition(Not(self.fsub.substitute(fact, self.global_fluent_map, agent)))
+                        a_f.add_effect(precondition_violation, True)
+                        a_f.add_effect(stage_2, True)
+                        a_f.add_effect(stage_1, False)
+                        new_problem.add_action(a_f)
+                        new_to_old[a_f] = action
 
                 for i, fact in enumerate(self.get_action_preconditions(problem, agent, action, False, True)):
                     # Wait version
-                    a_w = self.create_action_copy(problem, agent, action, "w" + str(i))
-                    a_w.add_precondition(stage_1)
-                    a_w.add_precondition(allow_action_map[agent.name][action.name])
-                    a_w.add_precondition(Not(self.fsub.substitute(fact, self.global_fluent_map, agent)))
-                    assert not fact.is_not()
-                    a_w.clear_effects()
-                    for fluent in [allow_action_map[agent.name][a] for a in allow_action_map[agent.name].keys()
-                                   if a != action.name]:
-                        a_w.add_effect(fluent, False)
-                    new_problem.add_action(a_w)
-                    new_to_old[a_w] = action
+                    for all_actions in [True, False]:
+                        prefix = 'ra' if all_actions else 'a'
+                        a_w = self.create_action_copy(problem, agent, action, f"w_{prefix}_{i}")
+                        allow_action = allow_action_map[agent.name][action.name](*action.parameters)
+                        restrict_actions = restrict_actions_map[agent.name]
+                        if all_actions:
+                            a_w.add_precondition(Not(restrict_actions))
+                        else:
+                            a_w.add_precondition(allow_action)
+
+                        a_w.add_precondition(stage_1)
+                        a_w.add_precondition(Not(self.fsub.substitute(fact, self.global_fluent_map, agent)))
+                        assert not fact.is_not()
+                        a_w.clear_effects()
+                        a_w.add_effect(restrict_actions, True)
+                        a_w.add_effect(allow_action, True)
+                        new_problem.add_action(a_w)
+                        new_to_old[a_w] = action
 
                     # deadlock version
-                    a_deadlock = self.create_action_copy(problem, agent, action, "d" + str(i))
+                    a_deadlock = self.create_action_copy(problem, agent, action, f"d{i}")
                     a_deadlock.add_precondition(Not(self.fsub.substitute(fact, self.global_fluent_map, agent)))
-                    for another_action in allow_action_map[agent.name].keys():
-                        if another_action != action.name:
-                            a_deadlock.add_precondition(Not(allow_action_map[agent.name][another_action]))
+                    allow_action = allow_action_map[agent.name][action.name](*action.parameters)
+                    restrict_actions = restrict_actions_map[agent.name]
+                    a_deadlock.add_precondition(restrict_actions)
+                    a_deadlock.add_precondition(allow_action)
 
                     a_deadlock.clear_effects()
                     a_deadlock.add_effect(fin(self.get_agent_obj(agent)), True)
@@ -542,16 +571,23 @@ class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
                     new_to_old[a_deadlock] = action
 
                 # local version
-                a_local = self.create_action_copy(problem, agent, action, "l")
-                a_local.add_precondition(stage_2)
-                a_local.add_precondition(allow_action_map[agent.name][action.name])
-                for fluent in allow_action_map[agent.name].values():
-                    a_local.add_effect(fluent, True)
-                new_problem.add_action(a_local)
-                new_to_old[a_local] = action
+                for all_actions in [True, False]:
+                    prefix = 'ra' if all_actions else 'a'
+                    a_local = self.create_action_copy(problem, agent, action, f"l_{prefix}")
+                    a_local.add_precondition(stage_2)
+                    allow_action = allow_action_map[agent.name][action.name](*action.parameters)
+                    restrict_actions = restrict_actions_map[agent.name]
+                    if all_actions:
+                        a_local.add_precondition(Not(restrict_actions))
+                    else:
+                        a_local.add_precondition(allow_action)
+                    a_local.add_effect(allow_action, False)
+                    a_local.add_effect(restrict_actions, False)
+                    new_problem.add_action(a_local)
+                    new_to_old[a_local] = action
 
             # end-success
-            end_s = InstantaneousAction("end_s_" + agent.name)
+            end_s = InstantaneousAction(f"end_s_{agent.name}")
             for goal in self.get_agent_goal(problem, agent):
                 end_s.add_precondition(self.fsub.substitute(goal, self.global_fluent_map, agent))
                 ###

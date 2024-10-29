@@ -236,7 +236,9 @@ def ma_to_sap(problem, agent_id):
 
 def state_to_dict(state):
     str_state = str(state).replace('{', '').replace('}', '')
-    keys = [k for k in str_state.replace(' ', '').replace(':', '').replace(',', '').replace('true', '@').replace('false', '@').split('@')]
+    keys = [k for k in
+            str_state.replace(' ', '').replace(':', '').replace(',', '').replace('true', '@').replace('false',
+                                                                                                      '@').split('@')]
     keys.remove('')
     vals = []
     for word in str_state.replace('true', '@true@').replace('false', '@false@').split('@'):
@@ -286,11 +288,12 @@ def simulate(problem, ma=False, print_state=False, trace_vars=[]):
                 state_dit = state_to_dict(state)
                 print(f'{var}: {state_dit[var]}')
         t = 0
-        print(f't = {t}\nActions:')
+        print(f't = {t}\nCalculating actions...')
         actions = [a for a in simulator.get_applicable_actions(state)]
         if len(actions) == 0:
             print('No legal actions')
             return
+        print('Actions: ')
         for a in actions:
             print(a[0].name, a[1])
         while True:
@@ -1161,13 +1164,14 @@ def run_experiments():
 if __name__ == '__main__':
     rv = WaitingActionRobustnessVerifier()
     gm = GridManager(2, 2, 2)
-    p = gm.add_direction_law(gm.get_grid_problem())
-    print(p)
+    #p = gm.get_grid_problem()
+    p = intersection_problem_add_sl3(get_intersection_problem())
+    # print(p)
     compiled = rv.compile(p).problem
-    print(compiled)
-    planner = OneshotPlanner()
-    print(planner.solve(compiled))
+    #print(compiled)
+    # planner = OneshotPlanner()
+    # print(planner.solve(compiled))
     #simulate(compiled, trace_vars=[])
     slrc = get_new_slrc()
+    #simulate(compiled)
     print(check_robustness(slrc, p))
-
