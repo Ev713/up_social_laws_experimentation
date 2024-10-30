@@ -1,5 +1,6 @@
 import csv
 import json
+from datetime import date
 
 import pandas as pandas
 import unified_planning
@@ -7,6 +8,8 @@ from unified_planning.shortcuts import *
 from unified_planning.model.multi_agent import *
 import random
 from unified_planning.io import PDDLWriter, MAPDDLWriter
+
+up.shortcuts.get_environment().credits_stream = None
 
 # from test.test_social_law import Example
 from up_social_laws.ma_centralizer import MultiAgentProblemCentralizer
@@ -25,8 +28,44 @@ from multiprocessing import Process, Queue
 
 planner = OneshotPlanner()
 
-INIT_LOCS = [{0: '(1, 1)', 1: '(1, 1)'}, {0: '(2, 0)', 1: '(0, 2)', 2: '(1, 0)'}, {0: '(0, 2)', 1: '(1, 1)', 2: '(2, 3)', 3: '(1, 2)'}, {0: '(0, 2)', 1: '(1, 3)', 2: '(3, 0)', 3: '(2, 1)', 4: '(0, 3)'}, {0: '(3, 2)', 1: '(3, 1)', 2: '(0, 3)', 3: '(3, 2)', 4: '(0, 0)', 5: '(0, 3)'}, {0: '(1, 1)', 1: '(0, 0)', 2: '(2, 2)', 3: '(1, 3)', 4: '(3, 4)', 5: '(3, 0)'}, {0: '(3, 1)', 1: '(2, 4)', 2: '(4, 1)', 3: '(2, 0)', 4: '(3, 0)', 5: '(1, 4)', 6: '(3, 0)'}, {0: '(2, 5)', 1: '(1, 0)', 2: '(5, 4)', 3: '(5, 0)', 4: '(0, 4)', 5: '(1, 5)', 6: '(2, 1)', 7: '(0, 4)'}, {0: '(5, 3)', 1: '(1, 2)', 2: '(1, 3)', 3: '(2, 2)', 4: '(1, 6)', 5: '(1, 1)', 6: '(4, 3)', 7: '(4, 1)'}, {0: '(3, 0)', 1: '(4, 2)', 2: '(1, 1)', 3: '(6, 6)', 4: '(5, 5)', 5: '(4, 0)', 6: '(5, 6)'}, {0: '(2, 7)', 1: '(5, 5)', 2: '(6, 0)', 3: '(1, 3)', 4: '(0, 7)', 5: '(0, 3)', 6: '(4, 5)', 7: '(1, 2)', 8: '(0, 1)'}, {0: '(6, 1)', 1: '(3, 0)'}, {0: '(2, 2)', 1: '(5, 2)', 2: '(2, 0)'}, {0: '(4, 1)', 1: '(2, 0)', 2: '(0, 1)', 3: '(2, 3)', 4: '(0, 1)', 5: '(3, 2)'}, {0: '(0, 1)', 1: '(6, 1)', 2: '(0, 0)', 3: '(0, 4)', 4: '(5, 2)', 5: '(2, 2)', 6: '(5, 1)'}, {0: '(0, 4)', 1: '(7, 2)', 2: '(3, 2)', 3: '(4, 2)', 4: '(0, 3)', 5: '(5, 1)', 6: '(7, 3)', 7: '(6, 4)'}, {0: '(6, 6)', 1: '(4, 1)', 2: '(7, 1)', 3: '(5, 6)', 4: '(0, 4)', 5: '(1, 0)', 6: '(1, 1)', 7: '(2, 4)', 8: '(1, 1)', 9: '(5, 0)'}, {0: '(3, 3)', 1: '(3, 4)', 2: '(5, 3)', 3: '(4, 2)', 4: '(2, 7)', 5: '(1, 7)', 6: '(5, 4)', 7: '(1, 1)'}, {0: '(4, 6)', 1: '(2, 4)', 2: '(2, 5)', 3: '(2, 6)', 4: '(3, 1)', 5: '(4, 6)', 6: '(3, 7)', 7: '(4, 1)'}, {0: '(1, 4)', 1: '(0, 1)', 2: '(1, 1)'}]
-GOAL_LOCS = [{0: '(1, 2)', 1: '(0, 1)'}, {0: '(0, 2)', 1: '(2, 0)', 2: '(2, 2)'}, {0: '(1, 3)', 1: '(1, 3)', 2: '(2, 0)', 3: '(0, 0)'}, {0: '(2, 3)', 1: '(2, 3)', 2: '(3, 0)', 3: '(2, 1)', 4: '(3, 3)'}, {0: '(0, 4)', 1: '(3, 4)', 2: '(3, 2)', 3: '(2, 3)', 4: '(0, 1)', 5: '(1, 3)'}, {0: '(1, 1)', 1: '(3, 3)', 2: '(2, 4)', 3: '(4, 1)', 4: '(4, 2)', 5: '(0, 2)'}, {0: '(4, 2)', 1: '(3, 1)', 2: '(3, 1)', 3: '(3, 1)', 4: '(1, 1)', 5: '(0, 0)', 6: '(2, 1)'}, {0: '(1, 3)', 1: '(3, 1)', 2: '(5, 3)', 3: '(0, 1)', 4: '(4, 5)', 5: '(5, 0)', 6: '(1, 1)', 7: '(4, 2)'}, {0: '(3, 3)', 1: '(5, 2)', 2: '(3, 4)', 3: '(4, 1)', 4: '(3, 3)', 5: '(3, 6)', 6: '(1, 0)', 7: '(5, 4)'}, {0: '(4, 3)', 1: '(5, 2)', 2: '(0, 2)', 3: '(1, 0)', 4: '(1, 5)', 5: '(6, 4)', 6: '(2, 1)'}, {0: '(3, 1)', 1: '(4, 4)', 2: '(3, 3)', 3: '(1, 7)', 4: '(3, 2)', 5: '(1, 3)', 6: '(6, 2)', 7: '(6, 4)', 8: '(1, 7)'}, {0: '(1, 1)', 1: '(5, 0)'}, {0: '(4, 2)', 1: '(0, 0)', 2: '(5, 0)'}, {0: '(7, 1)', 1: '(5, 3)', 2: '(4, 1)', 3: '(2, 1)', 4: '(6, 2)', 5: '(0, 1)'}, {0: '(6, 0)', 1: '(4, 4)', 2: '(7, 2)', 3: '(0, 3)', 4: '(3, 1)', 5: '(5, 0)', 6: '(2, 2)'}, {0: '(5, 5)', 1: '(5, 5)', 2: '(7, 3)', 3: '(1, 3)', 4: '(5, 2)', 5: '(6, 1)', 6: '(6, 4)', 7: '(0, 0)'}, {0: '(5, 2)', 1: '(0, 2)', 2: '(7, 6)', 3: '(1, 5)', 4: '(6, 5)', 5: '(0, 3)', 6: '(4, 1)', 7: '(7, 5)', 8: '(7, 1)', 9: '(0, 6)'}, {0: '(0, 2)', 1: '(0, 2)', 2: '(4, 7)', 3: '(5, 6)', 4: '(4, 0)', 5: '(5, 5)', 6: '(0, 0)', 7: '(5, 5)'}, {0: '(4, 5)', 1: '(3, 4)', 2: '(2, 6)', 3: '(2, 3)', 4: '(2, 3)', 5: '(2, 1)', 6: '(2, 5)', 7: '(0, 5)'}, {0: '(1, 4)', 1: '(2, 3)', 2: '(2, 3)'}]
+INIT_LOCS = [{0: '(1, 1)', 1: '(1, 1)'}, {0: '(2, 0)', 1: '(0, 2)', 2: '(1, 0)'},
+             {0: '(0, 2)', 1: '(1, 1)', 2: '(2, 3)', 3: '(1, 2)'},
+             {0: '(0, 2)', 1: '(1, 3)', 2: '(3, 0)', 3: '(2, 1)', 4: '(0, 3)'},
+             {0: '(3, 2)', 1: '(3, 1)', 2: '(0, 3)', 3: '(3, 2)', 4: '(0, 0)', 5: '(0, 3)'},
+             {0: '(1, 1)', 1: '(0, 0)', 2: '(2, 2)', 3: '(1, 3)', 4: '(3, 4)', 5: '(3, 0)'},
+             {0: '(3, 1)', 1: '(2, 4)', 2: '(4, 1)', 3: '(2, 0)', 4: '(3, 0)', 5: '(1, 4)', 6: '(3, 0)'},
+             {0: '(2, 5)', 1: '(1, 0)', 2: '(5, 4)', 3: '(5, 0)', 4: '(0, 4)', 5: '(1, 5)', 6: '(2, 1)', 7: '(0, 4)'},
+             {0: '(5, 3)', 1: '(1, 2)', 2: '(1, 3)', 3: '(2, 2)', 4: '(1, 6)', 5: '(1, 1)', 6: '(4, 3)', 7: '(4, 1)'},
+             {0: '(3, 0)', 1: '(4, 2)', 2: '(1, 1)', 3: '(6, 6)', 4: '(5, 5)', 5: '(4, 0)', 6: '(5, 6)'},
+             {0: '(2, 7)', 1: '(5, 5)', 2: '(6, 0)', 3: '(1, 3)', 4: '(0, 7)', 5: '(0, 3)', 6: '(4, 5)', 7: '(1, 2)',
+              8: '(0, 1)'}, {0: '(6, 1)', 1: '(3, 0)'}, {0: '(2, 2)', 1: '(5, 2)', 2: '(2, 0)'},
+             {0: '(4, 1)', 1: '(2, 0)', 2: '(0, 1)', 3: '(2, 3)', 4: '(0, 1)', 5: '(3, 2)'},
+             {0: '(0, 1)', 1: '(6, 1)', 2: '(0, 0)', 3: '(0, 4)', 4: '(5, 2)', 5: '(2, 2)', 6: '(5, 1)'},
+             {0: '(0, 4)', 1: '(7, 2)', 2: '(3, 2)', 3: '(4, 2)', 4: '(0, 3)', 5: '(5, 1)', 6: '(7, 3)', 7: '(6, 4)'},
+             {0: '(6, 6)', 1: '(4, 1)', 2: '(7, 1)', 3: '(5, 6)', 4: '(0, 4)', 5: '(1, 0)', 6: '(1, 1)', 7: '(2, 4)',
+              8: '(1, 1)', 9: '(5, 0)'},
+             {0: '(3, 3)', 1: '(3, 4)', 2: '(5, 3)', 3: '(4, 2)', 4: '(2, 7)', 5: '(1, 7)', 6: '(5, 4)', 7: '(1, 1)'},
+             {0: '(4, 6)', 1: '(2, 4)', 2: '(2, 5)', 3: '(2, 6)', 4: '(3, 1)', 5: '(4, 6)', 6: '(3, 7)', 7: '(4, 1)'},
+             {0: '(1, 4)', 1: '(0, 1)', 2: '(1, 1)'}]
+GOAL_LOCS = [{0: '(1, 2)', 1: '(0, 1)'}, {0: '(0, 2)', 1: '(2, 0)', 2: '(2, 2)'},
+             {0: '(1, 3)', 1: '(1, 3)', 2: '(2, 0)', 3: '(0, 0)'},
+             {0: '(2, 3)', 1: '(2, 3)', 2: '(3, 0)', 3: '(2, 1)', 4: '(3, 3)'},
+             {0: '(0, 4)', 1: '(3, 4)', 2: '(3, 2)', 3: '(2, 3)', 4: '(0, 1)', 5: '(1, 3)'},
+             {0: '(1, 1)', 1: '(3, 3)', 2: '(2, 4)', 3: '(4, 1)', 4: '(4, 2)', 5: '(0, 2)'},
+             {0: '(4, 2)', 1: '(3, 1)', 2: '(3, 1)', 3: '(3, 1)', 4: '(1, 1)', 5: '(0, 0)', 6: '(2, 1)'},
+             {0: '(1, 3)', 1: '(3, 1)', 2: '(5, 3)', 3: '(0, 1)', 4: '(4, 5)', 5: '(5, 0)', 6: '(1, 1)', 7: '(4, 2)'},
+             {0: '(3, 3)', 1: '(5, 2)', 2: '(3, 4)', 3: '(4, 1)', 4: '(3, 3)', 5: '(3, 6)', 6: '(1, 0)', 7: '(5, 4)'},
+             {0: '(4, 3)', 1: '(5, 2)', 2: '(0, 2)', 3: '(1, 0)', 4: '(1, 5)', 5: '(6, 4)', 6: '(2, 1)'},
+             {0: '(3, 1)', 1: '(4, 4)', 2: '(3, 3)', 3: '(1, 7)', 4: '(3, 2)', 5: '(1, 3)', 6: '(6, 2)', 7: '(6, 4)',
+              8: '(1, 7)'}, {0: '(1, 1)', 1: '(5, 0)'}, {0: '(4, 2)', 1: '(0, 0)', 2: '(5, 0)'},
+             {0: '(7, 1)', 1: '(5, 3)', 2: '(4, 1)', 3: '(2, 1)', 4: '(6, 2)', 5: '(0, 1)'},
+             {0: '(6, 0)', 1: '(4, 4)', 2: '(7, 2)', 3: '(0, 3)', 4: '(3, 1)', 5: '(5, 0)', 6: '(2, 2)'},
+             {0: '(5, 5)', 1: '(5, 5)', 2: '(7, 3)', 3: '(1, 3)', 4: '(5, 2)', 5: '(6, 1)', 6: '(6, 4)', 7: '(0, 0)'},
+             {0: '(5, 2)', 1: '(0, 2)', 2: '(7, 6)', 3: '(1, 5)', 4: '(6, 5)', 5: '(0, 3)', 6: '(4, 1)', 7: '(7, 5)',
+              8: '(7, 1)', 9: '(0, 6)'},
+             {0: '(0, 2)', 1: '(0, 2)', 2: '(4, 7)', 3: '(5, 6)', 4: '(4, 0)', 5: '(5, 5)', 6: '(0, 0)', 7: '(5, 5)'},
+             {0: '(4, 5)', 1: '(3, 4)', 2: '(2, 6)', 3: '(2, 3)', 4: '(2, 3)', 5: '(2, 1)', 6: '(2, 5)', 7: '(0, 5)'},
+             {0: '(1, 4)', 1: '(2, 3)', 2: '(2, 3)'}]
 
 
 class GridManager:
@@ -1065,7 +1104,8 @@ def run_with_limits(func, args, memory_limit, cpu_limit, timeout, result_queue):
 
 # Main function to run the target function with specified limits
 def run_experiment(func, args=(), memory_limit=8_192_000_000, cpu_limit=1800, timeout=None,
-                   log_file="experiment_log.csv", metadata=("unknown", False, False)):
+                   log_file=f"/logs/experiment_log_{date.today().strftime("%b-%d-%Y")}.csv",
+                   metadata=("unknown", False, False)):
     filename, old_compilation, has_social_law = metadata
     result_queue = Queue()
     process = Process(target=run_with_limits, args=(func, args, memory_limit, cpu_limit, timeout, result_queue))
@@ -1073,8 +1113,6 @@ def run_experiment(func, args=(), memory_limit=8_192_000_000, cpu_limit=1800, ti
     start_time = time.time()  # Start timer for the function
     process.start()
     process.join(timeout)
-
-    elapsed_time = time.time() - start_time  # Calculate elapsed time since start
 
     if process.is_alive():
         # Log the timeout with "-"
@@ -1102,7 +1140,7 @@ def run_experiment(func, args=(), memory_limit=8_192_000_000, cpu_limit=1800, ti
 
 def run_experiments():
     blocksworld_names = ['9-0', '9-1', '9-2', '10-0', '10-1', '10-2', '11-0', '11-1', '11-2', '12-0', '12-1', '13-0',
-                         '13-1', '14-0', '14-1', '15-0', '15-1', '16-1', '16-2',] #'17-0']
+                         '13-1', '14-0', '14-1', '15-0', '15-1', '16-1', '16-2', ]  # '17-0']
     zenotravel_names = [f'pfile{i}' for i in range(3, 24)]
     zenotravel_names.remove('pfile11')
     driverlog_names = [f'pfile{i}' for i in range(1, 21)]
@@ -1129,13 +1167,15 @@ def run_experiments():
         (3, 5, 3)
     ]
     problems = []
-
+    driverlog_problems = [(f'blocksworld_{name}', get_driverlog(name), False) for name in driverlog_names]
+    problems += driverlog_problems
     blocksworld_problems = [(f'blocksworld_{name}', get_blocksworld(name), False) for name in blocksworld_names]
-    problems+=blocksworld_problems
+    problems += blocksworld_problems
     zenotravel_problems = [(f'zenotravel_{name}', get_zenotravel(name), False) for name in zenotravel_names]
-    problems+=zenotravel_problems
-    zenotravel_problems_with_SL = [(f'zenotravel_sl_{name}', zenotravel_add_sociallaw(get_zenotravel(name)), True) for name in zenotravel_names]
-    problems+=zenotravel_problems_with_SL
+    problems += zenotravel_problems
+    zenotravel_problems_with_SL = [(f'zenotravel_sl_{name}', zenotravel_add_sociallaw(get_zenotravel(name)), True) for
+                                   name in zenotravel_names]
+    problems += zenotravel_problems_with_SL
     grid_problems = []
     grid_problems_with_SL = []
 
@@ -1146,7 +1186,7 @@ def run_experiments():
         p = gm.get_grid_problem()
         grid_problems.append((f'grid_{name}', p, False))
         grid_problems_with_SL.append((f'grid_sl_{name}', gm.add_direction_law(p), True))
-    problems+=grid_problems
+    problems += grid_problems
     problems += grid_problems_with_SL
     random.shuffle(problems)
 
@@ -1170,6 +1210,7 @@ def run_experiments():
                 pass
             print(f'Problem {name} done.')
 
+
 def read_data():
     exp_df = pandas.read_csv('/home/evgeny/SocialLaws/up-social-laws/experimentation/experiment_log.csv')
     blocksworld_df = exp_df[exp_df.apply(lambda x: 'blocksworld' in x['name'], axis=1)]
@@ -1181,9 +1222,9 @@ def read_data():
 
 
 if __name__ == '__main__':
-    p = get_blocksworld('10-0')
+    p = intersection_problem_add_sl1(get_intersection_problem())
     rv = WaitingActionRobustnessVerifier()
+    compiled_p = rv.compile(p).problem
+    print(compiled_p)
     with OneshotPlanner() as planner:
-        print(planner.solve(get_compiled_problem(p)))
-
-
+        print(planner.solve(p))
