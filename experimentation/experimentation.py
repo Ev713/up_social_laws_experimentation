@@ -1192,13 +1192,12 @@ def run_experiments():
     problems += grid_problems
     problems += grid_problems_with_SL
     random.shuffle(problems)
-    problems = [random.choice(problems) for _ in range(3)]
     total_problems = len(problems)
 
 
     for i, (name, problem, has_social_law) in enumerate(problems):
         for slrc_is_old in [True, False]:
-            try:
+            #try:
                 if slrc_is_old:
                     slrc = get_old_slrc()
                 else:
@@ -1207,15 +1206,15 @@ def run_experiments():
                     func=check_robustness,
                     args=(slrc, problem),
                     memory_limit=8_192_000_000,  # 8 GB
-                    cpu_limit=10,  # 30 minutes CPU time
-                    timeout=20,  # 1 hour wall time
+                    cpu_limit=1800,  # 30 minutes CPU time
+                    timeout=3600,  # 1 hour wall time
                     metadata=(name, slrc_is_old, has_social_law)
                 )
                 time.sleep(30)
-            except:
-                pass
-            print(f'Problem {name} done.')
-            print(f'{i}/{total_problems}')
+            #except:
+            #    pass
+                print(f'Problem {name} done.')
+                print(f'{i+1}/{total_problems}')
 
 
 def read_data():
