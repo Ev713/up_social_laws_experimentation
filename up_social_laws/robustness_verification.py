@@ -643,8 +643,9 @@ class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
                 goals_not_achieved = InstantaneousAction(f"goals_not_achieved_{agent.name}_{i}")
                 goals_not_achieved.add_precondition(stage_2)
                 goals_not_achieved.add_precondition(Not(self.fsub.substitute(goal, self.global_fluent_map, agent)))
-                for g in self.get_agent_goal(problem, agent):
-                    goals_not_achieved.add_precondition(self.fsub.substitute(g, self.local_fluent_map[agent], agent))
+                for a in problem.agents:
+                    for g in self.get_agent_goal(problem, a):
+                        goals_not_achieved.add_precondition(self.fsub.substitute(g, self.local_fluent_map[agent], agent))
                 goals_not_achieved.add_effect(conflict, True)
                 new_problem.add_action(goals_not_achieved)
                 new_to_old[goals_not_achieved] = None
