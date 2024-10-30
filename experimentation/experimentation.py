@@ -1104,13 +1104,13 @@ def run_with_limits(func, args, memory_limit, cpu_limit, timeout, result_queue):
 
 # Main function to run the target function with specified limits
 def run_experiment(func, args=(), memory_limit=8_192_000_000, cpu_limit=1800, timeout=None,
-                   log_file=f"/logs/experiment_log_{date.today().strftime("%b-%d-%Y")}.csv",
                    metadata=("unknown", False, False)):
     filename, old_compilation, has_social_law = metadata
+
+    log_file = f"/logs/experiment_log_{date.today().strftime("%b-%d-%Y")}.csv"
     result_queue = Queue()
     process = Process(target=run_with_limits, args=(func, args, memory_limit, cpu_limit, timeout, result_queue))
 
-    start_time = time.time()  # Start timer for the function
     process.start()
     process.join(timeout)
 
