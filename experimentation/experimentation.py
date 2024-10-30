@@ -1167,7 +1167,10 @@ def run_experiments():
         (3, 5, 3)
     ]
     problems = []
-    driverlog_problems = [(f'blocksworld_{name}', get_driverlog(name), False) for name in driverlog_names]
+    driverlog_problems = []
+    for name in driverlog_names:
+        driverlog_problems.append((f'blocksworld_{name}', get_driverlog(name), False))
+        print(f'{name} added.')
     problems += driverlog_problems
     blocksworld_problems = [(f'blocksworld_{name}', get_blocksworld(name), False) for name in blocksworld_names]
     problems += blocksworld_problems
