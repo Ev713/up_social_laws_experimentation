@@ -1196,10 +1196,10 @@ def run_experiments():
 
     problems = [random.choice(problems) for _ in range (3)]
 
-    log_dir = '/logs'
+    log_dir = './logs'
     os.makedirs(log_dir, exist_ok=True)
 
-    log_file = "/logs/experiment_log_" + date.today().strftime("%b-%d-%Y") + ".csv"
+    log_file = "./logs/experiment_log_" + date.today().strftime("%b-%d-%Y") + ".csv"
 
     headers = ['name', 'slrc_is_old', 'has_social_law']
 
