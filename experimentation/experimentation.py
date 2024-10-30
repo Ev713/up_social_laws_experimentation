@@ -1219,8 +1219,8 @@ def run_experiments():
                     func=check_robustness,
                     args=(slrc, problem),
                     memory_limit=8_192_000_000,  # 8 GB
-                    cpu_limit=10,  # 30 minutes CPU time
-                    timeout=20,  # 1 hour wall time
+                    cpu_limit=1800,  # 30 minutes CPU time
+                    timeout=3600,  # 1 hour wall time
                     metadata=(name, slrc_is_old, has_social_law)
                 )
 
