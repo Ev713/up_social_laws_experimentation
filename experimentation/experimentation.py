@@ -1210,7 +1210,7 @@ def run_experiments():
     print(f'0/{total_problems} done.')
     for i, (name, problem, has_social_law) in enumerate(problems):
         for slrc_is_old in [True, False]:
-            #try:
+            try:
                 if slrc_is_old:
                     slrc = get_old_slrc()
                 else:
@@ -1223,11 +1223,12 @@ def run_experiments():
                     timeout=20,  # 1 hour wall time
                     metadata=(name, slrc_is_old, has_social_law)
                 )
-                time.sleep(30)
-            #except:
-            #    pass
-                print(f'Problem {name} done.')
-                print(f'{i+1}/{total_problems}')
+
+            except:
+                pass
+            print(f'Problem {name} done.')
+            print(f'{i+1}/{total_problems}')
+            time.sleep(30)
 
 
 def read_data():
