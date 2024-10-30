@@ -1194,7 +1194,7 @@ def run_experiments():
     random.shuffle(problems)
     total_problems = len(problems)
 
-    problems = [random.choice(problems) for _ in range (3)]
+    # problems = [random.choice(problems) for _ in range (3)]
 
     log_dir = './logs'
     os.makedirs(log_dir, exist_ok=True)
