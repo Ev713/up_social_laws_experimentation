@@ -3,7 +3,7 @@
                           "p13-14", "p13-9", "p14-0", "p14-8", "p14-9", "p2-3", "p2-6", "p3-10",
                           "p3-11", "p3-7", "p4-6", "p5-14", "p7-13", "p7-9", "p8-12", "p9-0",
                           "p9-4", "p9-6", "p9-8", "s0", "s1", "s10", "s11", "s12", "s13", "s14",
-                          "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9", "s11", "s12", "s13", "s14", "s15"],
+                          "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9", "s15"],
             "packages": ["package1", "package10", "package2", "package3", "package4", "package5", "package6",
                 "package7", "package8", "package9", "package11", "package12", "package13", "package14", "package15"],
             "trucks": ["truck1", "truck2", "truck3", "truck4", "truck5"],
