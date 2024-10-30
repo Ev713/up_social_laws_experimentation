@@ -1231,7 +1231,7 @@ def run_experiments():
 
 
 def read_data():
-    exp_df = pandas.read_csv('/home/evgeny/SocialLaws/up-social-laws/experimentation/experiment_log.csv')
+    exp_df = pandas.read_csv('/home/evgeny/SocialLaws/up-social-laws/experimentation/experiment_log29-10-24.csv')
     blocksworld_df = exp_df[exp_df.apply(lambda x: 'blocksworld' in x['name'], axis=1)]
     zenotravel_sl_df = exp_df[exp_df.apply(lambda x: 'zenotravel' in x['name'] and 'sl' in x['name'], axis=1)]
     zenotravel_df = exp_df[exp_df.apply(lambda x: 'zenotravel' in x['name'] and not 'sl' in x['name'], axis=1)]
