@@ -5,8 +5,6 @@
 
 "init_values": {
 "global": [
-["at", ["driver4", "s9"]],
-["at", ["driver5", "s2"]],
 ["at", ["truck1", "s2"]],
 ["empty", ["truck1"]],
 ["at", ["truck2", "s8"]],
