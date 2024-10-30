@@ -1,5 +1,5 @@
 {
-            "locations": ["p1-0", "p1-4", "p1-5", "p2-1", "p2-3", "p3-0", "p3-1", "p3-5", "p4-5", "s0", "s1", "s2",
+            "locations": ["p0-1", "p1-0", "p1-4", "p1-5", "p2-1", "p2-3", "p3-0", "p3-1", "p3-5", "p4-5", "s0", "s1", "s2",
                           "s3", "s4", "s5"],
             "packages": ["package1", "package2", "package3", "package4", "package5", "package6"],
             "trucks": ["truck1", "truck2", "truck3"],
