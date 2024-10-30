@@ -1,5 +1,5 @@
 {
-            "rucks": ["truck1", "truck2"],
+            "trucks": ["truck1", "truck2"],
             "locations": ["s0", "s1", "s2", "p0-1", "p1-2"],
             "packages": ["package1", "package2", "package3", "package4"],
             "agents": ["driver1", "driver2", "driver3"],
