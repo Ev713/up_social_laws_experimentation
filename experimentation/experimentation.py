@@ -1226,9 +1226,4 @@ def read_data():
 
 
 if __name__ == '__main__':
-    p = intersection_problem_add_sl1(get_intersection_problem())
-    rv = WaitingActionRobustnessVerifier()
-    compiled_p = rv.compile(p).problem
-    print(compiled_p)
-    with OneshotPlanner() as planner:
-        print(planner.solve(compiled_p))
+    run_experiments()
