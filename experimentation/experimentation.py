@@ -1194,6 +1194,8 @@ def run_experiments():
     random.shuffle(problems)
     total_problems = len(problems)
 
+    problems = [random.choice(problems) for _ in range (3)]
+
 
     for i, (name, problem, has_social_law) in enumerate(problems):
         for slrc_is_old in [True, False]:
@@ -1206,8 +1208,8 @@ def run_experiments():
                     func=check_robustness,
                     args=(slrc, problem),
                     memory_limit=8_192_000_000,  # 8 GB
-                    cpu_limit=1800,  # 30 minutes CPU time
-                    timeout=3600,  # 1 hour wall time
+                    cpu_limit=10,  # 30 minutes CPU time
+                    timeout=20,  # 1 hour wall time
                     metadata=(name, slrc_is_old, has_social_law)
                 )
                 time.sleep(30)
