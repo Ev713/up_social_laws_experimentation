@@ -1107,7 +1107,7 @@ def run_experiment(func, args=(), memory_limit=8_192_000_000, cpu_limit=1800, ti
                    metadata=("unknown", False, False)):
     filename, old_compilation, has_social_law = metadata
 
-    log_file = "/logs/experiment_log_" + date.today().strftime("%b-%d-%Y")+".csv"
+    log_file = "./logs/experiment_log_" + date.today().strftime("%b-%d-%Y")+".csv"
 
     result_queue = Queue()
     process = Process(target=run_with_limits, args=(func, args, memory_limit, cpu_limit, timeout, result_queue))
@@ -1207,7 +1207,7 @@ def run_experiments():
     with open(log_file, mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(headers)
-
+    print(f'0/{total_problems} done.')
     for i, (name, problem, has_social_law) in enumerate(problems):
         for slrc_is_old in [True, False]:
             #try:
