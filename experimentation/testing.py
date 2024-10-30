@@ -93,7 +93,7 @@ class Parser:
 
 
     def parse_json(self, number):
-        pathname = r'C:\Users\foree\PycharmProjects\up-social-laws\experimentation\problems\all\unfactored\zenotravel\pfile'+str(number)+'.pddl'
+        pathname = r'C:\Users\foree\PycharmProjects\up_social_laws_experimentation\experimentation\problems\all\unfactored\driverlog\pfile'+str(number)+'.pddl'
         json_ver = '{'
         with open(pathname, 'r') as file:
             content = file.read()
@@ -120,7 +120,7 @@ class Parser:
 
 def redo():
     # Open the file for reading
-    pathname = '/home/evgeny/SocialLaws/up-social-laws/experimentation/problems/all/jsons/blocksworld/17-0.json'
+    pathname = '/home/evgeny/SocialLaws/up-social-laws/experimentation/problems/all/jsons/driverlog/pfile17.json'
     with open(pathname, 'r') as file:
         content = file.read().replace('(', '[').replace('\'', '\"').replace(')', ']').replace(',]]', ']]')
 
@@ -130,8 +130,4 @@ def redo():
 
 
 if __name__ == '__main__':
-    p = Parser()
-    for number in range(13, 24):
-        pathname = r'C:\Users\foree\PycharmProjects\up-social-laws\experimentation\problems\all\jsons\zenotravel\pfile'+str(number)+'.json'
-        with open(pathname, 'w') as file:
-            file.write(p.parse_json(number))
+    print(Parser().parse_json(17))
