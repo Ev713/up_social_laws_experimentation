@@ -1194,7 +1194,7 @@ def run_experiments():
         gm.init_locs = INIT_LOCS[i]
         gm.goal_locs = GOAL_LOCS[i]
         p = gm.get_grid_problem()
-        grid_problems.append(('grid_'+name.replace(' ', '_').replace(',', ''), p, False,))
+        grid_problems.append(('grid_'+str(name).replace(' ', '_').replace(',', ''), p, False,))
         grid_problems_with_SL.append((f'grid_sl_{name}', gm.add_direction_law(p), True))
     problems += grid_problems
     problems += grid_problems_with_SL
