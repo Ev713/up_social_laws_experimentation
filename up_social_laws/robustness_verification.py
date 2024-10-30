@@ -476,7 +476,22 @@ class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
 
         allow_action_map = {}
         restrict_actions_map = {}
-        for agent in problem.agents:
+        agent_turn_map = {}
+        for agent_id, agent in enumerate(problem.agents):
+            agent_turn = Fluent(f'{agent.name}_turn', BoolType())
+            agent_turn_map[agent.name] = agent_turn
+            if agent_id == 0:
+                new_problem.add_fluent(agent_turn, default_initial_value=True)
+            else:
+                new_problem.add_fluent(agent_turn, default_initial_value=False)
+                take_turn = InstantaneousAction(f'{agent.name}_take_turn')
+                take_turn.add_precondition(stage_2)
+                prev_turn = agent_turn_map[problem.agents[agent_id-1].name]
+                take_turn.add_precondition(prev_turn)
+                take_turn.add_effect(agent_turn, True)
+                take_turn.add_effect(prev_turn, False)
+                new_problem.add_action(take_turn)
+
             restrict_actions = Fluent(f'restrict_actions_{agent.name}', BoolType())
             restrict_actions_map[agent.name] = restrict_actions
             new_problem.add_fluent(restrict_actions, default_initial_value=False)
@@ -576,6 +591,7 @@ class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
                     prefix = 'ra' if all_actions else 'a'
                     a_local = self.create_action_copy(problem, agent, action, f"l_{prefix}")
                     a_local.add_precondition(stage_2)
+                    a_local.add_precondition(agent_turn_map[agent.name])
                     allow_action = allow_action_map[agent.name][action.name](*action.parameters)
                     restrict_actions = restrict_actions_map[agent.name]
                     if all_actions:
@@ -622,7 +638,6 @@ class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
         #         new_to_old[goals_not_achieved] = None
         ###
 
-
         for agent in problem.agents:
             for i, goal in enumerate(self.get_agent_goal(problem, agent)):
                 goals_not_achieved = InstantaneousAction(f"goals_not_achieved_{agent.name}_{i}")
@@ -630,9 +645,9 @@ class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
                 goals_not_achieved.add_precondition(Not(self.fsub.substitute(goal, self.global_fluent_map, agent)))
                 for g in self.get_agent_goal(problem, agent):
                     goals_not_achieved.add_precondition(self.fsub.substitute(g, self.local_fluent_map[agent], agent))
-            goals_not_achieved.add_effect(conflict, True)
-            new_problem.add_action(goals_not_achieved)
-            new_to_old[goals_not_achieved] = None
+                goals_not_achieved.add_effect(conflict, True)
+                new_problem.add_action(goals_not_achieved)
+                new_to_old[goals_not_achieved] = None
 
         # declare_deadlock
         declare_deadlock = InstantaneousAction("declare_deadlock")
@@ -640,7 +655,7 @@ class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
         declare_deadlock.add_precondition(possible_deadlock)
         for agent in problem.agents:
             for goal in self.get_agent_goal(problem, agent):
-                    declare_deadlock.add_precondition(self.fsub.substitute(goal, self.local_fluent_map[agent], agent))
+                declare_deadlock.add_precondition(self.fsub.substitute(goal, self.local_fluent_map[agent], agent))
         declare_deadlock.add_effect(conflict, True)
         new_problem.add_action(declare_deadlock)
         new_to_old[declare_deadlock] = None
@@ -651,7 +666,7 @@ class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
         declare_fail.add_precondition(precondition_violation)
         for agent in problem.agents:
             for goal in self.get_agent_goal(problem, agent):
-                    declare_fail.add_precondition(self.fsub.substitute(goal, self.local_fluent_map[agent], agent))
+                declare_fail.add_precondition(self.fsub.substitute(goal, self.local_fluent_map[agent], agent))
         declare_fail.add_effect(conflict, True)
         new_problem.add_action(declare_fail)
         new_problem.set_initial_value(stage_1, True)

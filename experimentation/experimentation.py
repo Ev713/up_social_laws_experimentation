@@ -1,6 +1,7 @@
 import csv
 import json
 
+import pandas as pandas
 import unified_planning
 from unified_planning.shortcuts import *
 from unified_planning.model.multi_agent import *
@@ -771,8 +772,9 @@ def zenotravel_add_sociallaw(zenotravel):
                 persons_to_aircraft[person.name] = agent.name
 
     for person in zenotravel.objects(UserType('person')):
-        aircraft_name = persons_to_aircraft[person.name]
-        zenotravel_sl.set_initial_value_for_new_fluent(aircraft_name, 'assigned', (person.name,), True)
+        if person.name in persons_to_aircraft:
+            aircraft_name = persons_to_aircraft[person.name]
+            zenotravel_sl.set_initial_value_for_new_fluent(aircraft_name, 'assigned', (person.name,), True)
     return zenotravel_sl.compile(zenotravel).problem
 
 
@@ -1100,8 +1102,9 @@ def run_experiment(func, args=(), memory_limit=8_192_000_000, cpu_limit=1800, ti
 
 def run_experiments():
     blocksworld_names = ['9-0', '9-1', '9-2', '10-0', '10-1', '10-2', '11-0', '11-1', '11-2', '12-0', '12-1', '13-0',
-                         '13-1', '14-0', '14-1', '15-0', '15-1', '16-1', '16-2', '17-0']
+                         '13-1', '14-0', '14-1', '15-0', '15-1', '16-1', '16-2',] #'17-0']
     zenotravel_names = [f'pfile{i}' for i in range(3, 24)]
+    zenotravel_names.remove('pfile11')
     driverlog_names = [f'pfile{i}' for i in range(1, 21)]
     grid_names = [
         (2, 3, 2),
@@ -1131,28 +1134,25 @@ def run_experiments():
     problems+=blocksworld_problems
     zenotravel_problems = [(f'zenotravel_{name}', get_zenotravel(name), False) for name in zenotravel_names]
     problems+=zenotravel_problems
-    zenotravel_problems_with_SL = [(f'zenotravel_{name}', zenotravel_add_sociallaw(get_zenotravel(name)), True) for name in zenotravel_names]
+    zenotravel_problems_with_SL = [(f'zenotravel_sl_{name}', zenotravel_add_sociallaw(get_zenotravel(name)), True) for name in zenotravel_names]
     problems+=zenotravel_problems_with_SL
     grid_problems = []
-    for i, name in enumerate(grid_names):
-        gm = GridManager(*grid_names)
-        gm.init_locs = INIT_LOCS[i]
-        gm.goal_locs = GOAL_LOCS[i]
-        grid_problems.append((f'grid_{name}', gm.get_grid_problem(), False))
-    problems+=grid_problems
     grid_problems_with_SL = []
+
     for i, name in enumerate(grid_names):
-        gm = GridManager(*grid_names)
+        gm = GridManager(*name)
         gm.init_locs = INIT_LOCS[i]
         gm.goal_locs = GOAL_LOCS[i]
-        grid_problems_with_SL.append((f'grid_{name}', gm.add_direction_law(gm.get_grid_problem()), True))
+        p = gm.get_grid_problem()
+        grid_problems.append((f'grid_{name}', p, False))
+        grid_problems_with_SL.append((f'grid_sl_{name}', gm.add_direction_law(p), True))
+    problems+=grid_problems
     problems += grid_problems_with_SL
     random.shuffle(problems)
 
     for name, problem, has_social_law in problems:
         for slrc_is_old in [True, False]:
             try:
-                problem = get_blocksworld(name)
                 if slrc_is_old:
                     slrc = get_old_slrc()
                 else:
@@ -1168,7 +1168,22 @@ def run_experiments():
                 time.sleep(30)
             except:
                 pass
+            print(f'Problem {name} done.')
+
+def read_data():
+    exp_df = pandas.read_csv('/home/evgeny/SocialLaws/up-social-laws/experimentation/experiment_log.csv')
+    blocksworld_df = exp_df[exp_df.apply(lambda x: 'blocksworld' in x['name'], axis=1)]
+    zenotravel_sl_df = exp_df[exp_df.apply(lambda x: 'zenotravel' in x['name'] and 'sl' in x['name'], axis=1)]
+    zenotravel_df = exp_df[exp_df.apply(lambda x: 'zenotravel' in x['name'] and not 'sl' in x['name'], axis=1)]
+    driverlog_df = exp_df[exp_df.apply(lambda x: 'driverlog' in x['name'], axis=1)]
+    grid_df = exp_df[exp_df.apply(lambda x: 'grid' in x['name'] and not 'sl' in x['name'], axis=1)]
+    grid_sl_df = exp_df[exp_df.apply(lambda x: 'grid' in x['name'] and 'sl' in x['name'], axis=1)]
 
 
 if __name__ == '__main__':
-    run_experiments()
+    p = get_blocksworld('10-0')
+    rv = WaitingActionRobustnessVerifier()
+    with OneshotPlanner() as planner:
+        print(planner.solve(get_compiled_problem(p)))
+
+
