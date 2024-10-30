@@ -1227,4 +1227,4 @@ if __name__ == '__main__':
     compiled_p = rv.compile(p).problem
     print(compiled_p)
     with OneshotPlanner() as planner:
-        print(planner.solve(p))
+        print(planner.solve(compiled_p))
