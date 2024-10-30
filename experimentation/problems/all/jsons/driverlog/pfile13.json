@@ -10,8 +10,6 @@
             "agents": ["driver1", "driver2" ],
             "init_values": {
                 "global": [
-                    ["at", ["driver1", "s0"]],
-                    ["at", ["driver2", "s9"]],
                     ["at", ["truck1", "s3"]],
                     ["empty", ["truck1"]],
                     ["at", ["truck2", "s9"]],
