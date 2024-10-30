@@ -4,7 +4,8 @@
                           "p3-11", "p3-7", "p4-6", "p5-14", "p7-13", "p7-9", "p8-12", "p9-0",
                           "p9-4", "p9-6", "p9-8", "s0", "s1", "s10", "s11", "s12", "s13", "s14",
                           "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9"],
-            "packages": ["package1", "package10", "package2", "package3", "package4", "package5", "package6", "package7", "package8", "package9", "package11"],
+            "packages": ["package1", "package10", "package2", "package3", "package4", "package5", "package6",
+                "package7", "package8", "package9", "package11", "package12"],
             "trucks": ["truck1", "truck2", "truck3", "truck4", "truck5"],
             "agents": ["driver1", "driver2", "driver3", "driver4", "driver5"],
             "init_values": {
