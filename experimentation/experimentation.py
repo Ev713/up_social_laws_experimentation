@@ -1107,7 +1107,15 @@ def run_experiment(func, args=(), memory_limit=8_192_000_000, cpu_limit=1800, ti
                    metadata=("unknown", False, False)):
     filename, old_compilation, has_social_law = metadata
 
-    log_file = "/logs/experiment_log_"+ date.today().strftime("%b-%d-%Y")+".csv"
+    log_file = "/logs/experiment_log_" + date.today().strftime("%b-%d-%Y")+".csv"
+
+    headers = ['name', 'slrc_is_old', 'has_social_law']
+
+    # Create or overwrite the CSV file with the specified headers
+    with open(log_file, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(headers)
+
     result_queue = Queue()
     process = Process(target=run_with_limits, args=(func, args, memory_limit, cpu_limit, timeout, result_queue))
 
@@ -1170,7 +1178,6 @@ def run_experiments():
     driverlog_problems = []
     for name in driverlog_names:
         driverlog_problems.append((f'blocksworld_{name}', get_driverlog(name), False))
-        print(f'{name} added.')
     problems += driverlog_problems
     blocksworld_problems = [(f'blocksworld_{name}', get_blocksworld(name), False) for name in blocksworld_names]
     problems += blocksworld_problems
@@ -1187,7 +1194,7 @@ def run_experiments():
         gm.init_locs = INIT_LOCS[i]
         gm.goal_locs = GOAL_LOCS[i]
         p = gm.get_grid_problem()
-        grid_problems.append((f'grid_{name}', p, False))
+        grid_problems.append((f'grid_{name.replace(' ', '_').replace(',','')}', p, False))
         grid_problems_with_SL.append((f'grid_sl_{name}', gm.add_direction_law(p), True))
     problems += grid_problems
     problems += grid_problems_with_SL
