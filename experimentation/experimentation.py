@@ -1109,13 +1109,6 @@ def run_experiment(func, args=(), memory_limit=8_192_000_000, cpu_limit=1800, ti
 
     log_file = "/logs/experiment_log_" + date.today().strftime("%b-%d-%Y")+".csv"
 
-    headers = ['name', 'slrc_is_old', 'has_social_law']
-
-    # Create or overwrite the CSV file with the specified headers
-    with open(log_file, mode='w', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(headers)
-
     result_queue = Queue()
     process = Process(target=run_with_limits, args=(func, args, memory_limit, cpu_limit, timeout, result_queue))
 
@@ -1203,6 +1196,17 @@ def run_experiments():
 
     problems = [random.choice(problems) for _ in range (3)]
 
+    log_dir = '/logs'
+    os.makedirs(log_dir, exist_ok=True)
+
+    log_file = "/logs/experiment_log_" + date.today().strftime("%b-%d-%Y") + ".csv"
+
+    headers = ['name', 'slrc_is_old', 'has_social_law']
+
+    # Create or overwrite the CSV file with the specified headers
+    with open(log_file, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(headers)
 
     for i, (name, problem, has_social_law) in enumerate(problems):
         for slrc_is_old in [True, False]:
