@@ -1107,7 +1107,7 @@ def run_experiment(func, args=(), memory_limit=8_192_000_000, cpu_limit=1800, ti
                    metadata=("unknown", False, False)):
     filename, old_compilation, has_social_law = metadata
 
-    log_file = "./logs/experiment_log_" + date.today().strftime("%b-%d-%Y")+".csv"
+    log_file = "./logs/experiment_log_" + date.today().strftime("%b-%d-%Y") + ".csv"
 
     result_queue = Queue()
     process = Process(target=run_with_limits, args=(func, args, memory_limit, cpu_limit, timeout, result_queue))
@@ -1139,7 +1139,46 @@ def run_experiment(func, args=(), memory_limit=8_192_000_000, cpu_limit=1800, ti
         return {"error": "No result (possibly killed due to resource limits)", "elapsed_time": "-"}
 
 
-def run_experiments():
+def run_experiments(problems):
+    total_problems = len(problems)
+
+    # problems = [random.choice(problems) for _ in range (3)]
+
+    log_dir = './logs'
+    os.makedirs(log_dir, exist_ok=True)
+
+    log_file = "./logs/experiment_log_" + date.today().strftime("%b-%d-%Y") + ".csv"
+
+    headers = ['time', 'name', 'slrc_is_old', 'has_social_law']
+
+    # Create or overwrite the CSV file with the specified headers
+    with open(log_file, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(headers)
+    print(f'0/{total_problems} done.')
+    for i, (name, problem, has_social_law) in enumerate(problems):
+        for slrc_is_old in [True, False]:
+            try:
+                if slrc_is_old:
+                    slrc = get_old_slrc()
+                else:
+                    slrc = get_new_slrc()
+                run_experiment(
+                    func=check_robustness,
+                    args=(slrc, problem),
+                    memory_limit=8_192_000_000,  # 8 GB
+                    cpu_limit=1800,  # 30 minutes CPU time
+                    timeout=3600,  # 1 hour wall time
+                    metadata=(name, slrc_is_old, has_social_law)
+                )
+
+            except:
+                pass
+            print(f'Problem '+name+' with '+('old' if slrc_is_old else 'new')+' compilation is done.')
+        print(f'{i + 1}/{total_problems}')
+
+
+def get_problems():
     blocksworld_names = ['9-0', '9-1', '9-2', '10-0', '10-1', '10-2', '11-0', '11-1', '11-2', '12-0', '12-1', '13-0',
                          '13-1', '14-0', '14-1', '15-0', '15-1', '16-1', '16-2', ]  # '17-0']
     zenotravel_names = [f'pfile{i}' for i in range(3, 24)]
@@ -1187,59 +1226,58 @@ def run_experiments():
         gm.init_locs = INIT_LOCS[i]
         gm.goal_locs = GOAL_LOCS[i]
         p = gm.get_grid_problem()
-        grid_problems.append(('grid_'+str(name).replace(' ', '_').replace(',', ''), p, False,))
+        grid_problems.append(('grid_' + str(name).replace(' ', '_').replace(',', ''), p, False,))
         grid_problems_with_SL.append((f'grid_sl_{name}', gm.add_direction_law(p), True))
     problems += grid_problems
     problems += grid_problems_with_SL
-    random.shuffle(problems)
-    total_problems = len(problems)
-
-    # problems = [random.choice(problems) for _ in range (3)]
-
-    log_dir = './logs'
-    os.makedirs(log_dir, exist_ok=True)
-
-    log_file = "./logs/experiment_log_" + date.today().strftime("%b-%d-%Y") + ".csv"
-
-    headers = ['name', 'slrc_is_old', 'has_social_law']
-
-    # Create or overwrite the CSV file with the specified headers
-    with open(log_file, mode='w', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(headers)
-    print(f'0/{total_problems} done.')
-    for i, (name, problem, has_social_law) in enumerate(problems):
-        for slrc_is_old in [True, False]:
-            try:
-                if slrc_is_old:
-                    slrc = get_old_slrc()
-                else:
-                    slrc = get_new_slrc()
-                run_experiment(
-                    func=check_robustness,
-                    args=(slrc, problem),
-                    memory_limit=8_192_000_000,  # 8 GB
-                    cpu_limit=1800,  # 30 minutes CPU time
-                    timeout=3600,  # 1 hour wall time
-                    metadata=(name, slrc_is_old, has_social_law)
-                )
-
-            except:
-                pass
-            print(f'Problem {name} done.')
-            print(f'{i+1}/{total_problems}')
-            time.sleep(30)
+    return problems
 
 
 def read_data():
-    exp_df = pandas.read_csv('/home/evgeny/SocialLaws/up-social-laws/experimentation/experiment_log29-10-24.csv')
+    exp_df = pandas.read_csv(
+        '/home/evgeny/SocialLaws/up-social-laws/experimentation/logs/experiment_log_Oct-30-2024.csv')
     blocksworld_df = exp_df[exp_df.apply(lambda x: 'blocksworld' in x['name'], axis=1)]
+    print('\nBLOCKSWORLD\n')
+    print(blocksworld_df)
     zenotravel_sl_df = exp_df[exp_df.apply(lambda x: 'zenotravel' in x['name'] and 'sl' in x['name'], axis=1)]
+    print('\nZENOTRAVEL_SL\n')
+    print(zenotravel_sl_df)
     zenotravel_df = exp_df[exp_df.apply(lambda x: 'zenotravel' in x['name'] and not 'sl' in x['name'], axis=1)]
+    print('\nZENOTRAVEL\n')
+    print(zenotravel_df)
     driverlog_df = exp_df[exp_df.apply(lambda x: 'driverlog' in x['name'], axis=1)]
+    print('\nDRIVERLOG\n')
+    print(driverlog_df)
     grid_df = exp_df[exp_df.apply(lambda x: 'grid' in x['name'] and not 'sl' in x['name'], axis=1)]
+    print('\nGRID\n')
+    print(grid_df)
     grid_sl_df = exp_df[exp_df.apply(lambda x: 'grid' in x['name'] and 'sl' in x['name'], axis=1)]
+    print('\nGRID_SL\n')
+    print(grid_sl_df)
+
+
+def transform_data(df):
+    df = df.sort_values(by='name').reset_index(drop=True).drop('has_social_law', axis=1)
+    slrc_old = df[df['slrc_is_old'] == True]
+    slrc_old = slrc_old.rename(columns={'time': 'old_compilation'}, ).drop('slrc_is_old', axis=1)
+    slrc_new = df[df['slrc_is_old'] == False]
+    slrc_new = slrc_new.rename(columns={'time': 'new_compilation'}, ).drop('slrc_is_old', axis=1)
+    df = pandas.merge(slrc_old, slrc_new, on='name', how='inner')
+    df = df[['name', 'old_compilation', 'new_compilation']]
+    return df
 
 
 if __name__ == '__main__':
-    run_experiments()
+
+    #print(check_robustness(get_new_slrc(), problem))
+    #print(check_robustness(get_new_slrc(), sl_problem))
+    problems = []
+    for num_of_agents in range(2, 4):
+        gm = GridManager(3, 3, num_of_agents)
+        problem = gm.get_grid_problem()
+        sl_problem = gm.add_direction_law(problem)
+        problems +=[(f'grid_problem_SL_{num_of_agents}', sl_problem, True),
+                    (f'grid_problem_{num_of_agents}', problem, False)]
+    run_experiments(problems)
+
+    print(transform_data(pandas.read_csv('/home/evgeny/SocialLaws/up-social-laws/test/logs/experiment_log_Oct-31-2024.csv')))

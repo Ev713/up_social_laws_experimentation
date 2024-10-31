@@ -326,6 +326,7 @@ class TestProblem(unittest_TestCase):
         problem.add_objects([nw, ne, sw, se])
         problem.set_initial_value(connected(nw, ne), True)
         problem.set_initial_value(connected(nw, sw), True)
+        problem.set_initial_value(connected(nw, sw), True)
         problem.set_initial_value(connected(ne, nw), True)
         problem.set_initial_value(connected(ne, se), True)
         problem.set_initial_value(connected(sw, se), True)

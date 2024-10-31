@@ -169,7 +169,7 @@ class SocialLawRobustnessChecker(engines.engine.Engine, mixins.OneshotPlannerMix
                     status = SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_DEADLOCK
                     break
 
-            orig_plan = result.plan.replace_action_instances(rbv_result.map_back_action_instance)
+            orig_plan = None  # result.plan.replace_action_instances(rbv_result.map_back_action_instance)
 
             return SocialLawRobustnessResult(status, result.plan, orig_plan)
         elif result.status in [PlanGenerationResultStatus.UNSOLVABLE_PROVEN,

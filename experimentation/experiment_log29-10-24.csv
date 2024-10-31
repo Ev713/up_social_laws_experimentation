@@ -1,5 +1,4 @@
-name, slrc_is_old, has_social_law
-
+time,name,slrc_is_old,has_social_law
 4.98012900352478,blocksworld_13-1,True,False
 -,blocksworld_13-1,False,False
 6.018244981765747,"grid_(8, 4, 6)",True,False
