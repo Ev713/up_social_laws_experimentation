@@ -1280,4 +1280,4 @@ if __name__ == '__main__':
                     (f'grid_problem_{num_of_agents}', problem, False)]
     run_experiments(problems)
 
-    print(transform_data(pandas.read_csv('/home/evgeny/SocialLaws/up-social-laws/test/logs/experiment_log_Oct-31-2024.csv')))
+    print(transform_data(pandas.read_csv('/test/logs/experiment_log_Oct-31-2024.csv')))
