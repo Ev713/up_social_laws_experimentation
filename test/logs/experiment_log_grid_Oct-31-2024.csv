@@ -1,0 +1,13 @@
+time,name,slrc_is_old,has_social_law
+0.8711998462677002,grid_problem_SL_2,True,True
+1.4337387084960938,grid_problem_SL_2,False,True
+0.6988255977630615,grid_problem_2,True,False
+1.1673986911773682,grid_problem_2,False,False
+1.5807139873504639,grid_problem_SL_3,True,True
+2.0832090377807617,grid_problem_SL_3,False,True
+1.0988898277282715,grid_problem_3,True,False
+39.66187787055969,grid_problem_3,False,False
+26.139681816101074,grid_problem_SL_4,True,True
+51.93795680999756,grid_problem_SL_4,False,True
+1.2296788692474365,grid_problem_4,True,False
+17.304213523864746,grid_problem_4,False,False

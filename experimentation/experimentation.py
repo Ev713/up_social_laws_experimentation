@@ -1215,7 +1215,7 @@ def get_problems():
     problems += blocksworld_problems
     zenotravel_problems = [(f'zenotravel_{name}', get_zenotravel(name), False) for name in zenotravel_names]
     problems += zenotravel_problems
-    zenotravel_problems_with_SL = [(f'zenotravel_sl_{name}', zenotravel_add_sociallaw(get_zenotravel(name)), True) for
+    zenotravel_problems_with_SL = [(f'zenotravel_SL_{name}', zenotravel_add_sociallaw(get_zenotravel(name)), True) for
                                    name in zenotravel_names]
     problems += zenotravel_problems_with_SL
     grid_problems = []
@@ -1227,7 +1227,7 @@ def get_problems():
         gm.goal_locs = GOAL_LOCS[i]
         p = gm.get_grid_problem()
         grid_problems.append(('grid_' + str(name).replace(' ', '_').replace(',', ''), p, False,))
-        grid_problems_with_SL.append((f'grid_sl_{name}', gm.add_direction_law(p), True))
+        grid_problems_with_SL.append((f'grid_SL_{name}', gm.add_direction_law(p), True))
     problems += grid_problems
     problems += grid_problems_with_SL
     return problems
@@ -1269,15 +1269,8 @@ def transform_data(df):
 
 if __name__ == '__main__':
 
-    #print(check_robustness(get_new_slrc(), problem))
-    #print(check_robustness(get_new_slrc(), sl_problem))
-    problems = []
-    for num_of_agents in range(2, 4):
-        gm = GridManager(3, 3, num_of_agents)
-        problem = gm.get_grid_problem()
-        sl_problem = gm.add_direction_law(problem)
-        problems +=[(f'grid_problem_SL_{num_of_agents}', sl_problem, True),
-                    (f'grid_problem_{num_of_agents}', problem, False)]
+    # print(check_robustness(get_new_slrc(), problem))
+    # print(check_robustness(get_new_slrc(), sl_problem))
+    problems = get_problems()
     run_experiments(problems)
-
-    #print(transform_data(pandas.read_csv('./test/logs/experiment_log_Oct-31-2024.csv')))
+    # print(transform_data(pandas.read_csv('/home/evgeny/SocialLaws/up-social-laws/test/logs/experiment_log_grid_Oct-31-2024.csv')))
