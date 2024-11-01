@@ -1,216 +1,239 @@
-time,name,slrc_is_old,has_social_law
--,blocksworld_pfile1,True,False
-0.9744429588317871,blocksworld_pfile1,False,False
-0.784796953201294,blocksworld_pfile2,True,False
-1.2270872592926025,blocksworld_pfile2,False,False
-0.8162295818328857,blocksworld_pfile3,True,False
-1.0505247116088867,blocksworld_pfile3,False,False
-1.1389036178588867,blocksworld_pfile4,True,False
-1.7690484523773193,blocksworld_pfile4,False,False
-1.2498276233673096,blocksworld_pfile5,True,False
-2.1421279907226562,blocksworld_pfile5,False,False
--,blocksworld_pfile6,True,False
-1.8937973976135254,blocksworld_pfile6,False,False
--,blocksworld_pfile7,True,False
-3.189194917678833,blocksworld_pfile7,False,False
-1.7015562057495117,blocksworld_pfile8,True,False
-3.8808553218841553,blocksworld_pfile8,False,False
-0.12759709358215332,blocksworld_pfile9,True,False
-0.12950420379638672,blocksworld_pfile9,False,False
-2.583275318145752,blocksworld_pfile10,True,False
-2.872145891189575,blocksworld_pfile10,False,False
-4.313375234603882,blocksworld_pfile11,True,False
-7.514393329620361,blocksworld_pfile11,False,False
-6.3426833152771,blocksworld_pfile12,True,False
-17.75056219100952,blocksworld_pfile12,False,False
-9.015024185180664,blocksworld_pfile13,True,False
-19.118424654006958,blocksworld_pfile13,False,False
-8.712311267852783,blocksworld_pfile14,True,False
-8.693825721740723,blocksworld_pfile14,False,False
-31.0761456489563,blocksworld_pfile15,True,False
-138.68685460090637,blocksworld_pfile15,False,False
-131.01736426353455,blocksworld_pfile16,True,False
-1090.1382961273193,blocksworld_pfile16,False,False
-0.2777557373046875,blocksworld_pfile17,True,False
-0.28246116638183594,blocksworld_pfile17,False,False
-461.96757793426514,blocksworld_pfile18,True,False
-1607.6107640266418,blocksworld_pfile18,False,False
-1115.3661301136017,blocksworld_pfile19,True,False
-2000.419016122818,blocksworld_pfile19,False,False
-207.5726752281189,blocksworld_pfile20,True,False
-309.6566712856293,blocksworld_pfile20,False,False
-2.7266759872436523,blocksworld_9-0,True,False
-18.66848134994507,blocksworld_9-0,False,False
-2.600208282470703,blocksworld_9-1,True,False
-15.636683702468872,blocksworld_9-1,False,False
-2.7147984504699707,blocksworld_9-2,True,False
-30.773499965667725,blocksworld_9-2,False,False
-2.7188689708709717,blocksworld_10-0,True,False
-38.51519227027893,blocksworld_10-0,False,False
-2.97235107421875,blocksworld_10-1,True,False
-24.996458768844604,blocksworld_10-1,False,False
-3.0107970237731934,blocksworld_10-2,True,False
-46.26142716407776,blocksworld_10-2,False,False
-3.531503915786743,blocksworld_11-0,True,False
-10.145393371582031,blocksworld_11-0,False,False
-0.12612509727478027,blocksworld_11-1,True,False
-0.12643933296203613,blocksworld_11-1,False,False
-3.646364450454712,blocksworld_11-2,True,False
-31.76577591896057,blocksworld_11-2,False,False
-4.20166015625,blocksworld_12-0,True,False
-13.539650201797485,blocksworld_12-0,False,False
-4.366408586502075,blocksworld_12-1,True,False
-22.385236978530884,blocksworld_12-1,False,False
-4.900078058242798,blocksworld_13-0,True,False
-31.4704167842865,blocksworld_13-0,False,False
-4.966998338699341,blocksworld_13-1,True,False
-34.62405014038086,blocksworld_13-1,False,False
-5.723224401473999,blocksworld_14-0,True,False
-18.220584630966187,blocksworld_14-0,False,False
-5.73108696937561,blocksworld_14-1,True,False
-24.89546799659729,blocksworld_14-1,False,False
-5.6556291580200195,blocksworld_15-0,True,False
-23.73373508453369,blocksworld_15-0,False,False
-6.682947635650635,blocksworld_15-1,True,False
-27.040969610214233,blocksworld_15-1,False,False
-7.708784103393555,blocksworld_16-1,True,False
-36.35801410675049,blocksworld_16-1,False,False
-7.736934423446655,blocksworld_16-2,True,False
-34.44104528427124,blocksworld_16-2,False,False
--,zenotravel_pfile3,True,False
-1.251331090927124,zenotravel_pfile3,False,False
-0.7837972640991211,zenotravel_pfile4,True,False
-1.2772178649902344,zenotravel_pfile4,False,False
-0.9701516628265381,zenotravel_pfile5,True,False
-1.9363842010498047,zenotravel_pfile5,False,False
-0.9650356769561768,zenotravel_pfile6,True,False
-1.6644248962402344,zenotravel_pfile6,False,False
-0.11668276786804199,zenotravel_pfile7,True,False
-0.11630439758300781,zenotravel_pfile7,False,False
--,zenotravel_pfile8,True,False
-3.2898223400115967,zenotravel_pfile8,False,False
-1.952387809753418,zenotravel_pfile9,True,False
-3.4386537075042725,zenotravel_pfile9,False,False
-1.983077049255371,zenotravel_pfile10,True,False
-3.5336923599243164,zenotravel_pfile10,False,False
-2.619656562805176,zenotravel_pfile12,True,False
-4.625465154647827,zenotravel_pfile12,False,False
-2.722172498703003,zenotravel_pfile13,True,False
-5.026669263839722,zenotravel_pfile13,False,False
-12.846269369125366,zenotravel_pfile14,True,False
-21.261541843414307,zenotravel_pfile14,False,False
-22.55868649482727,zenotravel_pfile15,True,False
-32.4952712059021,zenotravel_pfile15,False,False
-31.889792919158936,zenotravel_pfile16,True,False
-48.833824157714844,zenotravel_pfile16,False,False
-54.74286460876465,zenotravel_pfile17,True,False
-63.02637553215027,zenotravel_pfile17,False,False
-69.00184154510498,zenotravel_pfile18,True,False
-79.27769041061401,zenotravel_pfile18,False,False
-116.66518211364746,zenotravel_pfile19,True,False
-410.565062046051,zenotravel_pfile19,False,False
-145.3130865097046,zenotravel_pfile20,True,False
-164.41371631622314,zenotravel_pfile20,False,False
-177.80529856681824,zenotravel_pfile21,True,False
-208.68136286735535,zenotravel_pfile21,False,False
-250.2069046497345,zenotravel_pfile22,True,False
-434.8664228916168,zenotravel_pfile22,False,False
-328.69771814346313,zenotravel_pfile23,True,False
-795.3174991607666,zenotravel_pfile23,False,False
--,zenotravel_sl_pfile3,True,True
-1.2608683109283447,zenotravel_sl_pfile3,False,True
-0.7875754833221436,zenotravel_sl_pfile4,True,True
-1.2524242401123047,zenotravel_sl_pfile4,False,True
-0.9531192779541016,zenotravel_sl_pfile5,True,True
-1.8905723094940186,zenotravel_sl_pfile5,False,True
-0.9629333019256592,zenotravel_sl_pfile6,True,True
-1.6657164096832275,zenotravel_sl_pfile6,False,True
-0.1184396743774414,zenotravel_sl_pfile7,True,True
-0.1186683177947998,zenotravel_sl_pfile7,False,True
--,zenotravel_sl_pfile8,True,True
-3.2900733947753906,zenotravel_sl_pfile8,False,True
-1.9154911041259766,zenotravel_sl_pfile9,True,True
-3.528782606124878,zenotravel_sl_pfile9,False,True
-1.993868350982666,zenotravel_sl_pfile10,True,True
-3.492140054702759,zenotravel_sl_pfile10,False,True
-2.594701051712036,zenotravel_sl_pfile12,True,True
-4.612150430679321,zenotravel_sl_pfile12,False,True
-2.7417659759521484,zenotravel_sl_pfile13,True,True
-4.994971513748169,zenotravel_sl_pfile13,False,True
-12.862415790557861,zenotravel_sl_pfile14,True,True
-22.85905957221985,zenotravel_sl_pfile14,False,True
-22.29500436782837,zenotravel_sl_pfile15,True,True
-32.49101805686951,zenotravel_sl_pfile15,False,True
-31.8704035282135,zenotravel_sl_pfile16,True,True
-49.18920850753784,zenotravel_sl_pfile16,False,True
-54.61060285568237,zenotravel_sl_pfile17,True,True
-62.82989454269409,zenotravel_sl_pfile17,False,True
-68.88090753555298,zenotravel_sl_pfile18,True,True
-79.48336744308472,zenotravel_sl_pfile18,False,True
-117.05491423606873,zenotravel_sl_pfile19,True,True
-408.5336842536926,zenotravel_sl_pfile19,False,True
-144.60274004936218,zenotravel_sl_pfile20,True,True
-164.76335906982422,zenotravel_sl_pfile20,False,True
-178.07084393501282,zenotravel_sl_pfile21,True,True
-206.21866273880005,zenotravel_sl_pfile21,False,True
-258.5311920642853,zenotravel_sl_pfile22,True,True
-436.5365550518036,zenotravel_sl_pfile22,False,True
-329.3752853870392,zenotravel_sl_pfile23,True,True
-797.3987762928009,zenotravel_sl_pfile23,False,True
-0.5707066059112549,grid_(2_3_2),True,False
-1.8796582221984863,grid_(2_3_2),False,False
-0.9089043140411377,grid_(3_3_3),True,False
-4.091582298278809,grid_(3_3_3),False,False
-1.416729211807251,grid_(3_4_4),True,False
-29.847135543823242,grid_(3_4_4),False,False
-2.3169329166412354,grid_(4_4_5),True,False
-24.688580989837646,grid_(4_4_5),False,False
-3.7249693870544434,grid_(4_5_6),True,False
-38.06716704368591,grid_(4_5_6),False,False
-9.204157829284668,grid_(5_5_6),True,False
-36.199686765670776,grid_(5_5_6),False,False
-7.16940975189209,grid_(5_6_7),True,False
-33.65068578720093,grid_(5_6_7),False,False
-12.72630500793457,grid_(6_6_8),True,False
-15.670560121536255,grid_(6_6_8),False,False
-13.414283275604248,grid_(6_7_8),True,False
-46.81271505355835,grid_(6_7_8),False,False
-15.857118844985962,grid_(7_7_7),True,False
-27.030002117156982,grid_(7_7_7),False,False
-32.14274740219116,grid_(7_8_9),True,False
-58.15626239776611,grid_(7_8_9),False,False
-0.9128496646881104,grid_(8_2_2),True,False
-1.740978717803955,grid_(8_2_2),False,False
-2.1410303115844727,grid_(8_3_3),True,False
-9.843241691589355,grid_(8_3_3),False,False
-13.268088579177856,grid_(8_4_6),True,False
-43.00379180908203,grid_(8_4_6),False,False
-18.037233352661133,grid_(8_5_7),True,False
-40.87377333641052,grid_(8_5_7),False,False
-16.937971353530884,grid_(8_6_8),True,False
-52.564767599105835,grid_(8_6_8),False,False
-58.750818490982056,grid_(8_7_10),True,False
-63.56456446647644,grid_(8_7_10),False,False
-17.444772958755493,grid_(6_8_8),True,False
-63.63376259803772,grid_(6_8_8),False,False
-12.577243328094482,grid_(5_8_8),True,False
-43.254329442977905,grid_(5_8_8),False,False
-1.323138952255249,grid_(3_5_3),True,False
-2.217984914779663,grid_(3_5_3),False,False
-0.641474723815918,"grid_sl_(2, 3, 2)",True,True
-1.2807667255401611,"grid_sl_(2, 3, 2)",False,True
-1.598099708557129,"grid_sl_(3, 3, 3)",True,True
-2.019141435623169,"grid_sl_(3, 3, 3)",False,True
-95.53019976615906,"grid_sl_(3, 4, 4)",True,True
-43.485310077667236,"grid_sl_(3, 4, 4)",False,True
-1807.4415860176086,"grid_sl_(4, 4, 5)",True,True
-1824.7009727954865,"grid_sl_(4, 4, 5)",False,True
-1809.3766100406647,"grid_sl_(4, 5, 6)",True,True
-1836.3108551502228,"grid_sl_(4, 5, 6)",False,True
-1813.355070590973,"grid_sl_(5, 5, 6)",True,True
-1827.8832278251648,"grid_sl_(5, 5, 6)",False,True
-1823.5626406669617,"grid_sl_(5, 6, 7)",True,True
-1864.9831547737122,"grid_sl_(5, 6, 7)",False,True
-1840.0921759605408,"grid_sl_(6, 6, 8)",True,True
-1878.7239286899567,"grid_sl_(6, 6, 8)",False,True
-1853.2665405273438,"grid_sl_(6, 7, 8)",True,True
+,time,name,slrc_is_old,has_social_law
+0,-,driverlog_pfile1,True,False
+1,0.9744429588317871,driverlog_pfile1,False,False
+2,0.784796953201294,driverlog_pfile2,True,False
+3,1.2270872592926025,driverlog_pfile2,False,False
+4,0.8162295818328857,driverlog_pfile3,True,False
+5,1.0505247116088867,driverlog_pfile3,False,False
+6,1.1389036178588867,driverlog_pfile4,True,False
+7,1.7690484523773193,driverlog_pfile4,False,False
+8,1.2498276233673096,driverlog_pfile5,True,False
+9,2.1421279907226562,driverlog_pfile5,False,False
+10,-,driverlog_pfile6,True,False
+11,1.8937973976135254,driverlog_pfile6,False,False
+12,-,driverlog_pfile7,True,False
+13,3.189194917678833,driverlog_pfile7,False,False
+14,1.7015562057495117,driverlog_pfile8,True,False
+15,3.8808553218841553,driverlog_pfile8,False,False
+16,0.12759709358215332,driverlog_pfile9,True,False
+17,0.12950420379638672,driverlog_pfile9,False,False
+18,2.583275318145752,driverlog_pfile10,True,False
+19,2.872145891189575,driverlog_pfile10,False,False
+20,4.313375234603882,driverlog_pfile11,True,False
+21,7.514393329620361,driverlog_pfile11,False,False
+22,6.3426833152771,driverlog_pfile12,True,False
+23,17.75056219100952,driverlog_pfile12,False,False
+24,9.015024185180664,driverlog_pfile13,True,False
+25,19.118424654006958,driverlog_pfile13,False,False
+26,8.712311267852783,driverlog_pfile14,True,False
+27,8.693825721740723,driverlog_pfile14,False,False
+28,31.0761456489563,driverlog_pfile15,True,False
+29,138.68685460090637,driverlog_pfile15,False,False
+30,131.01736426353455,driverlog_pfile16,True,False
+31,1090.1382961273193,driverlog_pfile16,False,False
+32,0.2777557373046875,driverlog_pfile17,True,False
+33,0.28246116638183594,driverlog_pfile17,False,False
+34,461.96757793426514,driverlog_pfile18,True,False
+35,1607.6107640266418,driverlog_pfile18,False,False
+36,1115.3661301136017,driverlog_pfile19,True,False
+37,2000.419016122818,driverlog_pfile19,False,False
+38,207.5726752281189,driverlog_pfile20,True,False
+39,309.6566712856293,driverlog_pfile20,False,False
+40,2.7266759872436523,blocksworld_9-0,True,False
+41,18.66848134994507,blocksworld_9-0,False,False
+42,2.600208282470703,blocksworld_9-1,True,False
+43,15.636683702468872,blocksworld_9-1,False,False
+44,2.7147984504699707,blocksworld_9-2,True,False
+45,30.773499965667725,blocksworld_9-2,False,False
+46,2.7188689708709717,blocksworld_10-0,True,False
+47,38.51519227027893,blocksworld_10-0,False,False
+48,2.97235107421875,blocksworld_10-1,True,False
+49,24.996458768844604,blocksworld_10-1,False,False
+50,3.0107970237731934,blocksworld_10-2,True,False
+51,46.26142716407776,blocksworld_10-2,False,False
+52,3.531503915786743,blocksworld_11-0,True,False
+53,10.145393371582031,blocksworld_11-0,False,False
+54,0.12612509727478027,blocksworld_11-1,True,False
+55,0.12643933296203613,blocksworld_11-1,False,False
+56,3.646364450454712,blocksworld_11-2,True,False
+57,31.76577591896057,blocksworld_11-2,False,False
+58,4.20166015625,blocksworld_12-0,True,False
+59,13.539650201797485,blocksworld_12-0,False,False
+60,4.366408586502075,blocksworld_12-1,True,False
+61,22.385236978530884,blocksworld_12-1,False,False
+62,4.900078058242798,blocksworld_13-0,True,False
+63,31.4704167842865,blocksworld_13-0,False,False
+64,4.966998338699341,blocksworld_13-1,True,False
+65,34.62405014038086,blocksworld_13-1,False,False
+66,5.723224401473999,blocksworld_14-0,True,False
+67,18.220584630966187,blocksworld_14-0,False,False
+68,5.73108696937561,blocksworld_14-1,True,False
+69,24.89546799659729,blocksworld_14-1,False,False
+70,5.6556291580200195,blocksworld_15-0,True,False
+71,23.73373508453369,blocksworld_15-0,False,False
+72,6.682947635650635,blocksworld_15-1,True,False
+73,27.040969610214233,blocksworld_15-1,False,False
+74,7.708784103393555,blocksworld_16-1,True,False
+75,36.35801410675049,blocksworld_16-1,False,False
+76,7.736934423446655,blocksworld_16-2,True,False
+77,34.44104528427124,blocksworld_16-2,False,False
+78,-,zenotravel_pfile3,True,False
+79,1.251331090927124,zenotravel_pfile3,False,False
+80,0.7837972640991211,zenotravel_pfile4,True,False
+81,1.2772178649902344,zenotravel_pfile4,False,False
+82,0.9701516628265381,zenotravel_pfile5,True,False
+83,1.9363842010498047,zenotravel_pfile5,False,False
+84,0.9650356769561768,zenotravel_pfile6,True,False
+85,1.6644248962402344,zenotravel_pfile6,False,False
+86,0.11668276786804199,zenotravel_pfile7,True,False
+87,0.11630439758300781,zenotravel_pfile7,False,False
+88,-,zenotravel_pfile8,True,False
+89,3.2898223400115967,zenotravel_pfile8,False,False
+90,1.952387809753418,zenotravel_pfile9,True,False
+91,3.4386537075042725,zenotravel_pfile9,False,False
+92,1.983077049255371,zenotravel_pfile10,True,False
+93,3.5336923599243164,zenotravel_pfile10,False,False
+94,2.619656562805176,zenotravel_pfile12,True,False
+95,4.625465154647827,zenotravel_pfile12,False,False
+96,2.722172498703003,zenotravel_pfile13,True,False
+97,5.026669263839722,zenotravel_pfile13,False,False
+98,12.846269369125366,zenotravel_pfile14,True,False
+99,21.261541843414307,zenotravel_pfile14,False,False
+100,22.55868649482727,zenotravel_pfile15,True,False
+101,32.4952712059021,zenotravel_pfile15,False,False
+102,31.889792919158936,zenotravel_pfile16,True,False
+103,48.833824157714844,zenotravel_pfile16,False,False
+104,54.74286460876465,zenotravel_pfile17,True,False
+105,63.02637553215027,zenotravel_pfile17,False,False
+106,69.00184154510498,zenotravel_pfile18,True,False
+107,79.27769041061401,zenotravel_pfile18,False,False
+108,116.66518211364746,zenotravel_pfile19,True,False
+109,410.565062046051,zenotravel_pfile19,False,False
+110,145.3130865097046,zenotravel_pfile20,True,False
+111,164.41371631622314,zenotravel_pfile20,False,False
+112,177.80529856681824,zenotravel_pfile21,True,False
+113,208.68136286735535,zenotravel_pfile21,False,False
+114,250.2069046497345,zenotravel_pfile22,True,False
+115,434.8664228916168,zenotravel_pfile22,False,False
+116,328.69771814346313,zenotravel_pfile23,True,False
+117,795.3174991607666,zenotravel_pfile23,False,False
+118,-,zenotravel_sl_pfile3,True,True
+119,1.2608683109283447,zenotravel_sl_pfile3,False,True
+120,0.7875754833221436,zenotravel_sl_pfile4,True,True
+121,1.2524242401123047,zenotravel_sl_pfile4,False,True
+122,0.9531192779541016,zenotravel_sl_pfile5,True,True
+123,1.8905723094940186,zenotravel_sl_pfile5,False,True
+124,0.9629333019256592,zenotravel_sl_pfile6,True,True
+125,1.6657164096832275,zenotravel_sl_pfile6,False,True
+126,0.1184396743774414,zenotravel_sl_pfile7,True,True
+127,0.1186683177947998,zenotravel_sl_pfile7,False,True
+128,-,zenotravel_sl_pfile8,True,True
+129,3.2900733947753906,zenotravel_sl_pfile8,False,True
+130,1.9154911041259766,zenotravel_sl_pfile9,True,True
+131,3.528782606124878,zenotravel_sl_pfile9,False,True
+132,1.993868350982666,zenotravel_sl_pfile10,True,True
+133,3.492140054702759,zenotravel_sl_pfile10,False,True
+134,2.594701051712036,zenotravel_sl_pfile12,True,True
+135,4.612150430679321,zenotravel_sl_pfile12,False,True
+136,2.7417659759521484,zenotravel_sl_pfile13,True,True
+137,4.994971513748169,zenotravel_sl_pfile13,False,True
+138,12.862415790557861,zenotravel_sl_pfile14,True,True
+139,22.85905957221985,zenotravel_sl_pfile14,False,True
+140,22.29500436782837,zenotravel_sl_pfile15,True,True
+141,32.49101805686951,zenotravel_sl_pfile15,False,True
+142,31.8704035282135,zenotravel_sl_pfile16,True,True
+143,49.18920850753784,zenotravel_sl_pfile16,False,True
+144,54.61060285568237,zenotravel_sl_pfile17,True,True
+145,62.82989454269409,zenotravel_sl_pfile17,False,True
+146,68.88090753555298,zenotravel_sl_pfile18,True,True
+147,79.48336744308472,zenotravel_sl_pfile18,False,True
+148,117.05491423606873,zenotravel_sl_pfile19,True,True
+149,408.5336842536926,zenotravel_sl_pfile19,False,True
+150,144.60274004936218,zenotravel_sl_pfile20,True,True
+151,164.76335906982422,zenotravel_sl_pfile20,False,True
+152,178.07084393501282,zenotravel_sl_pfile21,True,True
+153,206.21866273880005,zenotravel_sl_pfile21,False,True
+154,258.5311920642853,zenotravel_sl_pfile22,True,True
+155,436.5365550518036,zenotravel_sl_pfile22,False,True
+156,329.3752853870392,zenotravel_sl_pfile23,True,True
+157,797.3987762928009,zenotravel_sl_pfile23,False,True
+158,0.5707066059112549,grid_(2_3_2),True,False
+159,1.8796582221984863,grid_(2_3_2),False,False
+160,0.9089043140411377,grid_(3_3_3),True,False
+161,4.091582298278809,grid_(3_3_3),False,False
+162,1.416729211807251,grid_(3_4_4),True,False
+163,29.847135543823242,grid_(3_4_4),False,False
+164,2.3169329166412354,grid_(4_4_5),True,False
+165,24.688580989837646,grid_(4_4_5),False,False
+166,3.7249693870544434,grid_(4_5_6),True,False
+167,38.06716704368591,grid_(4_5_6),False,False
+168,9.204157829284668,grid_(5_5_6),True,False
+169,36.199686765670776,grid_(5_5_6),False,False
+170,7.16940975189209,grid_(5_6_7),True,False
+171,33.65068578720093,grid_(5_6_7),False,False
+172,12.72630500793457,grid_(6_6_8),True,False
+173,15.670560121536255,grid_(6_6_8),False,False
+174,13.414283275604248,grid_(6_7_8),True,False
+175,46.81271505355835,grid_(6_7_8),False,False
+176,15.857118844985962,grid_(7_7_7),True,False
+177,27.030002117156982,grid_(7_7_7),False,False
+178,32.14274740219116,grid_(7_8_9),True,False
+179,58.15626239776611,grid_(7_8_9),False,False
+180,0.9128496646881104,grid_(8_2_2),True,False
+181,1.740978717803955,grid_(8_2_2),False,False
+182,2.1410303115844727,grid_(8_3_3),True,False
+183,9.843241691589355,grid_(8_3_3),False,False
+184,13.268088579177856,grid_(8_4_6),True,False
+185,43.00379180908203,grid_(8_4_6),False,False
+186,18.037233352661133,grid_(8_5_7),True,False
+187,40.87377333641052,grid_(8_5_7),False,False
+188,16.937971353530884,grid_(8_6_8),True,False
+189,52.564767599105835,grid_(8_6_8),False,False
+190,58.750818490982056,grid_(8_7_10),True,False
+191,63.56456446647644,grid_(8_7_10),False,False
+192,17.444772958755493,grid_(6_8_8),True,False
+193,63.63376259803772,grid_(6_8_8),False,False
+194,12.577243328094482,grid_(5_8_8),True,False
+195,43.254329442977905,grid_(5_8_8),False,False
+196,1.323138952255249,grid_(3_5_3),True,False
+197,2.217984914779663,grid_(3_5_3),False,False
+198,0.641474723815918,"grid_sl_(2, 3, 2)",True,True
+199,1.2807667255401611,"grid_sl_(2, 3, 2)",False,True
+200,1.598099708557129,"grid_sl_(3, 3, 3)",True,True
+201,2.019141435623169,"grid_sl_(3, 3, 3)",False,True
+202,95.53019976615906,"grid_sl_(3, 4, 4)",True,True
+203,43.485310077667236,"grid_sl_(3, 4, 4)",False,True
+204,1807.4415860176086,"grid_sl_(4, 4, 5)",True,True
+205,1824.7009727954865,"grid_sl_(4, 4, 5)",False,True
+206,1809.3766100406647,"grid_sl_(4, 5, 6)",True,True
+207,1836.3108551502228,"grid_sl_(4, 5, 6)",False,True
+208,1813.355070590973,"grid_sl_(5, 5, 6)",True,True
+209,1827.8832278251648,"grid_sl_(5, 5, 6)",False,True
+210,1823.5626406669617,"grid_sl_(5, 6, 7)",True,True
+211,1864.9831547737122,"grid_sl_(5, 6, 7)",False,True
+212,1840.0921759605408,"grid_sl_(6, 6, 8)",True,True
+213,1878.7239286899567,"grid_sl_(6, 6, 8)",False,True
+214,1853.2665405273438,"grid_sl_(6, 7, 8)",True,True
+215,1888.6649644374847,"grid_sl_(6, 7, 8)",False,True
+216,1858.5955352783203,"grid_sl_(7, 7, 7)",True,True
+217,1901.849617242813,"grid_sl_(7, 7, 7)",False,True
+218,1917.102323293686,"grid_sl_(7, 8, 9)",True,True
+219,1961.756153345108,"grid_sl_(7, 8, 9)",False,True
+220,1.5433449745178223,"grid_sl_(8, 2, 2)",True,True
+221,2.084583044052124,"grid_sl_(8, 2, 2)",False,True
+222,25.72703242301941,"grid_sl_(8, 3, 3)",True,True
+223,35.482444763183594,"grid_sl_(8, 3, 3)",False,True
+224,1834.1548459529877,"grid_sl_(8, 4, 6)",True,True
+225,1856.1507322788239,"grid_sl_(8, 4, 6)",False,True
+226,1839.3889751434326,"grid_sl_(8, 5, 7)",True,True
+227,1879.5690858364105,"grid_sl_(8, 5, 7)",False,True
+228,1871.7968952655792,"grid_sl_(8, 6, 8)",True,True
+229,1923.5064630508423,"grid_sl_(8, 6, 8)",False,True
+230,1940.2741231918335,"grid_sl_(8, 7, 10)",True,True
+231,1989.9230935573578,"grid_sl_(8, 7, 10)",False,True
+232,1876.902114868164,"grid_sl_(6, 8, 8)",True,True
+233,1906.937219619751,"grid_sl_(6, 8, 8)",False,True
+234,1880.4413409233093,"grid_sl_(5, 8, 8)",True,True
+235,1888.1744558811188,"grid_sl_(5, 8, 8)",False,True
+236,4.25532865524292,"grid_sl_(3, 5, 3)",True,True
+237,7.103548526763916,"grid_sl_(3, 5, 3)",False,True

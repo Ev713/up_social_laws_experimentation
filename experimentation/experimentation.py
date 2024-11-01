@@ -20,7 +20,7 @@ from up_social_laws.social_law import SocialLaw
 
 from up_social_laws.robustness_checker import SocialLawRobustnessChecker
 from unified_planning.io import PDDLReader
-import resource
+#import resource
 import time
 import signal
 import os
@@ -809,7 +809,8 @@ def zenotravel_add_sociallaw(zenotravel):
             persons_args = [obj for obj in args if obj.type.name == 'person']
             for person in persons_args:
                 persons_to_aircraft[person.name] = agent.name
-
+    for agent in zenotravel.agents:
+        zenotravel_sl.add_precondition_to_action(agent.name, 'board', 'assigned', ('p',))
     for person in zenotravel.objects(UserType('person')):
         if person.name in persons_to_aircraft:
             aircraft_name = persons_to_aircraft[person.name]
@@ -1209,7 +1210,7 @@ def get_problems():
     problems = []
     driverlog_problems = []
     for name in driverlog_names:
-        driverlog_problems.append((f'blocksworld_{name}', get_driverlog(name), False))
+        driverlog_problems.append((f'driverlog_{name}', get_driverlog(name), False))
     problems += driverlog_problems
     blocksworld_problems = [(f'blocksworld_{name}', get_blocksworld(name), False) for name in blocksworld_names]
     problems += blocksworld_problems
@@ -1233,44 +1234,10 @@ def get_problems():
     return problems
 
 
-def read_data():
-    exp_df = pandas.read_csv(
-        '/home/evgeny/SocialLaws/up-social-laws/experimentation/logs/experiment_log_Oct-30-2024.csv')
-    blocksworld_df = exp_df[exp_df.apply(lambda x: 'blocksworld' in x['name'], axis=1)]
-    print('\nBLOCKSWORLD\n')
-    print(blocksworld_df)
-    zenotravel_sl_df = exp_df[exp_df.apply(lambda x: 'zenotravel' in x['name'] and 'sl' in x['name'], axis=1)]
-    print('\nZENOTRAVEL_SL\n')
-    print(zenotravel_sl_df)
-    zenotravel_df = exp_df[exp_df.apply(lambda x: 'zenotravel' in x['name'] and not 'sl' in x['name'], axis=1)]
-    print('\nZENOTRAVEL\n')
-    print(zenotravel_df)
-    driverlog_df = exp_df[exp_df.apply(lambda x: 'driverlog' in x['name'], axis=1)]
-    print('\nDRIVERLOG\n')
-    print(driverlog_df)
-    grid_df = exp_df[exp_df.apply(lambda x: 'grid' in x['name'] and not 'sl' in x['name'], axis=1)]
-    print('\nGRID\n')
-    print(grid_df)
-    grid_sl_df = exp_df[exp_df.apply(lambda x: 'grid' in x['name'] and 'sl' in x['name'], axis=1)]
-    print('\nGRID_SL\n')
-    print(grid_sl_df)
-
-
-def transform_data(df):
-    df = df.sort_values(by='name').reset_index(drop=True).drop('has_social_law', axis=1)
-    slrc_old = df[df['slrc_is_old'] == True]
-    slrc_old = slrc_old.rename(columns={'time': 'old_compilation'}, ).drop('slrc_is_old', axis=1)
-    slrc_new = df[df['slrc_is_old'] == False]
-    slrc_new = slrc_new.rename(columns={'time': 'new_compilation'}, ).drop('slrc_is_old', axis=1)
-    df = pandas.merge(slrc_old, slrc_new, on='name', how='inner')
-    df = df[['name', 'old_compilation', 'new_compilation']]
-    return df
 
 
 if __name__ == '__main__':
-
-    # print(check_robustness(get_new_slrc(), problem))
-    # print(check_robustness(get_new_slrc(), sl_problem))
-    problems = get_problems()
-    run_experiments(problems)
-    # print(transform_data(pandas.read_csv('/home/evgeny/SocialLaws/up-social-laws/test/logs/experiment_log_grid_Oct-31-2024.csv')))
+    p = get_zenotravel('pfile3')
+    p_sl = zenotravel_add_sociallaw(p)
+    print(check_robustness(get_new_slrc(),p))
+    print(check_robustness(get_new_slrc(),p_sl))
