@@ -20,7 +20,7 @@ from up_social_laws.social_law import SocialLaw
 
 from up_social_laws.robustness_checker import SocialLawRobustnessChecker
 from unified_planning.io import PDDLReader
-#import resource
+import resource
 import time
 import signal
 import os
@@ -1211,11 +1211,11 @@ def get_problems():
     driverlog_problems = []
     for name in driverlog_names:
         driverlog_problems.append((f'driverlog_{name}', get_driverlog(name), False))
-    problems += driverlog_problems
+    #problems += driverlog_problems
     blocksworld_problems = [(f'blocksworld_{name}', get_blocksworld(name), False) for name in blocksworld_names]
-    problems += blocksworld_problems
+    #problems += blocksworld_problems
     zenotravel_problems = [(f'zenotravel_{name}', get_zenotravel(name), False) for name in zenotravel_names]
-    problems += zenotravel_problems
+    #problems += zenotravel_problems
     zenotravel_problems_with_SL = [(f'zenotravel_SL_{name}', zenotravel_add_sociallaw(get_zenotravel(name)), True) for
                                    name in zenotravel_names]
     problems += zenotravel_problems_with_SL
@@ -1229,15 +1229,20 @@ def get_problems():
         p = gm.get_grid_problem()
         grid_problems.append(('grid_' + str(name).replace(' ', '_').replace(',', ''), p, False,))
         grid_problems_with_SL.append((f'grid_SL_{name}', gm.add_direction_law(p), True))
-    problems += grid_problems
-    problems += grid_problems_with_SL
+    #problems += grid_problems
+    #problems += grid_problems_with_SL
     return problems
 
 
 
 
 if __name__ == '__main__':
-    p = get_zenotravel('pfile3')
-    p_sl = zenotravel_add_sociallaw(p)
-    print(check_robustness(get_new_slrc(),p))
-    print(check_robustness(get_new_slrc(),p_sl))
+    run_experiments(get_problems())
+    #p = get_zenotravel('pfile3')
+    #p_sl = zenotravel_add_sociallaw(p)
+    #print(p_sl)
+    #p = get_compiled_problem(p_sl)
+    #simulate(p)
+    #print(check_robustness(get_new_slrc(),p))
+    #print(check_robustness(get_new_slrc(),p_sl))
+
