@@ -1237,12 +1237,7 @@ def get_problems():
 
 
 if __name__ == '__main__':
-    run_experiments(get_problems())
-    #p = get_zenotravel('pfile3')
-    #p_sl = zenotravel_add_sociallaw(p)
-    #print(p_sl)
-    #p = get_compiled_problem(p_sl)
-    #simulate(p)
-    #print(check_robustness(get_new_slrc(),p))
-    #print(check_robustness(get_new_slrc(),p_sl))
+    p = get_blocksworld('17-0')
+    print(p)
+    #run_experiments(('blocksworld_17-0',p,False))
 
