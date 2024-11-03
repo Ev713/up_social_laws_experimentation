@@ -1140,7 +1140,7 @@ def run_experiment(func, args=(), memory_limit=8_192_000_000, cpu_limit=1800, ti
         return {"error": "No result (possibly killed due to resource limits)", "elapsed_time": "-"}
 
 
-def run_experiments(problems):
+def run_experiments(problems, slrc_old_options=[True, False]):
     total_problems = len(problems)
 
     # problems = [random.choice(problems) for _ in range (3)]
@@ -1158,7 +1158,7 @@ def run_experiments(problems):
         writer.writerow(headers)
     print(f'0/{total_problems} done.')
     for i, (name, problem, has_social_law) in enumerate(problems):
-        for slrc_is_old in [True, False]:
+        for slrc_is_old in slrc_old_options:
             try:
                 if slrc_is_old:
                     slrc = get_old_slrc()
@@ -1182,9 +1182,11 @@ def run_experiments(problems):
 def get_problems():
     blocksworld_names = ['9-0', '9-1', '9-2', '10-0', '10-1', '10-2', '11-0', '11-1', '11-2', '12-0', '12-1', '13-0',
                          '13-1', '14-0', '14-1', '15-0', '15-1', '16-1', '16-2', ]  # '17-0']
-    zenotravel_names = [f'pfile{i}' for i in range(3, 24)]
-    zenotravel_names.remove('pfile11')
-    driverlog_names = [f'pfile{i}' for i in range(1, 21)]
+    zenotravel_names = ['pfile3', 'pfile8']  # [f'pfile{i}' for i in range(3, 24)]
+    if 'pfile11' in zenotravel_names:
+        zenotravel_names.remove('pfile11')
+    # driverlog_names = [f'pfile{i}' for i in range(1, 21)].
+    driverlog_names = ['pfile1','pfile6','pfile7']
     grid_names = [
         (2, 3, 2),
         (3, 3, 3),
@@ -1211,14 +1213,10 @@ def get_problems():
     driverlog_problems = []
     for name in driverlog_names:
         driverlog_problems.append((f'driverlog_{name}', get_driverlog(name), False))
-    #problems += driverlog_problems
     blocksworld_problems = [(f'blocksworld_{name}', get_blocksworld(name), False) for name in blocksworld_names]
-    #problems += blocksworld_problems
     zenotravel_problems = [(f'zenotravel_{name}', get_zenotravel(name), False) for name in zenotravel_names]
-    #problems += zenotravel_problems
     zenotravel_problems_with_SL = [(f'zenotravel_SL_{name}', zenotravel_add_sociallaw(get_zenotravel(name)), True) for
                                    name in zenotravel_names]
-    problems += zenotravel_problems_with_SL
     grid_problems = []
     grid_problems_with_SL = []
 
@@ -1229,15 +1227,19 @@ def get_problems():
         p = gm.get_grid_problem()
         grid_problems.append(('grid_' + str(name).replace(' ', '_').replace(',', ''), p, False,))
         grid_problems_with_SL.append((f'grid_SL_{name}', gm.add_direction_law(p), True))
-    #problems += grid_problems
-    #problems += grid_problems_with_SL
+
+    problems += driverlog_problems
+    # problems += blocksworld_problems
+    problems += zenotravel_problems
+    # problems += zenotravel_problems_with_SL
+    # problems += grid_problems
+    # problems += grid_problems_with_SL
     return problems
 
 
 
 
 if __name__ == '__main__':
-    p = get_blocksworld('17-0')
-    print(p)
-    #run_experiments(('blocksworld_17-0',p,False))
-
+    slrc = get_old_slrc()
+    for _,p,_ in get_problems():
+        print(check_robustness(slrc, p))

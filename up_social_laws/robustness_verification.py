@@ -342,7 +342,7 @@ class SimpleInstantaneousActionRobustnessVerifier(InstantaneousActionRobustnessV
 
         # Add actions
         for agent in problem.agents:
-            end_s = InstantaneousAction(up_social_laws.name_separator.join(["end_s", agent.name]))
+            end_s = InstantaneousAction(up_social_laws.name_separator.join(["s","end", agent.name]))
             end_s.add_precondition(Not(fin(self.get_agent_obj(agent))))
             for goal in self.get_agent_goal(problem, agent):
                 end_s.add_precondition(self.fsub.substitute(goal, self.global_fluent_map, agent))
@@ -353,7 +353,7 @@ class SimpleInstantaneousActionRobustnessVerifier(InstantaneousActionRobustnessV
             new_to_old[end_s] = None
 
             for i, goal in enumerate(self.get_agent_goal(problem, agent)):
-                end_f = InstantaneousAction(up_social_laws.name_separator.join(["end_f,", agent.name, str(i)]))
+                end_f = InstantaneousAction(up_social_laws.name_separator.join(["f","end", agent.name, str(i)]))
                 end_f.add_precondition(Not(fin(self.get_agent_obj(agent))))
                 end_f.add_precondition(Not(self.fsub.substitute(goal, self.global_fluent_map, agent)))
                 for g in self.get_agent_goal(problem, agent):

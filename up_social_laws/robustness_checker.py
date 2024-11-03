@@ -159,6 +159,7 @@ class SocialLawRobustnessChecker(engines.engine.Engine, mixins.OneshotPlannerMix
             planner = OneshotPlanner(problem_kind=rbv_result.problem.kind)
 
         result = planner.solve(rbv_result.problem)
+        status = SocialLawRobustnessStatus.ROBUST_RATIONAL
         if result.status in unified_planning.engines.results.POSITIVE_OUTCOMES:
             for action_occurence in result.plan.actions:
                 parts = action_occurence.action.name.split(up_social_laws.name_separator)
