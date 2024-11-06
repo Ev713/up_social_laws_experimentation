@@ -116,6 +116,7 @@ class FluentMap():
                 default_val = problem.ma_environment.fluents_defaults[f]
             else:
                 default_val = self.default_value
+
             new_problem.add_fluent(g_fluent, default_initial_value=default_val)
 
         for agent in problem.agents:
@@ -127,7 +128,6 @@ class FluentMap():
                 else:
                     default_val = self.default_value
                 new_problem.add_fluent(g_fluent, default_initial_value=default_val)
-
 
 class FluentMapSubstituter(IdentityDagWalker):
     """Performs substitution according to the given FluentMap"""
@@ -240,15 +240,14 @@ class RobustnessVerifier(engines.engine.Engine, CompilerMixin):
         new_problem.add_objects(problem.all_objects)
         for agent in problem.agents:
             new_problem.add_object(Object(agent.name, self.agent_type))
-
         # Add global and local copy for each fact
         self.global_fluent_map = FluentMap("g")
         self.global_fluent_map.add_facts(problem, new_problem)
-
         self.local_fluent_map = {}
         for agent in problem.agents:
             self.local_fluent_map[agent] = FluentMap("l-" + agent.name)
             self.local_fluent_map[agent].add_facts(problem, new_problem)
+
 
         self.fsub = FluentMapSubstituter(problem, new_problem.environment)
 
@@ -264,7 +263,7 @@ class RobustnessVerifier(engines.engine.Engine, CompilerMixin):
 
 
 class InstantaneousActionRobustnessVerifier(RobustnessVerifier):
-    '''Robustness verifier class for instanteanous actions:
+    '''Robustness verifier class for instantaneous actions:
     this class requires a (multi agent) problem, and creates a classical planning problem which is unsolvable iff the multi agent problem is not robust.'''
 
     def __init__(self):
