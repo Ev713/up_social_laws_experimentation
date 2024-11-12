@@ -123,6 +123,11 @@ class SocialLawRobustnessChecker(engines.engine.Engine, mixins.OneshotPlannerMix
     def is_single_agent_solvable(self, problem: MultiAgentProblem) -> bool:
         for agent in problem.agents:
             sap = SingleAgentProjection(agent)
+
+            ###
+            sap.skip_checks = True
+            ###
+
             result = sap.compile(problem)
 
             if self._save_pddl_prefix is not None:
@@ -144,8 +149,12 @@ class SocialLawRobustnessChecker(engines.engine.Engine, mixins.OneshotPlannerMix
     def multi_agent_robustness_counterexample(self, problem: MultiAgentProblemWithWaitfor) -> SocialLawRobustnessResult:
         rbv = Compiler(
             name=self._robustness_verifier_name,
-            problem_kind=problem.kind,
+### #           problem_kind=problem.kind,
             compilation_kind=CompilationKind.MA_SL_ROBUSTNESS_VERIFICATION)
+        ###
+        rbv.skip_checks=True
+        ###
+
         rbv_result = rbv.compile(problem)
 
         if self._save_pddl_prefix is not None:

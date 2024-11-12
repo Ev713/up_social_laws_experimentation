@@ -164,19 +164,19 @@ def print_robustness(problem):
 
 def centralise(problem):
     mac = MultiAgentProblemCentralizer()
-    mac.skip_checks=True
+    mac.skip_checks = True
     return mac.compile(problem).problem
 
 
 def get_new_slrc():
     return SocialLawRobustnessChecker(
-        planner=planner,
+        planner=None,
         robustness_verifier_name="WaitingActionRobustnessVerifier")
 
 
 def get_old_slrc():
     return SocialLawRobustnessChecker(
-        planner=planner,
+        planner=None,
         robustness_verifier_name='SimpleInstantaneousActionRobustnessVerifier')
 
 
@@ -590,18 +590,7 @@ def get_problems():
 
 
 if __name__ == '__main__':
-
-    #problem = problems.get_numeric_problem()
-    #problem = problems.numeric_with_sl()
-    #print(problem)
-    rbv = RegularWaitingActionRobustnessVerifier()
-    rbv.skip_checks = True
-    #compiled = rbv.compile(problem).problem
-    #print(compiled)
-    #simulate(compiled)
-    #solution = OneshotPlanner(problem_kind=compiled.kind).solve(compiled)
-    #print(solution.status)
-
-    problem = problems.sa_numeric()
-    solution = OneshotPlanner(problem_kind=problem.kind).solve(problem)
-    print(solution.status)
+    problem = problems.get_numeric_problem()
+    slrc = get_new_slrc()
+    # print(problem)
+    print(check_robustness(slrc, problem))

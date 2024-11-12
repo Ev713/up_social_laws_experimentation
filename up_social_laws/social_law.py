@@ -54,6 +54,7 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
     def __init__(self):
         engines.engine.Engine.__init__(self)
         CompilerMixin.__init__(self, CompilationKind.MA_SL_SOCIAL_LAW)
+        self.added_agent_complex_goals = set()
         self.added_waitfors = set()
         self.disallowed_actions = set()
         self.new_fluents = set()
@@ -320,11 +321,43 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
                 False
             )
 
+        # Agent goals
         for agent_name, goal_fluent_name, goal_args in self.added_agent_goals:
             agent = new_problem.agent(agent_name)
-            agent.add_public_goal(Dot(agent, FluentExp(new_problem.ma_environment.fluent(goal_fluent_name),
-                                           [new_problem.object(arg) for arg in goal_args])))
+            if agent.has_fluent(goal_fluent_name):
+                goal_fluent = agent.fluent(goal_fluent_name)
+                agent.add_public_goal(Dot(agent, FluentExp(goal_fluent,
+                                                           [new_problem.object(arg) for arg in goal_args])))
+            else:
+                assert (new_problem.ma_environment.has_fluent(goal_fluent_name))
+                goal_fluent = new_problem.ma_environment.fluent(goal_fluent_name)
+                agent.add_public_goal(FluentExp(goal_fluent, [new_problem.object(arg) for arg in goal_args]))
 
+        # Agent complex goals
+        for agent_name, mod, args, arg_args_str, in self.added_agent_complex_goals:
+            agent = new_problem.agent(agent_name)
+            mod_f = {'NOT': Not, 'GE': GE, 'LE': LE, 'EQUALS': Equals}[mod]
+            mod_args = []
+            for i, arg in enumerate(args):
+                if not arg.isnumeric():
+                    if agent.has_fluent(arg):
+                        arg_fluent = agent.fluent(arg)
+                    else:
+                        assert (new_problem.ma_environment.has_fluent(arg))
+                        arg_fluent = new_problem.ma_environment.fluent(arg)
+                    arg_args = []
+                    for arg_arg in arg_args_str[i]:
+                        if not arg.isnumeric():
+                            arg_args.append(new_problem.object(arg_arg))
+                        else:
+                            arg_args.append(float(arg_arg))
+                    #mod_args.append(Dot(agent, FluentExp(arg_fluent, arg_args)))
+                    mod_args.append( FluentExp(arg_fluent, arg_args))
+                else:
+                    mod_args.append(float(arg))
+            agent.add_public_goal(mod_f(*mod_args))
+
+        # Public goals
         for goal_fluent_name, goal_args in self.added_public_goals:
             new_problem.add_goal(FluentExp(new_problem.ma_environment.fluent(goal_fluent_name),
                                            [new_problem.object(arg) for arg in goal_args]))
@@ -375,7 +408,9 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
     def add_agent_goal(self, agent_name: str, goal_fluent_name: str,
                                    goal_args: Tuple[str] ):
         self.added_agent_goals.add((agent_name, goal_fluent_name, goal_args))
-
+    
+    def add_agent_complex_goal(self, agent_name, mod, args,  arg_args):
+        self.added_agent_complex_goals.add((agent_name, mod, args, arg_args))
     def add_public_goal(self, goal_fluent_name, goal_args):
         self.added_public_goals.add((goal_fluent_name, goal_args))
 

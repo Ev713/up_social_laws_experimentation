@@ -1,0 +1,10 @@
+(define (domain robot-domain)
+ (:requirements :strips :typing :negative-preconditions :numeric-fluents)
+ (:types location)
+ (:predicates (robot_at ?location - location))
+ (:functions (battery_charge))
+ (:action move
+  :parameters ( ?l_from - location ?l_to - location)
+  :precondition (and (<= 10 (battery_charge)) (robot_at ?l_from) (not (robot_at ?l_to)))
+  :effect (and (not (robot_at ?l_from)) (robot_at ?l_to) (assign (battery_charge) (- (battery_charge) 10))))
+)

@@ -271,6 +271,7 @@ class RegularWaitingActionRobustnessVerifier(RobustnessVerifier):
             end_s = InstantaneousAction(f"end_s_{agent.name}")
             for goal in self.get_agent_goal(self.og_problem, agent):
                 end_s.add_precondition(self.fsub.substitute(goal, self.global_fluent_map, agent))
+                end_s.add_precondition(Not(self.restrict_actions_map[agent.name]))
             end_s.add_effect(self.fin(self.get_agent_obj(agent)), True)
             end_s.add_effect(self.stage_1, False)
             new_problem.add_action(end_s)
@@ -293,6 +294,7 @@ class RegularWaitingActionRobustnessVerifier(RobustnessVerifier):
                 for a in self.og_problem.agents:
                     for g in self.get_agent_goal(self.og_problem, a):
                         goals_not_achieved.add_precondition(self.fsub.substitute(g, self.local_fluent_map[agent], agent))
+                    goals_not_achieved.add_precondition(Not(self.restrict_actions_map[agent.name]))
                 goals_not_achieved.add_effect(self.conflict, True)
                 new_problem.add_action(goals_not_achieved)
                 new_to_old[goals_not_achieved] = None
@@ -304,6 +306,7 @@ class RegularWaitingActionRobustnessVerifier(RobustnessVerifier):
         for agent in self.og_problem.agents:
             for goal in self.get_agent_goal(self.og_problem, agent):
                 declare_deadlock.add_precondition(self.fsub.substitute(goal, self.local_fluent_map[agent], agent))
+            declare_deadlock.add_precondition(Not(self.restrict_actions_map[agent.name]))
         declare_deadlock.add_effect(self.conflict, True)
         new_problem.add_action(declare_deadlock)
         new_to_old[declare_deadlock] = None
@@ -315,6 +318,7 @@ class RegularWaitingActionRobustnessVerifier(RobustnessVerifier):
         for agent in self.og_problem.agents:
             for goal in self.get_agent_goal(self.og_problem, agent):
                 declare_fail.add_precondition(self.fsub.substitute(goal, self.local_fluent_map[agent], agent))
+            declare_fail.add_precondition(Not(self.restrict_actions_map[agent.name]))
         declare_fail.add_effect(self.conflict, True)
         new_problem.add_action(declare_fail)
         new_problem.set_initial_value(self.stage_1, True)

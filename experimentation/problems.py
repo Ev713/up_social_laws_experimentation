@@ -702,13 +702,16 @@ def get_numeric_problem():
     problem.add_object(charger1)
     return problem
 
+
 def numeric_with_sl():
     sl = SocialLaw()
-    sl.skip_checks=True
+    sl.skip_checks = True
     numeric = get_numeric_problem()
     for agent in numeric.agents:
         sl.add_waitfor_annotation(agent.name, 'plug_in', 'is_free', ('free_charger',))
+        sl.add_agent_complex_goal(agent.name,'NOT', ('plugged_in', ), (('charger1', ), ))
     return sl.compile(numeric).problem
+
 
 def sa_numeric():
     # Declaring types
@@ -745,4 +748,3 @@ def sa_numeric():
     problem.set_initial_value(battery_charge, 100)
     problem.add_goal(robot_at(l2))
     return problem
-
