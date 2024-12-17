@@ -10,6 +10,7 @@ import random
 from unified_planning.io import PDDLWriter, MAPDDLWriter
 
 import problems
+import numeric_problems
 
 from up_social_laws.waiting_robustness_verification import RegularWaitingActionRobustnessVerifier
 
@@ -86,6 +87,7 @@ def get_compiled_problem(problem):
 def check_single_agent_solvable(problem):
     for agent in problem.agents:
         sap = SingleAgentProjection(agent)
+        sap.skip_checks=True
         result = sap.compile(problem)
         planner = OneshotPlanner(problem_kind=result.problem.kind)
         presult = planner.solve(result.problem)
@@ -110,8 +112,8 @@ def simulate(problem, ma=False, print_state=False, trace_vars=[]):
             print('No legal actions')
             return
         print('Actions: ')
-        for a in actions:
-            print(a[0].name, a[1])
+        for i, a in enumerate(actions):
+            print(f'{i}: {a[0].name}{a[1]}')
         while True:
             try:
                 while True:
@@ -590,7 +592,19 @@ def get_problems():
 
 
 if __name__ == '__main__':
-    problem = problems.get_numeric_problem()
-    slrc = get_new_slrc()
+    problem = numeric_problems.get_zenotravel('pfile3')
+    #simulate(get_compiled_problem(problem))
+
+
+    #print(problem)
+    #print('\n\n\n')
+    #sap = SingleAgentProjection(problem.agents[0])
+    #sap.skip_checks=True
+    #problem = sap.compile(problem).problem
+    #simulate(problem)
+    #problem = numeric_problems.zenotravel_add_sociallaw(problem)
+    #print(check_single_agent_solvable(problem))
+    #simulate(get_new_slrc().get_compiled(problem))
+    #print(get_new_slrc().get_compiled(problem))
     # print(problem)
-    print(check_robustness(slrc, problem))
+    print(check_robustness(get_new_slrc(), problem))

@@ -1,0 +1,63 @@
+{
+            "trucks": ["truck1", "truck2", "truck3"],
+            "locations": ["s0", "s1", "s2", "s3", "s4", "p0-1", "p1-2", "p1-3", "p3-2", "p3-4", "p4-0"],
+            "packages": ["package1", "package2", "package3", "package4", "package5", "package6"],
+            "agents": ["driver1", "driver2"],
+            "init_values": {
+                "global": [
+                    ["path", ["s1", "p0-1"]],
+                    ["path", ["p0-1", "s1"]],
+                    ["path", ["s1", "p1-2"]],
+                    ["path", ["p1-2", "s1"]],
+                    ["path", ["s2", "p1-2"]],
+                    ["path", ["p1-2", "s2"]],
+                    ["path", ["s1", "p1-3"]],
+                    ["path", ["p1-3", "s1"]],
+                    ["path", ["s3", "p1-3"]],
+                    ["path", ["p1-3", "s3"]],
+                    ["path", ["s3", "p3-2"]],
+                    ["path", ["p3-2", "s3"]],
+                    ["path", ["s2", "p3-2"]],
+                    ["path", ["p3-2", "s2"]],
+                    ["path", ["s3", "p3-4"]],
+                    ["path", ["p3-4", "s3"]],
+                    ["path", ["s4", "p3-4"]],
+                    ["path", ["p3-4", "s4"]],
+                    ["path", ["s4", "p4-0"]],
+                    ["path", ["p4-0", "s4"]],
+                    ["path", ["s0", "p4-0"]],
+                    ["path", ["p4-0", "s0"]],
+                    ["link", ["s0", "s2"]],
+                    ["link", ["s2", "s0"]],
+                    ["link", ["s0", "s3"]],
+                    ["link", ["s3", "s0"]],
+                    ["link", ["s1", "s0"]],
+                    ["link", ["s0", "s1"]],
+                    ["link", ["s2", "s1"]],
+                    ["link", ["s1", "s2"]],
+                    ["link", ["s3", "s2"]],
+                    ["link", ["s2", "s3"]],
+                    ["link", ["s4", "s0"]],
+                    ["link", ["s0", "s4"]],
+                    ["link", ["s4", "s2"]],
+                    ["link", ["s2", "s4"]],
+                    ["link", ["s4", "s3"]],
+                    ["link", ["s3", "s4"]]
+
+
+    ],
+                "driver1": [["driver_at", ["s4"]]],
+                "driver2": [["driver_at", ["s1"]]]
+            },
+            "goals": [
+                ["at", ["truck1", "s3"]],
+                ["at", ["truck2", "s3"]],
+                ["at", ["package1", "s3"]],
+                ["at", ["package2", "s2"]],
+                ["at", ["package3", "s1"]],
+                ["at", ["package4", "s0"]],
+                ["at", ["package5", "s1"]],
+                ["at", ["package6", "s1"]]
+            ]
+
+        }

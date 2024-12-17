@@ -14,6 +14,7 @@
 #
 """This module defines the robustness verification compiler classes"""
 
+import copy
 import unified_planning as up
 import unified_planning.engines as engines
 from unified_planning.engines.mixins.compiler import CompilationKind, CompilerMixin
@@ -41,6 +42,8 @@ from unified_planning.model.walkers.identitydag import IdentityDagWalker
 from unified_planning.environment import get_environment
 import unified_planning.model.problem_kind
 import up_social_laws
+from collections import deque
+
 
 credits = Credits('Robustness Verification',
                   'Technion Cognitive Robotics Lab (cf. https://github.com/TechnionCognitiveRoboticsLab)',
@@ -248,7 +251,6 @@ class RobustnessVerifier(engines.engine.Engine, CompilerMixin):
             self.local_fluent_map[agent] = FluentMap("l-" + agent.name)
             self.local_fluent_map[agent].add_facts(problem, new_problem)
 
-
         self.fsub = FluentMapSubstituter(problem, new_problem.environment)
 
         # Initial state
@@ -447,19 +449,40 @@ class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
         return "wrbv"
 
     def substitute_effect(self, effect: Effect, fmap: FluentMap, local_agent: Agent):
-        fluent = effect.fluent
-        new_fluent = self.fsub.substitute(fluent, fmap, local_agent)
-        args = effect.value.args
-        new_args = []
-        for arg in args:
-            if arg.node_type == OperatorKind.FLUENT_EXP:
-                new_args.append(self.fsub.substitute(arg, fmap, local_agent))
-            else:
-                new_args.append(arg)
+        return self.fsub.substitute(effect.fluent, fmap, local_agent), self.substitute_fnode(effect.value, fmap, local_agent)
 
-        args_sub = {args[i]: new_args[i] for i, _ in enumerate(new_args)}
-        new_value = effect.value.substitute(args_sub)
-        return new_fluent, new_value
+    def substitute_fnode(self, fnode, fmap, local_agent):
+        em = ExpressionManager(fnode.environment)
+        combined_fmap = {**fmap.env_fluent_map, **fmap.agent_fluent_map}
+        stack = [fnode]
+        visited = []
+        sub_nodes = {}
+        while stack:
+            current = stack[-1]
+            if current in visited:
+                stack.pop()
+            else:
+                visited.append(current)
+                for arg in current.args:
+                    if arg not in visited:
+                        stack.append(arg)
+        for node in reversed(visited):
+            sub_args = [sub_nodes[hash(arg)] for arg in node.args]
+            if node.is_fluent_exp():
+                agent_name, fluent_name = local_agent.name, node.fluent().name
+                if (local_agent.name, node.fluent().name) in combined_fmap:
+                    new_fluent = combined_fmap[(local_agent.name, node.fluent().name)]
+                else:
+                    new_fluent = combined_fmap[node.fluent().name]
+                copied_node = new_fluent(*sub_args)
+            elif node.is_constant() or node.node_type==OperatorKind.PARAM_EXP:
+                copied_node = node
+            else:
+                copied_node = em.create_node(node.node_type, tuple(sub_args))
+            sub_nodes[hash(node)] = copied_node
+        return sub_nodes[hash(fnode)]
+
+
 
     def create_action_copy(self, problem: MultiAgentProblemWithWaitfor, agent: Agent, action: InstantaneousAction,
                            prefix: str):

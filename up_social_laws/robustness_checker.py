@@ -146,6 +146,17 @@ class SocialLawRobustnessChecker(engines.engine.Engine, mixins.OneshotPlannerMix
                 return False
         return True
 
+    def get_compiled(self, problem):
+        rbv = Compiler(
+            name=self._robustness_verifier_name,
+            ### #           problem_kind=problem.kind,
+            compilation_kind=CompilationKind.MA_SL_ROBUSTNESS_VERIFICATION)
+        ###
+        rbv.skip_checks = True
+        ###
+
+        return rbv.compile(problem).problem
+
     def multi_agent_robustness_counterexample(self, problem: MultiAgentProblemWithWaitfor) -> SocialLawRobustnessResult:
         rbv = Compiler(
             name=self._robustness_verifier_name,
