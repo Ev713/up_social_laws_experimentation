@@ -87,7 +87,7 @@ def get_compiled_problem(problem):
 def check_single_agent_solvable(problem):
     for agent in problem.agents:
         sap = SingleAgentProjection(agent)
-        sap.skip_checks=True
+        sap.skip_checks = True
         result = sap.compile(problem)
         planner = OneshotPlanner(problem_kind=result.problem.kind)
         presult = planner.solve(result.problem)
@@ -143,9 +143,7 @@ def simulate(problem, ma=False, print_state=False, trace_vars=[]):
                 print(a[0].name, a[1])
 
 
-def solve(self, problem, ma=False):
-    if ma:
-        problem = self.ma_to_sa(problem)
+def solve(problem, ma=False):
     with OneshotPlanner(problem_kind=problem.kind) as planner:
         result = planner.solve(problem)
         print(result)
@@ -593,18 +591,12 @@ def get_problems():
 
 if __name__ == '__main__':
     problem = numeric_problems.get_zenotravel('pfile3')
-    #simulate(get_compiled_problem(problem))
-
-
-    #print(problem)
-    #print('\n\n\n')
-    #sap = SingleAgentProjection(problem.agents[0])
-    #sap.skip_checks=True
-    #problem = sap.compile(problem).problem
-    #simulate(problem)
-    #problem = numeric_problems.zenotravel_add_sociallaw(problem)
-    #print(check_single_agent_solvable(problem))
-    #simulate(get_new_slrc().get_compiled(problem))
-    #print(get_new_slrc().get_compiled(problem))
-    # print(problem)
+    sl_problem = numeric_problems.zenotravel_add_sociallaw(problem)
+    # print(sl_problem)
+    # solve(get_new_slrc().get_compiled(sl_problem))
+    # print(get_new_slrc().get_compiled(sl_problem))
     print(check_robustness(get_new_slrc(), problem))
+    print(check_robustness(get_new_slrc(), sl_problem))
+
+    # problem = get_new_slrc().get_compiled(problem)
+    # print(problem)

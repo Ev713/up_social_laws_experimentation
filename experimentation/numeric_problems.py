@@ -113,6 +113,27 @@ def get_blocksworld(name):
     return blocksworld
 
 
+def zenotravel_add_sociallaw(zenotravel):
+    zenotravel_sl = SocialLaw()
+    for agent in zenotravel.agents:
+        zenotravel_sl.add_new_fluent(agent.name, 'assigned', (('p', 'person'),), False)
+    persons_to_aircraft = {}
+    for agent in zenotravel.agents:
+        for goal in agent.public_goals:
+            args = [arg.object() for arg in goal.args if arg.is_object_exp()]
+            persons_args = [obj for obj in args if obj.type.name == 'person']
+            for person in persons_args:
+                persons_to_aircraft[person.name] = agent.name
+    for agent in zenotravel.agents:
+        zenotravel_sl.add_precondition_to_action(agent.name, 'board', 'assigned', ('p',))
+    for person in zenotravel.objects(UserType('person')):
+        if person.name in persons_to_aircraft:
+            aircraft_name = persons_to_aircraft[person.name]
+            zenotravel_sl.set_initial_value_for_new_fluent(aircraft_name, 'assigned', (person.name,), True)
+    zenotravel_sl.skip_checks=True
+    return zenotravel_sl.compile(zenotravel).problem
+
+
 def get_zenotravel(name):
     filepath = open(
         f"{EXPERIMENTATION_PATH}/numeric_problems/all/jsons/zenotravel/{name}.json").read()
@@ -174,6 +195,8 @@ def get_zenotravel(name):
     c2 = fly_slow.parameter('c2')
     fly_slow.add_precondition(aircraft_loc(c1))
     fly_slow.add_precondition(GE(fuel, Times(distance(c1, c2), slow_burn)))
+    fly_slow.add_precondition(GT(distance(c1, c2), 0))
+
     fly_slow.add_effect(aircraft_loc(c2), True)
     fly_slow.add_effect(aircraft_loc(c1), False)
     fly_slow.add_effect(fuel, Minus(fuel, Times(distance(c1, c2), slow_burn)))
@@ -182,6 +205,7 @@ def get_zenotravel(name):
     c1 = fly_fast.parameter('c1')
     c2 = fly_fast.parameter('c2')
     fly_fast.add_precondition(aircraft_loc(c1))
+    fly_fast.add_precondition(GT(distance(c1, c2), 0))
     fly_fast.add_precondition(GE(fuel, Times(distance(c1, c2), fast_burn)))
     fly_fast.add_precondition(GE(zoom_limit, onboard))
     fly_fast.add_effect(aircraft_loc(c2), True)
@@ -253,29 +277,8 @@ def get_zenotravel(name):
             else:
                 fluent = zenotravel.ma_environment.fluent(goaltuple[0])
             params = (unified_planning.model.Object(v, obj_type[v]) for v in goaltuple[1])
-            agent.add_public_goal(fluent(*params))
+        agent.add_public_goal(fluent(*params))
     return zenotravel
-
-
-def zenotravel_add_sociallaw(zenotravel):
-    zenotravel_sl = SocialLaw()
-    for agent in zenotravel.agents:
-        zenotravel_sl.add_new_fluent(agent.name, 'assigned', (('p', 'person'),), False)
-    persons_to_aircraft = {}
-    for agent in zenotravel.agents:
-        for goal in agent.public_goals:
-            args = [arg.object() for arg in goal.args if arg.is_object_exp()]
-            persons_args = [obj for obj in args if obj.type.name == 'person']
-            for person in persons_args:
-                persons_to_aircraft[person.name] = agent.name
-    for agent in zenotravel.agents:
-        zenotravel_sl.add_precondition_to_action(agent.name, 'board', 'assigned', ('p',))
-    for person in zenotravel.objects(UserType('person')):
-        if person.name in persons_to_aircraft:
-            aircraft_name = persons_to_aircraft[person.name]
-            zenotravel_sl.set_initial_value_for_new_fluent(aircraft_name, 'assigned', (person.name,), True)
-    zenotravel_sl.skip_checks=True
-    return zenotravel_sl.compile(zenotravel).problem
 
 
 def get_numeric_problem():
