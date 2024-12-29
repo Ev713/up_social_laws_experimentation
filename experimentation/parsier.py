@@ -10,7 +10,7 @@ def extract_between(text, start_str, end_str):
     # Find the ending position of end_str, starting from the end of start_str
     end_idx = text.find(end_str, start_idx)
     if end_idx == -1:
-        return None  # end_str not found
+        end_idx = len(text)-1  # end_str not found
 
     # Return the substring between start_str and end_str
     return text[start_idx:end_idx]
@@ -21,16 +21,23 @@ class Parser:
         self.general_change = {}
         self.agent_change = {}
         self.agent_fluenttuples = []
-        self.agent_name = 'plane'
-        self.agent_type_name = 'aircraft'
+        self.agent_name = None
+        self.agent_type_name = None
         self.skip_fluents = []
+
+    def transform_goal(self, goal_str):
+        goal_str = goal_str.replace('\n', ' ').replace('\t', ' ')
+        goal_words = [word.strip() for word in goal_str.split()]
+        i = 0
+        while True:
+            raise NotImplementedError
 
     def transform_fluentuples(self, init_str, extract_agent_tuples):
         if extract_agent_tuples:
             self.agent_fluenttuples = []
         inits = ''
         for line in init_str.split('\n'):
-            line = line.replace('(', '').replace(')', '').replace('\n', '').replace('\t', '')
+            line = line.replace('(', '').replace(')', '').replace('\n', '').replace('\t', '').strip()
             if len(line) < 1:
                 continue
             usable = line.split(' ')
@@ -38,32 +45,22 @@ class Parser:
                 continue
 
             operator = value = None
-            if usable[0] in ['=', '>', '<']:
-                operator = usable[0]
-                value = usable[-1]
-                usable = [usable[i] for i in range(1, len(usable) - 1)]
             change = self.general_change
             for u in usable:
-                if self.agent_name in u:
+                if self.agent_name is not None and self.agent_name in u:
                     change = self.agent_change
             if any([skip in usable for skip in self.skip_fluents]):
                 continue
             usable[0] = usable[0] if not usable[0] in change else change[usable[0]]
-            fluenttuple = [usable[0], [usable[i] for i in range(1, len(usable))]]
+            fluenttuple = usable
             if extract_agent_tuples:
 
                 if len(fluenttuple[1]) > 0 and any([self.agent_name in var for var in fluenttuple[1]]):
-                    if operator is None:
-                        self.agent_fluenttuples.append(fluenttuple)
-                    else:
-                        self.agent_fluenttuples.append([operator, fluenttuple, value])
-                    continue
-            fluenttuple = [operator, fluenttuple, value] if operator is not None else fluenttuple
+                    self.agent_fluenttuples.append(fluenttuple)
             if inits != '':
                 inits += ',\n'
             inits = inits + str(fluenttuple).replace('\'', '\"')
         return inits
-
     def get_objects_and_agents(self, base_objects_str):
         objects_str = ''
         agents_str = ''
@@ -81,21 +78,22 @@ class Parser:
             objects[key] = sorted(objects[key])
 
         agents = None
-        for agent_name in [self.agent_type_name, self.agent_type_name + 's']:
-            if agent_name in objects:
-                agents = objects[agent_name]
-                objects.pop(agent_name, None)
-        for key in objects:
-            if objects_str != '':
-                objects_str += ',\n'
-            objects_str += f'\"{key}\": ' + str(objects[key]).replace('\'', '\"')
-        if agents is None:
-            return objects_str
-        agents_str += ('\"agents": [')
-        for i, a in enumerate(agents):
-            if i != 0:
-                agents_str += ', '
-            agents_str += '\"' + a + '\"'
+        if not(self.agent_name == None and self.agent_type_name ==None):
+            for agent_name in [self.agent_type_name, self.agent_type_name + 's']:
+                if agent_name in objects:
+                    agents = objects[agent_name]
+                    objects.pop(agent_name, None)
+            for key in objects:
+                if objects_str != '':
+                    objects_str += ',\n'
+                objects_str += f'\"{key}\": ' + str(objects[key]).replace('\'', '\"')
+            if agents is None:
+                return objects_str
+            agents_str += ('\"agents": [')
+            for i, a in enumerate(agents):
+                if i != 0:
+                    agents_str += ', '
+                agents_str += '\"' + a + '\"'
         return objects_str, agents_str
 
     def extract_metric(self, metric_str):
@@ -137,8 +135,7 @@ class Parser:
 
         return agent_fluents_str.replace('\'', '\"')
 
-    def parse_json(self, number, agents_type_name=None):
-        pathname = r'/home/evgeny/SocialLaws/up-social-laws/experimentation/numeric_problems/all/unfactored/zenotravel/pfile'+str(number)+'.pddl'
+    def parse_json(self, pathname, agents_type_name=None):
         self.agent_change = {'located': 'aircraft-loc'}
         self.general_change = {'located': 'person-loc'}
         self.skip_fluents = ['total-fuel-used']
@@ -148,7 +145,7 @@ class Parser:
 
         objects_str = extract_between(content, 'objects', ')')
         init_str = extract_between(content, 'init', ')\n(')
-        goal_str = extract_between(content, ':goal', '))')
+        goal_str = extract_between(content, ':goal', '\n\n\n')
         metric_str = content.split('metric')
         if len(metric_str) > 1:
             metric_str = metric_str[1]
@@ -160,10 +157,10 @@ class Parser:
         json_ver += objs + ',\n'
         json_ver += agents
         json_ver += '],\n\n\"init_values\": {\n\"global\": [\n'
-        json_ver += self.transform_fluentuples(init_str, extract_agent_tuples=True,) + '],\n\n'
-        json_ver += self.make_agent_fluents({'located': 'aircraft_at', 'fuel': 'fuel'})
+        json_ver += self.transform_fluentuples(init_str, extract_agent_tuples=False,) + '],\n\n'
+        #json_ver += self.make_agent_fluents({'located': 'aircraft_at', 'fuel': 'fuel'})
         json_ver += '\n},\n\"goals\": [\n'
-        json_ver += self.transform_fluentuples(goal_str, extract_agent_tuples=False,) + '\n\n'
+        json_ver += self.transform_goal(goal_str) + '\n\n'
         json_ver += ']}'
         # if metric_str is not None:
         #    json_ver += self.extract_metric(metric_str)
@@ -183,10 +180,7 @@ def redo():
 
 
 if __name__ == '__main__':
-    for i in range(1, 21):
+    parser = Parser()
+    pathname = r'C:\Users\foree\PycharmProjects\up_social_laws_experimentation\experimentation\problems\numeric_problems\unfactored\block-grouping\pfile1.pddl'
+    print(Parser().parse_json(pathname))
 
-        text_file = open(f"/home/evgeny/SocialLaws/up-social-laws/experimentation/numeric_problems/all/jsons/zenotravel/pfile{i}.json", "w")
-
-        text_file.write(Parser().parse_json(number=i, agents_type_name='plane'))
-
-        text_file.close()

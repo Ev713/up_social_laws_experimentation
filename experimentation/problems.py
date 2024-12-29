@@ -747,4 +747,5 @@ def sa_numeric():
     problem.set_initial_value(robot_at(l2), False)
     problem.set_initial_value(battery_charge, 100)
     problem.add_goal(robot_at(l2))
+
     return problem

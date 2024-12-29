@@ -34,6 +34,12 @@ class ProblemGenerator():
         with open(json_file_path, 'r') as file:
             return json.load(file)
 
+    def load_objects(self, types, names):
+        for i, obj_type in enumerate(types):
+            name = names[i]
+            self.problem.add_objects(list(map(lambda x: unified_planning.model.Object(x, obj_type),
+                                              self.instance_data[name])))
+
     def set_init_values(self):
         for key in self.instance_data['init_values']:
             if key == 'global':
@@ -416,7 +422,7 @@ class DriverLogGenerator(ProblemGenerator):
 
     def generate_problem(self, file_name, sl=False):
         self.instance_data = self.load_instance_data(file_name)
-        self.problem = MultiAgentProblemWithWaitfor('blocksworld')
+        self.problem = MultiAgentProblemWithWaitfor('driverlog')
 
         # Objects
         locatable = UserType('locatable')
@@ -846,6 +852,7 @@ class BlockGroupingGenerator(NumericProblemGenerator):
         blocks = list(map(lambda b: unified_planning.model.Object(b, block), self.instance_data['blocks']))
         self.problem.add_objects(blocks)
 
+        # Public Fluents:
         x = Fluent('x', RealType(), b=block )
         y = Fluent('y', RealType(),b=block)
         min_x = Fluent('min_x', RealType())
@@ -853,70 +860,96 @@ class BlockGroupingGenerator(NumericProblemGenerator):
         min_y = Fluent('min_y', RealType())
         max_y = Fluent('max_y', RealType())
 
-        board = InstantaneousAction('move_block_up', b=block)
-        p = board.parameter('p')
-        c = board.parameter('c')
-        board.add_precondition(person_loc(p, c))
-        board.add_precondition(aircraft_loc(c))
-        board.add_effect(onboard, Plus(onboard + 1))
-        board.add_effect(carries(p), True)
-        board.add_effect(person_loc(p, c), False)
+        self.problem.ma_environment.add_fluent(x)
+        self.problem.ma_environment.add_fluent(y)
+        self.problem.ma_environment.add_fluent(min_y)
+        self.problem.ma_environment.add_fluent(min_x)
+        self.problem.ma_environment.add_fluent(max_y)
+        self.problem.ma_environment.add_fluent(max_x)
 
-        # General fluents
-        on = Fluent('on', BoolType(), x=block, y=block)
-        ontable = Fluent('ontable', BoolType(), x=block)
-        clear = Fluent('clear', BoolType(), x=block)
-        self.problem.ma_environment.add_fluent(on, default_initial_value=False)
-        self.problem.ma_environment.add_fluent(ontable, default_initial_value=False)
-        self.problem.ma_environment.add_fluent(clear, default_initial_value=False)
-
-        # Objects
-        locations = list(map(lambda b: unified_planning.model.Object(b, block), self.instance_json['blocks']))
-        self.problem.add_objects(locations)
-
-        # Agent specific fluents
-        holding = Fluent('holding', BoolType(), x=block)
-        handempty = Fluent('handempty', BoolType(), )
+        # Agent Fluents
+        agent_x = Fluent('arm_x', RealType(), b=block)
+        agent_y = Fluent('arm_y', RealType(), b=block)
 
         # Actions
-        pickup = InstantaneousAction('pick-up', x=block)
-        x = pickup.parameter('x')
-        pickup.add_precondition(clear(x))
-        pickup.add_precondition(ontable(x))
-        pickup.add_precondition(handempty())
-        pickup.add_effect(ontable(x), False)
-        pickup.add_effect(clear(x), False)
-        pickup.add_effect(handempty(), False)
-        pickup.add_effect(holding(x), True)
 
-        putdown = InstantaneousAction('put-down', x=block)
-        x = putdown.parameter('x')
-        putdown.add_precondition(holding(x))
-        putdown.add_effect(holding(x), False)
-        putdown.add_effect(clear(x), True)
-        putdown.add_effect(handempty(), True)
-        putdown.add_effect(ontable(x), True)
+        move_up = InstantaneousAction('move_block_up', b=block)
+        b = move_up.parameter('b')
+        move_up.add_precondition(Equals(agent_x(), x(b)))
+        move_up.add_precondition(Equals(agent_y(), y(b)))
+        move_up.add_precondition(LT(agent_y(), max_y))
+        move_up.add_effect(y(b), Plus(agent_y(), 1))
+        move_up.add_effect(agent_y(), Plus(agent_y(), 1))
 
-        stack = InstantaneousAction('stack', x=block, y=block)
-        x = stack.parameter('x')
-        y = stack.parameter('y')
-        stack.add_precondition(holding(x))
-        stack.add_precondition(clear(y))
-        stack.add_effect(holding(x), False)
-        stack.add_effect(clear(x), True)
-        stack.add_effect(handempty(), True)
-        stack.add_effect(on(x, y), True)
+        move_down = InstantaneousAction('move_block_down', b=block)
+        b = move_down.parameter('b')
+        move_down.add_precondition(Equals(agent_x(), x(b)))
+        move_down.add_precondition(Equals(agent_y(), y(b)))
+        move_down.add_precondition(GT(agent_y(), min_y))
+        move_down.add_effect(y(b), Minus(agent_y(), 1))
+        move_down.add_effect(agent_y(), Minus(agent_y(), 1))
 
-        unstack = InstantaneousAction('unstack', x=block, y=block)
-        x = unstack.parameter('x')
-        y = unstack.parameter('y')
-        unstack.add_precondition(on(x, y))
-        unstack.add_precondition(clear(x))
-        unstack.add_precondition(handempty())
-        unstack.add_effect(holding(x), True)
-        unstack.add_effect(clear(y), True)
-        unstack.add_effect(clear(x), False)
-        unstack.add_effect(handempty(), False)
-        unstack.add_effect(on(x, y), False)
+        move_left = InstantaneousAction('move_block_left', b=block)
+        b = move_down.parameter('b')
+        move_left.add_precondition(Equals(agent_x(), x(b)))
+        move_left.add_precondition(Equals(agent_y(), y(b)))
+        move_left.add_precondition(GT(agent_x(), min_x))
+        move_left.add_effect(x(b), Minus(agent_x(), 1))
+        move_left.add_effect(agent_x(), Minus(agent_x(), 1))
+
+        move_right = InstantaneousAction('move_block_right', b=block)
+        b = move_right.parameter('b')
+        move_right.add_precondition(Equals(agent_x(), x(b)))
+        move_right.add_precondition(Equals(agent_y(), y(b)))
+        move_right.add_precondition(LT(agent_x(), max_x))
+        move_right.add_effect(x(b), Plus(agent_x(), 1))
+        move_right.add_effect(agent_x(), Plus(agent_x(), 1))
+
+        for agent_name in self.instance_data['agents']:
+            agent = Agent(agent_name, self.problem)
+            agent.add_fluent(agent_x, default_initial_value=0)
+            agent.add_fluent(agent_y, default_initial_value=0)
+
+            agent.add_action(move_up)
+            agent.add_action(move_down)
+            agent.add_action(move_left)
+            agent.add_action(move_right)
+            self.problem.add_agent(agent)
+
+        self.set_init_values()
+        self.set_goals()
+
+        if sl:
+            self.add_social_law()
+        return self.problem
+
+class ExpeditionGenerator(NumericProblemGenerator):
+    def generate_problem(self, file_name, sl=False):
+        self.problem = MultiAgentProblemWithWaitfor('Settlers')
+        self.load_instance_data(file_name)
+        sled = UserType('sled')
+        waypoint = UserType('waypoint')
+        at = Fluent('at', BoolType(), s=sled, w=waypoint)
+        is_next = Fluent('is_next', BoolType(), x=waypoint, y=waypoint)
+        sled_supplies = Fluent('sled_supplies', RealType(), s=sled)
+        sled_capacity = Fluent('sled_capacity', RealType(), s=sled)
+        waypoint_supplies = Fluent('waypoint_supplies', RealType(), w=waypoint)
+
+        self.load_objects([sled, waypoint], ['sled', 'waypoint'])
+
+        self.problem.ma_environment.add_fluent(at)
+        self.problem.ma_environment.add_fluent(is_next)
+        self.problem.ma_environment.add_fluent(waypoint_supplies)
+
+        move_forwards = InstantaneousAction('move_forward', s=sled,w1=waypoint,w2=waypoint)
+        raise NotImplementedError
+
+
+
+
+
+
+
+
 
 
