@@ -34,11 +34,17 @@ class ProblemGenerator():
         with open(json_file_path, 'r') as file:
             return json.load(file)
 
-    def load_objects(self, types, names):
+    def load_objects(self, types, names, remember=True):
         for i, obj_type in enumerate(types):
             name = names[i]
             self.problem.add_objects(list(map(lambda x: unified_planning.model.Object(x, obj_type),
                                               self.instance_data[name])))
+        if remember:
+            self.remember_obj_types(types, names)
+
+    def load_agents(self):
+        for agent_name in self.instance_data['agents']:
+            self.problem.add_agent(Agent(agent_name, self.problem))
 
     def set_init_values(self):
         for key in self.instance_data['init_values']:
@@ -160,6 +166,7 @@ class BlocksworldGenerator(ProblemGenerator):
 
         return self.problem
 
+
 class GridGenerator(ProblemGenerator):
     def __init__(self):
         super().__init__()
@@ -191,57 +198,57 @@ class GridGenerator(ProblemGenerator):
 
     def grid_instance_data(self):
         self.INIT_LOCS = [{0: '(1, 1)', 1: '(1, 1)'}, {0: '(2, 0)', 1: '(0, 2)', 2: '(1, 0)'},
-                     {0: '(0, 2)', 1: '(1, 1)', 2: '(2, 3)', 3: '(1, 2)'},
-                     {0: '(0, 2)', 1: '(1, 3)', 2: '(3, 0)', 3: '(2, 1)', 4: '(0, 3)'},
-                     {0: '(3, 2)', 1: '(3, 1)', 2: '(0, 3)', 3: '(3, 2)', 4: '(0, 0)', 5: '(0, 3)'},
-                     {0: '(1, 1)', 1: '(0, 0)', 2: '(2, 2)', 3: '(1, 3)', 4: '(3, 4)', 5: '(3, 0)'},
-                     {0: '(3, 1)', 1: '(2, 4)', 2: '(4, 1)', 3: '(2, 0)', 4: '(3, 0)', 5: '(1, 4)', 6: '(3, 0)'},
-                     {0: '(2, 5)', 1: '(1, 0)', 2: '(5, 4)', 3: '(5, 0)', 4: '(0, 4)', 5: '(1, 5)', 6: '(2, 1)',
-                      7: '(0, 4)'},
-                     {0: '(5, 3)', 1: '(1, 2)', 2: '(1, 3)', 3: '(2, 2)', 4: '(1, 6)', 5: '(1, 1)', 6: '(4, 3)',
-                      7: '(4, 1)'},
-                     {0: '(3, 0)', 1: '(4, 2)', 2: '(1, 1)', 3: '(6, 6)', 4: '(5, 5)', 5: '(4, 0)', 6: '(5, 6)'},
-                     {0: '(2, 7)', 1: '(5, 5)', 2: '(6, 0)', 3: '(1, 3)', 4: '(0, 7)', 5: '(0, 3)', 6: '(4, 5)',
-                      7: '(1, 2)',
-                      8: '(0, 1)'}, {0: '(6, 1)', 1: '(3, 0)'}, {0: '(2, 2)', 1: '(5, 2)', 2: '(2, 0)'},
-                     {0: '(4, 1)', 1: '(2, 0)', 2: '(0, 1)', 3: '(2, 3)', 4: '(0, 1)', 5: '(3, 2)'},
-                     {0: '(0, 1)', 1: '(6, 1)', 2: '(0, 0)', 3: '(0, 4)', 4: '(5, 2)', 5: '(2, 2)', 6: '(5, 1)'},
-                     {0: '(0, 4)', 1: '(7, 2)', 2: '(3, 2)', 3: '(4, 2)', 4: '(0, 3)', 5: '(5, 1)', 6: '(7, 3)',
-                      7: '(6, 4)'},
-                     {0: '(6, 6)', 1: '(4, 1)', 2: '(7, 1)', 3: '(5, 6)', 4: '(0, 4)', 5: '(1, 0)', 6: '(1, 1)',
-                      7: '(2, 4)',
-                      8: '(1, 1)', 9: '(5, 0)'},
-                     {0: '(3, 3)', 1: '(3, 4)', 2: '(5, 3)', 3: '(4, 2)', 4: '(2, 7)', 5: '(1, 7)', 6: '(5, 4)',
-                      7: '(1, 1)'},
-                     {0: '(4, 6)', 1: '(2, 4)', 2: '(2, 5)', 3: '(2, 6)', 4: '(3, 1)', 5: '(4, 6)', 6: '(3, 7)',
-                      7: '(4, 1)'},
-                     {0: '(1, 4)', 1: '(0, 1)', 2: '(1, 1)'}]
+                          {0: '(0, 2)', 1: '(1, 1)', 2: '(2, 3)', 3: '(1, 2)'},
+                          {0: '(0, 2)', 1: '(1, 3)', 2: '(3, 0)', 3: '(2, 1)', 4: '(0, 3)'},
+                          {0: '(3, 2)', 1: '(3, 1)', 2: '(0, 3)', 3: '(3, 2)', 4: '(0, 0)', 5: '(0, 3)'},
+                          {0: '(1, 1)', 1: '(0, 0)', 2: '(2, 2)', 3: '(1, 3)', 4: '(3, 4)', 5: '(3, 0)'},
+                          {0: '(3, 1)', 1: '(2, 4)', 2: '(4, 1)', 3: '(2, 0)', 4: '(3, 0)', 5: '(1, 4)', 6: '(3, 0)'},
+                          {0: '(2, 5)', 1: '(1, 0)', 2: '(5, 4)', 3: '(5, 0)', 4: '(0, 4)', 5: '(1, 5)', 6: '(2, 1)',
+                           7: '(0, 4)'},
+                          {0: '(5, 3)', 1: '(1, 2)', 2: '(1, 3)', 3: '(2, 2)', 4: '(1, 6)', 5: '(1, 1)', 6: '(4, 3)',
+                           7: '(4, 1)'},
+                          {0: '(3, 0)', 1: '(4, 2)', 2: '(1, 1)', 3: '(6, 6)', 4: '(5, 5)', 5: '(4, 0)', 6: '(5, 6)'},
+                          {0: '(2, 7)', 1: '(5, 5)', 2: '(6, 0)', 3: '(1, 3)', 4: '(0, 7)', 5: '(0, 3)', 6: '(4, 5)',
+                           7: '(1, 2)',
+                           8: '(0, 1)'}, {0: '(6, 1)', 1: '(3, 0)'}, {0: '(2, 2)', 1: '(5, 2)', 2: '(2, 0)'},
+                          {0: '(4, 1)', 1: '(2, 0)', 2: '(0, 1)', 3: '(2, 3)', 4: '(0, 1)', 5: '(3, 2)'},
+                          {0: '(0, 1)', 1: '(6, 1)', 2: '(0, 0)', 3: '(0, 4)', 4: '(5, 2)', 5: '(2, 2)', 6: '(5, 1)'},
+                          {0: '(0, 4)', 1: '(7, 2)', 2: '(3, 2)', 3: '(4, 2)', 4: '(0, 3)', 5: '(5, 1)', 6: '(7, 3)',
+                           7: '(6, 4)'},
+                          {0: '(6, 6)', 1: '(4, 1)', 2: '(7, 1)', 3: '(5, 6)', 4: '(0, 4)', 5: '(1, 0)', 6: '(1, 1)',
+                           7: '(2, 4)',
+                           8: '(1, 1)', 9: '(5, 0)'},
+                          {0: '(3, 3)', 1: '(3, 4)', 2: '(5, 3)', 3: '(4, 2)', 4: '(2, 7)', 5: '(1, 7)', 6: '(5, 4)',
+                           7: '(1, 1)'},
+                          {0: '(4, 6)', 1: '(2, 4)', 2: '(2, 5)', 3: '(2, 6)', 4: '(3, 1)', 5: '(4, 6)', 6: '(3, 7)',
+                           7: '(4, 1)'},
+                          {0: '(1, 4)', 1: '(0, 1)', 2: '(1, 1)'}]
         self.GOAL_LOCS = [{0: '(1, 2)', 1: '(0, 1)'}, {0: '(0, 2)', 1: '(2, 0)', 2: '(2, 2)'},
-                     {0: '(1, 3)', 1: '(1, 3)', 2: '(2, 0)', 3: '(0, 0)'},
-                     {0: '(2, 3)', 1: '(2, 3)', 2: '(3, 0)', 3: '(2, 1)', 4: '(3, 3)'},
-                     {0: '(0, 4)', 1: '(3, 4)', 2: '(3, 2)', 3: '(2, 3)', 4: '(0, 1)', 5: '(1, 3)'},
-                     {0: '(1, 1)', 1: '(3, 3)', 2: '(2, 4)', 3: '(4, 1)', 4: '(4, 2)', 5: '(0, 2)'},
-                     {0: '(4, 2)', 1: '(3, 1)', 2: '(3, 1)', 3: '(3, 1)', 4: '(1, 1)', 5: '(0, 0)', 6: '(2, 1)'},
-                     {0: '(1, 3)', 1: '(3, 1)', 2: '(5, 3)', 3: '(0, 1)', 4: '(4, 5)', 5: '(5, 0)', 6: '(1, 1)',
-                      7: '(4, 2)'},
-                     {0: '(3, 3)', 1: '(5, 2)', 2: '(3, 4)', 3: '(4, 1)', 4: '(3, 3)', 5: '(3, 6)', 6: '(1, 0)',
-                      7: '(5, 4)'},
-                     {0: '(4, 3)', 1: '(5, 2)', 2: '(0, 2)', 3: '(1, 0)', 4: '(1, 5)', 5: '(6, 4)', 6: '(2, 1)'},
-                     {0: '(3, 1)', 1: '(4, 4)', 2: '(3, 3)', 3: '(1, 7)', 4: '(3, 2)', 5: '(1, 3)', 6: '(6, 2)',
-                      7: '(6, 4)',
-                      8: '(1, 7)'}, {0: '(1, 1)', 1: '(5, 0)'}, {0: '(4, 2)', 1: '(0, 0)', 2: '(5, 0)'},
-                     {0: '(7, 1)', 1: '(5, 3)', 2: '(4, 1)', 3: '(2, 1)', 4: '(6, 2)', 5: '(0, 1)'},
-                     {0: '(6, 0)', 1: '(4, 4)', 2: '(7, 2)', 3: '(0, 3)', 4: '(3, 1)', 5: '(5, 0)', 6: '(2, 2)'},
-                     {0: '(5, 5)', 1: '(5, 5)', 2: '(7, 3)', 3: '(1, 3)', 4: '(5, 2)', 5: '(6, 1)', 6: '(6, 4)',
-                      7: '(0, 0)'},
-                     {0: '(5, 2)', 1: '(0, 2)', 2: '(7, 6)', 3: '(1, 5)', 4: '(6, 5)', 5: '(0, 3)', 6: '(4, 1)',
-                      7: '(7, 5)',
-                      8: '(7, 1)', 9: '(0, 6)'},
-                     {0: '(0, 2)', 1: '(0, 2)', 2: '(4, 7)', 3: '(5, 6)', 4: '(4, 0)', 5: '(5, 5)', 6: '(0, 0)',
-                      7: '(5, 5)'},
-                     {0: '(4, 5)', 1: '(3, 4)', 2: '(2, 6)', 3: '(2, 3)', 4: '(2, 3)', 5: '(2, 1)', 6: '(2, 5)',
-                      7: '(0, 5)'},
-                     {0: '(1, 4)', 1: '(2, 3)', 2: '(2, 3)'}]
+                          {0: '(1, 3)', 1: '(1, 3)', 2: '(2, 0)', 3: '(0, 0)'},
+                          {0: '(2, 3)', 1: '(2, 3)', 2: '(3, 0)', 3: '(2, 1)', 4: '(3, 3)'},
+                          {0: '(0, 4)', 1: '(3, 4)', 2: '(3, 2)', 3: '(2, 3)', 4: '(0, 1)', 5: '(1, 3)'},
+                          {0: '(1, 1)', 1: '(3, 3)', 2: '(2, 4)', 3: '(4, 1)', 4: '(4, 2)', 5: '(0, 2)'},
+                          {0: '(4, 2)', 1: '(3, 1)', 2: '(3, 1)', 3: '(3, 1)', 4: '(1, 1)', 5: '(0, 0)', 6: '(2, 1)'},
+                          {0: '(1, 3)', 1: '(3, 1)', 2: '(5, 3)', 3: '(0, 1)', 4: '(4, 5)', 5: '(5, 0)', 6: '(1, 1)',
+                           7: '(4, 2)'},
+                          {0: '(3, 3)', 1: '(5, 2)', 2: '(3, 4)', 3: '(4, 1)', 4: '(3, 3)', 5: '(3, 6)', 6: '(1, 0)',
+                           7: '(5, 4)'},
+                          {0: '(4, 3)', 1: '(5, 2)', 2: '(0, 2)', 3: '(1, 0)', 4: '(1, 5)', 5: '(6, 4)', 6: '(2, 1)'},
+                          {0: '(3, 1)', 1: '(4, 4)', 2: '(3, 3)', 3: '(1, 7)', 4: '(3, 2)', 5: '(1, 3)', 6: '(6, 2)',
+                           7: '(6, 4)',
+                           8: '(1, 7)'}, {0: '(1, 1)', 1: '(5, 0)'}, {0: '(4, 2)', 1: '(0, 0)', 2: '(5, 0)'},
+                          {0: '(7, 1)', 1: '(5, 3)', 2: '(4, 1)', 3: '(2, 1)', 4: '(6, 2)', 5: '(0, 1)'},
+                          {0: '(6, 0)', 1: '(4, 4)', 2: '(7, 2)', 3: '(0, 3)', 4: '(3, 1)', 5: '(5, 0)', 6: '(2, 2)'},
+                          {0: '(5, 5)', 1: '(5, 5)', 2: '(7, 3)', 3: '(1, 3)', 4: '(5, 2)', 5: '(6, 1)', 6: '(6, 4)',
+                           7: '(0, 0)'},
+                          {0: '(5, 2)', 1: '(0, 2)', 2: '(7, 6)', 3: '(1, 5)', 4: '(6, 5)', 5: '(0, 3)', 6: '(4, 1)',
+                           7: '(7, 5)',
+                           8: '(7, 1)', 9: '(0, 6)'},
+                          {0: '(0, 2)', 1: '(0, 2)', 2: '(4, 7)', 3: '(5, 6)', 4: '(4, 0)', 5: '(5, 5)', 6: '(0, 0)',
+                           7: '(5, 5)'},
+                          {0: '(4, 5)', 1: '(3, 4)', 2: '(2, 6)', 3: '(2, 3)', 4: '(2, 3)', 5: '(2, 1)', 6: '(2, 5)',
+                           7: '(0, 5)'},
+                          {0: '(1, 4)', 1: '(2, 3)', 2: '(2, 3)'}]
 
     def get_goal_loc(self, agent):
         if agent in self.goal_locs and self.goal_locs[agent] in self.intersections:
@@ -313,7 +320,7 @@ class GridGenerator(ProblemGenerator):
         self.problem.ma_environment.add_fluent(connected, default_initial_value=False)
         self.problem.ma_environment.add_fluent(free, default_initial_value=True)
         self.problem.add_objects(list(map(lambda d: unified_planning.model.Object(d, direction),
-                                     list(self.compass.values()))))
+                                          list(self.compass.values()))))
         self.problem.add_objects(
             list(map(lambda l: unified_planning.model.Object(l, loc), [str(x) for x in self.intersections])))
 
@@ -390,6 +397,7 @@ class GridGenerator(ProblemGenerator):
         if sl:
             self.add_social_law()
         return self.problem
+
 
 class DriverLogGenerator(ProblemGenerator):
     def __init__(self):
@@ -534,6 +542,7 @@ class DriverLogGenerator(ProblemGenerator):
             self.add_social_law()
         return self.problem
 
+
 class ZenoTravelGenerator(ProblemGenerator):
     def __init__(self):
         super().__init__()
@@ -661,6 +670,7 @@ class ZenoTravelGenerator(ProblemGenerator):
 
         return self.problem
 
+
 class NumericProblemGenerator(ProblemGenerator):
     def __init__(self):
         super().__init__()
@@ -713,6 +723,7 @@ class NumericProblemGenerator(ProblemGenerator):
                     fluent = self.problem.ma_environment.fluent(goaltuple[0])
                 params = (unified_planning.model.Object(v, self.obj_type[v]) for v in goaltuple[1])
             agent.add_public_goal(fluent(*params))
+
 
 class NumericZenotravel(NumericProblemGenerator):
     def __init__(self):
@@ -840,82 +851,60 @@ class NumericZenotravel(NumericProblemGenerator):
             self.add_social_law()
         return self.problem
 
-class BlockGroupingGenerator(NumericProblemGenerator):
+
+class NumericGridGenerator(NumericProblemGenerator):
     def __init__(self):
         super().__init__()
+
     def generate_problem(self, file_name, sl=False):
         self.load_instance_data(file_name)
         self.problem = MultiAgentProblemWithWaitfor()
-        block = UserType('block')
-        self.remember_obj_types(['blocks'], [block])
 
-        blocks = list(map(lambda b: unified_planning.model.Object(b, block), self.instance_data['blocks']))
-        self.problem.add_objects(blocks)
-
-        # Public Fluents:
-        x = Fluent('x', RealType(), b=block )
-        y = Fluent('y', RealType(),b=block)
-        min_x = Fluent('min_x', RealType())
-        max_x = Fluent('max_x', RealType())
-        min_y = Fluent('min_y', RealType())
-        max_y = Fluent('max_y', RealType())
-
-        self.problem.ma_environment.add_fluent(x)
-        self.problem.ma_environment.add_fluent(y)
-        self.problem.ma_environment.add_fluent(min_y)
-        self.problem.ma_environment.add_fluent(min_x)
-        self.problem.ma_environment.add_fluent(max_y)
-        self.problem.ma_environment.add_fluent(max_x)
+        min_x = self.instance_data['min_x']
+        max_x = self.instance_data['max_x']
+        min_y = self.instance_data['min_y']
+        max_y = self.instance_data['max_y']
+        is_free = Fluent('is_free', BoolType(), x=IntType(min_x, max_x), y=IntType(min_y, max_y))
 
         # Agent Fluents
-        agent_x = Fluent('arm_x', RealType(), b=block)
-        agent_y = Fluent('arm_y', RealType(), b=block)
+        agent_x = Fluent('arm_x', IntType(), )
+        agent_y = Fluent('arm_y', IntType(), )
 
         # Actions
 
-        move_up = InstantaneousAction('move_block_up', b=block)
-        b = move_up.parameter('b')
-        move_up.add_precondition(Equals(agent_x(), x(b)))
-        move_up.add_precondition(Equals(agent_y(), y(b)))
+        move_up = InstantaneousAction('move_up')
         move_up.add_precondition(LT(agent_y(), max_y))
-        move_up.add_effect(y(b), Plus(agent_y(), 1))
+        move_up.add_precondition(is_free(agent_x, Plus(agent_y, 1)))
+        move_up.add_effect(is_free(agent_x, Plus(agent_y, 1)), False)
+        move_up.add_effect(is_free(agent_x, agent_y), True)
         move_up.add_effect(agent_y(), Plus(agent_y(), 1))
 
-        move_down = InstantaneousAction('move_block_down', b=block)
-        b = move_down.parameter('b')
-        move_down.add_precondition(Equals(agent_x(), x(b)))
-        move_down.add_precondition(Equals(agent_y(), y(b)))
+        move_down = InstantaneousAction('move_down', )
         move_down.add_precondition(GT(agent_y(), min_y))
-        move_down.add_effect(y(b), Minus(agent_y(), 1))
+        move_up.add_effect(is_free(agent_x, Minus(agent_y, 1)), False)
+        move_up.add_effect(is_free(agent_x, agent_y), True)
         move_down.add_effect(agent_y(), Minus(agent_y(), 1))
 
-        move_left = InstantaneousAction('move_block_left', b=block)
-        b = move_down.parameter('b')
-        move_left.add_precondition(Equals(agent_x(), x(b)))
-        move_left.add_precondition(Equals(agent_y(), y(b)))
+        move_left = InstantaneousAction('move_left', )
         move_left.add_precondition(GT(agent_x(), min_x))
-        move_left.add_effect(x(b), Minus(agent_x(), 1))
+        move_up.add_effect(is_free(Minus(agent_x(), 1), agent_y), False)
+        move_up.add_effect(is_free(agent_x, agent_y), True)
         move_left.add_effect(agent_x(), Minus(agent_x(), 1))
 
-        move_right = InstantaneousAction('move_block_right', b=block)
-        b = move_right.parameter('b')
-        move_right.add_precondition(Equals(agent_x(), x(b)))
-        move_right.add_precondition(Equals(agent_y(), y(b)))
+        move_right = InstantaneousAction('move_right')
         move_right.add_precondition(LT(agent_x(), max_x))
-        move_right.add_effect(x(b), Plus(agent_x(), 1))
+        move_up.add_effect(is_free(Plus(agent_x(), 1), agent_y), False)
+        move_up.add_effect(is_free(agent_x, agent_y), True)
         move_right.add_effect(agent_x(), Plus(agent_x(), 1))
 
-        for agent_name in self.instance_data['agents']:
-            agent = Agent(agent_name, self.problem)
+        self.load_agents()
+        for agent in self.problem.agents:
             agent.add_fluent(agent_x, default_initial_value=0)
             agent.add_fluent(agent_y, default_initial_value=0)
-
             agent.add_action(move_up)
             agent.add_action(move_down)
             agent.add_action(move_left)
             agent.add_action(move_right)
-            self.problem.add_agent(agent)
-
         self.set_init_values()
         self.set_goals()
 
@@ -923,33 +912,108 @@ class BlockGroupingGenerator(NumericProblemGenerator):
             self.add_social_law()
         return self.problem
 
+
 class ExpeditionGenerator(NumericProblemGenerator):
     def generate_problem(self, file_name, sl=False):
         self.problem = MultiAgentProblemWithWaitfor('Settlers')
         self.load_instance_data(file_name)
-        sled = UserType('sled')
+
         waypoint = UserType('waypoint')
-        at = Fluent('at', BoolType(), s=sled, w=waypoint)
+        at = Fluent('at', BoolType(), w=waypoint)
         is_next = Fluent('is_next', BoolType(), x=waypoint, y=waypoint)
-        sled_supplies = Fluent('sled_supplies', RealType(), s=sled)
-        sled_capacity = Fluent('sled_capacity', RealType(), s=sled)
+        sled_supplies = Fluent('sled_supplies', RealType())
+        sled_capacity = Fluent('sled_capacity', RealType())
         waypoint_supplies = Fluent('waypoint_supplies', RealType(), w=waypoint)
 
-        self.load_objects([sled, waypoint], ['sled', 'waypoint'])
+        self.load_objects([waypoint], ['waypoint'])
 
-        self.problem.ma_environment.add_fluent(at)
         self.problem.ma_environment.add_fluent(is_next)
         self.problem.ma_environment.add_fluent(waypoint_supplies)
 
-        move_forwards = InstantaneousAction('move_forward', s=sled,w1=waypoint,w2=waypoint)
-        raise NotImplementedError
+        move_forwards = InstantaneousAction('move_forward', w1=waypoint, w2=waypoint)
+        w1 = move_forwards.parameter('w1')
+        w2 = move_forwards.parameter('w2')
+        move_forwards.add_precondition(at(w1))
+        move_forwards.add_precondition(is_next(w1, w2))
+        move_forwards.add_precondition(GE(sled_supplies, 1))
+        move_forwards.add_effect(at(w1), False)
+        move_forwards.add_effect(at(w2), True)
+        move_forwards.add_effect(sled_supplies, Minus(sled_supplies, 1))
+
+        move_backwards = InstantaneousAction('move_backward', w1=waypoint, w2=waypoint)
+        w1 = move_backwards.parameter('w1')
+        w2 = move_backwards.parameter('w2')
+        move_backwards.add_precondition(at(w1))
+        move_backwards.add_precondition(is_next(w2, w1))
+        move_backwards.add_precondition(GE(sled_supplies, 1))
+        move_backwards.add_effect(at(w1), False)
+        move_backwards.add_effect(at(w2), True)
+        move_backwards.add_effect(sled_supplies, Minus(sled_supplies, 1))
+
+        store_supplies = InstantaneousAction('store_supplies', w=waypoint)
+        w = store_supplies.parameter('w')
+        store_supplies.add_precondition(at(w))
+        store_supplies.add_precondition(GE(sled_supplies, 1))
+        store_supplies.add_effect(sled_supplies, Minus(sled_supplies, 1))
+        store_supplies.add_effect(waypoint_supplies(w), Plus(waypoint_supplies(w), 1))
+
+        retrieve_supplies = InstantaneousAction('retrieve_supplies', w=waypoint)
+        w = retrieve_supplies.parameter('w')
+        retrieve_supplies.add_precondition(at(w))
+        retrieve_supplies.add_precondition(GE(waypoint_supplies(w), 1))
+        retrieve_supplies.add_precondition(GT(sled_capacity, sled_supplies))
+        retrieve_supplies.add_effect(sled_supplies, Plus(sled_supplies, 1))
+        retrieve_supplies.add_effect(waypoint_supplies(w), Minus(waypoint_supplies(w), 1))
+
+        self.load_agents()
+        for a in self.problem.agents:
+            a.add_action(move_forwards)
+            a.add_action(move_backwards)
+            a.add_action(store_supplies)
+            a.add_action(retrieve_supplies)
+            a.add_fluent(sled_supplies, default_initial_value=0)
+            a.add_fluent(sled_capacity, default_initial_value=0)
+            a.add_fluent(at, default_initial_value=False)
+
+        self.set_init_values()
+        self.set_goals()
+        if sl:
+            self.add_social_law()
+        return self.problem
 
 
+class MarketTraderGenerator(NumericProblemGenerator):
+    def generate_problem(self, file_name, sl=False):
+        self.problem = MultiAgentProblemWithWaitfor('market_trader')
+        self.load_instance_data(file_name)
+        market = UserType('market')
+        goods = UserType('goods')
+        self.load_objects([market, goods], ['market', 'goods'])
+        at = Fluent('at', BoolType(), m=market)
+        can_drive = Fluent('can_drive', BoolType(), m1=market, m2=market)
+        on_sale = Fluent('on_sale', IntType(), g=goods, m=market)
+        drive_cost = Fluent('drive_cost', RealType(), m1=market, m2=market)
+        price = Fluent('price', RealType(), g=goods, m=market)
+        sellprice = Fluent('sellprice', RealType(), g=goods, m=market)
+        cash = Fluent('cash', RealType())
+        capacity = Fluent('capacity', IntType())
 
+        travel = InstantaneousAction('travel', m1=market, m2=market)
+        m1 = travel.parameter('m1')
+        m2 = travel.parameter('m2')
+        travel.add_precondition(can_drive(m1, m2))
+        travel.add_precondition(GE(cash, drive_cost(m1, m2)))
+        travel.add_precondition(at(m1))
+        travel.add_effect(cash, Minus(cash, drive_cost(m1, m2)))
+        travel.add_effect(at(m1), False)
+        travel.add_effect(at(m2), True)
 
-
-
-
-
+        buy = InstantaneousAction('buy', g=goods, m=market)
+        g = travel.parameter('g')
+        m = travel.parameter('m')
+        travel.add_precondition(at(m))
+        travel.add_precondition(LE(Plus(price(g, m), 7), cash))
+        travel.add_precondition(GE(capacity, 1))
+        travel.add_precondition(GT(on_sale(g, m), 0 ))
 
 
