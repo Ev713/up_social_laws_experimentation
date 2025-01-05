@@ -10,14 +10,42 @@ def extract_between(text, start_str, end_str):
     # Find the ending position of end_str, starting from the end of start_str
     end_idx = text.find(end_str, start_idx)
     if end_idx == -1:
-        end_idx = len(text)-1  # end_str not found
+        end_idx = len(text) - 1  # end_str not found
 
     # Return the substring between start_str and end_str
     return text[start_idx:end_idx]
 
 
+def extract_parenthesis_after(word, text):
+    start_id = text.find(word)
+    if start_id == -1:
+        return ''
+    start_id += len(word)
+    print(text[start_id])
+
+    end_id = start_id
+    print('end')
+    print(text[end_id])
+
+    parentheses_opened = 1
+    while end_id < len(text):
+        if parentheses_opened == 0:
+            break
+        end_id += 1
+        print(text[end_id])
+
+        if text[end_id] == '(':
+            parentheses_opened += 1
+        if text[end_id] == ')':
+            parentheses_opened -= 1
+        print(parentheses_opened)
+    return text[start_id:end_id]
+
+
 class Parser:
     def __init__(self):
+        self.agents = []
+        self.objects = {}
         self.general_change = {}
         self.agent_change = {}
         self.agent_fluenttuples = []
@@ -26,11 +54,27 @@ class Parser:
         self.skip_fluents = []
 
     def transform_goal(self, goal_str):
+        json_goal_str = ''
         goal_str = goal_str.replace('\n', ' ').replace('\t', ' ')
         goal_words = [word.strip() for word in goal_str.split()]
-        i = 0
-        while True:
-            raise NotImplementedError
+        skip_to = 0
+        for i, start_word in enumerate(goal_words):
+            if 'and' in start_word or len(start_word) == 0 or i < skip_to:
+                continue
+            if ')' in start_word:
+                break
+            if '(' in start_word:
+                j = i + 1
+                while ')' not in goal_words[j - 1]:
+                    j += 1
+                skip_to = j
+                vars = goal_words[i + 1:j]
+                vars[-1] = vars[-1].replace(')', '')
+                fluenttuple = [start_word.replace('(', ''), vars]
+                json_goal_str += str(fluenttuple) + '\n'
+            else:
+                continue
+        return json_goal_str
 
     def transform_fluentuples(self, init_str, extract_agent_tuples):
         if extract_agent_tuples:
@@ -54,51 +98,44 @@ class Parser:
             usable[0] = usable[0] if not usable[0] in change else change[usable[0]]
             fluenttuple = usable
             if extract_agent_tuples:
-
-                if len(fluenttuple[1]) > 0 and any([self.agent_name in var for var in fluenttuple[1]]):
+                if len(fluenttuple) < 2:
+                    breakpoint()
+                if len(fluenttuple[1]) > 0 and any([var in self.agents in var for var in fluenttuple[1]]):
                     self.agent_fluenttuples.append(fluenttuple)
             if inits != '':
                 inits += ',\n'
             inits = inits + str(fluenttuple).replace('\'', '\"')
         return inits
+
     def get_objects_and_agents(self, base_objects_str):
         objects_str = ''
         agents_str = ''
-        objects = {}
         for line in base_objects_str.split('\n'):
             if ' - ' not in line:
                 continue
             line = line.replace(' - ', ' ').replace('\t', '').replace('\n', '')
             line = line.split(' ')
-            if line[1] + 's' not in objects:
-                objects[line[1] + 's'] = [line[0]]
+            obj_type = line[-1]
+            if obj_type not in self.objects:
+                self.objects[obj_type] = line[:-1]
             else:
-                objects[line[1] + 's'].append(line[0])
-        for key in objects:
-            objects[key] = sorted(objects[key])
+                self.objects[obj_type] += line[:-1]
+        for key in self.objects:
+            self.objects[key] = sorted(self.objects[key])
 
-        agents = None
-        if not(self.agent_name == None and self.agent_type_name ==None):
-            for agent_name in [self.agent_type_name, self.agent_type_name + 's']:
-                if agent_name in objects:
-                    agents = objects[agent_name]
-                    objects.pop(agent_name, None)
-            for key in objects:
-                if objects_str != '':
-                    objects_str += ',\n'
-                objects_str += f'\"{key}\": ' + str(objects[key]).replace('\'', '\"')
-            if agents is None:
-                return objects_str
-            agents_str += ('\"agents": [')
-            for i, a in enumerate(agents):
-                if i != 0:
-                    agents_str += ', '
-                agents_str += '\"' + a + '\"'
+        if self.agent_type_name in self.objects:
+            self.agents = self.objects[self.agent_type_name]
+            self.objects.pop(self.agent_type_name, None)
+        for key in self.objects:
+            if objects_str != '':
+                objects_str += ',\n'
+            objects_str += f'\"{key}\": ' + str(self.objects[key]).replace('\'', '\"')
+        agents_str += ('\"agents": [')
+        for i, a in enumerate(self.agents):
+            if i != 0:
+                agents_str += ', '
+            agents_str += '\"' + a + '\"'
         return objects_str, agents_str
-
-    def extract_metric(self, metric_str):
-        metric_str = metric_str.replace('(', '').replace(')', '')
-        metric_str = metric_str.split()
 
     def make_agent_fluents(self, fluent_convertion_dict):
         agent_fluents_str = ''
@@ -136,41 +173,39 @@ class Parser:
         return agent_fluents_str.replace('\'', '\"')
 
     def parse_json(self, pathname, agents_type_name=None):
-        self.agent_change = {'located': 'aircraft-loc'}
-        self.general_change = {'located': 'person-loc'}
-        self.skip_fluents = ['total-fuel-used']
+        self.agent_change = {}
+        self.general_change = {}
+        self.skip_fluents = []
         json_ver = '{'
         with open(pathname, 'r') as file:
             content = file.read()
 
-        objects_str = extract_between(content, 'objects', ')')
-        init_str = extract_between(content, 'init', ')\n(')
-        goal_str = extract_between(content, ':goal', '\n\n\n')
-        metric_str = content.split('metric')
-        if len(metric_str) > 1:
-            metric_str = metric_str[1]
-        else:
-            metric_str = None
+        objects_str = extract_parenthesis_after('objects', content)
+        init_str = extract_parenthesis_after('init', content)
+
+        goal_str = extract_parenthesis_after('goal', content)
+        metric_str = extract_parenthesis_after('metric', content)
+
 
         objs, agents = self.get_objects_and_agents(objects_str)
 
         json_ver += objs + ',\n'
         json_ver += agents
         json_ver += '],\n\n\"init_values\": {\n\"global\": [\n'
-        json_ver += self.transform_fluentuples(init_str, extract_agent_tuples=False,) + '],\n\n'
-        #json_ver += self.make_agent_fluents({'located': 'aircraft_at', 'fuel': 'fuel'})
+        json_ver += self.transform_fluentuples(init_str, extract_agent_tuples=True, ) + '],\n\n'
+        json_ver += self.make_agent_fluents({})
         json_ver += '\n},\n\"goals\": [\n'
         json_ver += self.transform_goal(goal_str) + '\n\n'
         json_ver += ']}'
         # if metric_str is not None:
         #    json_ver += self.extract_metric(metric_str)
 
-        return json_ver.replace('\"at\"', '\"person_at\"')
+        return json_ver
 
 
 def redo():
     # Open the file for reading
-    pathname = '/home/evgeny/SocialLaws/up-social-laws/experimentation/numeric_problems/all/json/zenotravel/pfile2.json'
+    pathname = '/experimentation/numeric_problems/zenotravel/json/zenotravel/pfile2.json'
     with open(pathname, 'r') as file:
         content = file.read().replace('(', '[').replace('\'', '\"').replace(')', ']').replace(',]]', ']]')
 
@@ -181,6 +216,6 @@ def redo():
 
 if __name__ == '__main__':
     parser = Parser()
-    pathname = r'C:\Users\foree\PycharmProjects\up_social_laws_experimentation\experimentation\problems\numeric_problems\unfactored\block-grouping\pfile1.pddl'
-    print(Parser().parse_json(pathname))
-
+    parser.agent_type_name = 'sled'
+    pathname = r'/home/evgeny/SocialLaws/up-social-laws/experimentation/numeric_problems/expedition/pddl/pfile1.pddl'
+    print(parser.parse_json(pathname))

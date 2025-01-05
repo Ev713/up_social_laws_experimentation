@@ -34,13 +34,13 @@ class ProblemGenerator():
         with open(json_file_path, 'r') as file:
             return json.load(file)
 
-    def load_objects(self, types, names, remember=True):
-        for i, obj_type in enumerate(types):
-            name = names[i]
+    def load_objects(self, json_types, obj_types, remember=True):
+        for i, obj_type in enumerate(obj_types):
+            name = json_types[i]
             self.problem.add_objects(list(map(lambda x: unified_planning.model.Object(x, obj_type),
                                               self.instance_data[name])))
         if remember:
-            self.remember_obj_types(types, names)
+            self.remember_obj_types(json_types, obj_types)
 
     def load_agents(self):
         for agent_name in self.instance_data['agents']:
@@ -82,7 +82,7 @@ class BlocksworldGenerator(ProblemGenerator):
         super().__init__()
 
     def generate_problem(self, file_name, sl=False):
-        self.instance_json = self.load_instance_data(file_name)
+        self.load_instance_data(file_name)
         self.problem = MultiAgentProblemWithWaitfor('blocksworld')
 
         # Objects
@@ -99,8 +99,7 @@ class BlocksworldGenerator(ProblemGenerator):
         self.problem.ma_environment.add_fluent(clear, default_initial_value=False)
 
         # Objects
-        locations = list(map(lambda b: unified_planning.model.Object(b, block), self.instance_json['blocks']))
-        self.problem.add_objects(locations)
+        self.load_objects(['blocks'], [block])
 
         # Agent specific fluents
         holding = Fluent('holding', BoolType(), x=block)
@@ -925,7 +924,7 @@ class ExpeditionGenerator(NumericProblemGenerator):
         sled_capacity = Fluent('sled_capacity', RealType())
         waypoint_supplies = Fluent('waypoint_supplies', RealType(), w=waypoint)
 
-        self.load_objects([waypoint], ['waypoint'])
+        self.load_objects(['waypoint'], [waypoint])
 
         self.problem.ma_environment.add_fluent(is_next)
         self.problem.ma_environment.add_fluent(waypoint_supplies)
@@ -983,7 +982,7 @@ class MarketTraderGenerator(NumericProblemGenerator):
         self.load_instance_data(file_name)
         market = UserType('market')
         goods = UserType('goods')
-        self.load_objects([market, goods], ['market', 'goods'])
+        self.load_objects(['market', 'goods'], [market,goods])
         on_sale = Fluent('on_sale', IntType(), g=goods, m=market)
         drive_cost = Fluent('drive_cost', RealType(), m1=market, m2=market)
         price = Fluent('price', RealType(), g=goods, m=market)

@@ -50,8 +50,8 @@ credits = Credits('Social Law Robustness Checker',
                   'karpase@technion.ac.il',
                   'https://https://cogrob.net.technion.ac.il/',
                   'Apache License, Version 2.0',
-                  'Does all the robustness checks, and returns the reason for failure.',
-                  'Does all the robustness checks, and returns the reason for failure.')
+                  'Does zenotravel the robustness checks, and returns the reason for failure.',
+                  'Does zenotravel the robustness checks, and returns the reason for failure.')
 
 
 class SocialLawRobustnessStatus(Enum):
