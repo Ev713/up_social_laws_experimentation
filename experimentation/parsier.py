@@ -1,3 +1,4 @@
+OPERATORS = ['=', '>=', '<=', '>', '<']
 def extract_between(text, start_str, end_str):
     # Find the starting position of start_str
     start_idx = text.find(start_str)
@@ -21,33 +22,26 @@ def extract_parenthesis_after(word, text):
     if start_id == -1:
         return ''
     start_id += len(word)
-    print(text[start_id])
-
     end_id = start_id
-    print('end')
-    print(text[end_id])
-
     parentheses_opened = 1
     while end_id < len(text):
         if parentheses_opened == 0:
             break
         end_id += 1
-        print(text[end_id])
-
         if text[end_id] == '(':
             parentheses_opened += 1
         if text[end_id] == ')':
             parentheses_opened -= 1
-        print(parentheses_opened)
     return text[start_id:end_id]
 
 
 class Parser:
     def __init__(self):
+        self.all_objects = None
         self.agents = []
         self.objects = {}
-        self.general_change = {}
-        self.agent_change = {}
+        self.general_changer = {}
+        self.agent_changer = {}
         self.agent_fluenttuples = []
         self.agent_name = None
         self.agent_type_name = None
@@ -76,35 +70,71 @@ class Parser:
                 continue
         return json_goal_str
 
-    def transform_fluentuples(self, init_str, extract_agent_tuples):
+    def transform_fluentuples(self, init_str, extract_agent_tuples, ):
         if extract_agent_tuples:
-            self.agent_fluenttuples = []
+            self.agent_fluenttuples = {}
         inits = ''
-        for line in init_str.split('\n'):
+        lines = init_str.split('\n')
+        for line in lines:
             line = line.replace('(', '').replace(')', '').replace('\n', '').replace('\t', '').strip()
             if len(line) < 1:
                 continue
-            usable = line.split(' ')
-            if usable[0] == '':
+            words = line.split(' ')
+            if words[0] == '':
+                continue
+            operator = None
+            value = None
+            agent = None
+            for word in words:
+                if word in self.agents:
+                    if agent is not None:
+                        raise Exception('Multiple agents in 1 fluent expression')
+                    words.pop(words.index(word))
+                    agent = word
+            if agent is not None:
+                changer = self.agent_changer
+            else:
+                changer = self.general_changer
+            words = [word if word not in changer else changer[word] for word in words]
+            vars = [word in self.all_objects for word in words]
+            if len(words) >= 2 and not vars[0] and not vars[1]:
+                operator = words[0]
+                words = words[1:]
+                vars = vars[1:]
+                if words[-1].isnumeric():
+                    value = words[-1]
+                    words = words[:-1]
+                    vars = vars[:-1]
+
+            expression = []
+            fluents_num = 0
+            i = 0
+            fluent_expression = None
+            fluent_vars = []
+            while i < len(words):
+                if not vars[i]:
+                    if fluent_expression is not None:
+                        expression.append([fluent_expression, fluent_vars])
+                        fluent_vars = []
+                    fluents_num += 1
+                    fluent_expression = words[i]
+                else:
+                    fluent_vars.append(words[i])
+                i += 1
+            expression.append([fluent_expression, fluent_vars])
+            if operator is not None:
+                expression = [operator]+ expression+[value]
+            if len(expression)==1:
+                expression = expression[0]
+            if agent is not None:
+                if agent not in self.agent_fluenttuples:
+                    self.agent_fluenttuples[agent] = []
+                self.agent_fluenttuples[agent].append(expression)
                 continue
 
-            operator = value = None
-            change = self.general_change
-            for u in usable:
-                if self.agent_name is not None and self.agent_name in u:
-                    change = self.agent_change
-            if any([skip in usable for skip in self.skip_fluents]):
-                continue
-            usable[0] = usable[0] if not usable[0] in change else change[usable[0]]
-            fluenttuple = usable
-            if extract_agent_tuples:
-                if len(fluenttuple) < 2:
-                    breakpoint()
-                if len(fluenttuple[1]) > 0 and any([var in self.agents in var for var in fluenttuple[1]]):
-                    self.agent_fluenttuples.append(fluenttuple)
             if inits != '':
                 inits += ',\n'
-            inits = inits + str(fluenttuple).replace('\'', '\"')
+            inits = inits + str(expression).replace('\'', '\"')
         return inits
 
     def get_objects_and_agents(self, base_objects_str):
@@ -126,6 +156,9 @@ class Parser:
         if self.agent_type_name in self.objects:
             self.agents = self.objects[self.agent_type_name]
             self.objects.pop(self.agent_type_name, None)
+        self.all_objects = []
+        for obj_type in self.objects:
+            self.all_objects+=self.objects[obj_type]
         for key in self.objects:
             if objects_str != '':
                 objects_str += ',\n'
@@ -137,85 +170,60 @@ class Parser:
             agents_str += '\"' + a + '\"'
         return objects_str, agents_str
 
-    def make_agent_fluents(self, fluent_convertion_dict):
+    def make_agent_fluents(self):
         agent_fluents_str = ''
-        agent_fluenttuples = {}
-        for fluenttuple in self.agent_fluenttuples:
-            operator = value = None
-            if fluenttuple[0] in ['=', '>', '<']:
-                operator = fluenttuple[0]
-                value = fluenttuple[-1]
-                fluenttuple = fluenttuple[1]
-            new_fluent_name = fluenttuple[0]
-            if fluenttuple[0] in fluent_convertion_dict:
-                new_fluent_name = fluent_convertion_dict[new_fluent_name]
-            params = []
-            agent_name = None
-            for p in fluenttuple[1]:
-                if self.agent_name in p:
-                    agent_name = p
-                else:
-                    params.append(p)
-            if agent_name not in agent_fluenttuples:
-                agent_fluenttuples[agent_name] = []
-            if operator is None:
-                agent_fluenttuples[agent_name].append([new_fluent_name, params])
-            else:
-                agent_fluenttuples[agent_name].append([operator, [new_fluent_name, params], value])
-        counter = 0
-        for agent_name in agent_fluenttuples:
-            agent_fluents_str += f'\"{agent_name}\":{agent_fluenttuples[agent_name]}'
-            counter += 1
-            if counter != len(agent_fluenttuples):
-                agent_fluents_str += ','
+        for agent_name in self.agent_fluenttuples:
+            agent_fluents_str += ','
             agent_fluents_str += '\n'
+            agent_fluents_str += f'\"{agent_name}\":{self.agent_fluenttuples[agent_name]}'
 
         return agent_fluents_str.replace('\'', '\"')
 
     def parse_json(self, pathname, agents_type_name=None):
-        self.agent_change = {}
-        self.general_change = {}
+        self.agent_changer = {}
+        self.general_changer = {}
         self.skip_fluents = []
         json_ver = '{'
         with open(pathname, 'r') as file:
             content = file.read()
 
-        objects_str = extract_parenthesis_after('objects', content)
-        init_str = extract_parenthesis_after('init', content)
+        objects_str = extract_parenthesis_after('objects', content).strip()
+        init_str = extract_parenthesis_after('init', content).strip()
 
         goal_str = extract_parenthesis_after('goal', content)
-        metric_str = extract_parenthesis_after('metric', content)
+        goal_str = extract_parenthesis_after('and', goal_str).strip()
 
+        metric_str = extract_parenthesis_after('metric', content)
 
         objs, agents = self.get_objects_and_agents(objects_str)
 
         json_ver += objs + ',\n'
         json_ver += agents
         json_ver += '],\n\n\"init_values\": {\n\"global\": [\n'
-        json_ver += self.transform_fluentuples(init_str, extract_agent_tuples=True, ) + '],\n\n'
-        json_ver += self.make_agent_fluents({})
-        json_ver += '\n},\n\"goals\": [\n'
-        json_ver += self.transform_goal(goal_str) + '\n\n'
-        json_ver += ']}'
+        json_ver += self.transform_fluentuples(init_str, extract_agent_tuples=True) + ']'
+        json_ver += self.make_agent_fluents()
+        json_ver += '\n},\n\"goals\": {\n\"global\": [\n'
+        json_ver += self.transform_fluentuples(goal_str, extract_agent_tuples=True) + ']'
+        json_ver += self.make_agent_fluents()
+        json_ver += '}}'
         # if metric_str is not None:
         #    json_ver += self.extract_metric(metric_str)
 
         return json_ver
 
 
-def redo():
-    # Open the file for reading
-    pathname = '/experimentation/numeric_problems/zenotravel/json/zenotravel/pfile2.json'
-    with open(pathname, 'r') as file:
-        content = file.read().replace('(', '[').replace('\'', '\"').replace(')', ']').replace(',]]', ']]')
-
-    # Open the file for writing
-    with open(pathname, 'w') as file:
-        file.write(content)
-
-
 if __name__ == '__main__':
-    parser = Parser()
-    parser.agent_type_name = 'sled'
-    pathname = r'/home/evgeny/SocialLaws/up-social-laws/experimentation/numeric_problems/expedition/pddl/pfile1.pddl'
-    print(parser.parse_json(pathname))
+    domains = [
+    #    'expedition',
+        'markettrader',
+    #    'zenotravel'
+    ]
+    for domain in domains:
+        parser = Parser()
+        parser.agent_type_name = {'expedition': 'sled', 'markettrader': 'camel', 'zenotravel': 'aircraft'}[domain]
+        folder = r'C:\Users\foree\PycharmProjects\up_social_laws_experimentation\experimentation\numeric_problems'+'\\'+domain
+        for i in range(1, 21):
+            pathname = folder+r'\pddl\pfile'+str(i)+'.pddl'
+            f = open(folder+r'\json\pfile'+str(i)+'.json', "w")
+            f.write(parser.parse_json(pathname))
+            f.close()

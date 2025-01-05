@@ -1,0 +1,38 @@
+{"waypoint": ["wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa10", "wa10", "wa10", "wa11", "wa11", "wa12", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa6", "wa6", "wa6", "wa6", "wa6", "wa6", "wa6", "wa7", "wa7", "wa7", "wa7", "wa7", "wa7", "wa8", "wa8", "wa8", "wa8", "wa8", "wa9", "wa9", "wa9", "wa9", "wb0", "wb1", "wb2", "wb3", "wb4", "wb5"],
+"agents": ["s0", "s1"],
+
+"init_values": {
+"global": [
+["=", ["waypoint_supplies", ["wa0"]], "1000"],
+["=", ["waypoint_supplies", ["wa1"]], "0"],
+["=", ["waypoint_supplies", ["wa2"]], "0"],
+["=", ["waypoint_supplies", ["wa3"]], "0"],
+["=", ["waypoint_supplies", ["wa4"]], "0"],
+["=", ["waypoint_supplies", ["wa5"]], "0"],
+["=", ["waypoint_supplies", ["wa6"]], "0"],
+["=", ["waypoint_supplies", ["wa7"]], "0"],
+["=", ["waypoint_supplies", ["wa8"]], "0"],
+["=", ["waypoint_supplies", ["wa9"]], "0"],
+["=", ["waypoint_supplies", ["wa10"]], "0"],
+["=", ["waypoint_supplies", ["wa11"]], "0"],
+["=", ["waypoint_supplies", ["wa12"]], "0"],
+["is_next", ["wa0", "wa1"]],
+["is_next", ["wa1", "wa2"]],
+["is_next", ["wa2", "wa3"]],
+["is_next", ["wa3", "wa4"]],
+["is_next", ["wa4", "wa5"]],
+["is_next", ["wa5", "wa6"]],
+["is_next", ["wa6", "wa7"]],
+["is_next", ["wa7", "wa8"]],
+["is_next", ["wa8", "wa9"]],
+["is_next", ["wa9", "wa10"]],
+["is_next", ["wa10", "wa11"]],
+["is_next", ["wa11", "wa12"]]],
+"s0":[["at", ["wa0"]], ["=", ["sled_capacity", []], "4"], ["=", ["sled_supplies", []], "1"]],
+"s1":[["at", ["wa0"]], ["=", ["sled_capacity", []], "4"], ["=", ["sled_supplies", []], "1"]]
+},
+"goals": {
+"global": [
+],
+"s0":[["at", ["wa12"]]],
+"s1":[["at", ["wa12"]]]}}
