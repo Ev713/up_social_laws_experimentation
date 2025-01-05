@@ -1,4 +1,10 @@
 OPERATORS = ['=', '>=', '<=', '>', '<']
+def is_number(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
 def extract_between(text, start_str, end_str):
     # Find the starting position of start_str
     start_idx = text.find(start_str)
@@ -76,7 +82,7 @@ class Parser:
         inits = ''
         lines = init_str.split('\n')
         for line in lines:
-            line = line.replace('(', '').replace(')', '').replace('\n', '').replace('\t', '').strip()
+            line = ' '.join(line.replace('(', '').replace(')', '').replace('\n', '').replace('\t', '').strip().split())
             if len(line) < 1:
                 continue
             words = line.split(' ')
@@ -101,7 +107,7 @@ class Parser:
                 operator = words[0]
                 words = words[1:]
                 vars = vars[1:]
-                if words[-1].isnumeric():
+                if is_number(words[-1]):
                     value = words[-1]
                     words = words[:-1]
                     vars = vars[:-1]
@@ -143,7 +149,7 @@ class Parser:
         for line in base_objects_str.split('\n'):
             if ' - ' not in line:
                 continue
-            line = line.replace(' - ', ' ').replace('\t', '').replace('\n', '')
+            line = line.replace(' - ', ' ').replace('\t', '').replace('\n', '').strip()
             line = line.split(' ')
             obj_type = line[-1]
             if obj_type not in self.objects:
