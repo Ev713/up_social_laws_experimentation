@@ -10,6 +10,23 @@ from up_social_laws.ma_problem_waitfor import MultiAgentProblemWithWaitfor
 from up_social_laws.social_law import SocialLaw
 
 
+def is_number(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
+
+
+OPERATORS = {
+    '=': Equals,
+    '>=': GE,
+    '>': GT,
+    '<=': LE,
+    '<': LT
+}
+
+
 class NoSocialLawException(Exception):
     def __init__(self, message):
         super().__init__(message)
@@ -21,7 +38,7 @@ class ProblemGenerator():
         self.obj_type = {}
         self.problem = None
         self.instance_data = None
-        self.instances_file_path = ''
+        self.instances_folder = ''
 
     def generate_problem(self, file_name, sl=False):
         pass
@@ -30,9 +47,10 @@ class ProblemGenerator():
         raise NoSocialLawException
 
     def load_instance_data(self, instance_name):
-        json_file_path = self.instances_file_path + instance_name
+        json_file_path = self.instances_folder + '/' + instance_name
         with open(json_file_path, 'r') as file:
-            return json.load(file)
+            self.instance_data = json.load(file)
+            return self.instance_data
 
     def load_objects(self, json_types, obj_types, remember=True):
         for i, obj_type in enumerate(obj_types):
@@ -72,8 +90,8 @@ class ProblemGenerator():
 
     def remember_obj_types(self, json_types, obj_types):
         self.obj_type = {}
-        for json_type_name, i in enumerate(json_types):
-            for obj_name in self.instance_data:
+        for i, json_type_name in enumerate(json_types):
+            for obj_name in self.instance_data[json_type_name]:
                 self.obj_type[obj_name] = obj_types[i]
 
 
@@ -679,8 +697,8 @@ class NumericProblemGenerator(ProblemGenerator):
         for key in self.instance_data['init_values']:
             for fluentuple in self.instance_data['init_values'][key]:
                 value = True
-                if fluentuple[0] == '=':
-                    value = fluentuple[-1]
+                if fluentuple[0] in OPERATORS:
+                    value = float(fluentuple[-1])
                     fluentuple = fluentuple[1]
 
                 if key == 'global':
@@ -695,36 +713,40 @@ class NumericProblemGenerator(ProblemGenerator):
                     self.problem.set_initial_value(Dot(agent, fluent(*params)), value)
 
     def set_goals(self):
-        agent_index = 0
+        assigned_index = 0
         num_of_agents = len(self.problem.agents)
-        for goaltuple in self.instance_data['goals']:
-            agent_fluent = False
-            vars = goaltuple[1][1] if goaltuple[0] == '=' else goaltuple[1]
-            for var in vars:
-                if self.agent_type_name in var:
-                    agent = self.problem.agent(var)
-                    agent_fluent = True
-                    vars.remove(var)
-            if not agent_fluent:
-                agent = self.problem.agents[agent_index]
-                agent_index = (agent_index + 1) % num_of_agents
-            if goaltuple[0] == '=':
-                if agent_fluent:
-                    fluent = agent.fluent(goaltuple[1][0])
+        for agent_name in ['global'] + [agent.name for agent in self.problem.agents]:
+            if agent_name not in self.instance_data['goals']:
+                continue
+            for goaltuple in self.instance_data['goals'][agent_name]:
+                if agent_name == 'global':
+                    agent = self.problem.agents[assigned_index]
+                    assigned_index = (assigned_index + 1) % num_of_agents
                 else:
-                    fluent = self.problem.ma_environment.fluent(goaltuple[1][0])
-                params = (unified_planning.model.Object(v, self.obj_type[v]) for v in goaltuple[1][1])
+                    agent = self.problem.agent(agent_name)
+                if goaltuple[0] in OPERATORS:
+                    expr = OPERATORS[goaltuple[0]] \
+                        (*[self.create_fluent_expression(goal_expr,
+                                                         None if agent_name == 'global' else agent) for goal_expr in
+                           goaltuple[1:]])
+                    agent.add_public_goal(expr)
 
-            else:
-                if agent_fluent:
-                    fluent = agent.fluent(goaltuple[0])
                 else:
-                    fluent = self.problem.ma_environment.fluent(goaltuple[0])
-                params = (unified_planning.model.Object(v, self.obj_type[v]) for v in goaltuple[1])
-            agent.add_public_goal(fluent(*params))
+                    agent.add_public_goal(
+                        self.create_fluent_expression(goaltuple, None if agent_name == 'global' else agent))
+
+    def create_fluent_expression(self, fluentuple, agent):
+        if is_number(str(fluentuple)):
+            return float(fluentuple)
+        if agent is None:
+            fluent = self.problem.ma_environment.fluent(fluentuple[0])
+        else:
+            fluent = agent.fluent(fluentuple[0])
+        params = (unified_planning.model.Object(v, self.obj_type[v]) for v in fluentuple[1])
+        return fluent(*params)
 
 
-class NumericZenotravel(NumericProblemGenerator):
+class NumericZenotravelGenerator(NumericProblemGenerator):
     def __init__(self):
         super().__init__()
 
@@ -757,12 +779,9 @@ class NumericZenotravel(NumericProblemGenerator):
         city = UserType('city')
         person = UserType('person')
 
-        self.remember_obj_types(['citys', 'persons'], [city, person])
+        self.remember_obj_types(['city', 'person'], [city, person])
+        self.load_objects(['city', 'person'], [city, person])
 
-        citys = list(map(lambda c: unified_planning.model.Object(c, city), self.instance_data['citys']))
-        self.problem.add_objects(citys)
-        persons = list(map(lambda p: unified_planning.model.Object(p, person), self.instance_data['persons']))
-        self.problem.add_objects(persons)
 
         # Public fluents
         person_loc = Fluent('person-loc', BoolType(), x=person, c=city)
@@ -852,8 +871,68 @@ class NumericZenotravel(NumericProblemGenerator):
 
 
 class NumericGridGenerator(NumericProblemGenerator):
+
     def __init__(self):
         super().__init__()
+
+    def set_init_values(self):
+        for a in self.instance_data['agents']:
+            agent_data = self.instance_data[a]
+            for f in agent_data:
+                agent = self.problem.agent(a)
+                fluent = agent.fluent(f)
+                self.problem.set_initial_value(Dot(agent, fluent()), agent_data[f])
+
+    def add_social_law(self):
+        up_columns = []
+        down_columns = []
+        l = 0
+        r = self.instance_data['max_x']
+        flag = True
+        while True:
+            if flag:
+                up_columns.append(l)
+                down_columns.append(r)
+            else:
+                up_columns.append(r)
+                down_columns.append(l)
+            flag = not flag
+            l += 1
+            r -= 1
+            if l == r:
+                up_columns.append(l)
+                break
+            if l > r:
+                break
+        direction_law = SocialLaw()
+        direction_law.skip_checks = True
+        for x in range(self.instance_data['min_x'], self.instance_data['max_x']+1):
+            for y in range(self.instance_data['min_y'], self.instance_data['max_y']+1):
+                if y == 0:
+                    for a in self.problem.agents:
+                        direction_law.disallow_action(a.name, 'move_right', (x, y))
+                if y == self.instance_data['max_y']-1:
+                    for a in self.problem.agents:
+                        direction_law.disallow_action(a.name, 'move_left', (x, y))
+                if not y in up_columns:
+                    for a in self.problem.agents:
+                        direction_law.disallow_action(a.name, 'move_up', (x, y))
+                if not y in down_columns:
+                    for a in self.problem.agents:
+                        direction_law.disallow_action(a.name, 'move_down', (x, y))
+        for a in self.problem.agents:
+            direction_law.add_waitfor_annotation(a.name, 'move_up', 'is_free', ('x', 'y'))
+        for a in self.problem.agents:
+            direction_law.add_waitfor_annotation(a.name, 'move_down', 'is_free', ('x', 'y'))
+        for a in self.problem.agents:
+            direction_law.add_waitfor_annotation(a.name, 'move_left', 'is_free', ('x', 'y'))
+        for a in self.problem.agents:
+            direction_law.add_waitfor_annotation(a.name, 'move_right', 'is_free', ('x', 'y'))
+        for a in self.problem.agents:
+            init_x = self.instance_data[a.name]['init_x']
+            init_y = self.instance_data[a.name]['init_y']
+            direction_law.add_waitfor_annotation(a.name, 'appear', 'is_free', (init_x, init_y))
+        return direction_law.compile(self.problem).problem
 
     def generate_problem(self, file_name, sl=False):
         self.load_instance_data(file_name)
@@ -864,55 +943,110 @@ class NumericGridGenerator(NumericProblemGenerator):
         min_y = self.instance_data['min_y']
         max_y = self.instance_data['max_y']
         is_free = Fluent('is_free', BoolType(), x=IntType(min_x, max_x), y=IntType(min_y, max_y))
+        self.problem.ma_environment.add_fluent(is_free, default_initial_value=True)
 
         # Agent Fluents
-        agent_x = Fluent('arm_x', IntType(), )
-        agent_y = Fluent('arm_y', IntType(), )
+        agent_x = Fluent('x', IntType(), )
+        agent_y = Fluent('y', IntType(), )
+        goal_x = Fluent('goal_x', IntType(), )
+        goal_y = Fluent('goal_y', IntType(), )
+        init_x = Fluent('init_x', IntType(), )
+        init_y = Fluent('init_y', IntType(), )
+        on_map = Fluent('on_map', BoolType(),)
+        left = Fluent('left', BoolType(), )
 
         # Actions
+        appear = InstantaneousAction('appear', )
+        appear.add_precondition(is_free(agent_x(), agent_y()))
+        appear.add_precondition(Not(on_map))
+        appear.add_precondition(Not(left))
+        appear.add_effect(agent_x(), init_x())
+        appear.add_effect(agent_y(), init_y())
+        appear.add_effect(on_map(), True)
 
-        move_up = InstantaneousAction('move_up')
-        move_up.add_precondition(LT(agent_y(), max_y))
-        move_up.add_precondition(is_free(agent_x, Plus(agent_y, 1)))
-        move_up.add_effect(is_free(agent_x, Plus(agent_y, 1)), False)
-        move_up.add_effect(is_free(agent_x, agent_y), True)
+        leave = InstantaneousAction('leave', x=IntType(), y=IntType())
+        x = leave.parameter('x')
+        y = leave.parameter('y')
+
+        leave.add_precondition(Equals(agent_x(), goal_x()))
+        leave.add_precondition(Equals(agent_y(), goal_y()))
+
+        leave.add_precondition(Equals(agent_x(), goal_x()))
+        leave.add_precondition(Equals(agent_y(), goal_y()))
+        leave.add_effect(left(), True)
+        leave.add_effect(on_map, False)
+        leave.add_effect(is_free(x, y), True)
+
+        move_up = InstantaneousAction('move_up', x=IntType(min_x, max_x), y=IntType(min_y, max_y))
+        x = move_up.parameter('x')
+        y = move_up.parameter('y')
+        move_up.add_precondition(Equals(x, agent_x))
+        move_up.add_precondition(Equals(y, agent_y))
+        move_up.add_precondition(is_free(agent_x(), Plus(agent_y(), 1)))
+        move_up.add_effect(is_free(x, Plus(y, 1)), False)
+        move_up.add_effect(is_free(x, y), True)
         move_up.add_effect(agent_y(), Plus(agent_y(), 1))
 
-        move_down = InstantaneousAction('move_down', )
-        move_down.add_precondition(GT(agent_y(), min_y))
-        move_up.add_effect(is_free(agent_x, Minus(agent_y, 1)), False)
-        move_up.add_effect(is_free(agent_x, agent_y), True)
+        move_down = InstantaneousAction('move_down', x=IntType(min_x, max_x), y =IntType(min_y, max_y) )
+        x = move_down.parameter('x')
+        y = move_down.parameter('y')
+        move_up.add_precondition(Equals(x, agent_x))
+        move_up.add_effect(is_free(x, Minus(y, 1)), False)
+        move_up.add_effect(is_free(x, y), True)
         move_down.add_effect(agent_y(), Minus(agent_y(), 1))
 
-        move_left = InstantaneousAction('move_left', )
-        move_left.add_precondition(GT(agent_x(), min_x))
-        move_up.add_effect(is_free(Minus(agent_x(), 1), agent_y), False)
-        move_up.add_effect(is_free(agent_x, agent_y), True)
+        move_left = InstantaneousAction('move_left', x=IntType(min_x, max_x), y=IntType(min_y, max_y))
+        x = move_up.parameter('x')
+        y = move_up.parameter('y')
+        move_up.add_precondition(Equals(x, agent_x))
+        move_up.add_effect(is_free(Minus(x, 1), y), False)
+        move_up.add_effect(is_free(x, y), True)
         move_left.add_effect(agent_x(), Minus(agent_x(), 1))
 
-        move_right = InstantaneousAction('move_right')
-        move_right.add_precondition(LT(agent_x(), max_x))
-        move_up.add_effect(is_free(Plus(agent_x(), 1), agent_y), False)
-        move_up.add_effect(is_free(agent_x, agent_y), True)
+        move_right = InstantaneousAction('move_right', x=IntType(min_x, max_x), y=IntType(min_y, max_y))
+        x = move_up.parameter('x')
+        y = move_up.parameter('y')
+        move_up.add_precondition(Equals(x, agent_x))
+        move_up.add_effect(is_free(Plus(x, 1), y), False)
+        move_up.add_effect(is_free(x, y), True)
         move_right.add_effect(agent_x(), Plus(agent_x(), 1))
 
         self.load_agents()
         for agent in self.problem.agents:
             agent.add_fluent(agent_x, default_initial_value=0)
             agent.add_fluent(agent_y, default_initial_value=0)
+            agent.add_fluent(goal_x, default_initial_value=0)
+            agent.add_fluent(goal_y, default_initial_value=0)
+            agent.add_fluent(init_x, default_initial_value=0)
+            agent.add_fluent(init_y, default_initial_value=0)
+            agent.add_fluent(on_map, default_initial_value=False)
+            agent.add_fluent(left, default_initial_value=False)
+
             agent.add_action(move_up)
             agent.add_action(move_down)
             agent.add_action(move_left)
             agent.add_action(move_right)
+            agent.add_action(leave)
+            agent.add_action(appear)
+            agent.add_public_goal(left())
         self.set_init_values()
-        self.set_goals()
-
         if sl:
             self.add_social_law()
         return self.problem
 
 
 class ExpeditionGenerator(NumericProblemGenerator):
+
+    def add_social_law(self):
+        sl = SocialLaw()
+        sl.skip_checks = True
+        for a in self.problem.agents:
+            sl.add_new_fluent(a.name, 'personal_packs', (('w', 'waypoint'),), 0)
+            sl.add_precondition_to_action(a.name, 'retrieve_supplies', 'personal_packs', ('w', ), '>=', 0)
+            sl.add_effect(a.name, 'retrieve_supplies', 'personal_packs', ('w', ), 1, '-')
+            sl.add_effect(a.name, 'store_supplies', 'personal_packs', ('w',), 1, '+')
+        self.problem = sl.compile(self.problem).problem
+
     def generate_problem(self, file_name, sl=False):
         self.problem = MultiAgentProblemWithWaitfor('Settlers')
         self.load_instance_data(file_name)
@@ -920,14 +1054,14 @@ class ExpeditionGenerator(NumericProblemGenerator):
         waypoint = UserType('waypoint')
         at = Fluent('at', BoolType(), w=waypoint)
         is_next = Fluent('is_next', BoolType(), x=waypoint, y=waypoint)
-        sled_supplies = Fluent('sled_supplies', RealType())
-        sled_capacity = Fluent('sled_capacity', RealType())
-        waypoint_supplies = Fluent('waypoint_supplies', RealType(), w=waypoint)
+        sled_supplies = Fluent('sled_supplies', IntType())
+        sled_capacity = Fluent('sled_capacity', IntType())
+        waypoint_supplies = Fluent('waypoint_supplies', IntType(), w=waypoint)
 
         self.load_objects(['waypoint'], [waypoint])
 
-        self.problem.ma_environment.add_fluent(is_next)
-        self.problem.ma_environment.add_fluent(waypoint_supplies)
+        self.problem.ma_environment.add_fluent(is_next, default_initial_value=False)
+        self.problem.ma_environment.add_fluent(waypoint_supplies, default_initial_value=0)
 
         move = {}
         for dir in ['forwards', 'backwards']:
@@ -982,9 +1116,9 @@ class MarketTraderGenerator(NumericProblemGenerator):
         self.load_instance_data(file_name)
         market = UserType('market')
         goods = UserType('goods')
-        self.load_objects(['market', 'goods'], [market,goods])
-        on_sale = Fluent('on_sale', IntType(), g=goods, m=market)
-        drive_cost = Fluent('drive_cost', RealType(), m1=market, m2=market)
+        self.load_objects(['market', 'goods'], [market, goods])
+        on_sale = Fluent('on-sale', IntType(), g=goods, m=market)
+        drive_cost = Fluent('drive-cost', RealType(), m1=market, m2=market)
         price = Fluent('price', RealType(), g=goods, m=market)
         sellprice = Fluent('sellprice', RealType(), g=goods, m=market)
         self.problem.ma_environment.add_fluent(on_sale)
@@ -996,7 +1130,7 @@ class MarketTraderGenerator(NumericProblemGenerator):
         cash = Fluent('cash', RealType())
         capacity = Fluent('capacity', IntType())
         at = Fluent('at', BoolType(), m=market)
-        can_drive = Fluent('can_drive', BoolType(), m1=market, m2=market)
+        can_drive = Fluent('can-drive', BoolType(), m1=market, m2=market)
 
         travel = InstantaneousAction('travel', m1=market, m2=market)
         m1 = travel.parameter('m1')
@@ -1047,3 +1181,35 @@ class MarketTraderGenerator(NumericProblemGenerator):
         if sl:
             self.add_social_law()
         return self.problem
+
+    def set_goals(self):
+        assigned_index = 0
+        num_of_agents = len(self.problem.agents)
+        for agent_name in ['global'] + [agent.name for agent in self.problem.agents]:
+            if agent_name not in self.instance_data['goals']:
+                continue
+            for goaltuple in self.instance_data['goals'][agent_name]:
+                if agent_name == 'global':
+                    agent = self.problem.agents[assigned_index]
+                    assigned_index = (assigned_index + 1) % num_of_agents
+                else:
+                    agent = self.problem.agent(agent_name)
+                if goaltuple[0] in OPERATORS:
+                    expr = OPERATORS[goaltuple[0]] \
+                        (*[self.create_fluent_expression(goal_expr,
+                                                         None if agent_name == 'global' else agent) for goal_expr in
+                           goaltuple[1:]])
+                    agent.add_public_goal(expr)
+
+                else:
+                    agent.add_public_goal(
+                        self.create_fluent_expression(goaltuple, None if agent_name == 'global' else agent))
+
+
+if __name__ == '__main__':
+    for i in range(1, 21):
+        pg = ExpeditionGenerator()
+        pg.instances_folder = './numeric_problems/expedition/json'
+        problem = pg.generate_problem(f'pfile{i}.json', sl=True)
+        print(problem)
+        break

@@ -1,6 +1,6 @@
-{"market": ["Berlin", "Lisbon", "Moscow", "Obeliai", "Oslo", "Oslo", "Palanga", "Palanga"],
-"goods": ["Cars", "Cars", "Cars", "Cars", "Cattle", "Cattle", "Cattle", "Cattle", "Coffee", "Coffee", "Coffee", "Coffee", "Computers", "Computers", "Computers", "Computers", "Copper", "Copper", "Copper", "Copper", "DVDs", "DVDs", "DVDs", "DVDs", "ExpensiveRugs", "ExpensiveRugs", "ExpensiveRugs", "ExpensiveRugs", "Food", "Food", "Food", "Food", "Footballs", "Footballs", "Footballs", "Footballs", "Gold", "Gold", "Gold", "Gold", "GummyBears", "GummyBears", "GummyBears", "GummyBears", "Kittens", "Kittens", "Kittens", "Kittens", "LaminateFloor", "LaminateFloor", "LaminateFloor", "LaminateFloor", "Minerals", "Minerals", "Minerals", "Minerals", "Platinum", "Platinum", "Platinum", "Platinum", "TuringMachines", "TuringMachines", "TuringMachines", "TuringMachines", "Water", "Water", "Water", "Water"],
-"agents": ["camel0"],
+{"market": ["Oslo", "Lisbon", "Palanga", "Moscow", "Obeliai", "Berlin"],
+"goods": ["LaminateFloor", "Cattle", "GummyBears", "Kittens", "Gold", "Copper", "Computers", "Food", "Minerals", "Platinum", "Footballs", "TuringMachines", "Coffee", "Water", "ExpensiveRugs", "Cars", "DVDs"],
+"agents": ["camel0", "camel1"],
 
 "init_values": {
 "global": [
@@ -72,33 +72,13 @@
 ["=", ["on-sale", ["DVDs", "Obeliai"]], "0"],
 ["=", ["price", ["TuringMachines", "Obeliai"]], "57.2"],
 ["=", ["on-sale", ["TuringMachines", "Obeliai"]], "0"],
-["=", ["bought", ["Food"]], "0"],
-["=", ["bought", ["ExpensiveRugs"]], "0"],
-["=", ["bought", ["Coffee"]], "0"],
-["=", ["bought", ["Cattle"]], "0"],
-["=", ["bought", ["Water"]], "0"],
-["=", ["bought", ["Cars"]], "0"],
-["=", ["bought", ["GummyBears"]], "0"],
-["=", ["bought", ["Computers"]], "0"],
-["=", ["bought", ["LaminateFloor"]], "0"],
-["=", ["bought", ["Copper"]], "0"],
-["=", ["bought", ["Footballs"]], "0"],
-["=", ["bought", ["Kittens"]], "0"],
-["=", ["bought", ["Minerals"]], "0"],
-["=", ["bought", ["Gold"]], "0"],
-["=", ["bought", ["Platinum"]], "0"],
-["=", ["bought", ["DVDs"]], "0"],
-["=", ["bought", ["TuringMachines"]], "0"],
 ["=", ["drive-cost", ["Moscow", "Obeliai"]], "2.6"],
-["=", ["drive-cost", ["Obeliai", "Moscow"]], "2.6"],
-["can-drive", ["Moscow", "Obeliai"]],
-["can-drive", ["Obeliai", "Moscow"]],
-["=", ["cash", []], "100"],
-["=", ["capacity", []], "20"],
-["=", ["fuel-used", []], "0"],
-["=", ["fuel", []], "7.0"]],
-"camel0":[["at", ["Obeliai"]]]
+["=", ["drive-cost", ["Obeliai", "Moscow"]], "2.6"]],
+"camel0":[["=", ["bought", ["Food"]], "0"], ["=", ["bought", ["ExpensiveRugs"]], "0"], ["=", ["bought", ["Coffee"]], "0"], ["=", ["bought", ["Cattle"]], "0"], ["=", ["bought", ["Water"]], "0"], ["=", ["bought", ["Cars"]], "0"], ["=", ["bought", ["GummyBears"]], "0"], ["=", ["bought", ["Computers"]], "0"], ["=", ["bought", ["LaminateFloor"]], "0"], ["=", ["bought", ["Copper"]], "0"], ["=", ["bought", ["Footballs"]], "0"], ["=", ["bought", ["Kittens"]], "0"], ["=", ["bought", ["Minerals"]], "0"], ["=", ["bought", ["Gold"]], "0"], ["=", ["bought", ["Platinum"]], "0"], ["=", ["bought", ["DVDs"]], "0"], ["=", ["bought", ["TuringMachines"]], "0"], ["can-drive", ["Moscow", "Obeliai"]], ["can-drive", ["Obeliai", "Moscow"]], ["at", ["Obeliai"]], ["=", ["cash", []], "100"], ["=", ["capacity", []], "20"]],
+"camel1":[["=", ["bought", ["Food"]], "0"], ["=", ["bought", ["ExpensiveRugs"]], "0"], ["=", ["bought", ["Coffee"]], "0"], ["=", ["bought", ["Cattle"]], "0"], ["=", ["bought", ["Water"]], "0"], ["=", ["bought", ["Cars"]], "0"], ["=", ["bought", ["GummyBears"]], "0"], ["=", ["bought", ["Computers"]], "0"], ["=", ["bought", ["LaminateFloor"]], "0"], ["=", ["bought", ["Copper"]], "0"], ["=", ["bought", ["Footballs"]], "0"], ["=", ["bought", ["Kittens"]], "0"], ["=", ["bought", ["Minerals"]], "0"], ["=", ["bought", ["Gold"]], "0"], ["=", ["bought", ["Platinum"]], "0"], ["=", ["bought", ["DVDs"]], "0"], ["=", ["bought", ["TuringMachines"]], "0"], ["can-drive", ["Moscow", "Obeliai"]], ["can-drive", ["Obeliai", "Moscow"]], ["at", ["Obeliai"]], ["=", ["cash", []], "100"], ["=", ["capacity", []], "20"]]
 },
 "goals": {
 "global": [
-[">=", ["cash", []], "1000"]]}}
+],
+"camel0":[[">=", ["cash", []], "500.0"]],
+"camel1":[[">=", ["cash", []], "500.0"]]}}

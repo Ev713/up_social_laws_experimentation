@@ -1,4 +1,4 @@
-{"waypoint": ["wa0", "wa1", "wa2", "wa3", "wa4", "wa5"],
+{"waypoint": ["wa2", "wa4", "wa5", "wa3", "wa0", "wa1"],
 "agents": ["s0", "s1"],
 
 "init_values": {

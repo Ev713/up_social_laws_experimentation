@@ -1,5 +1,5 @@
-{"waypoint": ["wa0", "wa0", "wa0", "wa0", "wa0", "wa1", "wa1", "wa1", "wa1", "wa1", "wa2", "wa2", "wa2", "wa2", "wa2", "wa3", "wa3", "wa3", "wa3", "wa3", "wa4", "wa4", "wa4", "wa4", "wa4", "wa5", "wa5", "wa5", "wa5", "wa5", "wa6", "wa6", "wa6", "wa6", "wa7", "wa7", "wa7", "wa8", "wa8", "wa9"],
-"agents": ["s0", "s1"],
+{"waypoint": ["wa2", "wa7", "wa4", "wa5", "wa9", "wa3", "wa8", "wa0", "wa6", "wa1"],
+"agents": ["s0", "s1", "s1", "s1", "s1", "s1"],
 
 "init_values": {
 "global": [

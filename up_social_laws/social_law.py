@@ -46,6 +46,15 @@ credits = Credits('Social Law',
                   'Represents a social law, which is a tranformation of a multi-agent problem + waitfor specification to a new multi-agent problem + waitfor.',
                   'Represents a social law, which is a tranformation of a multi-agent problem + waitfor specification to a new multi-agent problem + waitfor.')
 
+OPERATORS = {
+    '=': Equals,
+    '>=': GE,
+    '>': GT,
+    '<=': LE,
+    '<': LT,
+    '-': Minus,
+    '+': Plus
+}
 
 class SocialLaw(engines.engine.Engine, CompilerMixin):
     '''Social Law abstract class:
@@ -205,7 +214,12 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
                     ptype_name = param[1]
                     ptype = new_problem.user_type(ptype_name)
                 new_signature[pname] = ptype
-            new_f = Fluent(fluent_name, _signature=new_signature)
+            ftype = BoolType()
+            if isinstance(default_val, int):
+                ftype = IntType()
+            elif isinstance(default_val, float):
+                ftype=RealType()
+            new_f = Fluent(fluent_name, ftype, _signature=new_signature)
             if agent_name is not None:
                 agent = new_problem.agent(agent_name)
                 agent.add_fluent(new_f, default_initial_value=default_val)
@@ -240,7 +254,7 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
                 action._parameters[param_name] = Parameter(param_name)
 
         # Add action preconditions
-        for agent_name, action_name, precondition_fluent_name, pre_condition_args in self.added_preconditions:
+        for agent_name, action_name, precondition_fluent_name, pre_condition_args, operator, operator_arg in self.added_preconditions:
             agent = new_problem.agent(agent_name)
             action = agent.action(action_name)
             if agent.has_fluent(precondition_fluent_name):
@@ -258,11 +272,15 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
                     raise UPUsageError(
                         "Don't know what parameter " + arg + " is in new precondition for (" + agent_name + ", " + action_name + ")")
                 pre_condition_arg_objs.append(arg_obj)
-            precondition = FluentExp(precondition_fluent, pre_condition_arg_objs)
+            fluent_exp = FluentExp(precondition_fluent, pre_condition_arg_objs)
+            if operator is None:
+                precondition = fluent_exp
+            else:
+                precondition = OPERATORS[operator](fluent_exp, operator_arg)
             action.add_precondition(precondition)
 
         # Add new effects
-        for agent_name, action_name, effect_fluent_name, args_names, val in self.new_effects:
+        for agent_name, action_name, effect_fluent_name, args_names, val, operator in self.new_effects:
             agent = new_problem.agent(agent_name)
             action = agent.action(action_name)
             if agent.has_fluent(effect_fluent_name):
@@ -271,8 +289,11 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
                 assert (new_problem.ma_environment.has_fluent(effect_fluent_name))
                 effect_fluent = new_problem.ma_environment.fluent(effect_fluent_name)
             args = [action.parameter(argname) for argname in args_names]
-            action.add_effect(FluentExp(effect_fluent, args), val)
-
+            fluent_exp = FluentExp(effect_fluent, args)
+            if operator is not None:
+                action.add_effect(fluent_exp, val)
+            else:
+                action.add_effect(fluent_exp, OPERATORS[operator](fluent_exp, val))
         # Add waitfor annotations
         for agent_name, action_name, precondition_fluent_name, pre_condition_args in self.added_waitfors:
             agent = new_problem.agent(agent_name)
@@ -284,12 +305,15 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
                 precondition_fluent = new_problem.ma_environment.fluent(precondition_fluent_name)
             pre_condition_arg_objs = []
             for arg in pre_condition_args:
-                if arg in action._parameters:
-                    arg_obj = action.parameter(arg)
-                elif new_problem.has_object(arg):
-                    arg_obj = new_problem.object(arg)
+                if isinstance(arg, int) or isinstance(arg, float):
+                    arg_obj=arg
                 else:
-                    raise UPUsageError(
+                    if arg in action._parameters:
+                        arg_obj = action.parameter(arg)
+                    elif new_problem.has_object(arg):
+                        arg_obj = new_problem.object(arg)
+                    else:
+                        raise UPUsageError(
                         "Don't know what parameter " + arg + " is in waitfor(" + agent_name + ", " + action_name + ")")
                 pre_condition_arg_objs.append(arg_obj)
 
@@ -314,7 +338,10 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
 
             arg_objs = []
             for arg in disallowed_args:
-                arg_obj = new_problem.object(arg)
+                if isinstance(arg, float) or isinstance(arg, int):
+                    arg_obj = arg
+                else:
+                    arg_obj = new_problem.object(arg)
                 arg_objs.append(arg_obj)
             new_problem.set_initial_value(
                 Dot(agent, FluentExp(allowed_fluent, arg_objs)),
@@ -367,13 +394,13 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
         )
 
     def add_waitfor_annotation(self, agent_name: str, action_name: str, precondition_fluent_name: str,
-                               precondition_args: Tuple[str]):
+                               precondition_args):
         self.added_waitfors.add((agent_name, action_name, precondition_fluent_name, precondition_args))
 
-    def disallow_action(self, agent_name: str, action_name: str, args: Tuple[str]):
+    def disallow_action(self, agent_name: str, action_name: str, args):
         self.disallowed_actions.add((agent_name, action_name, args))
 
-    def add_effect(self, agent_name: str, action_name: str, fluent_name: str, args: Tuple[str], val):
+    def add_effect(self, agent_name: str, action_name: str, fluent_name: str, args: Tuple[str], val, operator=None):
         is_new_fluent = False
         for n_agent_name, n_fluent_name, _, _ in self.new_fluents:
             if fluent_name == n_fluent_name:
@@ -381,7 +408,7 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
                 break
         if not is_new_fluent:
             raise UPUsageError("must only affect new fluents")
-        self.new_effects.add((agent_name, action_name, fluent_name, args, val))
+        self.new_effects.add((agent_name, action_name, fluent_name, args, val, operator))
 
     def add_new_fluent(self, agent_name: Optional[str], fluent_name: str, signature: Tuple[str, Optional[str]],
                        default_val):
@@ -402,8 +429,8 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
         self.added_action_parameters.add((agent_name, action_name, parameter_name, parameter_type_name))
 
     def add_precondition_to_action(self, agent_name: str, action_name: str, precondition_fluent_name: str,
-                                   pre_condition_args: Tuple[str]):
-        self.added_preconditions.add((agent_name, action_name, precondition_fluent_name, pre_condition_args))
+                                   pre_condition_args: Tuple[str], operator=None, operator_arg=None):
+        self.added_preconditions.add((agent_name, action_name, precondition_fluent_name, pre_condition_args ,operator, operator_arg))
 
     def add_agent_goal(self, agent_name: str, goal_fluent_name: str,
                                    goal_args: Tuple[str] ):

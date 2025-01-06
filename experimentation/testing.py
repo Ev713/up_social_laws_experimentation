@@ -1,22 +1,27 @@
-import json
 import random
+import json
+if __name__ == '__main__':
+    file = {}
+    for i in range(1, 21):
+        min_x = 0
+        min_y = 0
+        max_y = int(3+i/4)
+        max_x = int(4+i/3)
+        agents = [f'a{x}' for x in range(int(2+i/5))]
+        file['agents'] = agents
+        file['min_x'] = min_x
+        file['max_x'] = max_x
+        file['min_y'] = min_y
+        file['max_y'] = max_y
 
-import unified_planning
-from unified_planning.model import InstantaneousAction, Fluent
-from unified_planning.model.multi_agent import Agent
-from unified_planning.shortcuts import *
+        for a in agents:
+            file[a] = {
+                'init_x' : random.randint(0, max_x),
+                'init_y' : random.randint(0, max_y),
+                'goal_x' : random.randint(0, max_x),
+                'goal_y' : random.randint(0, max_y),
+            }
+        with open(f"/home/evgeny/SocialLaws/up-social-laws/experimentation/numeric_problems/grid/pfile{i}.json", "w") as outfile:
+            json.dump(file, outfile)
 
-from experimentation import simulate
-from up_social_laws.ma_problem_waitfor import MultiAgentProblemWithWaitfor
-from up_social_laws.social_law import SocialLaw
-
-
-problem = Problem()
-fluent = Fluent('fluent', BoolType(), p=IntType(0, 100))
-a = InstantaneousAction('action', )
-a.add_effect(fluent(1), True)
-problem.add_action(a)
-problem.add_fluent(fluent, default_initial_value=False)
-
-simulate(problem)
 

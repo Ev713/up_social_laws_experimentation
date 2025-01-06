@@ -1,0 +1,1 @@
+{"agents": ["a0", "a1"], "min_x": 0, "max_x": 4, "min_y": 0, "max_y": 3, "a0": {"init_x": 4, "init_y": 1, "goal_x": 4, "goal_y": 3}, "a1": {"init_x": 3, "init_y": 0, "goal_x": 4, "goal_y": 1}}

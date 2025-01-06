@@ -1,6 +1,6 @@
-{"market": ["Oslo", "Oslo", "Palanga", "Palanga"],
-"goods": ["Cars", "Cars", "Cattle", "Cattle", "Coffee", "Coffee", "Computers", "Computers", "Copper", "Copper", "DVDs", "DVDs", "ExpensiveRugs", "ExpensiveRugs", "Food", "Food", "Footballs", "Footballs", "Gold", "Gold", "GummyBears", "GummyBears", "Kittens", "Kittens", "LaminateFloor", "LaminateFloor", "Minerals", "Minerals", "Platinum", "Platinum", "TuringMachines", "TuringMachines", "Water", "Water"],
-"agents": ["camel0"],
+{"market": ["Oslo", "Palanga"],
+"goods": ["LaminateFloor", "Cattle", "GummyBears", "Kittens", "Gold", "Copper", "Computers", "Food", "Minerals", "Platinum", "Footballs", "TuringMachines", "Coffee", "Water", "ExpensiveRugs", "Cars", "DVDs"],
+"agents": ["camel0", "camel1"],
 
 "init_values": {
 "global": [
@@ -72,33 +72,13 @@
 ["=", ["on-sale", ["DVDs", "Oslo"]], "0"],
 ["=", ["price", ["TuringMachines", "Oslo"]], "45.2"],
 ["=", ["on-sale", ["TuringMachines", "Oslo"]], "0"],
-["=", ["bought", ["Food"]], "0"],
-["=", ["bought", ["ExpensiveRugs"]], "0"],
-["=", ["bought", ["Coffee"]], "0"],
-["=", ["bought", ["Cattle"]], "0"],
-["=", ["bought", ["Water"]], "0"],
-["=", ["bought", ["Cars"]], "0"],
-["=", ["bought", ["GummyBears"]], "0"],
-["=", ["bought", ["Computers"]], "0"],
-["=", ["bought", ["LaminateFloor"]], "0"],
-["=", ["bought", ["Copper"]], "0"],
-["=", ["bought", ["Footballs"]], "0"],
-["=", ["bought", ["Kittens"]], "0"],
-["=", ["bought", ["Minerals"]], "0"],
-["=", ["bought", ["Gold"]], "0"],
-["=", ["bought", ["Platinum"]], "0"],
-["=", ["bought", ["DVDs"]], "0"],
-["=", ["bought", ["TuringMachines"]], "0"],
 ["=", ["drive-cost", ["Palanga", "Oslo"]], "4.0"],
-["=", ["drive-cost", ["Oslo", "Palanga"]], "4.0"],
-["can-drive", ["Palanga", "Oslo"]],
-["can-drive", ["Oslo", "Palanga"]],
-["=", ["cash", []], "100"],
-["=", ["capacity", []], "20"],
-["=", ["fuel-used", []], "0"],
-["=", ["fuel", []], "7.0"]],
-"camel0":[["at", ["Oslo"]]]
+["=", ["drive-cost", ["Oslo", "Palanga"]], "4.0"]],
+"camel0":[["=", ["bought", ["Food"]], "0"], ["=", ["bought", ["ExpensiveRugs"]], "0"], ["=", ["bought", ["Coffee"]], "0"], ["=", ["bought", ["Cattle"]], "0"], ["=", ["bought", ["Water"]], "0"], ["=", ["bought", ["Cars"]], "0"], ["=", ["bought", ["GummyBears"]], "0"], ["=", ["bought", ["Computers"]], "0"], ["=", ["bought", ["LaminateFloor"]], "0"], ["=", ["bought", ["Copper"]], "0"], ["=", ["bought", ["Footballs"]], "0"], ["=", ["bought", ["Kittens"]], "0"], ["=", ["bought", ["Minerals"]], "0"], ["=", ["bought", ["Gold"]], "0"], ["=", ["bought", ["Platinum"]], "0"], ["=", ["bought", ["DVDs"]], "0"], ["=", ["bought", ["TuringMachines"]], "0"], ["can-drive", ["Palanga", "Oslo"]], ["can-drive", ["Oslo", "Palanga"]], ["at", ["Oslo"]], ["=", ["cash", []], "100"], ["=", ["capacity", []], "20"]],
+"camel1":[["=", ["bought", ["Food"]], "0"], ["=", ["bought", ["ExpensiveRugs"]], "0"], ["=", ["bought", ["Coffee"]], "0"], ["=", ["bought", ["Cattle"]], "0"], ["=", ["bought", ["Water"]], "0"], ["=", ["bought", ["Cars"]], "0"], ["=", ["bought", ["GummyBears"]], "0"], ["=", ["bought", ["Computers"]], "0"], ["=", ["bought", ["LaminateFloor"]], "0"], ["=", ["bought", ["Copper"]], "0"], ["=", ["bought", ["Footballs"]], "0"], ["=", ["bought", ["Kittens"]], "0"], ["=", ["bought", ["Minerals"]], "0"], ["=", ["bought", ["Gold"]], "0"], ["=", ["bought", ["Platinum"]], "0"], ["=", ["bought", ["DVDs"]], "0"], ["=", ["bought", ["TuringMachines"]], "0"], ["can-drive", ["Palanga", "Oslo"]], ["can-drive", ["Oslo", "Palanga"]], ["at", ["Oslo"]], ["=", ["cash", []], "100"], ["=", ["capacity", []], "20"]]
 },
 "goals": {
 "global": [
-[">=", ["cash", []], "1000"]]}}
+],
+"camel0":[[">=", ["cash", []], "500.0"]],
+"camel1":[[">=", ["cash", []], "500.0"]]}}

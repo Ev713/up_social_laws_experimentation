@@ -1,5 +1,5 @@
-{"waypoint": ["wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa10", "wa10", "wa10", "wa10", "wa10", "wa10", "wa10", "wa10", "wa10", "wa10", "wa11", "wa11", "wa11", "wa11", "wa11", "wa11", "wa11", "wa11", "wa12", "wa12", "wa12", "wa12", "wa12", "wa12", "wa13", "wa13", "wa13", "wa13", "wa14", "wa14", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa6", "wa6", "wa6", "wa6", "wa6", "wa6", "wa6", "wa6", "wa6", "wa6", "wa6", "wa6", "wa6", "wa6", "wa6", "wa6", "wa6", "wa6", "wa7", "wa7", "wa7", "wa7", "wa7", "wa7", "wa7", "wa7", "wa7", "wa7", "wa7", "wa7", "wa7", "wa7", "wa7", "wa7", "wa8", "wa8", "wa8", "wa8", "wa8", "wa8", "wa8", "wa8", "wa8", "wa8", "wa8", "wa8", "wa8", "wa8", "wa9", "wa9", "wa9", "wa9", "wa9", "wa9", "wa9", "wa9", "wa9", "wa9", "wa9", "wa9", "wb0", "wb0", "wb0", "wb0", "wb0", "wb0", "wb0", "wb0", "wb0", "wb0", "wb1", "wb1", "wb1", "wb1", "wb1", "wb1", "wb1", "wb1", "wb1", "wb1", "wb10", "wb10", "wb10", "wb10", "wb10", "wb11", "wb11", "wb11", "wb11", "wb12", "wb12", "wb12", "wb13", "wb13", "wb14", "wb2", "wb2", "wb2", "wb2", "wb2", "wb2", "wb2", "wb2", "wb2", "wb2", "wb3", "wb3", "wb3", "wb3", "wb3", "wb3", "wb3", "wb3", "wb3", "wb3", "wb4", "wb4", "wb4", "wb4", "wb4", "wb4", "wb4", "wb4", "wb4", "wb4", "wb5", "wb5", "wb5", "wb5", "wb5", "wb5", "wb5", "wb5", "wb5", "wb5", "wb6", "wb6", "wb6", "wb6", "wb6", "wb6", "wb6", "wb6", "wb6", "wb7", "wb7", "wb7", "wb7", "wb7", "wb7", "wb7", "wb7", "wb8", "wb8", "wb8", "wb8", "wb8", "wb8", "wb8", "wb9", "wb9", "wb9", "wb9", "wb9", "wb9"],
-"agents": ["s0", "s1"],
+{"waypoint": ["wa12", "wa9", "wa8", "wb3", "wb2", "wb10", "wa3", "wa0", "wb11", "wb9", "wa6", "wb8", "wa14", "wb12", "wa7", "wa11", "wb5", "wb13", "wa13", "wa1", "wb4", "wa2", "wa4", "wa5", "wb0", "wb6", "wb1", "wa10", "wb7", "wb14"],
+"agents": ["s0", "s1", "s1", "s1", "s1", "s1", "s1", "s2", "s2", "s2", "s2", "s2", "s3", "s3", "s3", "s3", "s3", "s4", "s4", "s4", "s4"],
 
 "init_values": {
 "global": [
@@ -62,7 +62,10 @@
 ["is_next", ["wb12", "wb13"]],
 ["is_next", ["wb13", "wb14"]]],
 "s0":[["at", ["wa0"]], ["=", ["sled_capacity", []], "4"], ["=", ["sled_supplies", []], "1"]],
-"s1":[["at", ["wb0"]], ["=", ["sled_capacity", []], "4"], ["=", ["sled_supplies", []], "1"]]
+"s1":[["at", ["wb0"]], ["=", ["sled_capacity", []], "4"], ["=", ["sled_supplies", []], "1"]],
+"s2":[["at", ["wa0"]], ["=", ["sled_capacity", []], "4"], ["=", ["sled_supplies", []], "1"]],
+"s3":[["at", ["wa0"]], ["=", ["sled_capacity", []], "4"], ["=", ["sled_supplies", []], "1"]],
+"s4":[["at", ["wa0"]], ["=", ["sled_capacity", []], "4"], ["=", ["sled_supplies", []], "1"]]
 },
 "goals": {
 "global": [

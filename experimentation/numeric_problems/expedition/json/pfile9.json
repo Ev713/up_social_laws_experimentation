@@ -1,5 +1,5 @@
-{"waypoint": ["wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa0", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa1", "wa10", "wa10", "wa10", "wa11", "wa11", "wa12", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa2", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa3", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa4", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa5", "wa6", "wa6", "wa6", "wa6", "wa6", "wa6", "wa6", "wa7", "wa7", "wa7", "wa7", "wa7", "wa7", "wa8", "wa8", "wa8", "wa8", "wa8", "wa9", "wa9", "wa9", "wa9", "wb0", "wb1", "wb2", "wb3", "wb4", "wb5"],
-"agents": ["s0", "s1"],
+{"waypoint": ["wa12", "wa9", "wa8", "wb2", "wa3", "wa0", "wa6", "wa7", "wa11", "wb5", "wb4", "wa1", "wa2", "wa4", "wa5", "wb0", "wb1", "wa10", "wb3"],
+"agents": ["s0", "s1", "s1", "s1", "s1", "s1", "s1", "s2", "s2", "s2"],
 
 "init_values": {
 "global": [
@@ -29,7 +29,8 @@
 ["is_next", ["wa10", "wa11"]],
 ["is_next", ["wa11", "wa12"]]],
 "s0":[["at", ["wa0"]], ["=", ["sled_capacity", []], "4"], ["=", ["sled_supplies", []], "1"]],
-"s1":[["at", ["wa0"]], ["=", ["sled_capacity", []], "4"], ["=", ["sled_supplies", []], "1"]]
+"s1":[["at", ["wa0"]], ["=", ["sled_capacity", []], "4"], ["=", ["sled_supplies", []], "1"]],
+"s2":[["at", ["wa0"]], ["=", ["sled_capacity", []], "4"], ["=", ["sled_supplies", []], "1"]]
 },
 "goals": {
 "global": [

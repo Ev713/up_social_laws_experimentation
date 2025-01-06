@@ -1,10 +1,14 @@
 OPERATORS = ['=', '>=', '<=', '>', '<']
+
+
 def is_number(s):
     try:
         float(s)
         return True
     except ValueError:
         return False
+
+
 def extract_between(text, start_str, end_str):
     # Find the starting position of start_str
     start_idx = text.find(start_str)
@@ -49,34 +53,13 @@ class Parser:
         self.general_changer = {}
         self.agent_changer = {}
         self.agent_fluenttuples = []
-        self.agent_name = None
         self.agent_type_name = None
         self.skip_fluents = []
+        self.copy_to_all = []
+        self.is_expedition = False
+        self.distribute_fluent_in_goal = None
 
-    def transform_goal(self, goal_str):
-        json_goal_str = ''
-        goal_str = goal_str.replace('\n', ' ').replace('\t', ' ')
-        goal_words = [word.strip() for word in goal_str.split()]
-        skip_to = 0
-        for i, start_word in enumerate(goal_words):
-            if 'and' in start_word or len(start_word) == 0 or i < skip_to:
-                continue
-            if ')' in start_word:
-                break
-            if '(' in start_word:
-                j = i + 1
-                while ')' not in goal_words[j - 1]:
-                    j += 1
-                skip_to = j
-                vars = goal_words[i + 1:j]
-                vars[-1] = vars[-1].replace(')', '')
-                fluenttuple = [start_word.replace('(', ''), vars]
-                json_goal_str += str(fluenttuple) + '\n'
-            else:
-                continue
-        return json_goal_str
-
-    def transform_fluentuples(self, init_str, extract_agent_tuples, ):
+    def transform_fluentuples(self, init_str, extract_agent_tuples, is_goal):
         if extract_agent_tuples:
             self.agent_fluenttuples = {}
         inits = ''
@@ -111,7 +94,11 @@ class Parser:
                     value = words[-1]
                     words = words[:-1]
                     vars = vars[:-1]
-
+                    if (self.distribute_fluent_in_goal is not None) and words[0] in \
+                            self.distribute_fluent_in_goal and is_goal:
+                        value = str(float(value)/len(self.agents))
+            if words[0] in self.skip_fluents:
+                continue
             expression = []
             fluents_num = 0
             i = 0
@@ -129,13 +116,21 @@ class Parser:
                 i += 1
             expression.append([fluent_expression, fluent_vars])
             if operator is not None:
-                expression = [operator]+ expression+[value]
-            if len(expression)==1:
+                expression = [operator] + expression + [value]
+            if len(expression) == 1:
                 expression = expression[0]
-            if agent is not None:
-                if agent not in self.agent_fluenttuples:
-                    self.agent_fluenttuples[agent] = []
-                self.agent_fluenttuples[agent].append(expression)
+            agents = [agent]
+            skip_adding_global = agent is not None
+            if words[0] in self.copy_to_all:
+                agents = self.agents
+                skip_adding_global = True
+
+            for agent in agents:
+                if agent is not None:
+                    if agent not in self.agent_fluenttuples:
+                        self.agent_fluenttuples[agent] = []
+                    self.agent_fluenttuples[agent].append(expression)
+            if skip_adding_global:
                 continue
 
             if inits != '':
@@ -162,9 +157,11 @@ class Parser:
         if self.agent_type_name in self.objects:
             self.agents = self.objects[self.agent_type_name]
             self.objects.pop(self.agent_type_name, None)
+        for obj_type in self.objects:
+            self.objects[obj_type] = list(set(self.objects[obj_type]))
         self.all_objects = []
         for obj_type in self.objects:
-            self.all_objects+=self.objects[obj_type]
+            self.all_objects += self.objects[obj_type]
         for key in self.objects:
             if objects_str != '':
                 objects_str += ',\n'
@@ -185,14 +182,13 @@ class Parser:
 
         return agent_fluents_str.replace('\'', '\"')
 
-    def parse_json(self, pathname, agents_type_name=None):
-        self.agent_changer = {}
-        self.general_changer = {}
-        self.skip_fluents = []
+    def parse_json(self, pathname, agents_type_name=None, add_agents=None):
         json_ver = '{'
         with open(pathname, 'r') as file:
             content = file.read()
 
+        if add_agents is not None:
+            self.objects[self.agent_type_name] = add_agents
         objects_str = extract_parenthesis_after('objects', content).strip()
         init_str = extract_parenthesis_after('init', content).strip()
 
@@ -206,10 +202,13 @@ class Parser:
         json_ver += objs + ',\n'
         json_ver += agents
         json_ver += '],\n\n\"init_values\": {\n\"global\": [\n'
-        json_ver += self.transform_fluentuples(init_str, extract_agent_tuples=True) + ']'
+        json_ver += self.transform_fluentuples(init_str, extract_agent_tuples=True, is_goal=False) + ']'
+        for agent in self.agents:
+            if agent not in self.agent_fluenttuples:
+                self.agent_fluenttuples[agent] = list(self.agent_fluenttuples.values())[0].copy()
         json_ver += self.make_agent_fluents()
         json_ver += '\n},\n\"goals\": {\n\"global\": [\n'
-        json_ver += self.transform_fluentuples(goal_str, extract_agent_tuples=True) + ']'
+        json_ver += self.transform_fluentuples(goal_str, extract_agent_tuples=True, is_goal=True) + ']'
         json_ver += self.make_agent_fluents()
         json_ver += '}}'
         # if metric_str is not None:
@@ -220,16 +219,35 @@ class Parser:
 
 if __name__ == '__main__':
     domains = [
-    #    'expedition',
+        #    'expedition',
         'markettrader',
-    #    'zenotravel'
+        #    'zenotravel'
     ]
     for domain in domains:
         parser = Parser()
-        parser.agent_type_name = {'expedition': 'sled', 'markettrader': 'camel', 'zenotravel': 'aircraft'}[domain]
-        folder = r'C:\Users\foree\PycharmProjects\up_social_laws_experimentation\experimentation\numeric_problems'+'\\'+domain
+        added_agents = [[] for _ in range(21)]
+        if domain == 'zenotravel':
+            parser.agent_changer = {'located': 'aircraft-loc'}
+            parser.general_changer = {'located': 'person-loc'}
+            parser.skip_fluents = ['total-fuel-used']
+            parser.copy_to_all = []
+            parser.agent_type_name = 'aircraft'
+            added_agents[1] = ['plane2']
+            added_agents[2] = ['plane2']
+
+        elif domain == 'markettrader':
+            parser.agent_type_name = 'camel'
+            parser.skip_fluents = ['fuel-used', 'fuel']
+            parser.copy_to_all = ['cash', 'capacity', 'bought', 'at', 'can-drive']
+            added_agents = [[f'camel{k}' for k in range(1, int(i / 5) + 1)] for i in range(4, 25)]
+            parser.distribute_fluent_in_goal = ['cash']
+        elif domain == 'expedition':
+            parser.agent_type_name = 'sled'
+            added_agents = [[f's{k + 1}' for k in range(1, int(i / 5) + 1)] for i in range(-1, 20)]
+
+        folder = './numeric_problems/' + domain
         for i in range(1, 21):
-            pathname = folder+r'\pddl\pfile'+str(i)+'.pddl'
-            f = open(folder+r'\json\pfile'+str(i)+'.json', "w")
-            f.write(parser.parse_json(pathname))
+            pathname = folder + '/pddl/pfile' + str(i) + '.pddl'
+            f = open(folder + r'/json/pfile' + str(i) + '.json', "w")
+            f.write(parser.parse_json(pathname, add_agents=added_agents[i]))
             f.close()
