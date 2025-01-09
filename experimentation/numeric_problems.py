@@ -8,7 +8,7 @@ from unified_planning.shortcuts import *
 
 from up_social_laws.ma_problem_waitfor import MultiAgentProblemWithWaitfor
 from up_social_laws.social_law import SocialLaw
-EXPERIMENTATION_PATH = '/home/evgeny/SocialLaws/up-social-laws/experimentation'
+EXPERIMENTATION_PATH = r'C:\\Users\\foree\\PycharmProjects\\up_social_laws_experimentation\\experimentation\\'
 
 def get_blocksworld(name):
     json_file_path = f'{EXPERIMENTATION_PATH}/problems/all/jsons/blocksworld/{name}.json'

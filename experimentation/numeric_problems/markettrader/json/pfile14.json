@@ -1,5 +1,5 @@
-{"market": ["", "Lisbon", "Paris", "Vienna", "Amsterdam", "Douglas", "Madrid", "Jieznas", "Vilkija", "London", "Brussels", "Daugai", "Mariehamn", "Edinburgh", "Palanga", "Moscow", "Nice", "Bonn", "Obeliai", "StPetersburg", "Oslo", "Tallinn", "Valencia", "Rome", "Hamburg", "Athens", "KudirkosNaumiestis", "Stockholm", "Dublin", "Neringa", "Cardiff", "Simnas", "Gelgaudiskis", "Copenhagen", "Berlin", "Mandres"],
-"goods": ["LaminateFloor", "Cattle", "GummyBears", "Kittens", "Gold", "Copper", "Computers", "Food", "Minerals", "Platinum", "Footballs", "TuringMachines", "Coffee", "Water", "ExpensiveRugs", "Cars", "DVDs"],
+{"market": ["", "Athens", "Moscow", "Nice", "Stockholm", "Dublin", "Daugai", "Oslo", "Amsterdam", "Copenhagen", "Obeliai", "Gelgaudiskis", "StPetersburg", "Palanga", "Berlin", "Madrid", "Jieznas", "Mariehamn", "Douglas", "Brussels", "Lisbon", "Valencia", "Edinburgh", "Neringa", "Simnas", "Paris", "KudirkosNaumiestis", "Tallinn", "London", "Cardiff", "Hamburg", "Vienna", "Bonn", "Mandres", "Vilkija", "Rome"],
+"goods": ["ExpensiveRugs", "GummyBears", "Copper", "LaminateFloor", "Gold", "Footballs", "Platinum", "Water", "Kittens", "Food", "Computers", "DVDs", "TuringMachines", "Minerals", "Cars", "Coffee", "Cattle"],
 "agents": ["camel0", "camel1", "camel2", "camel3"],
 
 "init_values": {

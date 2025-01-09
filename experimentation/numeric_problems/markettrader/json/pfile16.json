@@ -1,5 +1,5 @@
-{"market": ["", "Cesis", "Lisbon", "Paris", "Vienna", "Amsterdam", "Douglas", "Madrid", "Jieznas", "Venice", "Vilkija", "London", "Brussels", "Daugai", "Mariehamn", "Edinburgh", "Viljandi", "Palanga", "Moscow", "Nice", "Bonn", "Obeliai", "StPetersburg", "Salaspils", "Oslo", "Tallinn", "Valencia", "Rome", "Kadagopya", "Hamburg", "Athens", "KudirkosNaumiestis", "Stockholm", "Dublin", "Neringa", "Cardiff", "Simnas", "Gelgaudiskis", "Copenhagen", "Berlin", "Mandres", "Ogre", "Tukums"],
-"goods": ["LaminateFloor", "Cattle", "GummyBears", "Kittens", "Gold", "Copper", "Computers", "Food", "Minerals", "Platinum", "Footballs", "TuringMachines", "Coffee", "Water", "ExpensiveRugs", "Cars", "DVDs"],
+{"market": ["", "Athens", "Venice", "Moscow", "Nice", "Stockholm", "Dublin", "Ogre", "Daugai", "Oslo", "Amsterdam", "Cesis", "Copenhagen", "Obeliai", "Gelgaudiskis", "StPetersburg", "Palanga", "Berlin", "Madrid", "Jieznas", "Mariehamn", "Tukums", "Douglas", "Brussels", "Lisbon", "Valencia", "Edinburgh", "Neringa", "Simnas", "Paris", "KudirkosNaumiestis", "Salaspils", "Tallinn", "London", "Cardiff", "Kadagopya", "Hamburg", "Vienna", "Bonn", "Mandres", "Vilkija", "Rome", "Viljandi"],
+"goods": ["ExpensiveRugs", "GummyBears", "Copper", "LaminateFloor", "Gold", "Footballs", "Platinum", "Water", "Kittens", "Food", "Computers", "DVDs", "TuringMachines", "Minerals", "Cars", "Coffee", "Cattle"],
 "agents": ["camel0", "camel1", "camel2", "camel3", "camel4"],
 
 "init_values": {

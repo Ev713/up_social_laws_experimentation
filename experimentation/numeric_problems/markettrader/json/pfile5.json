@@ -1,5 +1,5 @@
-{"market": ["Oslo", "Lisbon", "Amsterdam", "Palanga", "Moscow", "Obeliai", "Berlin", "StPetersburg"],
-"goods": ["LaminateFloor", "Cattle", "GummyBears", "Kittens", "Gold", "Copper", "Computers", "Food", "Minerals", "Platinum", "Footballs", "TuringMachines", "Coffee", "Water", "ExpensiveRugs", "Cars", "DVDs"],
+{"market": ["Lisbon", "Moscow", "Obeliai", "StPetersburg", "Palanga", "Berlin", "Oslo", "Amsterdam"],
+"goods": ["ExpensiveRugs", "GummyBears", "Copper", "LaminateFloor", "Gold", "Footballs", "Platinum", "Water", "Kittens", "Food", "Computers", "DVDs", "TuringMachines", "Minerals", "Cars", "Coffee", "Cattle"],
 "agents": ["camel0", "camel1"],
 
 "init_values": {
