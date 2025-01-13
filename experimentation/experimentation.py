@@ -25,13 +25,14 @@ from up_social_laws.social_law import SocialLaw
 
 from up_social_laws.robustness_checker import SocialLawRobustnessChecker
 from unified_planning.io import PDDLReader
-#import resource
+# import resource
 import time
 import signal
 import os
 from multiprocessing import Process, Queue
 
-#planner = OneshotPlanner()
+
+# planner = OneshotPlanner()
 
 
 def check_solvable(problem, ma=False):
@@ -429,6 +430,7 @@ def intersection_problem_add_sl3(i_prob):
         l3.add_waitfor_annotation(agent.name, "drive", "free", ("ly",))
     return l3.compile(p_4cars_deadlock).problem
 
+
 # Function to limit memory and CPU for the process
 '''def set_limits(memory_limit, cpu_limit):
     # Set maximum memory usage (bytes)
@@ -526,6 +528,8 @@ def run_experiments(problems, slrc_old_options=[True, False]):
             print(f'Problem ' + name + ' with ' + ('old' if slrc_is_old else 'new') + ' compilation is done.')
         print(f'{i + 1}/{total_problems}')
 '''
+
+
 def get_problems():
     blocksworld_names = ['9-0', '9-1', '9-2', '10-0', '10-1', '10-2', '11-0', '11-1', '11-2', '12-0', '12-1', '13-0',
                          '13-1', '14-0', '14-1', '15-0', '15-1', '16-1', '16-2', ]  # '17-0']
@@ -587,10 +591,19 @@ def get_problems():
 
 
 if __name__ == '__main__':
-    pg = ProblemGenerator.MarketTraderGenerator()
-    pg.instances_folder = r'./numeric_problems/markettrader/json'
+    pg = ProblemGenerator.NumericGridGenerator()
+    pg.instances_folder = r'./numeric_problems/grid/json'
     problem = pg.generate_problem('pfile1.json', sl=False)
+    slrc = get_new_slrc()
+    slrc._planner = OneshotPlanner(name='tamer')
+    # print(check_robustness(slrc, problem))
+    sap = SingleAgentProjection(problem.agents[0])
+    sap.skip_checks = True
+    sap_prob = sap.compile(problem).problem
+    #simulate(sap_prob)
+    # print(problem)
     comp = get_compiled_problem(problem)
-    with OneshotPlanner(name='tamer', problem_kind=problem.kind) as planner:
+    print(comp)
+    with OneshotPlanner(name='tamer') as planner:
         result = planner.solve(comp)
         print(result)

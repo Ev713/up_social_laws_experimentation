@@ -1,0 +1,19 @@
+{"market": ["Oslo", "Palanga"],
+"goods": ["TuringMachines"],
+"agents": ["camel0", "camel1"],
+
+"init_values": {
+"global": [
+["=", ["price", ["TuringMachines", "Oslo"]], "1"],
+["=", ["sellprice", ["TuringMachines", "Palanga"]], "2"],
+["=", ["on-sale", ["TuringMachines", "Oslo"]], "10"],
+["=", ["drive-cost", ["Palanga", "Oslo"]], "0.0"],
+["=", ["drive-cost", ["Oslo", "Palanga"]], "0.0"]],
+"camel0":[ ["=", ["bought", ["TuringMachines"]], "0"], ["can-drive", ["Palanga", "Oslo"]], ["can-drive", ["Oslo", "Palanga"]], ["at", ["Oslo"]], ["=", ["cash", []], "10"], ["=", ["capacity", []], "5"]],
+"camel1":[ ["=", ["bought", ["TuringMachines"]], "0"], ["can-drive", ["Palanga", "Oslo"]], ["can-drive", ["Oslo", "Palanga"]], ["at", ["Oslo"]], ["=", ["cash", []], "10"], ["=", ["capacity", []], "5"]]
+},
+"goals": {
+"global": [
+],
+"camel0":[[">=", ["cash", []], "15.0"]],
+"camel1":[[">=", ["cash", []], "15.0"]]}}

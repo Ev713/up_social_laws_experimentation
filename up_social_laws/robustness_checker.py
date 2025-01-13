@@ -143,6 +143,7 @@ class SocialLawRobustnessChecker(engines.engine.Engine, mixins.OneshotPlannerMix
                 planner = OneshotPlanner(problem_kind=result.problem.kind)
             presult = planner.solve(result.problem)
             if presult.status not in unified_planning.engines.results.POSITIVE_OUTCOMES:
+                print(presult.status)
                 return False
         return True
 

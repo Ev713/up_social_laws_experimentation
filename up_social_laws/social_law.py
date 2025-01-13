@@ -215,9 +215,9 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
                     ptype = new_problem.user_type(ptype_name)
                 new_signature[pname] = ptype
             ftype = BoolType()
-            if isinstance(default_val, int):
+            if not isinstance(default_val, bool) and isinstance(default_val, int):
                 ftype = IntType()
-            elif isinstance(default_val, float):
+            elif not isinstance(default_val, bool) and isinstance(default_val, float):
                 ftype=RealType()
             new_f = Fluent(fluent_name, ftype, _signature=new_signature)
             if agent_name is not None:
@@ -290,7 +290,7 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
                 effect_fluent = new_problem.ma_environment.fluent(effect_fluent_name)
             args = [action.parameter(argname) for argname in args_names]
             fluent_exp = FluentExp(effect_fluent, args)
-            if operator is not None:
+            if operator is None:
                 action.add_effect(fluent_exp, val)
             else:
                 action.add_effect(fluent_exp, OPERATORS[operator](fluent_exp, val))

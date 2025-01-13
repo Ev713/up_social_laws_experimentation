@@ -36,6 +36,6 @@ problem.set_initial_value(battery_charge, 100)
 problem.add_goal(robot_at(l2))
 
 
-with OneshotPlanner(name='enhsp',problem_kind=problem.kind) as planner:
+with OneshotPlanner(name='tamer',problem_kind=problem.kind) as planner:
     result = planner.solve(problem)
     print(result)
