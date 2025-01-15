@@ -226,7 +226,6 @@ class RegularWaitingActionRobustnessVerifier(RobustnessVerifier):
             for action in agent.actions:
                 signature = {f'p{i}': p.type for i, p in enumerate(action.parameters)}
                 action_fluent = Fluent("allow-" + agent.name + "-" + action.name, BoolType(), **signature)
-                # allow_action_map.setdefault(action.agent, {}).update(action=action_fluent)
                 if agent.name not in self.allow_action_map.keys():
                     self.allow_action_map[agent.name] = {action.name: action_fluent}
                 else:

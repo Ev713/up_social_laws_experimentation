@@ -25,7 +25,7 @@ from up_social_laws.social_law import SocialLaw
 
 from up_social_laws.robustness_checker import SocialLawRobustnessChecker
 from unified_planning.io import PDDLReader
-# import resource
+import resource
 import time
 import signal
 import os
@@ -118,7 +118,7 @@ def simulate(problem, ma=False, print_state=False, trace_vars=[]):
         while True:
             try:
                 while True:
-                    choice = int(input('Choice: '))
+                    choice = random.choice(range(len(actions)))#int(input('Choice: '))
                     if choice not in range(len(actions)):
                         print('Invalid index. Try again.')
                         continue
@@ -140,8 +140,8 @@ def simulate(problem, ma=False, print_state=False, trace_vars=[]):
                 print('No legal actions')
                 return
             print(f't = {t}\nActions:')
-            for a in actions:
-                print(a[0].name, a[1])
+            for i, a in enumerate (actions):
+                print(str(i)+'.', a[0].name, a[1])
 
 
 def solve(problem, ma=False):
@@ -431,19 +431,22 @@ def intersection_problem_add_sl3(i_prob):
     return l3.compile(p_4cars_deadlock).problem
 
 
-# Function to limit memory and CPU for the process
-'''def set_limits(memory_limit, cpu_limit):
-    # Set maximum memory usage (bytes)
-    resource.setrlimit(resource.RLIMIT_AS, (memory_limit, memory_limit))
-    # Set maximum CPU time (seconds)
-    resource.setrlimit(resource.RLIMIT_CPU, (cpu_limit, cpu_limit))
+import os
+import csv
+import time
+from datetime import date
+from multiprocessing import Process, Queue
+import resource
 
+# Function to set resource limits
+def set_limits(memory_limit, cpu_limit):
+    resource.setrlimit(resource.RLIMIT_AS, (memory_limit, memory_limit))  # Set max memory (bytes)
+    resource.setrlimit(resource.RLIMIT_CPU, (cpu_limit, cpu_limit))      # Set max CPU time (seconds)
 
-# Wrapper function to execute the target function with resource limits
-def run_with_limits(func, args, memory_limit, cpu_limit, timeout, result_queue):
-    # Apply memory and CPU limits
-    set_limits(memory_limit, cpu_limit)
+# Wrapper to execute a function with resource limits
+def run_with_limits(func, args, memory_limit, cpu_limit, result_queue):
     try:
+        set_limits(memory_limit, cpu_limit)  # Apply resource limits
         start_time = time.time()
         result = func(*args)
         elapsed_time = time.time() - start_time
@@ -453,157 +456,96 @@ def run_with_limits(func, args, memory_limit, cpu_limit, timeout, result_queue):
     except Exception as e:
         result_queue.put({"error": str(e)})
 
-# Main function to run the target function with specified limits
-def run_experiment(func, args=(), memory_limit=8_192_000_000, cpu_limit=1800, timeout=None,
-                   metadata=("unknown", False, False)):
-    filename, old_compilation, has_social_law = metadata
+# Main Experimentator class
+class Experimentator:
+    def __init__(self, problems=[]):
+        self.problems = problems
+        self.mem_lim = 8_192_000_000  # 8 GB
+        self.cpu_lim = 1200  # 30 minutes
+        self.timeout = 1800  # 30 seconds timeout
+        self.slrc = get_new_slrc()  # Assuming this function initializes the required object
+        self.slrc.skip_checks = True
+        self.slrc._planner = OneshotPlanner(name ='tamer')
+        self.func = lambda p: check_robustness(self.slrc, p)  # Function to be executed
 
-    log_file = "./logs/experiment_log_" + date.today().strftime("%b-%d-%Y") + ".csv"
+        self.log_dir = './logs'
+        os.makedirs(self.log_dir, exist_ok=True)
+        self.file_path = f"./logs/experiment_log_{date.today().strftime('%b-%d-%Y')}.csv"
 
-    result_queue = Queue()
-    process = Process(target=run_with_limits, args=(func, args, memory_limit, cpu_limit, timeout, result_queue))
+    def experiment_once(self, problem, metadata=("unknown", False)):
+        filename, has_social_law = metadata
+        result_queue = Queue()
 
-    process.start()
-    process.join(timeout)
+        # Spawn a separate process to run the experiment
+        process = Process(target=run_with_limits,
+                          args=(self.func, (problem,), self.mem_lim, self.cpu_lim, result_queue))
+        process.start()
+        process.join(self.timeout)
 
-    if process.is_alive():
-        # Log the timeout with "-"
-        with open(log_file, mode="a", newline="") as file:
+        with open(self.file_path, mode="a", newline="") as file:
             writer = csv.writer(file)
-            writer.writerow(["-", filename, old_compilation, has_social_law])
+            if process.is_alive():
+                # Timeout: terminate the process and log
+                process.terminate()
+                process.join()
+                writer.writerow(["-", filename, has_social_law, 'timeout'])
+                return {"error": "Timeout reached", "elapsed_time": "-"}
 
-        process.terminate()
-        process.join()
-        return {"error": "Timeout reached", "elapsed_time": "-"}
+            if not result_queue.empty():
+                result = result_queue.get()
+                elapsed_time = result.get("time", "-")
+                writer.writerow([elapsed_time, filename, has_social_law, result['result']])
+                return result
+            else:
+                writer.writerow(["-", filename, has_social_law, 'NO_RES_ERR'])
+                return {"error": "No result (possibly killed due to resource limits)", "elapsed_time": "-"}
 
-    if not result_queue.empty():
-        result = result_queue.get()
-        actual_time = result.get("time", "-")  # Retrieve elapsed time or "-" if missing
-        with open(log_file, mode="a", newline="") as file:
+    def experiment_full(self):
+        total_problems = len(self.problems)
+        headers = ['time', 'name', 'has_social_law', 'result']
+
+        # Write headers to the log file
+        with open(self.file_path, mode="w", newline="") as file:
             writer = csv.writer(file)
-            writer.writerow([actual_time, filename, old_compilation, has_social_law])
-        return result
-    else:
-        with open(log_file, mode="a", newline="") as file:
-            writer = csv.writer(file)
-            writer.writerow(["-", filename, old_compilation, has_social_law])
-        return {"error": "No result (possibly killed due to resource limits)", "elapsed_time": "-"}
+            writer.writerow(headers)
 
-
-def run_experiments(problems, slrc_old_options=[True, False]):
-    total_problems = len(problems)
-
-    # problems = [random.choice(problems) for _ in range (3)]
-
-    log_dir = './logs'
-    os.makedirs(log_dir, exist_ok=True)
-
-    log_file = "./logs/experiment_log_" + date.today().strftime("%b-%d-%Y") + ".csv"
-
-    headers = ['time', 'name', 'slrc_is_old', 'has_social_law']
-
-    # Create or overwrite the CSV file with the specified headers
-    with open(log_file, mode='w', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(headers)
-    print(f'0/{total_problems} done.')
-    for i, (name, problem, has_social_law) in enumerate(problems):
-        for slrc_is_old in slrc_old_options:
+        print(f'0/{total_problems} done.')
+        for i, (name, problem, has_social_law) in enumerate(self.problems):
             try:
-                if slrc_is_old:
-                    slrc = get_old_slrc()
-                else:
-                    slrc = get_new_slrc()
-                run_experiment(
-                    func=check_robustness,
-                    args=(slrc, problem),
-                    memory_limit=8_192_000_000,  # 8 GB
-                    cpu_limit=1800,  # 30 minutes CPU time
-                    timeout=3600,  # 1 hour wall time
-                    metadata=(name, slrc_is_old, has_social_law)
-                )
+                self.experiment_once(problem, metadata=(name, has_social_law))
+            except Exception as e:
+                print(f'Error while running problem "{name}": {e}')
+            print(f'Problem "{name}" '+('with' if has_social_law else 'without')+' social law is done.')
+            print(f'{i + 1}/{total_problems} done.')
 
-            except:
-                pass
-            print(f'Problem ' + name + ' with ' + ('old' if slrc_is_old else 'new') + ' compilation is done.')
-        print(f'{i + 1}/{total_problems}')
-'''
+def run_exps():
+    exp = Experimentator()
+    filepaths = [
+    #            './numeric_problems/grid/json',
+    #             './numeric_problems/zenotravel/json',
+                 './numeric_problems/expedition/json',
+                 './numeric_problems/markettrader/json',
 
-
-def get_problems():
-    blocksworld_names = ['9-0', '9-1', '9-2', '10-0', '10-1', '10-2', '11-0', '11-1', '11-2', '12-0', '12-1', '13-0',
-                         '13-1', '14-0', '14-1', '15-0', '15-1', '16-1', '16-2', ]  # '17-0']
-    zenotravel_names = ['pfile3', 'pfile8']  # [f'pfile{i}' for i in range(3, 24)]
-    if 'pfile11' in zenotravel_names:
-        zenotravel_names.remove('pfile11')
-    # driverlog_names = [f'pfile{i}' for i in range(1, 21)].
-    driverlog_names = ['pfile1', 'pfile6', 'pfile7']
-    grid_names = [
-        (2, 3, 2),
-        (3, 3, 3),
-        (3, 4, 4),
-        (4, 4, 5),
-        (4, 5, 6),
-        (5, 5, 6),
-        (5, 6, 7),
-        (6, 6, 8),
-        (6, 7, 8),
-        (7, 7, 7),
-        (7, 8, 9),
-        (8, 2, 2),
-        (8, 3, 3),
-        (8, 4, 6),
-        (8, 5, 7),
-        (8, 6, 8),
-        (8, 7, 10),
-        (6, 8, 8),
-        (5, 8, 8),
-        (3, 5, 3)
-    ]
-    problems = []
-    driverlog_problems = []
-    for name in driverlog_names:
-        driverlog_problems.append((f'driverlog_{name}', problems.get_driverlog(name), False))
-    blocksworld_problems = [(f'blocksworld_{name}', problems.get_blocksworld(name), False) for name in
-                            blocksworld_names]
-    zenotravel_problems = [(f'zenotravel_{name}', problems.get_zenotravel(name), False) for name in zenotravel_names]
-    zenotravel_problems_with_SL = [
-        (f'zenotravel_SL_{name}', problems.zenotravel_add_sociallaw(problems.get_zenotravel(name)), True) for
-        name in zenotravel_names]
-    grid_problems = []
-    grid_problems_with_SL = []
-
-    for i, name in enumerate(grid_names):
-        gm = problems.GridManager(*name)
-        gm.init_locs = problems.INIT_LOCS[i]
-        gm.goal_locs = problems.GOAL_LOCS[i]
-        p = gm.get_grid_problem()
-        grid_problems.append(('grid_' + str(name).replace(' ', '_').replace(',', ''), p, False,))
-        grid_problems_with_SL.append((f'grid_SL_{name}', gm.add_direction_law(p), True))
-
-    problems += driverlog_problems
-    # problems += blocksworld_problems
-    problems += zenotravel_problems
-    # problems += zenotravel_problems_with_SL
-    # problems += grid_problems
-    # problems += grid_problems_with_SL
-    return problems
+                 ]
+    for i, pg_class in enumerate([
+    #                            ProblemGenerator.NumericGridGenerator,
+    #                              ProblemGenerator.NumericZenotravelGenerator,
+                                  ProblemGenerator.ExpeditionGenerator,
+                                  ProblemGenerator.MarketTraderGenerator
+                                  ]):
+        pg = pg_class()
+        pg.instances_folder = filepaths[i]
+        for prob_i in range(1, 20):
+            if i in []:
+                sl_options = [True, False]
+            else:
+                sl_options = [False, ]
+            for has_sl in sl_options:
+                prob = pg.generate_problem(f'pfile{prob_i}.json', sl=has_sl)
+                exp.problems.append((prob.name, prob, has_sl))
+                print(f'{prob.name} loaded')
+    #exp.experiment_full()
 
 
 if __name__ == '__main__':
-    pg = ProblemGenerator.NumericGridGenerator()
-    pg.instances_folder = r'./numeric_problems/grid/json'
-    problem = pg.generate_problem('pfile1.json', sl=False)
-    slrc = get_new_slrc()
-    slrc._planner = OneshotPlanner(name='tamer')
-    # print(check_robustness(slrc, problem))
-    sap = SingleAgentProjection(problem.agents[0])
-    sap.skip_checks = True
-    sap_prob = sap.compile(problem).problem
-    #simulate(sap_prob)
-    # print(problem)
-    comp = get_compiled_problem(problem)
-    print(comp)
-    with OneshotPlanner(name='tamer') as planner:
-        result = planner.solve(comp)
-        print(result)
+    run_exps()

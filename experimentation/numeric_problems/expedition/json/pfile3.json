@@ -3,7 +3,7 @@
 
 "init_values": {
 "global": [
-["=", ["waypoint_supplies", ["wa0"]], "1000"],
+["=", ["waypoint_supplies", ["wa0"]], "200"],
 ["=", ["waypoint_supplies", ["wa1"]], "0"],
 ["=", ["waypoint_supplies", ["wa2"]], "0"],
 ["=", ["waypoint_supplies", ["wa3"]], "0"],
