@@ -118,7 +118,7 @@ def simulate(problem, ma=False, print_state=False, trace_vars=[]):
         while True:
             try:
                 while True:
-                    choice = random.choice(range(len(actions)))#int(input('Choice: '))
+                    choice = random.choice(range(len(actions)))  # int(input('Choice: '))
                     if choice not in range(len(actions)):
                         print('Invalid index. Try again.')
                         continue
@@ -140,8 +140,8 @@ def simulate(problem, ma=False, print_state=False, trace_vars=[]):
                 print('No legal actions')
                 return
             print(f't = {t}\nActions:')
-            for i, a in enumerate (actions):
-                print(str(i)+'.', a[0].name, a[1])
+            for i, a in enumerate(actions):
+                print(str(i) + '.', a[0].name, a[1])
 
 
 def solve(problem, ma=False):
@@ -438,10 +438,12 @@ from datetime import date
 from multiprocessing import Process, Queue
 import resource
 
+
 # Function to set resource limits
 def set_limits(memory_limit, cpu_limit):
     resource.setrlimit(resource.RLIMIT_AS, (memory_limit, memory_limit))  # Set max memory (bytes)
-    resource.setrlimit(resource.RLIMIT_CPU, (cpu_limit, cpu_limit))      # Set max CPU time (seconds)
+    resource.setrlimit(resource.RLIMIT_CPU, (cpu_limit, cpu_limit))  # Set max CPU time (seconds)
+
 
 # Wrapper to execute a function with resource limits
 def run_with_limits(func, args, memory_limit, cpu_limit, result_queue):
@@ -456,6 +458,7 @@ def run_with_limits(func, args, memory_limit, cpu_limit, result_queue):
     except Exception as e:
         result_queue.put({"error": str(e)})
 
+
 # Main Experimentator class
 class Experimentator:
     def __init__(self, problems=[]):
@@ -465,7 +468,7 @@ class Experimentator:
         self.timeout = 1800  # 30 seconds timeout
         self.slrc = get_new_slrc()  # Assuming this function initializes the required object
         self.slrc.skip_checks = True
-        self.slrc._planner = OneshotPlanner(name ='tamer')
+        self.slrc._planner = OneshotPlanner(name='tamer')
         self.func = lambda p: check_robustness(self.slrc, p)  # Function to be executed
 
         self.log_dir = './logs'
@@ -515,28 +518,30 @@ class Experimentator:
                 self.experiment_once(problem, metadata=(name, has_social_law))
             except Exception as e:
                 print(f'Error while running problem "{name}": {e}')
-            print(f'Problem "{name}" '+('with' if has_social_law else 'without')+' social law is done.')
+            print(f'Problem "{name}" ' + ('with' if has_social_law else 'without') + ' social law is done.')
             print(f'{i + 1}/{total_problems} done.')
+
 
 def run_exps():
     exp = Experimentator()
     filepaths = [
-    #            './numeric_problems/grid/json',
-    #             './numeric_problems/zenotravel/json',
-                 './numeric_problems/expedition/json',
-                 './numeric_problems/markettrader/json',
+        './numeric_problems/grid/json',
+        './numeric_problems/zenotravel/json',
+        './numeric_problems/expedition/json',
+        './numeric_problems/markettrader/generated_json',
 
-                 ]
-    for i, pg_class in enumerate([
-    #                            ProblemGenerator.NumericGridGenerator,
-    #                              ProblemGenerator.NumericZenotravelGenerator,
-                                  ProblemGenerator.ExpeditionGenerator,
-                                  ProblemGenerator.MarketTraderGenerator
-                                  ]):
-        pg = pg_class()
-        pg.instances_folder = filepaths[i]
-        for prob_i in range(1, 20):
-            if i in []:
+    ]
+
+    for prob_i in range(1, 21):
+        for i, pg_class in enumerate([
+            ProblemGenerator.NumericGridGenerator,
+            ProblemGenerator.NumericZenotravelGenerator,
+            ProblemGenerator.ExpeditionGenerator,
+            ProblemGenerator.MarketTraderGenerator
+        ]):
+            pg = pg_class()
+            pg.instances_folder = filepaths[i]
+            if i in [0, 1, 2]:
                 sl_options = [True, False]
             else:
                 sl_options = [False, ]
@@ -544,7 +549,7 @@ def run_exps():
                 prob = pg.generate_problem(f'pfile{prob_i}.json', sl=has_sl)
                 exp.problems.append((prob.name, prob, has_sl))
                 print(f'{prob.name} loaded')
-    #exp.experiment_full()
+    exp.experiment_full()
 
 
 if __name__ == '__main__':

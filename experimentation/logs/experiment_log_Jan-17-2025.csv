@@ -1,0 +1,7 @@
+time,name,has_social_law,result
+820.8040428161621,market_trader_pfile1.json,False,SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_FAIL
+-,market_trader_pfile2.json,False,NO_RES_ERR
+-,market_trader_pfile3.json,False,NO_RES_ERR
+-,market_trader_pfile4.json,False,NO_RES_ERR
+-,market_trader_pfile5.json,False,NO_RES_ERR
+-,market_trader_pfile6.json,False,NO_RES_ERR

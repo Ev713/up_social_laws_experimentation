@@ -1,41 +1,110 @@
-# Import all the shortcuts, an handy way of using the unified_planning framework
-from unified_planning.shortcuts import *
-import experimentation
-# Declaring types
-Location = UserType("Location")
-
-# Creating problem ‘variables’
-robot_at = Fluent("robot_at", BoolType(), location=Location)
-battery_charge = Fluent("battery_charge", RealType(0, 100))
-
-# Creating actions
-move = InstantaneousAction("move", l_from=Location, l_to=Location)
-l_from = move.parameter("l_from")
-l_to = move.parameter("l_to")
-move.add_precondition(GE(battery_charge, 10))
-move.add_precondition(robot_at(l_from))
-move.add_precondition(Not(robot_at(l_to)))
-move.add_effect(robot_at(l_from), False)
-move.add_effect(robot_at(l_to), True)
-move.add_effect(battery_charge, Minus(battery_charge, 10))
-
-# Declaring objects
-l1 = Object("l1", Location)
-l2 = Object("l2", Location)
-
-# Populating the problem with initial state and goals
-problem = Problem("robot")
-problem.add_fluent(robot_at)
-problem.add_fluent(battery_charge)
-problem.add_action(move)
-problem.add_object(l1)
-problem.add_object(l2)
-problem.set_initial_value(robot_at(l1), True)
-problem.set_initial_value(robot_at(l2), False)
-problem.set_initial_value(battery_charge, 100)
-problem.add_goal(robot_at(l2))
+import os
+import random
+import json
 
 
-with OneshotPlanner(name='tamer',problem_kind=problem.kind) as planner:
-    result = planner.solve(problem)
-    print(result)
+def generate_instance(cities, goods, num_agents, avg_price, price_variance, cash, capacity, target_cash):
+    # Initialize the instance structure
+    instance = {
+        "market": cities,
+        "goods": goods,
+        "agents": [f"camel{i}" for i in range(num_agents)],
+        "init_values": {
+            "global": [],
+            "camel0": [],
+        },
+        "goals": {
+            "global": [],
+        }
+    }
+
+    # Generate prices and on-sale quantities for each good in each city
+    for good in goods:
+        cities_sell = random.sample(cities, min(len(cities), int(len(cities)/7)))
+        for city in cities:
+            price = round(avg_price + random.uniform(-price_variance, price_variance), 2)
+            sell_price = round(price * random.uniform(0.75, 2.0), 2)
+            instance["init_values"]["global"].append(["=", ["sellprice", [good, city]], str(sell_price)])
+
+            if city in cities_sell:
+                on_sale = random.randint(3, 15)
+            else:
+                continue
+            instance["init_values"]["global"].append(["=", ["price", [good, city]], str(price)])
+            instance["init_values"]["global"].append(["=", ["on-sale", [good, city]], str(on_sale)])
+
+    # Generate drive costs between cities
+    for city1 in cities:
+        for city2 in cities:
+            if city1 != city2:
+                drive_cost = round(random.uniform(1.0, 7.0), 2)
+                instance["init_values"]["global"].append(["=", ["drive-cost", [city1, city2]], str(drive_cost)])
+
+    # Initialize agents
+    for i in range(num_agents):
+        camel_name = f"camel{i}"
+        instance["init_values"][camel_name] = [
+            ["=", ["bought", [good]], "0"] for good in goods
+        ]
+        instance["init_values"][camel_name].append(["at", [random.choice(cities)]])
+        instance["init_values"][camel_name].append(["=", ["cash", []], str(cash)])
+        instance["init_values"][camel_name].append(["=", ["capacity", []], str(capacity)])
+
+        # Add drive permissions
+        for city1 in cities:
+            for city2 in cities:
+                if city1 != city2 and random.randint(1, 7) != 1:
+                    instance["init_values"][camel_name].append(["can-drive", [city1, city2]])
+
+        # Add goals for the agent
+        instance["goals"][camel_name] = [[">=", ["cash", []], str(target_cash)]]
+
+    return instance
+
+
+# Customize parameters
+all_cities = ["Athens", "Venice", "Moscow", "Nice", "Stockholm", "Jurmala", "Dublin", "Panemune", "Ogre", "Daugai",
+              "Oslo",
+              "Amsterdam", "Cesis", "Copenhagen", "Jelgava", "Dusetos", "Obeliai", "Riga", "Seda", "Sough",
+              "Gelgaudiskis",
+              "StPetersburg", "Rakvere", "Palanga", "Tartu", "Berlin", "Madrid", "Jieznas", "Mariehamn", "Kavarskas",
+              "Tukums", "Douglas", "Brussels", "Lisbon", "Valencia", "Edinburgh", "Neringa", "Kaunas", "Simnas",
+              "Paris",
+              "KudirkosNaumiestis", "Narva", "Valmiera", "Salaspils", "Longyearbyen", "London", "Cardiff", "Tallinn",
+              "Kadagopya", "Hamburg", "Vienna", "Thule", "Daugavpils", "Bonn", "Mandres", "Vilkija", "Rome", "Torshavn",
+              "Viljandi"]
+all_goods = ["ExpensiveRugs", "GummyBears", "Copper", "LaminateFloor", "Gold", "Footballs", "Platinum", "Water",
+             "Kittens",
+             "Food", "Computers", "DVDs", "TuringMachines", "Minerals", "Cars", "Coffee", "Cattle"]
+print(f'Total cities: {len(all_cities)}')
+print(f'Total goods: {len(all_goods)}')
+
+for i in range(1, 21):
+    print(f'\npfile{i}')
+    num_agents = max(2, 2 + int(i / 5) + random.randint(-1, 1))
+    print(f'Num. of agents: {num_agents}')
+    avg_price = 6
+    print(f'Average price: {avg_price}')
+    price_variance = 2.0
+    print(f'Price variance: {price_variance}')
+    cash = 10
+    print(f'Cash: {cash}')
+    capacity = 5
+    print(f'Capacity: {capacity}')
+    target_cash = round(15 + 300*(i/20)*(0.5+random.random()), 2)
+    print(f'Target cash: {target_cash}')
+    num_cities = 5 + int((len(all_cities) - 5) / 20 * i)
+    print(f'Num cities: {num_cities}')
+    num_goods = 2 + int((len(all_goods) - 2) / 20 * i)
+    print(f'Num of goods: {num_goods}')
+    cities = random.sample(all_cities, num_cities)
+    goods = random.sample(all_goods, num_goods)
+    random_instance = generate_instance(cities, goods, num_agents, avg_price, price_variance, cash, capacity,
+                                        target_cash)
+
+    directory = "./numeric_problems/generated_json/"
+    os.makedirs(directory, exist_ok=True)
+    file_path = os.path.join(directory, f"pfile{i}.json")
+    with open(f"numeric_problems/markettrader/generated_json/pfile{i}.json", "w") as file:
+        json.dump(random_instance, file, indent=4)
+
