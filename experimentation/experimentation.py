@@ -463,9 +463,9 @@ def run_with_limits(func, args, memory_limit, cpu_limit, result_queue):
 class Experimentator:
     def __init__(self, problems=[]):
         self.problems = problems
-        self.mem_lim = 8_192_000_000  # 8 GB
-        self.cpu_lim = 1200  # 30 minutes
-        self.timeout = 1800  # 30 seconds timeout
+        self.mem_lim = 16_000_000_000  # 8 GB
+        self.cpu_lim = 1800  # 30 minutes
+        self.timeout = 3600  # 30 seconds timeout
         self.slrc = get_new_slrc()  # Assuming this function initializes the required object
         self.slrc.skip_checks = True
         self.slrc._planner = OneshotPlanner(name='tamer')
