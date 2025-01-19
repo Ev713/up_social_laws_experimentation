@@ -467,7 +467,7 @@ class Experimentator:
         self.timeout = 3600  # 30 seconds timeout
         self.slrc = get_new_slrc()  # Assuming this function initializes the required object
         self.slrc.skip_checks = True
-        self.slrc._planner = OneshotPlanner(name='enhsp')
+        self.slrc._planner = OneshotPlanner(name='tamer')
         self.func = lambda p: check_robustness(self.slrc, p)  # Function to be executed
 
         self.log_dir = './logs'
