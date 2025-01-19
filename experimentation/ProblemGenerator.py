@@ -967,6 +967,7 @@ class NumericGridGenerator(NumericProblemGenerator):
         appear.add_precondition(is_free(x, y))
         appear.add_precondition(Not(on_map))
         appear.add_precondition(Not(left))
+
         appear.add_effect(agent_x(), init_x())
         appear.add_effect(agent_y(), init_y())
         appear.add_effect(on_map(), True)

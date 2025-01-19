@@ -160,7 +160,6 @@ def print_solution(problem):
         print(result)
 
 
-
 def centralise(problem):
     mac = MultiAgentProblemCentralizer()
     mac.skip_checks = True
@@ -171,9 +170,9 @@ def get_new_slrc():
     slrc = SocialLawRobustnessChecker(
         planner=None,
         robustness_verifier_name="WaitingActionRobustnessVerifier")
-
-    slrc.skip_checks=True
+    slrc.skip_checks = True
     return slrc
+
 
 def get_old_slrc():
     return SocialLawRobustnessChecker(
@@ -468,7 +467,7 @@ class Experimentator:
         self.timeout = 3600  # 30 seconds timeout
         self.slrc = get_new_slrc()  # Assuming this function initializes the required object
         self.slrc.skip_checks = True
-        self.slrc._planner = OneshotPlanner(name='tamer')
+        self.slrc._planner = OneshotPlanner(name='enhsp')
         self.func = lambda p: check_robustness(self.slrc, p)  # Function to be executed
 
         self.log_dir = './logs'
@@ -534,33 +533,35 @@ def run_exps():
         'zenotravel': './numeric_problems/zenotravel/json',
         'expedition': './numeric_problems/expedition/json',
         'markettrader': './numeric_problems/markettrader/generated_json',
-}
-
-    pgs = {
-           'grid':     ProblemGenerator.NumericGridGenerator,
-           'zenotravel':     ProblemGenerator.NumericZenotravelGenerator,
-           'expedition':     ProblemGenerator.ExpeditionGenerator,
-           'markettrader':     ProblemGenerator.MarketTraderGenerator
     }
 
-    domains = ['grid',
-               'zenotravel',
-               'expedition',
-               'markettrader'
-            ]
+    pgs = {
+        'grid': ProblemGenerator.NumericGridGenerator,
+        'zenotravel': ProblemGenerator.NumericZenotravelGenerator,
+        'expedition': ProblemGenerator.ExpeditionGenerator,
+        'markettrader': ProblemGenerator.MarketTraderGenerator
+    }
+
+    domains = [
+        # 'grid',
+        'zenotravel',
+        'expedition',
+        'markettrader'
+    ]
 
     for prob_i in range(1, 21):
         for domain in domains:
             pg = pgs[domain]()
             pg.instances_folder = filepaths[domain]
             if domain in ['grid', 'zenotravel', 'expedition']:
-                sl_options = [True]
+                sl_options = [False, True]
             else:
                 sl_options = [False, ]
             for has_sl in sl_options:
                 prob = pg.generate_problem(f'pfile{prob_i}.json', sl=has_sl)
                 exp.problems.append((prob.name, prob, has_sl))
                 print(f'{prob.name} loaded')
+
     exp.experiment_full()
 
 
