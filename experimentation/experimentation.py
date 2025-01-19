@@ -530,7 +530,7 @@ class Experimentator:
 def run_exps():
     exp = Experimentator()
     filepaths = {
-        'grid': '/home/evgeny/SocialLaws/up-social-laws/experimentation/numeric_problems/grid/json',
+        'grid': './numeric_problems/grid/json',
         'zenotravel': './numeric_problems/zenotravel/json',
         'expedition': './numeric_problems/expedition/json',
         'markettrader': './numeric_problems/markettrader/generated_json',
