@@ -1075,7 +1075,7 @@ class ExpeditionGenerator(NumericProblemGenerator):
             sl.add_precondition_to_action(a.name, 'retrieve_supplies', 'personal_packs', ('w',), '>=', 1)
             sl.add_effect(a.name, 'retrieve_supplies', 'personal_packs', ('w',), 1, '-')
             sl.add_effect(a.name, 'store_supplies', 'personal_packs', ('w',), 1, '+')
-            sl.set_initial_value_for_new_fluent(a.name, 'personal_packs', ('w0'),
+            sl.set_initial_value_for_new_fluent(a.name, 'personal_packs', ('wa0', ),
                                                 float(self.instance_data['init_values']['global'][0][2]) / len(
                                                     self.problem.agents))
         self.problem = sl.compile(self.problem).problem
