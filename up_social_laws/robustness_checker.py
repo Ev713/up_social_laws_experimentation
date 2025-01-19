@@ -164,7 +164,7 @@ class SocialLawRobustnessChecker(engines.engine.Engine, mixins.OneshotPlannerMix
 ### #           problem_kind=problem.kind,
             compilation_kind=CompilationKind.MA_SL_ROBUSTNESS_VERIFICATION)
         ###
-        rbv.skip_checks=True
+        rbv.skip_checks = True
         ###
 
         rbv_result = rbv.compile(problem)

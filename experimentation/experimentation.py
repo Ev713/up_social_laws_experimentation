@@ -82,6 +82,7 @@ def get_compiled_problem(problem):
         name=get_new_slrc()._robustness_verifier_name,
         problem_kind=problem.kind,
         compilation_kind=CompilationKind.MA_SL_ROBUSTNESS_VERIFICATION)
+    rbv.skip_checks = True
 
     return rbv.compile(problem).problem
 
@@ -159,10 +160,6 @@ def print_solution(problem):
         print(result)
 
 
-def print_robustness(problem):
-    slrc = SocialLawRobustnessChecker()
-    print(slrc.is_robust(problem).status)
-
 
 def centralise(problem):
     mac = MultiAgentProblemCentralizer()
@@ -171,10 +168,12 @@ def centralise(problem):
 
 
 def get_new_slrc():
-    return SocialLawRobustnessChecker(
+    slrc = SocialLawRobustnessChecker(
         planner=None,
         robustness_verifier_name="WaitingActionRobustnessVerifier")
 
+    slrc.skip_checks=True
+    return slrc
 
 def get_old_slrc():
     return SocialLawRobustnessChecker(
@@ -525,30 +524,37 @@ class Experimentator:
             except Exception as e:
                 print(f'Error while checking robustness of "{name}": {e}')
             # Format the time (optional)
-            print(f'{i + 1}/{total_problems} done')
+            print(f'{i + 1}/{total_problems} done\n')
 
 
 def run_exps():
     exp = Experimentator()
-    filepaths = [
-        './numeric_problems/grid/json',
-        './numeric_problems/zenotravel/json',
-        './numeric_problems/expedition/json',
-        './numeric_problems/markettrader/generated_json',
+    filepaths = {
+        'grid': '/home/evgeny/SocialLaws/up-social-laws/experimentation/numeric_problems/grid/json',
+        'zenotravel': './numeric_problems/zenotravel/json',
+        'expedition': './numeric_problems/expedition/json',
+        'markettrader': './numeric_problems/markettrader/generated_json',
+}
 
-    ]
+    pgs = {
+           'grid':     ProblemGenerator.NumericGridGenerator,
+           'zenotravel':     ProblemGenerator.NumericZenotravelGenerator,
+           'expedition':     ProblemGenerator.ExpeditionGenerator,
+           'markettrader':     ProblemGenerator.MarketTraderGenerator
+    }
+
+    domains = ['grid',
+               'zenotravel',
+               'expedition',
+               'markettrader'
+            ]
 
     for prob_i in range(1, 21):
-        for i, pg_class in enumerate([
-            ProblemGenerator.NumericGridGenerator,
-            ProblemGenerator.NumericZenotravelGenerator,
-            ProblemGenerator.ExpeditionGenerator,
-            ProblemGenerator.MarketTraderGenerator
-        ]):
-            pg = pg_class()
-            pg.instances_folder = filepaths[i]
-            if i in [0, 1, 2]:
-                sl_options = [True, False]
+        for domain in domains:
+            pg = pgs[domain]()
+            pg.instances_folder = filepaths[domain]
+            if domain in ['grid', 'zenotravel', 'expedition']:
+                sl_options = [True]
             else:
                 sl_options = [False, ]
             for has_sl in sl_options:
