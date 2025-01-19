@@ -700,6 +700,8 @@ class NumericProblemGenerator(ProblemGenerator):
                 value = True
                 if fluentuple[0] in OPERATORS:
                     value = float(fluentuple[-1])
+                    if value % 1 == 0:
+                        value = int(value)
                     fluentuple = fluentuple[1]
 
                 if key == 'global':
@@ -774,7 +776,7 @@ class NumericZenotravelGenerator(NumericProblemGenerator):
 
     def generate_problem(self, file_name, sl=False):
         self.load_instance_data(file_name)
-        self.problem = MultiAgentProblemWithWaitfor('zenotravel_'+file_name)
+        self.problem = MultiAgentProblemWithWaitfor('zenotravel_' + file_name)
         self.agent_type_name = 'plane'
 
         # Object types
@@ -917,7 +919,7 @@ class NumericGridGenerator(NumericProblemGenerator):
                 if y < max_y and x < max_x:
                     for a in self.problem.agents:
                         direction_law.disallow_action(a.name, 'move_right', (x, y, x + 1, y))
-                if y >min_y and x > min_x:
+                if y > min_y and x > min_x:
                     for a in self.problem.agents:
                         direction_law.disallow_action(a.name, 'move_left', (x, y, x - 1, y))
                 if x not in up_columns and y < max_y:
@@ -937,7 +939,7 @@ class NumericGridGenerator(NumericProblemGenerator):
 
     def generate_problem(self, file_name, sl=False):
         self.load_instance_data(file_name)
-        self.problem = MultiAgentProblemWithWaitfor('grid_'+file_name)
+        self.problem = MultiAgentProblemWithWaitfor('grid_' + file_name)
 
         min_x = self.instance_data['min_x']
         max_x = self.instance_data['max_x']
@@ -957,7 +959,7 @@ class NumericGridGenerator(NumericProblemGenerator):
         left = Fluent('left', BoolType(), )
 
         # Actions
-        appear = InstantaneousAction('appear', x = IntType(min_x, max_x), y = IntType(min_y, max_y))
+        appear = InstantaneousAction('appear', x=IntType(min_x, max_x), y=IntType(min_y, max_y))
         x = appear.parameter('x')
         y = appear.parameter('y')
         appear.add_precondition(Equals(x, init_x()))
@@ -1073,6 +1075,9 @@ class ExpeditionGenerator(NumericProblemGenerator):
             sl.add_precondition_to_action(a.name, 'retrieve_supplies', 'personal_packs', ('w',), '>=', 1)
             sl.add_effect(a.name, 'retrieve_supplies', 'personal_packs', ('w',), 1, '-')
             sl.add_effect(a.name, 'store_supplies', 'personal_packs', ('w',), 1, '+')
+            sl.set_initial_value_for_new_fluent(a.name, 'personal_packs', ('w0'),
+                                                self.instance_data['init_values']['global'][0][2] / len(
+                                                    self.problem.agents))
         self.problem = sl.compile(self.problem).problem
         return self.problem
 
@@ -1089,7 +1094,7 @@ class ExpeditionGenerator(NumericProblemGenerator):
         return s
 
     def generate_problem(self, file_name, sl=False):
-        self.problem = MultiAgentProblemWithWaitfor('expedition_'+file_name)
+        self.problem = MultiAgentProblemWithWaitfor('expedition_' + file_name)
         self.load_instance_data(file_name)
 
         waypoint = UserType('waypoint')
@@ -1153,7 +1158,7 @@ class ExpeditionGenerator(NumericProblemGenerator):
 
 class MarketTraderGenerator(NumericProblemGenerator):
     def generate_problem(self, file_name, sl=False):
-        self.problem = MultiAgentProblemWithWaitfor('market_trader_'+file_name)
+        self.problem = MultiAgentProblemWithWaitfor('market_trader_' + file_name)
         self.load_instance_data(file_name)
         market = UserType('market')
         goods = UserType('goods')
@@ -1250,9 +1255,4 @@ class MarketTraderGenerator(NumericProblemGenerator):
 
 
 if __name__ == '__main__':
-    for i in range(1, 21):
-        pg = ExpeditionGenerator()
-        pg.instances_folder = './numeric_problems/expedition/json'
-        problem = pg.generate_problem(f'pfile{i}.json', sl=True)
-        print(problem)
-        break
+    pass
