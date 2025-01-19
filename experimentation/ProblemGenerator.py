@@ -776,7 +776,7 @@ class NumericZenotravelGenerator(NumericProblemGenerator):
 
     def generate_problem(self, file_name, sl=False):
         self.load_instance_data(file_name)
-        self.problem = MultiAgentProblemWithWaitfor('zenotravel_' + file_name)
+        self.problem = MultiAgentProblemWithWaitfor('zenotravel_' + file_name.replace('.json', ''))
         self.agent_type_name = 'plane'
 
         # Object types
@@ -939,7 +939,7 @@ class NumericGridGenerator(NumericProblemGenerator):
 
     def generate_problem(self, file_name, sl=False):
         self.load_instance_data(file_name)
-        self.problem = MultiAgentProblemWithWaitfor('grid_' + file_name)
+        self.problem = MultiAgentProblemWithWaitfor('grid_' + file_name.replace('.json', ''))
 
         min_x = self.instance_data['min_x']
         max_x = self.instance_data['max_x']
@@ -1094,7 +1094,7 @@ class ExpeditionGenerator(NumericProblemGenerator):
         return s
 
     def generate_problem(self, file_name, sl=False):
-        self.problem = MultiAgentProblemWithWaitfor('expedition_' + file_name)
+        self.problem = MultiAgentProblemWithWaitfor('expedition_' + file_name.replace('.json', ''))
         self.load_instance_data(file_name)
 
         waypoint = UserType('waypoint')
@@ -1158,7 +1158,7 @@ class ExpeditionGenerator(NumericProblemGenerator):
 
 class MarketTraderGenerator(NumericProblemGenerator):
     def generate_problem(self, file_name, sl=False):
-        self.problem = MultiAgentProblemWithWaitfor('market_trader_' + file_name)
+        self.problem = MultiAgentProblemWithWaitfor('market_trader_' + file_name.replace('.json', ''))
         self.load_instance_data(file_name)
         market = UserType('market')
         goods = UserType('goods')

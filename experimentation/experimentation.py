@@ -1,4 +1,5 @@
 import csv
+import datetime
 import json
 from datetime import date
 
@@ -514,12 +515,17 @@ class Experimentator:
 
         print(f'0/{total_problems} done.')
         for i, (name, problem, has_social_law) in enumerate(self.problems):
+            current_time = datetime.datetime.now()
+            formatted_time = current_time.strftime("%Y-%m-%d %H:%M:%S")
+            print(f'Starting checking robustness of: {name} at time: {formatted_time}')
             try:
-                self.experiment_once(problem, metadata=(name, has_social_law))
+                result = self.experiment_once(problem, metadata=(name, has_social_law))
+                print(f'Problem "{name}" ' + (
+                    'with' if has_social_law else 'without') + f' social law is done with result:\n{result}')
             except Exception as e:
-                print(f'Error while running problem "{name}": {e}')
-            print(f'Problem "{name}" ' + ('with' if has_social_law else 'without') + ' social law is done.')
-            print(f'{i + 1}/{total_problems} done.')
+                print(f'Error while checking robustness of "{name}": {e}')
+            # Format the time (optional)
+            print(f'{i + 1}/{total_problems} done')
 
 
 def run_exps():
