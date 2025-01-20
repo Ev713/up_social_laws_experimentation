@@ -81,7 +81,7 @@ print(f'Total goods: {len(all_goods)}')
 
 for i in range(1, 21):
     print(f'\npfile{i}')
-    num_agents = max(2, 2 + int(i / 5) + random.randint(-1, 1))
+    num_agents = max(2, 2 + int(i / 7) + random.randint(-1, 1))
     print(f'Num. of agents: {num_agents}')
     avg_price = 6
     print(f'Average price: {avg_price}')
@@ -91,11 +91,11 @@ for i in range(1, 21):
     print(f'Cash: {cash}')
     capacity = 5
     print(f'Capacity: {capacity}')
-    target_cash = round(15 + 300*(i/20)*(0.5+random.random()), 2)
+    target_cash = int(15 + 50*(i/20)*(0.5+random.random()))
     print(f'Target cash: {target_cash}')
-    num_cities = 5 + int((len(all_cities) - 5) / 20 * i)
+    num_cities = 5 + int((len(all_cities) - 40) / 20 * i)
     print(f'Num cities: {num_cities}')
-    num_goods = 2 + int((len(all_goods) - 2) / 20 * i)
+    num_goods = 1 + int((len(all_goods) - 10) / 20 * i)
     print(f'Num of goods: {num_goods}')
     cities = random.sample(all_cities, num_cities)
     goods = random.sample(all_goods, num_goods)

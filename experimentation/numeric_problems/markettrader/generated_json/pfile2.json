@@ -1,20 +1,14 @@
 {
     "market": [
-        "Rome",
-        "Vilkija",
-        "Dusetos",
-        "Thule",
-        "Jieznas",
-        "Ogre",
-        "Douglas",
-        "Stockholm",
         "Edinburgh",
-        "Tartu"
+        "Vilkija",
+        "Paris",
+        "Valmiera",
+        "KudirkosNaumiestis",
+        "Gelgaudiskis"
     ],
     "goods": [
-        "Minerals",
-        "DVDs",
-        "Copper"
+        "Footballs"
     ],
     "agents": [
         "camel0",
@@ -27,591 +21,63 @@
                 [
                     "sellprice",
                     [
-                        "Minerals",
-                        "Rome"
+                        "Footballs",
+                        "Edinburgh"
                     ]
                 ],
-                "13.95"
+                "9.06"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Minerals",
+                        "Footballs",
                         "Vilkija"
                     ]
                 ],
-                "5.01"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "Minerals",
-                        "Vilkija"
-                    ]
-                ],
-                "5.28"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "Minerals",
-                        "Vilkija"
-                    ]
-                ],
-                "4"
+                "9.97"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Minerals",
-                        "Dusetos"
+                        "Footballs",
+                        "Paris"
                     ]
                 ],
-                "8.35"
+                "7.22"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Minerals",
-                        "Thule"
+                        "Footballs",
+                        "Valmiera"
                     ]
                 ],
-                "8.96"
+                "6.82"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Minerals",
-                        "Jieznas"
+                        "Footballs",
+                        "KudirkosNaumiestis"
                     ]
                 ],
-                "7.72"
+                "6.14"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Minerals",
-                        "Ogre"
-                    ]
-                ],
-                "5.49"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Douglas"
-                    ]
-                ],
-                "11.99"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Stockholm"
-                    ]
-                ],
-                "4.71"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Edinburgh"
-                    ]
-                ],
-                "8.83"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Tartu"
-                    ]
-                ],
-                "9.31"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Rome"
-                    ]
-                ],
-                "9.23"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Vilkija"
-                    ]
-                ],
-                "8.41"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Dusetos"
-                    ]
-                ],
-                "7.21"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Thule"
-                    ]
-                ],
-                "10.31"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Jieznas"
-                    ]
-                ],
-                "5.05"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Ogre"
-                    ]
-                ],
-                "9.23"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "DVDs",
-                        "Ogre"
-                    ]
-                ],
-                "4.83"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "DVDs",
-                        "Ogre"
-                    ]
-                ],
-                "9"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Douglas"
-                    ]
-                ],
-                "11.82"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Stockholm"
-                    ]
-                ],
-                "8.44"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Edinburgh"
-                    ]
-                ],
-                "8.01"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Tartu"
-                    ]
-                ],
-                "12.88"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Copper",
-                        "Rome"
-                    ]
-                ],
-                "5.3"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Copper",
-                        "Vilkija"
-                    ]
-                ],
-                "11.38"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Copper",
-                        "Dusetos"
-                    ]
-                ],
-                "5.19"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Copper",
-                        "Thule"
-                    ]
-                ],
-                "4.9"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Copper",
-                        "Jieznas"
-                    ]
-                ],
-                "9.7"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Copper",
-                        "Ogre"
-                    ]
-                ],
-                "11.77"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Copper",
-                        "Douglas"
-                    ]
-                ],
-                "6.63"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Copper",
-                        "Stockholm"
-                    ]
-                ],
-                "5.04"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Copper",
-                        "Edinburgh"
-                    ]
-                ],
-                "4.21"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "Copper",
-                        "Edinburgh"
-                    ]
-                ],
-                "5.36"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "Copper",
-                        "Edinburgh"
-                    ]
-                ],
-                "5"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Copper",
-                        "Tartu"
-                    ]
-                ],
-                "6.22"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Vilkija"
-                    ]
-                ],
-                "6.52"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Dusetos"
-                    ]
-                ],
-                "1.12"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Thule"
-                    ]
-                ],
-                "1.83"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Jieznas"
-                    ]
-                ],
-                "5.56"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Ogre"
-                    ]
-                ],
-                "6.51"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Douglas"
-                    ]
-                ],
-                "5.71"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Stockholm"
-                    ]
-                ],
-                "4.57"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Edinburgh"
-                    ]
-                ],
-                "4.62"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Tartu"
-                    ]
-                ],
-                "6.08"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Vilkija",
-                        "Rome"
-                    ]
-                ],
-                "5.35"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Vilkija",
-                        "Dusetos"
-                    ]
-                ],
-                "5.71"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Vilkija",
-                        "Thule"
-                    ]
-                ],
-                "3.92"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Vilkija",
-                        "Jieznas"
-                    ]
-                ],
-                "4.96"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Vilkija",
-                        "Ogre"
-                    ]
-                ],
-                "2.08"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Vilkija",
-                        "Douglas"
-                    ]
-                ],
-                "5.29"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Vilkija",
-                        "Stockholm"
-                    ]
-                ],
-                "6.03"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Vilkija",
-                        "Edinburgh"
-                    ]
-                ],
-                "3.92"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Vilkija",
-                        "Tartu"
+                        "Footballs",
+                        "Gelgaudiskis"
                     ]
                 ],
                 "5.8"
@@ -621,261 +87,74 @@
                 [
                     "drive-cost",
                     [
-                        "Dusetos",
-                        "Rome"
-                    ]
-                ],
-                "2.11"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Dusetos",
+                        "Edinburgh",
                         "Vilkija"
                     ]
                 ],
-                "5.15"
+                "3.46"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Dusetos",
-                        "Thule"
+                        "Edinburgh",
+                        "Paris"
                     ]
                 ],
-                "3.82"
+                "4.05"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Dusetos",
-                        "Jieznas"
+                        "Edinburgh",
+                        "Valmiera"
                     ]
                 ],
-                "2.14"
+                "1.77"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Dusetos",
-                        "Ogre"
+                        "Edinburgh",
+                        "KudirkosNaumiestis"
                     ]
                 ],
-                "2.73"
+                "2.35"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Dusetos",
-                        "Douglas"
+                        "Edinburgh",
+                        "Gelgaudiskis"
                     ]
                 ],
-                "1.49"
+                "5.3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Dusetos",
-                        "Stockholm"
-                    ]
-                ],
-                "1.63"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Dusetos",
+                        "Vilkija",
                         "Edinburgh"
                     ]
                 ],
-                "4.24"
+                "4.98"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Dusetos",
-                        "Tartu"
-                    ]
-                ],
-                "2.36"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Rome"
-                    ]
-                ],
-                "1.79"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Vilkija"
-                    ]
-                ],
-                "6.52"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Dusetos"
-                    ]
-                ],
-                "6.15"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Jieznas"
-                    ]
-                ],
-                "3.42"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Ogre"
-                    ]
-                ],
-                "6.66"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Douglas"
-                    ]
-                ],
-                "3.55"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Stockholm"
-                    ]
-                ],
-                "5.04"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Edinburgh"
-                    ]
-                ],
-                "6.01"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Tartu"
-                    ]
-                ],
-                "5.9"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jieznas",
-                        "Rome"
-                    ]
-                ],
-                "5.5"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jieznas",
-                        "Vilkija"
-                    ]
-                ],
-                "2.72"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jieznas",
-                        "Dusetos"
-                    ]
-                ],
-                "6.82"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jieznas",
-                        "Thule"
-                    ]
-                ],
-                "1.28"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jieznas",
-                        "Ogre"
-                    ]
-                ],
-                "4.63"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jieznas",
-                        "Douglas"
+                        "Vilkija",
+                        "Paris"
                     ]
                 ],
                 "6.26"
@@ -885,528 +164,253 @@
                 [
                     "drive-cost",
                     [
-                        "Jieznas",
-                        "Stockholm"
+                        "Vilkija",
+                        "Valmiera"
                     ]
                 ],
-                "6.14"
+                "6.15"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jieznas",
+                        "Vilkija",
+                        "KudirkosNaumiestis"
+                    ]
+                ],
+                "5.13"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Vilkija",
+                        "Gelgaudiskis"
+                    ]
+                ],
+                "4.18"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Paris",
                         "Edinburgh"
                     ]
                 ],
-                "5.89"
+                "2.43"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jieznas",
-                        "Tartu"
-                    ]
-                ],
-                "6.69"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
-                        "Rome"
-                    ]
-                ],
-                "3.49"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
+                        "Paris",
                         "Vilkija"
                     ]
                 ],
-                "2.47"
+                "1.29"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "Dusetos"
+                        "Paris",
+                        "Valmiera"
                     ]
                 ],
-                "2.31"
+                "5.32"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "Thule"
+                        "Paris",
+                        "KudirkosNaumiestis"
                     ]
                 ],
-                "5.92"
+                "6.8"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "Jieznas"
+                        "Paris",
+                        "Gelgaudiskis"
                     ]
                 ],
-                "3.31"
+                "3.68"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "Douglas"
-                    ]
-                ],
-                "6.91"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
-                        "Stockholm"
-                    ]
-                ],
-                "6.88"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
+                        "Valmiera",
                         "Edinburgh"
                     ]
                 ],
-                "3.88"
+                "3.44"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "Tartu"
-                    ]
-                ],
-                "6.85"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Douglas",
-                        "Rome"
-                    ]
-                ],
-                "6.91"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Douglas",
+                        "Valmiera",
                         "Vilkija"
                     ]
                 ],
-                "1.33"
+                "5.62"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Douglas",
-                        "Dusetos"
+                        "Valmiera",
+                        "Paris"
                     ]
                 ],
-                "2.06"
+                "1.59"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Douglas",
-                        "Thule"
+                        "Valmiera",
+                        "KudirkosNaumiestis"
                     ]
                 ],
-                "5.88"
+                "1.59"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Douglas",
-                        "Jieznas"
+                        "Valmiera",
+                        "Gelgaudiskis"
                     ]
                 ],
-                "2.86"
+                "6.09"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Douglas",
-                        "Ogre"
-                    ]
-                ],
-                "1.24"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Douglas",
-                        "Stockholm"
-                    ]
-                ],
-                "4.92"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Douglas",
+                        "KudirkosNaumiestis",
                         "Edinburgh"
                     ]
                 ],
-                "1.34"
+                "2.84"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Douglas",
-                        "Tartu"
-                    ]
-                ],
-                "2.92"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Stockholm",
-                        "Rome"
-                    ]
-                ],
-                "6.11"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Stockholm",
+                        "KudirkosNaumiestis",
                         "Vilkija"
                     ]
                 ],
-                "5.35"
+                "1.73"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Stockholm",
-                        "Dusetos"
+                        "KudirkosNaumiestis",
+                        "Paris"
                     ]
                 ],
-                "2.24"
+                "1.47"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Stockholm",
-                        "Thule"
+                        "KudirkosNaumiestis",
+                        "Valmiera"
                     ]
                 ],
-                "1.95"
+                "1.97"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Stockholm",
-                        "Jieznas"
+                        "KudirkosNaumiestis",
+                        "Gelgaudiskis"
                     ]
                 ],
-                "1.15"
+                "6.76"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Stockholm",
-                        "Ogre"
-                    ]
-                ],
-                "4.66"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Stockholm",
-                        "Douglas"
-                    ]
-                ],
-                "3.12"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Stockholm",
+                        "Gelgaudiskis",
                         "Edinburgh"
                     ]
                 ],
-                "5.76"
+                "5.78"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Stockholm",
-                        "Tartu"
-                    ]
-                ],
-                "3.91"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Rome"
-                    ]
-                ],
-                "6.04"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
+                        "Gelgaudiskis",
                         "Vilkija"
                     ]
                 ],
-                "5.12"
+                "1.73"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Edinburgh",
-                        "Dusetos"
+                        "Gelgaudiskis",
+                        "Paris"
                     ]
                 ],
-                "6.29"
+                "6.38"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Edinburgh",
-                        "Thule"
+                        "Gelgaudiskis",
+                        "Valmiera"
                     ]
                 ],
-                "4.34"
+                "4.44"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Edinburgh",
-                        "Jieznas"
+                        "Gelgaudiskis",
+                        "KudirkosNaumiestis"
                     ]
                 ],
-                "4.92"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Ogre"
-                    ]
-                ],
-                "2.78"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Douglas"
-                    ]
-                ],
-                "5.06"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Stockholm"
-                    ]
-                ],
-                "4.5"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Tartu"
-                    ]
-                ],
-                "5.94"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tartu",
-                        "Rome"
-                    ]
-                ],
-                "2.64"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tartu",
-                        "Vilkija"
-                    ]
-                ],
-                "4.77"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tartu",
-                        "Dusetos"
-                    ]
-                ],
-                "5.89"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tartu",
-                        "Thule"
-                    ]
-                ],
-                "1.71"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tartu",
-                        "Jieznas"
-                    ]
-                ],
-                "4.85"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tartu",
-                        "Ogre"
-                    ]
-                ],
-                "5.86"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tartu",
-                        "Douglas"
-                    ]
-                ],
-                "2.67"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tartu",
-                        "Stockholm"
-                    ]
-                ],
-                "3.59"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tartu",
-                        "Edinburgh"
-                    ]
-                ],
-                "2.34"
+                "3.89"
             ]
         ],
         "camel0": [
@@ -1415,27 +419,7 @@
                 [
                     "bought",
                     [
-                        "Minerals"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "DVDs"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "Copper"
+                        "Footballs"
                     ]
                 ],
                 "0"
@@ -1443,7 +427,7 @@
             [
                 "at",
                 [
-                    "Stockholm"
+                    "KudirkosNaumiestis"
                 ]
             ],
             [
@@ -1465,433 +449,6 @@
             [
                 "can-drive",
                 [
-                    "Rome",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Tartu"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Tartu"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dusetos",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dusetos",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dusetos",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dusetos",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dusetos",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Tartu"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Tartu"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Tartu"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
                     "Edinburgh",
                     "Vilkija"
                 ]
@@ -1900,112 +457,175 @@
                 "can-drive",
                 [
                     "Edinburgh",
-                    "Dusetos"
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Edinburgh",
-                    "Thule"
+                    "Valmiera"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Edinburgh",
-                    "Jieznas"
+                    "KudirkosNaumiestis"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Edinburgh",
-                    "Ogre"
+                    "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Douglas"
+                    "Vilkija",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Stockholm"
+                    "Vilkija",
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Tartu"
+                    "Vilkija",
+                    "Valmiera"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tartu",
-                    "Rome"
+                    "Vilkija",
+                    "KudirkosNaumiestis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tartu",
+                    "Vilkija",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Paris",
+                    "Edinburgh"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Paris",
                     "Vilkija"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tartu",
-                    "Dusetos"
+                    "Paris",
+                    "Valmiera"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tartu",
-                    "Thule"
+                    "Paris",
+                    "KudirkosNaumiestis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tartu",
-                    "Jieznas"
+                    "Paris",
+                    "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tartu",
-                    "Ogre"
+                    "Valmiera",
+                    "Vilkija"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tartu",
-                    "Douglas"
+                    "Valmiera",
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tartu",
-                    "Stockholm"
+                    "Valmiera",
+                    "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tartu",
+                    "KudirkosNaumiestis",
+                    "Vilkija"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "KudirkosNaumiestis",
+                    "Valmiera"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "KudirkosNaumiestis",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
                     "Edinburgh"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Vilkija"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Paris"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Valmiera"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "KudirkosNaumiestis"
                 ]
             ]
         ],
@@ -2015,27 +635,7 @@
                 [
                     "bought",
                     [
-                        "Minerals"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "DVDs"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "Copper"
+                        "Footballs"
                     ]
                 ],
                 "0"
@@ -2065,540 +665,183 @@
             [
                 "can-drive",
                 [
-                    "Rome",
+                    "Edinburgh",
                     "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Tartu"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dusetos",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dusetos",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dusetos",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dusetos",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dusetos",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dusetos",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dusetos",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dusetos",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dusetos",
-                    "Tartu"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Tartu"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Tartu"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Tartu"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Tartu"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Edinburgh",
-                    "Rome"
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Edinburgh",
-                    "Dusetos"
+                    "Valmiera"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Edinburgh",
-                    "Jieznas"
+                    "KudirkosNaumiestis"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Edinburgh",
-                    "Ogre"
+                    "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Douglas"
+                    "Vilkija",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Stockholm"
+                    "Vilkija",
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Tartu"
+                    "Vilkija",
+                    "Valmiera"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tartu",
+                    "Vilkija",
+                    "KudirkosNaumiestis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Vilkija",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Paris",
+                    "Valmiera"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Valmiera",
+                    "Edinburgh"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Valmiera",
                     "Vilkija"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tartu",
-                    "Dusetos"
+                    "Valmiera",
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tartu",
-                    "Thule"
+                    "Valmiera",
+                    "KudirkosNaumiestis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tartu",
-                    "Jieznas"
+                    "Valmiera",
+                    "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tartu",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tartu",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tartu",
+                    "KudirkosNaumiestis",
                     "Edinburgh"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "KudirkosNaumiestis",
+                    "Vilkija"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "KudirkosNaumiestis",
+                    "Paris"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "KudirkosNaumiestis",
+                    "Valmiera"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "KudirkosNaumiestis",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Edinburgh"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Vilkija"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Paris"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Valmiera"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "KudirkosNaumiestis"
                 ]
             ]
         ]
@@ -2612,7 +855,7 @@
                     "cash",
                     []
                 ],
-                "57.26"
+                "17.9"
             ]
         ],
         "camel1": [
@@ -2622,7 +865,7 @@
                     "cash",
                     []
                 ],
-                "57.26"
+                "17.9"
             ]
         ]
     }

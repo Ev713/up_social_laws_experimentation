@@ -243,14 +243,14 @@ def get_intersection_problem(
     #     :agent    ?a - car
     #     :parameters  (?l - loc)
     #     :precondition  (and
-    #     	(start ?a ?l)
-    #     	(not (arrived ?a))
-    #     	(free ?l)
+    #         (start ?a ?l)
+    #         (not (arrived ?a))
+    #         (free ?l)
     #       )
     #     :effect    (and
-    #     	(at ?a ?l)
-    #     	(not (free ?l))
-    #     	(arrived ?a)
+    #         (at ?a ?l)
+    #         (not (free ?l))
+    #         (arrived ?a)
     #       )
     #   )
     if durative:
@@ -280,18 +280,18 @@ def get_intersection_problem(
     #     :agent    ?a - car
     #     :parameters  (?l1 - loc ?l2 - loc ?d - direction ?ly - loc)
     #     :precondition  (and
-    #     	(at ?a ?l1)
-    #     	(free ?l2)
-    #     	(travel-direction ?a ?d)
-    #     	(connected ?l1 ?l2 ?d)
-    #     	(yields-to ?l1 ?ly)
-    #     	(free ?ly)
+    #         (at ?a ?l1)
+    #         (free ?l2)
+    #         (travel-direction ?a ?d)
+    #         (connected ?l1 ?l2 ?d)
+    #         (yields-to ?l1 ?ly)
+    #         (free ?ly)
     #       )
     #     :effect    (and
-    #     	(at ?a ?l2)
-    #     	(not (free ?l2))
-    #     	(not (at ?a ?l1))
-    #     	(free ?l1)
+    #         (at ?a ?l2)
+    #         (not (free ?l2))
+    #         (not (at ?a ?l1))
+    #         (free ?l1)
     #       )
     #    )
     # )
@@ -543,8 +543,8 @@ class Experimentator:
         domains = [
             #'grid',
             #    'zenotravel',
-                'expedition',
-            #    'markettrader'
+            #    'expedition',
+                'markettrader'
         ]
 
         for prob_i in range(1, 21):
@@ -564,4 +564,11 @@ class Experimentator:
 if __name__ == '__main__':
     exp = Experimentator()
     exp.load_problems()
+    #prob = exp.problems[0][1]
+    #sap = SingleAgentProjection(prob.agents[0])
+    #sap.skip_check=True
+    #print(prob)
+    #simulate(sap.compile(prob).problem)
+    #check_robustness(exp.slrc, prob)
     exp.experiment_full()
+

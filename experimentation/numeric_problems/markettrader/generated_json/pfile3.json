@@ -1,28 +1,21 @@
 {
     "market": [
-        "Longyearbyen",
         "Dublin",
-        "Sough",
         "Bonn",
+        "Hamburg",
         "London",
-        "Riga",
-        "Palanga",
-        "Tallinn",
-        "Jurmala",
-        "Obeliai",
-        "Amsterdam",
-        "Paris",
-        "Copenhagen"
+        "Torshavn",
+        "Seda",
+        "Moscow"
     ],
     "goods": [
-        "Kittens",
-        "Computers",
-        "GummyBears",
+        "Platinum",
         "LaminateFloor"
     ],
     "agents": [
         "camel0",
-        "camel1"
+        "camel1",
+        "camel2"
     ],
     "init_values": {
         "global": [
@@ -31,495 +24,99 @@
                 [
                     "sellprice",
                     [
-                        "Kittens",
-                        "Longyearbyen"
-                    ]
-                ],
-                "5.1"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
+                        "Platinum",
                         "Dublin"
                     ]
                 ],
-                "10.32"
+                "11.73"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Kittens",
-                        "Sough"
-                    ]
-                ],
-                "7.13"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
+                        "Platinum",
                         "Bonn"
                     ]
                 ],
-                "7.02"
+                "12.66"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Kittens",
+                        "Platinum",
+                        "Hamburg"
+                    ]
+                ],
+                "9.2"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Platinum",
                         "London"
                     ]
                 ],
-                "9.08"
+                "11.39"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Kittens",
-                        "Riga"
+                        "Platinum",
+                        "Torshavn"
                     ]
                 ],
-                "7.19"
+                "8.0"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Platinum",
+                        "Seda"
+                    ]
+                ],
+                "8.83"
             ],
             [
                 "=",
                 [
                     "price",
                     [
-                        "Kittens",
-                        "Riga"
+                        "Platinum",
+                        "Seda"
                     ]
                 ],
-                "4.65"
+                "6.02"
             ],
             [
                 "=",
                 [
                     "on-sale",
                     [
-                        "Kittens",
-                        "Riga"
+                        "Platinum",
+                        "Seda"
                     ]
                 ],
-                "3"
+                "9"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Kittens",
-                        "Palanga"
+                        "Platinum",
+                        "Moscow"
                     ]
                 ],
-                "8.22"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Tallinn"
-                    ]
-                ],
-                "5.13"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Jurmala"
-                    ]
-                ],
-                "5.3"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Obeliai"
-                    ]
-                ],
-                "8.69"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Amsterdam"
-                    ]
-                ],
-                "9.52"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Paris"
-                    ]
-                ],
-                "5.59"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Copenhagen"
-                    ]
-                ],
-                "13.35"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Longyearbyen"
-                    ]
-                ],
-                "6.2"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Dublin"
-                    ]
-                ],
-                "6.83"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Sough"
-                    ]
-                ],
-                "12.99"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Bonn"
-                    ]
-                ],
-                "11.87"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "London"
-                    ]
-                ],
-                "11.16"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Riga"
-                    ]
-                ],
-                "14.95"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Palanga"
-                    ]
-                ],
-                "4.79"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "Computers",
-                        "Palanga"
-                    ]
-                ],
-                "4.41"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "Computers",
-                        "Palanga"
-                    ]
-                ],
-                "15"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Tallinn"
-                    ]
-                ],
-                "11.74"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Jurmala"
-                    ]
-                ],
-                "3.45"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Obeliai"
-                    ]
-                ],
-                "6.0"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Amsterdam"
-                    ]
-                ],
-                "5.24"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Paris"
-                    ]
-                ],
-                "5.79"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Copenhagen"
-                    ]
-                ],
-                "14.17"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "GummyBears",
-                        "Longyearbyen"
-                    ]
-                ],
-                "6.99"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "GummyBears",
-                        "Dublin"
-                    ]
-                ],
-                "4.55"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "GummyBears",
-                        "Sough"
-                    ]
-                ],
-                "6.11"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "GummyBears",
-                        "Bonn"
-                    ]
-                ],
-                "11.01"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "GummyBears",
-                        "London"
-                    ]
-                ],
-                "6.98"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "GummyBears",
-                        "Riga"
-                    ]
-                ],
-                "10.47"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "GummyBears",
-                        "Palanga"
-                    ]
-                ],
-                "4.86"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "GummyBears",
-                        "Palanga"
-                    ]
-                ],
-                "5.78"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "GummyBears",
-                        "Palanga"
-                    ]
-                ],
-                "8"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "GummyBears",
-                        "Tallinn"
-                    ]
-                ],
-                "6.91"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "GummyBears",
-                        "Jurmala"
-                    ]
-                ],
-                "9.35"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "GummyBears",
-                        "Obeliai"
-                    ]
-                ],
-                "7.25"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "GummyBears",
-                        "Amsterdam"
-                    ]
-                ],
-                "8.7"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "GummyBears",
-                        "Paris"
-                    ]
-                ],
-                "5.65"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "GummyBears",
-                        "Copenhagen"
-                    ]
-                ],
-                "8.93"
+                "4.68"
             ],
             [
                 "=",
@@ -527,10 +124,21 @@
                     "sellprice",
                     [
                         "LaminateFloor",
-                        "Longyearbyen"
+                        "Dublin"
                     ]
                 ],
-                "3.5"
+                "6.25"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "LaminateFloor",
+                        "Bonn"
+                    ]
+                ],
+                "4.51"
             ],
             [
                 "=",
@@ -538,10 +146,10 @@
                     "price",
                     [
                         "LaminateFloor",
-                        "Longyearbyen"
+                        "Bonn"
                     ]
                 ],
-                "4.13"
+                "5.98"
             ],
             [
                 "=",
@@ -549,10 +157,10 @@
                     "on-sale",
                     [
                         "LaminateFloor",
-                        "Longyearbyen"
+                        "Bonn"
                     ]
                 ],
-                "8"
+                "13"
             ],
             [
                 "=",
@@ -560,392 +168,194 @@
                     "sellprice",
                     [
                         "LaminateFloor",
+                        "Hamburg"
+                    ]
+                ],
+                "6.13"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "LaminateFloor",
+                        "London"
+                    ]
+                ],
+                "10.38"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "LaminateFloor",
+                        "Torshavn"
+                    ]
+                ],
+                "10.76"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "LaminateFloor",
+                        "Seda"
+                    ]
+                ],
+                "4.95"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "LaminateFloor",
+                        "Moscow"
+                    ]
+                ],
+                "4.74"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Dublin",
+                        "Bonn"
+                    ]
+                ],
+                "1.44"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Dublin",
+                        "Hamburg"
+                    ]
+                ],
+                "5.75"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Dublin",
+                        "London"
+                    ]
+                ],
+                "2.85"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Dublin",
+                        "Torshavn"
+                    ]
+                ],
+                "3.27"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Dublin",
+                        "Seda"
+                    ]
+                ],
+                "1.32"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Dublin",
+                        "Moscow"
+                    ]
+                ],
+                "1.86"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Bonn",
                         "Dublin"
                     ]
                 ],
-                "12.82"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Sough"
-                    ]
-                ],
-                "10.62"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Bonn"
-                    ]
-                ],
-                "11.0"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "London"
-                    ]
-                ],
-                "9.91"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Riga"
-                    ]
-                ],
-                "7.55"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Palanga"
-                    ]
-                ],
-                "7.55"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Tallinn"
-                    ]
-                ],
-                "9.75"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Jurmala"
-                    ]
-                ],
-                "3.38"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Obeliai"
-                    ]
-                ],
-                "5.36"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Amsterdam"
-                    ]
-                ],
-                "12.59"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Paris"
-                    ]
-                ],
-                "5.03"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Copenhagen"
-                    ]
-                ],
-                "11.54"
+                "3.96"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Longyearbyen",
+                        "Bonn",
+                        "Hamburg"
+                    ]
+                ],
+                "4.8"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Bonn",
+                        "London"
+                    ]
+                ],
+                "3.65"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Bonn",
+                        "Torshavn"
+                    ]
+                ],
+                "6.28"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Bonn",
+                        "Seda"
+                    ]
+                ],
+                "4.59"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Bonn",
+                        "Moscow"
+                    ]
+                ],
+                "3.04"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Hamburg",
                         "Dublin"
-                    ]
-                ],
-                "3.56"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "Sough"
-                    ]
-                ],
-                "2.15"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "Bonn"
-                    ]
-                ],
-                "6.24"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "London"
-                    ]
-                ],
-                "2.13"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "Riga"
-                    ]
-                ],
-                "4.66"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "Palanga"
-                    ]
-                ],
-                "2.76"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "Tallinn"
-                    ]
-                ],
-                "6.17"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "Jurmala"
-                    ]
-                ],
-                "3.54"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "Obeliai"
-                    ]
-                ],
-                "4.21"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "Amsterdam"
-                    ]
-                ],
-                "5.41"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "Paris"
-                    ]
-                ],
-                "4.45"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "Copenhagen"
-                    ]
-                ],
-                "1.73"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Dublin",
-                        "Longyearbyen"
-                    ]
-                ],
-                "3.2"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Dublin",
-                        "Sough"
-                    ]
-                ],
-                "3.15"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Dublin",
-                        "Bonn"
-                    ]
-                ],
-                "2.35"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Dublin",
-                        "London"
-                    ]
-                ],
-                "5.34"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Dublin",
-                        "Riga"
-                    ]
-                ],
-                "1.84"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Dublin",
-                        "Palanga"
-                    ]
-                ],
-                "5.36"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Dublin",
-                        "Tallinn"
-                    ]
-                ],
-                "4.4"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Dublin",
-                        "Jurmala"
-                    ]
-                ],
-                "1.73"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Dublin",
-                        "Obeliai"
-                    ]
-                ],
-                "2.3"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Dublin",
-                        "Amsterdam"
-                    ]
-                ],
-                "3.13"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Dublin",
-                        "Paris"
-                    ]
-                ],
-                "4.43"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Dublin",
-                        "Copenhagen"
                     ]
                 ],
                 "5.04"
@@ -955,129 +365,8 @@
                 [
                     "drive-cost",
                     [
-                        "Sough",
-                        "Longyearbyen"
-                    ]
-                ],
-                "2.47"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Dublin"
-                    ]
-                ],
-                "6.18"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
+                        "Hamburg",
                         "Bonn"
-                    ]
-                ],
-                "4.58"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "London"
-                    ]
-                ],
-                "5.69"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Riga"
-                    ]
-                ],
-                "5.38"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Palanga"
-                    ]
-                ],
-                "6.04"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Tallinn"
-                    ]
-                ],
-                "2.72"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Jurmala"
-                    ]
-                ],
-                "2.77"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Obeliai"
-                    ]
-                ],
-                "2.98"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Amsterdam"
-                    ]
-                ],
-                "1.96"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Paris"
-                    ]
-                ],
-                "2.92"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Copenhagen"
                     ]
                 ],
                 "6.52"
@@ -1087,162 +376,19 @@
                 [
                     "drive-cost",
                     [
-                        "Bonn",
-                        "Longyearbyen"
-                    ]
-                ],
-                "1.12"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Dublin"
-                    ]
-                ],
-                "3.46"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Sough"
-                    ]
-                ],
-                "1.27"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
+                        "Hamburg",
                         "London"
                     ]
                 ],
-                "3.82"
+                "4.55"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Bonn",
-                        "Riga"
-                    ]
-                ],
-                "6.57"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Palanga"
-                    ]
-                ],
-                "1.19"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Tallinn"
-                    ]
-                ],
-                "6.05"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Jurmala"
-                    ]
-                ],
-                "3.08"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Obeliai"
-                    ]
-                ],
-                "2.4"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Amsterdam"
-                    ]
-                ],
-                "6.8"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Paris"
-                    ]
-                ],
-                "3.78"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Copenhagen"
-                    ]
-                ],
-                "4.78"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "London",
-                        "Longyearbyen"
-                    ]
-                ],
-                "3.04"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "London",
-                        "Dublin"
-                    ]
-                ],
-                "2.61"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "London",
-                        "Sough"
+                        "Hamburg",
+                        "Torshavn"
                     ]
                 ],
                 "5.93"
@@ -1252,11 +398,22 @@
                 [
                     "drive-cost",
                     [
-                        "London",
-                        "Bonn"
+                        "Hamburg",
+                        "Seda"
                     ]
                 ],
-                "1.46"
+                "3.41"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Hamburg",
+                        "Moscow"
+                    ]
+                ],
+                "4.86"
             ],
             [
                 "=",
@@ -1264,986 +421,29 @@
                     "drive-cost",
                     [
                         "London",
-                        "Riga"
-                    ]
-                ],
-                "3.77"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "London",
-                        "Palanga"
-                    ]
-                ],
-                "6.45"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "London",
-                        "Tallinn"
-                    ]
-                ],
-                "5.16"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "London",
-                        "Jurmala"
-                    ]
-                ],
-                "1.62"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "London",
-                        "Obeliai"
-                    ]
-                ],
-                "3.78"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "London",
-                        "Amsterdam"
-                    ]
-                ],
-                "4.33"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "London",
-                        "Paris"
-                    ]
-                ],
-                "3.46"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "London",
-                        "Copenhagen"
-                    ]
-                ],
-                "5.76"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
-                        "Longyearbyen"
-                    ]
-                ],
-                "5.25"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
                         "Dublin"
                     ]
                 ],
-                "4.28"
+                "4.88"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Riga",
-                        "Sough"
-                    ]
-                ],
-                "4.44"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
+                        "London",
                         "Bonn"
                     ]
                 ],
-                "3.22"
+                "5.87"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Riga",
-                        "London"
-                    ]
-                ],
-                "6.37"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
-                        "Palanga"
-                    ]
-                ],
-                "3.77"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
-                        "Tallinn"
-                    ]
-                ],
-                "4.58"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
-                        "Jurmala"
-                    ]
-                ],
-                "6.68"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
-                        "Obeliai"
-                    ]
-                ],
-                "6.23"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
-                        "Amsterdam"
-                    ]
-                ],
-                "5.64"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
-                        "Paris"
-                    ]
-                ],
-                "5.06"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
-                        "Copenhagen"
-                    ]
-                ],
-                "4.51"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Longyearbyen"
-                    ]
-                ],
-                "2.16"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Dublin"
-                    ]
-                ],
-                "4.89"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Sough"
-                    ]
-                ],
-                "1.55"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Bonn"
-                    ]
-                ],
-                "3.55"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "London"
-                    ]
-                ],
-                "3.76"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Riga"
-                    ]
-                ],
-                "1.83"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Tallinn"
-                    ]
-                ],
-                "1.68"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Jurmala"
-                    ]
-                ],
-                "4.23"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Obeliai"
-                    ]
-                ],
-                "3.02"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Amsterdam"
-                    ]
-                ],
-                "6.01"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Paris"
-                    ]
-                ],
-                "3.67"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Copenhagen"
-                    ]
-                ],
-                "5.27"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tallinn",
-                        "Longyearbyen"
-                    ]
-                ],
-                "3.69"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tallinn",
-                        "Dublin"
-                    ]
-                ],
-                "5.9"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tallinn",
-                        "Sough"
-                    ]
-                ],
-                "3.42"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tallinn",
-                        "Bonn"
-                    ]
-                ],
-                "2.56"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tallinn",
-                        "London"
-                    ]
-                ],
-                "3.18"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tallinn",
-                        "Riga"
-                    ]
-                ],
-                "5.82"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tallinn",
-                        "Palanga"
-                    ]
-                ],
-                "5.64"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tallinn",
-                        "Jurmala"
-                    ]
-                ],
-                "1.5"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tallinn",
-                        "Obeliai"
-                    ]
-                ],
-                "4.34"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tallinn",
-                        "Amsterdam"
-                    ]
-                ],
-                "6.09"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tallinn",
-                        "Paris"
-                    ]
-                ],
-                "3.58"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tallinn",
-                        "Copenhagen"
-                    ]
-                ],
-                "2.44"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Longyearbyen"
-                    ]
-                ],
-                "3.04"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Dublin"
-                    ]
-                ],
-                "4.07"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Sough"
-                    ]
-                ],
-                "6.42"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Bonn"
-                    ]
-                ],
-                "3.5"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "London"
-                    ]
-                ],
-                "6.4"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Riga"
-                    ]
-                ],
-                "2.57"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Palanga"
-                    ]
-                ],
-                "1.93"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Tallinn"
-                    ]
-                ],
-                "3.7"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Obeliai"
-                    ]
-                ],
-                "5.57"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Amsterdam"
-                    ]
-                ],
-                "5.84"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Paris"
-                    ]
-                ],
-                "6.19"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Copenhagen"
-                    ]
-                ],
-                "5.82"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Longyearbyen"
-                    ]
-                ],
-                "6.79"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Dublin"
-                    ]
-                ],
-                "3.53"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Sough"
-                    ]
-                ],
-                "6.76"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Bonn"
-                    ]
-                ],
-                "2.89"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "London"
-                    ]
-                ],
-                "1.83"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Riga"
-                    ]
-                ],
-                "6.35"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Palanga"
-                    ]
-                ],
-                "4.25"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Tallinn"
-                    ]
-                ],
-                "4.03"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Jurmala"
-                    ]
-                ],
-                "4.78"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Amsterdam"
-                    ]
-                ],
-                "2.13"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Paris"
-                    ]
-                ],
-                "2.51"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Copenhagen"
-                    ]
-                ],
-                "5.68"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Longyearbyen"
-                    ]
-                ],
-                "2.99"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Dublin"
-                    ]
-                ],
-                "3.09"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Sough"
-                    ]
-                ],
-                "5.84"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Bonn"
-                    ]
-                ],
-                "2.6"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "London"
-                    ]
-                ],
-                "2.76"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Riga"
-                    ]
-                ],
-                "2.44"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Palanga"
-                    ]
-                ],
-                "3.37"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Tallinn"
-                    ]
-                ],
-                "3.68"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Jurmala"
-                    ]
-                ],
-                "2.14"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Obeliai"
-                    ]
-                ],
-                "1.76"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Paris"
-                    ]
-                ],
-                "2.91"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Copenhagen"
-                    ]
-                ],
-                "5.34"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Longyearbyen"
-                    ]
-                ],
-                "1.14"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Dublin"
-                    ]
-                ],
-                "3.72"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Sough"
-                    ]
-                ],
-                "2.67"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Bonn"
-                    ]
-                ],
-                "4.7"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "London"
-                    ]
-                ],
-                "5.14"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Riga"
-                    ]
-                ],
-                "2.54"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Palanga"
-                    ]
-                ],
-                "1.33"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Tallinn"
-                    ]
-                ],
-                "5.62"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Jurmala"
-                    ]
-                ],
-                "4.56"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Obeliai"
+                        "London",
+                        "Hamburg"
                     ]
                 ],
                 "6.73"
@@ -2253,107 +453,52 @@
                 [
                     "drive-cost",
                     [
-                        "Paris",
-                        "Amsterdam"
+                        "London",
+                        "Torshavn"
                     ]
                 ],
-                "4.92"
+                "3.12"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Paris",
-                        "Copenhagen"
+                        "London",
+                        "Seda"
                     ]
                 ],
-                "6.92"
+                "6.0"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Copenhagen",
-                        "Longyearbyen"
+                        "London",
+                        "Moscow"
                     ]
                 ],
-                "3.36"
+                "1.99"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Copenhagen",
+                        "Torshavn",
                         "Dublin"
                     ]
                 ],
-                "6.95"
+                "5.44"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Copenhagen",
-                        "Sough"
-                    ]
-                ],
-                "3.07"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Copenhagen",
+                        "Torshavn",
                         "Bonn"
-                    ]
-                ],
-                "4.44"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Copenhagen",
-                        "London"
-                    ]
-                ],
-                "6.04"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Copenhagen",
-                        "Riga"
-                    ]
-                ],
-                "6.98"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Copenhagen",
-                        "Palanga"
-                    ]
-                ],
-                "3.11"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Copenhagen",
-                        "Tallinn"
                     ]
                 ],
                 "2.22"
@@ -2363,44 +508,176 @@
                 [
                     "drive-cost",
                     [
-                        "Copenhagen",
-                        "Jurmala"
+                        "Torshavn",
+                        "Hamburg"
                     ]
                 ],
-                "2.16"
+                "3.61"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Copenhagen",
-                        "Obeliai"
+                        "Torshavn",
+                        "London"
                     ]
                 ],
-                "3.68"
+                "5.32"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Copenhagen",
-                        "Amsterdam"
+                        "Torshavn",
+                        "Seda"
                     ]
                 ],
-                "4.62"
+                "3.76"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Copenhagen",
-                        "Paris"
+                        "Torshavn",
+                        "Moscow"
                     ]
                 ],
-                "4.1"
+                "3.37"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Seda",
+                        "Dublin"
+                    ]
+                ],
+                "1.64"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Seda",
+                        "Bonn"
+                    ]
+                ],
+                "4.78"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Seda",
+                        "Hamburg"
+                    ]
+                ],
+                "3.89"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Seda",
+                        "London"
+                    ]
+                ],
+                "2.3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Seda",
+                        "Torshavn"
+                    ]
+                ],
+                "3.08"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Seda",
+                        "Moscow"
+                    ]
+                ],
+                "4.75"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Moscow",
+                        "Dublin"
+                    ]
+                ],
+                "2.09"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Moscow",
+                        "Bonn"
+                    ]
+                ],
+                "6.31"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Moscow",
+                        "Hamburg"
+                    ]
+                ],
+                "2.72"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Moscow",
+                        "London"
+                    ]
+                ],
+                "4.94"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Moscow",
+                        "Torshavn"
+                    ]
+                ],
+                "6.83"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Moscow",
+                        "Seda"
+                    ]
+                ],
+                "6.36"
             ]
         ],
         "camel0": [
@@ -2409,27 +686,7 @@
                 [
                     "bought",
                     [
-                        "Kittens"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "Computers"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "GummyBears"
+                        "Platinum"
                     ]
                 ],
                 "0"
@@ -2447,7 +704,7 @@
             [
                 "at",
                 [
-                    "Bonn"
+                    "Hamburg"
                 ]
             ],
             [
@@ -2469,883 +726,260 @@
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
+                    "Dublin",
                     "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
+                    "Dublin",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Dublin",
+                    "Seda"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Bonn",
+                    "Dublin"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Bonn",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Bonn",
                     "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Riga"
+                    "Bonn",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Palanga"
+                    "Bonn",
+                    "Seda"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Obeliai"
+                    "Hamburg",
+                    "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Copenhagen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dublin",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dublin",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dublin",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dublin",
+                    "Hamburg",
                     "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dublin",
-                    "Riga"
+                    "Hamburg",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dublin",
-                    "Palanga"
+                    "Hamburg",
+                    "Seda"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dublin",
-                    "Tallinn"
+                    "Hamburg",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dublin",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dublin",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dublin",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dublin",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dublin",
-                    "Copenhagen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
+                    "London",
                     "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
+                    "London",
                     "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Copenhagen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Copenhagen"
+                    "London",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "London",
-                    "Longyearbyen"
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "London",
-                    "Sough"
+                    "Seda"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "London",
-                    "Tallinn"
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "London",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Copenhagen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
+                    "Torshavn",
                     "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Riga",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
+                    "Torshavn",
                     "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Riga",
+                    "Torshavn",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Torshavn",
                     "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Riga",
-                    "Palanga"
+                    "Torshavn",
+                    "Seda"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Riga",
-                    "Tallinn"
+                    "Torshavn",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Riga",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Copenhagen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
+                    "Seda",
                     "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
+                    "Seda",
                     "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
+                    "Seda",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Seda",
                     "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Riga"
+                    "Seda",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Tallinn"
+                    "Seda",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Copenhagen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
+                    "Moscow",
                     "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tallinn",
-                    "Sough"
+                    "Moscow",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tallinn",
+                    "Moscow",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
                     "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tallinn",
-                    "Riga"
+                    "Moscow",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tallinn",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Copenhagen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "London"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "London"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Copenhagen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "London"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Copenhagen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Copenhagen",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Copenhagen",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Copenhagen",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Copenhagen",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Copenhagen",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Copenhagen",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Copenhagen",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Copenhagen",
-                    "Obeliai"
+                    "Moscow",
+                    "Seda"
                 ]
             ]
         ],
@@ -3355,27 +989,7 @@
                 [
                     "bought",
                     [
-                        "Kittens"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "Computers"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "GummyBears"
+                        "Platinum"
                     ]
                 ],
                 "0"
@@ -3393,7 +1007,7 @@
             [
                 "at",
                 [
-                    "Palanga"
+                    "London"
                 ]
             ],
             [
@@ -3415,83 +1029,6 @@
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Copenhagen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dublin",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dublin",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
                     "Dublin",
                     "Bonn"
                 ]
@@ -3500,210 +1037,98 @@
                 "can-drive",
                 [
                     "Dublin",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Dublin",
+                    "Torshavn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Dublin",
+                    "Seda"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Dublin",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Bonn",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Bonn",
                     "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dublin",
-                    "Palanga"
+                    "Bonn",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dublin",
-                    "Tallinn"
+                    "Bonn",
+                    "Seda"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dublin",
-                    "Jurmala"
+                    "Bonn",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dublin",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dublin",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dublin",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dublin",
-                    "Copenhagen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
+                    "Hamburg",
                     "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
+                    "Hamburg",
+                    "Bonn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
                     "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Riga"
+                    "Hamburg",
+                    "Seda"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Copenhagen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "London"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Copenhagen"
+                    "Hamburg",
+                    "Moscow"
                 ]
             ],
             [
@@ -3711,13 +1136,6 @@
                 [
                     "London",
                     "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Sough"
                 ]
             ],
             [
@@ -3731,651 +1149,471 @@
                 "can-drive",
                 [
                     "London",
-                    "Riga"
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "London",
-                    "Palanga"
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "London",
-                    "Tallinn"
+                    "Seda"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "London",
-                    "Jurmala"
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "London",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Copenhagen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
+                    "Torshavn",
                     "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Riga",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "London"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
+                    "Torshavn",
                     "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
+                    "Torshavn",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Torshavn",
                     "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Riga"
+                    "Torshavn",
+                    "Seda"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Tallinn"
+                    "Torshavn",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Copenhagen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "London"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Copenhagen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
+                    "Seda",
                     "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jurmala",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
+                    "Seda",
                     "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jurmala",
+                    "Seda",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Seda",
                     "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jurmala",
-                    "Riga"
+                    "Seda",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jurmala",
-                    "Palanga"
+                    "Seda",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jurmala",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Copenhagen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
+                    "Moscow",
                     "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Obeliai",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "London"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Copenhagen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
+                    "Moscow",
                     "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
+                    "Moscow",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
                     "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Riga"
+                    "Moscow",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Palanga"
+                    "Moscow",
+                    "Seda"
                 ]
+            ]
+        ],
+        "camel2": [
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "Platinum"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "LaminateFloor"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "at",
+                [
+                    "London"
+                ]
+            ],
+            [
+                "=",
+                [
+                    "cash",
+                    []
+                ],
+                "10"
+            ],
+            [
+                "=",
+                [
+                    "capacity",
+                    []
+                ],
+                "5"
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Copenhagen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
+                    "Dublin",
                     "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Paris",
-                    "Riga"
+                    "Dublin",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Paris",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Copenhagen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Copenhagen",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Copenhagen",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Copenhagen",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Copenhagen",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Copenhagen",
+                    "Dublin",
                     "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Copenhagen",
-                    "Riga"
+                    "Dublin",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Copenhagen",
-                    "Palanga"
+                    "Dublin",
+                    "Seda"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Copenhagen",
-                    "Tallinn"
+                    "Dublin",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Copenhagen",
-                    "Jurmala"
+                    "Bonn",
+                    "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Copenhagen",
-                    "Obeliai"
+                    "Bonn",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Copenhagen",
-                    "Amsterdam"
+                    "Bonn",
+                    "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Copenhagen",
-                    "Paris"
+                    "Bonn",
+                    "Torshavn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Bonn",
+                    "Seda"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Bonn",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Dublin"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Bonn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Torshavn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Seda"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "London",
+                    "Dublin"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "London",
+                    "Bonn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "London",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "London",
+                    "Torshavn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "London",
+                    "Seda"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "London",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Torshavn",
+                    "Dublin"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Torshavn",
+                    "Bonn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Torshavn",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Torshavn",
+                    "London"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Torshavn",
+                    "Seda"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Torshavn",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Seda",
+                    "Dublin"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Seda",
+                    "Bonn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Seda",
+                    "London"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Seda",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
+                    "Dublin"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
+                    "Bonn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
+                    "London"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
+                    "Torshavn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
+                    "Seda"
                 ]
             ]
         ]
@@ -4389,7 +1627,7 @@
                     "cash",
                     []
                 ],
-                "46.81"
+                "25.04"
             ]
         ],
         "camel1": [
@@ -4399,7 +1637,17 @@
                     "cash",
                     []
                 ],
-                "46.81"
+                "25.04"
+            ]
+        ],
+        "camel2": [
+            [
+                ">=",
+                [
+                    "cash",
+                    []
+                ],
+                "25.04"
             ]
         ]
     }

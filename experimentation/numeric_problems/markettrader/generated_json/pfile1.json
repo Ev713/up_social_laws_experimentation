@@ -1,16 +1,13 @@
 {
     "market": [
-        "Daugai",
-        "Daugavpils",
-        "Lisbon",
-        "Kadagopya",
-        "Riga",
-        "Mariehamn",
-        "Rome"
+        "Stockholm",
+        "Neringa",
+        "Venice",
+        "StPetersburg",
+        "Rakvere"
     ],
     "goods": [
-        "Minerals",
-        "Cars"
+        "ExpensiveRugs"
     ],
     "agents": [
         "camel0",
@@ -23,294 +20,173 @@
                 [
                     "sellprice",
                     [
-                        "Minerals",
-                        "Daugai"
+                        "ExpensiveRugs",
+                        "Stockholm"
                     ]
                 ],
-                "15.15"
+                "7.63"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Minerals",
-                        "Daugavpils"
+                        "ExpensiveRugs",
+                        "Neringa"
                     ]
                 ],
-                "6.34"
+                "9.21"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Minerals",
-                        "Lisbon"
+                        "ExpensiveRugs",
+                        "Venice"
                     ]
                 ],
-                "8.04"
+                "6.91"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Minerals",
-                        "Kadagopya"
+                        "ExpensiveRugs",
+                        "StPetersburg"
                     ]
                 ],
-                "5.07"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "Minerals",
-                        "Kadagopya"
-                    ]
-                ],
-                "4.92"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "Minerals",
-                        "Kadagopya"
-                    ]
-                ],
-                "15"
+                "6.33"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Minerals",
-                        "Riga"
+                        "ExpensiveRugs",
+                        "Rakvere"
                     ]
                 ],
-                "8.34"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Mariehamn"
-                    ]
-                ],
-                "7.5"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Rome"
-                    ]
-                ],
-                "7.23"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Daugai"
-                    ]
-                ],
-                "7.55"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Daugavpils"
-                    ]
-                ],
-                "7.9"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Lisbon"
-                    ]
-                ],
-                "3.57"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Kadagopya"
-                    ]
-                ],
-                "11.53"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Riga"
-                    ]
-                ],
-                "8.42"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Mariehamn"
-                    ]
-                ],
-                "7.45"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Rome"
-                    ]
-                ],
-                "6.45"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "Cars",
-                        "Rome"
-                    ]
-                ],
-                "4.83"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "Cars",
-                        "Rome"
-                    ]
-                ],
-                "3"
+                "8.51"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugai",
-                        "Daugavpils"
+                        "Stockholm",
+                        "Neringa"
                     ]
                 ],
-                "4.18"
+                "1.08"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugai",
-                        "Lisbon"
+                        "Stockholm",
+                        "Venice"
                     ]
                 ],
-                "5.67"
+                "5.99"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugai",
-                        "Kadagopya"
+                        "Stockholm",
+                        "StPetersburg"
                     ]
                 ],
-                "6.72"
+                "3.33"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugai",
-                        "Riga"
+                        "Stockholm",
+                        "Rakvere"
                     ]
                 ],
-                "1.29"
+                "2.9"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugai",
-                        "Mariehamn"
+                        "Neringa",
+                        "Stockholm"
                     ]
                 ],
-                "5.07"
+                "4.47"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugai",
-                        "Rome"
+                        "Neringa",
+                        "Venice"
                     ]
                 ],
-                "6.61"
+                "3.25"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugavpils",
-                        "Daugai"
+                        "Neringa",
+                        "StPetersburg"
                     ]
                 ],
-                "4.41"
+                "4.23"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugavpils",
-                        "Lisbon"
+                        "Neringa",
+                        "Rakvere"
                     ]
                 ],
-                "6.44"
+                "3.37"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugavpils",
-                        "Kadagopya"
+                        "Venice",
+                        "Stockholm"
+                    ]
+                ],
+                "2.93"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Venice",
+                        "Neringa"
+                    ]
+                ],
+                "5.09"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Venice",
+                        "StPetersburg"
                     ]
                 ],
                 "6.67"
@@ -320,363 +196,99 @@
                 [
                     "drive-cost",
                     [
-                        "Daugavpils",
-                        "Riga"
+                        "Venice",
+                        "Rakvere"
                     ]
                 ],
-                "4.97"
+                "6.91"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugavpils",
-                        "Mariehamn"
+                        "StPetersburg",
+                        "Stockholm"
                     ]
                 ],
-                "3.91"
+                "1.38"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugavpils",
-                        "Rome"
+                        "StPetersburg",
+                        "Neringa"
                     ]
                 ],
-                "1.25"
+                "3.97"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Lisbon",
-                        "Daugai"
+                        "StPetersburg",
+                        "Venice"
                     ]
                 ],
-                "5.6"
+                "3.56"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Lisbon",
-                        "Daugavpils"
+                        "StPetersburg",
+                        "Rakvere"
                     ]
                 ],
-                "5.2"
+                "1.89"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Lisbon",
-                        "Kadagopya"
+                        "Rakvere",
+                        "Stockholm"
                     ]
                 ],
-                "3.04"
+                "5.53"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Lisbon",
-                        "Riga"
+                        "Rakvere",
+                        "Neringa"
                     ]
                 ],
-                "2.96"
+                "1.91"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Lisbon",
-                        "Mariehamn"
+                        "Rakvere",
+                        "Venice"
                     ]
                 ],
-                "6.18"
+                "6.3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Lisbon",
-                        "Rome"
+                        "Rakvere",
+                        "StPetersburg"
                     ]
                 ],
-                "5.78"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Daugai"
-                    ]
-                ],
-                "6.7"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Daugavpils"
-                    ]
-                ],
-                "6.96"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Lisbon"
-                    ]
-                ],
-                "4.27"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Riga"
-                    ]
-                ],
-                "6.03"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Mariehamn"
-                    ]
-                ],
-                "4.71"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Rome"
-                    ]
-                ],
-                "1.49"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
-                        "Daugai"
-                    ]
-                ],
-                "6.25"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
-                        "Daugavpils"
-                    ]
-                ],
-                "2.81"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
-                        "Lisbon"
-                    ]
-                ],
-                "5.1"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
-                        "Kadagopya"
-                    ]
-                ],
-                "2.62"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
-                        "Mariehamn"
-                    ]
-                ],
-                "4.6"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
-                        "Rome"
-                    ]
-                ],
-                "5.47"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Mariehamn",
-                        "Daugai"
-                    ]
-                ],
-                "6.48"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Mariehamn",
-                        "Daugavpils"
-                    ]
-                ],
-                "6.41"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Mariehamn",
-                        "Lisbon"
-                    ]
-                ],
-                "4.45"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Mariehamn",
-                        "Kadagopya"
-                    ]
-                ],
-                "3.13"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Mariehamn",
-                        "Riga"
-                    ]
-                ],
-                "6.38"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Mariehamn",
-                        "Rome"
-                    ]
-                ],
-                "6.41"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Daugai"
-                    ]
-                ],
-                "6.12"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Daugavpils"
-                    ]
-                ],
-                "4.01"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Lisbon"
-                    ]
-                ],
-                "3.83"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Kadagopya"
-                    ]
-                ],
-                "4.69"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Riga"
-                    ]
-                ],
-                "1.05"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Mariehamn"
-                    ]
-                ],
-                "6.24"
+                "2.04"
             ]
         ],
         "camel0": [
@@ -685,17 +297,7 @@
                 [
                     "bought",
                     [
-                        "Minerals"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "Cars"
+                        "ExpensiveRugs"
                     ]
                 ],
                 "0"
@@ -703,7 +305,7 @@
             [
                 "at",
                 [
-                    "Lisbon"
+                    "Stockholm"
                 ]
             ],
             [
@@ -725,246 +327,134 @@
             [
                 "can-drive",
                 [
-                    "Daugai",
-                    "Lisbon"
+                    "Stockholm",
+                    "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugai",
-                    "Kadagopya"
+                    "Stockholm",
+                    "Venice"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugai",
-                    "Riga"
+                    "Stockholm",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugai",
-                    "Mariehamn"
+                    "Stockholm",
+                    "Rakvere"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugai",
-                    "Rome"
+                    "Neringa",
+                    "Stockholm"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Daugai"
+                    "Neringa",
+                    "Venice"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Lisbon"
+                    "Neringa",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Kadagopya"
+                    "Neringa",
+                    "Rakvere"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Riga"
+                    "Venice",
+                    "Stockholm"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Rome"
+                    "Venice",
+                    "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Daugai"
+                    "Venice",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Daugavpils"
+                    "StPetersburg",
+                    "Stockholm"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Kadagopya"
+                    "StPetersburg",
+                    "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Riga"
+                    "StPetersburg",
+                    "Venice"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Mariehamn"
+                    "StPetersburg",
+                    "Rakvere"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Rome"
+                    "Rakvere",
+                    "Stockholm"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kadagopya",
-                    "Daugai"
+                    "Rakvere",
+                    "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kadagopya",
-                    "Daugavpils"
+                    "Rakvere",
+                    "Venice"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kadagopya",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Daugai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Daugai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Mariehamn"
+                    "Rakvere",
+                    "StPetersburg"
                 ]
             ]
         ],
@@ -974,17 +464,7 @@
                 [
                     "bought",
                     [
-                        "Minerals"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "Cars"
+                        "ExpensiveRugs"
                     ]
                 ],
                 "0"
@@ -992,7 +472,7 @@
             [
                 "at",
                 [
-                    "Mariehamn"
+                    "Rakvere"
                 ]
             ],
             [
@@ -1014,232 +494,141 @@
             [
                 "can-drive",
                 [
-                    "Daugai",
-                    "Daugavpils"
+                    "Stockholm",
+                    "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugai",
-                    "Kadagopya"
+                    "Stockholm",
+                    "Venice"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugai",
-                    "Riga"
+                    "Stockholm",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugai",
-                    "Rome"
+                    "Stockholm",
+                    "Rakvere"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Daugai"
+                    "Neringa",
+                    "Stockholm"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Lisbon"
+                    "Neringa",
+                    "Venice"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Kadagopya"
+                    "Neringa",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Riga"
+                    "Neringa",
+                    "Rakvere"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Mariehamn"
+                    "Venice",
+                    "Stockholm"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Rome"
+                    "Venice",
+                    "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Daugai"
+                    "Venice",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Kadagopya"
+                    "Venice",
+                    "Rakvere"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Riga"
+                    "StPetersburg",
+                    "Stockholm"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Mariehamn"
+                    "StPetersburg",
+                    "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kadagopya",
-                    "Daugavpils"
+                    "StPetersburg",
+                    "Venice"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kadagopya",
-                    "Lisbon"
+                    "StPetersburg",
+                    "Rakvere"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kadagopya",
-                    "Rome"
+                    "Rakvere",
+                    "Stockholm"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Riga",
-                    "Daugavpils"
+                    "Rakvere",
+                    "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Riga",
-                    "Lisbon"
+                    "Rakvere",
+                    "Venice"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Riga",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Daugai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Daugai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Mariehamn"
+                    "Rakvere",
+                    "StPetersburg"
                 ]
             ]
         ]
@@ -1253,7 +642,7 @@
                     "cash",
                     []
                 ],
-                "23.37"
+                "17.23"
             ]
         ],
         "camel1": [
@@ -1263,7 +652,7 @@
                     "cash",
                     []
                 ],
-                "23.37"
+                "17.23"
             ]
         ]
     }

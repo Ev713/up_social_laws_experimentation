@@ -936,6 +936,10 @@ class NumericGridGenerator(NumericProblemGenerator):
         return self.problem
 
     def add_is_free_precon(self, action, agent, x, y, waitfor=False):
+        print(action.name, agent.name, waitfor)
+        skip = input('Skip?:' )
+        if skip in ['y', 'yes', 'Y',]:
+            return
         other_agents = [a for a in self.problem.agents if a.name != agent.name]
         for other_agent in other_agents:
             other_x = Dot(other_agent, other_agent.fluent('agent_x')())
