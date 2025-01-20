@@ -1,0 +1,2 @@
+time,name,has_social_law,result
+5.729904413223267,sl_zenotravel_pfile1,True,SocialLawRobustnessStatus.ROBUST_RATIONAL

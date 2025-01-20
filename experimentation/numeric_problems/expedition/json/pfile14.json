@@ -1,9 +1,9 @@
 {"waypoint": ["wa12", "wa9", "wa8", "wb2", "wa3", "wa0", "wa6", "wb8", "wa14", "wa7", "wa11", "wb5", "wa13", "wa1", "wb4", "wa2", "wa4", "wa5", "wb0", "wb6", "wb1", "wa10", "wb7", "wb3"],
-"agents": ["s0", "s1", "s1", "s1", "s1", "s1", "s1", "s2", "s2", "s2", "s2", "s2", "s3", "s3", "s3"],
+"agents": ["s0", "s1", "s2", "s3"],
 
 "init_values": {
 "global": [
-["=", ["waypoint_supplies", ["wa0"]], "200"],
+["=", ["waypoint_supplies", ["wa0"]], "600"],
 ["=", ["waypoint_supplies", ["wa1"]], "0"],
 ["=", ["waypoint_supplies", ["wa2"]], "0"],
 ["=", ["waypoint_supplies", ["wa3"]], "0"],
@@ -46,4 +46,7 @@
 "global": [
 ],
 "s0":[["at", ["wa8"]]],
-"s1":[["at", ["wb8"]]]}}
+"s1":[["at", ["wb8"]]],
+"s2":[["at", ["wa8"]]],
+"s3":[["at", ["wa8"]]]
+}}

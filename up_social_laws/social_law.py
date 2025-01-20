@@ -19,22 +19,14 @@ import unified_planning as up
 from up_social_laws.ma_problem_waitfor import MultiAgentProblemWithWaitfor
 from unified_planning.model import Parameter, Fluent, InstantaneousAction, problem_kind
 from unified_planning.shortcuts import *
-from unified_planning.exceptions import UPProblemDefinitionError
 from unified_planning.model import Problem, InstantaneousAction, DurativeAction, Action
 from typing import Type, List, Dict, Callable, OrderedDict, Tuple
-from enum import Enum, auto
-from unified_planning.io import PDDLWriter, PDDLReader
 from unified_planning.engines import Credits
 from unified_planning.model.multi_agent import *
 from unified_planning.engines.mixins.compiler import CompilationKind, CompilerMixin
 import unified_planning.engines as engines
-from unified_planning.plans import Plan, SequentialPlan
 import unified_planning.engines.results
-from unified_planning.engines.meta_engine import MetaEngine
-import unified_planning.engines.mixins as mixins
-from unified_planning.engines.mixins.oneshot_planner import OptimalityGuarantee
 from unified_planning.engines.results import *
-from up_social_laws.ma_centralizer import MultiAgentProblemCentralizer
 from functools import partial
 from unified_planning.engines.compilers.utils import replace_action
 
@@ -306,7 +298,7 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
             pre_condition_arg_objs = []
             for arg in pre_condition_args:
                 if isinstance(arg, int) or isinstance(arg, float):
-                    arg_obj=arg
+                    arg_obj = arg
                 else:
                     if arg in action._parameters:
                         arg_obj = action.parameter(arg)

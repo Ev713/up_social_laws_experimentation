@@ -1,9 +1,9 @@
 {"waypoint": ["wa12", "wa9", "wa8", "wb3", "wb2", "wb10", "wa3", "wa0", "wb11", "wb9", "wa6", "wb8", "wa14", "wb12", "wa7", "wa11", "wb5", "wb13", "wa13", "wa1", "wb4", "wa2", "wa4", "wa5", "wb0", "wb6", "wb1", "wa10", "wb7", "wb14"],
-"agents": ["s0", "s1", "s1", "s1", "s1", "s1", "s1", "s2", "s2", "s2", "s2", "s2", "s3", "s3", "s3", "s3", "s3", "s4", "s4", "s4", "s4"],
+"agents": ["s0", "s1", "s2", "s3", "s4"],
 
 "init_values": {
 "global": [
-["=", ["waypoint_supplies", ["wa0"]], "20000"],
+["=", ["waypoint_supplies", ["wa0"]], "80000"],
 ["=", ["waypoint_supplies", ["wa1"]], "0"],
 ["=", ["waypoint_supplies", ["wa2"]], "0"],
 ["=", ["waypoint_supplies", ["wa3"]], "0"],
@@ -71,4 +71,8 @@
 "global": [
 ],
 "s0":[["at", ["wa14"]]],
-"s1":[["at", ["wb14"]]]}}
+"s1":[["at", ["wb14"]]],
+"s2":[["at", ["wa14"]]],
+"s3":[["at", ["wa14"]]],
+"s4":[["at", ["wa14"]]]
+}}

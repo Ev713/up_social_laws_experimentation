@@ -282,7 +282,7 @@ class GridGenerator(ProblemGenerator):
             self.init_locs[agent] = str(random.choice(self.intersections))
             return self.init_locs[agent]
 
-    def add_social_law_law(self):
+    def add_social_law(self):
         up_columns = []
         down_columns = []
         l = 0
@@ -918,24 +918,32 @@ class NumericGridGenerator(NumericProblemGenerator):
             for y in range(min_y, max_y + 1):
                 if y < max_y and x < max_x:
                     for a in self.problem.agents:
-                        direction_law.disallow_action(a.name, 'move_right', (x, y, x + 1, y))
+                        a.action('move_right').add_precondition(Not(And(Equals(a.fluent('agent_x'), x + 1),
+                                                                        Equals(a.fluent('agent_y'), y))))
                 if y > min_y and x > min_x:
                     for a in self.problem.agents:
-                        direction_law.disallow_action(a.name, 'move_left', (x, y, x - 1, y))
+                        a.action('move_right').add_precondition(Not(And(Equals(a.fluent('agent_x'), x - 1),
+                                                                        Equals(a.fluent('agent_y'), y))))
                 if x not in up_columns and y < max_y:
                     for a in self.problem.agents:
-                        direction_law.disallow_action(a.name, 'move_up', (x, y, x, y + 1))
+                        a.action('move_right').add_precondition(Not(And(Equals(a.fluent('agent_x'), x),
+                                                                        Equals(a.fluent('agent_y'), y + 1))))
                 if x not in down_columns and y > min_y:
                     for a in self.problem.agents:
-                        direction_law.disallow_action(a.name, 'move_down', (x, y, x, y - 1))
-        for dir in ['up', 'down', 'left', 'right']:
-            for a in self.problem.agents:
-                direction_law.add_waitfor_annotation(a.name, f'move_{dir}',
-                                                     'is_free', ('x_to', 'y_to'))
-        for a in self.problem.agents:
-            direction_law.add_waitfor_annotation(a.name, 'appear', 'is_free', ('x', 'y'))
+                        a.action('move_right').add_precondition(Not(And(Equals(a.fluent('agent_x'), x),
+                                                                        Equals(a.fluent('agent_y'), y - 1))))
         self.problem = direction_law.compile(self.problem).problem
         return self.problem
+
+    def add_is_free_precon(self, action, agent, x, y, waitfor=False):
+        other_agents = [a for a in self.problem.agents if a.name != agent.name]
+        for other_agent in other_agents:
+            other_x = Dot(other_agent, other_agent.fluent('agent_x')())
+            other_y = Dot(other_agent, other_agent.fluent('agent_y')())
+            precon = Not(And(Equals(x, other_x), Equals(y, other_y)))
+            action.add_precondition(precon)
+            if waitfor:
+                self.problem.waitfor.annotate_as_waitfor(agent.name, action.name, precon)
 
     def generate_problem(self, file_name, sl=False):
         self.load_instance_data(file_name)
@@ -945,8 +953,7 @@ class NumericGridGenerator(NumericProblemGenerator):
         max_x = self.instance_data['max_x']
         min_y = self.instance_data['min_y']
         max_y = self.instance_data['max_y']
-        is_free = Fluent('is_free', BoolType(), x=IntType(min_x, max_x), y=IntType(min_y, max_y))
-        self.problem.ma_environment.add_fluent(is_free, default_initial_value=True)
+        # self.problem.ma_environment.add_fluent(is_free, default_initial_value=True)
 
         # Agent Fluents
         agent_x = Fluent('agent_x', IntType(), )
@@ -957,90 +964,6 @@ class NumericGridGenerator(NumericProblemGenerator):
         init_y = Fluent('init_y', IntType(), )
         on_map = Fluent('on_map', BoolType(), )
         left = Fluent('left', BoolType(), )
-
-        # Actions
-        appear = InstantaneousAction('appear', x=IntType(min_x, max_x), y=IntType(min_y, max_y))
-        x = appear.parameter('x')
-        y = appear.parameter('y')
-        appear.add_precondition(Equals(x, init_x()))
-        appear.add_precondition(Equals(y, init_y()))
-        appear.add_precondition(is_free(x, y))
-        appear.add_precondition(Not(on_map))
-        appear.add_precondition(Not(left))
-
-        appear.add_effect(agent_x(), init_x())
-        appear.add_effect(agent_y(), init_y())
-        appear.add_effect(on_map(), True)
-
-        leave = InstantaneousAction('leave', x=IntType(min_x, max_x), y=IntType(min_y, max_y))
-        x = leave.parameter('x')
-        y = leave.parameter('y')
-
-        leave.add_precondition(Equals(agent_x(), goal_x()))
-        leave.add_precondition(Equals(agent_y(), goal_y()))
-
-        leave.add_precondition(Equals(x, goal_x()))
-        leave.add_precondition(Equals(y, goal_y()))
-        leave.add_effect(left(), True)
-        leave.add_effect(on_map(), False)
-        leave.add_effect(is_free(x, y), True)
-
-        x_to_range = {
-            'up': (min_x, max_x),
-            'down': (min_x, max_x),
-            'left': (min_x, max_x - 1),
-            'right': (min_x + 1, max_x)
-        }
-        x_from_range = {
-            'up': (min_x, max_x),
-            'down': (min_x, max_x),
-            'left': (min_x + 1, max_x),
-            'right': (min_x, max_x - 1)
-        }
-
-        y_to_range = {
-            'up': (min_y + 1, max_y),
-            'down': (min_y, max_y - 1),
-            'left': (min_y, max_y),
-            'right': (min_y, max_y),
-        }
-        y_from_range = {
-            'up': (min_y, max_y - 1),
-            'down': (min_y + 1, max_y),
-            'left': (min_y, max_y),
-            'right': (min_y, max_y),
-        }
-
-        moves = {}
-        for dir in ['up', 'down', 'left', 'right']:
-            move = InstantaneousAction(f'move_{dir}', x_from=IntType(*x_from_range[dir]),
-                                       y_from=IntType(*y_from_range[dir]),
-                                       x_to=IntType(*x_to_range[dir]), y_to=IntType(*y_to_range[dir]))
-            x_to = move.parameter('x_to')
-            y_to = move.parameter('y_to')
-            x_from = move.parameter('x_from')
-            y_from = move.parameter('y_from')
-
-            move.add_precondition(on_map())
-            move.add_precondition(Equals(x_from, agent_x()))
-            move.add_precondition(Equals(y_from, agent_y()))
-            move.add_precondition(is_free(x_to, y_to))
-
-            prec = {
-                'up': (Equals(y_from + 1, y_to), Equals(x_from, x_to)),
-                'down': (Equals(y_from - 1, y_to), Equals(x_from, x_to)),
-                'right': (Equals(x_from + 1, x_to), Equals(y_from, y_to)),
-                'left': (Equals(x_from - 1, x_to), Equals(y_from, y_to)),
-
-            }
-            for p in prec[dir]:
-                move.add_precondition(p)
-
-            move.add_effect(is_free(x_to, y_to), False)
-            move.add_effect(is_free(x_from, y_from), True)
-            move.add_effect(agent_x(), x_to)
-            move.add_effect(agent_y(), y_to)
-            moves[dir] = move
 
         self.load_agents()
         for agent in self.problem.agents:
@@ -1053,11 +976,99 @@ class NumericGridGenerator(NumericProblemGenerator):
             agent.add_fluent(on_map, default_initial_value=False)
             agent.add_fluent(left, default_initial_value=False)
 
-            for dir in ['up', 'down', 'left', 'right']:
-                agent.add_action(moves[dir])
-            agent.add_action(leave)
+        # Actions
+        appear = InstantaneousAction('appear')
+        appear.add_precondition(Not(on_map))
+        appear.add_precondition(Not(left))
+
+        appear.add_effect(agent_x(), init_x())
+        appear.add_effect(agent_y(), init_y())
+        appear.add_effect(on_map(), True)
+
+        leave = InstantaneousAction('leave', )
+
+        leave.add_precondition(Equals(agent_x(), goal_x()))
+        leave.add_precondition(Equals(agent_y(), goal_y()))
+
+        leave.add_effect(left(), True)
+        leave.add_effect(on_map(), False)
+
+        x_from_range = {
+            'up': (min_x, max_x),
+            'down': (min_x, max_x),
+            'left': (min_x + 1, max_x),
+            'right': (min_x, max_x - 1)
+        }
+
+        y_from_range = {
+            'up': (min_y, max_y - 1),
+            'down': (min_y + 1, max_y),
+            'left': (min_y, max_y),
+            'right': (min_y, max_y),
+        }
+
+        moves = {}
+        for d in ['up', 'down', 'left', 'right']:
+            move = InstantaneousAction(f'move_{d}')
+            move.add_precondition(on_map())
+            move.add_precondition(GE(agent_x, x_from_range[d][0]))
+            move.add_precondition(LE(agent_x, x_from_range[d][1]))
+            move.add_precondition(GE(agent_y, y_from_range[d][0]))
+            move.add_precondition(LE(agent_y, y_from_range[d][1]))
+
+            effect = {
+                'right': [agent_x(), Plus(agent_x(), 1)],
+                'left': [agent_x(), Minus(agent_x(), 1)],
+                'up': [agent_y(), Plus(agent_y(), 1)],
+                'down': [agent_y(), Minus(agent_y(), 1)]
+            }[d]
+            move.add_effect(*effect)
+            moves[d] = move
+
+        for agent in self.problem.agents:
             agent.add_action(appear)
+            self.add_is_free_precon(appear, agent, Dot(agent, agent.fluent('agent_x')),
+                                    Dot(agent, agent.fluent('agent_y')), sl)
+
+            for d in ['up', 'down', 'left', 'right']:
+                #     agent.add_action(moves[d])
+                #     if d == 'up':
+                #         self.add_is_free_precon(moves[d], agent, Dot(agent, agent.fluent('agent_x')),
+                #                                 Plus(Dot(agent, agent.fluent('agent_y')), 1), sl)
+                #     if d == 'down':
+                #         self.add_is_free_precon(moves[d], agent, Dot(agent, agent.fluent('agent_x')),
+                #                                 Minus(Dot(agent, agent.fluent('agent_y')), 1), sl)
+                #     if d == 'left':
+                #         self.add_is_free_precon(moves[d], agent,
+                #                                 Minus(Dot(agent, agent.fluent('agent_x')), 1),
+                #                                 Dot(agent, agent.fluent('agent_y')), sl)
+                #     if d == 'right':
+                #         self.add_is_free_precon(moves[d], agent,
+                #                                 Plus(Dot(agent, agent.fluent('agent_x')), 1),
+                #                                 Plus(Dot(agent, agent.fluent('agent_y')), 1), sl)
+                #
+
+                agent.add_action(moves[d])
+                if d == 'up':
+                    self.add_is_free_precon(moves[d], agent, agent.fluent('agent_x')(),
+                                            Plus(agent.fluent('agent_y')(), 1), sl)
+                if d == 'down':
+                    self.add_is_free_precon(moves[d], agent, agent.fluent('agent_x')(),
+                                            Minus(agent.fluent('agent_y')(), 1), sl)
+                if d == 'left':
+                    self.add_is_free_precon(moves[d], agent,
+                                            Minus(agent.fluent('agent_x')(), 1),
+                                            agent.fluent('agent_y')(), sl)
+                if d == 'right':
+                    self.add_is_free_precon(moves[d], agent,
+                                            Plus(agent.fluent('agent_x')(), 1),
+                                            agent.fluent('agent_y')(), sl)
+                #
+
+            agent.add_action(leave)
+
             agent.add_public_goal(left())
+
         self.set_init_values()
         if sl:
             self.add_social_law()
@@ -1076,7 +1087,7 @@ class ExpeditionGenerator(NumericProblemGenerator):
             sl.add_precondition_to_action(a.name, 'retrieve_supplies', 'personal_packs', ('w',), '>=', 1)
             sl.add_effect(a.name, 'retrieve_supplies', 'personal_packs', ('w',), 1, '-')
             sl.add_effect(a.name, 'store_supplies', 'personal_packs', ('w',), 1, '+')
-            sl.set_initial_value_for_new_fluent(a.name, 'personal_packs', ('wa0', ),
+            sl.set_initial_value_for_new_fluent(a.name, 'personal_packs', ('wa0',),
                                                 int(float(self.instance_data['init_values']['global'][0][2]) / len(
                                                     self.problem.agents)))
         self.problem = sl.compile(self.problem).problem
@@ -1256,4 +1267,7 @@ class MarketTraderGenerator(NumericProblemGenerator):
 
 
 if __name__ == '__main__':
-    pass
+    pg = NumericGridGenerator()
+    pg.instances_folder = './numeric_problems/grid/json'
+    prob = pg.generate_problem('pfile1.json')
+    print(prob)

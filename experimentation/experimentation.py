@@ -467,14 +467,14 @@ class Experimentator:
         self.timeout = 3600  # 30 seconds timeout
         self.slrc = get_new_slrc()  # Assuming this function initializes the required object
         self.slrc.skip_checks = True
-        self.slrc._planner = OneshotPlanner(name='tamer')
+        self.slrc._planner = OneshotPlanner(name='enhsp')
         self.func = lambda p: check_robustness(self.slrc, p)  # Function to be executed
 
         self.log_dir = './logs'
         os.makedirs(self.log_dir, exist_ok=True)
         self.file_path = f"./logs/experiment_log_{date.today().strftime('%b-%d-%Y')}.csv"
 
-    def experiment_once(self, problem, metadata=("unknown", False)):
+    def experiment_once(self, problem, metadata=("unknown", False), ):
         filename, has_social_law = metadata
         result_queue = Queue()
 
@@ -525,45 +525,43 @@ class Experimentator:
             # Format the time (optional)
             print(f'{i + 1}/{total_problems} done\n')
 
+    def load_problems(self):
+        filepaths = {
+            'grid': './numeric_problems/grid/json',
+            'zenotravel': './numeric_problems/zenotravel/json',
+            'expedition': './numeric_problems/expedition/json',
+            'markettrader': './numeric_problems/markettrader/generated_json',
+        }
 
-def run_exps():
-    exp = Experimentator()
-    filepaths = {
-        'grid': './numeric_problems/grid/json',
-        'zenotravel': './numeric_problems/zenotravel/json',
-        'expedition': './numeric_problems/expedition/json',
-        'markettrader': './numeric_problems/markettrader/generated_json',
-    }
+        pgs = {
+            'grid': ProblemGenerator.NumericGridGenerator,
+            'zenotravel': ProblemGenerator.NumericZenotravelGenerator,
+            'expedition': ProblemGenerator.ExpeditionGenerator,
+            'markettrader': ProblemGenerator.MarketTraderGenerator
+        }
 
-    pgs = {
-        'grid': ProblemGenerator.NumericGridGenerator,
-        'zenotravel': ProblemGenerator.NumericZenotravelGenerator,
-        'expedition': ProblemGenerator.ExpeditionGenerator,
-        'markettrader': ProblemGenerator.MarketTraderGenerator
-    }
+        domains = [
+            #'grid',
+            #    'zenotravel',
+                'expedition',
+            #    'markettrader'
+        ]
 
-    domains = [
-        # 'grid',
-        'zenotravel',
-        'expedition',
-        'markettrader'
-    ]
-
-    for prob_i in range(1, 21):
-        for domain in domains:
-            pg = pgs[domain]()
-            pg.instances_folder = filepaths[domain]
-            if domain in ['grid', 'zenotravel', 'expedition']:
-                sl_options = [False, True]
-            else:
-                sl_options = [False, ]
-            for has_sl in sl_options:
-                prob = pg.generate_problem(f'pfile{prob_i}.json', sl=has_sl)
-                exp.problems.append((prob.name, prob, has_sl))
-                print(f'{prob.name} loaded')
-
-    exp.experiment_full()
+        for prob_i in range(1, 21):
+            for domain in domains:
+                pg = pgs[domain]()
+                pg.instances_folder = filepaths[domain]
+                if domain in ['grid', 'zenotravel', 'expedition']:
+                    sl_options = [False, True]
+                else:
+                    sl_options = [False, ]
+                for has_sl in sl_options:
+                    prob = pg.generate_problem(f'pfile{prob_i}.json', sl=has_sl)
+                    self.problems.append((prob.name, prob, has_sl))
+                    print(f'{prob.name} loaded')
 
 
 if __name__ == '__main__':
-    run_exps()
+    exp = Experimentator()
+    exp.load_problems()
+    exp.experiment_full()

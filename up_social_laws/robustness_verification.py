@@ -548,8 +548,9 @@ class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
         else:
             a_w.add_precondition(allow_action)
         a_w.add_precondition(self.stage_1)
-        a_w.add_precondition(Not(self.fsub.substitute(fact, self.global_fluent_map, agent)))
-        assert not fact.is_not()
+        sub = Not(self.fsub.substitute(fact, self.global_fluent_map, agent))
+        a_w.add_precondition(sub)
+        # assert not fact.is_not()
         a_w.clear_effects()
         a_w.add_effect(restrict_actions, True)
         a_w.add_effect(allow_action, True)
