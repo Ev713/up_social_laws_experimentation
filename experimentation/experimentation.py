@@ -99,7 +99,7 @@ def check_single_agent_solvable(problem):
     return True
 
 
-def simulate(problem, ma=False, print_state=False, trace_vars=[]):
+def simulate(problem, ma=False, print_state=False, trace_vars=[], random_walk=False):
     with SequentialSimulator(problem) as simulator:
         state = simulator.get_initial_state()
         if print_state:
@@ -120,15 +120,21 @@ def simulate(problem, ma=False, print_state=False, trace_vars=[]):
         while True:
             try:
                 while True:
-                    choice = random.choice(range(len(actions)))  # int(input('Choice: '))
+                    if random_walk:
+                        choice = random.choice(range(len(actions)))
+                    else:
+                        try:
+                            choice = int(input('Choice: '))
+                        except:
+                            continue
                     if choice not in range(len(actions)):
                         print('Invalid index. Try again.')
                         continue
                     action = actions[int(choice)]
                     state = simulator.apply(state, action[0], action[1])
                     break
-            except:
-                print('Applying action failed')
+            except Exception as e:
+                print(f'Applying action resulted in: \n{e}')
                 return
             print(f'Action {action[0].name, action[1]} applied.')
 
@@ -566,9 +572,12 @@ if __name__ == '__main__':
     exp.load_problems()
     #prob = exp.problems[0][1]
     #sap = SingleAgentProjection(prob.agents[0])
-    #sap.skip_check=True
+    #sap.skip_checks = True
     #print(prob)
-    #simulate(sap.compile(prob).problem)
+    #sap_prob = sap.compile(prob).problem
+    #print(sap_prob)
+    #simulate(sap_prob)
     #check_robustness(exp.slrc, prob)
+    #input('continue?')
     exp.experiment_full()
 

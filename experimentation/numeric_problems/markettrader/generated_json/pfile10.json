@@ -1,25 +1,21 @@
 {
     "market": [
-        "Seda",
-        "Mariehamn",
-        "Sough",
-        "Venice",
-        "Madrid",
-        "Jelgava",
-        "Tallinn",
-        "Berlin",
+        "Simnas",
+        "Brussels",
+        "Kaunas",
+        "Torshavn",
+        "Lisbon",
+        "Paris",
         "Gelgaudiskis",
-        "Palanga",
-        "Neringa",
-        "Amsterdam",
+        "Riga",
         "Edinburgh",
-        "Daugavpils"
+        "Oslo"
     ],
     "goods": [
-        "Food",
-        "Coffee",
-        "Computers",
-        "Kittens"
+        "DVDs",
+        "Kittens",
+        "Gold",
+        "Minerals"
     ],
     "agents": [
         "camel0",
@@ -32,107 +28,52 @@
                 [
                     "sellprice",
                     [
-                        "Food",
-                        "Seda"
+                        "DVDs",
+                        "Simnas"
                     ]
                 ],
-                "7.17"
+                "4"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Food",
-                        "Mariehamn"
+                        "DVDs",
+                        "Brussels"
                     ]
                 ],
-                "6.28"
+                "2"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Food",
-                        "Sough"
+                        "DVDs",
+                        "Kaunas"
                     ]
                 ],
-                "9.2"
+                "3"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Food",
-                        "Venice"
+                        "DVDs",
+                        "Torshavn"
                     ]
                 ],
-                "6.74"
+                "3"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Food",
-                        "Madrid"
-                    ]
-                ],
-                "6.69"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Food",
-                        "Jelgava"
-                    ]
-                ],
-                "10.72"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Food",
-                        "Tallinn"
-                    ]
-                ],
-                "8.37"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Food",
-                        "Berlin"
-                    ]
-                ],
-                "5.54"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "Food",
-                        "Berlin"
-                    ]
-                ],
-                "4.55"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "Food",
-                        "Berlin"
+                        "DVDs",
+                        "Lisbon"
                     ]
                 ],
                 "5"
@@ -142,404 +83,63 @@
                 [
                     "sellprice",
                     [
-                        "Food",
+                        "DVDs",
+                        "Paris"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "DVDs",
                         "Gelgaudiskis"
                     ]
                 ],
-                "5.5"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Food",
-                        "Palanga"
-                    ]
-                ],
-                "8.18"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Food",
-                        "Neringa"
-                    ]
-                ],
-                "6.85"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Food",
-                        "Amsterdam"
-                    ]
-                ],
-                "3.8"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Food",
-                        "Edinburgh"
-                    ]
-                ],
-                "6.33"
+                "3"
             ],
             [
                 "=",
                 [
                     "price",
                     [
-                        "Food",
+                        "DVDs",
+                        "Gelgaudiskis"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "on-sale",
+                    [
+                        "DVDs",
+                        "Gelgaudiskis"
+                    ]
+                ],
+                "15"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "DVDs",
+                        "Riga"
+                    ]
+                ],
+                "7"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "DVDs",
                         "Edinburgh"
-                    ]
-                ],
-                "6.28"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "Food",
-                        "Edinburgh"
-                    ]
-                ],
-                "10"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Food",
-                        "Daugavpils"
-                    ]
-                ],
-                "10.48"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Seda"
-                    ]
-                ],
-                "4.36"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Mariehamn"
-                    ]
-                ],
-                "6.54"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Sough"
-                    ]
-                ],
-                "5.68"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Venice"
-                    ]
-                ],
-                "10.33"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "Coffee",
-                        "Venice"
-                    ]
-                ],
-                "5.48"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "Coffee",
-                        "Venice"
-                    ]
-                ],
-                "9"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Madrid"
-                    ]
-                ],
-                "11.22"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Jelgava"
-                    ]
-                ],
-                "4.85"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Tallinn"
-                    ]
-                ],
-                "7.43"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Berlin"
-                    ]
-                ],
-                "6.32"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "Coffee",
-                        "Berlin"
-                    ]
-                ],
-                "4.09"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "Coffee",
-                        "Berlin"
-                    ]
-                ],
-                "12"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "7.72"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Palanga"
-                    ]
-                ],
-                "9.39"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Neringa"
-                    ]
-                ],
-                "14.14"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Amsterdam"
-                    ]
-                ],
-                "10.96"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Edinburgh"
-                    ]
-                ],
-                "7.95"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Daugavpils"
-                    ]
-                ],
-                "6.36"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Seda"
-                    ]
-                ],
-                "5.53"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Mariehamn"
-                    ]
-                ],
-                "6.54"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Sough"
-                    ]
-                ],
-                "10.39"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Venice"
-                    ]
-                ],
-                "14.62"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Madrid"
-                    ]
-                ],
-                "8.99"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Jelgava"
-                    ]
-                ],
-                "10.33"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Tallinn"
-                    ]
-                ],
-                "7.77"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Berlin"
-                    ]
-                ],
-                "14.17"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "6.58"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "Computers",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "7.62"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "Computers",
-                        "Gelgaudiskis"
                     ]
                 ],
                 "6"
@@ -549,77 +149,11 @@
                 [
                     "sellprice",
                     [
-                        "Computers",
-                        "Palanga"
+                        "DVDs",
+                        "Oslo"
                     ]
                 ],
-                "8.42"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Neringa"
-                    ]
-                ],
-                "5.85"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "Computers",
-                        "Neringa"
-                    ]
-                ],
-                "4.96"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "Computers",
-                        "Neringa"
-                    ]
-                ],
-                "14"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Amsterdam"
-                    ]
-                ],
-                "9.21"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Edinburgh"
-                    ]
-                ],
-                "9.89"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Daugavpils"
-                    ]
-                ],
-                "10.92"
+                "4"
             ],
             [
                 "=",
@@ -627,10 +161,10 @@
                     "sellprice",
                     [
                         "Kittens",
-                        "Seda"
+                        "Simnas"
                     ]
                 ],
-                "3.98"
+                "4"
             ],
             [
                 "=",
@@ -638,10 +172,10 @@
                     "sellprice",
                     [
                         "Kittens",
-                        "Mariehamn"
+                        "Brussels"
                     ]
                 ],
-                "12.59"
+                "4"
             ],
             [
                 "=",
@@ -649,10 +183,10 @@
                     "sellprice",
                     [
                         "Kittens",
-                        "Sough"
+                        "Kaunas"
                     ]
                 ],
-                "13.26"
+                "2"
             ],
             [
                 "=",
@@ -660,10 +194,10 @@
                     "sellprice",
                     [
                         "Kittens",
-                        "Venice"
+                        "Torshavn"
                     ]
                 ],
-                "6.81"
+                "6"
             ],
             [
                 "=",
@@ -671,10 +205,10 @@
                     "sellprice",
                     [
                         "Kittens",
-                        "Madrid"
+                        "Lisbon"
                     ]
                 ],
-                "9.68"
+                "3"
             ],
             [
                 "=",
@@ -682,10 +216,32 @@
                     "sellprice",
                     [
                         "Kittens",
-                        "Jelgava"
+                        "Paris"
                     ]
                 ],
-                "7.8"
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Kittens",
+                        "Gelgaudiskis"
+                    ]
+                ],
+                "1"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Kittens",
+                        "Riga"
+                    ]
+                ],
+                "5"
             ],
             [
                 "=",
@@ -693,10 +249,10 @@
                     "price",
                     [
                         "Kittens",
-                        "Jelgava"
+                        "Riga"
                     ]
                 ],
-                "4.25"
+                "4"
             ],
             [
                 "=",
@@ -704,76 +260,10 @@
                     "on-sale",
                     [
                         "Kittens",
-                        "Jelgava"
+                        "Riga"
                     ]
                 ],
-                "10"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Tallinn"
-                    ]
-                ],
-                "4.56"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Berlin"
-                    ]
-                ],
-                "9.69"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "7.32"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Palanga"
-                    ]
-                ],
-                "7.19"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Neringa"
-                    ]
-                ],
-                "9.42"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Amsterdam"
-                    ]
-                ],
-                "6.36"
+                "5"
             ],
             [
                 "=",
@@ -784,7 +274,7 @@
                         "Edinburgh"
                     ]
                 ],
-                "7.82"
+                "8"
             ],
             [
                 "=",
@@ -792,1187 +282,868 @@
                     "sellprice",
                     [
                         "Kittens",
-                        "Daugavpils"
+                        "Oslo"
                     ]
                 ],
-                "4.11"
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Gold",
+                        "Simnas"
+                    ]
+                ],
+                "6"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Gold",
+                        "Brussels"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Gold",
+                        "Kaunas"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Gold",
+                        "Torshavn"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Gold",
+                        "Lisbon"
+                    ]
+                ],
+                "7"
             ],
             [
                 "=",
                 [
                     "price",
                     [
-                        "Kittens",
-                        "Daugavpils"
+                        "Gold",
+                        "Lisbon"
                     ]
                 ],
-                "4.87"
+                "4"
             ],
             [
                 "=",
                 [
                     "on-sale",
                     [
-                        "Kittens",
-                        "Daugavpils"
+                        "Gold",
+                        "Lisbon"
                     ]
                 ],
-                "15"
+                "6"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Seda",
-                        "Mariehamn"
+                        "Gold",
+                        "Paris"
                     ]
                 ],
-                "4.82"
+                "2"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Seda",
-                        "Sough"
-                    ]
-                ],
-                "6.89"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Seda",
-                        "Venice"
-                    ]
-                ],
-                "5.36"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Seda",
-                        "Madrid"
-                    ]
-                ],
-                "1.23"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Seda",
-                        "Jelgava"
-                    ]
-                ],
-                "5.77"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Seda",
-                        "Tallinn"
-                    ]
-                ],
-                "4.26"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Seda",
-                        "Berlin"
-                    ]
-                ],
-                "4.55"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Seda",
+                        "Gold",
                         "Gelgaudiskis"
                     ]
                 ],
-                "1.8"
+                "7"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Seda",
-                        "Palanga"
+                        "Gold",
+                        "Riga"
                     ]
                 ],
-                "1.02"
+                "2"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Seda",
-                        "Neringa"
-                    ]
-                ],
-                "2.29"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Seda",
-                        "Amsterdam"
-                    ]
-                ],
-                "3.12"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Seda",
+                        "Gold",
                         "Edinburgh"
                     ]
                 ],
-                "1.58"
+                "3"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Seda",
-                        "Daugavpils"
+                        "Gold",
+                        "Oslo"
                     ]
                 ],
-                "2.57"
+                "3"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Mariehamn",
-                        "Seda"
+                        "Minerals",
+                        "Simnas"
                     ]
                 ],
-                "5.44"
+                "4"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Mariehamn",
-                        "Sough"
+                        "Minerals",
+                        "Brussels"
                     ]
                 ],
-                "4.4"
+                "4"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Mariehamn",
-                        "Venice"
+                        "Minerals",
+                        "Kaunas"
                     ]
                 ],
-                "5.58"
+                "5"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Mariehamn",
-                        "Madrid"
+                        "Minerals",
+                        "Torshavn"
                     ]
                 ],
-                "1.32"
+                "2"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Mariehamn",
-                        "Jelgava"
+                        "Minerals",
+                        "Lisbon"
                     ]
                 ],
-                "5.24"
+                "1"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Mariehamn",
-                        "Tallinn"
+                        "Minerals",
+                        "Paris"
                     ]
                 ],
-                "3.54"
+                "5"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Mariehamn",
-                        "Berlin"
-                    ]
-                ],
-                "4.77"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Mariehamn",
+                        "Minerals",
                         "Gelgaudiskis"
                     ]
                 ],
-                "5.67"
+                "2"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Mariehamn",
-                        "Palanga"
+                        "Minerals",
+                        "Riga"
                     ]
                 ],
-                "3.13"
+                "3"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "price",
                     [
-                        "Mariehamn",
-                        "Neringa"
+                        "Minerals",
+                        "Riga"
                     ]
                 ],
-                "6.33"
+                "3"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "on-sale",
                     [
-                        "Mariehamn",
-                        "Amsterdam"
+                        "Minerals",
+                        "Riga"
                     ]
                 ],
-                "1.59"
+                "4"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Mariehamn",
+                        "Minerals",
                         "Edinburgh"
                     ]
                 ],
-                "4.42"
+                "2"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Mariehamn",
-                        "Daugavpils"
+                        "Minerals",
+                        "Oslo"
                     ]
                 ],
-                "2.02"
+                "7"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Sough",
-                        "Seda"
+                        "Simnas",
+                        "Brussels"
                     ]
                 ],
-                "5.19"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Sough",
-                        "Mariehamn"
+                        "Simnas",
+                        "Kaunas"
                     ]
                 ],
-                "1.98"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Sough",
-                        "Venice"
+                        "Simnas",
+                        "Torshavn"
                     ]
                 ],
-                "6.06"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Sough",
-                        "Madrid"
+                        "Simnas",
+                        "Lisbon"
                     ]
                 ],
-                "5.84"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Sough",
-                        "Jelgava"
+                        "Simnas",
+                        "Paris"
                     ]
                 ],
-                "3.47"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Sough",
-                        "Tallinn"
-                    ]
-                ],
-                "4.31"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Berlin"
-                    ]
-                ],
-                "1.29"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
+                        "Simnas",
                         "Gelgaudiskis"
                     ]
                 ],
-                "5.43"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Sough",
-                        "Palanga"
+                        "Simnas",
+                        "Riga"
                     ]
                 ],
-                "4.21"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Sough",
-                        "Neringa"
-                    ]
-                ],
-                "3.77"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Amsterdam"
-                    ]
-                ],
-                "3.35"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
+                        "Simnas",
                         "Edinburgh"
                     ]
                 ],
-                "1.72"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Sough",
-                        "Daugavpils"
+                        "Simnas",
+                        "Oslo"
                     ]
                 ],
-                "1.68"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "Seda"
+                        "Brussels",
+                        "Simnas"
                     ]
                 ],
-                "1.31"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "Mariehamn"
+                        "Brussels",
+                        "Kaunas"
                     ]
                 ],
-                "1.86"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "Sough"
+                        "Brussels",
+                        "Torshavn"
                     ]
                 ],
-                "1.62"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "Madrid"
+                        "Brussels",
+                        "Lisbon"
                     ]
                 ],
-                "4.91"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "Jelgava"
+                        "Brussels",
+                        "Paris"
                     ]
                 ],
-                "4.81"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "Tallinn"
-                    ]
-                ],
-                "5.97"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Venice",
-                        "Berlin"
-                    ]
-                ],
-                "3.77"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Venice",
+                        "Brussels",
                         "Gelgaudiskis"
                     ]
                 ],
-                "3.33"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "Palanga"
+                        "Brussels",
+                        "Riga"
                     ]
                 ],
-                "1.18"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "Neringa"
-                    ]
-                ],
-                "3.57"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Venice",
-                        "Amsterdam"
-                    ]
-                ],
-                "6.5"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Venice",
+                        "Brussels",
                         "Edinburgh"
                     ]
                 ],
-                "3.24"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "Daugavpils"
+                        "Brussels",
+                        "Oslo"
                     ]
                 ],
-                "3.92"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Madrid",
-                        "Seda"
+                        "Kaunas",
+                        "Simnas"
                     ]
                 ],
-                "6.32"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Madrid",
-                        "Mariehamn"
+                        "Kaunas",
+                        "Brussels"
                     ]
                 ],
-                "5.61"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Madrid",
-                        "Sough"
+                        "Kaunas",
+                        "Torshavn"
                     ]
                 ],
-                "2.84"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Madrid",
-                        "Venice"
+                        "Kaunas",
+                        "Lisbon"
                     ]
                 ],
-                "6.94"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Madrid",
-                        "Jelgava"
+                        "Kaunas",
+                        "Paris"
                     ]
                 ],
-                "6.77"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Madrid",
-                        "Tallinn"
-                    ]
-                ],
-                "4.38"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
-                        "Berlin"
-                    ]
-                ],
-                "4.82"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
+                        "Kaunas",
                         "Gelgaudiskis"
                     ]
                 ],
-                "4.44"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Madrid",
-                        "Palanga"
+                        "Kaunas",
+                        "Riga"
                     ]
                 ],
-                "1.96"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Madrid",
-                        "Neringa"
-                    ]
-                ],
-                "1.16"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
-                        "Amsterdam"
-                    ]
-                ],
-                "3.91"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
+                        "Kaunas",
                         "Edinburgh"
                     ]
                 ],
-                "5.63"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Madrid",
-                        "Daugavpils"
+                        "Kaunas",
+                        "Oslo"
                     ]
                 ],
-                "3.22"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jelgava",
-                        "Seda"
+                        "Torshavn",
+                        "Simnas"
                     ]
                 ],
-                "5.11"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jelgava",
-                        "Mariehamn"
+                        "Torshavn",
+                        "Brussels"
                     ]
                 ],
-                "1.47"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jelgava",
-                        "Sough"
+                        "Torshavn",
+                        "Kaunas"
                     ]
                 ],
-                "4.27"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jelgava",
-                        "Venice"
+                        "Torshavn",
+                        "Lisbon"
                     ]
                 ],
-                "4.52"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jelgava",
-                        "Madrid"
+                        "Torshavn",
+                        "Paris"
                     ]
                 ],
-                "6.58"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jelgava",
-                        "Tallinn"
-                    ]
-                ],
-                "1.98"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Berlin"
-                    ]
-                ],
-                "3.34"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
+                        "Torshavn",
                         "Gelgaudiskis"
                     ]
                 ],
-                "3.96"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jelgava",
-                        "Palanga"
+                        "Torshavn",
+                        "Riga"
                     ]
                 ],
-                "1.98"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jelgava",
-                        "Neringa"
-                    ]
-                ],
-                "6.44"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Amsterdam"
-                    ]
-                ],
-                "4.56"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
+                        "Torshavn",
                         "Edinburgh"
                     ]
                 ],
-                "5.88"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jelgava",
-                        "Daugavpils"
+                        "Torshavn",
+                        "Oslo"
                     ]
                 ],
-                "1.94"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Tallinn",
-                        "Seda"
+                        "Lisbon",
+                        "Simnas"
                     ]
                 ],
-                "4.8"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Tallinn",
-                        "Mariehamn"
+                        "Lisbon",
+                        "Brussels"
                     ]
                 ],
-                "4.22"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Tallinn",
-                        "Sough"
+                        "Lisbon",
+                        "Kaunas"
                     ]
                 ],
-                "2.5"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Tallinn",
-                        "Venice"
+                        "Lisbon",
+                        "Torshavn"
                     ]
                 ],
-                "4.39"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Tallinn",
-                        "Madrid"
+                        "Lisbon",
+                        "Paris"
                     ]
                 ],
-                "4.16"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Tallinn",
-                        "Jelgava"
-                    ]
-                ],
-                "5.22"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tallinn",
-                        "Berlin"
-                    ]
-                ],
-                "5.98"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tallinn",
+                        "Lisbon",
                         "Gelgaudiskis"
                     ]
                 ],
-                "2.84"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Tallinn",
-                        "Palanga"
+                        "Lisbon",
+                        "Riga"
                     ]
                 ],
-                "6.13"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Tallinn",
-                        "Neringa"
-                    ]
-                ],
-                "6.07"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tallinn",
-                        "Amsterdam"
-                    ]
-                ],
-                "4.92"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tallinn",
+                        "Lisbon",
                         "Edinburgh"
                     ]
                 ],
-                "5.04"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Tallinn",
-                        "Daugavpils"
+                        "Lisbon",
+                        "Oslo"
                     ]
                 ],
-                "3.49"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Berlin",
-                        "Seda"
+                        "Paris",
+                        "Simnas"
                     ]
                 ],
-                "4.2"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Berlin",
-                        "Mariehamn"
+                        "Paris",
+                        "Brussels"
                     ]
                 ],
-                "1.05"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Berlin",
-                        "Sough"
+                        "Paris",
+                        "Kaunas"
                     ]
                 ],
-                "3.77"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Berlin",
-                        "Venice"
+                        "Paris",
+                        "Torshavn"
                     ]
                 ],
-                "5.38"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Berlin",
-                        "Madrid"
+                        "Paris",
+                        "Lisbon"
                     ]
                 ],
-                "3.01"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Berlin",
-                        "Jelgava"
-                    ]
-                ],
-                "3.11"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Berlin",
-                        "Tallinn"
-                    ]
-                ],
-                "1.01"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Berlin",
+                        "Paris",
                         "Gelgaudiskis"
                     ]
                 ],
-                "4.23"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Berlin",
-                        "Palanga"
+                        "Paris",
+                        "Riga"
                     ]
                 ],
-                "1.16"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Berlin",
-                        "Neringa"
-                    ]
-                ],
-                "3.17"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Berlin",
-                        "Amsterdam"
-                    ]
-                ],
-                "2.14"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Berlin",
+                        "Paris",
                         "Edinburgh"
                     ]
                 ],
-                "5.46"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Berlin",
-                        "Daugavpils"
+                        "Paris",
+                        "Oslo"
                     ]
                 ],
-                "1.62"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Seda"
-                    ]
-                ],
-                "4.02"
+                "5"
             ],
             [
                 "=",
@@ -1980,10 +1151,10 @@
                     "drive-cost",
                     [
                         "Gelgaudiskis",
-                        "Mariehamn"
+                        "Simnas"
                     ]
                 ],
-                "1.81"
+                "5"
             ],
             [
                 "=",
@@ -1991,10 +1162,10 @@
                     "drive-cost",
                     [
                         "Gelgaudiskis",
-                        "Sough"
+                        "Brussels"
                     ]
                 ],
-                "2.38"
+                "1"
             ],
             [
                 "=",
@@ -2002,10 +1173,10 @@
                     "drive-cost",
                     [
                         "Gelgaudiskis",
-                        "Venice"
+                        "Kaunas"
                     ]
                 ],
-                "4.19"
+                "4"
             ],
             [
                 "=",
@@ -2013,10 +1184,10 @@
                     "drive-cost",
                     [
                         "Gelgaudiskis",
-                        "Madrid"
+                        "Torshavn"
                     ]
                 ],
-                "5.01"
+                "3"
             ],
             [
                 "=",
@@ -2024,10 +1195,10 @@
                     "drive-cost",
                     [
                         "Gelgaudiskis",
-                        "Jelgava"
+                        "Lisbon"
                     ]
                 ],
-                "5.58"
+                "4"
             ],
             [
                 "=",
@@ -2035,10 +1206,10 @@
                     "drive-cost",
                     [
                         "Gelgaudiskis",
-                        "Tallinn"
+                        "Paris"
                     ]
                 ],
-                "2.01"
+                "5"
             ],
             [
                 "=",
@@ -2046,43 +1217,10 @@
                     "drive-cost",
                     [
                         "Gelgaudiskis",
-                        "Berlin"
+                        "Riga"
                     ]
                 ],
-                "1.85"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Palanga"
-                    ]
-                ],
-                "5.49"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Neringa"
-                    ]
-                ],
-                "6.02"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Amsterdam"
-                    ]
-                ],
-                "2.99"
+                "1"
             ],
             [
                 "=",
@@ -2093,7 +1231,7 @@
                         "Edinburgh"
                     ]
                 ],
-                "6.62"
+                "2"
             ],
             [
                 "=",
@@ -2101,725 +1239,307 @@
                     "drive-cost",
                     [
                         "Gelgaudiskis",
-                        "Daugavpils"
+                        "Oslo"
                     ]
                 ],
-                "1.5"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Palanga",
-                        "Seda"
+                        "Riga",
+                        "Simnas"
                     ]
                 ],
-                "4.34"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Palanga",
-                        "Mariehamn"
+                        "Riga",
+                        "Brussels"
                     ]
                 ],
-                "2.42"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Palanga",
-                        "Sough"
+                        "Riga",
+                        "Kaunas"
                     ]
                 ],
-                "5.96"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Palanga",
-                        "Venice"
+                        "Riga",
+                        "Torshavn"
                     ]
                 ],
-                "1.25"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Palanga",
-                        "Madrid"
+                        "Riga",
+                        "Lisbon"
                     ]
                 ],
-                "3.89"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Palanga",
-                        "Jelgava"
+                        "Riga",
+                        "Paris"
                     ]
                 ],
-                "6.41"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Palanga",
-                        "Tallinn"
-                    ]
-                ],
-                "5.83"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Berlin"
-                    ]
-                ],
-                "4.49"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
+                        "Riga",
                         "Gelgaudiskis"
                     ]
                 ],
-                "2.3"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Palanga",
-                        "Neringa"
-                    ]
-                ],
-                "4.39"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Amsterdam"
-                    ]
-                ],
-                "1.66"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
+                        "Riga",
                         "Edinburgh"
                     ]
                 ],
-                "6.43"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Palanga",
-                        "Daugavpils"
+                        "Riga",
+                        "Oslo"
                     ]
                 ],
-                "5.16"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Neringa",
-                        "Seda"
+                        "Edinburgh",
+                        "Simnas"
                     ]
                 ],
-                "2.78"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Neringa",
-                        "Mariehamn"
+                        "Edinburgh",
+                        "Brussels"
                     ]
                 ],
-                "2.47"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Neringa",
-                        "Sough"
+                        "Edinburgh",
+                        "Kaunas"
                     ]
                 ],
-                "4.32"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Neringa",
-                        "Venice"
+                        "Edinburgh",
+                        "Torshavn"
                     ]
                 ],
-                "5.41"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Neringa",
-                        "Madrid"
+                        "Edinburgh",
+                        "Lisbon"
                     ]
                 ],
-                "2.26"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Neringa",
-                        "Jelgava"
+                        "Edinburgh",
+                        "Paris"
                     ]
                 ],
-                "2.16"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Neringa",
-                        "Tallinn"
-                    ]
-                ],
-                "6.01"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Berlin"
-                    ]
-                ],
-                "6.83"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
+                        "Edinburgh",
                         "Gelgaudiskis"
                     ]
                 ],
-                "2.15"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Neringa",
-                        "Palanga"
+                        "Edinburgh",
+                        "Riga"
                     ]
                 ],
-                "1.38"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Neringa",
-                        "Amsterdam"
+                        "Edinburgh",
+                        "Oslo"
                     ]
                 ],
-                "1.68"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Neringa",
+                        "Oslo",
+                        "Simnas"
+                    ]
+                ],
+                "5"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Oslo",
+                        "Brussels"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Oslo",
+                        "Kaunas"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Oslo",
+                        "Torshavn"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Oslo",
+                        "Lisbon"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Oslo",
+                        "Paris"
+                    ]
+                ],
+                "5"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Oslo",
+                        "Gelgaudiskis"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Oslo",
+                        "Riga"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Oslo",
                         "Edinburgh"
                     ]
                 ],
-                "4.44"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Daugavpils"
-                    ]
-                ],
-                "5.46"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Seda"
-                    ]
-                ],
-                "2.85"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Mariehamn"
-                    ]
-                ],
-                "1.99"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Sough"
-                    ]
-                ],
-                "4.36"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Venice"
-                    ]
-                ],
-                "4.95"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Madrid"
-                    ]
-                ],
-                "6.31"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Jelgava"
-                    ]
-                ],
-                "1.55"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Tallinn"
-                    ]
-                ],
-                "5.33"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Berlin"
-                    ]
-                ],
-                "1.79"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "6.8"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Palanga"
-                    ]
-                ],
-                "6.0"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Neringa"
-                    ]
-                ],
-                "4.49"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Edinburgh"
-                    ]
-                ],
-                "4.25"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Daugavpils"
-                    ]
-                ],
-                "1.51"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Seda"
-                    ]
-                ],
-                "3.77"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Mariehamn"
-                    ]
-                ],
-                "4.77"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Sough"
-                    ]
-                ],
-                "4.74"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Venice"
-                    ]
-                ],
-                "5.87"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Madrid"
-                    ]
-                ],
-                "2.9"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Jelgava"
-                    ]
-                ],
-                "1.42"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Tallinn"
-                    ]
-                ],
-                "4.22"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Berlin"
-                    ]
-                ],
-                "1.82"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "6.04"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Palanga"
-                    ]
-                ],
-                "1.33"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Neringa"
-                    ]
-                ],
-                "3.85"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Amsterdam"
-                    ]
-                ],
-                "5.56"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Daugavpils"
-                    ]
-                ],
-                "4.95"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Daugavpils",
-                        "Seda"
-                    ]
-                ],
-                "4.74"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Daugavpils",
-                        "Mariehamn"
-                    ]
-                ],
-                "1.33"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Daugavpils",
-                        "Sough"
-                    ]
-                ],
-                "5.79"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Daugavpils",
-                        "Venice"
-                    ]
-                ],
-                "1.99"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Daugavpils",
-                        "Madrid"
-                    ]
-                ],
-                "1.59"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Daugavpils",
-                        "Jelgava"
-                    ]
-                ],
-                "6.29"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Daugavpils",
-                        "Tallinn"
-                    ]
-                ],
-                "5.5"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Daugavpils",
-                        "Berlin"
-                    ]
-                ],
-                "4.19"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Daugavpils",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "2.7"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Daugavpils",
-                        "Palanga"
-                    ]
-                ],
-                "4.65"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Daugavpils",
-                        "Neringa"
-                    ]
-                ],
-                "6.55"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Daugavpils",
-                        "Amsterdam"
-                    ]
-                ],
-                "4.62"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Daugavpils",
-                        "Edinburgh"
-                    ]
-                ],
-                "3.81"
+                "2"
             ]
         ],
         "camel0": [
@@ -2828,27 +1548,7 @@
                 [
                     "bought",
                     [
-                        "Food"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "Coffee"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "Computers"
+                        "DVDs"
                     ]
                 ],
                 "0"
@@ -2864,9 +1564,29 @@
                 "0"
             ],
             [
+                "=",
+                [
+                    "bought",
+                    [
+                        "Gold"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "Minerals"
+                    ]
+                ],
+                "0"
+            ],
+            [
                 "at",
                 [
-                    "Daugavpils"
+                    "Gelgaudiskis"
                 ]
             ],
             [
@@ -2888,680 +1608,379 @@
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Mariehamn"
+                    "Simnas",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Sough"
+                    "Simnas",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Venice"
+                    "Simnas",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Madrid"
+                    "Simnas",
+                    "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Jelgava"
+                    "Simnas",
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Tallinn"
+                    "Simnas",
+                    "Riga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Berlin"
+                    "Simnas",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
+                    "Brussels",
+                    "Simnas"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Brussels",
+                    "Kaunas"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Brussels",
+                    "Torshavn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Brussels",
+                    "Lisbon"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Brussels",
+                    "Paris"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Brussels",
                     "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Palanga"
+                    "Brussels",
+                    "Riga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
+                    "Brussels",
                     "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Daugavpils"
+                    "Brussels",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Mariehamn",
-                    "Seda"
+                    "Kaunas",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Mariehamn",
-                    "Sough"
+                    "Kaunas",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Mariehamn",
-                    "Venice"
+                    "Kaunas",
+                    "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Mariehamn",
-                    "Berlin"
+                    "Kaunas",
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Mariehamn",
+                    "Kaunas",
                     "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Mariehamn",
-                    "Neringa"
+                    "Kaunas",
+                    "Riga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Mariehamn",
-                    "Amsterdam"
+                    "Kaunas",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Mariehamn",
-                    "Edinburgh"
+                    "Torshavn",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Mariehamn",
-                    "Daugavpils"
+                    "Torshavn",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Seda"
+                    "Torshavn",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Mariehamn"
+                    "Torshavn",
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
+                    "Torshavn",
                     "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Palanga"
+                    "Torshavn",
+                    "Riga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
+                    "Torshavn",
                     "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Daugavpils"
+                    "Torshavn",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Mariehamn"
+                    "Lisbon",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Sough"
+                    "Lisbon",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Jelgava"
+                    "Lisbon",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Tallinn"
+                    "Lisbon",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Berlin"
+                    "Lisbon",
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
+                    "Lisbon",
                     "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Palanga"
+                    "Lisbon",
+                    "Riga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
+                    "Lisbon",
                     "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Daugavpils"
+                    "Lisbon",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Seda"
+                    "Paris",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Mariehamn"
+                    "Paris",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Sough"
+                    "Paris",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Madrid"
+                    "Paris",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Tallinn"
+                    "Paris",
+                    "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
+                    "Paris",
                     "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Palanga"
+                    "Paris",
+                    "Riga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
+                    "Paris",
                     "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Edinburgh"
+                    "Paris",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Gelgaudiskis",
-                    "Seda"
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Gelgaudiskis",
-                    "Venice"
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Gelgaudiskis",
-                    "Madrid"
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Gelgaudiskis",
-                    "Jelgava"
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Gelgaudiskis",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Amsterdam"
+                    "Riga"
                 ]
             ],
             [
@@ -3575,294 +1994,105 @@
                 "can-drive",
                 [
                     "Gelgaudiskis",
-                    "Daugavpils"
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Seda"
+                    "Riga",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Mariehamn"
+                    "Riga",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Sough"
+                    "Riga",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Venice"
+                    "Riga",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Madrid"
+                    "Riga",
+                    "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Jelgava"
+                    "Riga",
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Tallinn"
+                    "Riga",
+                    "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
+                    "Riga",
                     "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Neringa"
+                    "Riga",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Edinburgh",
-                    "Seda"
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Edinburgh",
-                    "Mariehamn"
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Edinburgh",
-                    "Sough"
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Edinburgh",
-                    "Venice"
+                    "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Edinburgh",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Berlin"
+                    "Paris"
                 ]
             ],
             [
@@ -3876,111 +2106,62 @@
                 "can-drive",
                 [
                     "Edinburgh",
-                    "Palanga"
+                    "Riga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Neringa"
+                    "Oslo",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Amsterdam"
+                    "Oslo",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Daugavpils"
+                    "Oslo",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Seda"
+                    "Oslo",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Sough"
+                    "Oslo",
+                    "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Venice"
+                    "Oslo",
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Madrid"
+                    "Oslo",
+                    "Riga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
+                    "Oslo",
                     "Edinburgh"
                 ]
             ]
@@ -3991,27 +2172,7 @@
                 [
                     "bought",
                     [
-                        "Food"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "Coffee"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "Computers"
+                        "DVDs"
                     ]
                 ],
                 "0"
@@ -4027,9 +2188,29 @@
                 "0"
             ],
             [
+                "=",
+                [
+                    "bought",
+                    [
+                        "Gold"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "Minerals"
+                    ]
+                ],
+                "0"
+            ],
+            [
                 "at",
                 [
-                    "Amsterdam"
+                    "Lisbon"
                 ]
             ],
             [
@@ -4051,750 +2232,379 @@
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Mariehamn"
+                    "Simnas",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Sough"
+                    "Simnas",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Venice"
+                    "Simnas",
+                    "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Madrid"
+                    "Simnas",
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
+                    "Simnas",
                     "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Palanga"
+                    "Simnas",
+                    "Riga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
+                    "Simnas",
                     "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Daugavpils"
+                    "Simnas",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Mariehamn",
-                    "Seda"
+                    "Brussels",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Mariehamn",
-                    "Venice"
+                    "Brussels",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Mariehamn",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
+                    "Brussels",
                     "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Mariehamn",
-                    "Palanga"
+                    "Brussels",
+                    "Riga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Mariehamn",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
+                    "Brussels",
                     "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Daugavpils"
+                    "Brussels",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Seda"
+                    "Kaunas",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Mariehamn"
+                    "Kaunas",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Sough"
+                    "Kaunas",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Madrid"
+                    "Kaunas",
+                    "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Jelgava"
+                    "Kaunas",
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
+                    "Kaunas",
                     "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Palanga"
+                    "Kaunas",
+                    "Riga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
+                    "Kaunas",
                     "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Daugavpils"
+                    "Kaunas",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Seda"
+                    "Torshavn",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Sough"
+                    "Torshavn",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Venice"
+                    "Torshavn",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Madrid"
+                    "Torshavn",
+                    "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Tallinn"
+                    "Torshavn",
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
+                    "Torshavn",
                     "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Palanga"
+                    "Torshavn",
+                    "Riga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
+                    "Torshavn",
                     "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Daugavpils"
+                    "Torshavn",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tallinn",
-                    "Seda"
+                    "Lisbon",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tallinn",
-                    "Mariehamn"
+                    "Lisbon",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tallinn",
-                    "Sough"
+                    "Lisbon",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tallinn",
-                    "Venice"
+                    "Lisbon",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tallinn",
-                    "Madrid"
+                    "Lisbon",
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tallinn",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
+                    "Lisbon",
                     "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tallinn",
-                    "Neringa"
+                    "Lisbon",
+                    "Riga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tallinn",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
+                    "Lisbon",
                     "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Berlin",
-                    "Daugavpils"
+                    "Paris",
+                    "Simnas"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Paris",
+                    "Brussels"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Paris",
+                    "Kaunas"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Paris",
+                    "Torshavn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Paris",
+                    "Lisbon"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Paris",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Paris",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Gelgaudiskis",
-                    "Seda"
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Gelgaudiskis",
-                    "Mariehamn"
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Gelgaudiskis",
-                    "Sough"
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Gelgaudiskis",
-                    "Venice"
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Gelgaudiskis",
-                    "Madrid"
+                    "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Gelgaudiskis",
-                    "Jelgava"
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Gelgaudiskis",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Amsterdam"
+                    "Riga"
                 ]
             ],
             [
@@ -4807,406 +2617,161 @@
             [
                 "can-drive",
                 [
-                    "Gelgaudiskis",
-                    "Daugavpils"
+                    "Riga",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Seda"
+                    "Riga",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Mariehamn"
+                    "Riga",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Sough"
+                    "Riga",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Venice"
+                    "Riga",
+                    "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Jelgava"
+                    "Riga",
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
+                    "Riga",
                     "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
+                    "Riga",
                     "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Daugavpils"
+                    "Riga",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Neringa",
-                    "Seda"
+                    "Edinburgh",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Neringa",
-                    "Mariehamn"
+                    "Edinburgh",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Neringa",
-                    "Sough"
+                    "Edinburgh",
+                    "Torshavn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Neringa",
-                    "Venice"
+                    "Edinburgh",
+                    "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Neringa",
-                    "Madrid"
+                    "Edinburgh",
+                    "Paris"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Neringa",
-                    "Jelgava"
+                    "Edinburgh",
+                    "Riga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Neringa",
-                    "Tallinn"
+                    "Edinburgh",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Neringa",
+                    "Oslo",
+                    "Simnas"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Oslo",
+                    "Torshavn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Oslo",
+                    "Lisbon"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Oslo",
+                    "Paris"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Oslo",
                     "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Neringa",
-                    "Palanga"
+                    "Oslo",
+                    "Riga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Neringa",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
+                    "Oslo",
                     "Edinburgh"
                 ]
             ]
@@ -5221,7 +2786,7 @@
                     "cash",
                     []
                 ],
-                "30.23"
+                "38"
             ]
         ],
         "camel1": [
@@ -5231,7 +2796,7 @@
                     "cash",
                     []
                 ],
-                "30.23"
+                "38"
             ]
         ]
     }

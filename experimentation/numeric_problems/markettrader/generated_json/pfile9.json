@@ -1,28 +1,26 @@
 {
     "market": [
-        "Tukums",
-        "Rome",
-        "Amsterdam",
-        "Ogre",
-        "Jieznas",
-        "Viljandi",
         "Madrid",
-        "Torshavn",
-        "Bonn",
-        "Douglas",
-        "Athens",
-        "Valmiera",
-        "Panemune"
+        "Daugai",
+        "Moscow",
+        "Hamburg",
+        "Mariehamn",
+        "Thule",
+        "Oslo",
+        "Cesis",
+        "Gelgaudiskis"
     ],
     "goods": [
-        "Kittens",
         "Cars",
-        "Cattle",
-        "Coffee"
+        "DVDs",
+        "Copper",
+        "Food"
     ],
     "agents": [
         "camel0",
-        "camel1"
+        "camel1",
+        "camel2",
+        "camel3"
     ],
     "init_values": {
         "global": [
@@ -31,242 +29,11 @@
                 [
                     "sellprice",
                     [
-                        "Kittens",
-                        "Tukums"
-                    ]
-                ],
-                "8.28"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Rome"
-                    ]
-                ],
-                "9.63"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Amsterdam"
-                    ]
-                ],
-                "11.27"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Ogre"
-                    ]
-                ],
-                "10.46"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Jieznas"
-                    ]
-                ],
-                "5.37"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Viljandi"
-                    ]
-                ],
-                "7.66"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Madrid"
-                    ]
-                ],
-                "6.43"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "Kittens",
-                        "Madrid"
-                    ]
-                ],
-                "4.45"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "Kittens",
-                        "Madrid"
-                    ]
-                ],
-                "13"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Torshavn"
-                    ]
-                ],
-                "5.34"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Bonn"
-                    ]
-                ],
-                "7.76"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Douglas"
-                    ]
-                ],
-                "5.96"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Athens"
-                    ]
-                ],
-                "8.1"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Valmiera"
-                    ]
-                ],
-                "9.76"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Panemune"
-                    ]
-                ],
-                "8.36"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Tukums"
-                    ]
-                ],
-                "8.15"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Rome"
-                    ]
-                ],
-                "5.76"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Amsterdam"
-                    ]
-                ],
-                "12.39"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Ogre"
-                    ]
-                ],
-                "13.24"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Jieznas"
-                    ]
-                ],
-                "7.26"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Viljandi"
-                    ]
-                ],
-                "6.29"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
                         "Cars",
                         "Madrid"
                     ]
                 ],
-                "4.14"
+                "5"
             ],
             [
                 "=",
@@ -274,10 +41,10 @@
                     "sellprice",
                     [
                         "Cars",
-                        "Torshavn"
+                        "Daugai"
                     ]
                 ],
-                "10.59"
+                "3"
             ],
             [
                 "=",
@@ -285,10 +52,10 @@
                     "sellprice",
                     [
                         "Cars",
-                        "Bonn"
+                        "Moscow"
                     ]
                 ],
-                "5.81"
+                "2"
             ],
             [
                 "=",
@@ -296,10 +63,10 @@
                     "sellprice",
                     [
                         "Cars",
-                        "Douglas"
+                        "Hamburg"
                     ]
                 ],
-                "5.21"
+                "2"
             ],
             [
                 "=",
@@ -307,10 +74,32 @@
                     "sellprice",
                     [
                         "Cars",
-                        "Athens"
+                        "Mariehamn"
                     ]
                 ],
-                "4.43"
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Cars",
+                        "Thule"
+                    ]
+                ],
+                "1"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Cars",
+                        "Oslo"
+                    ]
+                ],
+                "8"
             ],
             [
                 "=",
@@ -318,10 +107,10 @@
                     "price",
                     [
                         "Cars",
-                        "Athens"
+                        "Oslo"
                     ]
                 ],
-                "5.1"
+                "5"
             ],
             [
                 "=",
@@ -329,10 +118,10 @@
                     "on-sale",
                     [
                         "Cars",
-                        "Athens"
+                        "Oslo"
                     ]
                 ],
-                "14"
+                "8"
             ],
             [
                 "=",
@@ -340,10 +129,10 @@
                     "sellprice",
                     [
                         "Cars",
-                        "Valmiera"
+                        "Cesis"
                     ]
                 ],
-                "12.85"
+                "6"
             ],
             [
                 "=",
@@ -351,249 +140,117 @@
                     "sellprice",
                     [
                         "Cars",
-                        "Panemune"
+                        "Gelgaudiskis"
                     ]
                 ],
-                "12.93"
+                "4"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Cattle",
-                        "Tukums"
-                    ]
-                ],
-                "10.53"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cattle",
-                        "Rome"
-                    ]
-                ],
-                "5.71"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cattle",
-                        "Amsterdam"
-                    ]
-                ],
-                "6.74"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cattle",
-                        "Ogre"
-                    ]
-                ],
-                "3.19"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cattle",
-                        "Jieznas"
-                    ]
-                ],
-                "7.72"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cattle",
-                        "Viljandi"
-                    ]
-                ],
-                "5.88"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cattle",
+                        "DVDs",
                         "Madrid"
                     ]
                 ],
-                "5.47"
+                "1"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Cattle",
-                        "Torshavn"
+                        "DVDs",
+                        "Daugai"
                     ]
                 ],
-                "12.16"
+                "3"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Cattle",
-                        "Bonn"
+                        "DVDs",
+                        "Moscow"
                     ]
                 ],
-                "8.15"
+                "5"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Cattle",
-                        "Douglas"
+                        "DVDs",
+                        "Hamburg"
                     ]
                 ],
-                "12.24"
+                "2"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Cattle",
-                        "Athens"
+                        "DVDs",
+                        "Mariehamn"
                     ]
                 ],
-                "7.98"
+                "3"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Cattle",
-                        "Valmiera"
+                        "DVDs",
+                        "Thule"
                     ]
                 ],
-                "11.64"
+                "3"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Cattle",
-                        "Panemune"
+                        "DVDs",
+                        "Oslo"
                     ]
                 ],
-                "7.07"
+                "5"
             ],
             [
                 "=",
                 [
                     "price",
                     [
-                        "Cattle",
-                        "Panemune"
+                        "DVDs",
+                        "Oslo"
                     ]
                 ],
-                "5.58"
+                "3"
             ],
             [
                 "=",
                 [
                     "on-sale",
                     [
-                        "Cattle",
-                        "Panemune"
+                        "DVDs",
+                        "Oslo"
                     ]
                 ],
-                "11"
+                "3"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Coffee",
-                        "Tukums"
-                    ]
-                ],
-                "4.73"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Rome"
-                    ]
-                ],
-                "10.28"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Amsterdam"
-                    ]
-                ],
-                "6.9"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Ogre"
-                    ]
-                ],
-                "14.5"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Jieznas"
-                    ]
-                ],
-                "3.88"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "Coffee",
-                        "Jieznas"
-                    ]
-                ],
-                "4.55"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "Coffee",
-                        "Jieznas"
+                        "DVDs",
+                        "Cesis"
                     ]
                 ],
                 "7"
@@ -603,880 +260,253 @@
                 [
                     "sellprice",
                     [
-                        "Coffee",
-                        "Viljandi"
+                        "DVDs",
+                        "Gelgaudiskis"
                     ]
                 ],
-                "10.93"
+                "3"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Coffee",
+                        "Copper",
                         "Madrid"
                     ]
                 ],
-                "6.74"
+                "4"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Coffee",
-                        "Torshavn"
+                        "Copper",
+                        "Daugai"
                     ]
                 ],
-                "9.89"
+                "5"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Coffee",
-                        "Bonn"
+                        "Copper",
+                        "Moscow"
                     ]
                 ],
-                "5.21"
+                "3"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Coffee",
-                        "Douglas"
+                        "Copper",
+                        "Hamburg"
                     ]
                 ],
-                "4.83"
+                "7"
+            ],
+            [
+                "=",
+                [
+                    "price",
+                    [
+                        "Copper",
+                        "Hamburg"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "on-sale",
+                    [
+                        "Copper",
+                        "Hamburg"
+                    ]
+                ],
+                "12"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Coffee",
-                        "Athens"
+                        "Copper",
+                        "Mariehamn"
                     ]
                 ],
-                "3.9"
+                "3"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Coffee",
-                        "Valmiera"
+                        "Copper",
+                        "Thule"
                     ]
                 ],
-                "10.67"
+                "2"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Coffee",
-                        "Panemune"
+                        "Copper",
+                        "Oslo"
                     ]
                 ],
-                "9.33"
+                "2"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Tukums",
-                        "Rome"
+                        "Copper",
+                        "Cesis"
                     ]
                 ],
-                "2.17"
+                "5"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Tukums",
-                        "Amsterdam"
+                        "Copper",
+                        "Gelgaudiskis"
                     ]
                 ],
-                "6.12"
+                "3"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Tukums",
-                        "Ogre"
-                    ]
-                ],
-                "6.24"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tukums",
-                        "Jieznas"
-                    ]
-                ],
-                "5.18"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tukums",
-                        "Viljandi"
-                    ]
-                ],
-                "5.82"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Tukums",
+                        "Food",
                         "Madrid"
                     ]
                 ],
-                "5.97"
+                "5"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Tukums",
-                        "Torshavn"
+                        "Food",
+                        "Daugai"
                     ]
                 ],
-                "1.33"
+                "4"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Tukums",
-                        "Bonn"
+                        "Food",
+                        "Moscow"
                     ]
                 ],
-                "5.14"
+                "5"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Tukums",
-                        "Douglas"
+                        "Food",
+                        "Hamburg"
                     ]
                 ],
-                "4.83"
+                "9"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Tukums",
-                        "Athens"
+                        "Food",
+                        "Mariehamn"
                     ]
                 ],
-                "2.2"
+                "5"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "price",
                     [
-                        "Tukums",
-                        "Valmiera"
+                        "Food",
+                        "Mariehamn"
                     ]
                 ],
-                "6.16"
+                "3"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "on-sale",
                     [
-                        "Tukums",
-                        "Panemune"
+                        "Food",
+                        "Mariehamn"
                     ]
                 ],
-                "3.03"
+                "14"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Rome",
-                        "Tukums"
+                        "Food",
+                        "Thule"
                     ]
                 ],
-                "1.98"
+                "5"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Rome",
-                        "Amsterdam"
+                        "Food",
+                        "Oslo"
                     ]
                 ],
-                "6.82"
+                "2"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Rome",
-                        "Ogre"
+                        "Food",
+                        "Cesis"
                     ]
                 ],
-                "5.34"
+                "7"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Rome",
-                        "Jieznas"
+                        "Food",
+                        "Gelgaudiskis"
                     ]
                 ],
-                "4.24"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Viljandi"
-                    ]
-                ],
-                "3.08"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Madrid"
-                    ]
-                ],
-                "2.68"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Torshavn"
-                    ]
-                ],
-                "2.49"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Bonn"
-                    ]
-                ],
-                "1.9"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Douglas"
-                    ]
-                ],
-                "3.18"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Athens"
-                    ]
-                ],
-                "1.75"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Valmiera"
-                    ]
-                ],
-                "4.67"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Panemune"
-                    ]
-                ],
-                "3.82"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Tukums"
-                    ]
-                ],
-                "3.56"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Rome"
-                    ]
-                ],
-                "2.05"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Ogre"
-                    ]
-                ],
-                "3.58"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Jieznas"
-                    ]
-                ],
-                "2.77"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Viljandi"
-                    ]
-                ],
-                "4.79"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Madrid"
-                    ]
-                ],
-                "5.54"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Torshavn"
-                    ]
-                ],
-                "3.54"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Bonn"
-                    ]
-                ],
-                "2.57"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Douglas"
-                    ]
-                ],
-                "3.71"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Athens"
-                    ]
-                ],
-                "4.3"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Valmiera"
-                    ]
-                ],
-                "1.83"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Panemune"
-                    ]
-                ],
-                "4.79"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
-                        "Tukums"
-                    ]
-                ],
-                "5.28"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
-                        "Rome"
-                    ]
-                ],
-                "2.34"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
-                        "Amsterdam"
-                    ]
-                ],
-                "3.44"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
-                        "Jieznas"
-                    ]
-                ],
-                "2.75"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
-                        "Viljandi"
-                    ]
-                ],
-                "3.9"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
-                        "Madrid"
-                    ]
-                ],
-                "1.08"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
-                        "Torshavn"
-                    ]
-                ],
-                "1.49"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
-                        "Bonn"
-                    ]
-                ],
-                "3.44"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
-                        "Douglas"
-                    ]
-                ],
-                "1.61"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
-                        "Athens"
-                    ]
-                ],
-                "2.38"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
-                        "Valmiera"
-                    ]
-                ],
-                "6.91"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
-                        "Panemune"
-                    ]
-                ],
-                "6.46"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jieznas",
-                        "Tukums"
-                    ]
-                ],
-                "5.67"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jieznas",
-                        "Rome"
-                    ]
-                ],
-                "3.54"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jieznas",
-                        "Amsterdam"
-                    ]
-                ],
-                "4.21"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jieznas",
-                        "Ogre"
-                    ]
-                ],
-                "5.15"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jieznas",
-                        "Viljandi"
-                    ]
-                ],
-                "2.21"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jieznas",
-                        "Madrid"
-                    ]
-                ],
-                "3.56"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jieznas",
-                        "Torshavn"
-                    ]
-                ],
-                "1.38"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jieznas",
-                        "Bonn"
-                    ]
-                ],
-                "4.05"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jieznas",
-                        "Douglas"
-                    ]
-                ],
-                "5.34"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jieznas",
-                        "Athens"
-                    ]
-                ],
-                "3.21"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jieznas",
-                        "Valmiera"
-                    ]
-                ],
-                "6.27"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jieznas",
-                        "Panemune"
-                    ]
-                ],
-                "5.48"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Tukums"
-                    ]
-                ],
-                "3.58"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Rome"
-                    ]
-                ],
-                "1.07"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Amsterdam"
-                    ]
-                ],
-                "4.21"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Ogre"
-                    ]
-                ],
-                "2.03"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Jieznas"
-                    ]
-                ],
-                "6.49"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Madrid"
-                    ]
-                ],
-                "6.16"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Torshavn"
-                    ]
-                ],
-                "6.42"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Bonn"
-                    ]
-                ],
-                "1.17"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Douglas"
-                    ]
-                ],
-                "6.53"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Athens"
-                    ]
-                ],
-                "5.21"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Valmiera"
-                    ]
-                ],
-                "6.89"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Panemune"
-                    ]
-                ],
-                "5.62"
+                "4"
             ],
             [
                 "=",
@@ -1484,10 +514,10 @@
                     "drive-cost",
                     [
                         "Madrid",
-                        "Tukums"
+                        "Daugai"
                     ]
                 ],
-                "5.44"
+                "4"
             ],
             [
                 "=",
@@ -1495,10 +525,10 @@
                     "drive-cost",
                     [
                         "Madrid",
-                        "Rome"
+                        "Moscow"
                     ]
                 ],
-                "4.65"
+                "4"
             ],
             [
                 "=",
@@ -1506,10 +536,10 @@
                     "drive-cost",
                     [
                         "Madrid",
-                        "Amsterdam"
+                        "Hamburg"
                     ]
                 ],
-                "5.33"
+                "2"
             ],
             [
                 "=",
@@ -1517,10 +547,10 @@
                     "drive-cost",
                     [
                         "Madrid",
-                        "Ogre"
+                        "Mariehamn"
                     ]
                 ],
-                "6.78"
+                "5"
             ],
             [
                 "=",
@@ -1528,10 +558,10 @@
                     "drive-cost",
                     [
                         "Madrid",
-                        "Jieznas"
+                        "Thule"
                     ]
                 ],
-                "2.86"
+                "3"
             ],
             [
                 "=",
@@ -1539,10 +569,10 @@
                     "drive-cost",
                     [
                         "Madrid",
-                        "Viljandi"
+                        "Oslo"
                     ]
                 ],
-                "2.38"
+                "4"
             ],
             [
                 "=",
@@ -1550,10 +580,10 @@
                     "drive-cost",
                     [
                         "Madrid",
-                        "Torshavn"
+                        "Cesis"
                     ]
                 ],
-                "6.31"
+                "3"
             ],
             [
                 "=",
@@ -1561,859 +591,717 @@
                     "drive-cost",
                     [
                         "Madrid",
-                        "Bonn"
+                        "Gelgaudiskis"
                     ]
                 ],
-                "1.85"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Madrid",
-                        "Douglas"
-                    ]
-                ],
-                "4.86"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
-                        "Athens"
-                    ]
-                ],
-                "2.67"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
-                        "Valmiera"
-                    ]
-                ],
-                "4.2"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
-                        "Panemune"
-                    ]
-                ],
-                "5.01"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Torshavn",
-                        "Tukums"
-                    ]
-                ],
-                "4.68"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Torshavn",
-                        "Rome"
-                    ]
-                ],
-                "1.59"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Torshavn",
-                        "Amsterdam"
-                    ]
-                ],
-                "4.06"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Torshavn",
-                        "Ogre"
-                    ]
-                ],
-                "5.92"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Torshavn",
-                        "Jieznas"
-                    ]
-                ],
-                "2.66"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Torshavn",
-                        "Viljandi"
-                    ]
-                ],
-                "4.49"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Torshavn",
+                        "Daugai",
                         "Madrid"
                     ]
                 ],
-                "6.02"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Torshavn",
-                        "Bonn"
+                        "Daugai",
+                        "Moscow"
                     ]
                 ],
-                "5.68"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Torshavn",
-                        "Douglas"
+                        "Daugai",
+                        "Hamburg"
                     ]
                 ],
-                "1.31"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Torshavn",
-                        "Athens"
+                        "Daugai",
+                        "Mariehamn"
                     ]
                 ],
-                "4.82"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Torshavn",
-                        "Valmiera"
+                        "Daugai",
+                        "Thule"
                     ]
                 ],
-                "6.76"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Torshavn",
-                        "Panemune"
+                        "Daugai",
+                        "Oslo"
                     ]
                 ],
-                "6.07"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Bonn",
-                        "Tukums"
+                        "Daugai",
+                        "Cesis"
                     ]
                 ],
-                "6.63"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Bonn",
-                        "Rome"
+                        "Daugai",
+                        "Gelgaudiskis"
                     ]
                 ],
-                "6.96"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Bonn",
-                        "Amsterdam"
-                    ]
-                ],
-                "3.37"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Ogre"
-                    ]
-                ],
-                "6.5"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Jieznas"
-                    ]
-                ],
-                "6.46"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Viljandi"
-                    ]
-                ],
-                "1.35"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
+                        "Moscow",
                         "Madrid"
                     ]
                 ],
-                "4.94"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Bonn",
-                        "Torshavn"
+                        "Moscow",
+                        "Daugai"
                     ]
                 ],
-                "4.12"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Bonn",
-                        "Douglas"
+                        "Moscow",
+                        "Hamburg"
                     ]
                 ],
-                "2.79"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Bonn",
-                        "Athens"
+                        "Moscow",
+                        "Mariehamn"
                     ]
                 ],
-                "5.18"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Bonn",
-                        "Valmiera"
+                        "Moscow",
+                        "Thule"
                     ]
                 ],
-                "6.41"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Bonn",
-                        "Panemune"
+                        "Moscow",
+                        "Oslo"
                     ]
                 ],
-                "2.06"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Douglas",
-                        "Tukums"
+                        "Moscow",
+                        "Cesis"
                     ]
                 ],
-                "4.86"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Douglas",
-                        "Rome"
+                        "Moscow",
+                        "Gelgaudiskis"
                     ]
                 ],
-                "5.55"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Douglas",
-                        "Amsterdam"
-                    ]
-                ],
-                "3.38"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Douglas",
-                        "Ogre"
-                    ]
-                ],
-                "3.52"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Douglas",
-                        "Jieznas"
-                    ]
-                ],
-                "1.21"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Douglas",
-                        "Viljandi"
-                    ]
-                ],
-                "4.85"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Douglas",
+                        "Hamburg",
                         "Madrid"
                     ]
                 ],
-                "3.0"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Douglas",
-                        "Torshavn"
+                        "Hamburg",
+                        "Daugai"
                     ]
                 ],
-                "3.71"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Douglas",
-                        "Bonn"
+                        "Hamburg",
+                        "Moscow"
                     ]
                 ],
-                "5.67"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Douglas",
-                        "Athens"
+                        "Hamburg",
+                        "Mariehamn"
                     ]
                 ],
-                "6.71"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Douglas",
-                        "Valmiera"
+                        "Hamburg",
+                        "Thule"
                     ]
                 ],
-                "1.28"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Douglas",
-                        "Panemune"
+                        "Hamburg",
+                        "Oslo"
                     ]
                 ],
-                "3.79"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Athens",
-                        "Tukums"
+                        "Hamburg",
+                        "Cesis"
                     ]
                 ],
-                "1.83"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Athens",
-                        "Rome"
+                        "Hamburg",
+                        "Gelgaudiskis"
                     ]
                 ],
-                "1.84"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Athens",
-                        "Amsterdam"
-                    ]
-                ],
-                "4.69"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Athens",
-                        "Ogre"
-                    ]
-                ],
-                "4.9"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Athens",
-                        "Jieznas"
-                    ]
-                ],
-                "2.53"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Athens",
-                        "Viljandi"
-                    ]
-                ],
-                "2.42"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Athens",
+                        "Mariehamn",
                         "Madrid"
                     ]
                 ],
-                "6.85"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Athens",
-                        "Torshavn"
+                        "Mariehamn",
+                        "Daugai"
                     ]
                 ],
-                "2.51"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Athens",
-                        "Bonn"
+                        "Mariehamn",
+                        "Moscow"
                     ]
                 ],
-                "3.96"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Athens",
-                        "Douglas"
+                        "Mariehamn",
+                        "Hamburg"
                     ]
                 ],
-                "5.58"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Athens",
-                        "Valmiera"
+                        "Mariehamn",
+                        "Thule"
                     ]
                 ],
-                "2.41"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Athens",
-                        "Panemune"
+                        "Mariehamn",
+                        "Oslo"
                     ]
                 ],
-                "1.5"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Valmiera",
-                        "Tukums"
+                        "Mariehamn",
+                        "Cesis"
                     ]
                 ],
-                "1.26"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Valmiera",
-                        "Rome"
+                        "Mariehamn",
+                        "Gelgaudiskis"
                     ]
                 ],
-                "2.49"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Valmiera",
-                        "Amsterdam"
-                    ]
-                ],
-                "2.4"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Valmiera",
-                        "Ogre"
-                    ]
-                ],
-                "2.04"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Valmiera",
-                        "Jieznas"
-                    ]
-                ],
-                "5.73"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Valmiera",
-                        "Viljandi"
-                    ]
-                ],
-                "1.68"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Valmiera",
+                        "Thule",
                         "Madrid"
                     ]
                 ],
-                "5.58"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Valmiera",
-                        "Torshavn"
+                        "Thule",
+                        "Daugai"
                     ]
                 ],
-                "6.7"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Valmiera",
-                        "Bonn"
+                        "Thule",
+                        "Moscow"
                     ]
                 ],
-                "1.72"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Valmiera",
-                        "Douglas"
+                        "Thule",
+                        "Hamburg"
                     ]
                 ],
-                "3.09"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Valmiera",
-                        "Athens"
+                        "Thule",
+                        "Mariehamn"
                     ]
                 ],
-                "2.08"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Valmiera",
-                        "Panemune"
+                        "Thule",
+                        "Oslo"
                     ]
                 ],
-                "5.43"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Panemune",
-                        "Tukums"
+                        "Thule",
+                        "Cesis"
                     ]
                 ],
-                "1.68"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Panemune",
-                        "Rome"
+                        "Thule",
+                        "Gelgaudiskis"
                     ]
                 ],
-                "6.61"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Panemune",
-                        "Amsterdam"
-                    ]
-                ],
-                "3.33"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Panemune",
-                        "Ogre"
-                    ]
-                ],
-                "5.58"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Panemune",
-                        "Jieznas"
-                    ]
-                ],
-                "2.99"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Panemune",
-                        "Viljandi"
-                    ]
-                ],
-                "4.14"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Panemune",
+                        "Oslo",
                         "Madrid"
                     ]
                 ],
-                "2.37"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Panemune",
-                        "Torshavn"
+                        "Oslo",
+                        "Daugai"
                     ]
                 ],
-                "6.35"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Panemune",
-                        "Bonn"
+                        "Oslo",
+                        "Moscow"
                     ]
                 ],
-                "3.34"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Panemune",
-                        "Douglas"
+                        "Oslo",
+                        "Hamburg"
                     ]
                 ],
-                "2.59"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Panemune",
-                        "Athens"
+                        "Oslo",
+                        "Mariehamn"
                     ]
                 ],
-                "3.28"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Panemune",
-                        "Valmiera"
+                        "Oslo",
+                        "Thule"
                     ]
                 ],
-                "2.23"
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Oslo",
+                        "Cesis"
+                    ]
+                ],
+                "5"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Oslo",
+                        "Gelgaudiskis"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Cesis",
+                        "Madrid"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Cesis",
+                        "Daugai"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Cesis",
+                        "Moscow"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Cesis",
+                        "Hamburg"
+                    ]
+                ],
+                "1"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Cesis",
+                        "Mariehamn"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Cesis",
+                        "Thule"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Cesis",
+                        "Oslo"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Cesis",
+                        "Gelgaudiskis"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Gelgaudiskis",
+                        "Madrid"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Gelgaudiskis",
+                        "Daugai"
+                    ]
+                ],
+                "1"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Gelgaudiskis",
+                        "Moscow"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Gelgaudiskis",
+                        "Hamburg"
+                    ]
+                ],
+                "5"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Gelgaudiskis",
+                        "Mariehamn"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Gelgaudiskis",
+                        "Thule"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Gelgaudiskis",
+                        "Oslo"
+                    ]
+                ],
+                "5"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Gelgaudiskis",
+                        "Cesis"
+                    ]
+                ],
+                "4"
             ]
         ],
         "camel0": [
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "Kittens"
-                    ]
-                ],
-                "0"
-            ],
             [
                 "=",
                 [
@@ -2429,7 +1317,7 @@
                 [
                     "bought",
                     [
-                        "Cattle"
+                        "DVDs"
                     ]
                 ],
                 "0"
@@ -2439,7 +1327,17 @@
                 [
                     "bought",
                     [
-                        "Coffee"
+                        "Copper"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "Food"
                     ]
                 ],
                 "0"
@@ -2447,7 +1345,7 @@
             [
                 "at",
                 [
-                    "Tukums"
+                    "Oslo"
                 ]
             ],
             [
@@ -2469,946 +1367,414 @@
             [
                 "can-drive",
                 [
-                    "Tukums",
-                    "Rome"
+                    "Madrid",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tukums",
-                    "Ogre"
+                    "Madrid",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tukums",
-                    "Jieznas"
+                    "Madrid",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tukums",
+                    "Madrid",
+                    "Mariehamn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Madrid",
+                    "Thule"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Madrid",
+                    "Cesis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Madrid",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Daugai",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tukums",
-                    "Torshavn"
+                    "Daugai",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tukums",
-                    "Bonn"
+                    "Daugai",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tukums",
-                    "Douglas"
+                    "Daugai",
+                    "Thule"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tukums",
-                    "Athens"
+                    "Daugai",
+                    "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tukums",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tukums",
-                    "Panemune"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Tukums"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
+                    "Moscow",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Rome",
-                    "Torshavn"
+                    "Moscow",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Rome",
-                    "Douglas"
+                    "Moscow",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Rome",
-                    "Athens"
+                    "Moscow",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Rome",
-                    "Valmiera"
+                    "Moscow",
+                    "Thule"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Rome",
-                    "Panemune"
+                    "Moscow",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Tukums"
+                    "Moscow",
+                    "Cesis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Jieznas"
+                    "Moscow",
+                    "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
+                    "Hamburg",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Torshavn"
+                    "Hamburg",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Bonn"
+                    "Hamburg",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Douglas"
+                    "Hamburg",
+                    "Thule"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Athens"
+                    "Hamburg",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Valmiera"
+                    "Hamburg",
+                    "Cesis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Panemune"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Tukums"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
+                    "Mariehamn",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Ogre",
-                    "Torshavn"
+                    "Mariehamn",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Ogre",
-                    "Bonn"
+                    "Mariehamn",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Ogre",
-                    "Douglas"
+                    "Mariehamn",
+                    "Cesis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Ogre",
-                    "Athens"
+                    "Mariehamn",
+                    "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Ogre",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Panemune"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Tukums"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
+                    "Thule",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jieznas",
-                    "Torshavn"
+                    "Thule",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jieznas",
-                    "Bonn"
+                    "Thule",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jieznas",
-                    "Panemune"
+                    "Thule",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Tukums"
+                    "Thule",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Rome"
+                    "Thule",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Amsterdam"
+                    "Thule",
+                    "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
+                    "Oslo",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Torshavn"
+                    "Oslo",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Bonn"
+                    "Oslo",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Douglas"
+                    "Oslo",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Athens"
+                    "Oslo",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Valmiera"
+                    "Oslo",
+                    "Thule"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Panemune"
+                    "Oslo",
+                    "Cesis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Tukums"
+                    "Oslo",
+                    "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Athens"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Panemune"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Tukums"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Athens"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Panemune"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Tukums"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
+                    "Cesis",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Torshavn"
+                    "Cesis",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Douglas"
+                    "Cesis",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Athens"
+                    "Cesis",
+                    "Thule"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Valmiera"
+                    "Cesis",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Panemune"
+                    "Cesis",
+                    "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Tukums"
+                    "Gelgaudiskis",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Rome"
+                    "Gelgaudiskis",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Amsterdam"
+                    "Gelgaudiskis",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Ogre"
+                    "Gelgaudiskis",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Jieznas"
+                    "Gelgaudiskis",
+                    "Thule"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Viljandi"
+                    "Gelgaudiskis",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Athens"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Athens",
-                    "Tukums"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Athens",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Athens",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Athens",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Athens",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Athens",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Athens",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Athens",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Athens",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Athens",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Athens",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Athens",
-                    "Panemune"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Tukums"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Athens"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Panemune"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Tukums"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Athens"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Valmiera"
+                    "Gelgaudiskis",
+                    "Cesis"
                 ]
             ]
         ],
@@ -3418,16 +1784,6 @@
                 [
                     "bought",
                     [
-                        "Kittens"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
                         "Cars"
                     ]
                 ],
@@ -3438,7 +1794,7 @@
                 [
                     "bought",
                     [
-                        "Cattle"
+                        "DVDs"
                     ]
                 ],
                 "0"
@@ -3448,7 +1804,17 @@
                 [
                     "bought",
                     [
-                        "Coffee"
+                        "Copper"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "Food"
                     ]
                 ],
                 "0"
@@ -3456,7 +1822,7 @@
             [
                 "at",
                 [
-                    "Athens"
+                    "Mariehamn"
                 ]
             ],
             [
@@ -3478,890 +1844,1445 @@
             [
                 "can-drive",
                 [
-                    "Tukums",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tukums",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tukums",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tukums",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tukums",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tukums",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tukums",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tukums",
-                    "Athens"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tukums",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Athens"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Tukums"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Athens"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Tukums"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Athens"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Panemune"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Tukums"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Tukums"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Athens"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Panemune"
+                    "Madrid",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Madrid",
-                    "Rome"
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Madrid",
-                    "Ogre"
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Madrid",
-                    "Jieznas"
+                    "Thule"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Madrid",
-                    "Viljandi"
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Madrid",
-                    "Douglas"
+                    "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Athens"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Panemune"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Tukums"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Athens"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Panemune"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Tukums"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
+                    "Daugai",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Douglas"
+                    "Daugai",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Athens"
+                    "Daugai",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Panemune"
+                    "Daugai",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Rome"
+                    "Daugai",
+                    "Thule"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Amsterdam"
+                    "Daugai",
+                    "Cesis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
+                    "Moscow",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Bonn"
+                    "Moscow",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Athens"
+                    "Moscow",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Valmiera"
+                    "Moscow",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Panemune"
+                    "Moscow",
+                    "Thule"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Athens",
-                    "Tukums"
+                    "Moscow",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Athens",
-                    "Rome"
+                    "Moscow",
+                    "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Athens",
-                    "Amsterdam"
+                    "Hamburg",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Athens",
-                    "Ogre"
+                    "Hamburg",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Athens",
-                    "Jieznas"
+                    "Hamburg",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Athens",
-                    "Viljandi"
+                    "Hamburg",
+                    "Thule"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Athens",
+                    "Hamburg",
+                    "Oslo"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Cesis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Mariehamn",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Athens",
-                    "Torshavn"
+                    "Mariehamn",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Athens",
-                    "Bonn"
+                    "Mariehamn",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Athens",
-                    "Douglas"
+                    "Mariehamn",
+                    "Thule"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Athens",
-                    "Panemune"
+                    "Mariehamn",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valmiera",
-                    "Tukums"
+                    "Mariehamn",
+                    "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valmiera",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
+                    "Thule",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valmiera",
-                    "Torshavn"
+                    "Thule",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valmiera",
-                    "Bonn"
+                    "Thule",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valmiera",
-                    "Douglas"
+                    "Thule",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valmiera",
-                    "Athens"
+                    "Thule",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valmiera",
-                    "Panemune"
+                    "Thule",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Panemune",
-                    "Tukums"
+                    "Thule",
+                    "Cesis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Panemune",
-                    "Rome"
+                    "Thule",
+                    "Gelgaudiskis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Panemune",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
+                    "Oslo",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Panemune",
-                    "Torshavn"
+                    "Oslo",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Panemune",
-                    "Bonn"
+                    "Oslo",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Panemune",
-                    "Douglas"
+                    "Oslo",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Panemune",
-                    "Athens"
+                    "Oslo",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Panemune",
-                    "Valmiera"
+                    "Oslo",
+                    "Thule"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Oslo",
+                    "Cesis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Oslo",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Madrid"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Daugai"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Mariehamn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Thule"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Oslo"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Madrid"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Daugai"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Mariehamn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Thule"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Oslo"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Cesis"
+                ]
+            ]
+        ],
+        "camel2": [
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "Cars"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "DVDs"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "Copper"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "Food"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "at",
+                [
+                    "Thule"
+                ]
+            ],
+            [
+                "=",
+                [
+                    "cash",
+                    []
+                ],
+                "10"
+            ],
+            [
+                "=",
+                [
+                    "capacity",
+                    []
+                ],
+                "5"
+            ],
+            [
+                "can-drive",
+                [
+                    "Madrid",
+                    "Daugai"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Madrid",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Madrid",
+                    "Mariehamn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Madrid",
+                    "Thule"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Madrid",
+                    "Oslo"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Madrid",
+                    "Cesis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Madrid",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Daugai",
+                    "Madrid"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Daugai",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Daugai",
+                    "Oslo"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Daugai",
+                    "Cesis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Daugai",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
+                    "Madrid"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
+                    "Daugai"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
+                    "Mariehamn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
+                    "Thule"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
+                    "Oslo"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
+                    "Cesis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Madrid"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Daugai"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Mariehamn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Thule"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Oslo"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Cesis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Mariehamn",
+                    "Madrid"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Mariehamn",
+                    "Daugai"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Mariehamn",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Mariehamn",
+                    "Thule"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Mariehamn",
+                    "Oslo"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Mariehamn",
+                    "Cesis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Mariehamn",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Thule",
+                    "Madrid"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Thule",
+                    "Daugai"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Thule",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Thule",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Thule",
+                    "Mariehamn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Thule",
+                    "Oslo"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Thule",
+                    "Cesis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Thule",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Oslo",
+                    "Daugai"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Oslo",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Oslo",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Oslo",
+                    "Thule"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Oslo",
+                    "Cesis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Oslo",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Daugai"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Mariehamn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Thule"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Oslo"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Madrid"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Daugai"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Mariehamn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Thule"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Oslo"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Cesis"
+                ]
+            ]
+        ],
+        "camel3": [
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "Cars"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "DVDs"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "Copper"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "Food"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "at",
+                [
+                    "Mariehamn"
+                ]
+            ],
+            [
+                "=",
+                [
+                    "cash",
+                    []
+                ],
+                "10"
+            ],
+            [
+                "=",
+                [
+                    "capacity",
+                    []
+                ],
+                "5"
+            ],
+            [
+                "can-drive",
+                [
+                    "Madrid",
+                    "Daugai"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Madrid",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Madrid",
+                    "Mariehamn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Madrid",
+                    "Oslo"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Madrid",
+                    "Cesis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Madrid",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Daugai",
+                    "Madrid"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Daugai",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Daugai",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Daugai",
+                    "Mariehamn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Daugai",
+                    "Thule"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Daugai",
+                    "Oslo"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Daugai",
+                    "Cesis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Daugai",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
+                    "Madrid"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
+                    "Mariehamn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
+                    "Thule"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
+                    "Cesis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Moscow",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Madrid"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Mariehamn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Thule"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Oslo"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Cesis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Mariehamn",
+                    "Madrid"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Mariehamn",
+                    "Daugai"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Mariehamn",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Mariehamn",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Mariehamn",
+                    "Thule"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Mariehamn",
+                    "Oslo"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Mariehamn",
+                    "Cesis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Mariehamn",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Thule",
+                    "Madrid"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Thule",
+                    "Daugai"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Thule",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Thule",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Thule",
+                    "Mariehamn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Thule",
+                    "Oslo"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Thule",
+                    "Cesis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Thule",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Oslo",
+                    "Daugai"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Oslo",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Oslo",
+                    "Mariehamn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Oslo",
+                    "Thule"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Oslo",
+                    "Cesis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Oslo",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Madrid"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Daugai"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Moscow"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Mariehamn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Thule"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Oslo"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Cesis",
+                    "Gelgaudiskis"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Madrid"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Daugai"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Thule"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Oslo"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Gelgaudiskis",
+                    "Cesis"
                 ]
             ]
         ]
@@ -4375,7 +3296,7 @@
                     "cash",
                     []
                 ],
-                "33.72"
+                "26"
             ]
         ],
         "camel1": [
@@ -4385,7 +3306,27 @@
                     "cash",
                     []
                 ],
-                "33.72"
+                "26"
+            ]
+        ],
+        "camel2": [
+            [
+                ">=",
+                [
+                    "cash",
+                    []
+                ],
+                "26"
+            ]
+        ],
+        "camel3": [
+            [
+                ">=",
+                [
+                    "cash",
+                    []
+                ],
+                "26"
             ]
         ]
     }

@@ -1,31 +1,25 @@
 {
     "market": [
-        "Lisbon",
-        "Valencia",
-        "Longyearbyen",
-        "Daugavpils",
-        "Edinburgh",
-        "Ogre",
-        "Venice",
-        "Seda",
-        "Jelgava",
-        "Narva",
-        "Obeliai",
-        "Neringa",
-        "Berlin",
-        "Paris",
-        "Jurmala"
+        "Panemune",
+        "StPetersburg",
+        "Palanga",
+        "Vienna",
+        "Copenhagen",
+        "Tukums",
+        "Bonn",
+        "Jieznas",
+        "Jurmala",
+        "Dublin"
     ],
     "goods": [
-        "Food",
-        "TuringMachines",
+        "Computers",
+        "Footballs",
         "Minerals",
         "Cars"
     ],
     "agents": [
         "camel0",
-        "camel1",
-        "camel2"
+        "camel1"
     ],
     "init_values": {
         "global": [
@@ -34,415 +28,107 @@
                 [
                     "sellprice",
                     [
-                        "Food",
-                        "Lisbon"
+                        "Computers",
+                        "Panemune"
                     ]
                 ],
-                "9.19"
+                "2"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Food",
-                        "Valencia"
+                        "Computers",
+                        "StPetersburg"
                     ]
                 ],
-                "4.8"
+                "5"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Food",
-                        "Longyearbyen"
+                        "Computers",
+                        "Palanga"
                     ]
                 ],
-                "6.09"
+                "5"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Food",
-                        "Daugavpils"
+                        "Computers",
+                        "Vienna"
                     ]
                 ],
-                "8.11"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Food",
-                        "Edinburgh"
-                    ]
-                ],
-                "3.9"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Food",
-                        "Ogre"
-                    ]
-                ],
-                "8.36"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Food",
-                        "Venice"
-                    ]
-                ],
-                "10.27"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Food",
-                        "Seda"
-                    ]
-                ],
-                "13.03"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Food",
-                        "Jelgava"
-                    ]
-                ],
-                "7.6"
+                "2"
             ],
             [
                 "=",
                 [
                     "price",
                     [
-                        "Food",
-                        "Jelgava"
+                        "Computers",
+                        "Vienna"
                     ]
                 ],
-                "5.83"
+                "2"
             ],
             [
                 "=",
                 [
                     "on-sale",
                     [
-                        "Food",
-                        "Jelgava"
+                        "Computers",
+                        "Vienna"
                     ]
                 ],
-                "11"
+                "5"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Food",
-                        "Narva"
+                        "Computers",
+                        "Copenhagen"
                     ]
                 ],
-                "9.01"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "Food",
-                        "Narva"
-                    ]
-                ],
-                "5.12"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "Food",
-                        "Narva"
-                    ]
-                ],
-                "13"
+                "2"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Food",
-                        "Obeliai"
+                        "Computers",
+                        "Tukums"
                     ]
                 ],
-                "5.13"
+                "5"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Food",
-                        "Neringa"
+                        "Computers",
+                        "Bonn"
                     ]
                 ],
-                "13.4"
+                "4"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Food",
-                        "Berlin"
-                    ]
-                ],
-                "5.25"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Food",
-                        "Paris"
-                    ]
-                ],
-                "7.77"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Food",
-                        "Jurmala"
-                    ]
-                ],
-                "8.13"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "TuringMachines",
-                        "Lisbon"
-                    ]
-                ],
-                "5.55"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "TuringMachines",
-                        "Valencia"
-                    ]
-                ],
-                "10.91"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "TuringMachines",
-                        "Longyearbyen"
-                    ]
-                ],
-                "14.95"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "TuringMachines",
-                        "Daugavpils"
-                    ]
-                ],
-                "14.03"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "TuringMachines",
-                        "Edinburgh"
-                    ]
-                ],
-                "15.04"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "TuringMachines",
-                        "Ogre"
-                    ]
-                ],
-                "3.98"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "TuringMachines",
-                        "Venice"
-                    ]
-                ],
-                "7.37"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "TuringMachines",
-                        "Venice"
-                    ]
-                ],
-                "7.69"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "TuringMachines",
-                        "Venice"
-                    ]
-                ],
-                "7"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "TuringMachines",
-                        "Seda"
-                    ]
-                ],
-                "6.51"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "TuringMachines",
-                        "Jelgava"
-                    ]
-                ],
-                "4.15"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "TuringMachines",
-                        "Narva"
-                    ]
-                ],
-                "6.73"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "TuringMachines",
-                        "Obeliai"
-                    ]
-                ],
-                "10.89"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "TuringMachines",
-                        "Neringa"
-                    ]
-                ],
-                "9.03"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "TuringMachines",
-                        "Berlin"
-                    ]
-                ],
-                "8.49"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "TuringMachines",
-                        "Paris"
-                    ]
-                ],
-                "7.1"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "TuringMachines",
-                        "Jurmala"
-                    ]
-                ],
-                "10.65"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "TuringMachines",
-                        "Jurmala"
-                    ]
-                ],
-                "6.14"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "TuringMachines",
-                        "Jurmala"
+                        "Computers",
+                        "Jieznas"
                     ]
                 ],
                 "6"
@@ -452,52 +138,162 @@
                 [
                     "sellprice",
                     [
-                        "Minerals",
-                        "Lisbon"
+                        "Computers",
+                        "Jurmala"
                     ]
                 ],
-                "6.55"
+                "5"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Minerals",
-                        "Valencia"
+                        "Computers",
+                        "Dublin"
                     ]
                 ],
-                "4.8"
+                "3"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Minerals",
-                        "Longyearbyen"
+                        "Footballs",
+                        "Panemune"
                     ]
                 ],
-                "7.93"
+                "5"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Footballs",
+                        "StPetersburg"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Footballs",
+                        "Palanga"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Footballs",
+                        "Vienna"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Footballs",
+                        "Copenhagen"
+                    ]
+                ],
+                "5"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Footballs",
+                        "Tukums"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Footballs",
+                        "Bonn"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Footballs",
+                        "Jieznas"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Footballs",
+                        "Jurmala"
+                    ]
+                ],
+                "4"
             ],
             [
                 "=",
                 [
                     "price",
                     [
-                        "Minerals",
-                        "Longyearbyen"
+                        "Footballs",
+                        "Jurmala"
                     ]
                 ],
-                "5.58"
+                "2"
             ],
             [
                 "=",
                 [
                     "on-sale",
                     [
+                        "Footballs",
+                        "Jurmala"
+                    ]
+                ],
+                "13"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Footballs",
+                        "Dublin"
+                    ]
+                ],
+                "9"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
                         "Minerals",
-                        "Longyearbyen"
+                        "Panemune"
                     ]
                 ],
                 "8"
@@ -508,10 +304,43 @@
                     "sellprice",
                     [
                         "Minerals",
-                        "Daugavpils"
+                        "StPetersburg"
                     ]
                 ],
-                "3.88"
+                "7"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Minerals",
+                        "Palanga"
+                    ]
+                ],
+                "5"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Minerals",
+                        "Vienna"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Minerals",
+                        "Copenhagen"
+                    ]
+                ],
+                "4"
             ],
             [
                 "=",
@@ -519,10 +348,10 @@
                     "price",
                     [
                         "Minerals",
-                        "Daugavpils"
+                        "Copenhagen"
                     ]
                 ],
-                "5.11"
+                "3"
             ],
             [
                 "=",
@@ -530,7 +359,7 @@
                     "on-sale",
                     [
                         "Minerals",
-                        "Daugavpils"
+                        "Copenhagen"
                     ]
                 ],
                 "15"
@@ -541,271 +370,7 @@
                     "sellprice",
                     [
                         "Minerals",
-                        "Edinburgh"
-                    ]
-                ],
-                "12.15"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Ogre"
-                    ]
-                ],
-                "9.81"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Venice"
-                    ]
-                ],
-                "3.46"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Seda"
-                    ]
-                ],
-                "6.61"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Jelgava"
-                    ]
-                ],
-                "10.39"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Narva"
-                    ]
-                ],
-                "12.48"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Obeliai"
-                    ]
-                ],
-                "9.62"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Neringa"
-                    ]
-                ],
-                "9.2"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Berlin"
-                    ]
-                ],
-                "4.61"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Paris"
-                    ]
-                ],
-                "3.32"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Jurmala"
-                    ]
-                ],
-                "10.34"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Lisbon"
-                    ]
-                ],
-                "6.54"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Valencia"
-                    ]
-                ],
-                "6.71"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Longyearbyen"
-                    ]
-                ],
-                "4.26"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Daugavpils"
-                    ]
-                ],
-                "9.63"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Edinburgh"
-                    ]
-                ],
-                "13.96"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Ogre"
-                    ]
-                ],
-                "5.65"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Venice"
-                    ]
-                ],
-                "5.37"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Seda"
-                    ]
-                ],
-                "7.17"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Jelgava"
-                    ]
-                ],
-                "8.2"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Narva"
-                    ]
-                ],
-                "7.66"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Obeliai"
-                    ]
-                ],
-                "9.38"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cars",
-                        "Neringa"
-                    ]
-                ],
-                "10.61"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "Cars",
-                        "Neringa"
-                    ]
-                ],
-                "7.15"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "Cars",
-                        "Neringa"
+                        "Tukums"
                     ]
                 ],
                 "3"
@@ -815,11 +380,44 @@
                 [
                     "sellprice",
                     [
-                        "Cars",
-                        "Berlin"
+                        "Minerals",
+                        "Bonn"
                     ]
                 ],
-                "7.23"
+                "1"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Minerals",
+                        "Jieznas"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Minerals",
+                        "Jurmala"
+                    ]
+                ],
+                "8"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Minerals",
+                        "Dublin"
+                    ]
+                ],
+                "6"
             ],
             [
                 "=",
@@ -827,10 +425,10 @@
                     "sellprice",
                     [
                         "Cars",
-                        "Paris"
+                        "Panemune"
                     ]
                 ],
-                "9.25"
+                "4"
             ],
             [
                 "=",
@@ -838,10 +436,10 @@
                     "price",
                     [
                         "Cars",
-                        "Paris"
+                        "Panemune"
                     ]
                 ],
-                "5.46"
+                "3"
             ],
             [
                 "=",
@@ -849,10 +447,87 @@
                     "on-sale",
                     [
                         "Cars",
-                        "Paris"
+                        "Panemune"
                     ]
                 ],
-                "14"
+                "7"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Cars",
+                        "StPetersburg"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Cars",
+                        "Palanga"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Cars",
+                        "Vienna"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Cars",
+                        "Copenhagen"
+                    ]
+                ],
+                "6"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Cars",
+                        "Tukums"
+                    ]
+                ],
+                "6"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Cars",
+                        "Bonn"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Cars",
+                        "Jieznas"
+                    ]
+                ],
+                "4"
             ],
             [
                 "=",
@@ -863,2163 +538,810 @@
                         "Jurmala"
                     ]
                 ],
-                "6.87"
+                "4"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Lisbon",
-                        "Valencia"
+                        "Cars",
+                        "Dublin"
                     ]
                 ],
-                "3.69"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Lisbon",
-                        "Longyearbyen"
+                        "Panemune",
+                        "StPetersburg"
                     ]
                 ],
-                "4.16"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Lisbon",
-                        "Daugavpils"
+                        "Panemune",
+                        "Palanga"
                     ]
                 ],
-                "1.81"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Lisbon",
-                        "Edinburgh"
+                        "Panemune",
+                        "Vienna"
                     ]
                 ],
-                "1.73"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Lisbon",
-                        "Ogre"
+                        "Panemune",
+                        "Copenhagen"
                     ]
                 ],
-                "1.1"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Lisbon",
-                        "Venice"
+                        "Panemune",
+                        "Tukums"
                     ]
                 ],
-                "5.77"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Lisbon",
-                        "Seda"
+                        "Panemune",
+                        "Bonn"
                     ]
                 ],
-                "3.33"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Lisbon",
-                        "Jelgava"
+                        "Panemune",
+                        "Jieznas"
                     ]
                 ],
-                "5.2"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Lisbon",
-                        "Narva"
-                    ]
-                ],
-                "5.21"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Lisbon",
-                        "Obeliai"
-                    ]
-                ],
-                "5.06"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Lisbon",
-                        "Neringa"
-                    ]
-                ],
-                "6.08"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Lisbon",
-                        "Berlin"
-                    ]
-                ],
-                "3.42"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Lisbon",
-                        "Paris"
-                    ]
-                ],
-                "3.14"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Lisbon",
+                        "Panemune",
                         "Jurmala"
                     ]
                 ],
-                "1.08"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Valencia",
-                        "Lisbon"
+                        "Panemune",
+                        "Dublin"
                     ]
                 ],
-                "2.91"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Valencia",
-                        "Longyearbyen"
+                        "StPetersburg",
+                        "Panemune"
                     ]
                 ],
-                "3.23"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Valencia",
-                        "Daugavpils"
+                        "StPetersburg",
+                        "Palanga"
                     ]
                 ],
-                "5.48"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Valencia",
-                        "Edinburgh"
+                        "StPetersburg",
+                        "Vienna"
                     ]
                 ],
-                "3.69"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Valencia",
-                        "Ogre"
+                        "StPetersburg",
+                        "Copenhagen"
                     ]
                 ],
-                "3.06"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Valencia",
-                        "Venice"
+                        "StPetersburg",
+                        "Tukums"
                     ]
                 ],
-                "5.33"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Valencia",
-                        "Seda"
+                        "StPetersburg",
+                        "Bonn"
                     ]
                 ],
-                "3.75"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Valencia",
-                        "Jelgava"
+                        "StPetersburg",
+                        "Jieznas"
                     ]
                 ],
-                "1.95"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Valencia",
-                        "Narva"
-                    ]
-                ],
-                "3.42"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Valencia",
-                        "Obeliai"
-                    ]
-                ],
-                "5.78"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Valencia",
-                        "Neringa"
-                    ]
-                ],
-                "1.56"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Valencia",
-                        "Berlin"
-                    ]
-                ],
-                "2.56"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Valencia",
-                        "Paris"
-                    ]
-                ],
-                "4.67"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Valencia",
+                        "StPetersburg",
                         "Jurmala"
                     ]
                 ],
-                "2.82"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Longyearbyen",
-                        "Lisbon"
+                        "StPetersburg",
+                        "Dublin"
                     ]
                 ],
-                "1.88"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Longyearbyen",
-                        "Valencia"
+                        "Palanga",
+                        "Panemune"
                     ]
                 ],
-                "5.85"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Longyearbyen",
-                        "Daugavpils"
+                        "Palanga",
+                        "StPetersburg"
                     ]
                 ],
-                "4.19"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Longyearbyen",
-                        "Edinburgh"
+                        "Palanga",
+                        "Vienna"
                     ]
                 ],
-                "4.71"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Longyearbyen",
-                        "Ogre"
+                        "Palanga",
+                        "Copenhagen"
                     ]
                 ],
-                "1.38"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Longyearbyen",
-                        "Venice"
+                        "Palanga",
+                        "Tukums"
                     ]
                 ],
-                "4.33"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Longyearbyen",
-                        "Seda"
+                        "Palanga",
+                        "Bonn"
                     ]
                 ],
-                "4.81"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Longyearbyen",
-                        "Jelgava"
+                        "Palanga",
+                        "Jieznas"
                     ]
                 ],
-                "6.34"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Longyearbyen",
-                        "Narva"
-                    ]
-                ],
-                "1.53"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "Obeliai"
-                    ]
-                ],
-                "3.26"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "Neringa"
-                    ]
-                ],
-                "2.22"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "Berlin"
-                    ]
-                ],
-                "4.46"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "Paris"
-                    ]
-                ],
-                "5.04"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
+                        "Palanga",
                         "Jurmala"
                     ]
                 ],
-                "5.82"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugavpils",
-                        "Lisbon"
+                        "Palanga",
+                        "Dublin"
                     ]
                 ],
-                "5.5"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugavpils",
-                        "Valencia"
+                        "Vienna",
+                        "Panemune"
                     ]
                 ],
-                "6.45"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugavpils",
-                        "Longyearbyen"
+                        "Vienna",
+                        "StPetersburg"
                     ]
                 ],
-                "3.35"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugavpils",
-                        "Edinburgh"
+                        "Vienna",
+                        "Palanga"
                     ]
                 ],
-                "2.14"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugavpils",
-                        "Ogre"
+                        "Vienna",
+                        "Copenhagen"
                     ]
                 ],
-                "3.4"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugavpils",
-                        "Venice"
+                        "Vienna",
+                        "Tukums"
                     ]
                 ],
-                "1.5"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugavpils",
-                        "Seda"
+                        "Vienna",
+                        "Bonn"
                     ]
                 ],
-                "1.05"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugavpils",
-                        "Jelgava"
+                        "Vienna",
+                        "Jieznas"
                     ]
                 ],
-                "5.21"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Daugavpils",
-                        "Narva"
-                    ]
-                ],
-                "4.21"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Daugavpils",
-                        "Obeliai"
-                    ]
-                ],
-                "6.61"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Daugavpils",
-                        "Neringa"
-                    ]
-                ],
-                "3.64"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Daugavpils",
-                        "Berlin"
-                    ]
-                ],
-                "6.65"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Daugavpils",
-                        "Paris"
-                    ]
-                ],
-                "4.29"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Daugavpils",
+                        "Vienna",
                         "Jurmala"
                     ]
                 ],
-                "4.31"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Edinburgh",
-                        "Lisbon"
+                        "Vienna",
+                        "Dublin"
                     ]
                 ],
-                "2.57"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Edinburgh",
-                        "Valencia"
+                        "Copenhagen",
+                        "Panemune"
                     ]
                 ],
-                "1.24"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Edinburgh",
-                        "Longyearbyen"
+                        "Copenhagen",
+                        "StPetersburg"
                     ]
                 ],
-                "6.24"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Edinburgh",
-                        "Daugavpils"
+                        "Copenhagen",
+                        "Palanga"
                     ]
                 ],
-                "2.11"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Edinburgh",
-                        "Ogre"
+                        "Copenhagen",
+                        "Vienna"
                     ]
                 ],
-                "6.53"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Edinburgh",
-                        "Venice"
+                        "Copenhagen",
+                        "Tukums"
                     ]
                 ],
-                "1.21"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Edinburgh",
-                        "Seda"
+                        "Copenhagen",
+                        "Bonn"
                     ]
                 ],
-                "4.63"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Edinburgh",
-                        "Jelgava"
+                        "Copenhagen",
+                        "Jieznas"
                     ]
                 ],
-                "3.32"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Edinburgh",
-                        "Narva"
-                    ]
-                ],
-                "2.99"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Obeliai"
-                    ]
-                ],
-                "2.52"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Neringa"
-                    ]
-                ],
-                "3.25"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Berlin"
-                    ]
-                ],
-                "3.62"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Paris"
-                    ]
-                ],
-                "3.24"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
+                        "Copenhagen",
                         "Jurmala"
                     ]
                 ],
-                "4.97"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "Lisbon"
+                        "Copenhagen",
+                        "Dublin"
                     ]
                 ],
-                "3.66"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "Valencia"
+                        "Tukums",
+                        "Panemune"
                     ]
                 ],
-                "6.41"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "Longyearbyen"
+                        "Tukums",
+                        "StPetersburg"
                     ]
                 ],
-                "3.54"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "Daugavpils"
+                        "Tukums",
+                        "Palanga"
                     ]
                 ],
-                "2.13"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "Edinburgh"
+                        "Tukums",
+                        "Vienna"
                     ]
                 ],
-                "4.85"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "Venice"
+                        "Tukums",
+                        "Copenhagen"
                     ]
                 ],
-                "6.12"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "Seda"
+                        "Tukums",
+                        "Bonn"
                     ]
                 ],
-                "4.7"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "Jelgava"
+                        "Tukums",
+                        "Jieznas"
                     ]
                 ],
-                "5.78"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "Narva"
-                    ]
-                ],
-                "3.95"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
-                        "Obeliai"
-                    ]
-                ],
-                "5.34"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
-                        "Neringa"
-                    ]
-                ],
-                "3.97"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
-                        "Berlin"
-                    ]
-                ],
-                "2.63"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
-                        "Paris"
-                    ]
-                ],
-                "1.72"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Ogre",
+                        "Tukums",
                         "Jurmala"
                     ]
                 ],
-                "5.26"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "Lisbon"
+                        "Tukums",
+                        "Dublin"
                     ]
                 ],
-                "5.97"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "Valencia"
+                        "Bonn",
+                        "Panemune"
                     ]
                 ],
-                "2.2"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "Longyearbyen"
+                        "Bonn",
+                        "StPetersburg"
                     ]
                 ],
-                "1.82"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "Daugavpils"
+                        "Bonn",
+                        "Palanga"
                     ]
                 ],
-                "4.17"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "Edinburgh"
+                        "Bonn",
+                        "Vienna"
                     ]
                 ],
-                "5.76"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "Ogre"
+                        "Bonn",
+                        "Copenhagen"
                     ]
                 ],
-                "5.0"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "Seda"
+                        "Bonn",
+                        "Tukums"
                     ]
                 ],
-                "6.34"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "Jelgava"
+                        "Bonn",
+                        "Jieznas"
                     ]
                 ],
-                "4.93"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "Narva"
-                    ]
-                ],
-                "4.67"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Venice",
-                        "Obeliai"
-                    ]
-                ],
-                "5.63"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Venice",
-                        "Neringa"
-                    ]
-                ],
-                "5.14"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Venice",
-                        "Berlin"
-                    ]
-                ],
-                "5.71"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Venice",
-                        "Paris"
-                    ]
-                ],
-                "6.25"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Venice",
+                        "Bonn",
                         "Jurmala"
                     ]
                 ],
-                "5.66"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Seda",
-                        "Lisbon"
+                        "Bonn",
+                        "Dublin"
                     ]
                 ],
-                "5.61"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Seda",
-                        "Valencia"
+                        "Jieznas",
+                        "Panemune"
                     ]
                 ],
-                "1.97"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Seda",
-                        "Longyearbyen"
+                        "Jieznas",
+                        "StPetersburg"
                     ]
                 ],
-                "5.86"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Seda",
-                        "Daugavpils"
+                        "Jieznas",
+                        "Palanga"
                     ]
                 ],
-                "5.94"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Seda",
-                        "Edinburgh"
+                        "Jieznas",
+                        "Vienna"
                     ]
                 ],
-                "4.98"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Seda",
-                        "Ogre"
+                        "Jieznas",
+                        "Copenhagen"
                     ]
                 ],
-                "1.54"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Seda",
-                        "Venice"
+                        "Jieznas",
+                        "Tukums"
                     ]
                 ],
-                "5.47"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Seda",
-                        "Jelgava"
+                        "Jieznas",
+                        "Bonn"
                     ]
                 ],
-                "3.84"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Seda",
-                        "Narva"
-                    ]
-                ],
-                "1.11"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Seda",
-                        "Obeliai"
-                    ]
-                ],
-                "2.01"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Seda",
-                        "Neringa"
-                    ]
-                ],
-                "2.91"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Seda",
-                        "Berlin"
-                    ]
-                ],
-                "4.31"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Seda",
-                        "Paris"
-                    ]
-                ],
-                "2.19"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Seda",
+                        "Jieznas",
                         "Jurmala"
                     ]
                 ],
-                "6.88"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jelgava",
-                        "Lisbon"
+                        "Jieznas",
+                        "Dublin"
                     ]
                 ],
-                "1.48"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Valencia"
-                    ]
-                ],
-                "6.92"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Longyearbyen"
-                    ]
-                ],
-                "5.68"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Daugavpils"
-                    ]
-                ],
-                "1.19"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Edinburgh"
-                    ]
-                ],
-                "2.37"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Ogre"
-                    ]
-                ],
-                "6.83"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Venice"
-                    ]
-                ],
-                "6.97"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Seda"
-                    ]
-                ],
-                "1.72"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Narva"
-                    ]
-                ],
-                "6.55"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Obeliai"
-                    ]
-                ],
-                "5.71"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Neringa"
-                    ]
-                ],
-                "5.91"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Berlin"
-                    ]
-                ],
-                "6.03"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Paris"
-                    ]
-                ],
-                "2.52"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Jurmala"
-                    ]
-                ],
-                "5.91"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Lisbon"
-                    ]
-                ],
-                "1.55"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Valencia"
-                    ]
-                ],
-                "3.5"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Longyearbyen"
-                    ]
-                ],
-                "1.09"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Daugavpils"
-                    ]
-                ],
-                "6.81"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Edinburgh"
-                    ]
-                ],
-                "1.48"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Ogre"
-                    ]
-                ],
-                "6.08"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Venice"
-                    ]
-                ],
-                "2.92"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Seda"
-                    ]
-                ],
-                "3.3"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Jelgava"
-                    ]
-                ],
-                "4.51"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Obeliai"
-                    ]
-                ],
-                "4.31"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Neringa"
-                    ]
-                ],
-                "1.85"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Berlin"
-                    ]
-                ],
-                "2.18"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Paris"
-                    ]
-                ],
-                "5.56"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Jurmala"
-                    ]
-                ],
-                "2.75"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Lisbon"
-                    ]
-                ],
-                "6.79"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Valencia"
-                    ]
-                ],
-                "3.04"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Longyearbyen"
-                    ]
-                ],
-                "2.9"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Daugavpils"
-                    ]
-                ],
-                "6.3"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Edinburgh"
-                    ]
-                ],
-                "4.23"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Ogre"
-                    ]
-                ],
-                "6.27"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Venice"
-                    ]
-                ],
-                "4.74"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Seda"
-                    ]
-                ],
-                "4.63"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Jelgava"
-                    ]
-                ],
-                "2.59"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Narva"
-                    ]
-                ],
-                "5.94"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Neringa"
-                    ]
-                ],
-                "3.29"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Berlin"
-                    ]
-                ],
-                "1.96"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Paris"
-                    ]
-                ],
-                "6.86"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Obeliai",
-                        "Jurmala"
-                    ]
-                ],
-                "1.27"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Lisbon"
-                    ]
-                ],
-                "6.85"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Valencia"
-                    ]
-                ],
-                "2.35"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Longyearbyen"
-                    ]
-                ],
-                "1.21"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Daugavpils"
-                    ]
-                ],
-                "1.49"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Edinburgh"
-                    ]
-                ],
-                "1.26"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Ogre"
-                    ]
-                ],
-                "6.1"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Venice"
-                    ]
-                ],
-                "6.01"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Seda"
-                    ]
-                ],
-                "6.29"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Jelgava"
-                    ]
-                ],
-                "2.52"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Narva"
-                    ]
-                ],
-                "1.83"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Obeliai"
-                    ]
-                ],
-                "6.07"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Berlin"
-                    ]
-                ],
-                "4.72"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Paris"
-                    ]
-                ],
-                "1.15"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Jurmala"
-                    ]
-                ],
-                "2.28"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Berlin",
-                        "Lisbon"
-                    ]
-                ],
-                "3.08"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Berlin",
-                        "Valencia"
-                    ]
-                ],
-                "6.48"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Berlin",
-                        "Longyearbyen"
-                    ]
-                ],
-                "2.84"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Berlin",
-                        "Daugavpils"
-                    ]
-                ],
-                "4.98"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Berlin",
-                        "Edinburgh"
-                    ]
-                ],
-                "1.24"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Berlin",
-                        "Ogre"
-                    ]
-                ],
-                "1.0"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Berlin",
-                        "Venice"
-                    ]
-                ],
-                "5.56"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Berlin",
-                        "Seda"
-                    ]
-                ],
-                "1.34"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Berlin",
-                        "Jelgava"
-                    ]
-                ],
-                "4.79"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Berlin",
-                        "Narva"
-                    ]
-                ],
-                "1.26"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Berlin",
-                        "Obeliai"
-                    ]
-                ],
-                "5.5"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Berlin",
-                        "Neringa"
-                    ]
-                ],
-                "3.8"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Berlin",
-                        "Paris"
-                    ]
-                ],
-                "3.67"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Berlin",
-                        "Jurmala"
-                    ]
-                ],
-                "4.57"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Lisbon"
-                    ]
-                ],
-                "5.64"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Valencia"
-                    ]
-                ],
-                "4.64"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Longyearbyen"
-                    ]
-                ],
-                "1.71"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Daugavpils"
-                    ]
-                ],
-                "2.68"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Edinburgh"
-                    ]
-                ],
-                "2.34"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Ogre"
-                    ]
-                ],
-                "2.84"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Venice"
-                    ]
-                ],
-                "4.23"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Seda"
-                    ]
-                ],
-                "6.69"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Jelgava"
-                    ]
-                ],
-                "4.39"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Narva"
-                    ]
-                ],
-                "2.41"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Obeliai"
-                    ]
-                ],
-                "6.1"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Neringa"
-                    ]
-                ],
-                "1.9"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Berlin"
-                    ]
-                ],
-                "4.09"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Jurmala"
-                    ]
-                ],
-                "5.51"
+                "3"
             ],
             [
                 "=",
@@ -3027,10 +1349,10 @@
                     "drive-cost",
                     [
                         "Jurmala",
-                        "Lisbon"
+                        "Panemune"
                     ]
                 ],
-                "5.05"
+                "5"
             ],
             [
                 "=",
@@ -3038,10 +1360,10 @@
                     "drive-cost",
                     [
                         "Jurmala",
-                        "Valencia"
+                        "StPetersburg"
                     ]
                 ],
-                "4.87"
+                "5"
             ],
             [
                 "=",
@@ -3049,10 +1371,10 @@
                     "drive-cost",
                     [
                         "Jurmala",
-                        "Longyearbyen"
+                        "Palanga"
                     ]
                 ],
-                "3.05"
+                "4"
             ],
             [
                 "=",
@@ -3060,10 +1382,10 @@
                     "drive-cost",
                     [
                         "Jurmala",
-                        "Daugavpils"
+                        "Vienna"
                     ]
                 ],
-                "1.1"
+                "2"
             ],
             [
                 "=",
@@ -3071,10 +1393,10 @@
                     "drive-cost",
                     [
                         "Jurmala",
-                        "Edinburgh"
+                        "Copenhagen"
                     ]
                 ],
-                "4.51"
+                "3"
             ],
             [
                 "=",
@@ -3082,10 +1404,10 @@
                     "drive-cost",
                     [
                         "Jurmala",
-                        "Ogre"
+                        "Tukums"
                     ]
                 ],
-                "4.56"
+                "4"
             ],
             [
                 "=",
@@ -3093,10 +1415,10 @@
                     "drive-cost",
                     [
                         "Jurmala",
-                        "Venice"
+                        "Bonn"
                     ]
                 ],
-                "6.68"
+                "3"
             ],
             [
                 "=",
@@ -3104,10 +1426,10 @@
                     "drive-cost",
                     [
                         "Jurmala",
-                        "Seda"
+                        "Jieznas"
                     ]
                 ],
-                "4.55"
+                "3"
             ],
             [
                 "=",
@@ -3115,65 +1437,109 @@
                     "drive-cost",
                     [
                         "Jurmala",
-                        "Jelgava"
+                        "Dublin"
                     ]
                 ],
-                "1.25"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jurmala",
-                        "Narva"
+                        "Dublin",
+                        "Panemune"
                     ]
                 ],
-                "5.4"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jurmala",
-                        "Obeliai"
+                        "Dublin",
+                        "StPetersburg"
                     ]
                 ],
-                "6.2"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jurmala",
-                        "Neringa"
+                        "Dublin",
+                        "Palanga"
                     ]
                 ],
-                "6.26"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jurmala",
-                        "Berlin"
+                        "Dublin",
+                        "Vienna"
                     ]
                 ],
-                "4.44"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jurmala",
-                        "Paris"
+                        "Dublin",
+                        "Copenhagen"
                     ]
                 ],
-                "3.92"
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Dublin",
+                        "Tukums"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Dublin",
+                        "Bonn"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Dublin",
+                        "Jieznas"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Dublin",
+                        "Jurmala"
+                    ]
+                ],
+                "4"
             ]
         ],
         "camel0": [
@@ -3182,7 +1548,7 @@
                 [
                     "bought",
                     [
-                        "Food"
+                        "Computers"
                     ]
                 ],
                 "0"
@@ -3192,7 +1558,7 @@
                 [
                     "bought",
                     [
-                        "TuringMachines"
+                        "Footballs"
                     ]
                 ],
                 "0"
@@ -3220,7 +1586,7 @@
             [
                 "at",
                 [
-                    "Longyearbyen"
+                    "Jieznas"
                 ]
             ],
             [
@@ -3242,1303 +1608,505 @@
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Valencia"
+                    "Panemune",
+                    "Palanga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Longyearbyen"
+                    "Panemune",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Daugavpils"
+                    "Panemune",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Edinburgh"
+                    "Panemune",
+                    "Tukums"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Ogre"
+                    "Panemune",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Venice"
+                    "Panemune",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
+                    "Panemune",
                     "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Lisbon"
+                    "Panemune",
+                    "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Valencia"
+                    "StPetersburg",
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Daugavpils"
+                    "StPetersburg",
+                    "Palanga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Edinburgh"
+                    "StPetersburg",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Ogre"
+                    "StPetersburg",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Venice"
+                    "StPetersburg",
+                    "Tukums"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Seda"
+                    "StPetersburg",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Jelgava"
+                    "StPetersburg",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Narva"
+                    "StPetersburg",
+                    "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Obeliai"
+                    "Palanga",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Berlin"
+                    "Palanga",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Paris"
+                    "Palanga",
+                    "Tukums"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
+                    "Palanga",
+                    "Jieznas"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Palanga",
                     "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Lisbon"
+                    "Palanga",
+                    "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Valencia"
+                    "Vienna",
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Longyearbyen"
+                    "Vienna",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Edinburgh"
+                    "Vienna",
+                    "Palanga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Ogre"
+                    "Vienna",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Venice"
+                    "Vienna",
+                    "Tukums"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Seda"
+                    "Vienna",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Jelgava"
+                    "Vienna",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
+                    "Vienna",
                     "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Ogre",
-                    "Lisbon"
+                    "Vienna",
+                    "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Ogre",
-                    "Valencia"
+                    "Copenhagen",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Ogre",
-                    "Longyearbyen"
+                    "Copenhagen",
+                    "Palanga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Ogre",
-                    "Edinburgh"
+                    "Copenhagen",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Ogre",
-                    "Venice"
+                    "Copenhagen",
+                    "Tukums"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Ogre",
-                    "Seda"
+                    "Copenhagen",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Ogre",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
+                    "Copenhagen",
                     "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Lisbon"
+                    "Copenhagen",
+                    "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Valencia"
+                    "Tukums",
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Longyearbyen"
+                    "Tukums",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Daugavpils"
+                    "Tukums",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Edinburgh"
+                    "Tukums",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Ogre"
+                    "Tukums",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
+                    "Tukums",
                     "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Valencia"
+                    "Tukums",
+                    "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Longyearbyen"
+                    "Bonn",
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Daugavpils"
+                    "Bonn",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Edinburgh"
+                    "Bonn",
+                    "Palanga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Ogre"
+                    "Bonn",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Venice"
+                    "Bonn",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Jelgava"
+                    "Bonn",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
+                    "Bonn",
                     "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Lisbon"
+                    "Bonn",
+                    "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Valencia"
+                    "Jieznas",
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Daugavpils"
+                    "Jieznas",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Edinburgh"
+                    "Jieznas",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Ogre"
+                    "Jieznas",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Venice"
+                    "Jieznas",
+                    "Tukums"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
+                    "Jieznas",
                     "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Narva",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Jurmala"
+                    "Jieznas",
+                    "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Jurmala",
-                    "Valencia"
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Jurmala",
-                    "Longyearbyen"
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Jurmala",
-                    "Ogre"
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Jurmala",
-                    "Venice"
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Jurmala",
-                    "Seda"
+                    "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jurmala",
-                    "Jelgava"
+                    "Dublin",
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jurmala",
-                    "Narva"
+                    "Dublin",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jurmala",
-                    "Obeliai"
+                    "Dublin",
+                    "Palanga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jurmala",
-                    "Neringa"
+                    "Dublin",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jurmala",
-                    "Berlin"
+                    "Dublin",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jurmala",
-                    "Paris"
+                    "Dublin",
+                    "Tukums"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Dublin",
+                    "Bonn"
                 ]
             ]
         ],
@@ -4548,7 +2116,7 @@
                 [
                     "bought",
                     [
-                        "Food"
+                        "Computers"
                     ]
                 ],
                 "0"
@@ -4558,1366 +2126,7 @@
                 [
                     "bought",
                     [
-                        "TuringMachines"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "Minerals"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "Cars"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "at",
-                [
-                    "Lisbon"
-                ]
-            ],
-            [
-                "=",
-                [
-                    "cash",
-                    []
-                ],
-                "10"
-            ],
-            [
-                "=",
-                [
-                    "capacity",
-                    []
-                ],
-                "5"
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Paris"
-                ]
-            ]
-        ],
-        "camel2": [
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "Food"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "TuringMachines"
+                        "Footballs"
                     ]
                 ],
                 "0"
@@ -5945,7 +2154,7 @@
             [
                 "at",
                 [
-                    "Jelgava"
+                    "Tukums"
                 ]
             ],
             [
@@ -5967,1282 +2176,554 @@
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Valencia"
+                    "Panemune",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Longyearbyen"
+                    "Panemune",
+                    "Palanga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Daugavpils"
+                    "Panemune",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Edinburgh"
+                    "Panemune",
+                    "Tukums"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Ogre"
+                    "Panemune",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Venice"
+                    "Panemune",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Seda"
+                    "Panemune",
+                    "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Jelgava"
+                    "StPetersburg",
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Narva"
+                    "StPetersburg",
+                    "Palanga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Neringa"
+                    "StPetersburg",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Berlin"
+                    "StPetersburg",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Paris"
+                    "StPetersburg",
+                    "Tukums"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
+                    "StPetersburg",
+                    "Bonn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "StPetersburg",
                     "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valencia",
-                    "Lisbon"
+                    "StPetersburg",
+                    "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valencia",
-                    "Longyearbyen"
+                    "Palanga",
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valencia",
-                    "Daugavpils"
+                    "Palanga",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valencia",
-                    "Edinburgh"
+                    "Palanga",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valencia",
-                    "Ogre"
+                    "Palanga",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valencia",
-                    "Jelgava"
+                    "Palanga",
+                    "Tukums"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valencia",
-                    "Narva"
+                    "Palanga",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valencia",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
+                    "Palanga",
                     "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Valencia"
+                    "Palanga",
+                    "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Daugavpils"
+                    "Vienna",
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Edinburgh"
+                    "Vienna",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Ogre"
+                    "Vienna",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Venice"
+                    "Vienna",
+                    "Tukums"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Seda"
+                    "Vienna",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Jelgava"
+                    "Vienna",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
+                    "Vienna",
                     "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Lisbon"
+                    "Vienna",
+                    "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Valencia"
+                    "Copenhagen",
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Edinburgh"
+                    "Copenhagen",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Ogre"
+                    "Copenhagen",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Venice"
+                    "Copenhagen",
+                    "Tukums"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Seda"
+                    "Copenhagen",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Jelgava"
+                    "Copenhagen",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Daugavpils",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Daugavpils",
+                    "Copenhagen",
                     "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Lisbon"
+                    "Copenhagen",
+                    "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Valencia"
+                    "Tukums",
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Longyearbyen"
+                    "Tukums",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Venice"
+                    "Tukums",
+                    "Palanga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Seda"
+                    "Tukums",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Jelgava"
+                    "Tukums",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Narva"
+                    "Tukums",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
+                    "Tukums",
                     "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Lisbon"
+                    "Tukums",
+                    "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Longyearbyen"
+                    "Bonn",
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Daugavpils"
+                    "Bonn",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Edinburgh"
+                    "Bonn",
+                    "Palanga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Ogre"
+                    "Bonn",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Seda"
+                    "Bonn",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Jelgava"
+                    "Bonn",
+                    "Tukums"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Narva"
+                    "Bonn",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
+                    "Bonn",
                     "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Lisbon"
+                    "Bonn",
+                    "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Valencia"
+                    "Jieznas",
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Longyearbyen"
+                    "Jieznas",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Daugavpils"
+                    "Jieznas",
+                    "Palanga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Edinburgh"
+                    "Jieznas",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Ogre"
+                    "Jieznas",
+                    "Tukums"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Venice"
+                    "Jieznas",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Seda",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
+                    "Jieznas",
                     "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jelgava",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Obeliai",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Berlin",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Daugavpils"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Edinburgh"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Obeliai"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Berlin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Jurmala"
+                    "Jieznas",
+                    "Dublin"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Jurmala",
-                    "Lisbon"
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Jurmala",
-                    "Valencia"
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Jurmala",
-                    "Longyearbyen"
+                    "Palanga"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Jurmala",
-                    "Daugavpils"
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Jurmala",
-                    "Venice"
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Jurmala",
-                    "Seda"
+                    "Tukums"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Jurmala",
-                    "Jelgava"
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jurmala",
-                    "Obeliai"
+                    "Dublin",
+                    "StPetersburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jurmala",
-                    "Neringa"
+                    "Dublin",
+                    "Palanga"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jurmala",
-                    "Berlin"
+                    "Dublin",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jurmala",
-                    "Paris"
+                    "Dublin",
+                    "Copenhagen"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Dublin",
+                    "Tukums"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Dublin",
+                    "Bonn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Dublin",
+                    "Jieznas"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Dublin",
+                    "Jurmala"
                 ]
             ]
         ]
@@ -7256,7 +2737,7 @@
                     "cash",
                     []
                 ],
-                "55.57"
+                "35"
             ]
         ],
         "camel1": [
@@ -7266,17 +2747,7 @@
                     "cash",
                     []
                 ],
-                "55.57"
-            ]
-        ],
-        "camel2": [
-            [
-                ">=",
-                [
-                    "cash",
-                    []
-                ],
-                "55.57"
+                "35"
             ]
         ]
     }

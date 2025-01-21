@@ -1,28 +1,23 @@
 {
     "market": [
-        "Palanga",
-        "Thule",
-        "Stockholm",
-        "Sough",
-        "Moscow",
-        "Amsterdam",
-        "Kavarskas",
-        "Bonn",
-        "Narva",
-        "Jurmala",
-        "Rome",
-        "Vilkija"
+        "Vilkija",
+        "Jieznas",
+        "Edinburgh",
+        "Hamburg",
+        "Vienna",
+        "Viljandi",
+        "Kadagopya",
+        "Berlin"
     ],
     "goods": [
-        "ExpensiveRugs",
+        "Copper",
         "LaminateFloor",
-        "Coffee"
+        "DVDs"
     ],
     "agents": [
         "camel0",
         "camel1",
-        "camel2",
-        "camel3"
+        "camel2"
     ],
     "init_values": {
         "global": [
@@ -31,140 +26,118 @@
                 [
                     "sellprice",
                     [
-                        "ExpensiveRugs",
-                        "Palanga"
+                        "Copper",
+                        "Vilkija"
                     ]
                 ],
-                "5.75"
+                "2"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "ExpensiveRugs",
-                        "Thule"
+                        "Copper",
+                        "Jieznas"
                     ]
                 ],
-                "5.82"
+                "4"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "ExpensiveRugs",
-                        "Stockholm"
+                        "Copper",
+                        "Edinburgh"
                     ]
                 ],
-                "10.98"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "ExpensiveRugs",
-                        "Sough"
-                    ]
-                ],
-                "4.38"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "ExpensiveRugs",
-                        "Moscow"
-                    ]
-                ],
-                "6.19"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "ExpensiveRugs",
-                        "Amsterdam"
-                    ]
-                ],
-                "10.78"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "ExpensiveRugs",
-                        "Kavarskas"
-                    ]
-                ],
-                "8.4"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "ExpensiveRugs",
-                        "Bonn"
-                    ]
-                ],
-                "8.23"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "ExpensiveRugs",
-                        "Narva"
-                    ]
-                ],
-                "8.84"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "ExpensiveRugs",
-                        "Jurmala"
-                    ]
-                ],
-                "9.75"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "ExpensiveRugs",
-                        "Rome"
-                    ]
-                ],
-                "10.6"
+                "4"
             ],
             [
                 "=",
                 [
                     "price",
                     [
-                        "ExpensiveRugs",
-                        "Rome"
+                        "Copper",
+                        "Edinburgh"
                     ]
                 ],
-                "7.64"
+                "4"
             ],
             [
                 "=",
                 [
                     "on-sale",
                     [
-                        "ExpensiveRugs",
-                        "Rome"
+                        "Copper",
+                        "Edinburgh"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Copper",
+                        "Hamburg"
+                    ]
+                ],
+                "7"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Copper",
+                        "Vienna"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Copper",
+                        "Viljandi"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Copper",
+                        "Kadagopya"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Copper",
+                        "Berlin"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "LaminateFloor",
+                        "Vilkija"
                     ]
                 ],
                 "5"
@@ -174,11 +147,11 @@
                 [
                     "sellprice",
                     [
-                        "ExpensiveRugs",
-                        "Vilkija"
+                        "LaminateFloor",
+                        "Jieznas"
                     ]
                 ],
-                "5.38"
+                "2"
             ],
             [
                 "=",
@@ -186,10 +159,10 @@
                     "sellprice",
                     [
                         "LaminateFloor",
-                        "Palanga"
+                        "Edinburgh"
                     ]
                 ],
-                "10.55"
+                "7"
             ],
             [
                 "=",
@@ -197,10 +170,10 @@
                     "sellprice",
                     [
                         "LaminateFloor",
-                        "Thule"
+                        "Hamburg"
                     ]
                 ],
-                "4.42"
+                "6"
             ],
             [
                 "=",
@@ -208,98 +181,10 @@
                     "sellprice",
                     [
                         "LaminateFloor",
-                        "Stockholm"
+                        "Vienna"
                     ]
                 ],
-                "9.02"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Sough"
-                    ]
-                ],
-                "5.71"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Moscow"
-                    ]
-                ],
-                "10.48"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Amsterdam"
-                    ]
-                ],
-                "4.68"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Kavarskas"
-                    ]
-                ],
-                "10.33"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Bonn"
-                    ]
-                ],
-                "5.68"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Narva"
-                    ]
-                ],
-                "6.08"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Jurmala"
-                    ]
-                ],
-                "9.67"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Rome"
-                    ]
-                ],
-                "7.86"
+                "5"
             ],
             [
                 "=",
@@ -307,10 +192,10 @@
                     "price",
                     [
                         "LaminateFloor",
-                        "Rome"
+                        "Vienna"
                     ]
                 ],
-                "7.23"
+                "4"
             ],
             [
                 "=",
@@ -318,10 +203,10 @@
                     "on-sale",
                     [
                         "LaminateFloor",
-                        "Rome"
+                        "Vienna"
                     ]
                 ],
-                "14"
+                "5"
             ],
             [
                 "=",
@@ -329,1495 +214,142 @@
                     "sellprice",
                     [
                         "LaminateFloor",
+                        "Viljandi"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "LaminateFloor",
+                        "Kadagopya"
+                    ]
+                ],
+                "5"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "LaminateFloor",
+                        "Berlin"
+                    ]
+                ],
+                "10"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "DVDs",
                         "Vilkija"
                     ]
                 ],
-                "5.79"
+                "6"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Coffee",
-                        "Palanga"
+                        "DVDs",
+                        "Jieznas"
                     ]
                 ],
-                "9.04"
+                "5"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Coffee",
-                        "Thule"
+                        "DVDs",
+                        "Edinburgh"
                     ]
                 ],
-                "5.93"
+                "4"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Coffee",
-                        "Stockholm"
+                        "DVDs",
+                        "Hamburg"
                     ]
                 ],
-                "6.17"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Sough"
-                    ]
-                ],
-                "10.53"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Moscow"
-                    ]
-                ],
-                "12.8"
+                "5"
             ],
             [
                 "=",
                 [
                     "price",
                     [
-                        "Coffee",
-                        "Moscow"
+                        "DVDs",
+                        "Hamburg"
                     ]
                 ],
-                "6.73"
+                "5"
             ],
             [
                 "=",
                 [
                     "on-sale",
                     [
-                        "Coffee",
-                        "Moscow"
+                        "DVDs",
+                        "Hamburg"
                     ]
                 ],
-                "13"
+                "7"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Coffee",
-                        "Amsterdam"
+                        "DVDs",
+                        "Vienna"
                     ]
                 ],
-                "6.48"
+                "4"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Coffee",
-                        "Kavarskas"
+                        "DVDs",
+                        "Viljandi"
                     ]
                 ],
-                "8.75"
+                "7"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Coffee",
-                        "Bonn"
+                        "DVDs",
+                        "Kadagopya"
                     ]
                 ],
-                "8.59"
+                "6"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Coffee",
-                        "Narva"
+                        "DVDs",
+                        "Berlin"
                     ]
                 ],
-                "6.32"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Jurmala"
-                    ]
-                ],
-                "7.17"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Rome"
-                    ]
-                ],
-                "6.84"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Vilkija"
-                    ]
-                ],
-                "5.29"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Thule"
-                    ]
-                ],
-                "1.77"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Stockholm"
-                    ]
-                ],
-                "1.21"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Sough"
-                    ]
-                ],
-                "1.38"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Moscow"
-                    ]
-                ],
-                "4.79"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Amsterdam"
-                    ]
-                ],
-                "1.81"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Kavarskas"
-                    ]
-                ],
-                "3.13"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Bonn"
-                    ]
-                ],
-                "5.9"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Narva"
-                    ]
-                ],
-                "5.52"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Jurmala"
-                    ]
-                ],
-                "6.35"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Rome"
-                    ]
-                ],
-                "2.42"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Vilkija"
-                    ]
-                ],
-                "3.49"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Palanga"
-                    ]
-                ],
-                "6.42"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Stockholm"
-                    ]
-                ],
-                "1.92"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Sough"
-                    ]
-                ],
-                "5.96"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Moscow"
-                    ]
-                ],
-                "4.54"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Amsterdam"
-                    ]
-                ],
-                "2.02"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Kavarskas"
-                    ]
-                ],
-                "1.15"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Bonn"
-                    ]
-                ],
-                "5.94"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Narva"
-                    ]
-                ],
-                "4.19"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Jurmala"
-                    ]
-                ],
-                "5.99"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Rome"
-                    ]
-                ],
-                "6.0"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Thule",
-                        "Vilkija"
-                    ]
-                ],
-                "4.05"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Stockholm",
-                        "Palanga"
-                    ]
-                ],
-                "2.45"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Stockholm",
-                        "Thule"
-                    ]
-                ],
-                "1.53"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Stockholm",
-                        "Sough"
-                    ]
-                ],
-                "3.55"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Stockholm",
-                        "Moscow"
-                    ]
-                ],
-                "1.03"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Stockholm",
-                        "Amsterdam"
-                    ]
-                ],
-                "4.8"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Stockholm",
-                        "Kavarskas"
-                    ]
-                ],
-                "5.09"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Stockholm",
-                        "Bonn"
-                    ]
-                ],
-                "3.03"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Stockholm",
-                        "Narva"
-                    ]
-                ],
-                "5.62"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Stockholm",
-                        "Jurmala"
-                    ]
-                ],
-                "1.26"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Stockholm",
-                        "Rome"
-                    ]
-                ],
-                "6.7"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Stockholm",
-                        "Vilkija"
-                    ]
-                ],
-                "1.83"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Palanga"
-                    ]
-                ],
-                "1.84"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Thule"
-                    ]
-                ],
-                "5.17"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Stockholm"
-                    ]
-                ],
-                "6.79"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Moscow"
-                    ]
-                ],
-                "5.58"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Amsterdam"
-                    ]
-                ],
-                "2.5"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Kavarskas"
-                    ]
-                ],
-                "6.28"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Bonn"
-                    ]
-                ],
-                "4.13"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Narva"
-                    ]
-                ],
-                "2.23"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Jurmala"
-                    ]
-                ],
-                "3.32"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Rome"
-                    ]
-                ],
-                "5.66"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Sough",
-                        "Vilkija"
-                    ]
-                ],
-                "4.68"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Moscow",
-                        "Palanga"
-                    ]
-                ],
-                "1.3"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Moscow",
-                        "Thule"
-                    ]
-                ],
-                "5.86"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Moscow",
-                        "Stockholm"
-                    ]
-                ],
-                "5.37"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Moscow",
-                        "Sough"
-                    ]
-                ],
-                "5.81"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Moscow",
-                        "Amsterdam"
-                    ]
-                ],
-                "3.43"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Moscow",
-                        "Kavarskas"
-                    ]
-                ],
-                "6.44"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Moscow",
-                        "Bonn"
-                    ]
-                ],
-                "6.59"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Moscow",
-                        "Narva"
-                    ]
-                ],
-                "5.69"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Moscow",
-                        "Jurmala"
-                    ]
-                ],
-                "2.76"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Moscow",
-                        "Rome"
-                    ]
-                ],
-                "2.35"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Moscow",
-                        "Vilkija"
-                    ]
-                ],
-                "3.74"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Palanga"
-                    ]
-                ],
-                "6.78"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Thule"
-                    ]
-                ],
-                "6.64"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Stockholm"
-                    ]
-                ],
-                "2.38"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Sough"
-                    ]
-                ],
-                "1.72"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Moscow"
-                    ]
-                ],
-                "3.7"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Kavarskas"
-                    ]
-                ],
-                "2.14"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Bonn"
-                    ]
-                ],
-                "2.54"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Narva"
-                    ]
-                ],
-                "1.04"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Jurmala"
-                    ]
-                ],
-                "4.4"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Rome"
-                    ]
-                ],
-                "2.52"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Amsterdam",
-                        "Vilkija"
-                    ]
-                ],
-                "1.0"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kavarskas",
-                        "Palanga"
-                    ]
-                ],
-                "3.15"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kavarskas",
-                        "Thule"
-                    ]
-                ],
-                "4.1"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kavarskas",
-                        "Stockholm"
-                    ]
-                ],
-                "4.76"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kavarskas",
-                        "Sough"
-                    ]
-                ],
-                "5.32"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kavarskas",
-                        "Moscow"
-                    ]
-                ],
-                "3.79"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kavarskas",
-                        "Amsterdam"
-                    ]
-                ],
-                "4.76"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kavarskas",
-                        "Bonn"
-                    ]
-                ],
-                "2.67"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kavarskas",
-                        "Narva"
-                    ]
-                ],
-                "1.22"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kavarskas",
-                        "Jurmala"
-                    ]
-                ],
-                "3.82"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kavarskas",
-                        "Rome"
-                    ]
-                ],
-                "4.78"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kavarskas",
-                        "Vilkija"
-                    ]
-                ],
-                "4.86"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Palanga"
-                    ]
-                ],
-                "1.22"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Thule"
-                    ]
-                ],
-                "3.34"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Stockholm"
-                    ]
-                ],
-                "1.43"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Sough"
-                    ]
-                ],
-                "2.94"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Moscow"
-                    ]
-                ],
-                "6.0"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Amsterdam"
-                    ]
-                ],
-                "1.9"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Kavarskas"
-                    ]
-                ],
-                "5.75"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Narva"
-                    ]
-                ],
-                "6.18"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Jurmala"
-                    ]
-                ],
-                "2.99"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Rome"
-                    ]
-                ],
-                "1.72"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Bonn",
-                        "Vilkija"
-                    ]
-                ],
-                "1.57"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Palanga"
-                    ]
-                ],
-                "6.8"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Thule"
-                    ]
-                ],
-                "2.51"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Stockholm"
-                    ]
-                ],
-                "6.8"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Sough"
-                    ]
-                ],
-                "6.88"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Moscow"
-                    ]
-                ],
-                "5.26"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Amsterdam"
-                    ]
-                ],
-                "1.15"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Kavarskas"
-                    ]
-                ],
-                "5.89"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Bonn"
-                    ]
-                ],
-                "4.76"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Jurmala"
-                    ]
-                ],
-                "4.21"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Rome"
-                    ]
-                ],
-                "3.97"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Narva",
-                        "Vilkija"
-                    ]
-                ],
-                "6.6"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Palanga"
-                    ]
-                ],
-                "5.86"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Thule"
-                    ]
-                ],
-                "3.45"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Stockholm"
-                    ]
-                ],
-                "2.58"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Sough"
-                    ]
-                ],
-                "4.11"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Moscow"
-                    ]
-                ],
-                "5.2"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Amsterdam"
-                    ]
-                ],
-                "6.13"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Kavarskas"
-                    ]
-                ],
-                "5.5"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Bonn"
-                    ]
-                ],
-                "4.03"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Narva"
-                    ]
-                ],
-                "2.7"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Rome"
-                    ]
-                ],
-                "1.67"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Vilkija"
-                    ]
-                ],
-                "2.43"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Palanga"
-                    ]
-                ],
-                "4.59"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Thule"
-                    ]
-                ],
-                "3.07"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Stockholm"
-                    ]
-                ],
-                "6.46"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Sough"
-                    ]
-                ],
-                "2.64"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Moscow"
-                    ]
-                ],
-                "6.5"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Amsterdam"
-                    ]
-                ],
-                "2.16"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Kavarskas"
-                    ]
-                ],
-                "4.31"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Bonn"
-                    ]
-                ],
-                "1.15"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Narva"
-                    ]
-                ],
-                "6.97"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Jurmala"
-                    ]
-                ],
-                "3.52"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Vilkija"
-                    ]
-                ],
-                "1.26"
+                "6"
             ],
             [
                 "=",
@@ -1825,10 +357,10 @@
                     "drive-cost",
                     [
                         "Vilkija",
-                        "Palanga"
+                        "Jieznas"
                     ]
                 ],
-                "5.96"
+                "1"
             ],
             [
                 "=",
@@ -1836,10 +368,10 @@
                     "drive-cost",
                     [
                         "Vilkija",
-                        "Thule"
+                        "Edinburgh"
                     ]
                 ],
-                "1.51"
+                "3"
             ],
             [
                 "=",
@@ -1847,10 +379,10 @@
                     "drive-cost",
                     [
                         "Vilkija",
-                        "Stockholm"
+                        "Hamburg"
                     ]
                 ],
-                "5.71"
+                "3"
             ],
             [
                 "=",
@@ -1858,10 +390,10 @@
                     "drive-cost",
                     [
                         "Vilkija",
-                        "Sough"
+                        "Vienna"
                     ]
                 ],
-                "4.44"
+                "2"
             ],
             [
                 "=",
@@ -1869,10 +401,10 @@
                     "drive-cost",
                     [
                         "Vilkija",
-                        "Moscow"
+                        "Viljandi"
                     ]
                 ],
-                "4.01"
+                "3"
             ],
             [
                 "=",
@@ -1880,10 +412,10 @@
                     "drive-cost",
                     [
                         "Vilkija",
-                        "Amsterdam"
+                        "Kadagopya"
                     ]
                 ],
-                "3.25"
+                "3"
             ],
             [
                 "=",
@@ -1891,54 +423,549 @@
                     "drive-cost",
                     [
                         "Vilkija",
-                        "Kavarskas"
+                        "Berlin"
                     ]
                 ],
-                "6.87"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Vilkija",
-                        "Bonn"
+                        "Jieznas",
+                        "Vilkija"
                     ]
                 ],
-                "1.81"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Vilkija",
-                        "Narva"
+                        "Jieznas",
+                        "Edinburgh"
                     ]
                 ],
-                "4.27"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Vilkija",
-                        "Jurmala"
+                        "Jieznas",
+                        "Hamburg"
                     ]
                 ],
-                "3.29"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Vilkija",
-                        "Rome"
+                        "Jieznas",
+                        "Vienna"
                     ]
                 ],
-                "4.09"
+                "5"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Jieznas",
+                        "Viljandi"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Jieznas",
+                        "Kadagopya"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Jieznas",
+                        "Berlin"
+                    ]
+                ],
+                "1"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Edinburgh",
+                        "Vilkija"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Edinburgh",
+                        "Jieznas"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Edinburgh",
+                        "Hamburg"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Edinburgh",
+                        "Vienna"
+                    ]
+                ],
+                "1"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Edinburgh",
+                        "Viljandi"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Edinburgh",
+                        "Kadagopya"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Edinburgh",
+                        "Berlin"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Hamburg",
+                        "Vilkija"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Hamburg",
+                        "Jieznas"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Hamburg",
+                        "Edinburgh"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Hamburg",
+                        "Vienna"
+                    ]
+                ],
+                "5"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Hamburg",
+                        "Viljandi"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Hamburg",
+                        "Kadagopya"
+                    ]
+                ],
+                "1"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Hamburg",
+                        "Berlin"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Vienna",
+                        "Vilkija"
+                    ]
+                ],
+                "1"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Vienna",
+                        "Jieznas"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Vienna",
+                        "Edinburgh"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Vienna",
+                        "Hamburg"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Vienna",
+                        "Viljandi"
+                    ]
+                ],
+                "1"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Vienna",
+                        "Kadagopya"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Vienna",
+                        "Berlin"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Viljandi",
+                        "Vilkija"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Viljandi",
+                        "Jieznas"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Viljandi",
+                        "Edinburgh"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Viljandi",
+                        "Hamburg"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Viljandi",
+                        "Vienna"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Viljandi",
+                        "Kadagopya"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Viljandi",
+                        "Berlin"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Kadagopya",
+                        "Vilkija"
+                    ]
+                ],
+                "1"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Kadagopya",
+                        "Jieznas"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Kadagopya",
+                        "Edinburgh"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Kadagopya",
+                        "Hamburg"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Kadagopya",
+                        "Vienna"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Kadagopya",
+                        "Viljandi"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Kadagopya",
+                        "Berlin"
+                    ]
+                ],
+                "5"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Berlin",
+                        "Vilkija"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Berlin",
+                        "Jieznas"
+                    ]
+                ],
+                "5"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Berlin",
+                        "Edinburgh"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Berlin",
+                        "Hamburg"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Berlin",
+                        "Vienna"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Berlin",
+                        "Viljandi"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Berlin",
+                        "Kadagopya"
+                    ]
+                ],
+                "2"
             ]
         ],
         "camel0": [
@@ -1947,7 +974,7 @@
                 [
                     "bought",
                     [
-                        "ExpensiveRugs"
+                        "Copper"
                     ]
                 ],
                 "0"
@@ -1967,7 +994,7 @@
                 [
                     "bought",
                     [
-                        "Coffee"
+                        "DVDs"
                     ]
                 ],
                 "0"
@@ -1975,7 +1002,7 @@
             [
                 "at",
                 [
-                    "Thule"
+                    "Vilkija"
                 ]
             ],
             [
@@ -1997,827 +1024,358 @@
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Vilkija"
+                    "Vilkija",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Vilkija",
-                    "Palanga"
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Vilkija",
-                    "Stockholm"
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Vilkija",
-                    "Sough"
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Vilkija",
-                    "Moscow"
+                    "Viljandi"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Vilkija",
-                    "Amsterdam"
+                    "Kadagopya"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Vilkija",
-                    "Kavarskas"
+                    "Berlin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Vilkija",
-                    "Bonn"
+                    "Jieznas",
+                    "Vilkija"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Vilkija",
-                    "Narva"
+                    "Jieznas",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Vilkija",
-                    "Jurmala"
+                    "Jieznas",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Vilkija",
-                    "Rome"
+                    "Jieznas",
+                    "Viljandi"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Jieznas",
+                    "Kadagopya"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Jieznas",
+                    "Berlin"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Edinburgh",
+                    "Vilkija"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Edinburgh",
+                    "Jieznas"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Edinburgh",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Edinburgh",
+                    "Vienna"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Edinburgh",
+                    "Kadagopya"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Edinburgh",
+                    "Berlin"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Vilkija"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Jieznas"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Vienna"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Viljandi"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Kadagopya"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Hamburg",
+                    "Berlin"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Vienna",
+                    "Vilkija"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Vienna",
+                    "Jieznas"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Vienna",
+                    "Edinburgh"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Vienna",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Vienna",
+                    "Viljandi"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Vienna",
+                    "Kadagopya"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Vienna",
+                    "Berlin"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Viljandi",
+                    "Vilkija"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Viljandi",
+                    "Jieznas"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Viljandi",
+                    "Edinburgh"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Viljandi",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Viljandi",
+                    "Vienna"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Viljandi",
+                    "Kadagopya"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Viljandi",
+                    "Berlin"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Kadagopya",
+                    "Vilkija"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Kadagopya",
+                    "Jieznas"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Kadagopya",
+                    "Edinburgh"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Kadagopya",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Kadagopya",
+                    "Vienna"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Kadagopya",
+                    "Viljandi"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Kadagopya",
+                    "Berlin"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Berlin",
+                    "Jieznas"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Berlin",
+                    "Edinburgh"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Berlin",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Berlin",
+                    "Vienna"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Berlin",
+                    "Viljandi"
                 ]
             ]
         ],
@@ -2827,7 +1385,7 @@
                 [
                     "bought",
                     [
-                        "ExpensiveRugs"
+                        "Copper"
                     ]
                 ],
                 "0"
@@ -2847,7 +1405,7 @@
                 [
                     "bought",
                     [
-                        "Coffee"
+                        "DVDs"
                     ]
                 ],
                 "0"
@@ -2855,7 +1413,7 @@
             [
                 "at",
                 [
-                    "Bonn"
+                    "Viljandi"
                 ]
             ],
             [
@@ -2877,792 +1435,330 @@
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Thule"
+                    "Vilkija",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Stockholm"
+                    "Vilkija",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Sough"
+                    "Vilkija",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Moscow"
+                    "Vilkija",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Bonn"
+                    "Vilkija",
+                    "Viljandi"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Narva"
+                    "Vilkija",
+                    "Kadagopya"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Jurmala"
+                    "Vilkija",
+                    "Berlin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Rome"
+                    "Jieznas",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
+                    "Jieznas",
+                    "Hamburg"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Jieznas",
+                    "Kadagopya"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Jieznas",
+                    "Berlin"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Edinburgh",
                     "Vilkija"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Thule",
-                    "Sough"
+                    "Edinburgh",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Thule",
-                    "Moscow"
+                    "Edinburgh",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Thule",
-                    "Amsterdam"
+                    "Edinburgh",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Thule",
-                    "Kavarskas"
+                    "Edinburgh",
+                    "Viljandi"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Thule",
-                    "Bonn"
+                    "Edinburgh",
+                    "Kadagopya"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Thule",
-                    "Jurmala"
+                    "Edinburgh",
+                    "Berlin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Thule",
+                    "Hamburg",
                     "Vilkija"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Stockholm",
-                    "Palanga"
+                    "Hamburg",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Stockholm",
-                    "Thule"
+                    "Hamburg",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Stockholm",
-                    "Moscow"
+                    "Hamburg",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Stockholm",
-                    "Amsterdam"
+                    "Hamburg",
+                    "Viljandi"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Stockholm",
-                    "Kavarskas"
+                    "Hamburg",
+                    "Kadagopya"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Stockholm",
-                    "Jurmala"
+                    "Hamburg",
+                    "Berlin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Stockholm",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
+                    "Vienna",
                     "Vilkija"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Palanga"
+                    "Vienna",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Thule"
+                    "Vienna",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Stockholm"
+                    "Vienna",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Amsterdam"
+                    "Vienna",
+                    "Viljandi"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Kavarskas"
+                    "Vienna",
+                    "Kadagopya"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Bonn"
+                    "Vienna",
+                    "Berlin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Narva"
+                    "Viljandi",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Jurmala"
+                    "Viljandi",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Rome"
+                    "Viljandi",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
+                    "Viljandi",
+                    "Kadagopya"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Kadagopya",
                     "Vilkija"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Moscow",
-                    "Palanga"
+                    "Kadagopya",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Moscow",
-                    "Thule"
+                    "Kadagopya",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Moscow",
-                    "Stockholm"
+                    "Kadagopya",
+                    "Viljandi"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Moscow",
-                    "Sough"
+                    "Kadagopya",
+                    "Berlin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Moscow",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
+                    "Berlin",
                     "Vilkija"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Palanga"
+                    "Berlin",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Thule"
+                    "Berlin",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Stockholm"
+                    "Berlin",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Sough"
+                    "Berlin",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Rome"
+                    "Berlin",
+                    "Viljandi"
                 ]
             ]
         ],
@@ -3672,7 +1768,7 @@
                 [
                     "bought",
                     [
-                        "ExpensiveRugs"
+                        "Copper"
                     ]
                 ],
                 "0"
@@ -3692,7 +1788,7 @@
                 [
                     "bought",
                     [
-                        "Coffee"
+                        "DVDs"
                     ]
                 ],
                 "0"
@@ -3700,7 +1796,7 @@
             [
                 "at",
                 [
-                    "Narva"
+                    "Kadagopya"
                 ]
             ],
             [
@@ -3722,1679 +1818,351 @@
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Thule"
+                    "Vilkija",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Stockholm"
+                    "Vilkija",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Sough"
+                    "Vilkija",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Moscow"
+                    "Vilkija",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Amsterdam"
+                    "Vilkija",
+                    "Viljandi"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Kavarskas"
+                    "Vilkija",
+                    "Kadagopya"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Bonn"
+                    "Vilkija",
+                    "Berlin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
+                    "Jieznas",
                     "Vilkija"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Thule",
-                    "Palanga"
+                    "Jieznas",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Thule",
-                    "Stockholm"
+                    "Jieznas",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Thule",
-                    "Sough"
+                    "Jieznas",
+                    "Viljandi"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Thule",
-                    "Moscow"
+                    "Jieznas",
+                    "Kadagopya"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Thule",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
+                    "Edinburgh",
                     "Vilkija"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Stockholm",
-                    "Palanga"
+                    "Edinburgh",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Stockholm",
-                    "Sough"
+                    "Edinburgh",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Stockholm",
-                    "Moscow"
+                    "Edinburgh",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Stockholm",
-                    "Amsterdam"
+                    "Edinburgh",
+                    "Viljandi"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Stockholm",
-                    "Kavarskas"
+                    "Edinburgh",
+                    "Kadagopya"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Stockholm",
-                    "Bonn"
+                    "Edinburgh",
+                    "Berlin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Stockholm",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
+                    "Hamburg",
                     "Vilkija"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Palanga"
+                    "Hamburg",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Stockholm"
+                    "Hamburg",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Moscow"
+                    "Hamburg",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Amsterdam"
+                    "Hamburg",
+                    "Viljandi"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Kavarskas"
+                    "Hamburg",
+                    "Kadagopya"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Bonn"
+                    "Hamburg",
+                    "Berlin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Sough",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
+                    "Vienna",
                     "Vilkija"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Moscow",
-                    "Palanga"
+                    "Vienna",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Moscow",
-                    "Thule"
+                    "Vienna",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Moscow",
-                    "Stockholm"
+                    "Vienna",
+                    "Viljandi"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Moscow",
-                    "Sough"
+                    "Vienna",
+                    "Kadagopya"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Moscow",
-                    "Amsterdam"
+                    "Vienna",
+                    "Berlin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Moscow",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
+                    "Viljandi",
                     "Vilkija"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Palanga"
+                    "Viljandi",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Thule"
+                    "Viljandi",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Stockholm"
+                    "Viljandi",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Sough"
+                    "Viljandi",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Kavarskas"
+                    "Viljandi",
+                    "Kadagopya"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Narva"
+                    "Viljandi",
+                    "Berlin"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Amsterdam",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
+                    "Kadagopya",
                     "Vilkija"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kavarskas",
-                    "Palanga"
+                    "Kadagopya",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kavarskas",
-                    "Stockholm"
+                    "Kadagopya",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kavarskas",
-                    "Sough"
+                    "Kadagopya",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kavarskas",
-                    "Moscow"
+                    "Kadagopya",
+                    "Vienna"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kavarskas",
-                    "Amsterdam"
+                    "Kadagopya",
+                    "Viljandi"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kavarskas",
-                    "Bonn"
+                    "Berlin",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kavarskas",
-                    "Narva"
+                    "Berlin",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kavarskas",
-                    "Jurmala"
+                    "Berlin",
+                    "Hamburg"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kavarskas",
-                    "Rome"
+                    "Berlin",
+                    "Viljandi"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Rome"
-                ]
-            ]
-        ],
-        "camel3": [
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "ExpensiveRugs"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "LaminateFloor"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "Coffee"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "at",
-                [
-                    "Moscow"
-                ]
-            ],
-            [
-                "=",
-                [
-                    "cash",
-                    []
-                ],
-                "10"
-            ],
-            [
-                "=",
-                [
-                    "capacity",
-                    []
-                ],
-                "5"
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Thule",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Sough",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Amsterdam",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kavarskas",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Narva",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Thule"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Sough"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Amsterdam"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Kavarskas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Narva"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Jurmala"
+                    "Berlin",
+                    "Kadagopya"
                 ]
             ]
         ]
@@ -5408,7 +2176,7 @@
                     "cash",
                     []
                 ],
-                "33.35"
+                "25"
             ]
         ],
         "camel1": [
@@ -5418,7 +2186,7 @@
                     "cash",
                     []
                 ],
-                "33.35"
+                "25"
             ]
         ],
         "camel2": [
@@ -5428,17 +2196,7 @@
                     "cash",
                     []
                 ],
-                "33.35"
-            ]
-        ],
-        "camel3": [
-            [
-                ">=",
-                [
-                    "cash",
-                    []
-                ],
-                "33.35"
+                "25"
             ]
         ]
     }

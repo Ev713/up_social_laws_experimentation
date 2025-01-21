@@ -1,21 +1,18 @@
 {
     "market": [
-        "Dublin",
-        "Bonn",
-        "Hamburg",
-        "London",
-        "Torshavn",
-        "Seda",
-        "Moscow"
+        "Copenhagen",
+        "Kaunas",
+        "Lisbon",
+        "Panemune",
+        "Edinburgh"
     ],
     "goods": [
-        "Platinum",
-        "LaminateFloor"
+        "Minerals",
+        "GummyBears"
     ],
     "agents": [
         "camel0",
-        "camel1",
-        "camel2"
+        "camel1"
     ],
     "init_values": {
         "global": [
@@ -24,660 +21,374 @@
                 [
                     "sellprice",
                     [
-                        "Platinum",
-                        "Dublin"
+                        "Minerals",
+                        "Copenhagen"
                     ]
                 ],
-                "11.73"
+                "4"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Platinum",
-                        "Bonn"
+                        "Minerals",
+                        "Kaunas"
                     ]
                 ],
-                "12.66"
+                "5"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Platinum",
-                        "Hamburg"
+                        "Minerals",
+                        "Lisbon"
                     ]
                 ],
-                "9.2"
+                "3"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Platinum",
-                        "London"
+                        "Minerals",
+                        "Panemune"
                     ]
                 ],
-                "11.39"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Platinum",
-                        "Torshavn"
-                    ]
-                ],
-                "8.0"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Platinum",
-                        "Seda"
-                    ]
-                ],
-                "8.83"
+                "7"
             ],
             [
                 "=",
                 [
                     "price",
                     [
-                        "Platinum",
-                        "Seda"
+                        "Minerals",
+                        "Panemune"
                     ]
                 ],
-                "6.02"
+                "5"
             ],
             [
                 "=",
                 [
                     "on-sale",
                     [
-                        "Platinum",
-                        "Seda"
+                        "Minerals",
+                        "Panemune"
                     ]
                 ],
-                "9"
+                "15"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Platinum",
-                        "Moscow"
+                        "Minerals",
+                        "Edinburgh"
                     ]
                 ],
-                "4.68"
+                "3"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "LaminateFloor",
-                        "Dublin"
+                        "GummyBears",
+                        "Copenhagen"
                     ]
                 ],
-                "6.25"
+                "4"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "LaminateFloor",
-                        "Bonn"
+                        "GummyBears",
+                        "Kaunas"
                     ]
                 ],
-                "4.51"
+                "1"
             ],
             [
                 "=",
                 [
                     "price",
                     [
-                        "LaminateFloor",
-                        "Bonn"
+                        "GummyBears",
+                        "Kaunas"
                     ]
                 ],
-                "5.98"
+                "1"
             ],
             [
                 "=",
                 [
                     "on-sale",
                     [
-                        "LaminateFloor",
-                        "Bonn"
+                        "GummyBears",
+                        "Kaunas"
                     ]
                 ],
-                "13"
+                "10"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "LaminateFloor",
-                        "Hamburg"
+                        "GummyBears",
+                        "Lisbon"
                     ]
                 ],
-                "6.13"
+                "7"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "LaminateFloor",
-                        "London"
+                        "GummyBears",
+                        "Panemune"
                     ]
                 ],
-                "10.38"
+                "6"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "LaminateFloor",
-                        "Torshavn"
+                        "GummyBears",
+                        "Edinburgh"
                     ]
                 ],
-                "10.76"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Seda"
-                    ]
-                ],
-                "4.95"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Moscow"
-                    ]
-                ],
-                "4.74"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Dublin",
-                        "Bonn"
+                        "Copenhagen",
+                        "Kaunas"
                     ]
                 ],
-                "1.44"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Dublin",
-                        "Hamburg"
+                        "Copenhagen",
+                        "Lisbon"
                     ]
                 ],
-                "5.75"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Dublin",
-                        "London"
+                        "Copenhagen",
+                        "Panemune"
                     ]
                 ],
-                "2.85"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Dublin",
-                        "Torshavn"
+                        "Copenhagen",
+                        "Edinburgh"
                     ]
                 ],
-                "3.27"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Dublin",
-                        "Seda"
+                        "Kaunas",
+                        "Copenhagen"
                     ]
                 ],
-                "1.32"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Dublin",
-                        "Moscow"
+                        "Kaunas",
+                        "Lisbon"
                     ]
                 ],
-                "1.86"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Bonn",
-                        "Dublin"
+                        "Kaunas",
+                        "Panemune"
                     ]
                 ],
-                "3.96"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Bonn",
-                        "Hamburg"
+                        "Kaunas",
+                        "Edinburgh"
                     ]
                 ],
-                "4.8"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Bonn",
-                        "London"
+                        "Lisbon",
+                        "Copenhagen"
                     ]
                 ],
-                "3.65"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Bonn",
-                        "Torshavn"
+                        "Lisbon",
+                        "Kaunas"
                     ]
                 ],
-                "6.28"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Bonn",
-                        "Seda"
+                        "Lisbon",
+                        "Panemune"
                     ]
                 ],
-                "4.59"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Bonn",
-                        "Moscow"
+                        "Lisbon",
+                        "Edinburgh"
                     ]
                 ],
-                "3.04"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Hamburg",
-                        "Dublin"
+                        "Panemune",
+                        "Copenhagen"
                     ]
                 ],
-                "5.04"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Hamburg",
-                        "Bonn"
+                        "Panemune",
+                        "Kaunas"
                     ]
                 ],
-                "6.52"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Hamburg",
-                        "London"
+                        "Panemune",
+                        "Lisbon"
                     ]
                 ],
-                "4.55"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Hamburg",
-                        "Torshavn"
+                        "Panemune",
+                        "Edinburgh"
                     ]
                 ],
-                "5.93"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Hamburg",
-                        "Seda"
+                        "Edinburgh",
+                        "Copenhagen"
                     ]
                 ],
-                "3.41"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Hamburg",
-                        "Moscow"
+                        "Edinburgh",
+                        "Kaunas"
                     ]
                 ],
-                "4.86"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "London",
-                        "Dublin"
+                        "Edinburgh",
+                        "Lisbon"
                     ]
                 ],
-                "4.88"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "London",
-                        "Bonn"
+                        "Edinburgh",
+                        "Panemune"
                     ]
                 ],
-                "5.87"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "London",
-                        "Hamburg"
-                    ]
-                ],
-                "6.73"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "London",
-                        "Torshavn"
-                    ]
-                ],
-                "3.12"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "London",
-                        "Seda"
-                    ]
-                ],
-                "6.0"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "London",
-                        "Moscow"
-                    ]
-                ],
-                "1.99"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Torshavn",
-                        "Dublin"
-                    ]
-                ],
-                "5.44"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Torshavn",
-                        "Bonn"
-                    ]
-                ],
-                "2.22"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Torshavn",
-                        "Hamburg"
-                    ]
-                ],
-                "3.61"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Torshavn",
-                        "London"
-                    ]
-                ],
-                "5.32"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Torshavn",
-                        "Seda"
-                    ]
-                ],
-                "3.76"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Torshavn",
-                        "Moscow"
-                    ]
-                ],
-                "3.37"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Seda",
-                        "Dublin"
-                    ]
-                ],
-                "1.64"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Seda",
-                        "Bonn"
-                    ]
-                ],
-                "4.78"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Seda",
-                        "Hamburg"
-                    ]
-                ],
-                "3.89"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Seda",
-                        "London"
-                    ]
-                ],
-                "2.3"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Seda",
-                        "Torshavn"
-                    ]
-                ],
-                "3.08"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Seda",
-                        "Moscow"
-                    ]
-                ],
-                "4.75"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Moscow",
-                        "Dublin"
-                    ]
-                ],
-                "2.09"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Moscow",
-                        "Bonn"
-                    ]
-                ],
-                "6.31"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Moscow",
-                        "Hamburg"
-                    ]
-                ],
-                "2.72"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Moscow",
-                        "London"
-                    ]
-                ],
-                "4.94"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Moscow",
-                        "Torshavn"
-                    ]
-                ],
-                "6.83"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Moscow",
-                        "Seda"
-                    ]
-                ],
-                "6.36"
+                "2"
             ]
         ],
         "camel0": [
@@ -686,7 +397,7 @@
                 [
                     "bought",
                     [
-                        "Platinum"
+                        "Minerals"
                     ]
                 ],
                 "0"
@@ -696,7 +407,7 @@
                 [
                     "bought",
                     [
-                        "LaminateFloor"
+                        "GummyBears"
                     ]
                 ],
                 "0"
@@ -704,7 +415,7 @@
             [
                 "at",
                 [
-                    "Hamburg"
+                    "Copenhagen"
                 ]
             ],
             [
@@ -726,260 +437,120 @@
             [
                 "can-drive",
                 [
-                    "Dublin",
-                    "Bonn"
+                    "Copenhagen",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dublin",
-                    "Hamburg"
+                    "Copenhagen",
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dublin",
-                    "Seda"
+                    "Copenhagen",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Dublin"
+                    "Kaunas",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Hamburg"
+                    "Kaunas",
+                    "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "London"
+                    "Kaunas",
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Torshavn"
+                    "Kaunas",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Seda"
+                    "Lisbon",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Hamburg",
-                    "Dublin"
+                    "Lisbon",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Hamburg",
-                    "London"
+                    "Lisbon",
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Hamburg",
-                    "Torshavn"
+                    "Panemune",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Hamburg",
-                    "Seda"
+                    "Panemune",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Hamburg",
-                    "Moscow"
+                    "Panemune",
+                    "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "London",
-                    "Dublin"
+                    "Edinburgh",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "London",
-                    "Bonn"
+                    "Edinburgh",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "London",
-                    "Hamburg"
+                    "Edinburgh",
+                    "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "London",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "London"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "London"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "London"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Seda"
+                    "Edinburgh",
+                    "Panemune"
                 ]
             ]
         ],
@@ -989,7 +560,7 @@
                 [
                     "bought",
                     [
-                        "Platinum"
+                        "Minerals"
                     ]
                 ],
                 "0"
@@ -999,7 +570,7 @@
                 [
                     "bought",
                     [
-                        "LaminateFloor"
+                        "GummyBears"
                     ]
                 ],
                 "0"
@@ -1007,7 +578,7 @@
             [
                 "at",
                 [
-                    "London"
+                    "Kaunas"
                 ]
             ],
             [
@@ -1029,591 +600,120 @@
             [
                 "can-drive",
                 [
-                    "Dublin",
-                    "Bonn"
+                    "Copenhagen",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dublin",
-                    "Hamburg"
+                    "Copenhagen",
+                    "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dublin",
-                    "Torshavn"
+                    "Copenhagen",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dublin",
-                    "Seda"
+                    "Kaunas",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dublin",
-                    "Moscow"
+                    "Kaunas",
+                    "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Hamburg"
+                    "Kaunas",
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "London"
+                    "Kaunas",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Torshavn"
+                    "Lisbon",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Seda"
+                    "Lisbon",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Moscow"
+                    "Lisbon",
+                    "Panemune"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Hamburg",
-                    "Dublin"
+                    "Lisbon",
+                    "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Hamburg",
-                    "Bonn"
+                    "Panemune",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Hamburg",
-                    "London"
+                    "Panemune",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Hamburg",
-                    "Seda"
+                    "Panemune",
+                    "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Hamburg",
-                    "Moscow"
+                    "Edinburgh",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "London",
-                    "Dublin"
+                    "Edinburgh",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "London",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "London"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "London"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "London"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Seda"
-                ]
-            ]
-        ],
-        "camel2": [
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "Platinum"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "LaminateFloor"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "at",
-                [
-                    "London"
-                ]
-            ],
-            [
-                "=",
-                [
-                    "cash",
-                    []
-                ],
-                "10"
-            ],
-            [
-                "=",
-                [
-                    "capacity",
-                    []
-                ],
-                "5"
-            ],
-            [
-                "can-drive",
-                [
-                    "Dublin",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dublin",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dublin",
-                    "London"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dublin",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dublin",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dublin",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "London"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Hamburg",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Hamburg",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Hamburg",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Hamburg",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Hamburg",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "London",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "London"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Seda"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Torshavn",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "London"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Seda",
-                    "Moscow"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Dublin"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "London"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Torshavn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Moscow",
-                    "Seda"
+                    "Edinburgh",
+                    "Lisbon"
                 ]
             ]
         ]
@@ -1627,7 +727,7 @@
                     "cash",
                     []
                 ],
-                "25.04"
+                "23"
             ]
         ],
         "camel1": [
@@ -1637,17 +737,7 @@
                     "cash",
                     []
                 ],
-                "25.04"
-            ]
-        ],
-        "camel2": [
-            [
-                ">=",
-                [
-                    "cash",
-                    []
-                ],
-                "25.04"
+                "23"
             ]
         ]
     }

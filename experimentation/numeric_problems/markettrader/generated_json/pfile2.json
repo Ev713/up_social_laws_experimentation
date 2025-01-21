@@ -1,18 +1,17 @@
 {
     "market": [
-        "Edinburgh",
-        "Vilkija",
-        "Paris",
-        "Valmiera",
-        "KudirkosNaumiestis",
-        "Gelgaudiskis"
+        "Douglas",
+        "Jurmala",
+        "Moscow",
+        "Edinburgh"
     ],
     "goods": [
-        "Footballs"
+        "Food"
     ],
     "agents": [
         "camel0",
-        "camel1"
+        "camel1",
+        "camel2"
     ],
     "init_values": {
         "global": [
@@ -21,66 +20,187 @@
                 [
                     "sellprice",
                     [
-                        "Footballs",
+                        "Food",
+                        "Douglas"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Food",
+                        "Jurmala"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Food",
+                        "Moscow"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "price",
+                    [
+                        "Food",
+                        "Moscow"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "on-sale",
+                    [
+                        "Food",
+                        "Moscow"
+                    ]
+                ],
+                "11"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Food",
                         "Edinburgh"
                     ]
                 ],
-                "9.06"
+                "6"
             ],
             [
                 "=",
                 [
-                    "sellprice",
+                    "price",
                     [
-                        "Footballs",
-                        "Vilkija"
+                        "Food",
+                        "Edinburgh"
                     ]
                 ],
-                "9.97"
+                "4"
             ],
             [
                 "=",
                 [
-                    "sellprice",
+                    "on-sale",
                     [
-                        "Footballs",
-                        "Paris"
+                        "Food",
+                        "Edinburgh"
                     ]
                 ],
-                "7.22"
+                "15"
             ],
             [
                 "=",
                 [
-                    "sellprice",
+                    "drive-cost",
                     [
-                        "Footballs",
-                        "Valmiera"
+                        "Douglas",
+                        "Jurmala"
                     ]
                 ],
-                "6.82"
+                "2"
             ],
             [
                 "=",
                 [
-                    "sellprice",
+                    "drive-cost",
                     [
-                        "Footballs",
-                        "KudirkosNaumiestis"
+                        "Douglas",
+                        "Moscow"
                     ]
                 ],
-                "6.14"
+                "1"
             ],
             [
                 "=",
                 [
-                    "sellprice",
+                    "drive-cost",
                     [
-                        "Footballs",
-                        "Gelgaudiskis"
+                        "Douglas",
+                        "Edinburgh"
                     ]
                 ],
-                "5.8"
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Jurmala",
+                        "Douglas"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Jurmala",
+                        "Moscow"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Jurmala",
+                        "Edinburgh"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Moscow",
+                        "Douglas"
+                    ]
+                ],
+                "1"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Moscow",
+                        "Jurmala"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Moscow",
+                        "Edinburgh"
+                    ]
+                ],
+                "4"
             ],
             [
                 "=",
@@ -88,10 +208,10 @@
                     "drive-cost",
                     [
                         "Edinburgh",
-                        "Vilkija"
+                        "Douglas"
                     ]
                 ],
-                "3.46"
+                "2"
             ],
             [
                 "=",
@@ -99,10 +219,10 @@
                     "drive-cost",
                     [
                         "Edinburgh",
-                        "Paris"
+                        "Jurmala"
                     ]
                 ],
-                "4.05"
+                "3"
             ],
             [
                 "=",
@@ -110,307 +230,10 @@
                     "drive-cost",
                     [
                         "Edinburgh",
-                        "Valmiera"
+                        "Moscow"
                     ]
                 ],
-                "1.77"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "KudirkosNaumiestis"
-                    ]
-                ],
-                "2.35"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Edinburgh",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "5.3"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Vilkija",
-                        "Edinburgh"
-                    ]
-                ],
-                "4.98"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Vilkija",
-                        "Paris"
-                    ]
-                ],
-                "6.26"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Vilkija",
-                        "Valmiera"
-                    ]
-                ],
-                "6.15"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Vilkija",
-                        "KudirkosNaumiestis"
-                    ]
-                ],
-                "5.13"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Vilkija",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "4.18"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Edinburgh"
-                    ]
-                ],
-                "2.43"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Vilkija"
-                    ]
-                ],
-                "1.29"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Valmiera"
-                    ]
-                ],
-                "5.32"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "KudirkosNaumiestis"
-                    ]
-                ],
-                "6.8"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Paris",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "3.68"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Valmiera",
-                        "Edinburgh"
-                    ]
-                ],
-                "3.44"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Valmiera",
-                        "Vilkija"
-                    ]
-                ],
-                "5.62"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Valmiera",
-                        "Paris"
-                    ]
-                ],
-                "1.59"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Valmiera",
-                        "KudirkosNaumiestis"
-                    ]
-                ],
-                "1.59"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Valmiera",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "6.09"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "KudirkosNaumiestis",
-                        "Edinburgh"
-                    ]
-                ],
-                "2.84"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "KudirkosNaumiestis",
-                        "Vilkija"
-                    ]
-                ],
-                "1.73"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "KudirkosNaumiestis",
-                        "Paris"
-                    ]
-                ],
-                "1.47"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "KudirkosNaumiestis",
-                        "Valmiera"
-                    ]
-                ],
-                "1.97"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "KudirkosNaumiestis",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "6.76"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Edinburgh"
-                    ]
-                ],
-                "5.78"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Vilkija"
-                    ]
-                ],
-                "1.73"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Paris"
-                    ]
-                ],
-                "6.38"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Valmiera"
-                    ]
-                ],
-                "4.44"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "KudirkosNaumiestis"
-                    ]
-                ],
-                "3.89"
+                "1"
             ]
         ],
         "camel0": [
@@ -419,7 +242,7 @@
                 [
                     "bought",
                     [
-                        "Footballs"
+                        "Food"
                     ]
                 ],
                 "0"
@@ -427,7 +250,7 @@
             [
                 "at",
                 [
-                    "KudirkosNaumiestis"
+                    "Douglas"
                 ]
             ],
             [
@@ -449,183 +272,71 @@
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Vilkija"
+                    "Douglas",
+                    "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Paris"
+                    "Douglas",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "KudirkosNaumiestis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Edinburgh",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
+                    "Douglas",
                     "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Vilkija",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "KudirkosNaumiestis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
+                    "Jurmala",
                     "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Paris",
-                    "Vilkija"
+                    "Moscow",
+                    "Douglas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Paris",
-                    "Valmiera"
+                    "Moscow",
+                    "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Paris",
-                    "KudirkosNaumiestis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "KudirkosNaumiestis",
-                    "Vilkija"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "KudirkosNaumiestis",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "KudirkosNaumiestis",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
+                    "Moscow",
                     "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Gelgaudiskis",
-                    "Vilkija"
+                    "Edinburgh",
+                    "Douglas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Gelgaudiskis",
-                    "Paris"
+                    "Edinburgh",
+                    "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Gelgaudiskis",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "KudirkosNaumiestis"
+                    "Edinburgh",
+                    "Moscow"
                 ]
             ]
         ],
@@ -635,7 +346,7 @@
                 [
                     "bought",
                     [
-                        "Footballs"
+                        "Food"
                     ]
                 ],
                 "0"
@@ -643,7 +354,7 @@
             [
                 "at",
                 [
-                    "Vilkija"
+                    "Jurmala"
                 ]
             ],
             [
@@ -665,183 +376,175 @@
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Vilkija"
+                    "Douglas",
+                    "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Paris"
+                    "Douglas",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Valmiera"
+                    "Jurmala",
+                    "Douglas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "KudirkosNaumiestis"
+                    "Jurmala",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Edinburgh",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
+                    "Jurmala",
                     "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Vilkija",
-                    "Paris"
+                    "Moscow",
+                    "Douglas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Vilkija",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "KudirkosNaumiestis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Vilkija",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Paris",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
+                    "Moscow",
                     "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valmiera",
-                    "Vilkija"
+                    "Edinburgh",
+                    "Douglas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valmiera",
-                    "Paris"
+                    "Edinburgh",
+                    "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valmiera",
-                    "KudirkosNaumiestis"
+                    "Edinburgh",
+                    "Moscow"
+                ]
+            ]
+        ],
+        "camel2": [
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "Food"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "at",
+                [
+                    "Edinburgh"
+                ]
+            ],
+            [
+                "=",
+                [
+                    "cash",
+                    []
+                ],
+                "10"
+            ],
+            [
+                "=",
+                [
+                    "capacity",
+                    []
+                ],
+                "5"
+            ],
+            [
+                "can-drive",
+                [
+                    "Douglas",
+                    "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valmiera",
-                    "Gelgaudiskis"
+                    "Douglas",
+                    "Moscow"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "KudirkosNaumiestis",
+                    "Douglas",
                     "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "KudirkosNaumiestis",
-                    "Vilkija"
+                    "Jurmala",
+                    "Douglas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "KudirkosNaumiestis",
-                    "Paris"
+                    "Moscow",
+                    "Douglas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "KudirkosNaumiestis",
-                    "Valmiera"
+                    "Moscow",
+                    "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "KudirkosNaumiestis",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
+                    "Moscow",
                     "Edinburgh"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Gelgaudiskis",
-                    "Vilkija"
+                    "Edinburgh",
+                    "Douglas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Gelgaudiskis",
-                    "Paris"
+                    "Edinburgh",
+                    "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Gelgaudiskis",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "KudirkosNaumiestis"
+                    "Edinburgh",
+                    "Moscow"
                 ]
             ]
         ]
@@ -855,7 +558,7 @@
                     "cash",
                     []
                 ],
-                "17.9"
+                "22"
             ]
         ],
         "camel1": [
@@ -865,7 +568,17 @@
                     "cash",
                     []
                 ],
-                "17.9"
+                "22"
+            ]
+        ],
+        "camel2": [
+            [
+                ">=",
+                [
+                    "cash",
+                    []
+                ],
+                "22"
             ]
         ]
     }

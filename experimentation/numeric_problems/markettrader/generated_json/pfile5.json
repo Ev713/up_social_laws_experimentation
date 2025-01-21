@@ -1,18 +1,15 @@
 {
     "market": [
-        "Gelgaudiskis",
-        "Madrid",
-        "Viljandi",
-        "Jelgava",
-        "Valencia",
-        "Ogre",
-        "Tallinn",
-        "StPetersburg",
-        "Jieznas"
+        "Simnas",
+        "Brussels",
+        "Cesis",
+        "Copenhagen",
+        "Seda",
+        "London"
     ],
     "goods": [
         "Computers",
-        "Footballs"
+        "GummyBears"
     ],
     "agents": [
         "camel0",
@@ -26,10 +23,10 @@
                     "sellprice",
                     [
                         "Computers",
-                        "Gelgaudiskis"
+                        "Simnas"
                     ]
                 ],
-                "7.54"
+                "4"
             ],
             [
                 "=",
@@ -37,87 +34,10 @@
                     "sellprice",
                     [
                         "Computers",
-                        "Madrid"
+                        "Brussels"
                     ]
                 ],
-                "3.69"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Viljandi"
-                    ]
-                ],
-                "8.24"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Jelgava"
-                    ]
-                ],
-                "6.45"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Valencia"
-                    ]
-                ],
-                "13.5"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Ogre"
-                    ]
-                ],
-                "6.78"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Tallinn"
-                    ]
-                ],
-                "7.79"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "StPetersburg"
-                    ]
-                ],
-                "5.77"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Computers",
-                        "Jieznas"
-                    ]
-                ],
-                "7.45"
+                "4"
             ],
             [
                 "=",
@@ -125,10 +45,10 @@
                     "price",
                     [
                         "Computers",
-                        "Jieznas"
+                        "Brussels"
                     ]
                 ],
-                "7.67"
+                "3"
             ],
             [
                 "=",
@@ -136,923 +56,472 @@
                     "on-sale",
                     [
                         "Computers",
-                        "Jieznas"
+                        "Brussels"
                     ]
                 ],
-                "15"
+                "4"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Footballs",
-                        "Gelgaudiskis"
+                        "Computers",
+                        "Cesis"
                     ]
                 ],
-                "4.47"
+                "4"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Footballs",
-                        "Madrid"
+                        "Computers",
+                        "Copenhagen"
                     ]
                 ],
-                "6.87"
+                "3"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Footballs",
-                        "Viljandi"
+                        "Computers",
+                        "Seda"
                     ]
                 ],
-                "12.47"
+                "2"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Footballs",
-                        "Jelgava"
+                        "Computers",
+                        "London"
                     ]
                 ],
-                "11.63"
+                "5"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Footballs",
-                        "Valencia"
+                        "GummyBears",
+                        "Simnas"
                     ]
                 ],
-                "6.53"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Footballs",
-                        "Ogre"
-                    ]
-                ],
-                "14.07"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Footballs",
-                        "Tallinn"
-                    ]
-                ],
-                "8.77"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Footballs",
-                        "StPetersburg"
-                    ]
-                ],
-                "7.72"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Footballs",
-                        "Jieznas"
-                    ]
-                ],
-                "9.56"
+                "5"
             ],
             [
                 "=",
                 [
                     "price",
                     [
-                        "Footballs",
-                        "Jieznas"
+                        "GummyBears",
+                        "Simnas"
                     ]
                 ],
-                "6.45"
+                "3"
             ],
             [
                 "=",
                 [
                     "on-sale",
                     [
-                        "Footballs",
-                        "Jieznas"
+                        "GummyBears",
+                        "Simnas"
                     ]
                 ],
-                "12"
+                "11"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Madrid"
-                    ]
-                ],
-                "1.94"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Viljandi"
-                    ]
-                ],
-                "3.32"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Jelgava"
-                    ]
-                ],
-                "6.2"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Valencia"
-                    ]
-                ],
-                "2.12"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Ogre"
-                    ]
-                ],
-                "4.59"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Tallinn"
-                    ]
-                ],
-                "1.41"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "StPetersburg"
-                    ]
-                ],
-                "3.17"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Jieznas"
-                    ]
-                ],
-                "4.09"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "5.27"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
-                        "Viljandi"
-                    ]
-                ],
-                "1.29"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
-                        "Jelgava"
-                    ]
-                ],
-                "2.73"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
-                        "Valencia"
-                    ]
-                ],
-                "6.24"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
-                        "Ogre"
-                    ]
-                ],
-                "6.07"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
-                        "Tallinn"
-                    ]
-                ],
-                "4.58"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
-                        "StPetersburg"
-                    ]
-                ],
-                "4.51"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
-                        "Jieznas"
-                    ]
-                ],
-                "2.5"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "5.8"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Madrid"
-                    ]
-                ],
-                "3.1"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Jelgava"
-                    ]
-                ],
-                "1.56"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Valencia"
-                    ]
-                ],
-                "3.49"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Ogre"
-                    ]
-                ],
-                "1.56"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Tallinn"
-                    ]
-                ],
-                "4.09"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "StPetersburg"
-                    ]
-                ],
-                "6.4"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Jieznas"
-                    ]
-                ],
-                "5.09"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "2.16"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Madrid"
-                    ]
-                ],
-                "6.65"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Viljandi"
-                    ]
-                ],
-                "5.51"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Valencia"
-                    ]
-                ],
-                "5.27"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Jelgava",
-                        "Ogre"
+                        "GummyBears",
+                        "Brussels"
                     ]
                 ],
-                "1.99"
+                "3"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Tallinn"
-                    ]
-                ],
-                "5.24"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "StPetersburg"
-                    ]
-                ],
-                "1.7"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jelgava",
-                        "Jieznas"
-                    ]
-                ],
-                "1.47"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Valencia",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "1.77"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Valencia",
-                        "Madrid"
-                    ]
-                ],
-                "6.47"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Valencia",
-                        "Viljandi"
-                    ]
-                ],
-                "1.38"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Valencia",
-                        "Jelgava"
-                    ]
-                ],
-                "2.51"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Valencia",
-                        "Ogre"
+                        "GummyBears",
+                        "Cesis"
                     ]
                 ],
-                "3.34"
+                "6"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
-                    [
-                        "Valencia",
-                        "Tallinn"
-                    ]
-                ],
-                "1.59"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Valencia",
-                        "StPetersburg"
+                        "GummyBears",
+                        "Copenhagen"
                     ]
                 ],
-                "2.24"
+                "7"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
-                    [
-                        "Valencia",
-                        "Jieznas"
-                    ]
-                ],
-                "1.3"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Ogre",
-                        "Gelgaudiskis"
+                        "GummyBears",
+                        "Seda"
                     ]
                 ],
-                "4.02"
+                "5"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Ogre",
-                        "Madrid"
+                        "GummyBears",
+                        "London"
                     ]
                 ],
-                "6.1"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "Viljandi"
+                        "Simnas",
+                        "Brussels"
                     ]
                 ],
-                "6.27"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "Jelgava"
+                        "Simnas",
+                        "Cesis"
                     ]
                 ],
-                "3.47"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "Valencia"
+                        "Simnas",
+                        "Copenhagen"
                     ]
                 ],
-                "1.32"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "Tallinn"
+                        "Simnas",
+                        "Seda"
                     ]
                 ],
-                "1.77"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "StPetersburg"
+                        "Simnas",
+                        "London"
                     ]
                 ],
-                "5.57"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Ogre",
-                        "Jieznas"
+                        "Brussels",
+                        "Simnas"
                     ]
                 ],
-                "6.81"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Tallinn",
-                        "Gelgaudiskis"
+                        "Brussels",
+                        "Cesis"
                     ]
                 ],
-                "4.53"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Tallinn",
-                        "Madrid"
+                        "Brussels",
+                        "Copenhagen"
                     ]
                 ],
-                "3.03"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Tallinn",
-                        "Viljandi"
+                        "Brussels",
+                        "Seda"
                     ]
                 ],
-                "6.63"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Tallinn",
-                        "Jelgava"
+                        "Brussels",
+                        "London"
                     ]
                 ],
-                "5.0"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Tallinn",
-                        "Valencia"
+                        "Cesis",
+                        "Simnas"
                     ]
                 ],
-                "5.72"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Tallinn",
-                        "Ogre"
+                        "Cesis",
+                        "Brussels"
                     ]
                 ],
-                "1.59"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Tallinn",
-                        "StPetersburg"
+                        "Cesis",
+                        "Copenhagen"
                     ]
                 ],
-                "5.84"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Tallinn",
-                        "Jieznas"
+                        "Cesis",
+                        "Seda"
                     ]
                 ],
-                "4.04"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "StPetersburg",
-                        "Gelgaudiskis"
+                        "Cesis",
+                        "London"
                     ]
                 ],
-                "2.81"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "StPetersburg",
-                        "Madrid"
+                        "Copenhagen",
+                        "Simnas"
                     ]
                 ],
-                "4.8"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "StPetersburg",
-                        "Viljandi"
+                        "Copenhagen",
+                        "Brussels"
                     ]
                 ],
-                "5.36"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "StPetersburg",
-                        "Jelgava"
+                        "Copenhagen",
+                        "Cesis"
                     ]
                 ],
-                "4.09"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "StPetersburg",
-                        "Valencia"
+                        "Copenhagen",
+                        "Seda"
                     ]
                 ],
-                "3.61"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "StPetersburg",
-                        "Ogre"
+                        "Copenhagen",
+                        "London"
                     ]
                 ],
-                "3.98"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "StPetersburg",
-                        "Tallinn"
+                        "Seda",
+                        "Simnas"
                     ]
                 ],
-                "3.65"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "StPetersburg",
-                        "Jieznas"
+                        "Seda",
+                        "Brussels"
                     ]
                 ],
-                "3.63"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jieznas",
-                        "Gelgaudiskis"
+                        "Seda",
+                        "Cesis"
                     ]
                 ],
-                "5.17"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jieznas",
-                        "Madrid"
+                        "Seda",
+                        "Copenhagen"
                     ]
                 ],
-                "3.25"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jieznas",
-                        "Viljandi"
+                        "Seda",
+                        "London"
                     ]
                 ],
-                "2.37"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jieznas",
-                        "Jelgava"
+                        "London",
+                        "Simnas"
                     ]
                 ],
-                "5.23"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jieznas",
-                        "Valencia"
+                        "London",
+                        "Brussels"
                     ]
                 ],
-                "6.91"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jieznas",
-                        "Ogre"
+                        "London",
+                        "Cesis"
                     ]
                 ],
-                "3.38"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jieznas",
-                        "Tallinn"
+                        "London",
+                        "Copenhagen"
                     ]
                 ],
-                "4.57"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jieznas",
-                        "StPetersburg"
+                        "London",
+                        "Seda"
                     ]
                 ],
-                "1.57"
+                "1"
             ]
         ],
         "camel0": [
@@ -1071,7 +540,7 @@
                 [
                     "bought",
                     [
-                        "Footballs"
+                        "GummyBears"
                     ]
                 ],
                 "0"
@@ -1079,7 +548,7 @@
             [
                 "at",
                 [
-                    "Jieznas"
+                    "London"
                 ]
             ],
             [
@@ -1101,421 +570,176 @@
             [
                 "can-drive",
                 [
-                    "Gelgaudiskis",
-                    "Viljandi"
+                    "Simnas",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Gelgaudiskis",
-                    "Jelgava"
+                    "Simnas",
+                    "Cesis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Gelgaudiskis",
-                    "Valencia"
+                    "Simnas",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Gelgaudiskis",
-                    "Ogre"
+                    "Simnas",
+                    "Seda"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Gelgaudiskis",
-                    "Tallinn"
+                    "Simnas",
+                    "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Gelgaudiskis",
-                    "Jieznas"
+                    "Brussels",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Gelgaudiskis"
+                    "Brussels",
+                    "Cesis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Viljandi"
+                    "Brussels",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Jelgava"
+                    "Brussels",
+                    "Seda"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Ogre"
+                    "Brussels",
+                    "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Tallinn"
+                    "Cesis",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "StPetersburg"
+                    "Cesis",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Jieznas"
+                    "Cesis",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Gelgaudiskis"
+                    "Cesis",
+                    "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Jelgava"
+                    "Copenhagen",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Valencia"
+                    "Copenhagen",
+                    "Cesis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "StPetersburg"
+                    "Copenhagen",
+                    "Seda"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Gelgaudiskis"
+                    "Copenhagen",
+                    "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Madrid"
+                    "Seda",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Viljandi"
+                    "Seda",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Ogre"
+                    "Seda",
+                    "Cesis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Tallinn"
+                    "Seda",
+                    "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "StPetersburg"
+                    "London",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Jieznas"
+                    "London",
+                    "Cesis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valencia",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "StPetersburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "StPetersburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "StPetersburg"
+                    "London",
+                    "Seda"
                 ]
             ]
         ],
@@ -1535,7 +759,7 @@
                 [
                     "bought",
                     [
-                        "Footballs"
+                        "GummyBears"
                     ]
                 ],
                 "0"
@@ -1543,7 +767,7 @@
             [
                 "at",
                 [
-                    "Tallinn"
+                    "Seda"
                 ]
             ],
             [
@@ -1565,414 +789,190 @@
             [
                 "can-drive",
                 [
-                    "Gelgaudiskis",
-                    "Madrid"
+                    "Simnas",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Gelgaudiskis",
-                    "Viljandi"
+                    "Simnas",
+                    "Cesis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Gelgaudiskis",
-                    "Jelgava"
+                    "Simnas",
+                    "Seda"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Gelgaudiskis",
-                    "Valencia"
+                    "Simnas",
+                    "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Gelgaudiskis",
-                    "StPetersburg"
+                    "Brussels",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Gelgaudiskis",
-                    "Jieznas"
+                    "Brussels",
+                    "Cesis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Gelgaudiskis"
+                    "Brussels",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Viljandi"
+                    "Brussels",
+                    "Seda"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Jelgava"
+                    "Brussels",
+                    "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Tallinn"
+                    "Cesis",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "StPetersburg"
+                    "Cesis",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Jieznas"
+                    "Cesis",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Madrid"
+                    "Cesis",
+                    "Seda"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Jelgava"
+                    "Cesis",
+                    "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Valencia"
+                    "Copenhagen",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Ogre"
+                    "Copenhagen",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "StPetersburg"
+                    "Copenhagen",
+                    "Cesis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Jieznas"
+                    "Copenhagen",
+                    "Seda"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Madrid"
+                    "Copenhagen",
+                    "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Viljandi"
+                    "Seda",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Valencia"
+                    "Seda",
+                    "Cesis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Ogre"
+                    "Seda",
+                    "London"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Tallinn"
+                    "London",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "StPetersburg"
+                    "London",
+                    "Brussels"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jelgava",
-                    "Jieznas"
+                    "London",
+                    "Cesis"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valencia",
-                    "Gelgaudiskis"
+                    "London",
+                    "Copenhagen"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valencia",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "StPetersburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valencia",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Ogre",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "StPetersburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Jieznas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Jelgava"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Valencia"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Ogre"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jieznas",
-                    "StPetersburg"
+                    "London",
+                    "Seda"
                 ]
             ]
         ]
@@ -1986,7 +986,7 @@
                     "cash",
                     []
                 ],
-                "25.11"
+                "32"
             ]
         ],
         "camel1": [
@@ -1996,7 +996,7 @@
                     "cash",
                     []
                 ],
-                "25.11"
+                "32"
             ]
         ]
     }

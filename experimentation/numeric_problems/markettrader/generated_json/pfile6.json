@@ -1,20 +1,17 @@
 {
     "market": [
-        "Tallinn",
-        "Valmiera",
-        "Hamburg",
-        "Jurmala",
-        "Kadagopya",
+        "Cardiff",
         "Madrid",
-        "Lisbon",
-        "Mariehamn",
-        "Rome",
-        "Douglas"
+        "Kaunas",
+        "Jelgava",
+        "Neringa",
+        "Bonn",
+        "Valencia"
     ],
     "goods": [
-        "LaminateFloor",
-        "Minerals",
-        "Kittens"
+        "ExpensiveRugs",
+        "Food",
+        "Cattle"
     ],
     "agents": [
         "camel0",
@@ -27,371 +24,8 @@
                 [
                     "sellprice",
                     [
-                        "LaminateFloor",
-                        "Tallinn"
-                    ]
-                ],
-                "4.29"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Valmiera"
-                    ]
-                ],
-                "6.79"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Hamburg"
-                    ]
-                ],
-                "12.03"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Jurmala"
-                    ]
-                ],
-                "8.81"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Kadagopya"
-                    ]
-                ],
-                "7.99"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Madrid"
-                    ]
-                ],
-                "7.4"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "LaminateFloor",
-                        "Madrid"
-                    ]
-                ],
-                "5.25"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "LaminateFloor",
-                        "Madrid"
-                    ]
-                ],
-                "12"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Lisbon"
-                    ]
-                ],
-                "5.34"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Mariehamn"
-                    ]
-                ],
-                "14.63"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Rome"
-                    ]
-                ],
-                "7.96"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "LaminateFloor",
-                        "Douglas"
-                    ]
-                ],
-                "14.58"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Tallinn"
-                    ]
-                ],
-                "7.16"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Valmiera"
-                    ]
-                ],
-                "12.38"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "Minerals",
-                        "Valmiera"
-                    ]
-                ],
-                "6.26"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "Minerals",
-                        "Valmiera"
-                    ]
-                ],
-                "4"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Hamburg"
-                    ]
-                ],
-                "3.9"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Jurmala"
-                    ]
-                ],
-                "13.48"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Kadagopya"
-                    ]
-                ],
-                "9.44"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Madrid"
-                    ]
-                ],
-                "10.18"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Lisbon"
-                    ]
-                ],
-                "5.46"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Mariehamn"
-                    ]
-                ],
-                "9.23"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Rome"
-                    ]
-                ],
-                "7.77"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Minerals",
-                        "Douglas"
-                    ]
-                ],
-                "10.59"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Tallinn"
-                    ]
-                ],
-                "13.7"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Valmiera"
-                    ]
-                ],
-                "5.11"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Hamburg"
-                    ]
-                ],
-                "7.25"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Jurmala"
-                    ]
-                ],
-                "8.94"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Kadagopya"
-                    ]
-                ],
-                "7.96"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Madrid"
-                    ]
-                ],
-                "7.4"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Lisbon"
-                    ]
-                ],
-                "10.16"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Kittens",
-                        "Mariehamn"
-                    ]
-                ],
-                "9.24"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "Kittens",
-                        "Mariehamn"
-                    ]
-                ],
-                "7.27"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "Kittens",
-                        "Mariehamn"
+                        "ExpensiveRugs",
+                        "Cardiff"
                     ]
                 ],
                 "8"
@@ -401,517 +35,352 @@
                 [
                     "sellprice",
                     [
-                        "Kittens",
-                        "Rome"
+                        "ExpensiveRugs",
+                        "Madrid"
                     ]
                 ],
-                "3.63"
+                "4"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Kittens",
-                        "Douglas"
+                        "ExpensiveRugs",
+                        "Kaunas"
                     ]
                 ],
-                "8.14"
+                "4"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Tallinn",
-                        "Valmiera"
+                        "ExpensiveRugs",
+                        "Jelgava"
                     ]
                 ],
-                "4.83"
+                "3"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Tallinn",
-                        "Hamburg"
+                        "ExpensiveRugs",
+                        "Neringa"
                     ]
                 ],
-                "2.51"
+                "4"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "price",
                     [
-                        "Tallinn",
-                        "Jurmala"
+                        "ExpensiveRugs",
+                        "Neringa"
                     ]
                 ],
-                "4.69"
+                "3"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "on-sale",
                     [
-                        "Tallinn",
-                        "Kadagopya"
+                        "ExpensiveRugs",
+                        "Neringa"
                     ]
                 ],
-                "6.39"
+                "12"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Tallinn",
+                        "ExpensiveRugs",
+                        "Bonn"
+                    ]
+                ],
+                "1"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "ExpensiveRugs",
+                        "Valencia"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Food",
+                        "Cardiff"
+                    ]
+                ],
+                "5"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Food",
                         "Madrid"
                     ]
                 ],
-                "3.11"
+                "1"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Tallinn",
-                        "Lisbon"
+                        "Food",
+                        "Kaunas"
                     ]
                 ],
-                "5.86"
+                "5"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Tallinn",
-                        "Mariehamn"
+                        "Food",
+                        "Jelgava"
                     ]
                 ],
-                "4.29"
+                "4"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Tallinn",
-                        "Rome"
+                        "Food",
+                        "Neringa"
                     ]
                 ],
-                "2.72"
+                "4"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Tallinn",
-                        "Douglas"
+                        "Food",
+                        "Bonn"
                     ]
                 ],
-                "2.03"
+                "7"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "price",
                     [
-                        "Valmiera",
-                        "Tallinn"
+                        "Food",
+                        "Bonn"
                     ]
                 ],
-                "4.49"
+                "4"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "on-sale",
                     [
-                        "Valmiera",
-                        "Hamburg"
+                        "Food",
+                        "Bonn"
                     ]
                 ],
-                "1.22"
+                "9"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Valmiera",
-                        "Jurmala"
+                        "Food",
+                        "Valencia"
                     ]
                 ],
-                "5.98"
+                "4"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Valmiera",
-                        "Kadagopya"
+                        "Cattle",
+                        "Cardiff"
                     ]
                 ],
-                "1.15"
+                "6"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Valmiera",
+                        "Cattle",
                         "Madrid"
                     ]
                 ],
-                "3.56"
+                "6"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Valmiera",
-                        "Lisbon"
+                        "Cattle",
+                        "Kaunas"
                     ]
                 ],
-                "5.14"
+                "4"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Valmiera",
-                        "Mariehamn"
+                        "Cattle",
+                        "Jelgava"
                     ]
                 ],
-                "1.25"
+                "2"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Valmiera",
-                        "Rome"
+                        "Cattle",
+                        "Neringa"
                     ]
                 ],
-                "5.64"
+                "8"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Valmiera",
-                        "Douglas"
+                        "Cattle",
+                        "Bonn"
                     ]
                 ],
-                "5.07"
+                "7"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Hamburg",
-                        "Tallinn"
+                        "Cattle",
+                        "Valencia"
                     ]
                 ],
-                "1.43"
+                "7"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "price",
                     [
-                        "Hamburg",
-                        "Valmiera"
+                        "Cattle",
+                        "Valencia"
                     ]
                 ],
-                "4.47"
+                "4"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "on-sale",
                     [
-                        "Hamburg",
-                        "Jurmala"
+                        "Cattle",
+                        "Valencia"
                     ]
                 ],
-                "1.47"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Hamburg",
-                        "Kadagopya"
-                    ]
-                ],
-                "5.38"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Hamburg",
+                        "Cardiff",
                         "Madrid"
                     ]
                 ],
-                "3.1"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Hamburg",
-                        "Lisbon"
+                        "Cardiff",
+                        "Kaunas"
                     ]
                 ],
-                "1.2"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Hamburg",
-                        "Mariehamn"
+                        "Cardiff",
+                        "Jelgava"
                     ]
                 ],
-                "3.39"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Hamburg",
-                        "Rome"
+                        "Cardiff",
+                        "Neringa"
                     ]
                 ],
-                "3.26"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Hamburg",
-                        "Douglas"
+                        "Cardiff",
+                        "Bonn"
                     ]
                 ],
-                "1.55"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Jurmala",
-                        "Tallinn"
+                        "Cardiff",
+                        "Valencia"
                     ]
                 ],
-                "2.74"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Valmiera"
-                    ]
-                ],
-                "2.03"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Hamburg"
-                    ]
-                ],
-                "5.06"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Kadagopya"
-                    ]
-                ],
-                "5.71"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Madrid"
-                    ]
-                ],
-                "6.46"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Lisbon"
-                    ]
-                ],
-                "3.81"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Mariehamn"
-                    ]
-                ],
-                "2.28"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Rome"
-                    ]
-                ],
-                "2.57"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Jurmala",
-                        "Douglas"
-                    ]
-                ],
-                "1.66"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Tallinn"
-                    ]
-                ],
-                "3.36"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Valmiera"
-                    ]
-                ],
-                "2.27"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Hamburg"
-                    ]
-                ],
-                "3.82"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Jurmala"
-                    ]
-                ],
-                "5.15"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Madrid"
-                    ]
-                ],
-                "5.67"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Lisbon"
-                    ]
-                ],
-                "3.25"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Mariehamn"
-                    ]
-                ],
-                "5.35"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Rome"
-                    ]
-                ],
-                "1.48"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Douglas"
-                    ]
-                ],
-                "6.9"
+                "5"
             ],
             [
                 "=",
@@ -919,10 +388,10 @@
                     "drive-cost",
                     [
                         "Madrid",
-                        "Tallinn"
+                        "Cardiff"
                     ]
                 ],
-                "1.44"
+                "4"
             ],
             [
                 "=",
@@ -930,10 +399,10 @@
                     "drive-cost",
                     [
                         "Madrid",
-                        "Valmiera"
+                        "Kaunas"
                     ]
                 ],
-                "1.14"
+                "5"
             ],
             [
                 "=",
@@ -941,10 +410,10 @@
                     "drive-cost",
                     [
                         "Madrid",
-                        "Hamburg"
+                        "Jelgava"
                     ]
                 ],
-                "5.45"
+                "3"
             ],
             [
                 "=",
@@ -952,10 +421,10 @@
                     "drive-cost",
                     [
                         "Madrid",
-                        "Jurmala"
+                        "Neringa"
                     ]
                 ],
-                "1.33"
+                "5"
             ],
             [
                 "=",
@@ -963,10 +432,10 @@
                     "drive-cost",
                     [
                         "Madrid",
-                        "Kadagopya"
+                        "Bonn"
                     ]
                 ],
-                "6.21"
+                "4"
             ],
             [
                 "=",
@@ -974,439 +443,340 @@
                     "drive-cost",
                     [
                         "Madrid",
-                        "Lisbon"
+                        "Valencia"
                     ]
                 ],
-                "2.77"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Madrid",
-                        "Mariehamn"
+                        "Kaunas",
+                        "Cardiff"
                     ]
                 ],
-                "5.95"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Madrid",
-                        "Rome"
-                    ]
-                ],
-                "4.46"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
-                        "Douglas"
-                    ]
-                ],
-                "5.76"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Lisbon",
-                        "Tallinn"
-                    ]
-                ],
-                "5.72"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Lisbon",
-                        "Valmiera"
-                    ]
-                ],
-                "4.72"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Lisbon",
-                        "Hamburg"
-                    ]
-                ],
-                "1.82"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Lisbon",
-                        "Jurmala"
-                    ]
-                ],
-                "4.42"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Lisbon",
-                        "Kadagopya"
-                    ]
-                ],
-                "3.83"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Lisbon",
+                        "Kaunas",
                         "Madrid"
                     ]
                 ],
-                "5.02"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Lisbon",
-                        "Mariehamn"
+                        "Kaunas",
+                        "Jelgava"
                     ]
                 ],
-                "2.4"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Lisbon",
-                        "Rome"
+                        "Kaunas",
+                        "Neringa"
                     ]
                 ],
-                "2.35"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Lisbon",
-                        "Douglas"
+                        "Kaunas",
+                        "Bonn"
                     ]
                 ],
-                "2.52"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Mariehamn",
-                        "Tallinn"
+                        "Kaunas",
+                        "Valencia"
                     ]
                 ],
-                "5.61"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Mariehamn",
-                        "Valmiera"
+                        "Jelgava",
+                        "Cardiff"
                     ]
                 ],
-                "1.39"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Mariehamn",
-                        "Hamburg"
-                    ]
-                ],
-                "4.59"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Mariehamn",
-                        "Jurmala"
-                    ]
-                ],
-                "1.96"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Mariehamn",
-                        "Kadagopya"
-                    ]
-                ],
-                "3.71"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Mariehamn",
+                        "Jelgava",
                         "Madrid"
                     ]
                 ],
-                "5.68"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Mariehamn",
-                        "Lisbon"
+                        "Jelgava",
+                        "Kaunas"
                     ]
                 ],
-                "6.65"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Mariehamn",
-                        "Rome"
+                        "Jelgava",
+                        "Neringa"
                     ]
                 ],
-                "1.75"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Mariehamn",
-                        "Douglas"
+                        "Jelgava",
+                        "Bonn"
                     ]
                 ],
-                "4.78"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Rome",
-                        "Tallinn"
+                        "Jelgava",
+                        "Valencia"
                     ]
                 ],
-                "4.09"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Rome",
-                        "Valmiera"
+                        "Neringa",
+                        "Cardiff"
                     ]
                 ],
-                "1.47"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Rome",
-                        "Hamburg"
-                    ]
-                ],
-                "2.93"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Jurmala"
-                    ]
-                ],
-                "3.54"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
-                        "Kadagopya"
-                    ]
-                ],
-                "1.34"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rome",
+                        "Neringa",
                         "Madrid"
                     ]
                 ],
-                "4.48"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Rome",
-                        "Lisbon"
+                        "Neringa",
+                        "Kaunas"
                     ]
                 ],
-                "5.47"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Rome",
-                        "Mariehamn"
+                        "Neringa",
+                        "Jelgava"
                     ]
                 ],
-                "1.4"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Rome",
-                        "Douglas"
+                        "Neringa",
+                        "Bonn"
                     ]
                 ],
-                "6.01"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Douglas",
-                        "Tallinn"
+                        "Neringa",
+                        "Valencia"
                     ]
                 ],
-                "3.85"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Douglas",
-                        "Valmiera"
+                        "Bonn",
+                        "Cardiff"
                     ]
                 ],
-                "4.18"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Douglas",
-                        "Hamburg"
-                    ]
-                ],
-                "4.73"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Douglas",
-                        "Jurmala"
-                    ]
-                ],
-                "6.86"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Douglas",
-                        "Kadagopya"
-                    ]
-                ],
-                "4.94"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Douglas",
+                        "Bonn",
                         "Madrid"
                     ]
                 ],
-                "3.89"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Douglas",
-                        "Lisbon"
+                        "Bonn",
+                        "Kaunas"
                     ]
                 ],
-                "6.22"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Douglas",
-                        "Mariehamn"
+                        "Bonn",
+                        "Jelgava"
                     ]
                 ],
-                "6.49"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Douglas",
-                        "Rome"
+                        "Bonn",
+                        "Neringa"
                     ]
                 ],
-                "2.91"
+                "1"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Bonn",
+                        "Valencia"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Valencia",
+                        "Cardiff"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Valencia",
+                        "Madrid"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Valencia",
+                        "Kaunas"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Valencia",
+                        "Jelgava"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Valencia",
+                        "Neringa"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "drive-cost",
+                    [
+                        "Valencia",
+                        "Bonn"
+                    ]
+                ],
+                "4"
             ]
         ],
         "camel0": [
@@ -1415,7 +785,7 @@
                 [
                     "bought",
                     [
-                        "LaminateFloor"
+                        "ExpensiveRugs"
                     ]
                 ],
                 "0"
@@ -1425,7 +795,7 @@
                 [
                     "bought",
                     [
-                        "Minerals"
+                        "Food"
                     ]
                 ],
                 "0"
@@ -1435,7 +805,7 @@
                 [
                     "bought",
                     [
-                        "Kittens"
+                        "Cattle"
                     ]
                 ],
                 "0"
@@ -1443,7 +813,7 @@
             [
                 "at",
                 [
-                    "Tallinn"
+                    "Madrid"
                 ]
             ],
             [
@@ -1465,554 +835,232 @@
             [
                 "can-drive",
                 [
-                    "Tallinn",
-                    "Valmiera"
+                    "Cardiff",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tallinn",
-                    "Hamburg"
+                    "Cardiff",
+                    "Jelgava"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tallinn",
-                    "Jurmala"
+                    "Cardiff",
+                    "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Tallinn",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Hamburg",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Hamburg",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Hamburg",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Hamburg",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Hamburg",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Hamburg",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Hamburg",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Hamburg",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Douglas"
+                    "Cardiff",
+                    "Valencia"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Madrid",
-                    "Tallinn"
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Madrid",
-                    "Hamburg"
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Madrid",
-                    "Jurmala"
+                    "Jelgava"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Madrid",
-                    "Kadagopya"
+                    "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Madrid",
-                    "Mariehamn"
+                    "Valencia"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Rome"
+                    "Kaunas",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Douglas"
+                    "Kaunas",
+                    "Jelgava"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Valmiera"
+                    "Kaunas",
+                    "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Hamburg"
+                    "Kaunas",
+                    "Valencia"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
+                    "Jelgava",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Mariehamn"
+                    "Jelgava",
+                    "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Rome"
+                    "Jelgava",
+                    "Valencia"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Douglas"
+                    "Neringa",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Mariehamn",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
+                    "Neringa",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Rome",
-                    "Lisbon"
+                    "Neringa",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Rome",
-                    "Mariehamn"
+                    "Neringa",
+                    "Jelgava"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Rome",
-                    "Douglas"
+                    "Neringa",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Tallinn"
+                    "Neringa",
+                    "Valencia"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Hamburg"
+                    "Bonn",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
+                    "Bonn",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Lisbon"
+                    "Bonn",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Mariehamn"
+                    "Bonn",
+                    "Jelgava"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Douglas",
-                    "Rome"
+                    "Bonn",
+                    "Neringa"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Bonn",
+                    "Valencia"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Valencia",
+                    "Cardiff"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Valencia",
+                    "Madrid"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Valencia",
+                    "Kaunas"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Valencia",
+                    "Jelgava"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Valencia",
+                    "Bonn"
                 ]
             ]
         ],
@@ -2022,7 +1070,7 @@
                 [
                     "bought",
                     [
-                        "LaminateFloor"
+                        "ExpensiveRugs"
                     ]
                 ],
                 "0"
@@ -2032,7 +1080,7 @@
                 [
                     "bought",
                     [
-                        "Minerals"
+                        "Food"
                     ]
                 ],
                 "0"
@@ -2042,7 +1090,7 @@
                 [
                     "bought",
                     [
-                        "Kittens"
+                        "Cattle"
                     ]
                 ],
                 "0"
@@ -2050,7 +1098,7 @@
             [
                 "at",
                 [
-                    "Jurmala"
+                    "Cardiff"
                 ]
             ],
             [
@@ -2072,568 +1120,246 @@
             [
                 "can-drive",
                 [
-                    "Tallinn",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Tallinn",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Valmiera",
+                    "Cardiff",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valmiera",
-                    "Lisbon"
+                    "Cardiff",
+                    "Jelgava"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valmiera",
-                    "Mariehamn"
+                    "Cardiff",
+                    "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Valmiera",
-                    "Rome"
+                    "Cardiff",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Hamburg",
-                    "Tallinn"
+                    "Cardiff",
+                    "Valencia"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Hamburg",
-                    "Valmiera"
+                    "Madrid",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Hamburg",
-                    "Jurmala"
+                    "Madrid",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Hamburg",
-                    "Kadagopya"
+                    "Madrid",
+                    "Jelgava"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Hamburg",
-                    "Lisbon"
+                    "Madrid",
+                    "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Hamburg",
-                    "Mariehamn"
+                    "Madrid",
+                    "Valencia"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Hamburg",
-                    "Rome"
+                    "Kaunas",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Hamburg",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Jurmala",
+                    "Kaunas",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jurmala",
-                    "Lisbon"
+                    "Kaunas",
+                    "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Jurmala",
-                    "Rome"
+                    "Kaunas",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kadagopya",
-                    "Tallinn"
+                    "Kaunas",
+                    "Valencia"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kadagopya",
-                    "Valmiera"
+                    "Jelgava",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kadagopya",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
+                    "Jelgava",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kadagopya",
-                    "Lisbon"
+                    "Jelgava",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kadagopya",
-                    "Mariehamn"
+                    "Jelgava",
+                    "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kadagopya",
-                    "Rome"
+                    "Jelgava",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kadagopya",
-                    "Douglas"
+                    "Neringa",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Rome"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
+                    "Neringa",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Mariehamn"
+                    "Neringa",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Rome"
+                    "Neringa",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Douglas"
+                    "Neringa",
+                    "Valencia"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Mariehamn",
-                    "Tallinn"
+                    "Bonn",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Mariehamn",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Mariehamn",
+                    "Bonn",
                     "Madrid"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Mariehamn",
-                    "Rome"
+                    "Bonn",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Mariehamn",
-                    "Douglas"
+                    "Bonn",
+                    "Jelgava"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Rome",
-                    "Tallinn"
+                    "Bonn",
+                    "Valencia"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Rome",
-                    "Valmiera"
+                    "Valencia",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Rome",
-                    "Hamburg"
+                    "Valencia",
+                    "Kaunas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Rome",
-                    "Jurmala"
+                    "Valencia",
+                    "Jelgava"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Rome",
-                    "Kadagopya"
+                    "Valencia",
+                    "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Rome",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rome",
-                    "Douglas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Tallinn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Valmiera"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Hamburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Jurmala"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Mariehamn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Douglas",
-                    "Rome"
+                    "Valencia",
+                    "Bonn"
                 ]
             ]
         ]
@@ -2647,7 +1373,7 @@
                     "cash",
                     []
                 ],
-                "27.66"
+                "30"
             ]
         ],
         "camel1": [
@@ -2657,7 +1383,7 @@
                     "cash",
                     []
                 ],
-                "27.66"
+                "30"
             ]
         ]
     }

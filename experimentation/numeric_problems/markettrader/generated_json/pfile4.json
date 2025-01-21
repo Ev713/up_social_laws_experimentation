@@ -1,17 +1,14 @@
 {
     "market": [
-        "Nice",
-        "Paris",
-        "Dusetos",
-        "Kaunas",
-        "Panemune",
-        "Cesis",
-        "Gelgaudiskis",
-        "Neringa"
+        "Stockholm",
+        "Bonn",
+        "Oslo",
+        "Jurmala",
+        "Obeliai"
     ],
     "goods": [
-        "Cattle",
-        "Coffee"
+        "Footballs",
+        "ExpensiveRugs"
     ],
     "agents": [
         "camel0",
@@ -24,206 +21,151 @@
                 [
                     "sellprice",
                     [
-                        "Cattle",
-                        "Nice"
+                        "Footballs",
+                        "Stockholm"
                     ]
                 ],
-                "8.14"
+                "2"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Cattle",
-                        "Paris"
+                        "Footballs",
+                        "Bonn"
                     ]
                 ],
-                "6.31"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cattle",
-                        "Dusetos"
-                    ]
-                ],
-                "8.19"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cattle",
-                        "Kaunas"
-                    ]
-                ],
-                "7.1"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cattle",
-                        "Panemune"
-                    ]
-                ],
-                "9.49"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cattle",
-                        "Cesis"
-                    ]
-                ],
-                "8.97"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cattle",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "6.65"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Cattle",
-                        "Neringa"
-                    ]
-                ],
-                "9.4"
+                "4"
             ],
             [
                 "=",
                 [
                     "price",
                     [
-                        "Cattle",
-                        "Neringa"
+                        "Footballs",
+                        "Bonn"
                     ]
                 ],
-                "4.71"
+                "2"
             ],
             [
                 "=",
                 [
                     "on-sale",
                     [
-                        "Cattle",
-                        "Neringa"
+                        "Footballs",
+                        "Bonn"
                     ]
                 ],
-                "8"
+                "9"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Coffee",
-                        "Nice"
+                        "Footballs",
+                        "Oslo"
                     ]
                 ],
-                "8.15"
+                "4"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Coffee",
-                        "Paris"
+                        "Footballs",
+                        "Jurmala"
                     ]
                 ],
-                "12.83"
+                "3"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Coffee",
-                        "Dusetos"
+                        "Footballs",
+                        "Obeliai"
                     ]
                 ],
-                "9.35"
+                "4"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Coffee",
-                        "Kaunas"
+                        "ExpensiveRugs",
+                        "Stockholm"
                     ]
                 ],
-                "5.79"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Panemune"
-                    ]
-                ],
-                "11.05"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Cesis"
-                    ]
-                ],
-                "8.89"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Coffee",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "8.58"
+                "4"
             ],
             [
                 "=",
                 [
                     "price",
                     [
-                        "Coffee",
-                        "Gelgaudiskis"
+                        "ExpensiveRugs",
+                        "Stockholm"
                     ]
                 ],
-                "4.6"
+                "3"
             ],
             [
                 "=",
                 [
                     "on-sale",
                     [
-                        "Coffee",
-                        "Gelgaudiskis"
+                        "ExpensiveRugs",
+                        "Stockholm"
+                    ]
+                ],
+                "11"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "ExpensiveRugs",
+                        "Bonn"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "ExpensiveRugs",
+                        "Oslo"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "ExpensiveRugs",
+                        "Jurmala"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "ExpensiveRugs",
+                        "Obeliai"
                     ]
                 ],
                 "5"
@@ -231,629 +173,222 @@
             [
                 "=",
                 [
-                    "sellprice",
+                    "drive-cost",
                     [
-                        "Coffee",
-                        "Neringa"
+                        "Stockholm",
+                        "Bonn"
                     ]
                 ],
-                "7.47"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Nice",
-                        "Paris"
+                        "Stockholm",
+                        "Oslo"
                     ]
                 ],
-                "2.52"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Nice",
-                        "Dusetos"
+                        "Stockholm",
+                        "Jurmala"
                     ]
                 ],
-                "1.2"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Nice",
-                        "Kaunas"
+                        "Stockholm",
+                        "Obeliai"
                     ]
                 ],
-                "3.14"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Nice",
-                        "Panemune"
+                        "Bonn",
+                        "Stockholm"
                     ]
                 ],
-                "3.44"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Nice",
-                        "Cesis"
+                        "Bonn",
+                        "Oslo"
                     ]
                 ],
-                "2.49"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Nice",
-                        "Gelgaudiskis"
+                        "Bonn",
+                        "Jurmala"
                     ]
                 ],
-                "1.89"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Nice",
-                        "Neringa"
+                        "Bonn",
+                        "Obeliai"
                     ]
                 ],
-                "3.42"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Paris",
-                        "Nice"
+                        "Oslo",
+                        "Stockholm"
                     ]
                 ],
-                "6.73"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Paris",
-                        "Dusetos"
+                        "Oslo",
+                        "Bonn"
                     ]
                 ],
-                "5.48"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Paris",
-                        "Kaunas"
+                        "Oslo",
+                        "Jurmala"
                     ]
                 ],
-                "6.31"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Paris",
-                        "Panemune"
+                        "Oslo",
+                        "Obeliai"
                     ]
                 ],
-                "1.52"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Paris",
-                        "Cesis"
+                        "Jurmala",
+                        "Stockholm"
                     ]
                 ],
-                "4.42"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Paris",
-                        "Gelgaudiskis"
+                        "Jurmala",
+                        "Bonn"
                     ]
                 ],
-                "1.47"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Paris",
-                        "Neringa"
+                        "Jurmala",
+                        "Oslo"
                     ]
                 ],
-                "6.27"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Dusetos",
-                        "Nice"
+                        "Jurmala",
+                        "Obeliai"
                     ]
                 ],
-                "6.39"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Dusetos",
-                        "Paris"
+                        "Obeliai",
+                        "Stockholm"
                     ]
                 ],
-                "3.8"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Dusetos",
-                        "Kaunas"
+                        "Obeliai",
+                        "Bonn"
                     ]
                 ],
-                "1.76"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Dusetos",
-                        "Panemune"
+                        "Obeliai",
+                        "Oslo"
                     ]
                 ],
-                "1.12"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Dusetos",
-                        "Cesis"
+                        "Obeliai",
+                        "Jurmala"
                     ]
                 ],
-                "4.59"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Dusetos",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "2.1"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Dusetos",
-                        "Neringa"
-                    ]
-                ],
-                "3.21"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kaunas",
-                        "Nice"
-                    ]
-                ],
-                "1.91"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kaunas",
-                        "Paris"
-                    ]
-                ],
-                "6.65"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kaunas",
-                        "Dusetos"
-                    ]
-                ],
-                "3.66"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kaunas",
-                        "Panemune"
-                    ]
-                ],
-                "5.89"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kaunas",
-                        "Cesis"
-                    ]
-                ],
-                "2.58"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kaunas",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "1.09"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kaunas",
-                        "Neringa"
-                    ]
-                ],
-                "2.29"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Panemune",
-                        "Nice"
-                    ]
-                ],
-                "6.19"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Panemune",
-                        "Paris"
-                    ]
-                ],
-                "1.72"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Panemune",
-                        "Dusetos"
-                    ]
-                ],
-                "6.39"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Panemune",
-                        "Kaunas"
-                    ]
-                ],
-                "6.13"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Panemune",
-                        "Cesis"
-                    ]
-                ],
-                "4.74"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Panemune",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "4.1"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Panemune",
-                        "Neringa"
-                    ]
-                ],
-                "1.8"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Cesis",
-                        "Nice"
-                    ]
-                ],
-                "1.62"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Cesis",
-                        "Paris"
-                    ]
-                ],
-                "3.4"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Cesis",
-                        "Dusetos"
-                    ]
-                ],
-                "5.07"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Cesis",
-                        "Kaunas"
-                    ]
-                ],
-                "5.82"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Cesis",
-                        "Panemune"
-                    ]
-                ],
-                "5.77"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Cesis",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "1.36"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Cesis",
-                        "Neringa"
-                    ]
-                ],
-                "4.97"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Nice"
-                    ]
-                ],
-                "2.19"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Paris"
-                    ]
-                ],
-                "1.43"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Dusetos"
-                    ]
-                ],
-                "3.97"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Kaunas"
-                    ]
-                ],
-                "6.78"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Panemune"
-                    ]
-                ],
-                "5.52"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Cesis"
-                    ]
-                ],
-                "6.44"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Neringa"
-                    ]
-                ],
-                "6.28"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Nice"
-                    ]
-                ],
-                "3.35"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Paris"
-                    ]
-                ],
-                "3.49"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Dusetos"
-                    ]
-                ],
-                "6.57"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Kaunas"
-                    ]
-                ],
-                "6.11"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Panemune"
-                    ]
-                ],
-                "3.23"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Cesis"
-                    ]
-                ],
-                "1.92"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "3.82"
+                "4"
             ]
         ],
         "camel0": [
@@ -862,7 +397,7 @@
                 [
                     "bought",
                     [
-                        "Cattle"
+                        "Footballs"
                     ]
                 ],
                 "0"
@@ -872,7 +407,7 @@
                 [
                     "bought",
                     [
-                        "Coffee"
+                        "ExpensiveRugs"
                     ]
                 ],
                 "0"
@@ -880,7 +415,7 @@
             [
                 "at",
                 [
-                    "Nice"
+                    "Jurmala"
                 ]
             ],
             [
@@ -902,351 +437,113 @@
             [
                 "can-drive",
                 [
-                    "Nice",
-                    "Paris"
+                    "Stockholm",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Nice",
-                    "Dusetos"
+                    "Stockholm",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Nice",
-                    "Kaunas"
+                    "Stockholm",
+                    "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Nice",
-                    "Panemune"
+                    "Stockholm",
+                    "Obeliai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Nice",
-                    "Cesis"
+                    "Bonn",
+                    "Stockholm"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Nice",
-                    "Neringa"
+                    "Bonn",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Paris",
-                    "Nice"
+                    "Bonn",
+                    "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Paris",
-                    "Kaunas"
+                    "Bonn",
+                    "Obeliai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Paris",
-                    "Panemune"
+                    "Oslo",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Paris",
-                    "Cesis"
+                    "Oslo",
+                    "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Paris",
-                    "Gelgaudiskis"
+                    "Jurmala",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Paris",
-                    "Neringa"
+                    "Jurmala",
+                    "Obeliai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dusetos",
-                    "Nice"
+                    "Obeliai",
+                    "Stockholm"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dusetos",
-                    "Paris"
+                    "Obeliai",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dusetos",
-                    "Kaunas"
+                    "Obeliai",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dusetos",
-                    "Panemune"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dusetos",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dusetos",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kaunas",
-                    "Nice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kaunas",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kaunas",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kaunas",
-                    "Panemune"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kaunas",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kaunas",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Kaunas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Nice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Kaunas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Panemune"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Nice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Kaunas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Nice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Kaunas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Panemune"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Gelgaudiskis"
+                    "Obeliai",
+                    "Jurmala"
                 ]
             ]
         ],
@@ -1256,7 +553,7 @@
                 [
                     "bought",
                     [
-                        "Cattle"
+                        "Footballs"
                     ]
                 ],
                 "0"
@@ -1266,7 +563,7 @@
                 [
                     "bought",
                     [
-                        "Coffee"
+                        "ExpensiveRugs"
                     ]
                 ],
                 "0"
@@ -1274,7 +571,7 @@
             [
                 "at",
                 [
-                    "Neringa"
+                    "Obeliai"
                 ]
             ],
             [
@@ -1296,351 +593,120 @@
             [
                 "can-drive",
                 [
-                    "Nice",
-                    "Paris"
+                    "Stockholm",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Nice",
-                    "Dusetos"
+                    "Stockholm",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Nice",
-                    "Kaunas"
+                    "Stockholm",
+                    "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Nice",
-                    "Panemune"
+                    "Stockholm",
+                    "Obeliai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Nice",
-                    "Cesis"
+                    "Bonn",
+                    "Stockholm"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Nice",
-                    "Gelgaudiskis"
+                    "Bonn",
+                    "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Nice",
-                    "Neringa"
+                    "Bonn",
+                    "Obeliai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Paris",
-                    "Nice"
+                    "Oslo",
+                    "Stockholm"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Paris",
-                    "Dusetos"
+                    "Oslo",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Paris",
-                    "Kaunas"
+                    "Oslo",
+                    "Jurmala"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Paris",
-                    "Panemune"
+                    "Oslo",
+                    "Obeliai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Paris",
-                    "Cesis"
+                    "Jurmala",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Paris",
-                    "Gelgaudiskis"
+                    "Jurmala",
+                    "Oslo"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Paris",
-                    "Neringa"
+                    "Jurmala",
+                    "Obeliai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dusetos",
-                    "Nice"
+                    "Obeliai",
+                    "Stockholm"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dusetos",
-                    "Kaunas"
+                    "Obeliai",
+                    "Bonn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Dusetos",
-                    "Panemune"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dusetos",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Dusetos",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kaunas",
-                    "Nice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kaunas",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kaunas",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kaunas",
-                    "Panemune"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kaunas",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kaunas",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kaunas",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Nice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Kaunas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Panemune",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Nice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Kaunas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Panemune"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Nice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Kaunas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Panemune"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Nice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Paris"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Dusetos"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Kaunas"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Panemune"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Cesis"
+                    "Obeliai",
+                    "Oslo"
                 ]
             ]
         ]
@@ -1654,7 +720,7 @@
                     "cash",
                     []
                 ],
-                "24.37"
+                "23"
             ]
         ],
         "camel1": [
@@ -1664,7 +730,7 @@
                     "cash",
                     []
                 ],
-                "24.37"
+                "23"
             ]
         ]
     }

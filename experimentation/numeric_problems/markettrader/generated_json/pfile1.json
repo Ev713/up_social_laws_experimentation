@@ -1,13 +1,11 @@
 {
     "market": [
-        "Stockholm",
         "Neringa",
-        "Venice",
-        "StPetersburg",
-        "Rakvere"
+        "Kadagopya",
+        "Daugavpils"
     ],
     "goods": [
-        "ExpensiveRugs"
+        "DVDs"
     ],
     "agents": [
         "camel0",
@@ -20,99 +18,55 @@
                 [
                     "sellprice",
                     [
-                        "ExpensiveRugs",
-                        "Stockholm"
-                    ]
-                ],
-                "7.63"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "ExpensiveRugs",
+                        "DVDs",
                         "Neringa"
                     ]
                 ],
-                "9.21"
+                "3"
             ],
             [
                 "=",
                 [
-                    "sellprice",
+                    "price",
                     [
-                        "ExpensiveRugs",
-                        "Venice"
-                    ]
-                ],
-                "6.91"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "ExpensiveRugs",
-                        "StPetersburg"
-                    ]
-                ],
-                "6.33"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "ExpensiveRugs",
-                        "Rakvere"
-                    ]
-                ],
-                "8.51"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Stockholm",
+                        "DVDs",
                         "Neringa"
                     ]
                 ],
-                "1.08"
+                "4"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "on-sale",
                     [
-                        "Stockholm",
-                        "Venice"
+                        "DVDs",
+                        "Neringa"
                     ]
                 ],
-                "5.99"
+                "4"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Stockholm",
-                        "StPetersburg"
+                        "DVDs",
+                        "Kadagopya"
                     ]
                 ],
-                "3.33"
+                "5"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Stockholm",
-                        "Rakvere"
+                        "DVDs",
+                        "Daugavpils"
                     ]
                 ],
-                "2.9"
+                "5"
             ],
             [
                 "=",
@@ -120,10 +74,10 @@
                     "drive-cost",
                     [
                         "Neringa",
-                        "Stockholm"
+                        "Kadagopya"
                     ]
                 ],
-                "4.47"
+                "1"
             ],
             [
                 "=",
@@ -131,164 +85,54 @@
                     "drive-cost",
                     [
                         "Neringa",
-                        "Venice"
+                        "Daugavpils"
                     ]
                 ],
-                "3.25"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Neringa",
-                        "StPetersburg"
-                    ]
-                ],
-                "4.23"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Rakvere"
-                    ]
-                ],
-                "3.37"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Venice",
-                        "Stockholm"
-                    ]
-                ],
-                "2.93"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Venice",
+                        "Kadagopya",
                         "Neringa"
                     ]
                 ],
-                "5.09"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "StPetersburg"
+                        "Kadagopya",
+                        "Daugavpils"
                     ]
                 ],
-                "6.67"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Venice",
-                        "Rakvere"
-                    ]
-                ],
-                "6.91"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "StPetersburg",
-                        "Stockholm"
-                    ]
-                ],
-                "1.38"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "StPetersburg",
+                        "Daugavpils",
                         "Neringa"
                     ]
                 ],
-                "3.97"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "StPetersburg",
-                        "Venice"
+                        "Daugavpils",
+                        "Kadagopya"
                     ]
                 ],
-                "3.56"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "StPetersburg",
-                        "Rakvere"
-                    ]
-                ],
-                "1.89"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rakvere",
-                        "Stockholm"
-                    ]
-                ],
-                "5.53"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rakvere",
-                        "Neringa"
-                    ]
-                ],
-                "1.91"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rakvere",
-                        "Venice"
-                    ]
-                ],
-                "6.3"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Rakvere",
-                        "StPetersburg"
-                    ]
-                ],
-                "2.04"
+                "2"
             ]
         ],
         "camel0": [
@@ -297,7 +141,7 @@
                 [
                     "bought",
                     [
-                        "ExpensiveRugs"
+                        "DVDs"
                     ]
                 ],
                 "0"
@@ -305,7 +149,7 @@
             [
                 "at",
                 [
-                    "Stockholm"
+                    "Daugavpils"
                 ]
             ],
             [
@@ -327,134 +171,36 @@
             [
                 "can-drive",
                 [
-                    "Stockholm",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "StPetersburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Rakvere"
+                    "Neringa",
+                    "Kadagopya"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Neringa",
-                    "Stockholm"
+                    "Daugavpils"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Neringa",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "StPetersburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Rakvere"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
+                    "Kadagopya",
                     "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "StPetersburg"
+                    "Kadagopya",
+                    "Daugavpils"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "StPetersburg",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
+                    "Daugavpils",
                     "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Rakvere"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rakvere",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rakvere",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rakvere",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rakvere",
-                    "StPetersburg"
                 ]
             ]
         ],
@@ -464,7 +210,7 @@
                 [
                     "bought",
                     [
-                        "ExpensiveRugs"
+                        "DVDs"
                     ]
                 ],
                 "0"
@@ -472,7 +218,7 @@
             [
                 "at",
                 [
-                    "Rakvere"
+                    "Daugavpils"
                 ]
             ],
             [
@@ -494,141 +240,36 @@
             [
                 "can-drive",
                 [
-                    "Stockholm",
+                    "Neringa",
+                    "Daugavpils"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Kadagopya",
                     "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Stockholm",
-                    "Venice"
+                    "Kadagopya",
+                    "Daugavpils"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Stockholm",
-                    "StPetersburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Stockholm",
-                    "Rakvere"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "StPetersburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Rakvere"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
+                    "Daugavpils",
                     "Neringa"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Venice",
-                    "StPetersburg"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Venice",
-                    "Rakvere"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "StPetersburg",
-                    "Rakvere"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rakvere",
-                    "Stockholm"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rakvere",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rakvere",
-                    "Venice"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Rakvere",
-                    "StPetersburg"
+                    "Daugavpils",
+                    "Kadagopya"
                 ]
             ]
         ]
@@ -642,7 +283,7 @@
                     "cash",
                     []
                 ],
-                "17.23"
+                "16"
             ]
         ],
         "camel1": [
@@ -652,7 +293,7 @@
                     "cash",
                     []
                 ],
-                "17.23"
+                "16"
             ]
         ]
     }

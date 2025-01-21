@@ -1,21 +1,17 @@
 {
     "market": [
-        "Bonn",
-        "Riga",
+        "Mariehamn",
         "Lisbon",
-        "Cesis",
-        "Madrid",
-        "Palanga",
-        "Viljandi",
-        "Longyearbyen",
-        "Kadagopya",
-        "Neringa",
-        "Gelgaudiskis"
+        "Simnas",
+        "Jieznas",
+        "Cardiff",
+        "Athens",
+        "Daugai"
     ],
     "goods": [
-        "Gold",
-        "DVDs",
-        "TuringMachines"
+        "GummyBears",
+        "Computers",
+        "Gold"
     ],
     "agents": [
         "camel0",
@@ -30,327 +26,41 @@
                 [
                     "sellprice",
                     [
-                        "Gold",
-                        "Bonn"
+                        "GummyBears",
+                        "Mariehamn"
                     ]
                 ],
-                "14.11"
+                "1"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Gold",
-                        "Riga"
-                    ]
-                ],
-                "13.77"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Gold",
+                        "GummyBears",
                         "Lisbon"
                     ]
                 ],
-                "12.07"
+                "6"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Gold",
-                        "Cesis"
+                        "GummyBears",
+                        "Simnas"
                     ]
                 ],
-                "6.15"
+                "3"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "Gold",
-                        "Madrid"
-                    ]
-                ],
-                "13.78"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Gold",
-                        "Palanga"
-                    ]
-                ],
-                "5.78"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Gold",
-                        "Viljandi"
-                    ]
-                ],
-                "13.48"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Gold",
-                        "Longyearbyen"
-                    ]
-                ],
-                "12.11"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Gold",
-                        "Kadagopya"
-                    ]
-                ],
-                "9.56"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Gold",
-                        "Neringa"
-                    ]
-                ],
-                "8.23"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "Gold",
-                        "Neringa"
-                    ]
-                ],
-                "7.01"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "Gold",
-                        "Neringa"
-                    ]
-                ],
-                "5"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "Gold",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "11.81"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Bonn"
-                    ]
-                ],
-                "8.34"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Riga"
-                    ]
-                ],
-                "6.01"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Lisbon"
-                    ]
-                ],
-                "3.73"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Cesis"
-                    ]
-                ],
-                "6.71"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Madrid"
-                    ]
-                ],
-                "4.88"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Palanga"
-                    ]
-                ],
-                "11.08"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Viljandi"
-                    ]
-                ],
-                "3.68"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "DVDs",
-                        "Viljandi"
-                    ]
-                ],
-                "4.41"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "DVDs",
-                        "Viljandi"
-                    ]
-                ],
-                "11"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Longyearbyen"
-                    ]
-                ],
-                "7.83"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Kadagopya"
-                    ]
-                ],
-                "13.45"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Neringa"
-                    ]
-                ],
-                "6.84"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "DVDs",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "5.97"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "TuringMachines",
-                        "Bonn"
-                    ]
-                ],
-                "4.87"
-            ],
-            [
-                "=",
-                [
-                    "sellprice",
-                    [
-                        "TuringMachines",
-                        "Riga"
-                    ]
-                ],
-                "9.24"
-            ],
-            [
-                "=",
-                [
-                    "price",
-                    [
-                        "TuringMachines",
-                        "Riga"
-                    ]
-                ],
-                "4.82"
-            ],
-            [
-                "=",
-                [
-                    "on-sale",
-                    [
-                        "TuringMachines",
-                        "Riga"
+                        "GummyBears",
+                        "Jieznas"
                     ]
                 ],
                 "4"
@@ -360,319 +70,319 @@
                 [
                     "sellprice",
                     [
-                        "TuringMachines",
-                        "Lisbon"
+                        "GummyBears",
+                        "Cardiff"
                     ]
                 ],
-                "14.29"
+                "5"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "TuringMachines",
-                        "Cesis"
+                        "GummyBears",
+                        "Athens"
                     ]
                 ],
-                "8.47"
+                "2"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "TuringMachines",
-                        "Madrid"
+                        "GummyBears",
+                        "Daugai"
                     ]
                 ],
-                "7.47"
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "price",
+                    [
+                        "GummyBears",
+                        "Daugai"
+                    ]
+                ],
+                "2"
+            ],
+            [
+                "=",
+                [
+                    "on-sale",
+                    [
+                        "GummyBears",
+                        "Daugai"
+                    ]
+                ],
+                "14"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "TuringMachines",
-                        "Palanga"
+                        "Computers",
+                        "Mariehamn"
                     ]
                 ],
-                "7.26"
+                "2"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "TuringMachines",
-                        "Viljandi"
+                        "Computers",
+                        "Lisbon"
                     ]
                 ],
-                "10.49"
+                "1"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "TuringMachines",
-                        "Longyearbyen"
+                        "Computers",
+                        "Simnas"
                     ]
                 ],
-                "6.79"
+                "5"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "TuringMachines",
-                        "Kadagopya"
+                        "Computers",
+                        "Jieznas"
                     ]
                 ],
-                "7.97"
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "price",
+                    [
+                        "Computers",
+                        "Jieznas"
+                    ]
+                ],
+                "4"
+            ],
+            [
+                "=",
+                [
+                    "on-sale",
+                    [
+                        "Computers",
+                        "Jieznas"
+                    ]
+                ],
+                "15"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "TuringMachines",
-                        "Neringa"
+                        "Computers",
+                        "Cardiff"
                     ]
                 ],
-                "6.17"
+                "5"
             ],
             [
                 "=",
                 [
                     "sellprice",
                     [
-                        "TuringMachines",
-                        "Gelgaudiskis"
+                        "Computers",
+                        "Athens"
                     ]
                 ],
-                "7.39"
+                "4"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Bonn",
-                        "Riga"
+                        "Computers",
+                        "Daugai"
                     ]
                 ],
-                "5.02"
+                "3"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Bonn",
+                        "Gold",
+                        "Mariehamn"
+                    ]
+                ],
+                "3"
+            ],
+            [
+                "=",
+                [
+                    "sellprice",
+                    [
+                        "Gold",
                         "Lisbon"
                     ]
                 ],
-                "1.88"
+                "4"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Bonn",
-                        "Cesis"
+                        "Gold",
+                        "Simnas"
                     ]
                 ],
-                "2.65"
+                "8"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Bonn",
-                        "Madrid"
+                        "Gold",
+                        "Jieznas"
                     ]
                 ],
-                "4.67"
+                "2"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Bonn",
-                        "Palanga"
+                        "Gold",
+                        "Cardiff"
                     ]
                 ],
-                "5.67"
+                "2"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Bonn",
-                        "Viljandi"
+                        "Gold",
+                        "Athens"
                     ]
                 ],
-                "3.03"
+                "4"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "price",
                     [
-                        "Bonn",
-                        "Longyearbyen"
+                        "Gold",
+                        "Athens"
                     ]
                 ],
-                "6.26"
+                "3"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "on-sale",
                     [
-                        "Bonn",
-                        "Kadagopya"
+                        "Gold",
+                        "Athens"
                     ]
                 ],
-                "4.11"
+                "3"
             ],
             [
                 "=",
                 [
-                    "drive-cost",
+                    "sellprice",
                     [
-                        "Bonn",
-                        "Neringa"
+                        "Gold",
+                        "Daugai"
                     ]
                 ],
-                "3.81"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Bonn",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "2.5"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
-                        "Bonn"
-                    ]
-                ],
-                "4.29"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
+                        "Mariehamn",
                         "Lisbon"
                     ]
                 ],
-                "6.78"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Riga",
-                        "Cesis"
+                        "Mariehamn",
+                        "Simnas"
                     ]
                 ],
-                "5.37"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Riga",
-                        "Madrid"
+                        "Mariehamn",
+                        "Jieznas"
                     ]
                 ],
-                "1.5"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Riga",
-                        "Palanga"
+                        "Mariehamn",
+                        "Cardiff"
                     ]
                 ],
-                "4.28"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Riga",
-                        "Viljandi"
+                        "Mariehamn",
+                        "Athens"
                     ]
                 ],
-                "3.6"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Riga",
-                        "Longyearbyen"
+                        "Mariehamn",
+                        "Daugai"
                     ]
                 ],
-                "2.12"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
-                        "Kadagopya"
-                    ]
-                ],
-                "6.21"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
-                        "Neringa"
-                    ]
-                ],
-                "1.58"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Riga",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "3.61"
+                "3"
             ],
             [
                 "=",
@@ -680,10 +390,10 @@
                     "drive-cost",
                     [
                         "Lisbon",
-                        "Bonn"
+                        "Mariehamn"
                     ]
                 ],
-                "4.8"
+                "5"
             ],
             [
                 "=",
@@ -691,10 +401,10 @@
                     "drive-cost",
                     [
                         "Lisbon",
-                        "Riga"
+                        "Simnas"
                     ]
                 ],
-                "3.47"
+                "4"
             ],
             [
                 "=",
@@ -702,10 +412,10 @@
                     "drive-cost",
                     [
                         "Lisbon",
-                        "Cesis"
+                        "Jieznas"
                     ]
                 ],
-                "4.69"
+                "3"
             ],
             [
                 "=",
@@ -713,10 +423,10 @@
                     "drive-cost",
                     [
                         "Lisbon",
-                        "Madrid"
+                        "Cardiff"
                     ]
                 ],
-                "4.41"
+                "2"
             ],
             [
                 "=",
@@ -724,10 +434,10 @@
                     "drive-cost",
                     [
                         "Lisbon",
-                        "Palanga"
+                        "Athens"
                     ]
                 ],
-                "5.62"
+                "2"
             ],
             [
                 "=",
@@ -735,937 +445,363 @@
                     "drive-cost",
                     [
                         "Lisbon",
-                        "Viljandi"
+                        "Daugai"
                     ]
                 ],
-                "1.71"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Lisbon",
-                        "Longyearbyen"
+                        "Simnas",
+                        "Mariehamn"
                     ]
                 ],
-                "1.04"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Lisbon",
-                        "Kadagopya"
-                    ]
-                ],
-                "5.91"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Lisbon",
-                        "Neringa"
-                    ]
-                ],
-                "2.0"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Lisbon",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "3.03"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Cesis",
-                        "Bonn"
-                    ]
-                ],
-                "2.38"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Cesis",
-                        "Riga"
-                    ]
-                ],
-                "2.9"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Cesis",
+                        "Simnas",
                         "Lisbon"
                     ]
                 ],
-                "3.32"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Cesis",
-                        "Madrid"
+                        "Simnas",
+                        "Jieznas"
                     ]
                 ],
-                "1.2"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Cesis",
-                        "Palanga"
+                        "Simnas",
+                        "Cardiff"
                     ]
                 ],
-                "4.9"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Cesis",
-                        "Viljandi"
+                        "Simnas",
+                        "Athens"
                     ]
                 ],
-                "5.05"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Cesis",
-                        "Longyearbyen"
+                        "Simnas",
+                        "Daugai"
                     ]
                 ],
-                "1.12"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Cesis",
-                        "Kadagopya"
+                        "Jieznas",
+                        "Mariehamn"
                     ]
                 ],
-                "2.91"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Cesis",
-                        "Neringa"
-                    ]
-                ],
-                "6.46"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Cesis",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "3.52"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
-                        "Bonn"
-                    ]
-                ],
-                "4.51"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
-                        "Riga"
-                    ]
-                ],
-                "6.51"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
+                        "Jieznas",
                         "Lisbon"
                     ]
                 ],
-                "2.16"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Madrid",
-                        "Cesis"
+                        "Jieznas",
+                        "Simnas"
                     ]
                 ],
-                "6.86"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Madrid",
-                        "Palanga"
+                        "Jieznas",
+                        "Cardiff"
                     ]
                 ],
-                "1.55"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Madrid",
-                        "Viljandi"
+                        "Jieznas",
+                        "Athens"
                     ]
                 ],
-                "3.6"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Madrid",
-                        "Longyearbyen"
+                        "Jieznas",
+                        "Daugai"
                     ]
                 ],
-                "4.0"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Madrid",
-                        "Kadagopya"
+                        "Cardiff",
+                        "Mariehamn"
                     ]
                 ],
-                "1.48"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Madrid",
-                        "Neringa"
-                    ]
-                ],
-                "6.27"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Madrid",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "1.77"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Bonn"
-                    ]
-                ],
-                "3.38"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Riga"
-                    ]
-                ],
-                "3.28"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
+                        "Cardiff",
                         "Lisbon"
                     ]
                 ],
-                "3.09"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Palanga",
-                        "Cesis"
+                        "Cardiff",
+                        "Simnas"
                     ]
                 ],
-                "5.76"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Palanga",
-                        "Madrid"
+                        "Cardiff",
+                        "Jieznas"
                     ]
                 ],
-                "3.93"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Palanga",
-                        "Viljandi"
+                        "Cardiff",
+                        "Athens"
                     ]
                 ],
-                "5.97"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Palanga",
-                        "Longyearbyen"
+                        "Cardiff",
+                        "Daugai"
                     ]
                 ],
-                "4.32"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Palanga",
-                        "Kadagopya"
+                        "Athens",
+                        "Mariehamn"
                     ]
                 ],
-                "3.34"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Palanga",
-                        "Neringa"
-                    ]
-                ],
-                "4.16"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Palanga",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "1.3"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Bonn"
-                    ]
-                ],
-                "3.85"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Riga"
-                    ]
-                ],
-                "6.87"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
+                        "Athens",
                         "Lisbon"
                     ]
                 ],
-                "6.33"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Viljandi",
-                        "Cesis"
+                        "Athens",
+                        "Simnas"
                     ]
                 ],
-                "2.07"
+                "5"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Viljandi",
-                        "Madrid"
+                        "Athens",
+                        "Jieznas"
                     ]
                 ],
-                "5.0"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Viljandi",
-                        "Palanga"
+                        "Athens",
+                        "Cardiff"
                     ]
                 ],
-                "1.56"
+                "4"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Viljandi",
-                        "Longyearbyen"
+                        "Athens",
+                        "Daugai"
                     ]
                 ],
-                "6.86"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Viljandi",
-                        "Kadagopya"
+                        "Daugai",
+                        "Mariehamn"
                     ]
                 ],
-                "5.87"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Viljandi",
-                        "Neringa"
-                    ]
-                ],
-                "6.01"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Viljandi",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "1.1"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "Bonn"
-                    ]
-                ],
-                "1.92"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "Riga"
-                    ]
-                ],
-                "4.77"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
+                        "Daugai",
                         "Lisbon"
                     ]
                 ],
-                "2.31"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Longyearbyen",
-                        "Cesis"
+                        "Daugai",
+                        "Simnas"
                     ]
                 ],
-                "2.04"
+                "3"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Longyearbyen",
-                        "Madrid"
+                        "Daugai",
+                        "Jieznas"
                     ]
                 ],
-                "5.67"
+                "1"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Longyearbyen",
-                        "Palanga"
+                        "Daugai",
+                        "Cardiff"
                     ]
                 ],
-                "4.97"
+                "2"
             ],
             [
                 "=",
                 [
                     "drive-cost",
                     [
-                        "Longyearbyen",
-                        "Viljandi"
+                        "Daugai",
+                        "Athens"
                     ]
                 ],
-                "3.01"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "Kadagopya"
-                    ]
-                ],
-                "4.97"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "Neringa"
-                    ]
-                ],
-                "4.5"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Longyearbyen",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "2.44"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Bonn"
-                    ]
-                ],
-                "1.97"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Riga"
-                    ]
-                ],
-                "2.27"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Lisbon"
-                    ]
-                ],
-                "6.39"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Cesis"
-                    ]
-                ],
-                "6.13"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Madrid"
-                    ]
-                ],
-                "2.29"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Palanga"
-                    ]
-                ],
-                "5.7"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Viljandi"
-                    ]
-                ],
-                "5.83"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Longyearbyen"
-                    ]
-                ],
-                "4.65"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Neringa"
-                    ]
-                ],
-                "2.16"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Kadagopya",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "1.26"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Bonn"
-                    ]
-                ],
-                "6.12"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Riga"
-                    ]
-                ],
-                "6.09"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Lisbon"
-                    ]
-                ],
-                "4.7"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Cesis"
-                    ]
-                ],
-                "3.83"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Madrid"
-                    ]
-                ],
-                "4.31"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Palanga"
-                    ]
-                ],
-                "3.99"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Viljandi"
-                    ]
-                ],
-                "5.1"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Longyearbyen"
-                    ]
-                ],
-                "5.05"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Kadagopya"
-                    ]
-                ],
-                "1.49"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Neringa",
-                        "Gelgaudiskis"
-                    ]
-                ],
-                "5.65"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Bonn"
-                    ]
-                ],
-                "2.07"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Riga"
-                    ]
-                ],
-                "3.33"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Lisbon"
-                    ]
-                ],
-                "6.72"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Cesis"
-                    ]
-                ],
-                "6.93"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Madrid"
-                    ]
-                ],
-                "5.69"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Palanga"
-                    ]
-                ],
-                "4.56"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Viljandi"
-                    ]
-                ],
-                "4.08"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Longyearbyen"
-                    ]
-                ],
-                "6.76"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Kadagopya"
-                    ]
-                ],
-                "5.16"
-            ],
-            [
-                "=",
-                [
-                    "drive-cost",
-                    [
-                        "Gelgaudiskis",
-                        "Neringa"
-                    ]
-                ],
-                "4.48"
+                "1"
             ]
         ],
         "camel0": [
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "GummyBears"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "Computers"
+                    ]
+                ],
+                "0"
+            ],
             [
                 "=",
                 [
@@ -1677,29 +813,9 @@
                 "0"
             ],
             [
-                "=",
-                [
-                    "bought",
-                    [
-                        "DVDs"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "TuringMachines"
-                    ]
-                ],
-                "0"
-            ],
-            [
                 "at",
                 [
-                    "Cesis"
+                    "Simnas"
                 ]
             ],
             [
@@ -1721,638 +837,246 @@
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
+                    "Mariehamn",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Cesis"
+                    "Mariehamn",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Madrid"
+                    "Mariehamn",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Longyearbyen"
+                    "Mariehamn",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Kadagopya"
+                    "Mariehamn",
+                    "Athens"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Gelgaudiskis"
+                    "Mariehamn",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Lisbon",
-                    "Bonn"
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Lisbon",
-                    "Riga"
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Lisbon",
-                    "Cesis"
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Lisbon",
-                    "Madrid"
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Lisbon",
-                    "Palanga"
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Viljandi"
+                    "Simnas",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Longyearbyen"
+                    "Simnas",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Kadagopya"
+                    "Simnas",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Neringa"
+                    "Simnas",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
+                    "Jieznas",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Madrid"
+                    "Jieznas",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Palanga"
+                    "Jieznas",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Viljandi"
+                    "Jieznas",
+                    "Athens"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Longyearbyen"
+                    "Cardiff",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
+                    "Cardiff",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Palanga"
+                    "Cardiff",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Viljandi"
+                    "Cardiff",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Longyearbyen"
+                    "Cardiff",
+                    "Athens"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Kadagopya"
+                    "Cardiff",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Neringa"
+                    "Athens",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Gelgaudiskis"
+                    "Athens",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Bonn"
+                    "Athens",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
+                    "Athens",
+                    "Daugai"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Daugai",
+                    "Mariehamn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Daugai",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Cesis"
+                    "Daugai",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Madrid"
+                    "Daugai",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Viljandi"
+                    "Daugai",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Neringa"
+                    "Daugai",
+                    "Athens"
                 ]
             ]
         ],
@@ -2362,27 +1086,27 @@
                 [
                     "bought",
                     [
+                        "GummyBears"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "Computers"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "=",
+                [
+                    "bought",
+                    [
                         "Gold"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "DVDs"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "TuringMachines"
                     ]
                 ],
                 "0"
@@ -2390,7 +1114,7 @@
             [
                 "at",
                 [
-                    "Palanga"
+                    "Athens"
                 ]
             ],
             [
@@ -2412,645 +1136,267 @@
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
+                    "Mariehamn",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Viljandi"
+                    "Mariehamn",
+                    "Athens"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Gelgaudiskis"
+                    "Mariehamn",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Lisbon",
-                    "Bonn"
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Lisbon",
-                    "Riga"
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Lisbon",
-                    "Cesis"
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Lisbon",
-                    "Madrid"
+                    "Athens"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Lisbon",
-                    "Palanga"
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Viljandi"
+                    "Simnas",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
+                    "Simnas",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Madrid"
+                    "Simnas",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Palanga"
+                    "Simnas",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Longyearbyen"
+                    "Simnas",
+                    "Athens"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Kadagopya"
+                    "Simnas",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Neringa"
+                    "Jieznas",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
+                    "Jieznas",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Cesis"
+                    "Jieznas",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Palanga"
+                    "Jieznas",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Viljandi"
+                    "Jieznas",
+                    "Athens"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Longyearbyen"
+                    "Jieznas",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Bonn"
+                    "Cardiff",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
+                    "Cardiff",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Cesis"
+                    "Cardiff",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Madrid"
+                    "Cardiff",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Viljandi"
+                    "Cardiff",
+                    "Athens"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Longyearbyen"
+                    "Cardiff",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Kadagopya"
+                    "Athens",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
+                    "Athens",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Cesis"
+                    "Athens",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Madrid"
+                    "Athens",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Palanga"
+                    "Athens",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Longyearbyen"
+                    "Athens",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Kadagopya"
+                    "Daugai",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
+                    "Daugai",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Palanga"
+                    "Daugai",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Viljandi"
+                    "Daugai",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Kadagopya"
+                    "Daugai",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Neringa"
+                    "Daugai",
+                    "Athens"
                 ]
             ]
         ],
@@ -3060,27 +1406,27 @@
                 [
                     "bought",
                     [
+                        "GummyBears"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "Computers"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "=",
+                [
+                    "bought",
+                    [
                         "Gold"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "DVDs"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "TuringMachines"
                     ]
                 ],
                 "0"
@@ -3088,7 +1434,7 @@
             [
                 "at",
                 [
-                    "Madrid"
+                    "Lisbon"
                 ]
             ],
             [
@@ -3110,638 +1456,246 @@
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
+                    "Mariehamn",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Cesis"
+                    "Mariehamn",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Madrid"
+                    "Mariehamn",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Palanga"
+                    "Mariehamn",
+                    "Athens"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Bonn",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Gelgaudiskis"
+                    "Mariehamn",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Lisbon",
-                    "Bonn"
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Lisbon",
-                    "Riga"
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Lisbon",
-                    "Cesis"
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
                     "Lisbon",
-                    "Madrid"
+                    "Athens"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Palanga"
+                    "Simnas",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Lisbon",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
+                    "Simnas",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Madrid"
+                    "Simnas",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Palanga"
+                    "Simnas",
+                    "Athens"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Longyearbyen"
+                    "Simnas",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Neringa"
+                    "Jieznas",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
+                    "Jieznas",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Madrid"
+                    "Jieznas",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Viljandi"
+                    "Jieznas",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Longyearbyen"
+                    "Jieznas",
+                    "Athens"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Kadagopya"
+                    "Jieznas",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Neringa"
+                    "Cardiff",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
+                    "Cardiff",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Cesis"
+                    "Cardiff",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Madrid"
+                    "Cardiff",
+                    "Athens"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Palanga"
+                    "Cardiff",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Longyearbyen"
+                    "Athens",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Viljandi",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
+                    "Athens",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Cesis"
+                    "Athens",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Palanga"
+                    "Athens",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Kadagopya"
+                    "Athens",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Neringa"
+                    "Athens",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Longyearbyen",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
+                    "Daugai",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kadagopya",
-                    "Cesis"
+                    "Daugai",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kadagopya",
-                    "Madrid"
+                    "Daugai",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Kadagopya",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Neringa"
+                    "Daugai",
+                    "Athens"
                 ]
             ]
         ],
@@ -3751,27 +1705,27 @@
                 [
                     "bought",
                     [
+                        "GummyBears"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "=",
+                [
+                    "bought",
+                    [
+                        "Computers"
+                    ]
+                ],
+                "0"
+            ],
+            [
+                "=",
+                [
+                    "bought",
+                    [
                         "Gold"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "DVDs"
-                    ]
-                ],
-                "0"
-            ],
-            [
-                "=",
-                [
-                    "bought",
-                    [
-                        "TuringMachines"
                     ]
                 ],
                 "0"
@@ -3779,7 +1733,7 @@
             [
                 "at",
                 [
-                    "Madrid"
+                    "Lisbon"
                 ]
             ],
             [
@@ -3801,673 +1755,239 @@
             [
                 "can-drive",
                 [
-                    "Bonn",
+                    "Mariehamn",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Madrid"
+                    "Mariehamn",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Palanga"
+                    "Mariehamn",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Viljandi"
+                    "Mariehamn",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Longyearbyen"
+                    "Mariehamn",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Kadagopya"
+                    "Lisbon",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Neringa"
+                    "Lisbon",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Bonn",
-                    "Gelgaudiskis"
+                    "Lisbon",
+                    "Athens"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Riga",
-                    "Bonn"
+                    "Lisbon",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Riga",
+                    "Simnas",
+                    "Mariehamn"
+                ]
+            ],
+            [
+                "can-drive",
+                [
+                    "Simnas",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Riga",
-                    "Cesis"
+                    "Simnas",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Riga",
-                    "Palanga"
+                    "Simnas",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Riga",
-                    "Viljandi"
+                    "Simnas",
+                    "Athens"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Riga",
-                    "Longyearbyen"
+                    "Simnas",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Riga",
-                    "Kadagopya"
+                    "Jieznas",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Riga",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Riga",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Lisbon",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Cesis",
+                    "Jieznas",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Madrid"
+                    "Jieznas",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Palanga"
+                    "Jieznas",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Viljandi"
+                    "Jieznas",
+                    "Athens"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Longyearbyen"
+                    "Jieznas",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Kadagopya"
+                    "Cardiff",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Cesis",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
+                    "Cardiff",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Cesis"
+                    "Cardiff",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Palanga"
+                    "Cardiff",
+                    "Athens"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Viljandi"
+                    "Cardiff",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Longyearbyen"
+                    "Athens",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Madrid",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Madrid",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
+                    "Athens",
                     "Lisbon"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Cesis"
+                    "Athens",
+                    "Simnas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Madrid"
+                    "Athens",
+                    "Jieznas"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Viljandi"
+                    "Athens",
+                    "Cardiff"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Longyearbyen"
+                    "Athens",
+                    "Daugai"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Kadagopya"
+                    "Daugai",
+                    "Mariehamn"
                 ]
             ],
             [
                 "can-drive",
                 [
-                    "Palanga",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Palanga",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Viljandi",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Longyearbyen",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Neringa"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Kadagopya",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Neringa",
-                    "Gelgaudiskis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Bonn"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Riga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Lisbon"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Cesis"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Madrid"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Palanga"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Viljandi"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Longyearbyen"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Kadagopya"
-                ]
-            ],
-            [
-                "can-drive",
-                [
-                    "Gelgaudiskis",
-                    "Neringa"
+                    "Daugai",
+                    "Cardiff"
                 ]
             ]
         ]
@@ -4481,7 +2001,7 @@
                     "cash",
                     []
                 ],
-                "35.23"
+                "24"
             ]
         ],
         "camel1": [
@@ -4491,7 +2011,7 @@
                     "cash",
                     []
                 ],
-                "35.23"
+                "24"
             ]
         ],
         "camel2": [
@@ -4501,7 +2021,7 @@
                     "cash",
                     []
                 ],
-                "35.23"
+                "24"
             ]
         ],
         "camel3": [
@@ -4511,7 +2031,7 @@
                     "cash",
                     []
                 ],
-                "35.23"
+                "24"
             ]
         ]
     }

@@ -1214,7 +1214,7 @@ class MarketTraderGenerator(NumericProblemGenerator):
         buy.add_effect(capacity, Minus(capacity, 1))
         buy.add_effect(on_sale(g, m), Minus(on_sale(g, m), 1))
         buy.add_effect(bought(g), Plus(bought(g), 1))
-        buy.add_effect(cash, Minus(cash, 1))
+        buy.add_effect(cash, Minus(cash, price(g, m)))
 
         upgrade = InstantaneousAction('upgrade', )
         upgrade.add_precondition(GE(cash, 5))

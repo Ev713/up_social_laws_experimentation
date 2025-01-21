@@ -20,10 +20,10 @@ def generate_instance(cities, goods, num_agents, avg_price, price_variance, cash
 
     # Generate prices and on-sale quantities for each good in each city
     for good in goods:
-        cities_sell = random.sample(cities, min(len(cities), int(len(cities)/7)))
+        cities_sell = random.sample(cities, max(1, int(len(cities)/2/len(goods))))
         for city in cities:
-            price = round(avg_price + random.uniform(-price_variance, price_variance), 2)
-            sell_price = round(price * random.uniform(0.75, 2.0), 2)
+            price = round(avg_price + random.uniform(-price_variance, price_variance))
+            sell_price = round(price * random.uniform(0.75, 2.0))
             instance["init_values"]["global"].append(["=", ["sellprice", [good, city]], str(sell_price)])
 
             if city in cities_sell:
@@ -37,7 +37,7 @@ def generate_instance(cities, goods, num_agents, avg_price, price_variance, cash
     for city1 in cities:
         for city2 in cities:
             if city1 != city2:
-                drive_cost = round(random.uniform(1.0, 7.0), 2)
+                drive_cost = round(random.uniform(1.0, 5))
                 instance["init_values"]["global"].append(["=", ["drive-cost", [city1, city2]], str(drive_cost)])
 
     # Initialize agents
@@ -83,7 +83,7 @@ for i in range(1, 21):
     print(f'\npfile{i}')
     num_agents = max(2, 2 + int(i / 7) + random.randint(-1, 1))
     print(f'Num. of agents: {num_agents}')
-    avg_price = 6
+    avg_price = 3
     print(f'Average price: {avg_price}')
     price_variance = 2.0
     print(f'Price variance: {price_variance}')
@@ -93,7 +93,7 @@ for i in range(1, 21):
     print(f'Capacity: {capacity}')
     target_cash = int(15 + 50*(i/20)*(0.5+random.random()))
     print(f'Target cash: {target_cash}')
-    num_cities = 5 + int((len(all_cities) - 40) / 20 * i)
+    num_cities = 3 + int((len(all_cities) - 45) / 20 * i)
     print(f'Num cities: {num_cities}')
     num_goods = 1 + int((len(all_goods) - 10) / 20 * i)
     print(f'Num of goods: {num_goods}')
