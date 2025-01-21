@@ -942,8 +942,8 @@ class NumericGridGenerator(NumericProblemGenerator):
         #    return
         other_agents = [a for a in self.problem.agents if a.name != agent.name]
         for other_agent in other_agents:
-            other_x = Dot(other_agent, other_agent.fluent('agent_x')())
-            other_y = Dot(other_agent, other_agent.fluent('agent_y')())
+            other_x = Dot(other_agent, other_agent.fluent('agent_x'))
+            other_y = Dot(other_agent, other_agent.fluent('agent_y'))
             precon = Not(And(Equals(x, other_x), Equals(y, other_y)))
             action.add_precondition(precon)
             if waitfor:

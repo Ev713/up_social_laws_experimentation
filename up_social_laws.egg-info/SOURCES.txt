@@ -9,6 +9,7 @@ up_social_laws/numeric_ma_centralizer.py
 up_social_laws/robustness_checker.py
 up_social_laws/robustness_verification.py
 up_social_laws/sa_to_ma_converter.py
+up_social_laws/setup.py
 up_social_laws/single_agent_projection.py
 up_social_laws/social_law.py
 up_social_laws/synthesis.py
