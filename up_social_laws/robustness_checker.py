@@ -198,6 +198,7 @@ class SocialLawRobustnessChecker(engines.engine.Engine, mixins.OneshotPlannerMix
                                PlanGenerationResultStatus.UNSOLVABLE_INCOMPLETELY]:
             return SocialLawRobustnessResult(SocialLawRobustnessStatus.ROBUST_RATIONAL, None, None)
         else:
+            print(result.status)
             return SocialLawRobustnessResult(SocialLawRobustnessStatus.UNKNOWN, None, None)
 
     def is_robust(self, problem: MultiAgentProblemWithWaitfor) -> SocialLawRobustnessResult:
