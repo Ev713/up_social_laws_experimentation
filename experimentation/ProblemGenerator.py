@@ -936,10 +936,10 @@ class NumericGridGenerator(NumericProblemGenerator):
         return self.problem
 
     def add_is_free_precon(self, action, agent, x, y, waitfor=False):
-        print(action.name, agent.name, waitfor)
-        skip = input('Skip?:' )
-        if skip in ['y', 'yes', 'Y',]:
-            return
+        #print(action.name, agent.name, waitfor)
+        #skip = input('Skip?:' )
+        #if skip in ['y', 'yes', 'Y',]:
+        #    return
         other_agents = [a for a in self.problem.agents if a.name != agent.name]
         for other_agent in other_agents:
             other_x = Dot(other_agent, other_agent.fluent('agent_x')())
@@ -1031,27 +1031,10 @@ class NumericGridGenerator(NumericProblemGenerator):
 
         for agent in self.problem.agents:
             agent.add_action(appear)
-            self.add_is_free_precon(appear, agent, Dot(agent, agent.fluent('agent_x')),
-                                    Dot(agent, agent.fluent('agent_y')), sl)
+            self.add_is_free_precon(appear, agent, agent.fluent('agent_x')(),
+                                    agent.fluent('agent_y')(), sl)
 
             for d in ['up', 'down', 'left', 'right']:
-                #     agent.add_action(moves[d])
-                #     if d == 'up':
-                #         self.add_is_free_precon(moves[d], agent, Dot(agent, agent.fluent('agent_x')),
-                #                                 Plus(Dot(agent, agent.fluent('agent_y')), 1), sl)
-                #     if d == 'down':
-                #         self.add_is_free_precon(moves[d], agent, Dot(agent, agent.fluent('agent_x')),
-                #                                 Minus(Dot(agent, agent.fluent('agent_y')), 1), sl)
-                #     if d == 'left':
-                #         self.add_is_free_precon(moves[d], agent,
-                #                                 Minus(Dot(agent, agent.fluent('agent_x')), 1),
-                #                                 Dot(agent, agent.fluent('agent_y')), sl)
-                #     if d == 'right':
-                #         self.add_is_free_precon(moves[d], agent,
-                #                                 Plus(Dot(agent, agent.fluent('agent_x')), 1),
-                #                                 Plus(Dot(agent, agent.fluent('agent_y')), 1), sl)
-                #
-
                 agent.add_action(moves[d])
                 if d == 'up':
                     self.add_is_free_precon(moves[d], agent, agent.fluent('agent_x')(),
