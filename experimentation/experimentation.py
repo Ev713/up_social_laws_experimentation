@@ -579,7 +579,7 @@ if __name__ == '__main__':
     # print(sap_prob)
     #simulate(comp)
     print(comp)
-    print(OneshotPlanner(name='tamer').solve(comp))
+    print(OneshotPlanner(name='enhsp').solve(comp))
     #check_robustness(exp.slrc, prob)
 #    if input('run all exps?').lower() in ['y', 'yes', 'ok']:
     #exp.experiment_full()
