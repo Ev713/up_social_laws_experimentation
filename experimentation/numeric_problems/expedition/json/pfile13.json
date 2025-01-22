@@ -3,7 +3,7 @@
 
 "init_values": {
 "global": [
-["=", ["waypoint_supplies", ["wa0"]], "600"],
+["=", ["waypoint_supplies", ["wa0"]], "100"],
 ["=", ["waypoint_supplies", ["wa1"]], "0"],
 ["=", ["waypoint_supplies", ["wa2"]], "0"],
 ["=", ["waypoint_supplies", ["wa3"]], "0"],
@@ -18,7 +18,7 @@
 ["is_next", ["wa4", "wa5"]],
 ["is_next", ["wa5", "wa6"]],
 ["is_next", ["wa6", "wa7"]],
-["=", ["waypoint_supplies", ["wb0"]], "200"],
+["=", ["waypoint_supplies", ["wb0"]], "50"],
 ["=", ["waypoint_supplies", ["wb1"]], "0"],
 ["=", ["waypoint_supplies", ["wb2"]], "0"],
 ["=", ["waypoint_supplies", ["wb3"]], "0"],

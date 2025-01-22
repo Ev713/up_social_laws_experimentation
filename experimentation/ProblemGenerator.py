@@ -1076,10 +1076,9 @@ class ExpeditionGenerator(NumericProblemGenerator):
     def add_social_law(self):
         sl = SocialLaw()
         sl.skip_checks = True
-        packs = self.count_packs_needed()
         starting_loc = {}
         for a in self.problem.agents:
-            print(a.name)
+            # print(a.name)
             starting_loc[a.name] = None
             for w in self.instance_data['waypoint']:
                 init_values = self.instance_data['init_values'][a.name]
@@ -1091,13 +1090,13 @@ class ExpeditionGenerator(NumericProblemGenerator):
                         break
             if starting_loc[a.name] is None:
                 raise Exception(f'Agent {a.name} doesn\'t have a starting location')
-            print(f'starting loc: {starting_loc[a.name]}')
+            # print(f'starting loc: {starting_loc[a.name]}')
         for a in self.problem.agents:
             packs = None
             for init_val in self.instance_data['init_values']['global']:
                 if init_val[0] == '=' and init_val[1][1][0] == starting_loc[a.name]:
                     packs = int(int(init_val[2])/len([x for x in starting_loc if starting_loc[x] == starting_loc[a.name]]))
-                    print(f'{a.name} packs: {packs}')
+                    # print(f'{a.name} packs: {packs}')
                     break
             if packs is None:
                 raise Exception(f'Can\'t find Agent {a.name}\' packs!')
@@ -1109,18 +1108,6 @@ class ExpeditionGenerator(NumericProblemGenerator):
         self.problem = sl.compile(self.problem).problem
         return self.problem
 
-    def count_packs_needed(self):
-        num_of_waypoints = len([w for w in self.problem.objects(self.obj_type['wa0'])])
-        s = 0
-        for i in range(0, num_of_waypoints):
-            if i <= 4:
-                s = i
-                continue
-            if s % 2 == 0:
-                s = 2 * s - 1
-            else:
-                s = 2 * s
-        return s
 
     def generate_problem(self, file_name, sl=False):
         self.problem = MultiAgentProblemWithWaitfor('expedition_' + file_name.replace('.json', ''))
