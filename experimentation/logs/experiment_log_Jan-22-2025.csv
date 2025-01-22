@@ -1,3 +1,2 @@
 time,name,has_social_law,result
-1.9067211151123047,grid_pfile1,False,SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_FAIL
-8.291309833526611,sl_grid_pfile1,True,SocialLawRobustnessStatus.ROBUST_RATIONAL
+542.3172180652618,expedition_pfile5,False,SocialLawRobustnessStatus.NON_ROBUST_SINGLE_AGENT

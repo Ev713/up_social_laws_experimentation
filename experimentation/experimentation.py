@@ -553,12 +553,12 @@ class Experimentator:
             #    'markettrader'
         ]
 
-        for prob_i in range(1, 2):
+        for prob_i in range(1, 21):
             for domain in domains:
                 pg = pgs[domain]()
                 pg.instances_folder = filepaths[domain]
                 if domain in ['grid', 'zenotravel', 'expedition']:
-                    sl_options = [False,  True]
+                    sl_options = [False, True]
                 else:
                     sl_options = [False, ]
                 for has_sl in sl_options:
@@ -570,17 +570,16 @@ class Experimentator:
 if __name__ == '__main__':
     exp = Experimentator()
     exp.load_problems()
-    prob = exp.problems[0][1]
-    #sap = SingleAgentProjection(prob.agents[0])
-    #sap.skip_checks = True
+    #prob = exp.problems[0][1]
+    # sap = SingleAgentProjection(prob.agents[0])
+    # sap.skip_checks = True
     # print(prob)
-    #sap_prob = sap.compile(prob).problem
-    #comp = exp.slrc.get_compiled(prob)
+    # sap_prob = sap.compile(prob).problem
+    # comp = exp.slrc.get_compiled(prob)
     # print(sap_prob)
-    #simulate(comp)
-    #print(comp)
-    # print(OneshotPlanner(name='enhsp').solve(comp))
+    # simulate(comp)
+    # print(comp)
+    #print(OneshotPlanner(name='enhsp').solve(prob))
     #print(check_robustness(exp.slrc, prob))
-#    if input('run all exps?').lower() in ['y', 'yes', 'ok']:
-    exp.experiment_full()
-
+    if input('run all exps?').lower() in ['y', 'yes', 'ok']:
+        exp.experiment_full()
