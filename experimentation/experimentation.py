@@ -476,16 +476,10 @@ class Experimentator:
         self.slrc.skip_checks = True
         self.slrc._planner = OneshotPlanner(name='enhsp')
         self.func = lambda p: check_robustness(self.slrc, p)  # Function to be executed
-
+        self.id = '_'
         self.log_dir = './logs'
         os.makedirs(self.log_dir, exist_ok=True)
-        for i in range(100):
-            self.file_path = f"exp_log_{date.today().strftime('%b-%d-%Y')}_{i}.csv"
-            full_path = Path(self.log_dir) / self.file_path
-            if not full_path.is_file():
-                break
-        print('Writing to:', self.file_path)
-
+        self.file_path = ''
     def debug(self):
         pg = ProblemGenerator.NumericGridGenerator()
         pg.instances_folder = './numeric_problems/grid/json'
@@ -531,6 +525,10 @@ class Experimentator:
                 return {"error": "No result (possibly killed due to resource limits)", "elapsed_time": "-"}
 
     def experiment_full(self):
+
+        self.file_path = self.log_dir +'/'+ f"exp_log_{date.today().strftime('%b-%d-%Y')}_{self.id}.csv"
+        print('Writing to:', self.file_path)
+
         total_problems = len(self.problems)
         headers = ['time', 'name', 'has_social_law', 'result']
 
@@ -611,6 +609,7 @@ if __name__ == '__main__':
             bug = True
     if not debug:
         exp.load_problems(*conf_i)
+        exp.id = str(i)
         if input('run all exps?').lower() in ['y', 'yes', 'ok']:
             exp.experiment_full()
     if debug:

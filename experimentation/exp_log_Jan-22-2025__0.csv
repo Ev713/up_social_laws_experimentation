@@ -1,0 +1,3 @@
+time,name,has_social_law,result
+8.247585535049438,sl_grid_pfile1,True,SocialLawRobustnessStatus.ROBUST_RATIONAL
+9.591490268707275,sl_grid_pfile2,True,SocialLawRobustnessStatus.ROBUST_RATIONAL

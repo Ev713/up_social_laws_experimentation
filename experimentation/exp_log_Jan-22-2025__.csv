@@ -1,0 +1,2 @@
+time,name,has_social_law,result
+8.524125814437866,sl_grid_pfile1,True,SocialLawRobustnessStatus.ROBUST_RATIONAL
