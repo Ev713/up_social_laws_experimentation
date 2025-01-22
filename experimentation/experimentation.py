@@ -603,7 +603,7 @@ if __name__ == '__main__':
         try:
             i = int(input('Enter conf:'))
             conf_i = conf[i]
-            if conf_i == 'debug':
+            if conf_i == 'Debug':
                 debug = True
 
         except:
