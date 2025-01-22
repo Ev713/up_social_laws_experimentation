@@ -480,10 +480,11 @@ class Experimentator:
         self.log_dir = './logs'
         os.makedirs(self.log_dir, exist_ok=True)
         self.file_path = ''
+
     def debug(self):
-        pg = ProblemGenerator.NumericGridGenerator()
-        pg.instances_folder = './numeric_problems/grid/json'
-        prob = pg.generate_problem('pfile1.json')
+        pg = ProblemGenerator.ExpeditionGenerator()
+        pg.instances_folder = './numeric_problems/expedition/json'
+        prob = pg.generate_problem('pfile7.json')
         sap = SingleAgentProjection(prob.agents[0])
         sap.skip_checks = True
         # print(prob)
@@ -526,7 +527,7 @@ class Experimentator:
 
     def experiment_full(self):
 
-        self.file_path = self.log_dir +'/'+ f"exp_log_{date.today().strftime('%b-%d-%Y')}_{self.id}.csv"
+        self.file_path = self.log_dir + '/' + f"exp_log_{date.today().strftime('%b-%d-%Y')}_{self.id}.csv"
         print('Writing to:', self.file_path)
 
         total_problems = len(self.problems)
