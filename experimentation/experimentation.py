@@ -488,8 +488,8 @@ class Experimentator:
 
     def debug(self):
         pg = ProblemGenerator.NumericGridGenerator()
-        pg.instance_folder = './numeric_problems/grid/json'
-        prob = pg.generate_problem('pfile_1.json')
+        pg.instances_folder = './numeric_problems/grid/json'
+        prob = pg.generate_problem('pfile1.json')
         sap = SingleAgentProjection(prob.agents[0])
         sap.skip_checks = True
         # print(prob)
