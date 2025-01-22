@@ -610,7 +610,7 @@ if __name__ == '__main__':
             print('Unreadable index. Try again.')
             bug = True
     if not debug:
-        exp.load_problems(*conf)
+        exp.load_problems(*conf_i)
         if input('run all exps?').lower() in ['y', 'yes', 'ok']:
             exp.experiment_full()
     if debug:
