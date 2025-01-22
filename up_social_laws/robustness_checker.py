@@ -211,9 +211,9 @@ class SocialLawRobustnessChecker(engines.engine.Engine, mixins.OneshotPlannerMix
         try:
             sas = self.is_single_agent_solvable(problem)
         except Exception as e:
+            print(f'SAS returned:\n{e}')
             sas = None
         if sas is None:
-            print(f'SAS returned:{e}')
             return SocialLawRobustnessResult(SocialLawRobustnessStatus.UNKNOWN, None, None)
         elif not sas:
             return SocialLawRobustnessResult(SocialLawRobustnessStatus.NON_ROBUST_SINGLE_AGENT, None, None)
