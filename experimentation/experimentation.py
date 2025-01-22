@@ -486,6 +486,20 @@ class Experimentator:
                 break
         print('Writing to:', self.file_path)
 
+    def debug(self):
+        prob = self.problems[0][1]
+        sap = SingleAgentProjection(prob.agents[0])
+        sap.skip_checks = True
+        # print(prob)
+        sap_prob = sap.compile(prob).problem
+        comp = self.slrc.get_compiled(prob)
+        # print(sap_prob)
+        # simulate(comp)
+        # print(comp)
+        print(OneshotPlanner(name='enhsp').solve(sap_prob))
+        print(OneshotPlanner(name='enhsp').solve(comp))
+        print(check_robustness(self.slrc, prob))
+
     def experiment_once(self, problem, metadata=("unknown", False), ):
         filename, has_social_law = metadata
         result_queue = Queue()
@@ -537,7 +551,10 @@ class Experimentator:
             # Format the time (optional)
             print(f'{i + 1}/{total_problems} done\n')
 
-    def load_problems(self):
+    def load_problems(self, domains=('grid', 'zenotravel', 'expedition', 'markettrader'), probs=None,
+                      sl_options=(True, False)):
+        if probs is None:
+            probs = range(1, 21)
         filepaths = {
             'grid': './numeric_problems/grid/json',
             'zenotravel': './numeric_problems/zenotravel/json',
@@ -551,42 +568,33 @@ class Experimentator:
             'expedition': ProblemGenerator.ExpeditionGenerator,
             'markettrader': ProblemGenerator.MarketTraderGenerator
         }
-
-        domains = [
-                'grid',
-            #    'zenotravel',
-            #    'expedition',
-            #    'markettrader'
-        ]
-
-        for prob_i in range(1, 21):
+        for prob_i in probs:
             for domain in domains:
                 pg = pgs[domain]()
                 pg.instances_folder = filepaths[domain]
                 if domain in ['grid', 'zenotravel', 'expedition']:
-                    sl_options = [False, True]
+                    sl_opts = sl_options
                 else:
-                    sl_options = [False, ]
-                for has_sl in sl_options:
+                    sl_opts = [False, ]
+                for has_sl in sl_opts:
                     prob = pg.generate_problem(f'pfile{prob_i}.json', sl=has_sl)
                     self.problems.append((prob.name, prob, has_sl))
                     print(f'{prob.name} loaded')
 
 
 if __name__ == '__main__':
+    conf = sys.argv[0]
+    debug = True
     exp = Experimentator()
-    exp.load_problems()
-    prob = exp.problems[0][1]
-    sap = SingleAgentProjection(prob.agents[0])
-    sap.skip_checks = True
-    # print(prob)
-    sap_prob = sap.compile(prob).problem
-    comp = exp.slrc.get_compiled(prob)
-    # print(sap_prob)
-    # simulate(comp)
-    # print(comp)
-    print(OneshotPlanner(name='enhsp').solve(sap_prob))
-    print(OneshotPlanner(name='enhsp').solve(comp))
-    #print(check_robustness(exp.slrc, prob))
+    conf = [
+        ('grid', range(1, 21), (True,)),
+        ('grid', range(1, 21), (False,)),
+        ('expedition', range(1, 21), (True,)),
+        ('expedition', (13, 14), (False,)),
+
+    ]
+    exp.load_problems(*conf)
+    if debug:
+        exp.debug()
     if input('run all exps?').lower() in ['y', 'yes', 'ok']:
         exp.experiment_full()
