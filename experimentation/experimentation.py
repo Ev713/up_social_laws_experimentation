@@ -484,16 +484,18 @@ class Experimentator:
     def debug(self):
         pg = ProblemGenerator.ExpeditionGenerator()
         pg.instances_folder = './numeric_problems/expedition/json'
-        prob = pg.generate_problem('pfile7.json')
-        sap = SingleAgentProjection(prob.agents[0])
-        sap.skip_checks = True
-        # print(prob)
-        sap_prob = sap.compile(prob).problem
+        prob = pg.generate_problem('pfile7.json', sl=True)
+        for a in prob.agents:
+            sap = SingleAgentProjection(prob.agents[0])
+            sap.skip_checks = True
+            # print(prob)
+            sap_prob = sap.compile(prob).problem
+            print(f'Solution for agent: {a.name}\n')
+            print(OneshotPlanner(name='enhsp').solve(sap_prob))
+            # # print(sap_prob)
         comp = self.slrc.get_compiled(prob)
-        # # print(sap_prob)
         # # simulate(comp)
         # print(comp)
-        print(OneshotPlanner(name='enhsp').solve(sap_prob))
         print(OneshotPlanner(name='enhsp').solve(comp))
         print(check_robustness(self.slrc, prob))
 

@@ -1078,6 +1078,7 @@ class ExpeditionGenerator(NumericProblemGenerator):
         sl.skip_checks = True
         packs = self.count_packs_needed()
         for a in self.problem.agents:
+            print(a.name)
             starting_loc = None
             for w in self.instance_data['waypoint']:
                 init_values = self.instance_data['init_values'][a.name]
@@ -1089,8 +1090,8 @@ class ExpeditionGenerator(NumericProblemGenerator):
                         break
             if starting_loc is None:
                 raise Exception(f'Agent {a.name} doesn\'t have a starting location')
-            sl.add_new_fluent(a.name, 'personal_packs', (('w', 'waypoint'),), 0)
-            sl.set_initial_value_for_new_fluent(a.name, 'personal_packs', (starting_loc,), packs - 1)
+            print(f'starting loc: {starting_loc}')
+            sl.add_new_fluent(a.name, 'personal_packs', (('w', 'waypoint'), ), 0)
             sl.add_precondition_to_action(a.name, 'retrieve_supplies', 'personal_packs', ('w',), '>=', 1)
             sl.add_effect(a.name, 'retrieve_supplies', 'personal_packs', ('w',), 1, '-')
             sl.add_effect(a.name, 'store_supplies', 'personal_packs', ('w',), 1, '+')
