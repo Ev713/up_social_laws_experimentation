@@ -487,19 +487,20 @@ class Experimentator:
         print('Writing to:', self.file_path)
 
     def debug(self):
-        raise NotImplementedError
-        # prob = self.problems[0][1]
-        # sap = SingleAgentProjection(prob.agents[0])
-        # sap.skip_checks = True
-        # # print(prob)
-        # sap_prob = sap.compile(prob).problem
-        # comp = self.slrc.get_compiled(prob)
+        pg = ProblemGenerator.NumericGridGenerator()
+        pg.instance_folder = './numeric_problems/grid/json'
+        prob = pg.generate_problem('pfile_1.json')
+        sap = SingleAgentProjection(prob.agents[0])
+        sap.skip_checks = True
+        # print(prob)
+        sap_prob = sap.compile(prob).problem
+        comp = self.slrc.get_compiled(prob)
         # # print(sap_prob)
         # # simulate(comp)
-        # # print(comp)
-        # print(OneshotPlanner(name='enhsp').solve(sap_prob))
-        # print(OneshotPlanner(name='enhsp').solve(comp))
-        # print(check_robustness(self.slrc, prob))
+        # print(comp)
+        print(OneshotPlanner(name='enhsp').solve(sap_prob))
+        print(OneshotPlanner(name='enhsp').solve(comp))
+        print(check_robustness(self.slrc, prob))
 
     def experiment_once(self, problem, metadata=("unknown", False), ):
         filename, has_social_law = metadata
