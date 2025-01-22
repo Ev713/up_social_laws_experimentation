@@ -142,14 +142,13 @@ class SocialLawRobustnessChecker(engines.engine.Engine, mixins.OneshotPlannerMix
             else:
                 planner = OneshotPlanner(problem_kind=result.problem.kind)
             presult = planner.solve(result.problem)
+
             if presult.status not in unified_planning.engines.results.POSITIVE_OUTCOMES:
-                print(presult.status)
-                return False
-            elif presult.status in [PlanGenerationResultStatus.UNSOLVABLE_PROVEN,
-                               PlanGenerationResultStatus.UNSOLVABLE_INCOMPLETELY]:\
-                continue
-            else:
-                raise Exception('Planner returned: ' + presult.status)
+                if presult.status in [PlanGenerationResultStatus.UNSOLVABLE_PROVEN,
+                                      PlanGenerationResultStatus.UNSOLVABLE_INCOMPLETELY]:
+                    return False
+                else:
+                    raise Exception('Planner returned: ' + presult.status)
         return True
 
     def get_compiled(self, problem):
@@ -166,7 +165,7 @@ class SocialLawRobustnessChecker(engines.engine.Engine, mixins.OneshotPlannerMix
     def multi_agent_robustness_counterexample(self, problem: MultiAgentProblemWithWaitfor) -> SocialLawRobustnessResult:
         rbv = Compiler(
             name=self._robustness_verifier_name,
-### #           problem_kind=problem.kind,
+            ### #           problem_kind=problem.kind,
             compilation_kind=CompilationKind.MA_SL_ROBUSTNESS_VERIFICATION)
         ###
         rbv.skip_checks = True
@@ -207,6 +206,7 @@ class SocialLawRobustnessChecker(engines.engine.Engine, mixins.OneshotPlannerMix
             return SocialLawRobustnessResult(SocialLawRobustnessStatus.UNKNOWN, None, None)
 
     def is_robust(self, problem: MultiAgentProblemWithWaitfor) -> SocialLawRobustnessResult:
+
         # Check single agent solvability
         try:
             sas = self.is_single_agent_solvable(problem)

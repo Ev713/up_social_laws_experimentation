@@ -1,0 +1,107 @@
+run all exps?y
+0/40 done.
+Starting checking robustness of: grid_pfile1 at time: 2025-01-22 12:33:07
+Problem "grid_pfile1" without social law is done with result:
+{'result': 'SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_FAIL', 'time': 2.753300905227661}
+1/40 done
+
+Starting checking robustness of: sl_grid_pfile1 at time: 2025-01-22 12:33:10
+Problem "sl_grid_pfile1" with social law is done with result:
+{'result': 'SocialLawRobustnessStatus.ROBUST_RATIONAL', 'time': 12.622929334640503}
+2/40 done
+
+Starting checking robustness of: grid_pfile2 at time: 2025-01-22 12:33:22
+Problem "grid_pfile2" without social law is done with result:
+{'result': 'SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_FAIL', 'time': 2.7300119400024414}
+3/40 done
+
+Starting checking robustness of: sl_grid_pfile2 at time: 2025-01-22 12:33:25
+Problem "sl_grid_pfile2" with social law is done with result:
+{'result': 'SocialLawRobustnessStatus.ROBUST_RATIONAL', 'time': 13.443148851394653}
+4/40 done
+
+Starting checking robustness of: grid_pfile3 at time: 2025-01-22 12:33:39
+Problem "grid_pfile3" without social law is done with result:
+{'result': 'SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_FAIL', 'time': 2.7665767669677734}
+5/40 done
+
+Starting checking robustness of: sl_grid_pfile3 at time: 2025-01-22 12:33:41
+Problem "sl_grid_pfile3" with social law is done with result:
+{'result': 'SocialLawRobustnessStatus.ROBUST_RATIONAL', 'time': 19.860393524169922}
+6/40 done
+
+Starting checking robustness of: grid_pfile4 at time: 2025-01-22 12:34:01
+Problem "grid_pfile4" without social law is done with result:
+{'result': 'SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_FAIL', 'time': 2.766129970550537}
+7/40 done
+
+Starting checking robustness of: sl_grid_pfile4 at time: 2025-01-22 12:34:04
+Problem "sl_grid_pfile4" with social law is done with result:
+{'result': 'SocialLawRobustnessStatus.ROBUST_RATIONAL', 'time': 32.364661693573}
+8/40 done
+
+Starting checking robustness of: grid_pfile5 at time: 2025-01-22 12:34:36
+Problem "grid_pfile5" without social law is done with result:
+{'result': 'SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_FAIL', 'time': 5.089475393295288}
+9/40 done
+
+Starting checking robustness of: sl_grid_pfile5 at time: 2025-01-22 12:34:42
+Problem "sl_grid_pfile5" with social law is done with result:
+{'result': 'SocialLawRobustnessStatus.UNKNOWN', 'time': 1775.1159734725952}
+10/40 done
+
+Starting checking robustness of: grid_pfile6 at time: 2025-01-22 13:04:17
+Problem "grid_pfile6" without social law is done with result:
+{'result': 'SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_FAIL', 'time': 4.735788822174072}
+11/40 done
+
+Starting checking robustness of: sl_grid_pfile6 at time: 2025-01-22 13:04:21
+Problem "sl_grid_pfile6" with social law is done with result:
+{'result': 'SocialLawRobustnessStatus.UNKNOWN', 'time': 1776.824598312378}
+12/40 done
+
+Starting checking robustness of: grid_pfile7 at time: 2025-01-22 13:33:58
+Problem "grid_pfile7" without social law is done with result:
+{'result': 'SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_FAIL', 'time': 4.922899484634399}
+13/40 done
+
+Starting checking robustness of: sl_grid_pfile7 at time: 2025-01-22 13:34:03
+Problem "sl_grid_pfile7" with social law is done with result:
+{'result': 'SocialLawRobustnessStatus.UNKNOWN', 'time': 1778.8571572303772}
+14/40 done
+
+Starting checking robustness of: grid_pfile8 at time: 2025-01-22 14:03:42
+Problem "grid_pfile8" without social law is done with result:
+{'result': 'SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_FAIL', 'time': 5.048985958099365}
+15/40 done
+
+Starting checking robustness of: sl_grid_pfile8 at time: 2025-01-22 14:03:47
+Problem "sl_grid_pfile8" with social law is done with result:
+{'result': 'SocialLawRobustnessStatus.UNKNOWN', 'time': 1786.438989162445}
+16/40 done
+
+Starting checking robustness of: grid_pfile9 at time: 2025-01-22 14:33:34
+Problem "grid_pfile9" without social law is done with result:
+{'result': 'SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_FAIL', 'time': 4.722222805023193}
+17/40 done
+
+Starting checking robustness of: sl_grid_pfile9 at time: 2025-01-22 14:33:38
+Problem "sl_grid_pfile9" with social law is done with result:
+{'result': 'SocialLawRobustnessStatus.UNKNOWN', 'time': 1798.8098516464233}
+18/40 done
+
+Starting checking robustness of: grid_pfile10 at time: 2025-01-22 15:03:37
+Problem "grid_pfile10" without social law is done with result:
+{'result': 'SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_FAIL', 'time': 8.177319049835205}
+19/40 done
+
+Starting checking robustness of: sl_grid_pfile10 at time: 2025-01-22 15:03:45
+Problem "sl_grid_pfile10" with social law is done with result:
+{'result': 'SocialLawRobustnessStatus.UNKNOWN', 'time': 1818.675072669983}
+20/40 done
+
+Starting checking robustness of: grid_pfile11 at time: 2025-01-22 15:34:04
+Problem "grid_pfile11" without social law is done with result:
+{'result': 'SocialLawRobustnessStatus.NON_ROBUST_MULTI_AGENT_FAIL', 'time': 11.165369987487793}
+21/40 done
+
