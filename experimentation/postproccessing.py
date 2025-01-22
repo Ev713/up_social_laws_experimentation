@@ -70,7 +70,7 @@ def generate_latex_tables(csv_file):
 
 
 # Example usage:
-csv_file = '/home/evgeny/SocialLaws/up_social_laws_experimentation/experimentation/logs/experiment_log_Jan-21-2025.csv'  # Replace with the path to your CSV file
+csv_file = '/experimentation/important_logs/experiment_log_Jan-21-2025.csv'  # Replace with the path to your CSV file
 latex_tables = generate_latex_tables(csv_file)
 
 # Print LaTeX tables for each domain
