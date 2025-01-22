@@ -1,0 +1,14 @@
+time,name,has_social_law,result
+12.527137517929077,sl_grid_pfile1,True,SocialLawRobustnessStatus.ROBUST_RATIONAL
+13.314644575119019,sl_grid_pfile2,True,SocialLawRobustnessStatus.ROBUST_RATIONAL
+20.194037199020386,sl_grid_pfile3,True,SocialLawRobustnessStatus.ROBUST_RATIONAL
+32.67061376571655,sl_grid_pfile4,True,SocialLawRobustnessStatus.ROBUST_RATIONAL
+1777.049523115158,sl_grid_pfile5,True,SocialLawRobustnessStatus.UNKNOWN
+1780.7515139579773,sl_grid_pfile6,True,SocialLawRobustnessStatus.UNKNOWN
+1778.283795118332,sl_grid_pfile7,True,SocialLawRobustnessStatus.UNKNOWN
+1786.4231278896332,sl_grid_pfile8,True,SocialLawRobustnessStatus.UNKNOWN
+1799.0603580474854,sl_grid_pfile9,True,SocialLawRobustnessStatus.UNKNOWN
+1817.3857383728027,sl_grid_pfile10,True,SocialLawRobustnessStatus.UNKNOWN
+1819.9126689434052,sl_grid_pfile11,True,SocialLawRobustnessStatus.UNKNOWN
+1846.9359550476074,sl_grid_pfile12,True,SocialLawRobustnessStatus.UNKNOWN
+1845.4058692455292,sl_grid_pfile13,True,SocialLawRobustnessStatus.UNKNOWN
