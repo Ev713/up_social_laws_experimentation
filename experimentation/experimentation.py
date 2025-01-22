@@ -583,16 +583,29 @@ class Experimentator:
 
 
 if __name__ == '__main__':
-    debug = True
+    debug = False
     exp = Experimentator()
     conf = [
+        'debug',
         ('grid', range(1, 21), (True,)),
         ('grid', range(1, 21), (False,)),
         ('expedition', range(1, 21), (True,)),
         ('expedition', (13, 14), (False,)),
 
     ]
-    exp.load_problems(*conf[int(sys.argv[0])-1])
+    for i, conf_i in enumerate(conf):
+        print(f'i: {conf_i}')
+    bug = True
+    while bug:
+        bug = False
+        try:
+            i = int(input('Enter conf:'))
+            conf_i = conf[i]
+        except:
+            print('Unreadable index. Try again.')
+            bug = True
+
+    exp.load_problems(*conf)
     if debug:
         exp.debug()
     if input('run all exps?').lower() in ['y', 'yes', 'ok']:
