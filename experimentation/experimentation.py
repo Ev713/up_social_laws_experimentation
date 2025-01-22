@@ -487,18 +487,19 @@ class Experimentator:
         print('Writing to:', self.file_path)
 
     def debug(self):
-        prob = self.problems[0][1]
-        sap = SingleAgentProjection(prob.agents[0])
-        sap.skip_checks = True
-        # print(prob)
-        sap_prob = sap.compile(prob).problem
-        comp = self.slrc.get_compiled(prob)
-        # print(sap_prob)
-        # simulate(comp)
-        # print(comp)
-        print(OneshotPlanner(name='enhsp').solve(sap_prob))
-        print(OneshotPlanner(name='enhsp').solve(comp))
-        print(check_robustness(self.slrc, prob))
+        raise NotImplementedError
+        # prob = self.problems[0][1]
+        # sap = SingleAgentProjection(prob.agents[0])
+        # sap.skip_checks = True
+        # # print(prob)
+        # sap_prob = sap.compile(prob).problem
+        # comp = self.slrc.get_compiled(prob)
+        # # print(sap_prob)
+        # # simulate(comp)
+        # # print(comp)
+        # print(OneshotPlanner(name='enhsp').solve(sap_prob))
+        # print(OneshotPlanner(name='enhsp').solve(comp))
+        # print(check_robustness(self.slrc, prob))
 
     def experiment_once(self, problem, metadata=("unknown", False), ):
         filename, has_social_law = metadata
@@ -601,9 +602,10 @@ if __name__ == '__main__':
         bug = False
         try:
             i = int(input('Enter conf:'))
-            if i == 0:
-                debug = True
             conf_i = conf[i]
+            if conf_i == 'debug':
+                debug = True
+
         except:
             print('Unreadable index. Try again.')
             bug = True
