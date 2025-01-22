@@ -592,7 +592,7 @@ if __name__ == '__main__':
         ('expedition', (13, 14), (False,)),
 
     ]
-    exp.load_problems(*conf[sys.argv[0]])
+    exp.load_problems(*conf[int(sys.argv[0])])
     if debug:
         exp.debug()
     if input('run all exps?').lower() in ['y', 'yes', 'ok']:
