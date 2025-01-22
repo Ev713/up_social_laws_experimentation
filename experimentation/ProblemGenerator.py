@@ -1077,27 +1077,35 @@ class ExpeditionGenerator(NumericProblemGenerator):
         sl = SocialLaw()
         sl.skip_checks = True
         packs = self.count_packs_needed()
+        starting_loc = {}
         for a in self.problem.agents:
             print(a.name)
-            starting_loc = None
+            starting_loc[a.name] = None
             for w in self.instance_data['waypoint']:
                 init_values = self.instance_data['init_values'][a.name]
                 for init_val in init_values:
                     if init_val[0] == 'at' and len(init_val) > 0 and w in init_val[1]:
-                        starting_loc = w
+                        starting_loc[a.name] = w
                         break
-                    if starting_loc is not None:
+                    if starting_loc[a.name] is not None:
                         break
-            if starting_loc is None:
+            if starting_loc[a.name] is None:
                 raise Exception(f'Agent {a.name} doesn\'t have a starting location')
-            print(f'starting loc: {starting_loc}')
+            print(f'starting loc: {starting_loc[a.name]}')
+        for a in self.problem.agents:
+            packs = None
+            for init_val in self.instance_data['init_values']:
+                if init_val[0] == '=' and init_val[1][1][0] == starting_loc[a.name]:
+                    packs = int(int(init_val[2])/len([x for x in starting_loc if starting_loc[x] == starting_loc[a.name]]))
+                    print(f'{a.name} packs: {packs}')
+                    break
+            if packs == None:
+                raise Exception(f'Can\'t find Agent {a.name}\' packs!')
             sl.add_new_fluent(a.name, 'personal_packs', (('w', 'waypoint'), ), 0)
             sl.add_precondition_to_action(a.name, 'retrieve_supplies', 'personal_packs', ('w',), '>=', 1)
             sl.add_effect(a.name, 'retrieve_supplies', 'personal_packs', ('w',), 1, '-')
             sl.add_effect(a.name, 'store_supplies', 'personal_packs', ('w',), 1, '+')
-            sl.set_initial_value_for_new_fluent(a.name, 'personal_packs', (starting_loc,),
-                                                int(float(self.instance_data['init_values']['global'][0][2]) / len(
-                                                    self.problem.agents)))
+            sl.set_initial_value_for_new_fluent(a.name, 'personal_packs', (starting_loc[a.name],), packs)
         self.problem = sl.compile(self.problem).problem
         return self.problem
 
@@ -1276,7 +1284,7 @@ class MarketTraderGenerator(NumericProblemGenerator):
 
 
 if __name__ == '__main__':
-    pg = SettlersGenerator()
+    pg = ExpeditionGenerator()
     pg.instances_folder = './numeric_problems/expedition/json'
     prob = pg.generate_problem('pfile10.json', sl=True)
     print(prob)
