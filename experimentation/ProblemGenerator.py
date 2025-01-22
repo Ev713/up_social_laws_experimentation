@@ -932,15 +932,15 @@ class NumericGridGenerator(NumericProblemGenerator):
                 if y > min_y:
                     for a in self.problem.agents:
                         a.action('move_left').add_precondition(Not(And(Equals(self.fluent['agent_x'][a.name], x),
-                                                                        Equals(self.fluent['agent_y'][a.name], y))))
+                                                                       Equals(self.fluent['agent_y'][a.name], y))))
                 if x not in up_columns:
                     for a in self.problem.agents:
                         a.action('move_up').add_precondition(Not(And(Equals(self.fluent['agent_x'][a.name], x),
-                                                                        Equals(self.fluent['agent_y'][a.name], y))))
+                                                                     Equals(self.fluent['agent_y'][a.name], y))))
                 if x not in down_columns:
                     for a in self.problem.agents:
                         a.action('move_down').add_precondition(Not(And(Equals(self.fluent['agent_x'][a.name], x),
-                                                                        Equals(self.fluent['agent_y'][a.name], y))))
+                                                                       Equals(self.fluent['agent_y'][a.name], y))))
         self.problem = direction_law.compile(self.problem).problem
         return self.problem
 
@@ -1078,12 +1078,23 @@ class ExpeditionGenerator(NumericProblemGenerator):
         sl.skip_checks = True
         packs = self.count_packs_needed()
         for a in self.problem.agents:
+            starting_loc = None
+            for w in self.instance_data['waypoint']:
+                init_values = self.instance_data['init_values'][a.name]
+                for init_val in init_values:
+                    if init_val[0] == 'at' and len(init_val) > 0 and w in init_val[1]:
+                        starting_loc = w
+                        break
+                    if starting_loc is not None:
+                        break
+            if starting_loc is None:
+                raise Exception(f'Agent {a.name} doesn\'t have a starting location')
             sl.add_new_fluent(a.name, 'personal_packs', (('w', 'waypoint'),), 0)
-            sl.set_initial_value_for_new_fluent(a.name, 'personal_packs', ('wa0',), packs - 1)
+            sl.set_initial_value_for_new_fluent(a.name, 'personal_packs', (starting_loc,), packs - 1)
             sl.add_precondition_to_action(a.name, 'retrieve_supplies', 'personal_packs', ('w',), '>=', 1)
             sl.add_effect(a.name, 'retrieve_supplies', 'personal_packs', ('w',), 1, '-')
             sl.add_effect(a.name, 'store_supplies', 'personal_packs', ('w',), 1, '+')
-            sl.set_initial_value_for_new_fluent(a.name, 'personal_packs', ('wa0',),
+            sl.set_initial_value_for_new_fluent(a.name, 'personal_packs', (starting_loc,),
                                                 int(float(self.instance_data['init_values']['global'][0][2]) / len(
                                                     self.problem.agents)))
         self.problem = sl.compile(self.problem).problem
@@ -1091,6 +1102,7 @@ class ExpeditionGenerator(NumericProblemGenerator):
 
     def count_packs_needed(self):
         num_of_waypoints = len([w for w in self.problem.objects(self.obj_type['wa0'])])
+        s = 0
         for i in range(0, num_of_waypoints):
             if i <= 4:
                 s = i
@@ -1263,7 +1275,7 @@ class MarketTraderGenerator(NumericProblemGenerator):
 
 
 if __name__ == '__main__':
-    pg = NumericGridGenerator()
-    pg.instances_folder = './numeric_problems/grid/json'
-    prob = pg.generate_problem('pfile1.json')
+    pg = SettlersGenerator()
+    pg.instances_folder = './numeric_problems/expedition/json'
+    prob = pg.generate_problem('pfile10.json', sl=True)
     print(prob)

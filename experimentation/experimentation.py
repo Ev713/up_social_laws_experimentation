@@ -12,6 +12,7 @@ from unified_planning.io import PDDLWriter, MAPDDLWriter
 import ProblemGenerator
 import problems
 import numeric_problems
+from pathlib import Path
 
 from up_social_laws.waiting_robustness_verification import RegularWaitingActionRobustnessVerifier
 
@@ -478,7 +479,12 @@ class Experimentator:
 
         self.log_dir = './logs'
         os.makedirs(self.log_dir, exist_ok=True)
-        self.file_path = f"./logs/experiment_log_{date.today().strftime('%b-%d-%Y')}.csv"
+        for i in range(100):
+            self.file_path = f"exp_log_{date.today().strftime('%b-%d-%Y')}_{i}.csv"
+            full_path = Path(self.log_dir) / self.file_path
+            if not full_path.is_file():
+                break
+        print('Writing to:', self.file_path)
 
     def experiment_once(self, problem, metadata=("unknown", False), ):
         filename, has_social_law = metadata
@@ -547,7 +553,7 @@ class Experimentator:
         }
 
         domains = [
-                'grid',
+            #    'grid',
             #    'zenotravel',
             #    'expedition',
             #    'markettrader'
@@ -558,7 +564,10 @@ class Experimentator:
                 pg = pgs[domain]()
                 pg.instances_folder = filepaths[domain]
                 if domain in ['grid', 'zenotravel', 'expedition']:
-                    sl_options = [False, True]
+                    if prob_i in [13, 14]:
+                        sl_options = [False, True]
+                    else:
+                        sl_options = [True]
                 else:
                     sl_options = [False, ]
                 for has_sl in sl_options:
@@ -570,7 +579,7 @@ class Experimentator:
 if __name__ == '__main__':
     exp = Experimentator()
     exp.load_problems()
-    #prob = exp.problems[0][1]
+    # prob = exp.problems[0][1]
     # sap = SingleAgentProjection(prob.agents[0])
     # sap.skip_checks = True
     # print(prob)
@@ -579,7 +588,7 @@ if __name__ == '__main__':
     # print(sap_prob)
     # simulate(comp)
     # print(comp)
-    #print(OneshotPlanner(name='enhsp').solve(prob))
-    #print(check_robustness(exp.slrc, prob))
+    # print(OneshotPlanner(name='enhsp').solve(prob))
+    # print(check_robustness(exp.slrc, prob))
     if input('run all exps?').lower() in ['y', 'yes', 'ok']:
         exp.experiment_full()
