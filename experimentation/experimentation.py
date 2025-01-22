@@ -594,19 +594,22 @@ if __name__ == '__main__':
 
     ]
     for i, conf_i in enumerate(conf):
-        print(f'i: {conf_i}')
+        print(f'{i}: {conf_i}')
     bug = True
     while bug:
         bug = False
         try:
             i = int(input('Enter conf:'))
+            if i == 0:
+                debug = True
             conf_i = conf[i]
         except:
             print('Unreadable index. Try again.')
             bug = True
-
-    exp.load_problems(*conf)
+    if not debug:
+        exp.load_problems(*conf)
+        if input('run all exps?').lower() in ['y', 'yes', 'ok']:
+            exp.experiment_full()
     if debug:
         exp.debug()
-    if input('run all exps?').lower() in ['y', 'yes', 'ok']:
-        exp.experiment_full()
+
