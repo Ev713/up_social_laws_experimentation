@@ -1094,12 +1094,12 @@ class ExpeditionGenerator(NumericProblemGenerator):
             print(f'starting loc: {starting_loc[a.name]}')
         for a in self.problem.agents:
             packs = None
-            for init_val in self.instance_data['init_values']:
+            for init_val in self.instance_data['init_values']['global']:
                 if init_val[0] == '=' and init_val[1][1][0] == starting_loc[a.name]:
                     packs = int(int(init_val[2])/len([x for x in starting_loc if starting_loc[x] == starting_loc[a.name]]))
                     print(f'{a.name} packs: {packs}')
                     break
-            if packs == None:
+            if packs is None:
                 raise Exception(f'Can\'t find Agent {a.name}\' packs!')
             sl.add_new_fluent(a.name, 'personal_packs', (('w', 'waypoint'), ), 0)
             sl.add_precondition_to_action(a.name, 'retrieve_supplies', 'personal_packs', ('w',), '>=', 1)
