@@ -605,7 +605,6 @@ if __name__ == '__main__':
             conf_i = conf[i]
             if conf_i == 'Debug':
                 debug = True
-
         except:
             print('Unreadable index. Try again.')
             bug = True
