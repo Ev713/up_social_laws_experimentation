@@ -188,7 +188,6 @@ def get_old_slrc():
 
 
 def check_robustness(slrc, problem):
-    print('Here')
     result = slrc.is_robust(problem)
     return str(result.status)
 
@@ -589,8 +588,8 @@ if __name__ == '__main__':
     debug = False
     exp = Experimentator()
     conf = [
-        (('grid', ), range(1, 21), (True,)),
-        (('grid', ), range(1, 21), (False,)),
+        (('grid',), range(1, 21), (True,)),
+        (('grid',), range(1, 21), (False,)),
         (('expedition',), range(1, 21), (True,)),
         (('expedition',), (13, 14), (False,)),
         'Debug',
@@ -616,4 +615,3 @@ if __name__ == '__main__':
             exp.experiment_full()
     if debug:
         exp.debug()
-
