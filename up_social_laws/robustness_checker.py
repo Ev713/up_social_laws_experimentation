@@ -198,14 +198,14 @@ class SocialLawRobustnessChecker(engines.engine.Engine, mixins.OneshotPlannerMix
                                PlanGenerationResultStatus.UNSOLVABLE_INCOMPLETELY]:
             return SocialLawRobustnessResult(SocialLawRobustnessStatus.ROBUST_RATIONAL, None, None)
         else:
-            print(result.status)
+            print('Unknown robustness checking result:', result.status)
             return SocialLawRobustnessResult(SocialLawRobustnessStatus.UNKNOWN, None, None)
 
     def is_robust(self, problem: MultiAgentProblemWithWaitfor) -> SocialLawRobustnessResult:
         # Check single agent solvability
         if not self.is_single_agent_solvable(problem):
             return SocialLawRobustnessResult(SocialLawRobustnessStatus.NON_ROBUST_SINGLE_AGENT, None, None)
-
+        print('Is single agent solvable')
         # Check for rational robustness
         result = self.multi_agent_robustness_counterexample(problem)
         if result.counter_example is not None:

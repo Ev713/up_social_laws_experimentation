@@ -877,14 +877,23 @@ class NumericGridGenerator(NumericProblemGenerator):
 
     def __init__(self):
         super().__init__()
+        self.fluent = {
+            'agent_x': {},
+            'agent_y': {},
+            'goal_x': {},
+            'goal_y': {},
+            'init_x': {},
+            'init_y': {},
+            'on_map': {},
+            'left': {}
+        }
 
     def set_init_values(self):
         for a in self.instance_data['agents']:
             agent_data = self.instance_data[a]
             for f in agent_data:
-                agent = self.problem.agent(a)
-                fluent = agent.fluent(f)
-                self.problem.set_initial_value(Dot(agent, fluent()), agent_data[f])
+                fluent = self.fluent[f][a]
+                self.problem.set_initial_value(fluent(), agent_data[f])
 
     def add_social_law(self):
         # Clockwise movement on edges and alternating between up and right everywhere else.
@@ -916,35 +925,35 @@ class NumericGridGenerator(NumericProblemGenerator):
         max_y = self.instance_data['max_y']
         for x in range(min_x, max_x + 1):
             for y in range(min_y, max_y + 1):
-                if y < max_y and x < max_x:
+                if y < max_y:
                     for a in self.problem.agents:
-                        a.action('move_right').add_precondition(Not(And(Equals(a.fluent('agent_x'), x + 1),
-                                                                        Equals(a.fluent('agent_y'), y))))
-                if y > min_y and x > min_x:
+                        a.action('move_right').add_precondition(Not(And(Equals(self.fluent['agent_x'][a.name], x),
+                                                                        Equals(self.fluent['agent_y'][a.name], y))))
+                if y > min_y:
                     for a in self.problem.agents:
-                        a.action('move_right').add_precondition(Not(And(Equals(a.fluent('agent_x'), x - 1),
-                                                                        Equals(a.fluent('agent_y'), y))))
-                if x not in up_columns and y < max_y:
+                        a.action('move_left').add_precondition(Not(And(Equals(self.fluent['agent_x'][a.name], x),
+                                                                        Equals(self.fluent['agent_y'][a.name], y))))
+                if x not in up_columns:
                     for a in self.problem.agents:
-                        a.action('move_right').add_precondition(Not(And(Equals(a.fluent('agent_x'), x),
-                                                                        Equals(a.fluent('agent_y'), y + 1))))
-                if x not in down_columns and y > min_y:
+                        a.action('move_up').add_precondition(Not(And(Equals(self.fluent['agent_x'][a.name], x),
+                                                                        Equals(self.fluent['agent_y'][a.name], y))))
+                if x not in down_columns:
                     for a in self.problem.agents:
-                        a.action('move_right').add_precondition(Not(And(Equals(a.fluent('agent_x'), x),
-                                                                        Equals(a.fluent('agent_y'), y - 1))))
+                        a.action('move_down').add_precondition(Not(And(Equals(self.fluent['agent_x'][a.name], x),
+                                                                        Equals(self.fluent['agent_y'][a.name], y))))
         self.problem = direction_law.compile(self.problem).problem
         return self.problem
 
     def add_is_free_precon(self, action, agent, x, y, waitfor=False):
-        #print(action.name, agent.name, waitfor)
-        #skip = input('Skip?:' )
-        #if skip in ['y', 'yes', 'Y',]:
+        # skip = input('Skip?:' )
+        # if skip in ['y', 'yes', 'Y',]:
         #    return
         other_agents = [a for a in self.problem.agents if a.name != agent.name]
         for other_agent in other_agents:
-            other_x = Dot(other_agent, other_agent.fluent('agent_x'))
-            other_y = Dot(other_agent, other_agent.fluent('agent_y'))
-            precon = Not(And(Equals(x, other_x), Equals(y, other_y)))
+            other_x = self.fluent['agent_x'][other_agent.name]()
+            other_y = self.fluent['agent_y'][other_agent.name]()
+            other_on_map = self.fluent['on_map'][other_agent.name]()
+            precon = Not(And(Equals(x, other_x), Equals(y, other_y), other_on_map))
             action.add_precondition(precon)
             if waitfor:
                 self.problem.waitfor.annotate_as_waitfor(agent.name, action.name, precon)
@@ -959,102 +968,102 @@ class NumericGridGenerator(NumericProblemGenerator):
         max_y = self.instance_data['max_y']
         # self.problem.ma_environment.add_fluent(is_free, default_initial_value=True)
 
-        # Agent Fluents
-        agent_x = Fluent('agent_x', IntType(), )
-        agent_y = Fluent('agent_y', IntType(), )
-        goal_x = Fluent('goal_x', IntType(), )
-        goal_y = Fluent('goal_y', IntType(), )
-        init_x = Fluent('init_x', IntType(), )
-        init_y = Fluent('init_y', IntType(), )
-        on_map = Fluent('on_map', BoolType(), )
-        left = Fluent('left', BoolType(), )
-
         self.load_agents()
-        for agent in self.problem.agents:
-            agent.add_fluent(agent_x, default_initial_value=0)
-            agent.add_fluent(agent_y, default_initial_value=0)
-            agent.add_fluent(goal_x, default_initial_value=0)
-            agent.add_fluent(goal_y, default_initial_value=0)
-            agent.add_fluent(init_x, default_initial_value=0)
-            agent.add_fluent(init_y, default_initial_value=0)
-            agent.add_fluent(on_map, default_initial_value=False)
-            agent.add_fluent(left, default_initial_value=False)
-
-        # Actions
-        appear = InstantaneousAction('appear')
-        appear.add_precondition(Not(on_map))
-        appear.add_precondition(Not(left))
-
-        appear.add_effect(agent_x(), init_x())
-        appear.add_effect(agent_y(), init_y())
-        appear.add_effect(on_map(), True)
-
-        leave = InstantaneousAction('leave', )
-
-        leave.add_precondition(Equals(agent_x(), goal_x()))
-        leave.add_precondition(Equals(agent_y(), goal_y()))
-
-        leave.add_effect(left(), True)
-        leave.add_effect(on_map(), False)
-
-        x_from_range = {
-            'up': (min_x, max_x),
-            'down': (min_x, max_x),
-            'left': (min_x + 1, max_x),
-            'right': (min_x, max_x - 1)
-        }
-
-        y_from_range = {
-            'up': (min_y, max_y - 1),
-            'down': (min_y + 1, max_y),
-            'left': (min_y, max_y),
-            'right': (min_y, max_y),
-        }
-
-        moves = {}
-        for d in ['up', 'down', 'left', 'right']:
-            move = InstantaneousAction(f'move_{d}')
-            move.add_precondition(on_map())
-            move.add_precondition(GE(agent_x, x_from_range[d][0]))
-            move.add_precondition(LE(agent_x, x_from_range[d][1]))
-            move.add_precondition(GE(agent_y, y_from_range[d][0]))
-            move.add_precondition(LE(agent_y, y_from_range[d][1]))
-
-            effect = {
-                'right': [agent_x(), Plus(agent_x(), 1)],
-                'left': [agent_x(), Minus(agent_x(), 1)],
-                'up': [agent_y(), Plus(agent_y(), 1)],
-                'down': [agent_y(), Minus(agent_y(), 1)]
-            }[d]
-            move.add_effect(*effect)
-            moves[d] = move
 
         for agent in self.problem.agents:
+            # Agent Fluents
+            self.fluent['agent_x'][agent.name] = Fluent(f'{agent.name}_x', IntType(), )
+            self.fluent['agent_y'][agent.name] = Fluent(f'{agent.name}_y', IntType(), )
+            self.fluent['goal_x'][agent.name] = Fluent(f'{agent.name}_goal_x', IntType(), )
+            self.fluent['goal_y'][agent.name] = Fluent(f'{agent.name}_goal_y', IntType(), )
+            self.fluent['init_x'][agent.name] = Fluent(f'{agent.name}_init_x', IntType(), )
+            self.fluent['init_y'][agent.name] = Fluent(f'{agent.name}_init_y', IntType(), )
+            self.fluent['on_map'][agent.name] = Fluent(f'{agent.name}_on_map', BoolType(), )
+            self.fluent['left'][agent.name] = Fluent(f'{agent.name}_left', BoolType(), )
+
+            self.problem.ma_environment.add_fluent(self.fluent['agent_x'][agent.name], default_initial_value=0)
+            self.problem.ma_environment.add_fluent(self.fluent['agent_y'][agent.name], default_initial_value=0)
+            self.problem.ma_environment.add_fluent(self.fluent['goal_x'][agent.name], default_initial_value=0)
+            self.problem.ma_environment.add_fluent(self.fluent['goal_y'][agent.name], default_initial_value=0)
+            self.problem.ma_environment.add_fluent(self.fluent['init_x'][agent.name], default_initial_value=0)
+            self.problem.ma_environment.add_fluent(self.fluent['init_y'][agent.name], default_initial_value=0)
+            self.problem.ma_environment.add_fluent(self.fluent['on_map'][agent.name], default_initial_value=False)
+            self.problem.ma_environment.add_fluent(self.fluent['left'][agent.name], default_initial_value=False)
+
+            # Actions
+        for agent in self.problem.agents:
+            leave = InstantaneousAction('leave', )
+
+            leave.add_precondition(Equals(self.fluent['agent_x'][agent.name](), self.fluent['goal_x'][agent.name]()))
+            leave.add_precondition(Equals(self.fluent['agent_y'][agent.name](), self.fluent['goal_y'][agent.name]()))
+
+            leave.add_effect(self.fluent['left'][agent.name](), True)
+            leave.add_effect(self.fluent['on_map'][agent.name](), False)
+
+            appear = InstantaneousAction('appear')
+            appear.add_precondition(Not(self.fluent['on_map'][agent.name]()))
+            appear.add_precondition(Not(self.fluent['left'][agent.name]()))
+
+            appear.add_effect(self.fluent['agent_x'][agent.name](), self.fluent['init_x'][agent.name]())
+            appear.add_effect(self.fluent['agent_y'][agent.name](), self.fluent['init_y'][agent.name]())
+            appear.add_effect(self.fluent['on_map'][agent.name](), True)
             agent.add_action(appear)
-            self.add_is_free_precon(appear, agent, agent.fluent('agent_x')(),
-                                    agent.fluent('agent_y')(), sl)
+            self.add_is_free_precon(agent.action('appear'), agent, self.fluent['init_x'][agent.name](),
+                                    self.fluent['init_y'][agent.name](), sl)
+
+            x_from_range = {
+                'up': (min_x, max_x),
+                'down': (min_x, max_x),
+                'left': (min_x + 1, max_x),
+                'right': (min_x, max_x - 1)
+            }
+
+            y_from_range = {
+                'up': (min_y, max_y - 1),
+                'down': (min_y + 1, max_y),
+                'left': (min_y, max_y),
+                'right': (min_y, max_y),
+            }
+
+            moves = {}
+            for d in ['up', 'down', 'left', 'right']:
+                move = InstantaneousAction(f'move_{d}')
+                move.add_precondition(self.fluent['on_map'][agent.name]())
+                move.add_precondition(GE(self.fluent['agent_x'][agent.name](), x_from_range[d][0]))
+                move.add_precondition(LE(self.fluent['agent_x'][agent.name](), x_from_range[d][1]))
+                move.add_precondition(GE(self.fluent['agent_y'][agent.name](), y_from_range[d][0]))
+                move.add_precondition(LE(self.fluent['agent_y'][agent.name](), y_from_range[d][1]))
+
+                effect = {
+                    'right': [self.fluent['agent_x'][agent.name](), Plus(self.fluent['agent_x'][agent.name](), 1)],
+                    'left': [self.fluent['agent_x'][agent.name](), Minus(self.fluent['agent_x'][agent.name](), 1)],
+                    'up': [self.fluent['agent_y'][agent.name](), Plus(self.fluent['agent_y'][agent.name](), 1)],
+                    'down': [self.fluent['agent_y'][agent.name](), Minus(self.fluent['agent_y'][agent.name](), 1)]
+                }[d]
+                move.add_effect(*effect)
+                moves[d] = move
 
             for d in ['up', 'down', 'left', 'right']:
                 agent.add_action(moves[d])
                 if d == 'up':
-                    self.add_is_free_precon(moves[d], agent, agent.fluent('agent_x')(),
-                                            Plus(agent.fluent('agent_y')(), 1), sl)
+                    self.add_is_free_precon(moves[d], agent, self.fluent['agent_x'][agent.name](),
+                                            Plus(self.fluent['agent_y'][agent.name](), 1), sl)
                 if d == 'down':
-                    self.add_is_free_precon(moves[d], agent, agent.fluent('agent_x')(),
-                                            Minus(agent.fluent('agent_y')(), 1), sl)
+                    self.add_is_free_precon(moves[d], agent, self.fluent['agent_x'][agent.name](),
+                                            Minus(self.fluent['agent_y'][agent.name](), 1), sl)
                 if d == 'left':
                     self.add_is_free_precon(moves[d], agent,
-                                            Minus(agent.fluent('agent_x')(), 1),
-                                            agent.fluent('agent_y')(), sl)
+                                            Minus(self.fluent['agent_x'][agent.name](), 1),
+                                            self.fluent['agent_y'][agent.name](), sl)
                 if d == 'right':
                     self.add_is_free_precon(moves[d], agent,
-                                            Plus(agent.fluent('agent_x')(), 1),
-                                            agent.fluent('agent_y')(), sl)
+                                            Plus(self.fluent['agent_x'][agent.name](), 1),
+                                            self.fluent['agent_y'][agent.name](), sl)
                 #
 
             agent.add_action(leave)
 
-            agent.add_public_goal(left())
+            agent.add_public_goal(self.fluent['left'][agent.name]())
 
         self.set_init_values()
         if sl:

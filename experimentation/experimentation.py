@@ -547,13 +547,13 @@ class Experimentator:
         }
 
         domains = [
-            #    'grid',
-                'zenotravel',
-                'expedition',
-                'markettrader'
+                'grid',
+            #    'zenotravel',
+            #    'expedition',
+            #    'markettrader'
         ]
 
-        for prob_i in range(1, 21):
+        for prob_i in range(1, 2):
             for domain in domains:
                 pg = pgs[domain]()
                 pg.instances_folder = filepaths[domain]
@@ -570,7 +570,7 @@ class Experimentator:
 if __name__ == '__main__':
     exp = Experimentator()
     exp.load_problems()
-    #prob = exp.problems[0][1]
+    prob = exp.problems[0][1]
     #sap = SingleAgentProjection(prob.agents[0])
     #sap.skip_checks = True
     # print(prob)
@@ -579,8 +579,8 @@ if __name__ == '__main__':
     # print(sap_prob)
     #simulate(comp)
     #print(comp)
-    #print(OneshotPlanner(name='enhsp').solve(comp))
-    #check_robustness(exp.slrc, prob)
+    # print(OneshotPlanner(name='enhsp').solve(comp))
+    #print(check_robustness(exp.slrc, prob))
 #    if input('run all exps?').lower() in ['y', 'yes', 'ok']:
     exp.experiment_full()
 
