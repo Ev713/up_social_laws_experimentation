@@ -188,6 +188,7 @@ def get_old_slrc():
 
 
 def check_robustness(slrc, problem):
+    print('Here')
     result = slrc.is_robust(problem)
     return str(result.status)
 
