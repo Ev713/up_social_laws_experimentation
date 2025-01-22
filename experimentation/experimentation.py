@@ -586,11 +586,12 @@ if __name__ == '__main__':
     debug = False
     exp = Experimentator()
     conf = [
-        'debug',
         ('grid', range(1, 21), (True,)),
         ('grid', range(1, 21), (False,)),
         ('expedition', range(1, 21), (True,)),
         ('expedition', (13, 14), (False,)),
+        'Debug',
+        'Exit'
 
     ]
     for i, conf_i in enumerate(conf):
