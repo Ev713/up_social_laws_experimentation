@@ -484,7 +484,7 @@ class Experimentator:
     def debug(self):
         pg = ProblemGenerator.ExpeditionGenerator()
         pg.instances_folder = './numeric_problems/expedition/json'
-        prob = pg.generate_problem('pfile7.json', sl=True)
+        prob = pg.generate_problem('pfile1.json')
         for a in prob.agents:
             sap = SingleAgentProjection(prob.agents[0])
             sap.skip_checks = True
