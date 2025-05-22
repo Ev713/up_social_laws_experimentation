@@ -1,4 +1,0 @@
-time,name,has_social_law,result
-0.32730698585510254,market_trader_pfile1,False,SocialLawRobustnessStatus.NON_ROBUST_SINGLE_AGENT
-0.28054380416870117,market_trader_pfile2,False,SocialLawRobustnessStatus.NON_ROBUST_SINGLE_AGENT
-0.7750110626220703,market_trader_pfile3,False,SocialLawRobustnessStatus.NON_ROBUST_SINGLE_AGENT

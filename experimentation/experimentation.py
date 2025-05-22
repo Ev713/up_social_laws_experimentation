@@ -477,7 +477,7 @@ class Experimentator:
         self.slrc._planner = OneshotPlanner(name='enhsp')
         self.func = lambda p: check_robustness(self.slrc, p)  # Function to be executed
         self.id = '_'
-        self.log_dir = './logs'
+        self.log_dir = '.archive/logs'
         os.makedirs(self.log_dir, exist_ok=True)
         self.file_path = ''
 
