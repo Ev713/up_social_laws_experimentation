@@ -245,7 +245,7 @@ if __name__ == '__main__':
             parser.agent_type_name = 'sled'
             added_agents = [[f's{k + 1}' for k in range(1, int(i / 5) + 1)] for i in range(-1, 20)]
 
-        folder = './numeric_problems/' + domain
+        folder = './numeric_problems_instances/' + domain
         for i in range(1, 21):
             pathname = folder + '/pddl/pfile' + str(i) + '.pddl'
             f = open(folder + r'/json/pfile' + str(i) + '.json', "w")

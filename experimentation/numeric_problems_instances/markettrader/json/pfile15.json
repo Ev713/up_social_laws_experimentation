@@ -1,5 +1,5 @@
 {
-  "market": ["Oslo", "Palanga", "Tallinn", "Stockholm", "Riga", "Helsinki", "Vilnius", "Copenhagen", "Berlin", "Warsaw", "Budapest", "Prague", "London", "Paris", "Amsterdam", "Rome", "Moscow", "Vienna", "Zurich", "Brussels", "Lisbon", "Madrid", "Barcelona", "Rome", "Athens", "Belgrade", "Sofia"],
+  "market": ["Oslo", "Palanga", "Tallinn", "Stockholm", "Riga", "Helsinki", "Vilnius", "Copenhagen", "Berlin", "Warsaw", "Budapest", "Prague", "London", "Paris", "Amsterdam", "Rome", "Moscow", "Vienna", "Zurich", "Brussels", "Lisbon", "Madrid", "Barcelona", "Athens", "Belgrade", "Sofia"],
   "goods": ["TuringMachines", "GummyBears", "RubberDucks", "MagicBeans", "GoldenFish", "LEDs", "Electronics", "Smartphones", "Furniture", "Toys", "CannedGoods", "Spices", "Clothing", "Books", "Watches", "Shoes", "Wines", "Chocolates", "Jewelry", "Pasta", "OliveOil", "FreshFish", "Perfume", "Guitars", "Laptops", "Cosmetics", "Beds"],
   "agents": ["camel0", "camel1", "camel2", "camel3"],
   "init_values": {

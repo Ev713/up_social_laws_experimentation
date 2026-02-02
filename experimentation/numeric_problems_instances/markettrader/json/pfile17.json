@@ -1,6 +1,6 @@
 {
   "market": ["Oslo", "Berlin", "Madrid", "Paris", "Rome", "London", "Vienna", "Stockholm", "Athens", "Brussels", "Copenhagen", "Zurich", "Milan", "Barcelona", "Amsterdam", "Prague", "Lisbon", "Helsinki"],
-  "goods": ["TuringMachines", "GummyBears", "LEDs", "Smartphones", "Laptops", "Headphones", "Tablets", "Chargers", "Monitors", "Cables", "Printers", "Scanners", "Keyboards", "Mice", "Speakers", "Desktops", "Cameras", "Projectors", "Watches", "Bluetooth", "Speakers", "SmartWatches", "GameConsoles"],
+  "goods": ["TuringMachines", "GummyBears", "LEDs", "Smartphones", "Laptops", "Headphones", "Tablets", "Chargers", "Monitors", "Cables", "Printers", "Scanners", "Keyboards", "Mice", "Desktops", "Cameras", "Projectors", "Watches", "Bluetooth", "Speakers", "SmartWatches", "GameConsoles"],
   "agents": ["camel0", "camel1", "camel2", "camel3"],
 
   "init_values": {

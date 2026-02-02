@@ -102,9 +102,9 @@ for i in range(1, 21):
     random_instance = generate_instance(cities, goods, num_agents, avg_price, price_variance, cash, capacity,
                                         target_cash)
 
-    directory = "./numeric_problems/generated_json/"
+    directory = "./numeric_problems_instances/generated_json/"
     os.makedirs(directory, exist_ok=True)
     file_path = os.path.join(directory, f"pfile{i}.json")
-    with open(f"numeric_problems/markettrader/generated_json/pfile{i}.json", "w") as file:
+    with open(f"numeric_problems_instances/markettrader/generated_json/pfile{i}.json", "w") as file:
         json.dump(random_instance, file, indent=4)
 

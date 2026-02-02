@@ -1,34 +1,14 @@
-from unified_planning.engines import CompilerResult
-
-import unified_planning as up
-import unified_planning.engines as engines
-from unified_planning.engines.mixins.compiler import CompilationKind, CompilerMixin
-from unified_planning.model.multi_agent import *
-from unified_planning.model import *
-from unified_planning.engines.results import CompilerResult
-from unified_planning.exceptions import UPExpressionDefinitionError, UPProblemDefinitionError
-from typing import List, Dict, Union, Optional
-from unified_planning.engines.compilers.utils import replace_action, get_fresh_name
 from functools import partial
-from operator import neg
-from unified_planning.model import Parameter, Fluent, InstantaneousAction
-from unified_planning.shortcuts import *
-from unified_planning.exceptions import UPProblemDefinitionError
-from unified_planning.model import Problem, InstantaneousAction, DurativeAction, Action
-from typing import List, Dict
-from itertools import product
-from up_social_laws.waitfor_specification import WaitforSpecification
-from up_social_laws.ma_problem_waitfor import MultiAgentProblemWithWaitfor
-import unified_planning as up
-from unified_planning.engines import Credits
-from unified_planning.io.pddl_writer import PDDLWriter
-import unified_planning.model.walkers as walkers
-from unified_planning.model.walkers.identitydag import IdentityDagWalker
-from unified_planning.environment import get_environment
+
 import unified_planning.model.problem_kind
+from unified_planning.engines.compilers.utils import replace_action
+from unified_planning.engines.results import CompilerResult
+from unified_planning.model.multi_agent import *
+from unified_planning.shortcuts import *
+
 import up_social_laws
-from up_social_laws.robustness_verification import InstantaneousActionRobustnessVerifier, FluentMap, RobustnessVerifier, \
-    FluentMapSubstituter
+from up_social_laws.ma_problem_waitfor import MultiAgentProblemWithWaitfor
+from up_social_laws.robustness_verification import InstantaneousActionRobustnessVerifier, FluentMap, RobustnessVerifier
 
 
 class RegularWaitingActionRobustnessVerifier(RobustnessVerifier):
@@ -46,7 +26,6 @@ class RegularWaitingActionRobustnessVerifier(RobustnessVerifier):
 
     @staticmethod
     def supported_kind() -> ProblemKind:
-        supported_kind = ProblemKind()
         supported_kind = unified_planning.model.problem_kind.multi_agent_kind.union(
             unified_planning.model.problem_kind.actions_cost_kind)
         return supported_kind
@@ -331,5 +310,125 @@ class RegularWaitingActionRobustnessVerifier(RobustnessVerifier):
         )
 
 
-class NumericWaitingActionRobustnessVerifier(RegularWaitingActionRobustnessVerifier):
-    pass
+class NumericSTIRPSWaitingActionRobustnessVerifier(RegularWaitingActionRobustnessVerifier):
+
+    def _compile(self, problem: "up.model.AbstractProblem",
+                 compilation_kind: "up.engines.CompilationKind") -> CompilerResult:
+        """
+        Creates a robustness verification problem.
+        """
+
+        # Represents the map from the new action to the old action
+        new_to_old: Dict[Action, Action] = {}
+
+        self.og_problem = problem
+
+        new_problem = self.initialize_problem(self.og_problem)
+
+        # Setting up auxiliary atoms
+        self.act = Fluent('act', BoolType())
+        self.fail = Fluent('fail', BoolType())
+        self.cf = Fluent('cf', BoolType())
+        self.fin = Fluent("fin", _signature=[Parameter("a", self.agent_type)])
+        self.wt = Fluent("wt", _signature=[Parameter("a", self.agent_type)])
+
+        self.waiting_fluent_map = FluentMap("w", default_value=False)
+        self.waiting_fluent_map.add_facts(self.og_problem, new_problem)
+
+#        for fluent in self.flu`
+
+        new_problem.add_fluent(self.act, default_initial_value=True)
+        new_problem.add_fluent(self.fail, default_initial_value=False)
+        new_problem.add_fluent(self.cf, default_initial_value=False)
+        new_problem.add_fluent(self.fin, default_initial_value=False)
+
+        for agent in self.og_problem.agents:
+            for action in agent.actions:
+                # Fail version
+                for i, fact in enumerate(self.get_action_preconditions(self.og_problem, agent, action, True, False)):
+                    for all_actions_allowed in [True, False]:
+                        a_f = self.get_fail_action(agent, action, fact, i, all_actions_allowed)
+                        new_problem.add_action(a_f)
+                        new_to_old[a_f] = action
+
+                for i, fact in enumerate(self.get_action_preconditions(self.og_problem, agent, action, False, True)):
+                    # Wait version
+                    for all_actions_allowed in [True, False]:
+                        a_w = self.get_wait_action(agent, action, fact, i, all_actions_allowed)
+                        new_problem.add_action(a_w)
+                        new_to_old[a_w] = action
+
+                    # deadlock version
+                    a_deadlock = self.get_deadlock_action(agent, action, fact, i)
+                    new_problem.add_action(a_deadlock)
+                    new_to_old[a_deadlock] = action
+
+                # local version
+                for all_actions_allowed in [True, False]:
+                    a_local = self.get_local_action(agent, action, all_actions_allowed)
+                    new_problem.add_action(a_local)
+                    new_to_old[a_local] = action
+
+            # end-success
+            end_s = InstantaneousAction(f"end_s_{agent.name}")
+            for goal in self.get_agent_goal(self.og_problem, agent):
+                end_s.add_precondition(self.fsub.substitute(goal, self.global_fluent_map, agent))
+                end_s.add_precondition(Not(self.restrict_actions_map[agent.name]))
+            end_s.add_effect(self.fin(self.get_agent_obj(agent)), True)
+            end_s.add_effect(self.stage_1, False)
+            new_problem.add_action(end_s)
+            new_to_old[end_s] = None
+
+        # start-stage-2
+        start_stage_2 = InstantaneousAction("start_stage_2")
+        for agent in self.og_problem.agents:
+            start_stage_2.add_precondition(self.fin(self.get_agent_obj(agent)))
+        start_stage_2.add_effect(self.stage_2, True)
+        start_stage_2.add_effect(self.stage_1, False)
+        new_problem.add_action(start_stage_2)
+        new_to_old[start_stage_2] = None
+
+        for agent in self.og_problem.agents:
+            for i, goal in enumerate(self.get_agent_goal(self.og_problem, agent)):
+                goals_not_achieved = InstantaneousAction(f"goals_not_achieved_{agent.name}_{i}")
+                goals_not_achieved.add_precondition(self.stage_2)
+                goals_not_achieved.add_precondition(Not(self.fsub.substitute(goal, self.global_fluent_map, agent)))
+                for a in self.og_problem.agents:
+                    for g in self.get_agent_goal(self.og_problem, a):
+                        goals_not_achieved.add_precondition(self.fsub.substitute(g, self.local_fluent_map[agent], agent))
+                    goals_not_achieved.add_precondition(Not(self.restrict_actions_map[agent.name]))
+                goals_not_achieved.add_effect(self.conflict, True)
+                new_problem.add_action(goals_not_achieved)
+                new_to_old[goals_not_achieved] = None
+
+        # declare_deadlock
+        declare_deadlock = InstantaneousAction("declare_deadlock")
+        declare_deadlock.add_precondition(self.stage_2)
+        declare_deadlock.add_precondition(self.possible_deadlock)
+        for agent in self.og_problem.agents:
+            for goal in self.get_agent_goal(self.og_problem, agent):
+                declare_deadlock.add_precondition(self.fsub.substitute(goal, self.local_fluent_map[agent], agent))
+            declare_deadlock.add_precondition(Not(self.restrict_actions_map[agent.name]))
+        declare_deadlock.add_effect(self.conflict, True)
+        new_problem.add_action(declare_deadlock)
+        new_to_old[declare_deadlock] = None
+
+        # declare_fail
+        declare_fail = InstantaneousAction("declare_fail")
+        declare_fail.add_precondition(self.stage_2)
+        declare_fail.add_precondition(self.precondition_violation)
+        for agent in self.og_problem.agents:
+            for goal in self.get_agent_goal(self.og_problem, agent):
+                declare_fail.add_precondition(self.fsub.substitute(goal, self.local_fluent_map[agent], agent))
+            declare_fail.add_precondition(Not(self.restrict_actions_map[agent.name]))
+        declare_fail.add_effect(self.conflict, True)
+        new_problem.add_action(declare_fail)
+        new_problem.set_initial_value(self.stage_1, True)
+        new_to_old[declare_fail] = None
+
+        # Goal
+        new_problem.add_goal(self.conflict)
+
+        return CompilerResult(
+            new_problem, partial(replace_action, map=new_to_old), self.name
+        )

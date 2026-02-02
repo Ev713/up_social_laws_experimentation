@@ -4,7 +4,7 @@
   "agents": ["camel0", "camel1"],
   "init_values": {
     "global": [
-[
+
   ["=", ["price", ["TuringMachines", "Oslo"]], "3.0"],
   ["=", ["sellprice", ["TuringMachines", "Palanga"]], "6.5"],
   ["=", ["sellprice", ["TuringMachines", "Helsinki"]], "7.0"],
@@ -25,7 +25,7 @@
   ["=", ["drive-cost", ["Palanga", "Tallinn"]], "2.8"],
   ["=", ["drive-cost", ["Tallinn", "Helsinki"]], "3.2"],
   ["=", ["drive-cost", ["Helsinki", "Oslo"]], "3.5"]
-]
+
 
     ],
     "camel0": [

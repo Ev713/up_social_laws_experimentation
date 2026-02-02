@@ -16,7 +16,7 @@ long_description=\
 setup(name='up_social_laws',
       version=up_social_laws.__version__,
       description='Unified Planning Integration of Social Laws',
-      long_description='Integration of Social Laws into the Unified Planning Framework',      
+      long_description='Integration of Social Laws into the Unified Planning Framework',
       author='Technion Cognitive Robotics Lab',
       author_email='karpase@technion.ac.il',
       url='https://github.com/aiplan4eu/up-social-laws',
@@ -26,7 +26,7 @@ setup(name='up_social_laws',
                'Topic :: Scientific/Engineering :: Artificial Intelligence'
                ],
       packages=['up_social_laws'],
-      install_requires=[],
+      install_requires=['unified-planning', 'pandas'],
       python_requires='>=3.7',
       license='APACHE'
-)
+      )
