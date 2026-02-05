@@ -434,6 +434,37 @@ class SimpleInstantaneousActionRobustnessVerifier(InstantaneousActionRobustnessV
             new_problem, partial(replace_action, map=new_to_old), self.name
         )
 
+class SimpleNumericInstantaneousActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
+    def __init__(self):
+        InstantaneousActionRobustnessVerifier.__init__(self)
+
+    @property
+    def name(self):
+        return "srbv"
+
+    def _compile(self, problem: "up.model.AbstractProblem",
+                 compilation_kind: "up.engines.CompilationKind") -> CompilerResult:
+        '''Creates a the robustness verification problem.'''
+
+        # TODO:
+        #  new vars:
+        #  n + 1 copies (copy from waiting action)
+        #  wt_i flag for each agent
+        #  for f in P waitfor prec (boolean or numeric), create wt^f (LOL, "wtf")
+
+        # Represents the map from the new action to the old action
+        new_to_old: Dict[Action, Action] = {}
+
+        new_problem = self.initialize_problem(problem)
+
+        self.waiting_fluent_map = FluentMap("w", default_value=False)
+        self.waiting_fluent_map.add_facts(problem, new_problem)
+
+
+        return CompilerResult(
+            new_problem, partial(replace_action, map=new_to_old), self.name
+        )
+
 
 class WaitingActionRobustnessVerifier(InstantaneousActionRobustnessVerifier):
     '''Robustness verifier class for instantaneous actions using alternative formulation:

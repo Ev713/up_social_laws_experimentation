@@ -30,6 +30,8 @@ from unified_planning.engines.results import *
 from functools import partial
 from unified_planning.engines.compilers.utils import replace_action
 
+from up_social_laws.snp_to_num_strips import get_operator_as_function
+
 credits = Credits('Social Law',
                   'Technion Cognitive Robotics Lab (cf. https://github.com/TechnionCognitiveRoboticsLab)',
                   'karpase@technion.ac.il',
@@ -287,7 +289,7 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
             else:
                 action.add_effect(fluent_exp, OPERATORS[operator](fluent_exp, val))
         # Add waitfor annotations
-        for agent_name, action_name, precondition_fluent_name, pre_condition_args in self.added_waitfors:
+        for agent_name, action_name, precondition_fluent_name, pre_condition_args, operator, value in self.added_waitfors:
             agent = new_problem.agent(agent_name)
             action = agent.action(action_name)
             if agent.has_fluent(precondition_fluent_name):
@@ -308,8 +310,11 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
                         raise UPUsageError(
                         "Don't know what parameter " + arg + " is in waitfor(" + agent_name + ", " + action_name + ")")
                 pre_condition_arg_objs.append(arg_obj)
-
-            precondition = FluentExp(precondition_fluent, pre_condition_arg_objs)
+            prec_fluent_exp = FluentExp(precondition_fluent, pre_condition_arg_objs)
+            if operator is None and value is None:
+                precondition = FluentExp(precondition_fluent, pre_condition_arg_objs)
+            else:
+                precondition = get_operator_as_function(operator)(prec_fluent_exp, value)
             new_problem.waitfor.annotate_as_waitfor(agent_name, action_name, precondition)
 
         # Disallow actions
@@ -386,8 +391,8 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
         )
 
     def add_waitfor_annotation(self, agent_name: str, action_name: str, precondition_fluent_name: str,
-                               precondition_args):
-        self.added_waitfors.add((agent_name, action_name, precondition_fluent_name, precondition_args))
+                               precondition_args, operator=None, value=None):
+        self.added_waitfors.add((agent_name, action_name, precondition_fluent_name, precondition_args, operator, value))
 
     def disallow_action(self, agent_name: str, action_name: str, args):
         self.disallowed_actions.add((agent_name, action_name, args))

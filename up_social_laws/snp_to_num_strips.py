@@ -147,6 +147,9 @@ class AtomicFluent:
         self.args = []
         self._type = None
 
+    def __str__(self):
+        return f'{self._fluent_name}{self.args}'
+
     def to_tuple(self):
         return self._fluent_name, self._args_names
 
@@ -195,6 +198,8 @@ class LinearPreconditionData(NumStripsPreconditionData):
                 self.sub_fluents_coeffs[p] = lin1.get(p, 0) - lin2.get(p, 0)
         self.value = lin2.get(ONE, 0) - lin1.get(ONE, 0)
 
+    def __str__(self):
+        return self.fluent_expr.__str__()
 
 class NumStripsEffectData:
     def __init__(self, fluent_expr):
@@ -209,6 +214,9 @@ class SimpleBoolEffectData(NumStripsEffectData):
         data.target_fluent = AtomicFluent.from_fnode(fnode)
         data.value = str(val)=='true'
         return data
+
+    def __str__(self):
+        return self.fluent_expr.__str__()
 
     def __init__(self, fluent_expr):
         super().__init__(fluent_expr)
@@ -263,6 +271,9 @@ class NumericStripsActionData:
         self.linear_preconditions = []
         self.boolean_effects = []
         self.linear_effects = []
+
+    def __str__(self):
+        return f"{self.name}{tuple(self.parameters.keys())}"
 
     def parse_preconditions(self):
         for prec in self._source_action.preconditions:
@@ -536,6 +547,8 @@ class NumericStripsProblemConverter:
                         self.add_linear_effect(action_id, changing_fluent, new_value)
 
     def _linear_fluent_is_affected(self, lin_fluent_name, fluent_name):
+        if lin_fluent_name not in self.fluent_vector_dict:
+            return False
         vector = self.fluent_vector_dict[lin_fluent_name]
         for sub_fluent, _ in vector.items():
             if remove_counter_suffix(sub_fluent) == fluent_name and vector[sub_fluent] != 0:
@@ -668,6 +681,7 @@ class NumericStripsProblemConverter:
 
         self.create_linear_expressions_fluents_and_preconditions(linear_preconditions_table)
         self.create_linear_expressions_effects_and_initial_values(linear_effects_table)
+
         return self.numeric_strips_problem
 
     def _is_action(self, action_id):

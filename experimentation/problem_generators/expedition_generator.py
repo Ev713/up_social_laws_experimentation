@@ -37,6 +37,10 @@ class ExpeditionGenerator(NumericProblemGenerator):
                     break
             if packs is None:
                 raise Exception(f'Can\'t find Agent {a.name}\' packs!')
+
+            # Test numeric waitfor precondition
+            sl.add_waitfor_annotation(a.name, 'retrieve_supplies', 'personal_packs', ('w',), '>=', 1)
+            #
             sl.add_new_fluent(a.name, 'personal_packs', (('w', 'waypoint'), ), 0)
             sl.add_precondition_to_action(a.name, 'retrieve_supplies', 'personal_packs', ('w',), '>=', 1)
             sl.add_effect(a.name, 'retrieve_supplies', 'personal_packs', ('w',), 1, '-')
