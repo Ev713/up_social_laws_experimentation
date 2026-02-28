@@ -165,7 +165,10 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
         new_problem.name = f'{self.name}_{problem.name}'
 
         for f in problem.ma_environment.fluents:
-            default_val = problem.ma_environment.fluents_defaults[f]
+            try:
+                default_val = problem.ma_environment.fluents_defaults[f]
+            except KeyError:
+                raise Exception(f'{f} has no default value')
             new_problem.ma_environment.add_fluent(f, default_initial_value=default_val)
         for ag in problem.agents:
             new_ag = ag.clone(new_problem)
@@ -435,6 +438,7 @@ class SocialLaw(engines.engine.Engine, CompilerMixin):
     
     def add_agent_complex_goal(self, agent_name, mod, args,  arg_args):
         self.added_agent_complex_goals.add((agent_name, mod, args, arg_args))
+
     def add_public_goal(self, goal_fluent_name, goal_args):
         self.added_public_goals.add((goal_fluent_name, goal_args))
 

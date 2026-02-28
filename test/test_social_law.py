@@ -16,9 +16,8 @@
 import unified_planning as up
 from unified_planning.shortcuts import *
 import up_social_laws
-from up_social_laws.single_agent_projection import SingleAgentProjection
-from up_social_laws.robustness_verification import RobustnessVerifier, SimpleInstantaneousActionRobustnessVerifier, \
-    WaitingActionRobustnessVerifier
+from up_social_laws.robustness_verification import RobustnessVerifier, SimpleInstantaneousActionRobustnessVerifier
+from up_social_laws.waiting_robustness_verification import RegularWaitingActionRobustnessVerifier
 from up_social_laws.robustness_checker import SocialLawRobustnessChecker, SocialLawRobustnessStatus
 from up_social_laws.social_law import SocialLaw
 from up_social_laws.waitfor_specification import WaitforSpecification
@@ -444,7 +443,7 @@ class TestProblem(unittest_TestCase):
         res = l3.compile(p_4cars_deadlock)
         p_robust = res.problem
         r_result = slrc.is_robust(p_robust)
-        rbv = WaitingActionRobustnessVerifier()
+        rbv = RegularWaitingActionRobustnessVerifier()
         compiled = rbv.compile(p_robust).problem
         print(compiled)
         with OneshotPlanner()as planner:

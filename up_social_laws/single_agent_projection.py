@@ -13,6 +13,7 @@
 # limitations under the License.
 #
 """This module defines the single agent projection compiler class."""
+import itertools
 
 import unified_planning as up
 import unified_planning.engines as engines
@@ -94,6 +95,12 @@ class SingleAgentProjection(engines.engine.Engine, CompilerMixin):
         """Returns the agent."""
         return self._agent
 
+    def _remove_dot_from_goal(self, goal):
+        if goal.is_dot():
+            return goal.args[0]
+        else:
+            return goal
+
 
     def _compile(self, problem: "up.model.AbstractProblem", compilation_kind: "up.engines.CompilationKind") -> CompilerResult:
         '''Creates a problem that is a copy of the original problem
@@ -135,19 +142,9 @@ class SingleAgentProjection(engines.engine.Engine, CompilerMixin):
 
         for object in problem.all_objects:
             new_problem.add_object(object)
-        
-        for goal in problem.goals:            
-            if goal.is_dot():
-                if goal.agent() == self.agent.name:  # Compare agent names to handle social laws which change agents
-                    new_problem.add_goal(goal.args[0])            
-            else:
-                new_problem.add_goal(goal)            
 
-        for goal in self.agent.public_goals:
-            new_problem.add_goal(goal)
-        for goal in self.agent.private_goals:
-            new_problem.add_goal(goal)
-
+        for goal in itertools.chain(problem.goals, self.agent.public_goals, self.agent.private_goals):
+            new_problem.add_goal(self._remove_dot_from_goal(goal))
 
         return CompilerResult(
             new_problem, partial(replace_action, map=new_to_old), self.name

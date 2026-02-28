@@ -2,10 +2,11 @@ import datetime
 import unified_planning
 from unified_planning.shortcuts import *
 import random
-from problem_generators.expedition_generator import ExpeditionGenerator
-from problem_generators.market_trader_generator import MarketTraderGenerator
-from problem_generators.numeric_grid_generator import NumericGridGenerator
-from problem_generators.numeric_zenotravel_generator import NumericZenotravelGenerator
+
+from experimentation.problem_generators.expedition_generator import ExpeditionGenerator
+from experimentation.problem_generators.market_trader_generator import MarketTraderGenerator
+from experimentation.problem_generators.numeric_grid_generator import NumericGridGenerator
+from experimentation.problem_generators.numeric_zenotravel_generator import NumericZenotravelGenerator
 
 from up_social_laws.ma_centralizer import MultiAgentProblemCentralizer
 from up_social_laws.single_agent_projection import SingleAgentProjection
@@ -118,6 +119,8 @@ def simulate_problem(problem, ma=False, print_state=False, trace_vars=[], random
             if simulator.is_goal(state):
                 print("Goal reached!")
                 return
+            if print_state:
+                print(state_to_str(state))
 
             t += 1
             actions = [a for a in simulator.get_applicable_actions(state)]
