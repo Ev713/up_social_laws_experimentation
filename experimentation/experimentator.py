@@ -59,7 +59,7 @@ def state_to_str(state):
 
 def get_compiled_problem(problem):
     rbv = Compiler(
-        name=get_new_slrc()._robustness_verifier_name,
+        name=get_general_slrc()._robustness_verifier_name,
         problem_kind=problem.kind,
         compilation_kind=CompilationKind.MA_SL_ROBUSTNESS_VERIFICATION)
     rbv.skip_checks = True
@@ -148,17 +148,17 @@ def centralise(problem):
     mac.skip_checks = True
     return mac.compile(problem).problem
 
-def get_new_slrc():
+def get_general_slrc():
     slrc = SocialLawRobustnessChecker(
         planner=None,
         robustness_verifier_name="WaitingActionRobustnessVerifier")
     slrc.skip_checks = True
     return slrc
 
-def get_old_slrc():
+def get_simple_numeric_slrc():
     return SocialLawRobustnessChecker(
         planner=None,
-        robustness_verifier_name='SimpleInstantaneousActionRobustnessVerifier')
+        robustness_verifier_name='SimpleNumericRobustnessVerifier')
 
 def check_robustness(slrc, problem):
     result = slrc.is_robust(problem)
@@ -189,7 +189,7 @@ class Experimentator:
         self.mem_lim = 16_000_000_000  # 8 GB
         self.cpu_lim = 1800  # 30 minutes
         self.timeout = 3600  # 30 seconds timeout
-        self.slrc = get_new_slrc()  # Assuming this function initializes the required object
+        self.slrc = get_general_slrc()
         self.slrc.skip_checks = True
         self.slrc._planner = OneshotPlanner(name='enhsp')
         self.func = lambda p: check_robustness(self.slrc, p)  # Function to be executed
@@ -285,7 +285,7 @@ class Experimentator:
 
 
 if __name__ == '__main__':
-    debug = False
+    debug = True
     exp = Experimentator()
     conf = [
         (('expedition',), range(1, 21), (True,)),

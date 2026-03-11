@@ -7,6 +7,7 @@ from experimentation.problem_generators import problem_generator, expedition_gen
 from up_social_laws import snp_to_num_strips
 from up_social_laws.SimpleNumericRobustnessVerifier import SimpleNumericRobustnessVerifier
 from up_social_laws.ma_problem_waitfor import MultiAgentProblemWithWaitfor
+from up_social_laws.robustness_checker import SocialLawRobustnessChecker
 from up_social_laws.single_agent_projection import SingleAgentProjection
 from up_social_laws.social_law import SocialLaw
 
@@ -95,6 +96,7 @@ if __name__ == '__main__':
     problem = gen_problem_with_social_law()
     #print(problem)
     #numeric_strips_problem = snp_to_num_strips.MultiAgentNumericStripsProblemConverter(problem).compile()
+    slrc = SocialLawRobustnessChecker(robustness_verifier_name='SimpleNumericRobustnessVerifier')
     rv = SimpleNumericRobustnessVerifier()
     compiled = rv.compile(problem).problem
     sa_problem = SingleAgentProjection(problem.agents[0]).compile(problem).problem
