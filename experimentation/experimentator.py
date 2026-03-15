@@ -19,6 +19,8 @@ import resource
 
 
 from up_social_laws.robustness_checker import SocialLawRobustnessChecker
+from up_social_laws.snp_to_num_strips import MultiAgentNumericStripsProblemConverter, \
+    MultiAgentWithWaitforNumericStripsProblemConverter
 
 
 def check_solvable(problem, ma=False):
@@ -182,7 +184,7 @@ def run_with_limits(func, args, memory_limit, cpu_limit, result_queue):
 
 
 class Experimentator:
-    def __init__(self, problems=None):
+    def __init__(self, problems=None, engine='enhsp'):
         if problems is None:
             problems = []
         self.problems = problems
@@ -191,7 +193,7 @@ class Experimentator:
         self.timeout = 3600  # 30 seconds timeout
         self.slrc = get_general_slrc()
         self.slrc.skip_checks = True
-        self.slrc._planner = OneshotPlanner(name='enhsp')
+        self.slrc._planner = OneshotPlanner(name=engine)
         self.func = lambda p: check_robustness(self.slrc, p)  # Function to be executed
         self.id = '_'
         self.log_dir = '.archive/logs'
@@ -226,6 +228,13 @@ class Experimentator:
                 writer.writerow(["-", filename, has_social_law, 'NO_RES_ERR'])
                 return {"error": "No result (possibly killed due to resource limits)", "elapsed_time": "-"}
 
+    def debug_run_once(self, problem):
+        return self.func(problem)
+
+    def debug_run_full(self, problem):
+        for prob in self.problems:
+            self.debug_run_once(prob)
+
     def experiment_full(self):
 
         self.file_path = self.log_dir + '/' + f"exp_log_{date.today().strftime('%b-%d-%Y')}_{self.id}.csv"
@@ -254,7 +263,7 @@ class Experimentator:
             print(f'{i + 1}/{total_problems} done\n')
 
     def load_problems(self, domains=('grid', 'zenotravel', 'expedition', 'markettrader'), probs=None,
-                      sl_options=(True, False)):
+                      sl_options=(True, False), use_snp_converter=False):
         if probs is None:
             probs = range(1, 21)
         filepaths = {
@@ -280,35 +289,113 @@ class Experimentator:
                     sl_opts = [False, ]
                 for has_sl in sl_opts:
                     prob = pg.generate_problem(f'pfile{prob_i}.json', sl=has_sl)
+                    if use_snp_converter:
+                        prob = MultiAgentWithWaitforNumericStripsProblemConverter(prob).compile()
                     self.problems.append((prob.name, prob, has_sl))
                     print(f'{prob.name} loaded')
 
+def run_experiments():
+    def prompt_choice(options, prompt="Enter choice: "):
+        for i, opt in enumerate(options):
+            print(f"  {i}: {opt}")
+        while True:
+            try:
+                choice = int(input(prompt))
+                if choice in range(len(options)):
+                    return choice
+            except ValueError:
+                pass
+            print("Invalid input. Try again.")
+
+    confs = [
+        (('expedition',), range(1, 21)),
+        (('grid',), range(1, 21)),
+        (('zenotravel',), range(1, 21)),
+        (('markettrader',), range(1, 21)),
+        (('grid', 'zenotravel', 'expedition', 'markettrader'), range(1, 21)),
+    ]
+    conf_labels = [
+        "Expedition",
+        "Grid",
+        "Zenotravel",
+        "Market Trader",
+        "All domains",
+    ]
+
+    # --- Choose robustness checker ---
+    print("\n=== Robustness Checker ===")
+    checker_choice = prompt_choice(
+        ["General (WaitingActionRobustnessVerifier)", "Simple Numeric (SimpleNumericRobustnessVerifier)"],
+        "Checker: "
+    )
+
+    # --- Choose social law ---
+    print("\n=== Social Law ===")
+    sl_choice = prompt_choice(
+        ["With social law only", "Without social law only", "Both (with and without)"],
+        "Social law: "
+    )
+    sl_options = {
+        0: (True,),
+        1: (False,),
+        2: (True, False),
+    }[sl_choice]
+
+    # --- Choose configuration ---
+    print("\n=== Configuration (domain + problem range) ===")
+    conf_i = prompt_choice(conf_labels, "Conf: ")
+    domains, probs = confs[conf_i]
+
+    # --- Choose mode ---
+    print("\n=== Mode ===")
+    mode = prompt_choice(["Normal", "Debug"], "Mode: ")
+    debug = (mode == 1)
+
+    # --- Build experimentator ---
+    exp = Experimentator(engine='tamer')
+
+    # Apply chosen robustness checker
+    if checker_choice == 0:
+        slrc = get_general_slrc()
+    else:
+        slrc = get_simple_numeric_slrc()
+    slrc.skip_checks = True
+    slrc._planner = OneshotPlanner(name='tamer')
+    exp.slrc = slrc
+    exp.func = lambda p: check_robustness(exp.slrc, p)
+
+    exp.load_problems(domains=domains, probs=probs, sl_options=sl_options, use_snp_converter=checker_choice==1)
+    exp.id = f"conf{conf_i}_{'general' if checker_choice == 0 else 'simple'}_sl{sl_choice}"
+
+    if debug:
+        # --- Choose problem ---
+        print(f"\n=== Problem (0–{len(exp.problems) - 1}) ===")
+        for i, (name, _, has_sl) in enumerate(exp.problems):
+            print(f"  {i}: {name} ({'with' if has_sl else 'without'} SL)")
+        problem_id = prompt_choice(
+            [name for name, _, _ in exp.problems],
+            "Problem ID: "
+        )
+        print(f"Run returned:\n\t{exp.debug_run_once(exp.problems[problem_id][1])}")
+
+    else:
+        # --- Choose single problem or all ---
+        print("\n=== Scope ===")
+        scope = prompt_choice(["Run all", "Single problem"], "Scope: ")
+
+        if scope == 0:
+            exp.experiment_full()
+        else:
+            print(f"\n=== Problem (0–{len(exp.problems) - 1}) ===")
+            for i, (name, _, has_sl) in enumerate(exp.problems):
+                print(f"  {i}: {name} ({'with' if has_sl else 'without'} SL)")
+            problem_id = prompt_choice(
+                [name for name, _, _ in exp.problems],
+                "Problem ID: "
+            )
+            name, problem, has_sl = exp.problems[problem_id]
+            exp.experiment_once(problem, metadata=(name, has_sl))
+
 
 if __name__ == '__main__':
-    debug = True
-    exp = Experimentator()
-    conf = [
-        (('expedition',), range(1, 21), (True,)),
-        (('expedition',), range(1, 21), (False,)),
-        'Debug',
-        'Exit'
-    ]
-    for i, conf_i in enumerate(conf):
-        print(f'{i}: {conf_i}')
-    bug = True
-    while bug:
-        bug = False
-        try:
-            i = int(input('Enter conf:'))
-            conf_i = conf[i]
-            if conf_i == 'Debug':
-                debug = True
-        except:
-            print('Unreadable index. Try again.')
-            bug = True
-    if not debug:
-        exp.load_problems(*conf_i)
-        exp.id = str(i)
-        if input('run all exps?').lower() in ['y', 'yes', 'ok']:
-            exp.experiment_full()
-
+    run_experiments()

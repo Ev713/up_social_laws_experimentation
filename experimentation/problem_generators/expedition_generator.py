@@ -90,7 +90,7 @@ class ExpeditionGenerator(NumericProblemGenerator):
         w = retrieve_supplies.parameter('w')
         retrieve_supplies.add_precondition(at(w))
         retrieve_supplies.add_precondition(GE(waypoint_supplies(w), 1))
-        retrieve_supplies.add_precondition(GT(sled_capacity, sled_supplies))
+        retrieve_supplies.add_precondition(GE(sled_capacity, Plus(sled_supplies, 1)))
         retrieve_supplies.add_effect(sled_supplies, Plus(sled_supplies, 1))
         retrieve_supplies.add_effect(waypoint_supplies(w), Minus(waypoint_supplies(w), 1))
 

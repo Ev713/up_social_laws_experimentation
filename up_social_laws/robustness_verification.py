@@ -906,7 +906,20 @@ class SimpleNumericRobustnessVerifier(InstantaneousActionRobustnessVerifier):
                 fluent = agent.fluent(v[0])
             else:
                 fluent = self.og_problem.ma_environment.fluent(v[0])
-            args = [self.og_problem.object(o) for o in v[1]]
+            args = []
+            for a in v[1]:
+                added_arg = False
+                eff_agent_name, eff_action_name = eff['action_id']
+                if eff_agent_name != '_ENV' and eff_action_name != '_INIT':
+                    eff_action = self.og_problem.agent(eff_agent_name).action(eff_action_name)
+                    if a in [p.name for p in eff_action.parameters]:
+                        args.append(eff_action.parameter(a))
+                    added_arg = True
+
+                if not added_arg:
+                    assert a in [o.name for o in self.og_problem.all_objects]
+                    args.append(self.og_problem.object(a))
+
             v_fluent = fluent(*args)
             action_id = (agent.name, action.name)
             if action_id != eff['action_id']:
@@ -993,6 +1006,8 @@ class SimpleNumericRobustnessVerifier(InstantaneousActionRobustnessVerifier):
                 continue
             for _, row in self.linear_preconditions_table.iterrows():
                 row = row.to_dict()
+                if row[v] == 0:
+                    continue
                 args = row['args']
                 assert row[v] == 1 and row['operator'] == '>='
                 if (v, args) not in self.W_v:

@@ -5,7 +5,7 @@ from unified_planning.shortcuts import RealType, BoolType, Not, GE, OneshotPlann
 from experimentation.experimentator import simulate_problem
 from experimentation.problem_generators import problem_generator, expedition_generator
 from up_social_laws import snp_to_num_strips
-from up_social_laws.SimpleNumericRobustnessVerifier import SimpleNumericRobustnessVerifier
+from up_social_laws.robustness_verification import SimpleNumericRobustnessVerifier
 from up_social_laws.ma_problem_waitfor import MultiAgentProblemWithWaitfor
 from up_social_laws.robustness_checker import SocialLawRobustnessChecker
 from up_social_laws.single_agent_projection import SingleAgentProjection

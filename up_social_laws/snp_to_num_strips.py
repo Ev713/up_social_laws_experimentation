@@ -1,11 +1,14 @@
 import itertools
 from collections import defaultdict
+from email._header_value_parser import Atom
 from fractions import Fraction
 
 import pandas as pd
 from unified_planning.model import Problem, InstantaneousAction, OperatorKind, Fluent, Object
 from unified_planning.model.multi_agent import Agent, MultiAgentProblem
 from unified_planning.shortcuts import Plus, Equals, Minus, Times, LT, LE, GT, GE, Dot, RealType, Not
+
+from up_social_laws.ma_problem_waitfor import MultiAgentProblemWithWaitfor
 
 ONE = ('1', ())
 
@@ -146,6 +149,7 @@ class AtomicFluent:
         self._args_names = arg_names
         self.args = []
         self._type = None
+        self.mod = None
 
     def __str__(self):
         return f'{self._fluent_name}{self.args}'
@@ -439,7 +443,7 @@ class NumericStripsProblemConverter:
         self._ready_for_lin_tables_creation = False
 
     def _initiate_problem(self):
-        self.numeric_strips_problem = Problem()
+        self.numeric_strips_problem = Problem(name=f"{self.source_problem.name}_NUM_STRIPS")
         self.fluent_manager = FluentManager(self.source_problem)
         self._copy_objects()
         self._copy_actions()
@@ -511,7 +515,7 @@ class NumericStripsProblemConverter:
                 new_fluent_args = {f'p_{i}': p for i, p in
                                    enumerate(self.get_linear_expression_fluent_args(fluent_vector, action_id))}
                 self.environment_fluent_manager().add_fluent(new_fluent_name, RealType(lower_bound, higher_bound), new_fluent_args)
-                self.add_fluent_to_ENV(self.environment_fluent_manager().create_fluent(new_fluent_name))
+                self.add_fluent_to_ENV(self.environment_fluent_manager().create_fluent(new_fluent_name), default=0)
             precon = self.create_precon(action_id, new_fluent_name, args, operator, value)
             if self.action_is_goal(action_id):
                 self.add_linear_expression_goal(action_id, precon)
@@ -595,8 +599,11 @@ class NumericStripsProblemConverter:
             sub_fluents_params.append(possible_parameters)
         return sub_fluents_params
 
-    def add_fluent_to_ENV(self, fluent):
-        self.numeric_strips_problem.add_fluent(fluent)
+    def add_fluent_to_ENV(self, fluent, default=None):
+        if default is not None:
+            self.numeric_strips_problem.add_fluent(fluent, default_initial_value=default)
+        else:
+            self.numeric_strips_problem.add_fluent(fluent)
 
     def action_is_goal(self, action_id):
         return action_id == '_GOAL'
@@ -761,6 +768,10 @@ class NumericStripsProblemConverter:
 
     def add_linear_effect(self, action_id, fluent_expr, new_value):
         if self.action_is_init(action_id):
+            fluent_name = fluent_expr.fluent().name
+            if fluent_name not in [f.name for f in self.numeric_strips_problem.ma_environment.fluents]:
+                flu_man = self.fluent_manager.env_fluent_manager
+                self.numeric_strips_problem.add_fluent(flu_man.create_fluent(fluent_name), default_initial_value=0)
             try:
                 curr_v = Fraction(str(self.numeric_strips_problem.initial_value(fluent_expr)))
             except:
@@ -794,8 +805,11 @@ class MultiAgentNumericStripsProblemConverter(NumericStripsProblemConverter):
         _, action_name = action_id
         return action_name == '_INIT'
 
-    def add_fluent_to_ENV(self, fluent):
-        self.numeric_strips_problem.ma_environment.add_fluent(fluent)
+    def add_fluent_to_ENV(self, fluent, default=None):
+        if default is not None:
+            self.numeric_strips_problem.ma_environment.add_fluent(fluent, default_initial_value=default)
+        else:
+            self.numeric_strips_problem.ma_environment.add_fluent(fluent)
 
     def environment_fluent_manager(self):
         return self.fluent_manager.env_fluent_manager
@@ -832,11 +846,16 @@ class MultiAgentNumericStripsProblemConverter(NumericStripsProblemConverter):
             else:
                 fluent_expr = flu_man.create_fluent_expression(fluent_name, fluent_args, [],
                                                                self.numeric_strips_problem.all_objects)
+                if fluent_name not in [f.name for f in self.numeric_strips_problem.agent(agent_name).fluents]:
+                    agent.add_fluent(flu_man.create_fluent(fluent_name), default_initial_value=False)
                 self.numeric_strips_problem.set_initial_value(Dot(agent, fluent_expr), val)
         else:
             flu_man = self.fluent_manager.env_fluent_manager
             fluent_expr = flu_man.create_fluent_expression(fluent_name, fluent_args, [],
                                                            self.numeric_strips_problem.all_objects)
+            if fluent_name not in [f.name for f in self.numeric_strips_problem.ma_environment.fluents]:
+                self.numeric_strips_problem.ma_environment.add_fluent(flu_man.create_fluent(fluent_name),
+                                                                      default_initial_value=False)
             self.numeric_strips_problem.set_initial_value(fluent_expr, val)
 
     def add_boolean_precondition(self, action_id, fluent:AtomicFluent, mod=None):
@@ -907,16 +926,12 @@ class MultiAgentNumericStripsProblemConverter(NumericStripsProblemConverter):
                 raise Exception(f"Couldn't parse init value: {fnode, val}")
 
     def _initiate_problem(self):
-        self.numeric_strips_problem = MultiAgentProblem()
+        self.numeric_strips_problem = MultiAgentProblem(name=f"{self.source_problem.name}_NUM_STRIPS")
         self.fluent_manager = MultiAgentFluentManager(self.source_problem)
         self._copy_agents()
-        for agent, flu_man in zip(self.numeric_strips_problem.agents, self.fluent_manager.agents_fluent_managers.values()):
-            for fluent_name in flu_man.fluent_types:
-                agent.add_fluent(flu_man.create_fluent(fluent_name))
 
         self._copy_objects()
         self._copy_actions()
-
 
     def _copy_actions(self):
         for source_agent in self.source_problem.agents:
@@ -930,3 +945,13 @@ class MultiAgentNumericStripsProblemConverter(NumericStripsProblemConverter):
     def _copy_agents(self):
         for agent in self.source_problem.agents:
             self.numeric_strips_problem.add_agent(Agent(agent.name, self.numeric_strips_problem))
+
+
+class MultiAgentWithWaitforNumericStripsProblemConverter(MultiAgentNumericStripsProblemConverter):
+    def _initiate_problem(self):
+        self.numeric_strips_problem = MultiAgentProblemWithWaitfor(name=f"{self.source_problem.name}_NUM_STRIPS")
+        self.fluent_manager = MultiAgentFluentManager(self.source_problem)
+        self._copy_agents()
+
+        self._copy_objects()
+        self._copy_actions()
