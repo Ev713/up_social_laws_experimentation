@@ -129,10 +129,10 @@ class NumericProblemGenerator(ProblemGenerator):
                 else:
                     agent = self.problem.agent(agent_name)
                 if goaltuple[0] in OPERATORS:
-                    expr = OPERATORS[goaltuple[0]] \
-                        (*[self.create_fluent_expression(goal_expr,
+                    args = ([self.create_fluent_expression(goal_expr,
                                                          None if agent_name == 'global' else agent) for goal_expr in
                            goaltuple[1:]])
+                    expr = OPERATORS[goaltuple[0]](*args)
                     agent.add_public_goal(expr)
 
                 else:

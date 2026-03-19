@@ -49,6 +49,8 @@ def normalize_dataframe(df, dont_change_columns=None, ignore_as_divisor_columns=
     numeric_cols = []
     for col in df_frac.columns:
         col_objects = list(df_frac[col])
+        if col in ['action_id', 'precondition_index', 'is_waitfor', 'operator']:
+            continue
         if all([isinstance(obj, int) or isinstance(obj, float) for obj in col_objects]):
             numeric_cols.append(col)
 
@@ -193,7 +195,7 @@ class SimpleBoolPreconditionData(NumStripsPreconditionData):
 
     def __str__(self):
         prefix = ''
-        if self.mod is 'NOT':
+        if self.mod == 'NOT':
             prefix = 'NOT'
         return prefix + '_' + str(self.fluent_expr)
 
@@ -281,7 +283,7 @@ class LinearEffectData(NumStripsEffectData):
 
 class NumericStripsActionData:
 
-    def __init__(self, action=None):
+    def __init__(self, action=None, agent_name=None, waitfor_preconditions=None):
         self.parameters = {}
         self.name = None
         self._source_action = action
@@ -289,6 +291,8 @@ class NumericStripsActionData:
         self.linear_preconditions = []
         self.boolean_effects = []
         self.linear_effects = []
+        self._agent_name = agent_name
+        self._waitfor_preconditions = waitfor_preconditions or []
         if action is not None:
             self.parameters = {p.name: p.type for p in action.parameters}
             self.name = action.name
@@ -304,7 +308,8 @@ class NumericStripsActionData:
             for prec_parser, preconditions_list in [(SimpleBoolPreconditionData, self.boolean_preconditions),
                                                     (LinearPreconditionData, self.linear_preconditions)]:
                 try:
-                    parsed_prec = prec_parser(prec)
+                    is_wf = prec in (self._waitfor_preconditions or [])
+                    parsed_prec = prec_parser(prec, agent_name=self._agent_name, is_waitfor=is_wf)
                     preconditions_list.append(parsed_prec)
                     break
                 except:
@@ -506,7 +511,7 @@ class NumericStripsProblemConverter:
             value = row['value']
             args = row['args']
             fluent_vector = row.drop(
-                ['action_id', 'precondition_index', 'operator', 'value', 'args', 'coeff'])
+                ['action_id', 'precondition_index', 'operator', 'value', 'args', 'is_waitfor', 'coeff'])
 
             new_fluent_name = self.generate_linear_expression_fluent_name(fluent_vector, action_id)
             if not self.environment_fluent_manager().has(new_fluent_name):
@@ -517,6 +522,7 @@ class NumericStripsProblemConverter:
                 self.environment_fluent_manager().add_fluent(new_fluent_name, RealType(lower_bound, higher_bound), new_fluent_args)
                 self.add_fluent_to_ENV(self.environment_fluent_manager().create_fluent(new_fluent_name), default=0)
             precon = self.create_precon(action_id, new_fluent_name, args, operator, value)
+            is_waitfor = bool(row.get('is_waitfor', False))
             if self.action_is_goal(action_id):
                 self.add_linear_expression_goal(action_id, precon)
 
@@ -525,6 +531,16 @@ class NumericStripsProblemConverter:
             else:
                 action = self.get_action(action_id)
                 action.add_precondition(precon)
+                if is_waitfor and hasattr(self.numeric_strips_problem, 'waitfor'):
+                    # action_id may be (agent, action) tuple in MA problems
+                    if isinstance(action_id, tuple):
+                        agent_name, action_name = action_id
+                    else:
+                        agent_name, action_name = '_ENV', action_id
+                    try:
+                        self.numeric_strips_problem.waitfor.annotate_as_waitfor(agent_name, action_name, precon)
+                    except Exception:
+                        pass
 
     def get_action(self, action_id):
         if self.action_is_goal(action_id) or self.action_is_init(action_id):
@@ -552,7 +568,7 @@ class NumericStripsProblemConverter:
                     # for every appearance, designate it as the target fluent
                     # and treat all other appearances as a regular sub-fluent.
 
-                if not self._linear_fluent_is_affected(lin_fluent_name, target_fluent):
+                if not self._linear_fluent_is_affected(lin_fluent_name, target_fluent, action_id):
                     continue
 
                 sub_fluent_params_options = self._generate_sub_fluent_parameter_options(action_id, lin_fluent_name)
@@ -571,7 +587,7 @@ class NumericStripsProblemConverter:
                         new_value = Fraction(str(coeff)) * Fraction(str(change))
                         self.add_linear_effect(action_id, changing_fluent, new_value)
 
-    def _linear_fluent_is_affected(self, lin_fluent_name, fluent_name):
+    def _linear_fluent_is_affected(self, lin_fluent_name, fluent_name, action_id):
         if lin_fluent_name not in self.fluent_vector_dict:
             return False
         vector = self.fluent_vector_dict[lin_fluent_name]
@@ -627,10 +643,9 @@ class NumericStripsProblemConverter:
     def add_linear_expression_goal(self, action_id, precon):
         self.numeric_strips_problem.add_goal(precon)
 
-
     def create_linear_preconditions_table(self):
             self._prepare_for_linear_tables_creation()
-            columns = [ 'action_id', 'precondition_index', 'operator', 'value', 'args']
+            columns = [ 'action_id', 'precondition_index', 'operator', 'value', 'args', 'is_waitfor']
             sub_fluent_columns = []
             for action_id, action in self._action_data_getter.items():
                 for idx, lin_prec in enumerate(action.linear_preconditions):
@@ -648,7 +663,8 @@ class NumericStripsProblemConverter:
             for action_id, action in self._action_data_getter.items():
                 for idx, lin_prec in enumerate(action.linear_preconditions):
                     row = {'action_id': action_id, 'precondition_index': idx,
-                               'operator': operator_to_symbol(lin_prec.operator), 'value': lin_prec.value}
+                               'operator': operator_to_symbol(lin_prec.operator), 'value': lin_prec.value,
+                               'is_waitfor': lin_prec.is_waitfor}
                     new_fluent_args = []
                     # Track local occurrences
                     local_counter = defaultdict(int)
@@ -693,7 +709,13 @@ class NumericStripsProblemConverter:
         self.parse_initial_values()
 
         for agent, action in itertools.chain(*[[(agent, action) for action in agent.actions] for agent in self.source_problem.agents]):
-            self._action_data_getter[(agent.name, action.name)] = NumericStripsActionData(action)
+            waitfor_precs = []
+            if hasattr(self.source_problem, 'waitfor'):
+                try:
+                    waitfor_precs = self.source_problem.waitfor.get_preconditions_wait(agent.name, action.name)
+                except Exception:
+                    waitfor_precs = []
+            self._action_data_getter[(agent.name, action.name)] = NumericStripsActionData(action, agent_name=agent.name, waitfor_preconditions=waitfor_precs)
         self._ready_for_lin_tables_creation = True
 
     def compile(self):
@@ -709,7 +731,7 @@ class NumericStripsProblemConverter:
             for prec in action_data.boolean_preconditions:
                 fluent = prec.target_fluent
                 mod = fluent.mod
-                self.add_boolean_precondition(action_id, fluent, mod=mod)
+                self.add_boolean_precondition(action_id, fluent, mod=mod, is_waitfor=prec.is_waitfor)
 
         self.create_linear_expressions_fluents_and_preconditions(linear_preconditions_table)
         self.create_linear_expressions_effects_and_initial_values(linear_effects_table)
@@ -748,7 +770,7 @@ class NumericStripsProblemConverter:
                                                            self.numeric_strips_problem.all_objects)
             self.numeric_strips_problem.set_initial_value(fluent_expr, val)
 
-    def add_boolean_precondition(self, action_id, fluent: AtomicFluent, mod=None):
+    def add_boolean_precondition(self, action_id, fluent: AtomicFluent, mod=None, is_waitfor=False):
         action_name = action_id
         fluent_name, fluent_args = fluent.to_tuple()
         flu_man = self.fluent_manager
@@ -759,6 +781,14 @@ class NumericStripsProblemConverter:
             if mod == 'NOT':
                 fluent_expr = Not(fluent_expr)
             action.add_precondition(fluent_expr)
+            if is_waitfor and hasattr(self.numeric_strips_problem, 'waitfor'):
+                try:
+                    # For single-agent converter, use '_ENV' as agent name
+                    agent_name = '_ENV'
+                    action_name_for_wait = action_name
+                    self.numeric_strips_problem.waitfor.annotate_as_waitfor(agent_name, action_name_for_wait, fluent_expr)
+                except Exception:
+                    pass
         else:
             fluent_expr = flu_man.create_fluent_expression(fluent_name, fluent_args, [],
                                                                self.numeric_strips_problem.all_objects)
@@ -786,6 +816,23 @@ class MultiAgentNumericStripsProblemConverter(NumericStripsProblemConverter):
 
     def __init__(self, problem):
         NumericStripsProblemConverter.__init__(self, problem)
+
+    def _linear_fluent_is_affected(self, lin_fluent_name, fluent_name, action_id):
+        if lin_fluent_name not in self.fluent_vector_dict:
+            return False
+        agent_name = action_id[0]
+        if agent_name != '_ENV':
+            lin_fluent_agent_name = lin_fluent_name.split('__')[1]
+            if self.agent_has_fluent(agent_name, fluent_name) and agent_name != lin_fluent_agent_name:
+                return False
+        vector = self.fluent_vector_dict[lin_fluent_name]
+        for sub_fluent, _ in vector.items():
+            if remove_counter_suffix(sub_fluent) == fluent_name and vector[sub_fluent] != 0:
+                return True
+        return False
+
+    def agent_has_fluent(self, agent_name, fluent_name):
+        return fluent_name in [f.name for f in self.source_problem.agent(agent_name).fluents]
 
     def get_linear_expression_appropriate_manager(self, lin_fluent_name):
         agent_name = lin_fluent_name.split('__')[1]
@@ -858,7 +905,7 @@ class MultiAgentNumericStripsProblemConverter(NumericStripsProblemConverter):
                                                                       default_initial_value=False)
             self.numeric_strips_problem.set_initial_value(fluent_expr, val)
 
-    def add_boolean_precondition(self, action_id, fluent:AtomicFluent, mod=None):
+    def add_boolean_precondition(self, action_id, fluent:AtomicFluent, mod=None, is_waitfor=False):
         agent_name, action_name = action_id
 
         fluent_name, fluent_args = fluent.to_tuple()
@@ -872,14 +919,17 @@ class MultiAgentNumericStripsProblemConverter(NumericStripsProblemConverter):
                 if mod == 'NOT':
                     fluent_expr = Not(fluent_expr)
                 action.add_precondition(fluent_expr)
+                if is_waitfor and hasattr(self.numeric_strips_problem, 'waitfor'):
+                    try:
+                        self.numeric_strips_problem.waitfor.annotate_as_waitfor(agent_name, action_name, fluent_expr)
+                    except Exception:
+                        pass
             else:
                 fluent_expr = flu_man.create_fluent_expression(fluent_name, fluent_args, [],
                                                                self.numeric_strips_problem.all_objects)
                 if mod == 'NOT':
                     fluent_expr = Not(fluent_expr)
                 agent.add_public_goal(fluent_expr)
-
-
 
     def parse_goal_conditions(self):
         for agent in self.source_problem.agents:

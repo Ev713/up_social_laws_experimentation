@@ -4,13 +4,35 @@ from unified_planning.shortcuts import RealType, BoolType, Not, GE, OneshotPlann
 
 from experimentation.experimentator import simulate_problem
 from experimentation.problem_generators import problem_generator, expedition_generator
+from experimentation.problem_generators.expedition_generator import ExpeditionGenerator
+from experimentation.problem_generators.grid_generator import GridGenerator
+from experimentation.problem_generators.market_trader_generator import MarketTraderGenerator
+from experimentation.problem_generators.numeric_grid_generator import NumericGridGenerator
+from experimentation.problem_generators.numeric_civ_generator import NumericCivGenerator
+
 from up_social_laws import snp_to_num_strips
 from up_social_laws.robustness_verification import SimpleNumericRobustnessVerifier
 from up_social_laws.ma_problem_waitfor import MultiAgentProblemWithWaitfor
 from up_social_laws.robustness_checker import SocialLawRobustnessChecker
 from up_social_laws.single_agent_projection import SingleAgentProjection
+from up_social_laws.snp_to_num_strips import NumericStripsProblemConverter, MultiAgentWithWaitforNumericStripsProblemConverter
 from up_social_laws.social_law import SocialLaw
 
+def get_expedition_problem(sl=True):
+    exp = ExpeditionGenerator()
+    return exp.generate_problem('/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/numeric_problems_instances/expedition/test/minimal.json', sl)
+
+def get_markettrader_problem(sl=True):
+    pg = MarketTraderGenerator()
+    return pg.generate_problem('/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/numeric_problems_instances/markettrader/generated_json/pfile1.json', sl)
+
+def get_grid_problem(sl=True):
+    pg = NumericGridGenerator()
+    return pg.generate_problem('/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/numeric_problems_instances/grid/json/pfile1.json', sl)
+
+def get_civ_problem(sl=True):
+    pg = NumericCivGenerator()
+    return pg.generate_problem('/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/numeric_problems_instances/civ/json/pfile1.json', sl)
 
 def gen_problem_with_social_law():
     problem = MultiAgentProblemWithWaitfor('simple_numeric_tool_problem')
@@ -93,15 +115,14 @@ def gen_problem_with_social_law():
     return problem
 
 if __name__ == '__main__':
-    problem = gen_problem_with_social_law()
-    #print(problem)
-    #numeric_strips_problem = snp_to_num_strips.MultiAgentNumericStripsProblemConverter(problem).compile()
+    problem = get_civ_problem(sl=False)
+    problem = MultiAgentWithWaitforNumericStripsProblemConverter(problem).compile()
+    print(problem)
     slrc = SocialLawRobustnessChecker(robustness_verifier_name='SimpleNumericRobustnessVerifier')
-    rv = SimpleNumericRobustnessVerifier()
-    compiled = rv.compile(problem).problem
+    compiled = SimpleNumericRobustnessVerifier().compile(problem).problem
     sa_problem = SingleAgentProjection(problem.agents[0]).compile(problem).problem
     #print(compiled)
-    print(sa_problem)
+    #print(sa_problem)
     #simulate_problem(compiled, print_state=True)
 
     with OneshotPlanner(problem_kind=sa_problem.kind) as planner:

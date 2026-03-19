@@ -907,6 +907,7 @@ class SimpleNumericRobustnessVerifier(InstantaneousActionRobustnessVerifier):
             else:
                 fluent = self.og_problem.ma_environment.fluent(v[0])
             args = []
+            assert len(v[1]) == fluent.arity
             for a in v[1]:
                 added_arg = False
                 eff_agent_name, eff_action_name = eff['action_id']
@@ -914,7 +915,7 @@ class SimpleNumericRobustnessVerifier(InstantaneousActionRobustnessVerifier):
                     eff_action = self.og_problem.agent(eff_agent_name).action(eff_action_name)
                     if a in [p.name for p in eff_action.parameters]:
                         args.append(eff_action.parameter(a))
-                    added_arg = True
+                        added_arg = True
 
                 if not added_arg:
                     assert a in [o.name for o in self.og_problem.all_objects]
@@ -925,7 +926,7 @@ class SimpleNumericRobustnessVerifier(InstantaneousActionRobustnessVerifier):
             if action_id != eff['action_id']:
                 continue
             k = eff['change']
-            for w0 in self.W_v[v]:
+            for w0 in self.W_v.get(v, []):
                 if not GE(v_fluent, w0) in self.prec_wt:
                     print('Warning, weird things with wt^phi happen')
                     continue

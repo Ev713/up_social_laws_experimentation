@@ -7,6 +7,7 @@ from experimentation.problem_generators.expedition_generator import ExpeditionGe
 from experimentation.problem_generators.market_trader_generator import MarketTraderGenerator
 from experimentation.problem_generators.numeric_grid_generator import NumericGridGenerator
 from experimentation.problem_generators.numeric_zenotravel_generator import NumericZenotravelGenerator
+from experimentation.problem_generators.numeric_civ_generator import NumericCivGenerator
 
 from up_social_laws.ma_centralizer import MultiAgentProblemCentralizer
 from up_social_laws.single_agent_projection import SingleAgentProjection
@@ -271,19 +272,21 @@ class Experimentator:
             'zenotravel': './numeric_problems_instances/zenotravel/json',
             'expedition': './numeric_problems_instances/expedition/json',
             'markettrader': './numeric_problems_instances/markettrader/generated_json',
+            'civ': './numeric_problems_instances/civ/json',
         }
 
         pgs = {
             'grid': NumericGridGenerator,
             'zenotravel': NumericZenotravelGenerator,
             'expedition': ExpeditionGenerator,
-            'markettrader': MarketTraderGenerator
+            'markettrader': MarketTraderGenerator,
+            'civ': NumericCivGenerator
         }
         for prob_i in probs:
             for domain in domains:
                 pg = pgs[domain]()
                 pg.instances_folder = filepaths[domain]
-                if domain in ['grid', 'zenotravel', 'expedition']:
+                if domain in ['grid', 'zenotravel', 'expedition', 'civ']:
                     sl_opts = sl_options
                 else:
                     sl_opts = [False, ]
@@ -312,6 +315,7 @@ def run_experiments():
         (('grid',), range(1, 21)),
         (('zenotravel',), range(1, 21)),
         (('markettrader',), range(1, 21)),
+        (('civ',), range(1, 6)),
         (('grid', 'zenotravel', 'expedition', 'markettrader'), range(1, 21)),
     ]
     conf_labels = [
@@ -319,13 +323,14 @@ def run_experiments():
         "Grid",
         "Zenotravel",
         "Market Trader",
+        "Civilization",
         "All domains",
     ]
 
     # --- Choose robustness checker ---
     print("\n=== Robustness Checker ===")
     checker_choice = prompt_choice(
-        ["General (WaitingActionRobustnessVerifier)", "Simple Numeric (SimpleNumericRobustnessVerifier)"],
+        ["General (WaitingActionRobustnessVerifier)", "Simple Numeric (SimpleNumericRobustnessVerifier)", "Both (run general then simple)"],
         "Checker: "
     )
 
@@ -364,37 +369,189 @@ def run_experiments():
     exp.slrc = slrc
     exp.func = lambda p: check_robustness(exp.slrc, p)
 
-    exp.load_problems(domains=domains, probs=probs, sl_options=sl_options, use_snp_converter=checker_choice==1)
-    exp.id = f"conf{conf_i}_{'general' if checker_choice == 0 else 'simple'}_sl{sl_choice}"
+    # If both checkers selected, load problems unconverted and convert per-checker when needed
+    use_snp_for_load = (checker_choice == 1)
+    if checker_choice == 2:
+        use_snp_for_load = False
+    exp.load_problems(domains=domains, probs=probs, sl_options=sl_options, use_snp_converter=use_snp_for_load)
+
+    # Prepare list of checkers to run: tuple(slrc, needs_snp_conversion, label)
+    if checker_choice == 2:
+        checkers = [
+            (get_general_slrc(), False, 'general'),
+            (get_simple_numeric_slrc(), True, 'simple')
+        ]
+        exp.id = f"conf{conf_i}_both_sl{sl_choice}"
+    else:
+        if checker_choice == 0:
+            checkers = [(get_general_slrc(), False, 'general')]
+            exp.id = f"conf{conf_i}_general_sl{sl_choice}"
+        else:
+            checkers = [(get_simple_numeric_slrc(), True, 'simple')]
+            exp.id = f"conf{conf_i}_simple_sl{sl_choice}"
 
     if debug:
-        # --- Choose problem ---
-        print(f"\n=== Problem (0–{len(exp.problems) - 1}) ===")
-        for i, (name, _, has_sl) in enumerate(exp.problems):
-            print(f"  {i}: {name} ({'with' if has_sl else 'without'} SL)")
-        problem_id = prompt_choice(
-            [name for name, _, _ in exp.problems],
-            "Problem ID: "
-        )
-        print(f"Run returned:\n\t{exp.debug_run_once(exp.problems[problem_id][1])}")
+        # --- Scope ---
+        print("\n=== Scope ===")
+        scope = prompt_choice(["Run all", "Single problem"], "Scope: ")
+
+        def run_checkers_on_problem(name, problem):
+            results = {}
+            for slrc, needs_snp, label in checkers:
+                print(f"\n=== Checker: {label} ===")
+                slrc.skip_checks = True
+                slrc._planner = OneshotPlanner(name='tamer')
+                exp.slrc = slrc
+                exp.func = lambda p, slrc=slrc: check_robustness(slrc, p)
+                prob_to_use = problem
+                if needs_snp:
+                    try:
+                        prob_to_use = MultiAgentWithWaitforNumericStripsProblemConverter(problem).compile()
+                    except Exception as e:
+                        print(f"Conversion failed for {name} under {label}: {e}")
+                        results[label] = f"Conversion failed: {e}"
+                        continue
+                try:
+                    res = exp.debug_run_once(prob_to_use)
+                except Exception as e:
+                    res = f"Error: {e}"
+                print(f"Result ({label}): {res}")
+                results[label] = res
+
+            # If we have results from multiple checkers, compare equality
+            if len(results) > 1:
+                vals = list(results.values())
+                try:
+                    equal = all(v == vals[0] for v in vals)
+                except Exception:
+                    equal = False
+                print("Comparison equal:", equal)
+            return results
+
+        if scope == 1:
+            print(f"\n=== Problem (0–{len(exp.problems) - 1}) ===")
+            for i, (name, _, has_sl) in enumerate(exp.problems):
+                print(f"  {i}: {name} ({'with' if has_sl else 'without'} SL)")
+            problem_id = prompt_choice([name for name, _, _ in exp.problems], "Problem ID: ")
+            name, problem, has_sl = exp.problems[problem_id]
+            run_checkers_on_problem(name, problem)
+        else:
+            for name, problem, has_sl in exp.problems:
+                print(f"--- {name} ({'with' if has_sl else 'without'} SL) ---")
+                run_checkers_on_problem(name, problem)
 
     else:
         # --- Choose single problem or all ---
         print("\n=== Scope ===")
         scope = prompt_choice(["Run all", "Single problem"], "Scope: ")
 
+        print("\n=== Action ===")
+        action = prompt_choice([
+            "Run robustness check (default)",
+            "Compile only",
+            "Compile then run",
+        ], "Action: ")
+
         if scope == 0:
-            exp.experiment_full()
+            if action == 0:
+                for slrc, needs_snp, label in checkers:
+                    print(f"\n=== Running checker: {label} ===")
+                    slrc.skip_checks = True
+                    slrc._planner = OneshotPlanner(name='tamer')
+                    exp.slrc = slrc
+                    exp.func = lambda p, slrc=slrc: check_robustness(slrc, p)
+                    if not needs_snp:
+                        exp.experiment_full()
+                    else:
+                        # For SNP-needed checker, convert per-problem and run
+                        exp.file_path = exp.log_dir + '/' + f"exp_log_{date.today().strftime('%b-%d-%Y')}_{exp.id}_{label}.csv"
+                        with open(exp.file_path, mode="w", newline="") as file:
+                            writer = csv.writer(file)
+                            writer.writerow(['time', 'name', 'has_social_law', 'result'])
+                        for name, problem, has_sl in exp.problems:
+                            try:
+                                conv = MultiAgentWithWaitforNumericStripsProblemConverter(problem).compile()
+                                exp.experiment_once(conv, metadata=(name, has_sl))
+                            except Exception as e:
+                                print(f"Conversion/run failed for {name} under {label}: {e}")
+            elif action == 1:
+                for slrc, needs_snp, label in checkers:
+                    print(f"\n=== Running checker (compile only): {label} ===")
+                    slrc.skip_checks = True
+                    slrc._planner = OneshotPlanner(name='tamer')
+                    exp.slrc = slrc
+                    exp.func = lambda p, slrc=slrc: check_robustness(slrc, p)
+                    for name, problem, has_sl in exp.problems:
+                        prob_to_use = problem
+                        if needs_snp:
+                            try:
+                                prob_to_use = MultiAgentWithWaitforNumericStripsProblemConverter(problem).compile()
+                            except Exception as e:
+                                print(f"Conversion failed for {name} under {label}: {e}")
+                                continue
+                        try:
+                            compiled = get_compiled_problem(prob_to_use)
+                            print(f"Compiled problem for {name} (checker={label}): {compiled.name}")
+                        except Exception as e:
+                            print(f"Compilation failed for {name} under {label}: {e}")
+            elif action == 2:
+                for slrc, needs_snp, label in checkers:
+                    print(f"\n=== Running checker (compile then run): {label} ===")
+                    slrc.skip_checks = True
+                    slrc._planner = OneshotPlanner(name='tamer')
+                    exp.slrc = slrc
+                    exp.func = lambda p, slrc=slrc: check_robustness(slrc, p)
+                    exp.file_path = exp.log_dir + '/' + f"exp_log_{date.today().strftime('%b-%d-%Y')}_{exp.id}_{label}.csv"
+                    with open(exp.file_path, mode="w", newline="") as file:
+                        writer = csv.writer(file)
+                        writer.writerow(['time', 'name', 'has_social_law', 'result'])
+                    for name, problem, has_sl in exp.problems:
+                        prob_to_use = problem
+                        if needs_snp:
+                            try:
+                                prob_to_use = MultiAgentWithWaitforNumericStripsProblemConverter(problem).compile()
+                            except Exception as e:
+                                print(f"Conversion failed for {name} under {label}: {e}")
+                                continue
+                        try:
+                            compiled = get_compiled_problem(prob_to_use)
+                            print(f"Running compiled problem for {name} (checker={label})")
+                            exp.experiment_once(compiled, metadata=(name, has_sl))
+                        except Exception as e:
+                            print(f"Compilation/run failed for {name} under {label}: {e}")
         else:
             print(f"\n=== Problem (0–{len(exp.problems) - 1}) ===")
             for i, (name, _, has_sl) in enumerate(exp.problems):
                 print(f"  {i}: {name} ({'with' if has_sl else 'without'} SL)")
-            problem_id = prompt_choice(
-                [name for name, _, _ in exp.problems],
-                "Problem ID: "
-            )
+            problem_id = prompt_choice([name for name, _, _ in exp.problems], "Problem ID: ")
             name, problem, has_sl = exp.problems[problem_id]
-            exp.experiment_once(problem, metadata=(name, has_sl))
+            for slrc, needs_snp, label in checkers:
+                print(f"\n=== Checker: {label} ===")
+                slrc.skip_checks = True
+                slrc._planner = OneshotPlanner(name='tamer')
+                exp.slrc = slrc
+                exp.func = lambda p, slrc=slrc: check_robustness(slrc, p)
+                prob_to_use = problem
+                if needs_snp:
+                    try:
+                        prob_to_use = MultiAgentWithWaitforNumericStripsProblemConverter(problem).compile()
+                    except Exception as e:
+                        print(f"Conversion failed for {name} under {label}: {e}")
+                        continue
+                if action == 0:
+                    exp.experiment_once(prob_to_use, metadata=(name, has_sl))
+                elif action == 1:
+                    try:
+                        compiled = get_compiled_problem(prob_to_use)
+                        print(f"Compiled problem for {name} (checker={label}): {compiled.name}")
+                    except Exception as e:
+                        print(f"Compilation failed for {name} under {label}: {e}")
+                elif action == 2:
+                    try:
+                        compiled = get_compiled_problem(prob_to_use)
+                        exp.experiment_once(compiled, metadata=(name, has_sl))
+                    except Exception as e:
+                        print(f"Compilation/run failed for {name} under {label}: {e}")
 
 
 if __name__ == '__main__':
