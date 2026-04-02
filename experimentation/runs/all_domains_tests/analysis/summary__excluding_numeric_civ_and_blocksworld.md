@@ -1,0 +1,56 @@
+# Run Analysis
+
+- Rows in results.csv: 604
+- Finished pairs in progress.log: 724
+- Internal errors: 44
+- NON_ROBUST_SINGLE_AGENT cases: 52
+- Timeouts: 227
+- Log files with OutOfMemoryError: 8
+- Log files with wt^phi warnings: 47
+
+## Internal Error Notes
+- numeric_expedition__pfile5__without_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=23655745, max_states_evaluated=31959855
+- numeric_expedition__pfile5__without_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=23737774, max_states_evaluated=32069503, wt^phi warnings=40
+- numeric_expedition__pfile6__without_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=20308132, max_states_evaluated=29027760
+- numeric_expedition__pfile6__without_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=20513372, max_states_evaluated=29317278, wt^phi warnings=40
+- numeric_expedition__pfile6__with_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=19951944, max_states_evaluated=27889573
+- numeric_expedition__pfile6__with_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=19608178, max_states_evaluated=27423560, wt^phi warnings=44
+- numeric_expedition__pfile8__without_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=17858760, max_states_evaluated=26403219
+- numeric_expedition__pfile8__without_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=18034684, max_states_evaluated=26660836, wt^phi warnings=66
+- numeric_expedition__pfile8__with_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=16132694, max_states_evaluated=23845463
+- numeric_expedition__pfile8__with_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=15825052, max_states_evaluated=23395793, wt^phi warnings=72
+- numeric_expedition__pfile9__without_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=17747068, max_states_evaluated=26146070
+- numeric_expedition__pfile9__without_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=17919493, max_states_evaluated=26394683, wt^phi warnings=66
+- numeric_expedition__pfile9__with_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=15146629, max_states_evaluated=22617170
+- numeric_expedition__pfile9__with_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=14910908, max_states_evaluated=22266014, wt^phi warnings=72
+- numeric_expedition__pfile11__without_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=16310106, max_states_evaluated=25074322, OutOfMemoryError seen in log
+- numeric_expedition__pfile11__without_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=16320286, max_states_evaluated=25089825, OutOfMemoryError seen in log, wt^phi warnings=66
+- numeric_expedition__pfile11__with_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=13677285, max_states_evaluated=20799578
+- numeric_expedition__pfile11__with_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=13547363, max_states_evaluated=20604380, OutOfMemoryError seen in log, wt^phi warnings=72
+- numeric_expedition__pfile12__without_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=16607949, max_states_evaluated=25265405
+- numeric_expedition__pfile12__without_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=16743498, max_states_evaluated=25470819, wt^phi warnings=96
+- numeric_expedition__pfile12__with_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=12894213, max_states_evaluated=19775257
+- numeric_expedition__pfile12__with_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=12720185, max_states_evaluated=19510969, OutOfMemoryError seen in log, wt^phi warnings=104
+- numeric_expedition__pfile15__without_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=20902316, max_states_evaluated=29168645
+- numeric_expedition__pfile15__without_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=20976096, max_states_evaluated=29270155, wt^phi warnings=96
+- numeric_expedition__pfile16__without_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=21202543, max_states_evaluated=29830044
+- numeric_expedition__pfile16__without_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=21297238, max_states_evaluated=29960005, wt^phi warnings=96
+- numeric_expedition__pfile16__with_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=19114658, max_states_evaluated=26770632
+- numeric_expedition__pfile16__with_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=18836449, max_states_evaluated=26383717, wt^phi warnings=104
+- numeric_expedition__pfile17__without_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=17647629, max_states_evaluated=26282437
+- numeric_expedition__pfile17__without_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=17747871, max_states_evaluated=26430455, wt^phi warnings=130
+- numeric_expedition__pfile17__with_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=15547910, max_states_evaluated=23211274
+- numeric_expedition__pfile17__with_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=15246706, max_states_evaluated=22773602, OutOfMemoryError seen in log, wt^phi warnings=140
+- numeric_expedition__pfile18__without_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=16722025, max_states_evaluated=25458333
+- numeric_expedition__pfile18__without_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=16871712, max_states_evaluated=25683539, wt^phi warnings=130
+- numeric_expedition__pfile18__with_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=15359897, max_states_evaluated=22948151
+- numeric_expedition__pfile18__with_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=15096405, max_states_evaluated=22558827, wt^phi warnings=140
+- numeric_expedition__pfile19__without_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=16700568, max_states_evaluated=25400199, OutOfMemoryError seen in log
+- numeric_expedition__pfile19__without_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=16671262, max_states_evaluated=25356140, OutOfMemoryError seen in log, wt^phi warnings=130
+- numeric_expedition__pfile19__with_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=13605863, max_states_evaluated=20847374
+- numeric_expedition__pfile19__with_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=13361394, max_states_evaluated=20477672, OutOfMemoryError seen in log, wt^phi warnings=140
+- numeric_expedition__pfile20__without_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=16800225, max_states_evaluated=25745587
+- numeric_expedition__pfile20__without_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=16817503, max_states_evaluated=25770445, wt^phi warnings=130
+- numeric_expedition__pfile20__with_sl / general: planner_status=INTERNAL_ERROR; max_expanded_nodes=13034367, max_states_evaluated=19913262
+- numeric_expedition__pfile20__with_sl / simple: planner_status=INTERNAL_ERROR; max_expanded_nodes=12860027, max_states_evaluated=19649253, wt^phi warnings=140
+
