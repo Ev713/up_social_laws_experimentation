@@ -70,13 +70,25 @@ class ProblemGenerator:
             else:
                 agent = self.problem.agent(key)
                 for fluentuple in self.instance_data['init_values'][key]:
-                    fluent = fluentuple[0]
-                    self.problem.set_initial_value(Dot(agent, agent.fluent(fluent)), True)
+                    fluent = agent.fluent(fluentuple[0])
+                    params = (unified_planning.model.Object(v, self.obj_type[v]) for v in fluentuple[1])
+                    self.problem.set_initial_value(Dot(agent, fluent(*params)), True)
 
     def set_goals(self):
+        goals_data = self.instance_data['goals']
+
+        if isinstance(goals_data, dict):
+            for agent_name, agent_goals in goals_data.items():
+                agent = self.problem.agent(agent_name)
+                for goaltuple in agent_goals:
+                    fluent = self.problem.ma_environment.fluent(goaltuple[0])
+                    params = (unified_planning.model.Object(v, self.obj_type[v]) for v in goaltuple[1])
+                    agent.add_public_goal(fluent(*params))
+            return
+
         agent_index = 0
         num_of_agents = len(self.problem.agents)
-        for goaltuple in self.instance_data['goals']:
+        for goaltuple in goals_data:
             agent = self.problem.agents[agent_index]
             agent_index = (agent_index + 1) % num_of_agents
             fluent = self.problem.ma_environment.fluent(goaltuple[0])

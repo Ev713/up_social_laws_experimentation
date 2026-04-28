@@ -415,16 +415,50 @@ The full run contains 342 benchmark configurations and executes both verifiers o
 
 \subsection{Benchmark Domains}
 
-The benchmark suite spans nine domains:
+% Domain review checklist for this section:
+% [ ] numeric_civ
+% [ ] numeric_expedition
+% [x] numeric_grid
+% [x] numeric_markettrader complete
+% [x] numeric_zenotravel complete
+% [x] blocksworld
+% [x] driverlog
+% [x] grid complete
+% [ ] intersection
+% [ ] zenotravel
+
+The full benchmark suite spans ten domains:
+\texttt{blocksworld},
 \texttt{driverlog},
 \texttt{grid},
 \texttt{intersection},
+\texttt{numeric\_civ},
 \texttt{numeric\_expedition},
 \texttt{numeric\_grid},
 \texttt{numeric\_markettrader},
 \texttt{numeric\_zenotravel}, and
 \texttt{zenotravel}.
-Most domains were evaluated both with and without a social law; \texttt{numeric\_markettrader} appears only without a social law in this run. Most domain/setting combinations contain 20 instances; \texttt{numeric\_expedition} contains 21 because the suite also includes a minimal instance.
+The filtered analysis reported below excludes \texttt{numeric\_civ} and \texttt{blocksworld}. Most domains were evaluated both with and without a social law; \texttt{numeric\_markettrader} and \texttt{blocksworld} appear only without a social law in this run. Most domain/setting combinations contain 20 instances; \texttt{numeric\_expedition} contains 21 because the suite also includes a minimal instance.
+
+\subsubsection{Blocksworld}
+
+\texttt{blocksworld} is inspired by the classical Blocksworld domain, but lifted to a multi-agent setting in which several agents manipulate blocks in a shared environment while pursuing separate assigned goals. We did not identify a useful social law for this domain: making agents non-interfering without simultaneously preventing them from reaching their own goals proved difficult, so the experiments include only the setting without a social law.
+
+\subsubsection{Driverlog}
+
+\texttt{driverlog} is a non-numeric transportation domain in which drivers move through a road network, board trucks, drive them between locations, and load and unload packages. The social law used in our experiments partitions the main shared resources: each driver is assigned a truck and may manipulate only packages assigned to that driver, and each assigned truck must end empty. We also considered weaker ideas based on shared trucks with waiting conditions on boarding and eventual empty-truck goals, but these do not guarantee robustness: a driver may still move a truck away from the location where another driver expects to use it, or move a package that another driver's individually valid plan relies on. The ownership-based law avoids these interference patterns while remaining easy to express in the social-law formalism.
+
+\subsubsection{Grid}
+
+\texttt{grid} models multiple mobile agents moving on a rectangular grid, motivated by warehouse-robot settings in which robots share the same floor but must carry out different delivery tasks. Each agent starts at a designated cell, must travel to its own goal cell, and leaves the grid once it arrives. The social law imposes a one-way ``warehouse'' traffic pattern on the grid and adds waitfor conditions on entering occupied cells, so agents coordinate by following a common motion discipline rather than by statically partitioning resources. This makes \texttt{grid} the first domain in our suite where the social law is genuinely structural and coordination-oriented: robustness comes from shaping the joint flow of movement, not just from separating ownership of trucks, packages, or other resources.
+
+\subsubsection{Numeric Grid}
+
+\texttt{numeric\_grid} is the numeric counterpart of \texttt{grid}. It represents agent positions and movement progress with numeric state variables rather than purely propositional occupancy facts, but keeps the same high-level warehouse-navigation motivation and the same directional traffic idea. Conceptually, it is best understood as a reformulation of the same coordination problem in a numeric planning language, rather than as a different benchmark scenario.
+
+\subsubsection{Numeric Market Trader}
+
+\texttt{numeric\_markettrader} is a numeric trading domain in which several agents move between markets, buy goods, carry them subject to capacity limits, and sell them to increase their cash. Unlike the transportation-style domains, interference here comes from shared stock and prices rather than from contention over vehicles or road cells. In the current benchmark suite we do not use a social law for this domain. Some instances are intentionally close to the boundary between robustness and non-robustness: when markets are sufficiently separated and each agent effectively has its own supply source the instance can be robust, but when agents depend on the same scarce profitable goods the domain quickly becomes non-robust.
 
 \subsection{Results}
 

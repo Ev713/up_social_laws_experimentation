@@ -60,6 +60,7 @@ class BlocksworldGenerator(ProblemGenerator):
         stack.add_precondition(clear(y))
         stack.add_effect(holding(x), False)
         stack.add_effect(clear(x), True)
+        stack.add_effect(clear(y), False)
         stack.add_effect(handempty(), True)
         stack.add_effect(on(x, y), True)
 
@@ -76,7 +77,7 @@ class BlocksworldGenerator(ProblemGenerator):
         unstack.add_effect(on(x, y), False)
 
         # Agents
-        for agent_name in self.instance_json['agents']:
+        for agent_name in self.instance_data['agents']:
             agent = Agent(agent_name, self.problem)
             self.problem.add_agent(agent)
             agent.add_fluent(holding, default_initial_value=False)

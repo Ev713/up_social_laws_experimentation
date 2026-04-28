@@ -1,4 +1,6 @@
 import random
+from pathlib import Path
+from ast import literal_eval
 
 import unified_planning
 from unified_planning.model import Fluent, InstantaneousAction
@@ -27,6 +29,11 @@ class GridGenerator(ProblemGenerator):
     def get_dir(self, l1, l2):
         diff = (l2[0] - l1[0], l2[1] - l1[1])
         return self.compass[diff]
+
+    def parse_loc(self, loc):
+        if isinstance(loc, str):
+            return tuple(literal_eval(loc))
+        return tuple(loc)
 
     def set_parameters(self, width, height, agents):
         self.width = width
@@ -155,7 +162,23 @@ class GridGenerator(ProblemGenerator):
         return direction_law.compile(self.problem).problem
 
     def generate_problem(self, file_name=None, sl=False):
-        self.problem = MultiAgentProblemWithWaitfor()
+        problem_name = "grid"
+        if file_name is not None:
+            self.load_instance_data(file_name)
+            width = self.instance_data["width"]
+            height = self.instance_data["height"]
+            agents = len(self.instance_data["agents"])
+            problem_name = "grid_" + Path(file_name).stem
+            self.set_parameters(width, height, agents)
+            self.init_locs = {
+                int(agent_name.split("-")[-1]): self.parse_loc(loc)
+                for agent_name, loc in self.instance_data["init_locs"].items()
+            }
+            self.goal_locs = {
+                int(agent_name.split("-")[-1]): self.parse_loc(loc)
+                for agent_name, loc in self.instance_data["goal_locs"].items()
+            }
+        self.problem = MultiAgentProblemWithWaitfor(problem_name)
         loc = UserType("loc")
 
         direction = UserType("direction")
@@ -239,5 +262,5 @@ class GridGenerator(ProblemGenerator):
 
             car.add_public_goal(car.fluent('left'))
         if sl:
-            self.add_social_law()
+            self.problem = self.add_social_law()
         return self.problem

@@ -1,0 +1,32 @@
+{
+  "id": "all_domains_tests",
+  "output_dir": "./experimentation/runs",
+  "limits": {
+    "engine": "enhsp",
+    "planner_timeout_seconds": 900,
+    "wall_timeout_seconds": 1800,
+    "cpu_seconds": 1800,
+    "memory_bytes": 16000000000
+  },
+  "domains": [
+    "numeric_civ",
+    "numeric_expedition",
+    "numeric_grid",
+    "numeric_intersection",
+    "numeric_markettrader",
+    "numeric_zenotravel",
+    "blocksworld",
+    "driverlog",
+    "grid",
+    "intersection",
+    "zenotravel"
+  ],
+  "verifiers": [
+    "general",
+    "simple"
+  ],
+  "social_law": [
+    "without",
+    "with"
+  ]
+}

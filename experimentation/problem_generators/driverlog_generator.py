@@ -12,28 +12,53 @@ class DriverLogGenerator(ProblemGenerator):
     def __init__(self):
         super().__init__()
 
+    def _agent_goal_map(self):
+        goals_data = self.instance_data['goals']
+        agent_names = self.instance_data['agents']
+
+        if isinstance(goals_data, dict):
+            return {agent_name: goals_data.get(agent_name, []) for agent_name in agent_names}
+
+        agent_goals = {agent_name: [] for agent_name in agent_names}
+        for goal_index, goaltuple in enumerate(goals_data):
+            agent_name = agent_names[goal_index % len(agent_names)]
+            agent_goals[agent_name].append(goaltuple)
+        return agent_goals
+
     def add_social_law(self):
         driverlog_sl = SocialLaw()
-        for agent in self.problem.agents:
-            driverlog_sl.add_new_fluent(agent.name, 'trunk_empty', (("t", "truck"),), True)
-            driverlog_sl.add_new_fluent(None, f'{agent.name}_can_board', (("t", "truck"),), True)
-            driverlog_sl.add_effect(agent.name, 'LOAD-TRUCK', 'trunk_empty', ('truck',), False)
-            driverlog_sl.add_effect(agent.name, 'UNLOAD-TRUCK', 'trunk_empty', ('truck',), True)
-            driverlog_sl.add_waitfor_annotation(agent.name, 'BOARD-TRUCK', 'at', ('truck', 'loc'))
-            driverlog_sl.add_waitfor_annotation(agent.name, 'BOARD-TRUCK', 'empty', ('truck',))
+        agent_goals = self._agent_goal_map()
 
-        for agent in self.problem.agents:
-            for other_agent in self.problem.agents:
-                if other_agent.name == agent.name:
+        for agent_name, truck_name in zip(self.instance_data['agents'], self.instance_data['trucks']):
+            driverlog_sl.add_new_fluent(agent_name, 'assigned_truck', (("t", "truck"),), False)
+            driverlog_sl.set_initial_value_for_new_fluent(agent_name, 'assigned_truck', (truck_name,), True)
+            driverlog_sl.add_new_fluent(agent_name, 'assigned_package', (("p", "package"),), False)
+
+            for action_name in ['BOARD-TRUCK', 'DISEMBARK-TRUCK', 'DRIVE-TRUCK']:
+                driverlog_sl.add_precondition_to_action(agent_name, action_name, 'assigned_truck', ('truck',))
+
+            for action_name in ['LOAD-TRUCK', 'UNLOAD-TRUCK']:
+                driverlog_sl.add_precondition_to_action(agent_name, action_name, 'assigned_truck', ('truck',))
+                driverlog_sl.add_precondition_to_action(agent_name, action_name, 'assigned_package', ('obj',))
+
+            driverlog_sl.add_agent_goal(agent_name, 'empty', (truck_name,))
+
+        assigned_packages = set()
+        for agent_name, goals in agent_goals.items():
+            for goaltuple in goals:
+                if goaltuple[0] != 'at':
                     continue
-                driverlog_sl.add_effect(agent.name, 'BOARD-TRUCK', f'{other_agent.name}_can_board', ('truck',), False)
-            driverlog_sl.add_precondition_to_action(agent.name, 'BOARD-TRUCK', f'{agent.name}_can_board', ('truck',))
+                obj_name = goaltuple[1][0]
+                if obj_name not in self.instance_data['packages'] or obj_name in assigned_packages:
+                    continue
+                driverlog_sl.set_initial_value_for_new_fluent(agent_name, 'assigned_package', (obj_name,), True)
+                assigned_packages.add(obj_name)
 
-        for truck in self.problem.objects(UserType('truck', father=UserType('locatable'))):
-            driverlog_sl.add_public_goal('empty', (truck.name,))
-            driverlog_sl.add_public_goal('empty', (truck.name,))
-
-        # add precondition board driver's truck
+        for package_index, package_name in enumerate(self.instance_data['packages']):
+            if package_name in assigned_packages:
+                continue
+            agent_name = self.instance_data['agents'][package_index % len(self.instance_data['agents'])]
+            driverlog_sl.set_initial_value_for_new_fluent(agent_name, 'assigned_package', (package_name,), True)
 
         return driverlog_sl.compile(self.problem).problem
 
@@ -148,5 +173,5 @@ class DriverLogGenerator(ProblemGenerator):
         self.set_init_values()
         self.set_goals()
         if sl:
-            self.add_social_law()
+            self.problem = self.add_social_law()
         return self.problem

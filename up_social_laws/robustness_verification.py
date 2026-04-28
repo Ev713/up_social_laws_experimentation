@@ -278,11 +278,30 @@ class InstantaneousActionRobustnessVerifier(RobustnessVerifier):
         supported_kind = ProblemKind()
         supported_kind = unified_planning.model.problem_kind.multi_agent_kind.union(
             unified_planning.model.problem_kind.actions_cost_kind)
+        supported_kind.set_numbers("BOUNDED_TYPES")
+        supported_kind.set_effects_kind("INCREASE_EFFECTS")
+        supported_kind.set_effects_kind("DECREASE_EFFECTS")
         return supported_kind
 
     @staticmethod
     def supports(problem_kind):
         return problem_kind <= InstantaneousActionRobustnessVerifier.supported_kind()
+
+    def substitute_effect(self, effect: Effect, fmap: FluentMap, local_agent: Agent):
+        return (
+            self.fsub.substitute(effect.fluent, fmap, local_agent),
+            self.fsub.substitute(effect.value, fmap, local_agent),
+            self.fsub.substitute(effect.condition, fmap, local_agent),
+        )
+
+    def add_substituted_effect(self, action: InstantaneousAction, effect: Effect, fmap: FluentMap, local_agent: Agent):
+        new_fluent, new_value, new_condition = self.substitute_effect(effect, fmap, local_agent)
+        if effect.is_increase():
+            action.add_increase_effect(new_fluent, new_value, new_condition, effect.forall)
+        elif effect.is_decrease():
+            action.add_decrease_effect(new_fluent, new_value, new_condition, effect.forall)
+        else:
+            action.add_effect(new_fluent, new_value, new_condition, effect.forall)
 
     def create_action_copy(self, problem: MultiAgentProblemWithWaitfor, agent: Agent, action: InstantaneousAction,
                            prefix: str):
@@ -297,8 +316,7 @@ class InstantaneousActionRobustnessVerifier(RobustnessVerifier):
         for fact in self.get_action_preconditions(problem, agent, action, True, True):
             new_action.add_precondition(self.fsub.substitute(fact, self.local_fluent_map[agent], agent))
         for effect in action.effects:
-            new_action.add_effect(self.fsub.substitute(effect.fluent, self.local_fluent_map[agent], agent),
-                                  effect.value)
+            self.add_substituted_effect(new_action, effect, self.local_fluent_map[agent], agent)
 
         return new_action
 
@@ -865,25 +883,35 @@ class SimpleNumericRobustnessVerifier(InstantaneousActionRobustnessVerifier):
         for fact in self.get_action_preconditions(problem, agent, action, True, True):
             new_action.add_precondition(self.fsub.substitute(fact, self.local_fluent_map[agent], agent))
         for effect in action.effects:
-            new_fluent, new_value = self.substitute_effect(effect, self.local_fluent_map[agent], agent)
-            new_action.add_effect(new_fluent, new_value)
+            self.add_substituted_effect(new_action, effect, self.local_fluent_map[agent], agent)
 
         return new_action
 
     def substitute_effect(self, effect: Effect, fmap: FluentMap, local_agent: Agent):
-        fluent = effect.fluent
-        new_fluent = self.fsub.substitute(fluent, fmap, local_agent)
-        args = effect.value.args
-        new_args = []
-        for arg in args:
-            if arg.node_type == OperatorKind.FLUENT_EXP:
-                new_args.append(self.fsub.substitute(arg, fmap, local_agent))
-            else:
-                new_args.append(arg)
+        return super().substitute_effect(effect, fmap, local_agent)
 
-        args_sub = {args[i]: new_args[i] for i, _ in enumerate(new_args)}
-        new_value = effect.value.substitute(args_sub)
-        return new_fluent, new_value
+    def _lifted_args_on_new_action(self, new_action, fact):
+        args = []
+        for arg in fact.args:
+            if arg.is_parameter_exp():
+                args.append(new_action.parameter(arg.parameter().name))
+            else:
+                args.append(arg)
+        return args
+
+    def _wait_marker_expr(self, new_action, fact):
+        wt_fluent = self.prec_wt[fact]
+        if fact.is_fluent_exp():
+            return wt_fluent(*self._lifted_args_on_new_action(new_action, fact))
+        return wt_fluent
+
+    def _wait_marker_for_positive_effect(self, new_action, eff_fluent):
+        if not eff_fluent.is_fluent_exp():
+            return None
+        wt_fluent = self.waited_bool_fluents.get(eff_fluent.fluent().name)
+        if wt_fluent is None:
+            return None
+        return wt_fluent(*self._lifted_args_on_new_action(new_action, eff_fluent))
 
     def get_success_action(self, agent, action):
         a_s = self.create_action_copy(self.og_problem, agent, action, f"s")
@@ -894,15 +922,18 @@ class SimpleNumericRobustnessVerifier(InstantaneousActionRobustnessVerifier):
             a_s.add_precondition(self.fsub.substitute(pre, self.global_fluent_map, agent))
 
         for eff in action.effects:
-            a_s.add_effect(*self.substitute_effect(eff, self.global_fluent_map, agent))
-            if str(eff.value) != 'true' or eff.fluent not in self.prec_wt:
+            self.add_substituted_effect(a_s, eff, self.global_fluent_map, agent)
+            if str(eff.value) != 'true':
                 continue
-            a_s.add_precondition(Not(self.prec_wt[eff.fluent]))
+            wait_marker = self._wait_marker_for_positive_effect(a_s, eff.fluent)
+            if wait_marker is None:
+                continue
+            a_s.add_precondition(Not(wait_marker))
 
         for _, eff in self.linear_effects_table.iterrows():
             eff = eff.to_dict()
             v = eff['target_fluent'], eff['target_args']
-            if v[0] in agent.fluents:
+            if v[0] in [f.name for f in agent.fluents]:
                 fluent = agent.fluent(v[0])
             else:
                 fluent = self.og_problem.ma_environment.fluent(v[0])
@@ -957,7 +988,7 @@ class SimpleNumericRobustnessVerifier(InstantaneousActionRobustnessVerifier):
             a_wt.add_precondition(self.fsub.substitute(pre, self.global_fluent_map, agent))
         a_wt.add_precondition(Not(self.fsub.substitute(wt_prec, self.global_fluent_map, agent)))
 
-        a_wt.add_effect(self.prec_wt[wt_prec], True)
+        a_wt.add_effect(self._wait_marker_expr(a_wt, wt_prec), True)
         a_wt.add_effect(self.fail, True)
         a_wt.add_effect(self.agent_wt[agent.name], True)
 
@@ -1028,11 +1059,19 @@ class SimpleNumericRobustnessVerifier(InstantaneousActionRobustnessVerifier):
         self.all_waitfor_precs = chain(*list(self.waitfor_precs.values()))
 
         self.prec_wt = {}
+        self.waited_bool_fluents = {}
         for prec in self.all_waitfor_precs:
             if prec in self.prec_wt:
                 continue
-            self.prec_wt[prec] = Fluent("wt_" + str(prec))
-            new_problem.add_fluent(self.prec_wt[prec], default_initial_value=False)
+            if prec.is_fluent_exp():
+                wt_name = "wt_" + prec.fluent().name
+                if prec.fluent().name not in self.waited_bool_fluents:
+                    self.waited_bool_fluents[prec.fluent().name] = Fluent(wt_name, BoolType(), prec.fluent().signature)
+                    new_problem.add_fluent(self.waited_bool_fluents[prec.fluent().name], default_initial_value=False)
+                self.prec_wt[prec] = self.waited_bool_fluents[prec.fluent().name]
+            else:
+                self.prec_wt[prec] = Fluent("wt_" + str(prec))
+                new_problem.add_fluent(self.prec_wt[prec], default_initial_value=False)
 
         new_problem.add_fluent(self.act, default_initial_value=True)
         new_problem.add_fluent(self.fail, default_initial_value=False)
@@ -1155,7 +1194,12 @@ class WaitingActionRobustnessVerifier(RobustnessVerifier):
             new_action.add_precondition(self.fsub.substitute(fact, self.local_fluent_map[agent], agent))
         for effect in action.effects:
             new_fluent, new_value = self.substitute_effect(effect, self.local_fluent_map[agent], agent)
-            new_action.add_effect(new_fluent, new_value)
+            if effect.is_increase():
+                new_action.add_increase_effect(new_fluent, new_value)
+            elif effect.is_decrease():
+                new_action.add_decrease_effect(new_fluent, new_value)
+            else:
+                new_action.add_effect(new_fluent, new_value)
 
         return new_action
 
@@ -1172,7 +1216,13 @@ class WaitingActionRobustnessVerifier(RobustnessVerifier):
         for fact in self.get_action_preconditions(self.og_problem, agent, action, True, True):
             a_s.add_precondition(self.fsub.substitute(fact, self.global_fluent_map, agent))
         for effect in action.effects:
-            a_s.add_effect(*self.substitute_effect(effect, self.global_fluent_map, agent))
+            new_fluent, new_value = self.substitute_effect(effect, self.global_fluent_map, agent)
+            if effect.is_increase():
+                a_s.add_increase_effect(new_fluent, new_value)
+            elif effect.is_decrease():
+                a_s.add_decrease_effect(new_fluent, new_value)
+            else:
+                a_s.add_effect(new_fluent, new_value)
         a_s.add_effect(allow_action, False)
         a_s.add_effect(restrict_actions, False)
         return a_s
@@ -1363,8 +1413,8 @@ class WaitingActionRobustnessVerifier(RobustnessVerifier):
                 goals_not_achieved.add_precondition(Not(self.fsub.substitute(goal, self.global_fluent_map, agent)))
                 for a in self.og_problem.agents:
                     for g in self.get_agent_goal(self.og_problem, a):
-                        goals_not_achieved.add_precondition(self.fsub.substitute(g, self.local_fluent_map[agent], agent))
-                    goals_not_achieved.add_precondition(Not(self.restrict_actions_map[agent.name]))
+                        goals_not_achieved.add_precondition(self.fsub.substitute(g, self.local_fluent_map[a], a))
+                    goals_not_achieved.add_precondition(Not(self.restrict_actions_map[a.name]))
                 goals_not_achieved.add_effect(self.conflict, True)
                 new_problem.add_action(goals_not_achieved)
                 new_to_old[goals_not_achieved] = None
