@@ -1,0 +1,358 @@
+=== CASE ===
+domain: numeric_markettrader
+instance_file: pfile16.json
+has_social_law: False
+problem_name: market_trader_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_markettrader/pfile16
+verifier: general
+
+=== SINGLE_AGENT camel0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 142
+Aibr Preprocessing
+UFX:false
+|F|:14
+|X|:92
+|A|:325
+|P|:0
+|E|:0
+H1 Setup Time (msec): 12
+h(I):7.3333335
+ g(n)= 1.0 h(n)=6.4444447
+ g(n)= 2.0 h(n)=5.6666665
+ g(n)= 3.0 h(n)=5.111111
+ g(n)= 5.0 h(n)=4.111111
+ g(n)= 7.0 h(n)=3.1111112
+ g(n)= 9.0 h(n)=2.1111112
+ g(n)= 11.0 h(n)=1.1111112
+ g(n)= 13.0 h(n)=0.11111111
+Problem Solved
+
+Found Plan:
+0.0: (travel_dusetos_seda)
+1.0: (buy_dvds_seda)
+2.0: (travel_seda_torshavn)
+3.0: (sell_dvds_torshavn)
+4.0: (buy_dvds_torshavn)
+5.0: (sell_dvds_torshavn)
+6.0: (buy_dvds_torshavn)
+7.0: (sell_dvds_torshavn)
+8.0: (buy_dvds_torshavn)
+9.0: (sell_dvds_torshavn)
+10.0: (buy_dvds_torshavn)
+11.0: (sell_dvds_torshavn)
+12.0: (buy_dvds_torshavn)
+13.0: (sell_dvds_torshavn)
+
+Plan-Length:14
+Metric (Search):14.0
+Planning Time (msec): 98
+Heuristic Time (msec): 82
+Search Time (msec): 96
+Expanded Nodes:15
+States Evaluated:177
+Number of Dead-Ends detected:7
+Number of Duplicates detected:3
+
+=== SINGLE_AGENT camel1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 126
+Aibr Preprocessing
+UFX:false
+|F|:14
+|X|:92
+|A|:322
+|P|:0
+|E|:0
+H1 Setup Time (msec): 10
+h(I):7.3333335
+ g(n)= 1.0 h(n)=6.7777777
+ g(n)= 2.0 h(n)=6.2222223
+ g(n)= 3.0 h(n)=5.3333335
+ g(n)= 5.0 h(n)=4.3333335
+ g(n)= 6.0 h(n)=4.333333
+ g(n)= 7.0 h(n)=3.3333333
+ g(n)= 9.0 h(n)=2.3333333
+ g(n)= 11.0 h(n)=1.3333334
+ g(n)= 13.0 h(n)=0.33333334
+Problem Solved
+
+Found Plan:
+0.0: (travel_cardiff_valencia)
+1.0: (buy_footballs_valencia)
+2.0: (travel_valencia_seda)
+3.0: (sell_footballs_seda)
+4.0: (buy_footballs_seda)
+5.0: (sell_footballs_seda)
+6.0: (buy_footballs_seda)
+7.0: (sell_footballs_seda)
+8.0: (buy_footballs_seda)
+9.0: (sell_footballs_seda)
+10.0: (buy_footballs_seda)
+11.0: (sell_footballs_seda)
+12.0: (buy_footballs_seda)
+13.0: (sell_footballs_seda)
+
+Plan-Length:14
+Metric (Search):14.0
+Planning Time (msec): 91
+Heuristic Time (msec): 79
+Search Time (msec): 89
+Expanded Nodes:15
+States Evaluated:170
+Number of Dead-Ends detected:10
+Number of Duplicates detected:3
+
+=== SINGLE_AGENT camel2 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 128
+Aibr Preprocessing
+UFX:false
+|F|:14
+|X|:92
+|A|:314
+|P|:0
+|E|:0
+H1 Setup Time (msec): 11
+h(I):7.3333335
+ g(n)= 1.0 h(n)=6.7777777
+ g(n)= 2.0 h(n)=6.611111
+ g(n)= 4.0 h(n)=6.3333335
+ g(n)= 5.0 h(n)=5.4444447
+ g(n)= 7.0 h(n)=4.4444447
+ g(n)= 9.0 h(n)=3.4444444
+ g(n)= 11.0 h(n)=2.4444444
+ g(n)= 13.0 h(n)=1.4444444
+ g(n)= 15.0 h(n)=0.44444445
+Problem Solved
+
+Found Plan:
+0.0: (travel_cardiff_seda)
+1.0: (buy_dvds_seda)
+2.0: (travel_seda_kavarskas)
+3.0: (travel_kavarskas_valencia)
+4.0: (travel_valencia_torshavn)
+5.0: (sell_dvds_torshavn)
+6.0: (buy_dvds_torshavn)
+7.0: (sell_dvds_torshavn)
+8.0: (buy_dvds_torshavn)
+9.0: (sell_dvds_torshavn)
+10.0: (buy_dvds_torshavn)
+11.0: (sell_dvds_torshavn)
+12.0: (buy_dvds_torshavn)
+13.0: (sell_dvds_torshavn)
+14.0: (buy_dvds_torshavn)
+15.0: (sell_dvds_torshavn)
+
+Plan-Length:16
+Metric (Search):16.0
+Planning Time (msec): 96
+Heuristic Time (msec): 78
+Search Time (msec): 94
+Expanded Nodes:19
+States Evaluated:165
+Number of Dead-Ends detected:17
+Number of Duplicates detected:4
+
+=== SINGLE_AGENT camel3 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 167
+Aibr Preprocessing
+UFX:false
+|F|:14
+|X|:92
+|A|:319
+|P|:0
+|E|:0
+H1 Setup Time (msec): 10
+h(I):7.3333335
+ g(n)= 1.0 h(n)=6.4444447
+ g(n)= 2.0 h(n)=5.6666665
+ g(n)= 3.0 h(n)=5.111111
+ g(n)= 5.0 h(n)=4.111111
+ g(n)= 7.0 h(n)=3.1111112
+ g(n)= 9.0 h(n)=2.1111112
+ g(n)= 11.0 h(n)=1.1111112
+ g(n)= 13.0 h(n)=0.11111111
+Problem Solved
+
+Found Plan:
+0.0: (travel_dusetos_seda)
+1.0: (buy_dvds_seda)
+2.0: (travel_seda_torshavn)
+3.0: (sell_dvds_torshavn)
+4.0: (buy_dvds_torshavn)
+5.0: (sell_dvds_torshavn)
+6.0: (buy_dvds_torshavn)
+7.0: (sell_dvds_torshavn)
+8.0: (buy_dvds_torshavn)
+9.0: (sell_dvds_torshavn)
+10.0: (buy_dvds_torshavn)
+11.0: (sell_dvds_torshavn)
+12.0: (buy_dvds_torshavn)
+13.0: (sell_dvds_torshavn)
+
+Plan-Length:14
+Metric (Search):14.0
+Planning Time (msec): 89
+Heuristic Time (msec): 78
+Search Time (msec): 88
+Expanded Nodes:15
+States Evaluated:154
+Number of Dead-Ends detected:7
+Number of Duplicates detected:3
+
+=== SINGLE_AGENT camel4 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 139
+Aibr Preprocessing
+UFX:false
+|F|:14
+|X|:92
+|A|:330
+|P|:0
+|E|:0
+H1 Setup Time (msec): 10
+h(I):6.3333335
+ g(n)= 1.0 h(n)=5.7777777
+ g(n)= 2.0 h(n)=4.888889
+ g(n)= 4.0 h(n)=3.8888888
+ g(n)= 6.0 h(n)=2.8888888
+ g(n)= 8.0 h(n)=1.8888888
+ g(n)= 10.0 h(n)=0.8888889
+Problem Solved
+
+Found Plan:
+0.0: (buy_footballs_valencia)
+1.0: (travel_valencia_seda)
+2.0: (sell_footballs_seda)
+3.0: (buy_footballs_seda)
+4.0: (sell_footballs_seda)
+5.0: (buy_footballs_seda)
+6.0: (sell_footballs_seda)
+7.0: (buy_footballs_seda)
+8.0: (sell_footballs_seda)
+9.0: (buy_footballs_seda)
+10.0: (sell_footballs_seda)
+
+Plan-Length:11
+Metric (Search):11.0
+Planning Time (msec): 118
+Heuristic Time (msec): 104
+Search Time (msec): 115
+Expanded Nodes:12
+States Evaluated:164
+Number of Dead-Ends detected:5
+Number of Duplicates detected:5
+
+=== ROBUSTNESS TIMEOUT ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 24075
+Aibr Preprocessing
+UFX:false
+|F|:1769
+|X|:584
+|A|:6451
+|P|:0
+|E|:0
+H1 Setup Time (msec): 105
+h(I):42.0
+ g(n)= 1.0 h(n)=4.0
+ g(n)= 2.0 h(n)=3.0
+-------------Time: 10s ; Expanded Nodes: 75 (Avg-Speed 7.0 n/s); Evaluated States: 3103
+-------------Time: 20s ; Expanded Nodes: 208 (Avg-Speed 10.0 n/s); Evaluated States: 6740
+-------------Time: 30s ; Expanded Nodes: 343 (Avg-Speed 11.0 n/s); Evaluated States: 10462
+-------------Time: 40s ; Expanded Nodes: 469 (Avg-Speed 11.0 n/s); Evaluated States: 14625
+-------------Time: 50s ; Expanded Nodes: 651 (Avg-Speed 13.0 n/s); Evaluated States: 18802
+-------------Time: 60s ; Expanded Nodes: 844 (Avg-Speed 14.0 n/s); Evaluated States: 22560
+-------------Time: 70s ; Expanded Nodes: 1026 (Avg-Speed 14.0 n/s); Evaluated States: 26269
+-------------Time: 80s ; Expanded Nodes: 1217 (Avg-Speed 15.0 n/s); Evaluated States: 30206
+-------------Time: 90s ; Expanded Nodes: 1415 (Avg-Speed 15.0 n/s); Evaluated States: 34274
+-------------Time: 100s ; Expanded Nodes: 1532 (Avg-Speed 15.0 n/s); Evaluated States: 37594
+-------------Time: 110s ; Expanded Nodes: 1703 (Avg-Speed 15.0 n/s); Evaluated States: 41374
+-------------Time: 120s ; Expanded Nodes: 1925 (Avg-Speed 16.0 n/s); Evaluated States: 44717
+-------------Time: 130s ; Expanded Nodes: 2119 (Avg-Speed 16.0 n/s); Evaluated States: 47965
+-------------Time: 140s ; Expanded Nodes: 2316 (Avg-Speed 16.0 n/s); Evaluated States: 51072
+-------------Time: 150s ; Expanded Nodes: 2466 (Avg-Speed 16.0 n/s); Evaluated States: 54335
+-------------Time: 160s ; Expanded Nodes: 2606 (Avg-Speed 16.0 n/s); Evaluated States: 57501
+-------------Time: 170s ; Expanded Nodes: 2745 (Avg-Speed 16.0 n/s); Evaluated States: 60642
+-------------Time: 180s ; Expanded Nodes: 2899 (Avg-Speed 16.0 n/s); Evaluated States: 63957
+-------------Time: 190s ; Expanded Nodes: 3034 (Avg-Speed 15.0 n/s); Evaluated States: 66913
+-------------Time: 200s ; Expanded Nodes: 3208 (Avg-Speed 16.0 n/s); Evaluated States: 69936
+-------------Time: 210s ; Expanded Nodes: 3458 (Avg-Speed 16.0 n/s); Evaluated States: 73527
+-------------Time: 220s ; Expanded Nodes: 3713 (Avg-Speed 16.0 n/s); Evaluated States: 77021
+-------------Time: 230s ; Expanded Nodes: 3909 (Avg-Speed 16.0 n/s); Evaluated States: 79838
+-------------Time: 240s ; Expanded Nodes: 4134 (Avg-Speed 17.0 n/s); Evaluated States: 82839
+-------------Time: 250s ; Expanded Nodes: 4322 (Avg-Speed 17.0 n/s); Evaluated States: 86154
+-------------Time: 260s ; Expanded Nodes: 4444 (Avg-Speed 17.0 n/s); Evaluated States: 89332
+-------------Time: 270s ; Expanded Nodes: 4570 (Avg-Speed 16.0 n/s); Evaluated States: 92450
+-------------Time: 280s ; Expanded Nodes: 4695 (Avg-Speed 16.0 n/s); Evaluated States: 95450
+-------------Time: 290s ; Expanded Nodes: 4821 (Avg-Speed 16.0 n/s); Evaluated States: 98682
+-------------Time: 300s ; Expanded Nodes: 4941 (Avg-Speed 16.0 n/s); Evaluated States: 101835
+-------------Time: 311s ; Expanded Nodes: 5062 (Avg-Speed 16.0 n/s); Evaluated States: 104966
+-------------Time: 321s ; Expanded Nodes: 5203 (Avg-Speed 16.0 n/s); Evaluated States: 108222
+-------------Time: 331s ; Expanded Nodes: 5338 (Avg-Speed 16.0 n/s); Evaluated States: 111295
+-------------Time: 341s ; Expanded Nodes: 5458 (Avg-Speed 16.0 n/s); Evaluated States: 114346
+-------------Time: 351s ; Expanded Nodes: 5597 (Avg-Speed 15.0 n/s); Evaluated States: 117418
+-------------Time: 361s ; Expanded Nodes: 5699 (Avg-Speed 15.0 n/s); Evaluated States: 120542
+-------------Time: 371s ; Expanded Nodes: 5809 (Avg-Speed 15.0 n/s); Evaluated States: 123291
+-------------Time: 381s ; Expanded Nodes: 5929 (Avg-Speed 15.0 n/s); Evaluated States: 126399
+-------------Time: 391s ; Expanded Nodes: 6049 (Avg-Speed 15.0 n/s); Evaluated States: 129356
+-------------Time: 401s ; Expanded Nodes: 6174 (Avg-Speed 15.0 n/s); Evaluated States: 132415
+-------------Time: 411s ; Expanded Nodes: 6302 (Avg-Speed 15.0 n/s); Evaluated States: 135546
+-------------Time: 421s ; Expanded Nodes: 6445 (Avg-Speed 15.0 n/s); Evaluated States: 138693
+-------------Time: 431s ; Expanded Nodes: 6575 (Avg-Speed 15.0 n/s); Evaluated States: 141645
+-------------Time: 441s ; Expanded Nodes: 6667 (Avg-Speed 15.0 n/s); Evaluated States: 144286
+-------------Time: 451s ; Expanded Nodes: 6767 (Avg-Speed 15.0 n/s); Evaluated States: 146945
+-------------Time: 461s ; Expanded Nodes: 6870 (Avg-Speed 14.0 n/s); Evaluated States: 149590
+-------------Time: 471s ; Expanded Nodes: 7001 (Avg-Speed 14.0 n/s); Evaluated States: 152357
+-------------Time: 481s ; Expanded Nodes: 7138 (Avg-Speed 14.0 n/s); Evaluated States: 155416
+-------------Time: 491s ; Expanded Nodes: 7243 (Avg-Speed 14.0 n/s); Evaluated States: 158149
+-------------Time: 501s ; Expanded Nodes: 7356 (Avg-Speed 14.0 n/s); Evaluated States: 160631
+-------------Time: 511s ; Expanded Nodes: 7509 (Avg-Speed 14.0 n/s); Evaluated States: 163395
+-------------Time: 521s ; Expanded Nodes: 7724 (Avg-Speed 14.0 n/s); Evaluated States: 166871
+-------------Time: 531s ; Expanded Nodes: 7907 (Avg-Speed 14.0 n/s); Evaluated States: 170118
+-------------Time: 541s ; Expanded Nodes: 8116 (Avg-Speed 15.0 n/s); Evaluated States: 173588
+-------------Time: 551s ; Expanded Nodes: 8330 (Avg-Speed 15.0 n/s); Evaluated States: 177189
+-------------Time: 561s ; Expanded Nodes: 8540 (Avg-Speed 15.0 n/s); Evaluated States: 180496
+-------------Time: 571s ; Expanded Nodes: 8660 (Avg-Speed 15.0 n/s); Evaluated States: 183411
+-------------Time: 582s ; Expanded Nodes: 8802 (Avg-Speed 15.0 n/s); Evaluated States: 186310
+-------------Time: 592s ; Expanded Nodes: 8926 (Avg-Speed 15.0 n/s); Evaluated States: 189029
+-------------Time: 602s ; Expanded Nodes: 9046 (Avg-Speed 15.0 n/s); Evaluated States: 191873
+-------------Time: 612s ; Expanded Nodes: 9172 (Avg-Speed 14.0 n/s); Evaluated States: 194685
+-------------Time: 622s ; Expanded Nodes: 9299 (Avg-Speed 14.0 n/s); Evaluated States: 197541
+-------------Time: 632s ; Expanded Nodes: 9422 (Avg-Speed 14.0 n/s); Evaluated States: 200344
+-------------Time: 642s ; Expanded Nodes: 9548 (Avg-Speed 14.0 n/s); Evaluated States: 203101
+-------------Time: 652s ; Expanded Nodes: 9692 (Avg-Speed 14.0 n/s); Evaluated States: 206162
+-------------Time: 662s ; Expanded Nodes: 9835 (Avg-Speed 14.0 n/s); Evaluated States: 209017
+-------------Time: 672s ; Expanded Nodes: 10019 (Avg-Speed 14.0 n/s); Evaluated States: 212136
+-------------Time: 682s ; Expanded Nodes: 10192 (Avg-Speed 14.0 n/s); Evaluated States: 215237
+-------------Time: 692s ; Expanded Nodes: 10375 (Avg-Speed 14.0 n/s); Evaluated States: 218362
+-------------Time: 702s ; Expanded Nodes: 10571 (Avg-Speed 15.0 n/s); Evaluated States: 221569
+-------------Time: 712s ; Expanded Nodes: 10703 (Avg-Speed 15.0 n/s); Evaluated States: 224189
+-------------Time: 722s ; Expanded Nodes: 10809 (Avg-Speed 14.0 n/s); Evaluated States: 226666
+-------------Time: 732s ; Expanded Nodes: 10911 (Avg-Speed 14.0 n/s); Evaluated States: 229225
+-------------Time: 742s ; Expanded Nodes: 11018 (Avg-Speed 14.0 n/s); Evaluated States: 231769
+-------------Time: 752s ; Expanded Nodes: 11124 (Avg-Speed 14.0 n/s); Evaluated States: 234244
+-------------Time: 762s ; Expanded Nodes: 11231 (Avg-Speed 14.0 n/s); Evaluated States: 236755
+-------------Time: 772s ; Expanded Nodes: 11337 (Avg-Speed 14.0 n/s); Evaluated States: 239148
+-------------Time: 782s ; Expanded Nodes: 11443 (Avg-Speed 14.0 n/s); Evaluated States: 241607
+-------------Time: 792s ; Expanded Nodes: 11542 (Avg-Speed 14.0 n/s); Evaluated States: 244019
+-------------Time: 802s ; Expanded Nodes: 11647 (Avg-Speed 14.0 n/s); Evaluated States: 246473
+-------------Time: 812s ; Expanded Nodes: 11744 (Avg-Speed 14.0 n/s); Evaluated States: 249028
+-------------Time: 822s ; Expanded Nodes: 11846 (Avg-Speed 14.0 n/s); Evaluated States: 251750
+-------------Time: 833s ; Expanded Nodes: 11976 (Avg-Speed 14.0 n/s); Evaluated States: 254459
+-------------Time: 843s ; Expanded Nodes: 12079 (Avg-Speed 14.0 n/s); Evaluated States: 256767
+-------------Time: 853s ; Expanded Nodes: 12185 (Avg-Speed 14.0 n/s); Evaluated States: 259135
+-------------Time: 863s ; Expanded Nodes: 12286 (Avg-Speed 14.0 n/s); Evaluated States: 261531

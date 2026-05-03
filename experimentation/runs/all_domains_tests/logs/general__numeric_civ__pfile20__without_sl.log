@@ -1,0 +1,477 @@
+=== CASE ===
+domain: numeric_civ
+instance_file: pfile20.json
+has_social_law: False
+problem_name: civ_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_civ/pfile20
+verifier: general
+
+=== SINGLE_AGENT a0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 59
+Aibr Preprocessing
+UFX:false
+|F|:55
+|X|:46
+|A|:264
+|P|:0
+|E|:0
+H1 Setup Time (msec): 9
+h(I):265.0
+ g(n)= 1.0 h(n)=221.0
+ g(n)= 2.0 h(n)=177.0
+ g(n)= 3.0 h(n)=161.0
+ g(n)= 4.0 h(n)=149.0
+ g(n)= 5.0 h(n)=137.0
+ g(n)= 6.0 h(n)=125.0
+ g(n)= 7.0 h(n)=123.0
+ g(n)= 8.0 h(n)=121.0
+ g(n)= 9.0 h(n)=119.0
+ g(n)= 10.0 h(n)=117.0
+ g(n)= 11.0 h(n)=116.0
+ g(n)= 12.0 h(n)=115.0
+ g(n)= 13.0 h(n)=114.0
+ g(n)= 14.0 h(n)=113.0
+ g(n)= 16.0 h(n)=110.0
+ g(n)= 17.0 h(n)=102.0
+ g(n)= 19.0 h(n)=91.0
+ g(n)= 20.0 h(n)=89.0
+ g(n)= 21.0 h(n)=81.0
+ g(n)= 23.0 h(n)=77.0
+ g(n)= 25.0 h(n)=73.0
+ g(n)= 26.0 h(n)=69.0
+ g(n)= 28.0 h(n)=68.0
+ g(n)= 30.0 h(n)=67.0
+ g(n)= 31.0 h(n)=66.0
+ g(n)= 32.0 h(n)=65.0
+ g(n)= 34.0 h(n)=59.0
+ g(n)= 36.0 h(n)=53.0
+ g(n)= 37.0 h(n)=52.0
+ g(n)= 38.0 h(n)=48.0
+ g(n)= 40.0 h(n)=46.0
+ g(n)= 42.0 h(n)=44.0
+ g(n)= 43.0 h(n)=42.0
+ g(n)= 44.0 h(n)=41.0
+ g(n)= 45.0 h(n)=40.0
+ g(n)= 55.0 h(n)=34.0
+ g(n)= 56.0 h(n)=28.0
+ g(n)= 66.0 h(n)=25.0
+ g(n)= 67.0 h(n)=22.0
+ g(n)= 70.0 h(n)=21.0
+ g(n)= 71.0 h(n)=20.0
+ g(n)= 72.0 h(n)=19.0
+ g(n)= 84.0 h(n)=18.0
+ g(n)= 85.0 h(n)=13.0
+ g(n)= 86.0 h(n)=9.0
+ g(n)= 91.0 h(n)=8.0
+-------------Time: 10s ; Expanded Nodes: 19340 (Avg-Speed 1934.0 n/s); Evaluated States: 154909
+ g(n)= 103.0 h(n)=7.0
+ g(n)= 104.0 h(n)=6.0
+-------------Time: 20s ; Expanded Nodes: 39594 (Avg-Speed 1979.0 n/s); Evaluated States: 339200
+ g(n)= 109.0 h(n)=5.0
+ g(n)= 114.0 h(n)=4.0
+ g(n)= 115.0 h(n)=3.0
+ g(n)= 116.0 h(n)=2.0
+ g(n)= 117.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (build_cabin p0)
+1.0: (fell_timber p0 timber)
+2.0: (fell_timber p0 timber)
+3.0: (build_quarry p0)
+4.0: (break_stone p0 stone)
+5.0: (break_stone p0 stone)
+6.0: (build_cabin p2)
+7.0: (build_cabin p3)
+8.0: (fell_timber p2 timber)
+9.0: (fell_timber p3 timber)
+10.0: (build_quarry p2)
+11.0: (fell_timber p2 timber)
+12.0: (fell_timber p3 timber)
+13.0: (break_stone p2 stone)
+14.0: (fell_timber p2 timber)
+15.0: (build_sawmill p2 timber)
+16.0: (break_stone p2 stone)
+17.0: (fell_timber p2 timber)
+18.0: (saw_wood p2 timber wood)
+19.0: (saw_wood p2 timber wood)
+20.0: (fell_timber p2 timber)
+21.0: (fell_timber p2 timber)
+22.0: (build_coal_stack p2 timber)
+23.0: (fell_timber p2 timber)
+24.0: (burn_coal p2 timber coal)
+25.0: (burn_coal p2 timber coal)
+26.0: (fell_timber p3 timber)
+27.0: (build_sawmill p3 timber)
+28.0: (fell_timber p3 timber)
+29.0: (saw_wood p3 timber wood)
+30.0: (saw_wood p3 timber wood)
+31.0: (build_mine p3 wood)
+32.0: (fell_timber p0 timber)
+33.0: (build_sawmill p0 timber)
+34.0: (fell_timber p0 timber)
+35.0: (saw_wood p0 timber wood)
+36.0: (saw_wood p0 timber wood)
+37.0: (fell_timber p0 timber)
+38.0: (fell_timber p0 timber)
+39.0: (build_coal_stack p0 timber)
+40.0: (fell_timber p0 timber)
+41.0: (burn_coal p0 timber coal)
+42.0: (burn_coal p0 timber coal)
+43.0: (build_house p2 wood stone)
+44.0: (build_house p2 wood stone)
+45.0: (fell_timber p3 timber)
+46.0: (build_coal_stack p3 timber)
+47.0: (mine_ore p3 ore)
+48.0: (build_quarry p4)
+49.0: (build_quarry p1)
+50.0: (fell_timber p0 timber)
+51.0: (saw_wood p0 timber wood)
+52.0: (fell_timber p0 timber)
+53.0: (saw_wood p0 timber wood)
+54.0: (build_mine p0 wood)
+55.0: (mine_ore p0 ore)
+56.0: (build_cabin p4)
+57.0: (break_stone p1 stone)
+58.0: (break_stone p0 stone)
+59.0: (fell_timber p3 timber)
+60.0: (fell_timber p4 timber)
+61.0: (fell_timber p0 timber)
+62.0: (fell_timber p0 timber)
+63.0: (break_stone p0 stone)
+64.0: (saw_wood p0 timber wood)
+65.0: (build_ironworks p0 stone wood)
+66.0: (saw_wood p0 timber wood)
+67.0: (break_stone p0 stone)
+68.0: (break_stone p0 stone)
+69.0: (build_docks p0 stone wood)
+70.0: (fell_timber p0 timber)
+71.0: (saw_wood p0 timber wood)
+72.0: (fell_timber p4 timber)
+73.0: (break_stone p1 stone)
+74.0: (break_stone p2 stone)
+75.0: (build_sawmill p4 timber)
+76.0: (fell_timber p4 timber)
+77.0: (break_stone p1 stone)
+78.0: (break_stone p2 stone)
+79.0: (mine_ore p0 ore)
+80.0: (fell_timber p0 timber)
+81.0: (fell_timber p0 timber)
+82.0: (burn_coal p0 timber coal)
+83.0: (make_iron p0 ore coal iron)
+84.0: (burn_coal p0 timber coal)
+85.0: (make_iron p0 ore coal iron)
+86.0: (fell_timber p0 timber)
+87.0: (fell_timber p0 timber)
+88.0: (burn_coal p0 timber coal)
+89.0: (burn_coal p0 timber coal)
+90.0: (mine_ore p0 ore)
+91.0: (build_cabin p1)
+92.0: (fell_timber p3 timber)
+93.0: (break_stone p4 stone)
+94.0: (saw_wood p4 timber wood)
+95.0: (fell_timber p2 timber)
+96.0: (fell_timber p0 timber)
+97.0: (fell_timber p0 timber)
+98.0: (fell_timber p0 timber)
+99.0: (burn_coal p0 timber coal)
+100.0: (burn_coal p0 timber coal)
+101.0: (mine_ore p0 ore)
+102.0: (make_iron p0 ore coal iron)
+103.0: (make_iron p0 ore coal iron)
+104.0: (fell_timber p0 timber)
+105.0: (burn_coal p0 timber coal)
+106.0: (burn_coal p0 timber coal)
+107.0: (mine_ore p0 ore)
+108.0: (build_wharf p0 stone iron)
+109.0: (break_stone p1 stone)
+110.0: (make_iron p0 ore coal iron)
+111.0: (build_rail p0 p1 wood iron)
+112.0: (build_train p0 t0 iron)
+113.0: (unload_train t0 p0 iron)
+114.0: (unload_train t0 p0 iron)
+115.0: (unload_train t0 p0 iron)
+116.0: (unload_train t0 p0 iron)
+117.0: (build_ship p0 b0 iron)
+
+Plan-Length:118
+Metric (Search):118.0
+Planning Time (msec): 24009
+Heuristic Time (msec): 22034
+Search Time (msec): 24008
+Expanded Nodes:48110
+States Evaluated:413304
+Number of Dead-Ends detected:0
+Number of Duplicates detected:684769
+
+=== SINGLE_AGENT a1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 54
+Aibr Preprocessing
+UFX:false
+|F|:55
+|X|:46
+|A|:264
+|P|:0
+|E|:0
+H1 Setup Time (msec): 9
+h(I):255.0
+ g(n)= 1.0 h(n)=217.0
+ g(n)= 2.0 h(n)=179.0
+ g(n)= 3.0 h(n)=165.0
+ g(n)= 4.0 h(n)=153.0
+ g(n)= 5.0 h(n)=141.0
+ g(n)= 6.0 h(n)=130.0
+ g(n)= 7.0 h(n)=122.0
+ g(n)= 8.0 h(n)=114.0
+ g(n)= 9.0 h(n)=111.0
+ g(n)= 10.0 h(n)=110.0
+ g(n)= 11.0 h(n)=109.0
+ g(n)= 12.0 h(n)=108.0
+ g(n)= 14.0 h(n)=95.0
+ g(n)= 17.0 h(n)=82.0
+ g(n)= 18.0 h(n)=80.0
+ g(n)= 19.0 h(n)=70.0
+ g(n)= 21.0 h(n)=65.0
+ g(n)= 24.0 h(n)=60.0
+ g(n)= 25.0 h(n)=55.0
+ g(n)= 27.0 h(n)=51.0
+ g(n)= 29.0 h(n)=47.0
+ g(n)= 30.0 h(n)=46.0
+ g(n)= 31.0 h(n)=44.0
+ g(n)= 33.0 h(n)=43.0
+ g(n)= 35.0 h(n)=42.0
+ g(n)= 36.0 h(n)=41.0
+ g(n)= 48.0 h(n)=39.0
+ g(n)= 50.0 h(n)=38.0
+ g(n)= 51.0 h(n)=36.0
+ g(n)= 52.0 h(n)=35.0
+ g(n)= 53.0 h(n)=31.0
+ g(n)= 54.0 h(n)=30.0
+ g(n)= 55.0 h(n)=28.0
+ g(n)= 56.0 h(n)=26.0
+ g(n)= 60.0 h(n)=25.0
+ g(n)= 61.0 h(n)=24.0
+ g(n)= 67.0 h(n)=23.0
+ g(n)= 71.0 h(n)=22.0
+ g(n)= 72.0 h(n)=18.0
+ g(n)= 73.0 h(n)=15.0
+ g(n)= 80.0 h(n)=14.0
+ g(n)= 89.0 h(n)=13.0
+ g(n)= 90.0 h(n)=12.0
+-------------Time: 10s ; Expanded Nodes: 9666 (Avg-Speed 966.0 n/s); Evaluated States: 135910
+-------------Time: 20s ; Expanded Nodes: 19927 (Avg-Speed 996.0 n/s); Evaluated States: 281146
+ g(n)= 102.0 h(n)=11.0
+-------------Time: 30s ; Expanded Nodes: 30504 (Avg-Speed 1016.0 n/s); Evaluated States: 424730
+ g(n)= 107.0 h(n)=10.0
+ g(n)= 108.0 h(n)=9.0
+-------------Time: 40s ; Expanded Nodes: 43437 (Avg-Speed 1085.0 n/s); Evaluated States: 571592
+-------------Time: 50s ; Expanded Nodes: 56530 (Avg-Speed 1130.0 n/s); Evaluated States: 722115
+-------------Time: 60s ; Expanded Nodes: 70586 (Avg-Speed 1176.0 n/s); Evaluated States: 869462
+-------------Time: 70s ; Expanded Nodes: 84626 (Avg-Speed 1208.0 n/s); Evaluated States: 1020659
+-------------Time: 80s ; Expanded Nodes: 99157 (Avg-Speed 1239.0 n/s); Evaluated States: 1171105
+-------------Time: 90s ; Expanded Nodes: 111597 (Avg-Speed 1239.0 n/s); Evaluated States: 1321419
+-------------Time: 100s ; Expanded Nodes: 123899 (Avg-Speed 1238.0 n/s); Evaluated States: 1467761
+-------------Time: 110s ; Expanded Nodes: 137971 (Avg-Speed 1254.0 n/s); Evaluated States: 1610771
+-------------Time: 120s ; Expanded Nodes: 151087 (Avg-Speed 1259.0 n/s); Evaluated States: 1755979
+-------------Time: 130s ; Expanded Nodes: 164788 (Avg-Speed 1267.0 n/s); Evaluated States: 1904454
+-------------Time: 140s ; Expanded Nodes: 177949 (Avg-Speed 1271.0 n/s); Evaluated States: 2055128
+-------------Time: 150s ; Expanded Nodes: 192783 (Avg-Speed 1285.0 n/s); Evaluated States: 2207352
+-------------Time: 160s ; Expanded Nodes: 206400 (Avg-Speed 1290.0 n/s); Evaluated States: 2358957
+-------------Time: 170s ; Expanded Nodes: 218343 (Avg-Speed 1284.0 n/s); Evaluated States: 2509055
+-------------Time: 180s ; Expanded Nodes: 231275 (Avg-Speed 1284.0 n/s); Evaluated States: 2659356
+ g(n)= 125.0 h(n)=8.0
+ g(n)= 126.0 h(n)=7.0
+ g(n)= 127.0 h(n)=6.0
+ g(n)= 128.0 h(n)=5.0
+-------------Time: 190s ; Expanded Nodes: 243015 (Avg-Speed 1279.0 n/s); Evaluated States: 2800179
+-------------Time: 200s ; Expanded Nodes: 251172 (Avg-Speed 1255.0 n/s); Evaluated States: 2961072
+-------------Time: 210s ; Expanded Nodes: 260144 (Avg-Speed 1238.0 n/s); Evaluated States: 3117710
+-------------Time: 220s ; Expanded Nodes: 268378 (Avg-Speed 1219.0 n/s); Evaluated States: 3265441
+-------------Time: 230s ; Expanded Nodes: 277659 (Avg-Speed 1207.0 n/s); Evaluated States: 3428588
+-------------Time: 240s ; Expanded Nodes: 286005 (Avg-Speed 1191.0 n/s); Evaluated States: 3592589
+-------------Time: 250s ; Expanded Nodes: 294917 (Avg-Speed 1179.0 n/s); Evaluated States: 3753771
+-------------Time: 260s ; Expanded Nodes: 304341 (Avg-Speed 1170.0 n/s); Evaluated States: 3914946
+-------------Time: 270s ; Expanded Nodes: 313662 (Avg-Speed 1161.0 n/s); Evaluated States: 4074855
+-------------Time: 280s ; Expanded Nodes: 322499 (Avg-Speed 1151.0 n/s); Evaluated States: 4226860
+-------------Time: 290s ; Expanded Nodes: 331075 (Avg-Speed 1141.0 n/s); Evaluated States: 4378136
+-------------Time: 300s ; Expanded Nodes: 339864 (Avg-Speed 1132.0 n/s); Evaluated States: 4540237
+-------------Time: 310s ; Expanded Nodes: 347965 (Avg-Speed 1122.0 n/s); Evaluated States: 4709000
+-------------Time: 320s ; Expanded Nodes: 356195 (Avg-Speed 1113.0 n/s); Evaluated States: 4878448
+ g(n)= 139.0 h(n)=4.0
+ g(n)= 140.0 h(n)=3.0
+ g(n)= 141.0 h(n)=2.0
+ g(n)= 143.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (build_cabin p4)
+1.0: (fell_timber p4 timber)
+2.0: (fell_timber p4 timber)
+3.0: (build_quarry p4)
+4.0: (break_stone p4 stone)
+5.0: (break_stone p4 stone)
+6.0: (build_cabin p2)
+7.0: (fell_timber p2 timber)
+8.0: (fell_timber p2 timber)
+9.0: (build_quarry p2)
+10.0: (break_stone p2 stone)
+11.0: (break_stone p2 stone)
+12.0: (fell_timber p2 timber)
+13.0: (build_sawmill p2 timber)
+14.0: (build_cabin p0)
+15.0: (fell_timber p2 timber)
+16.0: (saw_wood p2 timber wood)
+17.0: (saw_wood p2 timber wood)
+18.0: (fell_timber p2 timber)
+19.0: (fell_timber p2 timber)
+20.0: (build_coal_stack p2 timber)
+21.0: (build_cabin p1)
+22.0: (burn_coal p2 timber coal)
+23.0: (fell_timber p2 timber)
+24.0: (burn_coal p2 timber coal)
+25.0: (fell_timber p4 timber)
+26.0: (build_sawmill p4 timber)
+27.0: (fell_timber p4 timber)
+28.0: (saw_wood p4 timber wood)
+29.0: (saw_wood p4 timber wood)
+30.0: (fell_timber p4 timber)
+31.0: (fell_timber p4 timber)
+32.0: (build_coal_stack p4 timber)
+33.0: (fell_timber p4 timber)
+34.0: (burn_coal p4 timber coal)
+35.0: (burn_coal p4 timber coal)
+36.0: (build_cabin p3)
+37.0: (fell_timber p3 timber)
+38.0: (fell_timber p3 timber)
+39.0: (fell_timber p0 timber)
+40.0: (build_cart p3 timber)
+41.0: (move_empty_cart p3 p2)
+42.0: (fell_timber p2 timber)
+43.0: (fell_timber p2 timber)
+44.0: (build_coal_stack p3 timber)
+45.0: (saw_wood p2 timber wood)
+46.0: (build_ironworks p2 stone wood)
+47.0: (saw_wood p2 timber wood)
+48.0: (fell_timber p2 timber)
+49.0: (build_mine p2 wood)
+50.0: (mine_ore p2 ore)
+51.0: (break_stone p2 stone)
+52.0: (break_stone p2 stone)
+53.0: (saw_wood p2 timber wood)
+54.0: (fell_timber p2 timber)
+55.0: (saw_wood p2 timber wood)
+56.0: (fell_timber p2 timber)
+57.0: (break_stone p2 stone)
+58.0: (break_stone p2 stone)
+59.0: (build_docks p2 stone wood)
+60.0: (saw_wood p2 timber wood)
+61.0: (fell_timber p3 timber)
+62.0: (fell_timber p4 timber)
+63.0: (mine_ore p2 ore)
+64.0: (break_stone p4 stone)
+65.0: (saw_wood p4 timber wood)
+66.0: (build_house p4 wood stone)
+67.0: (fell_timber p2 timber)
+68.0: (fell_timber p2 timber)
+69.0: (burn_coal p2 timber coal)
+70.0: (make_iron p2 ore coal iron)
+71.0: (burn_coal p2 timber coal)
+72.0: (make_iron p2 ore coal iron)
+73.0: (fell_timber p2 timber)
+74.0: (fell_timber p4 timber)
+75.0: (burn_coal p4 timber coal)
+76.0: (mine_ore p2 ore)
+77.0: (fell_timber p2 timber)
+78.0: (burn_coal p2 timber coal)
+79.0: (burn_coal p2 timber coal)
+80.0: (build_quarry p0)
+81.0: (break_stone p2 stone)
+82.0: (build_cart p3 timber)
+83.0: (mine_ore p2 ore)
+84.0: (make_iron p2 ore coal iron)
+85.0: (fell_timber p2 timber)
+86.0: (fell_timber p2 timber)
+87.0: (burn_coal p2 timber coal)
+88.0: (burn_coal p2 timber coal)
+89.0: (make_iron p2 ore coal iron)
+90.0: (fell_timber p2 timber)
+91.0: (fell_timber p0 timber)
+92.0: (fell_timber p0 timber)
+93.0: (burn_coal p2 timber coal)
+94.0: (fell_timber p3 timber)
+95.0: (fell_timber p3 timber)
+96.0: (fell_timber p1 timber)
+97.0: (mine_ore p2 ore)
+98.0: (fell_timber p2 timber)
+99.0: (burn_coal p2 timber coal)
+100.0: (make_iron p2 ore coal iron)
+101.0: (build_rail p2 p3 wood iron)
+102.0: (fell_timber p4 timber)
+103.0: (fell_timber p4 timber)
+104.0: (saw_wood p4 timber wood)
+105.0: (saw_wood p4 timber wood)
+106.0: (build_mine p4 wood)
+107.0: (mine_ore p4 ore)
+108.0: (fell_timber p1 timber)
+109.0: (fell_timber p0 timber)
+110.0: (break_stone p2 stone)
+111.0: (build_coal_stack p0 timber)
+112.0: (build_coal_stack p1 timber)
+113.0: (fell_timber p2 timber)
+114.0: (fell_timber p2 timber)
+115.0: (break_stone p0 stone)
+116.0: (burn_coal p1 timber coal)
+117.0: (mine_ore p2 ore)
+118.0: (build_cart p0 timber)
+119.0: (burn_coal p2 timber coal)
+120.0: (burn_coal p2 timber coal)
+121.0: (make_iron p2 ore coal iron)
+122.0: (build_wharf p2 stone iron)
+123.0: (build_train p2 t1 iron)
+124.0: (unload_train t1 p2 iron)
+125.0: (unload_train t1 p2 iron)
+126.0: (unload_train t1 p2 iron)
+127.0: (build_ship p2 b1 iron)
+128.0: (fell_timber p4 timber)
+129.0: (break_stone p4 stone)
+130.0: (move_train t1 p2 p3)
+131.0: (load_boat b1 p2 stone)
+132.0: (load_boat b1 p2 stone)
+133.0: (unload_boat b1 p2 wood)
+134.0: (mine_ore p2 ore)
+135.0: (unload_train t1 p3 iron)
+136.0: (unload_train t1 p3 wood)
+137.0: (build_rail p3 p4 wood iron)
+138.0: (move_train t1 p3 p4)
+139.0: (unload_train t1 p4 iron)
+140.0: (unload_train t1 p4 iron)
+141.0: (break_stone p4 stone)
+142.0: (build_docks p4 stone wood)
+143.0: (build_wharf p4 stone iron)
+
+Plan-Length:144
+Metric (Search):144.0
+Planning Time (msec): 323257
+Heuristic Time (msec): 301946
+Search Time (msec): 323255
+Expanded Nodes:358883
+States Evaluated:4933291
+Number of Dead-Ends detected:0
+Number of Duplicates detected:10055173
+
+=== ROBUSTNESS UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 454
+Aibr Preprocessing
+Problem Detected as Unsolvable by AIBR during preprocessing
+UFX:false
+|F|:1203
+|X|:173
+Unsolvable Problem

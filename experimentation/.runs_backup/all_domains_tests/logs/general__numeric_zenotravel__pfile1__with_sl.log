@@ -1,0 +1,121 @@
+=== CASE ===
+domain: numeric_zenotravel
+instance_file: pfile1.json
+has_social_law: True
+problem_name: sl_zenotravel_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_zenotravel/pfile1
+verifier: general
+
+=== SINGLE_AGENT plane1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 15
+Aibr Preprocessing
+UFX:false
+|F|:11
+|X|:2
+|A|:31
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):7.0
+ g(n)= 1.0 h(n)=6.0
+ g(n)= 2.0 h(n)=4.571289
+ g(n)= 3.0 h(n)=3.571289
+ g(n)= 4.0 h(n)=3.0
+ g(n)= 13.0 h(n)=2.234375
+ g(n)= 14.0 h(n)=2.0
+ g(n)= 15.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (board person1 city0)
+1.0: (fly_slow_city0_city2)
+2.0: (debark person1 city2)
+3.0: (refuel_4096)
+4.0: (refuel_512)
+5.0: (refuel_32)
+6.0: (refuel_128)
+7.0: (refuel_64)
+8.0: (refuel_256)
+9.0: (refuel_8)
+10.0: (refuel_4)
+11.0: (fly_slow_city2_city1)
+12.0: (board person3 city1)
+13.0: (refuel_1024)
+14.0: (fly_slow_city1_city2)
+15.0: (debark person3 city2)
+
+Plan-Length:16
+Metric (Search):16.0
+Planning Time (msec): 241
+Heuristic Time (msec): 166
+Search Time (msec): 240
+Expanded Nodes:3881
+States Evaluated:15470
+Number of Dead-Ends detected:0
+Number of Duplicates detected:36181
+
+=== SINGLE_AGENT plane2 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 16
+Aibr Preprocessing
+UFX:false
+|F|:7
+|X|:2
+|A|:25
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):3.0
+ g(n)= 1.0 h(n)=2.0
+ g(n)= 2.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (board person2 city0)
+1.0: (fly_slow_city0_city1)
+2.0: (debark person2 city1)
+
+Plan-Length:3
+Metric (Search):3.0
+Planning Time (msec): 20
+Heuristic Time (msec): 13
+Search Time (msec): 18
+Expanded Nodes:4
+States Evaluated:42
+Number of Dead-Ends detected:0
+Number of Duplicates detected:1
+
+=== ROBUSTNESS UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 155
+Aibr Preprocessing
+UFX:false
+|F|:100
+|X|:8
+|A|:195
+|P|:0
+|E|:0
+H1 Setup Time (msec): 10
+h(I):15.0
+ g(n)= 1.0 h(n)=13.0
+ g(n)= 2.0 h(n)=12.0
+ g(n)= 3.0 h(n)=11.0
+ g(n)= 4.0 h(n)=10.0
+ g(n)= 7.0 h(n)=9.0
+ g(n)= 8.0 h(n)=8.0
+ g(n)= 9.0 h(n)=7.0
+Problem unsolvable
+Metric (Search):-1.0
+Planning Time (msec): 9188
+Heuristic Time (msec): 8237
+Search Time (msec): 0
+Expanded Nodes:53809
+States Evaluated:70994
+Number of Dead-Ends detected:9658
+Number of Duplicates detected:796695

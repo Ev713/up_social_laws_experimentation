@@ -1,0 +1,150 @@
+=== CASE ===
+domain: numeric_expedition
+instance_file: pfile11.json
+has_social_law: False
+problem_name: expedition_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_expedition/pfile11
+verifier: simple
+
+=== CONVERSION ===
+=== SNP CONVERSION ===
+Converted problem: expedition_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_expedition/pfile11_NUM_STRIPS
+
+=== COMPILER OUTPUT ===
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+
+=== SINGLE_AGENT s0 INTERNAL_ERROR ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 19
+Aibr Preprocessing
+UFX:false
+|F|:14
+|X|:16
+|A|:54
+|P|:0
+|E|:0
+H1 Setup Time (msec): 7
+h(I):13.0
+ g(n)= 2.0 h(n)=12.0
+ g(n)= 4.0 h(n)=11.0
+ g(n)= 6.0 h(n)=10.0
+ g(n)= 14.0 h(n)=9.0
+ g(n)= 50.0 h(n)=8.0
+ g(n)= 184.0 h(n)=7.0
+-------------Time: 10s ; Expanded Nodes: 461668 (Avg-Speed 46166.0 n/s); Evaluated States: 727723
+-------------Time: 20s ; Expanded Nodes: 917124 (Avg-Speed 45856.0 n/s); Evaluated States: 1438977
+ g(n)= 866.0 h(n)=6.0
+-------------Time: 30s ; Expanded Nodes: 1391061 (Avg-Speed 46368.0 n/s); Evaluated States: 2179320
+-------------Time: 40s ; Expanded Nodes: 1856808 (Avg-Speed 46420.0 n/s); Evaluated States: 2898851
+-------------Time: 50s ; Expanded Nodes: 2331428 (Avg-Speed 46628.0 n/s); Evaluated States: 3638627
+-------------Time: 60s ; Expanded Nodes: 2789081 (Avg-Speed 46484.0 n/s); Evaluated States: 4340127
+-------------Time: 70s ; Expanded Nodes: 3261940 (Avg-Speed 46599.0 n/s); Evaluated States: 5064868
+-------------Time: 80s ; Expanded Nodes: 3695546 (Avg-Speed 46194.0 n/s); Evaluated States: 5730467
+-------------Time: 90s ; Expanded Nodes: 4164794 (Avg-Speed 46275.0 n/s); Evaluated States: 6460971
+-------------Time: 100s ; Expanded Nodes: 4648631 (Avg-Speed 46486.0 n/s); Evaluated States: 7211087
+-------------Time: 110s ; Expanded Nodes: 5131786 (Avg-Speed 46652.0 n/s); Evaluated States: 7952564
+-------------Time: 120s ; Expanded Nodes: 5608565 (Avg-Speed 46738.0 n/s); Evaluated States: 8682349
+-------------Time: 130s ; Expanded Nodes: 6046747 (Avg-Speed 46513.0 n/s); Evaluated States: 9348876
+-------------Time: 140s ; Expanded Nodes: 6537252 (Avg-Speed 46694.0 n/s); Evaluated States: 10094177
+-------------Time: 150s ; Expanded Nodes: 7021025 (Avg-Speed 46806.0 n/s); Evaluated States: 10829426
+-------------Time: 160s ; Expanded Nodes: 7504718 (Avg-Speed 46904.0 n/s); Evaluated States: 11562576
+-------------Time: 170s ; Expanded Nodes: 7990479 (Avg-Speed 47002.0 n/s); Evaluated States: 12298484
+-------------Time: 180s ; Expanded Nodes: 8466875 (Avg-Speed 47038.0 n/s); Evaluated States: 13042710
+-------------Time: 190s ; Expanded Nodes: 8867095 (Avg-Speed 46668.0 n/s); Evaluated States: 13663617
+-------------Time: 200s ; Expanded Nodes: 9322035 (Avg-Speed 46610.0 n/s); Evaluated States: 14367707
+-------------Time: 210s ; Expanded Nodes: 9746022 (Avg-Speed 46409.0 n/s); Evaluated States: 15021696
+-------------Time: 220s ; Expanded Nodes: 10206474 (Avg-Speed 46393.0 n/s); Evaluated States: 15728180
+-------------Time: 230s ; Expanded Nodes: 10623102 (Avg-Speed 46187.0 n/s); Evaluated States: 16369616
+-------------Time: 240s ; Expanded Nodes: 11088756 (Avg-Speed 46203.0 n/s); Evaluated States: 17085402
+-------------Time: 250s ; Expanded Nodes: 11543351 (Avg-Speed 46173.0 n/s); Evaluated States: 17782982
+-------------Time: 260s ; Expanded Nodes: 11981529 (Avg-Speed 46082.0 n/s); Evaluated States: 18454931
+-------------Time: 270s ; Expanded Nodes: 12422560 (Avg-Speed 46009.0 n/s); Evaluated States: 19124535
+-------------Time: 280s ; Expanded Nodes: 12852822 (Avg-Speed 45902.0 n/s); Evaluated States: 19786478
+-------------Time: 290s ; Expanded Nodes: 13278434 (Avg-Speed 45787.0 n/s); Evaluated States: 20439370
+-------------Time: 300s ; Expanded Nodes: 13665724 (Avg-Speed 45552.0 n/s); Evaluated States: 21032177
+-------------Time: 310s ; Expanded Nodes: 14070284 (Avg-Speed 45388.0 n/s); Evaluated States: 21651662
+-------------Time: 320s ; Expanded Nodes: 14447305 (Avg-Speed 45147.0 n/s); Evaluated States: 22225414
+-------------Time: 330s ; Expanded Nodes: 14855698 (Avg-Speed 45017.0 n/s); Evaluated States: 22851366
+-------------Time: 340s ; Expanded Nodes: 15163316 (Avg-Speed 44597.0 n/s); Evaluated States: 23322824
+-------------Time: 350s ; Expanded Nodes: 15525243 (Avg-Speed 44357.0 n/s); Evaluated States: 23876061
+-------------Time: 360s ; Expanded Nodes: 15905743 (Avg-Speed 44182.0 n/s); Evaluated States: 24457409
+-------------Time: 370s ; Expanded Nodes: 16181989 (Avg-Speed 43735.0 n/s); Evaluated States: 24879002
+-------------Time: 381s ; Expanded Nodes: 16279666 (Avg-Speed 42728.0 n/s); Evaluated States: 25028100
+-------------Time: 393s ; Expanded Nodes: 16320286 (Avg-Speed 41527.0 n/s); Evaluated States: 25089825
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at it.unimi.dsi.fastutil.objects.ObjectArrays.newArray(ObjectArrays.java:86)
+	at it.unimi.dsi.fastutil.objects.ObjectArrays.grow(ObjectArrays.java:145)
+	at it.unimi.dsi.fastutil.objects.ObjectHeapPriorityQueue.enqueue(ObjectHeapPriorityQueue.java:139)
+	at com.hstairs.ppmajal.search.WAStar.addInFrontier(WAStar.java:73)
+	at com.hstairs.ppmajal.search.WAStar.queueSuccessor(WAStar.java:60)
+	at com.hstairs.ppmajal.search.WAStar.search(WAStar.java:139)
+	at com.hstairs.ppmajal.PDDLProblem.PDDLPlanner.plan(PDDLPlanner.java:85)
+	at planners.ENHSP.search(ENHSP.java:545)
+	at planners.ENHSP.planning(ENHSP.java:209)
+	at main.main(main.java:31)

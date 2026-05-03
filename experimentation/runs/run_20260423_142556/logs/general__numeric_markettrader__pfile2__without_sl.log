@@ -1,0 +1,112 @@
+=== CASE ===
+domain: numeric_markettrader
+instance_file: pfile2.json
+has_social_law: False
+problem_name: market_trader_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_markettrader/pfile2
+verifier: general
+
+=== SINGLE_AGENT camel0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 18
+Aibr Preprocessing
+UFX:false
+|F|:3
+|X|:6
+|A|:13
+|P|:0
+|E|:0
+H1 Setup Time (msec): 7
+h(I):4.0
+ g(n)= 1.0 h(n)=3.125
+ g(n)= 2.0 h(n)=2.625
+ g(n)= 3.0 h(n)=1.75
+ g(n)= 5.0 h(n)=1.375
+ g(n)= 7.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (travel_m2_m0)
+1.0: (buy_g0_m0)
+2.0: (travel_m0_m1)
+3.0: (sell_g0_m1)
+4.0: (buy_g0_m1)
+5.0: (sell_g0_m1)
+6.0: (buy_g0_m1)
+7.0: (sell_g0_m1)
+
+Plan-Length:8
+Metric (Search):8.0
+Planning Time (msec): 24
+Heuristic Time (msec): 11
+Search Time (msec): 21
+Expanded Nodes:9
+States Evaluated:26
+Number of Dead-Ends detected:4
+Number of Duplicates detected:3
+
+=== SINGLE_AGENT camel1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 23
+Aibr Preprocessing
+UFX:false
+|F|:3
+|X|:6
+|A|:13
+|P|:0
+|E|:0
+H1 Setup Time (msec): 7
+h(I):3.0
+ g(n)= 1.0 h(n)=2.5
+ g(n)= 2.0 h(n)=1.625
+ g(n)= 4.0 h(n)=1.25
+ g(n)= 6.0 h(n)=0.875
+Problem Solved
+
+Found Plan:
+0.0: (buy_g0_m0)
+1.0: (travel_m0_m1)
+2.0: (sell_g0_m1)
+3.0: (buy_g0_m1)
+4.0: (sell_g0_m1)
+5.0: (buy_g0_m1)
+6.0: (sell_g0_m1)
+
+Plan-Length:7
+Metric (Search):7.0
+Planning Time (msec): 23
+Heuristic Time (msec): 8
+Search Time (msec): 18
+Expanded Nodes:8
+States Evaluated:25
+Number of Dead-Ends detected:3
+Number of Duplicates detected:2
+
+=== ROBUSTNESS UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 203
+Aibr Preprocessing
+UFX:false
+|F|:48
+|X|:21
+|A|:107
+|P|:0
+|E|:0
+H1 Setup Time (msec): 18
+h(I):11.0
+ g(n)= 1.0 h(n)=10.0
+ g(n)= 5.0 h(n)=3.0
+Problem unsolvable
+Metric (Search):-1.0
+Planning Time (msec): 464
+Heuristic Time (msec): 345
+Search Time (msec): 0
+Expanded Nodes:971
+States Evaluated:1054
+Number of Dead-Ends detected:105
+Number of Duplicates detected:3214

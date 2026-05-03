@@ -1,0 +1,18 @@
+=== CASE ===
+domain: driverlog
+instance_file: pfile17.json
+has_social_law: False
+problem_name: driverlog
+verifier: general
+
+=== SINGLE_AGENT plane1 UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 99
+Aibr Preprocessing
+Problem Detected as Unsolvable by AIBR during preprocessing
+UFX:false
+|F|:917
+|X|:0
+Unsolvable Problem

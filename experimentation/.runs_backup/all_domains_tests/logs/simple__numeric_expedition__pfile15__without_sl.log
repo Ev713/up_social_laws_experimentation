@@ -1,0 +1,177 @@
+=== CASE ===
+domain: numeric_expedition
+instance_file: pfile15.json
+has_social_law: False
+problem_name: expedition_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_expedition/pfile15
+verifier: simple
+
+=== CONVERSION ===
+=== SNP CONVERSION ===
+Converted problem: expedition_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_expedition/pfile15_NUM_STRIPS
+
+=== COMPILER OUTPUT ===
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+
+=== SINGLE_AGENT s0 INTERNAL_ERROR ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 21
+Aibr Preprocessing
+UFX:false
+|F|:10
+|X|:12
+|A|:38
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):9.0
+ g(n)= 2.0 h(n)=8.0
+ g(n)= 4.0 h(n)=7.0
+ g(n)= 6.0 h(n)=6.0
+ g(n)= 22.0 h(n)=5.0
+ g(n)= 50.0 h(n)=4.0
+ g(n)= 132.0 h(n)=3.0
+ g(n)= 712.0 h(n)=2.0
+-------------Time: 10s ; Expanded Nodes: 672516 (Avg-Speed 67251.0 n/s); Evaluated States: 998100
+-------------Time: 20s ; Expanded Nodes: 1368451 (Avg-Speed 68422.0 n/s); Evaluated States: 1979716
+-------------Time: 30s ; Expanded Nodes: 2073481 (Avg-Speed 69116.0 n/s); Evaluated States: 2965072
+-------------Time: 40s ; Expanded Nodes: 2786130 (Avg-Speed 69653.0 n/s); Evaluated States: 3973087
+-------------Time: 50s ; Expanded Nodes: 3435866 (Avg-Speed 68717.0 n/s); Evaluated States: 4900485
+-------------Time: 60s ; Expanded Nodes: 4149070 (Avg-Speed 69151.0 n/s); Evaluated States: 5902711
+-------------Time: 70s ; Expanded Nodes: 4878258 (Avg-Speed 69689.0 n/s); Evaluated States: 6924401
+-------------Time: 80s ; Expanded Nodes: 5552892 (Avg-Speed 69411.0 n/s); Evaluated States: 7855325
+-------------Time: 90s ; Expanded Nodes: 6293106 (Avg-Speed 69923.0 n/s); Evaluated States: 8867924
+-------------Time: 100s ; Expanded Nodes: 7020958 (Avg-Speed 70209.0 n/s); Evaluated States: 9864004
+-------------Time: 110s ; Expanded Nodes: 7731417 (Avg-Speed 70285.0 n/s); Evaluated States: 10838999
+-------------Time: 120s ; Expanded Nodes: 8348207 (Avg-Speed 69568.0 n/s); Evaluated States: 11684742
+-------------Time: 130s ; Expanded Nodes: 9049085 (Avg-Speed 69608.0 n/s); Evaluated States: 12640345
+-------------Time: 140s ; Expanded Nodes: 9803059 (Avg-Speed 70021.0 n/s); Evaluated States: 13672759
+-------------Time: 150s ; Expanded Nodes: 10560890 (Avg-Speed 70405.0 n/s); Evaluated States: 14706651
+-------------Time: 160s ; Expanded Nodes: 11306217 (Avg-Speed 70663.0 n/s); Evaluated States: 15732285
+-------------Time: 170s ; Expanded Nodes: 12010003 (Avg-Speed 70647.0 n/s); Evaluated States: 16750756
+-------------Time: 180s ; Expanded Nodes: 12597324 (Avg-Speed 69985.0 n/s); Evaluated States: 17591073
+-------------Time: 190s ; Expanded Nodes: 13312137 (Avg-Speed 70063.0 n/s); Evaluated States: 18606793
+-------------Time: 200s ; Expanded Nodes: 13956102 (Avg-Speed 69780.0 n/s); Evaluated States: 19515340
+-------------Time: 210s ; Expanded Nodes: 14609502 (Avg-Speed 69569.0 n/s); Evaluated States: 20432552
+-------------Time: 220s ; Expanded Nodes: 15300986 (Avg-Speed 69549.0 n/s); Evaluated States: 21401634
+-------------Time: 230s ; Expanded Nodes: 15957022 (Avg-Speed 69378.0 n/s); Evaluated States: 22318509
+-------------Time: 240s ; Expanded Nodes: 16580020 (Avg-Speed 69083.0 n/s); Evaluated States: 23187715
+-------------Time: 250s ; Expanded Nodes: 17166496 (Avg-Speed 68665.0 n/s); Evaluated States: 24001647
+-------------Time: 260s ; Expanded Nodes: 17747223 (Avg-Speed 68258.0 n/s); Evaluated States: 24805681
+-------------Time: 270s ; Expanded Nodes: 18337802 (Avg-Speed 67917.0 n/s); Evaluated States: 25625189
+-------------Time: 280s ; Expanded Nodes: 18814957 (Avg-Speed 67196.0 n/s); Evaluated States: 26286635
+-------------Time: 290s ; Expanded Nodes: 19367139 (Avg-Speed 66783.0 n/s); Evaluated States: 27050931
+-------------Time: 301s ; Expanded Nodes: 19839483 (Avg-Speed 65911.0 n/s); Evaluated States: 27703923
+-------------Time: 312s ; Expanded Nodes: 20154949 (Avg-Speed 64599.0 n/s); Evaluated States: 28136952
+-------------Time: 322s ; Expanded Nodes: 20396172 (Avg-Speed 63342.0 n/s); Evaluated States: 28470394
+-------------Time: 332s ; Expanded Nodes: 20528094 (Avg-Speed 61831.0 n/s); Evaluated States: 28652257
+-------------Time: 342s ; Expanded Nodes: 20633779 (Avg-Speed 60332.0 n/s); Evaluated States: 28798263
+-------------Time: 353s ; Expanded Nodes: 20694272 (Avg-Speed 58624.0 n/s); Evaluated States: 28881585
+-------------Time: 363s ; Expanded Nodes: 20719372 (Avg-Speed 57078.0 n/s); Evaluated States: 28916202
+-------------Time: 374s ; Expanded Nodes: 20737570 (Avg-Speed 55448.0 n/s); Evaluated States: 28941336
+-------------Time: 384s ; Expanded Nodes: 20742872 (Avg-Speed 54017.0 n/s); Evaluated States: 28948659
+-------------Time: 394s ; Expanded Nodes: 20747409 (Avg-Speed 52658.0 n/s); Evaluated States: 28954929
+-------------Time: 406s ; Expanded Nodes: 20751222 (Avg-Speed 51111.0 n/s); Evaluated States: 28960183
+-------------Time: 416s ; Expanded Nodes: 20854749 (Avg-Speed 50131.0 n/s); Evaluated States: 29103159
+-------------Time: 428s ; Expanded Nodes: 20930423 (Avg-Speed 48902.0 n/s); Evaluated States: 29207358
+-------------Time: 438s ; Expanded Nodes: 20958702 (Avg-Speed 47850.0 n/s); Evaluated States: 29246095
+-------------Time: 448s ; Expanded Nodes: 20963219 (Avg-Speed 46792.0 n/s); Evaluated States: 29252354
+-------------Time: 459s ; Expanded Nodes: 20967749 (Avg-Speed 45681.0 n/s); Evaluated States: 29258636
+-------------Time: 470s ; Expanded Nodes: 20971536 (Avg-Speed 44620.0 n/s); Evaluated States: 29263883
+-------------Time: 480s ; Expanded Nodes: 20976096 (Avg-Speed 43700.0 n/s); Evaluated States: 29270155

@@ -1,0 +1,322 @@
+=== CASE ===
+domain: blocksworld
+instance_file: pfile1.json
+has_social_law: False
+problem_name: blocksworld
+verifier: general
+
+=== SINGLE_AGENT a1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 17
+Aibr Preprocessing
+UFX:false
+|F|:109
+|X|:0
+|A|:180
+|P|:0
+|E|:0
+H1 Setup Time (msec): 13
+h(I):19.0
+ g(n)= 2.0 h(n)=16.0
+ g(n)= 4.0 h(n)=13.0
+ g(n)= 6.0 h(n)=10.0
+ g(n)= 8.0 h(n)=8.0
+ g(n)= 10.0 h(n)=6.0
+ g(n)= 12.0 h(n)=3.0
+ g(n)= 14.0 h(n)=2.0
+ g(n)= 15.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (unstack h a)
+1.0: (put_down h)
+2.0: (unstack a d)
+3.0: (stack a h)
+4.0: (unstack d e)
+5.0: (put_down d)
+6.0: (unstack e c)
+7.0: (put_down e)
+8.0: (unstack c i)
+9.0: (put_down c)
+10.0: (unstack i b)
+11.0: (stack i e)
+12.0: (unstack b g)
+13.0: (put_down b)
+14.0: (pick_up f)
+15.0: (stack f g)
+
+Plan-Length:16
+Metric (Search):16.0
+Planning Time (msec): 77
+Heuristic Time (msec): 54
+Search Time (msec): 72
+Expanded Nodes:27
+States Evaluated:93
+Number of Dead-Ends detected:0
+Number of Duplicates detected:25
+
+=== SINGLE_AGENT a2 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 13
+Aibr Preprocessing
+UFX:false
+|F|:109
+|X|:0
+|A|:180
+|P|:0
+|E|:0
+H1 Setup Time (msec): 11
+h(I):20.0
+ g(n)= 2.0 h(n)=17.0
+ g(n)= 4.0 h(n)=14.0
+ g(n)= 6.0 h(n)=11.0
+ g(n)= 8.0 h(n)=9.0
+ g(n)= 10.0 h(n)=7.0
+ g(n)= 12.0 h(n)=5.0
+ g(n)= 14.0 h(n)=4.0
+ g(n)= 18.0 h(n)=2.0
+ g(n)= 19.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (unstack h a)
+1.0: (stack h f)
+2.0: (unstack a d)
+3.0: (put_down a)
+4.0: (unstack d e)
+5.0: (put_down d)
+6.0: (unstack e c)
+7.0: (put_down e)
+8.0: (unstack c i)
+9.0: (stack c a)
+10.0: (unstack i b)
+11.0: (put_down i)
+12.0: (pick_up e)
+13.0: (stack e d)
+14.0: (unstack b g)
+15.0: (put_down b)
+16.0: (pick_up g)
+17.0: (stack g h)
+18.0: (unstack e d)
+19.0: (stack e b)
+
+Plan-Length:20
+Metric (Search):20.0
+Planning Time (msec): 85
+Heuristic Time (msec): 58
+Search Time (msec): 82
+Expanded Nodes:50
+States Evaluated:167
+Number of Dead-Ends detected:0
+Number of Duplicates detected:54
+
+=== SINGLE_AGENT a3 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 13
+Aibr Preprocessing
+UFX:false
+|F|:109
+|X|:0
+|A|:180
+|P|:0
+|E|:0
+H1 Setup Time (msec): 8
+h(I):16.0
+ g(n)= 2.0 h(n)=13.0
+ g(n)= 4.0 h(n)=10.0
+ g(n)= 6.0 h(n)=8.0
+ g(n)= 8.0 h(n)=6.0
+ g(n)= 10.0 h(n)=4.0
+ g(n)= 12.0 h(n)=3.0
+ g(n)= 14.0 h(n)=2.0
+ g(n)= 15.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (unstack h a)
+1.0: (stack h f)
+2.0: (unstack a d)
+3.0: (put_down a)
+4.0: (unstack d e)
+5.0: (put_down d)
+6.0: (unstack e c)
+7.0: (stack e a)
+8.0: (unstack h f)
+9.0: (stack h d)
+10.0: (unstack c i)
+11.0: (put_down c)
+12.0: (unstack i b)
+13.0: (stack i f)
+14.0: (unstack b g)
+15.0: (stack b c)
+
+Plan-Length:16
+Metric (Search):16.0
+Planning Time (msec): 62
+Heuristic Time (msec): 43
+Search Time (msec): 60
+Expanded Nodes:29
+States Evaluated:85
+Number of Dead-Ends detected:0
+Number of Duplicates detected:27
+
+=== SINGLE_AGENT a4 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 12
+Aibr Preprocessing
+UFX:false
+|F|:109
+|X|:0
+|A|:180
+|P|:0
+|E|:0
+H1 Setup Time (msec): 12
+h(I):16.0
+ g(n)= 2.0 h(n)=12.0
+ g(n)= 4.0 h(n)=9.0
+ g(n)= 6.0 h(n)=7.0
+ g(n)= 8.0 h(n)=5.0
+ g(n)= 9.0 h(n)=4.0
+ g(n)= 10.0 h(n)=2.0
+ g(n)= 11.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (unstack h a)
+1.0: (stack h f)
+2.0: (unstack a d)
+3.0: (put_down a)
+4.0: (unstack d e)
+5.0: (put_down d)
+6.0: (unstack e c)
+7.0: (put_down e)
+8.0: (unstack c i)
+9.0: (stack c a)
+10.0: (pick_up d)
+11.0: (stack d i)
+
+Plan-Length:12
+Metric (Search):12.0
+Planning Time (msec): 47
+Heuristic Time (msec): 29
+Search Time (msec): 45
+Expanded Nodes:17
+States Evaluated:44
+Number of Dead-Ends detected:0
+Number of Duplicates detected:15
+
+=== ROBUSTNESS SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 123
+Aibr Preprocessing
+UFX:false
+|F|:1311
+|X|:0
+|A|:3221
+|P|:0
+|E|:0
+H1 Setup Time (msec): 84
+h(I):74.0
+ g(n)= 1.0 h(n)=73.0
+ g(n)= 2.0 h(n)=60.0
+ g(n)= 4.0 h(n)=59.0
+ g(n)= 5.0 h(n)=48.0
+ g(n)= 9.0 h(n)=38.0
+ g(n)= 12.0 h(n)=30.0
+ g(n)= 14.0 h(n)=22.0
+ g(n)= 16.0 h(n)=17.0
+ g(n)= 19.0 h(n)=13.0
+ g(n)= 22.0 h(n)=12.0
+ g(n)= 24.0 h(n)=11.0
+ g(n)= 32.0 h(n)=10.0
+ g(n)= 44.0 h(n)=8.0
+ g(n)= 48.0 h(n)=7.0
+ g(n)= 50.0 h(n)=5.0
+ g(n)= 52.0 h(n)=4.0
+ g(n)= 58.0 h(n)=3.0
+ g(n)= 59.0 h(n)=2.0
+ g(n)= 60.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (s_ra___a2__unstack h a)
+1.0: (s_ra___a2__put_down h)
+2.0: (s_ra___a4__pick_up f)
+3.0: (s_ra___a2__unstack a d)
+4.0: (s_ra___a2__put_down a)
+5.0: (s_ra___a4__put_down f)
+6.0: (s_ra___a3__pick_up f)
+7.0: (s_ra___a2__unstack d e)
+8.0: (s_ra___a2__put_down d)
+9.0: (s_ra___a3__put_down f)
+10.0: (s_ra___a2__unstack e c)
+11.0: (s_ra___a2__put_down e)
+12.0: (s_ra___a2__unstack c i)
+13.0: (s_ra___a2__stack c a)
+14.0: (s_ra___a2__unstack i b)
+15.0: (s_ra___a2__stack i e)
+16.0: (s_ra___a3__pick_up f)
+17.0: (s_ra___a2__unstack b g)
+18.0: (s_ra___a2__stack b c)
+19.0: (s_ra___a3__put_down f)
+20.0: (s_ra___a2__pick_up f)
+21.0: (s_ra___a2__stack f g)
+22.0: (s_ra___a2__pick_up h)
+23.0: (s_ra___a2__stack h d)
+24.0: (s_ra___a2__unstack f g)
+25.0: (s_ra___a2__put_down f)
+26.0: (s_ra___a3__pick_up f)
+27.0: (s_ra___a2__pick_up g)
+28.0: (s_ra___a2__stack g h)
+29.0: (s_ra___a3__put_down f)
+30.0: (s_ra___a2__pick_up f)
+31.0: (s_ra___a2__stack f g)
+32.0: (s_ra___a2__unstack i e)
+33.0: (s_ra___a2__put_down i)
+34.0: (s_ra___a2__pick_up e)
+35.0: (s_ra___a2__stack e b)
+36.0: (s_ra___a2__unstack f g)
+37.0: (s_ra___a2__put_down f)
+38.0: (s_ra___a2__unstack g h)
+39.0: (s_ra___a2__put_down g)
+40.0: (s_ra___a2__pick_up f)
+41.0: (s_ra___a2__stack f g)
+42.0: (s_ra___a2__pick_up i)
+43.0: (s_ra___a2__stack i e)
+44.0: (s_ra___a2__unstack h d)
+45.0: (s_ra___a2__put_down h)
+46.0: (s_ra___a2__pick_up d)
+47.0: (s_ra___a2__stack d i)
+48.0: (s_ra___a2__pick_up h)
+49.0: (s_ra___a2__stack h d)
+50.0: (f_ra_1__a4__pick_up f)
+51.0: (a2_take_turn)
+52.0: (end_s_a3)
+53.0: (end_s_a1)
+54.0: (l_ra__a2__unstack f g)
+55.0: (l_ra__a2__put_down f)
+56.0: (l_ra__a2__pick_up g)
+57.0: (l_ra__a2__stack g h)
+58.0: (l_ra__a2__pick_up f)
+59.0: (l_ra__a2__stack f g)
+60.0: (goals_not_achieved_a2_0)
+
+Plan-Length:61
+Metric (Search):61.0
+Planning Time (msec): 3364
+Heuristic Time (msec): 3154
+Search Time (msec): 3360
+Expanded Nodes:362
+States Evaluated:2750
+Number of Dead-Ends detected:195
+Number of Duplicates detected:1277

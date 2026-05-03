@@ -1,0 +1,27 @@
+{
+  "run_id": "example_civ",
+  "output_dir": "experimentation/.archive/runs",
+  "domains": [
+    "civ"
+  ],
+  "instances": {
+    "civ": [
+      "pfile1.json"
+    ]
+  },
+  "social_law_options": [
+    true,
+    false
+  ],
+  "verifiers": [
+    "general",
+    "simple"
+  ],
+  "limits": {
+    "engine": "enhsp",
+    "planner_timeout_seconds": 30,
+    "wall_timeout_seconds": 3600,
+    "cpu_seconds": 1800,
+    "memory_bytes": 16000000000
+  }
+}

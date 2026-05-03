@@ -1,0 +1,128 @@
+=== CASE ===
+domain: numeric_markettrader
+instance_file: pfile2.json
+has_social_law: False
+problem_name: market_trader_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_markettrader/pfile2
+verifier: general
+
+=== SINGLE_AGENT camel0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 51
+Aibr Preprocessing
+UFX:false
+|F|:3
+|X|:4
+|A|:11
+|P|:0
+|E|:0
+H1 Setup Time (msec): 14
+h(I):2.3333335
+ g(n)= 1.0 h(n)=2.0
+ g(n)= 2.0 h(n)=1.25
+ g(n)= 16.0 h(n)=0.75
+Problem Solved
+
+Found Plan:
+0.0: (buy_g0_m0)
+1.0: (travel_m0_m1)
+2.0: (sell_g0_m1)
+3.0: (travel_m1_m0)
+4.0: (buy_g0_m0)
+5.0: (travel_m0_m1)
+6.0: (sell_g0_m1)
+7.0: (travel_m1_m0)
+8.0: (buy_g0_m0)
+9.0: (travel_m0_m1)
+10.0: (sell_g0_m1)
+11.0: (travel_m1_m0)
+12.0: (buy_g0_m0)
+13.0: (buy_g0_m0)
+14.0: (travel_m0_m1)
+15.0: (sell_g0_m1)
+16.0: (sell_g0_m1)
+
+Plan-Length:17
+Metric (Search):17.0
+Planning Time (msec): 161
+Heuristic Time (msec): 65
+Search Time (msec): 156
+Expanded Nodes:73
+States Evaluated:244
+Number of Dead-Ends detected:25
+Number of Duplicates detected:22
+
+=== SINGLE_AGENT camel1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 21
+Aibr Preprocessing
+UFX:false
+|F|:3
+|X|:4
+|A|:11
+|P|:0
+|E|:0
+H1 Setup Time (msec): 9
+h(I):2.3333335
+ g(n)= 1.0 h(n)=2.0
+ g(n)= 2.0 h(n)=1.25
+ g(n)= 16.0 h(n)=0.75
+Problem Solved
+
+Found Plan:
+0.0: (buy_g0_m0)
+1.0: (travel_m0_m1)
+2.0: (sell_g0_m1)
+3.0: (travel_m1_m0)
+4.0: (buy_g0_m0)
+5.0: (travel_m0_m1)
+6.0: (sell_g0_m1)
+7.0: (travel_m1_m0)
+8.0: (buy_g0_m0)
+9.0: (travel_m0_m1)
+10.0: (sell_g0_m1)
+11.0: (travel_m1_m0)
+12.0: (buy_g0_m0)
+13.0: (buy_g0_m0)
+14.0: (travel_m0_m1)
+15.0: (sell_g0_m1)
+16.0: (sell_g0_m1)
+
+Plan-Length:17
+Metric (Search):17.0
+Planning Time (msec): 54
+Heuristic Time (msec): 24
+Search Time (msec): 50
+Expanded Nodes:73
+States Evaluated:244
+Number of Dead-Ends detected:25
+Number of Duplicates detected:22
+
+=== ROBUSTNESS UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 181
+Aibr Preprocessing
+UFX:false
+|F|:44
+|X|:15
+|A|:89
+|P|:0
+|E|:0
+H1 Setup Time (msec): 19
+h(I):7.0
+ g(n)= 1.0 h(n)=6.0
+ g(n)= 5.0 h(n)=3.0
+Problem unsolvable
+Metric (Search):-1.0
+Planning Time (msec): 448
+Heuristic Time (msec): 305
+Search Time (msec): 0
+Expanded Nodes:847
+States Evaluated:981
+Number of Dead-Ends detected:104
+Number of Duplicates detected:3170

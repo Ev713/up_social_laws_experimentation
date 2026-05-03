@@ -1,0 +1,270 @@
+=== CASE ===
+domain: numeric_expedition
+instance_file: pfile7.json
+has_social_law: False
+problem_name: expedition_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_expedition/pfile7
+verifier: general
+
+=== SINGLE_AGENT s0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 16
+Aibr Preprocessing
+UFX:false
+|F|:6
+|X|:7
+|A|:22
+|P|:0
+|E|:0
+H1 Setup Time (msec): 6
+h(I):5.0
+ g(n)= 2.0 h(n)=4.0
+ g(n)= 4.0 h(n)=3.0
+ g(n)= 6.0 h(n)=2.0
+ g(n)= 14.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (retrieve_supplies wa0)
+1.0: (retrieve_supplies wa0)
+2.0: (retrieve_supplies wa0)
+3.0: (move_forwards wa0 wa1)
+4.0: (store_supplies wa1)
+5.0: (move_backwards wa1 wa0)
+6.0: (retrieve_supplies wa0)
+7.0: (retrieve_supplies wa0)
+8.0: (retrieve_supplies wa0)
+9.0: (move_forwards wa0 wa1)
+10.0: (retrieve_supplies wa1)
+11.0: (move_forwards wa1 wa2)
+12.0: (move_forwards wa2 wa3)
+13.0: (move_forwards wa3 wa4)
+14.0: (move_forwards wa4 wa5)
+
+Plan-Length:15
+Metric (Search):15.0
+Planning Time (msec): 34
+Heuristic Time (msec): 17
+Search Time (msec): 31
+Expanded Nodes:55
+States Evaluated:91
+Number of Dead-Ends detected:32
+Number of Duplicates detected:44
+
+=== SINGLE_AGENT s1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 17
+Aibr Preprocessing
+UFX:false
+|F|:6
+|X|:7
+|A|:22
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):5.0
+ g(n)= 2.0 h(n)=4.0
+ g(n)= 4.0 h(n)=3.0
+ g(n)= 6.0 h(n)=2.0
+ g(n)= 14.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (retrieve_supplies wb0)
+1.0: (retrieve_supplies wb0)
+2.0: (retrieve_supplies wb0)
+3.0: (move_forwards wb0 wb1)
+4.0: (store_supplies wb1)
+5.0: (move_backwards wb1 wb0)
+6.0: (retrieve_supplies wb0)
+7.0: (retrieve_supplies wb0)
+8.0: (retrieve_supplies wb0)
+9.0: (move_forwards wb0 wb1)
+10.0: (retrieve_supplies wb1)
+11.0: (move_forwards wb1 wb2)
+12.0: (move_forwards wb2 wb3)
+13.0: (move_forwards wb3 wb4)
+14.0: (move_forwards wb4 wb5)
+
+Plan-Length:15
+Metric (Search):15.0
+Planning Time (msec): 22
+Heuristic Time (msec): 11
+Search Time (msec): 20
+Expanded Nodes:55
+States Evaluated:91
+Number of Dead-Ends detected:32
+Number of Duplicates detected:44
+
+=== SINGLE_AGENT s2 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 16
+Aibr Preprocessing
+UFX:false
+|F|:6
+|X|:7
+|A|:22
+|P|:0
+|E|:0
+H1 Setup Time (msec): 4
+h(I):5.0
+ g(n)= 2.0 h(n)=4.0
+ g(n)= 4.0 h(n)=3.0
+ g(n)= 6.0 h(n)=2.0
+ g(n)= 14.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (retrieve_supplies wa0)
+1.0: (retrieve_supplies wa0)
+2.0: (retrieve_supplies wa0)
+3.0: (move_forwards wa0 wa1)
+4.0: (store_supplies wa1)
+5.0: (move_backwards wa1 wa0)
+6.0: (retrieve_supplies wa0)
+7.0: (retrieve_supplies wa0)
+8.0: (retrieve_supplies wa0)
+9.0: (move_forwards wa0 wa1)
+10.0: (retrieve_supplies wa1)
+11.0: (move_forwards wa1 wa2)
+12.0: (move_forwards wa2 wa3)
+13.0: (move_forwards wa3 wa4)
+14.0: (move_forwards wa4 wa5)
+
+Plan-Length:15
+Metric (Search):15.0
+Planning Time (msec): 22
+Heuristic Time (msec): 12
+Search Time (msec): 20
+Expanded Nodes:55
+States Evaluated:91
+Number of Dead-Ends detected:32
+Number of Duplicates detected:44
+
+=== ROBUSTNESS SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 135
+Aibr Preprocessing
+UFX:false
+|F|:115
+|X|:36
+|A|:289
+|P|:0
+|E|:0
+H1 Setup Time (msec): 12
+h(I):18.0
+ g(n)= 2.0 h(n)=17.0
+ g(n)= 4.0 h(n)=16.0
+ g(n)= 6.0 h(n)=15.0
+ g(n)= 8.0 h(n)=14.0
+ g(n)= 10.0 h(n)=13.0
+ g(n)= 18.0 h(n)=12.0
+ g(n)= 19.0 h(n)=11.0
+ g(n)= 25.0 h(n)=10.0
+ g(n)= 27.0 h(n)=9.0
+ g(n)= 35.0 h(n)=8.0
+ g(n)= 36.0 h(n)=7.0
+ g(n)= 60.0 h(n)=6.0
+ g(n)= 62.0 h(n)=5.0
+ g(n)= 64.0 h(n)=4.0
+ g(n)= 66.0 h(n)=3.0
+ g(n)= 76.0 h(n)=2.0
+ g(n)= 77.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (s_ra___s2__retrieve_supplies wa0)
+1.0: (s_ra___s2__move_forwards wa0 wa1)
+2.0: (s_ra___s0__retrieve_supplies wa0)
+3.0: (s_ra___s0__move_forwards wa0 wa1)
+4.0: (s_ra___s1__retrieve_supplies wb0)
+5.0: (s_ra___s1__retrieve_supplies wb0)
+6.0: (s_ra___s1__retrieve_supplies wb0)
+7.0: (s_ra___s1__move_forwards wb0 wb1)
+8.0: (s_ra___s1__store_supplies wb1)
+9.0: (s_ra___s1__move_backwards wb1 wb0)
+10.0: (s_ra___s1__retrieve_supplies wb0)
+11.0: (s_ra___s1__retrieve_supplies wb0)
+12.0: (s_ra___s1__retrieve_supplies wb0)
+13.0: (s_ra___s1__move_forwards wb0 wb1)
+14.0: (s_ra___s1__retrieve_supplies wb1)
+15.0: (s_ra___s1__move_forwards wb1 wb2)
+16.0: (s_ra___s1__move_forwards wb2 wb3)
+17.0: (s_ra___s1__move_forwards wb3 wb4)
+18.0: (s_ra___s1__move_forwards wb4 wb5)
+19.0: (s_ra___s2__move_backwards wa1 wa0)
+20.0: (s_ra___s2__retrieve_supplies wa0)
+21.0: (s_ra___s2__retrieve_supplies wa0)
+22.0: (s_ra___s2__retrieve_supplies wa0)
+23.0: (s_ra___s2__retrieve_supplies wa0)
+24.0: (s_ra___s2__move_forwards wa0 wa1)
+25.0: (s_ra___s2__move_backwards wa1 wa0)
+26.0: (s_ra___s2__retrieve_supplies wa0)
+27.0: (s_ra___s2__retrieve_supplies wa0)
+28.0: (s_ra___s2__move_forwards wa0 wa1)
+29.0: (s_ra___s2__move_backwards wa1 wa0)
+30.0: (s_ra___s2__retrieve_supplies wa0)
+31.0: (s_ra___s2__retrieve_supplies wa0)
+32.0: (s_ra___s2__move_forwards wa0 wa1)
+33.0: (s_ra___s2__move_backwards wa1 wa0)
+34.0: (s_ra___s2__retrieve_supplies wa0)
+35.0: (s_ra___s2__retrieve_supplies wa0)
+36.0: (s_ra___s2__move_forwards wa0 wa1)
+37.0: (s_ra___s2__store_supplies wa1)
+38.0: (s_ra___s2__move_backwards wa1 wa0)
+39.0: (s_ra___s2__retrieve_supplies wa0)
+40.0: (s_ra___s2__retrieve_supplies wa0)
+41.0: (s_ra___s2__move_forwards wa0 wa1)
+42.0: (s_ra___s2__move_backwards wa1 wa0)
+43.0: (s_ra___s2__retrieve_supplies wa0)
+44.0: (s_ra___s2__retrieve_supplies wa0)
+45.0: (s_ra___s2__retrieve_supplies wa0)
+46.0: (s_ra___s2__move_forwards wa0 wa1)
+47.0: (s_ra___s2__store_supplies wa1)
+48.0: (s_ra___s2__move_backwards wa1 wa0)
+49.0: (s_ra___s2__retrieve_supplies wa0)
+50.0: (s_ra___s2__retrieve_supplies wa0)
+51.0: (s_ra___s2__retrieve_supplies wa0)
+52.0: (s_ra___s2__move_forwards wa0 wa1)
+53.0: (s_ra___s2__retrieve_supplies wa1)
+54.0: (s_ra___s2__move_forwards wa1 wa2)
+55.0: (s_ra___s2__move_forwards wa2 wa3)
+56.0: (s_ra___s2__move_forwards wa3 wa4)
+57.0: (s_ra___s2__move_forwards wa4 wa5)
+58.0: (s_ra___s0__move_backwards wa1 wa0)
+59.0: (f_ra_1__s0__retrieve_supplies wa0)
+60.0: (l_ra__s0__retrieve_supplies wa0)
+61.0: (l_ra__s0__retrieve_supplies wa0)
+62.0: (l_ra__s0__retrieve_supplies wa0)
+63.0: (l_ra__s0__move_forwards wa0 wa1)
+64.0: (l_ra__s0__store_supplies wa1)
+65.0: (end_s_s2)
+66.0: (end_s_s1)
+67.0: (l_ra__s0__move_backwards wa1 wa0)
+68.0: (l_ra__s0__retrieve_supplies wa0)
+69.0: (l_ra__s0__retrieve_supplies wa0)
+70.0: (l_ra__s0__retrieve_supplies wa0)
+71.0: (l_ra__s0__move_forwards wa0 wa1)
+72.0: (l_ra__s0__retrieve_supplies wa1)
+73.0: (l_ra__s0__move_forwards wa1 wa2)
+74.0: (l_ra__s0__move_forwards wa2 wa3)
+75.0: (l_ra__s0__move_forwards wa3 wa4)
+76.0: (l_ra__s0__move_forwards wa4 wa5)
+77.0: (declare_fail)
+
+Plan-Length:78
+Metric (Search):78.0
+Planning Time (msec): 1119
+Heuristic Time (msec): 1031
+Search Time (msec): 1118
+Expanded Nodes:1631
+States Evaluated:5275
+Number of Dead-Ends detected:3898
+Number of Duplicates detected:2059

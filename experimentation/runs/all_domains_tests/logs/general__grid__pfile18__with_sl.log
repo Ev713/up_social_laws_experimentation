@@ -1,0 +1,379 @@
+=== CASE ===
+domain: grid
+instance_file: pfile18.json
+has_social_law: True
+problem_name: grid_pfile18
+verifier: general
+
+=== SINGLE_AGENT car-0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 21
+Aibr Preprocessing
+UFX:false
+|F|:98
+|X|:0
+|A|:166
+|P|:0
+|E|:0
+H1 Setup Time (msec): 8
+h(I):5.0
+ g(n)= 1.0 h(n)=4.0
+ g(n)= 2.0 h(n)=3.0
+ g(n)= 3.0 h(n)=2.0
+ g(n)= 4.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive o__5__4_)
+1.0: (drive o__5__4_ o__5__5_ north)
+2.0: (drive o__5__5_ o__5__6_ north)
+3.0: (drive o__5__6_ o__5__7_ north)
+4.0: (leave o__5__7_)
+
+Plan-Length:5
+Metric (Search):5.0
+Planning Time (msec): 28
+Heuristic Time (msec): 17
+Search Time (msec): 26
+Expanded Nodes:6
+States Evaluated:11
+Number of Dead-Ends detected:0
+Number of Duplicates detected:3
+
+=== SINGLE_AGENT car-1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 20
+Aibr Preprocessing
+UFX:false
+|F|:98
+|X|:0
+|A|:166
+|P|:0
+|E|:0
+H1 Setup Time (msec): 8
+h(I):4.0
+ g(n)= 1.0 h(n)=3.0
+ g(n)= 2.0 h(n)=2.0
+ g(n)= 3.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive o__3__5_)
+1.0: (drive o__3__5_ o__4__5_ east)
+2.0: (drive o__4__5_ o__5__5_ east)
+3.0: (leave o__5__5_)
+
+Plan-Length:4
+Metric (Search):4.0
+Planning Time (msec): 22
+Heuristic Time (msec): 14
+Search Time (msec): 20
+Expanded Nodes:5
+States Evaluated:12
+Number of Dead-Ends detected:0
+Number of Duplicates detected:2
+
+=== SINGLE_AGENT car-2 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 20
+Aibr Preprocessing
+UFX:false
+|F|:98
+|X|:0
+|A|:166
+|P|:0
+|E|:0
+H1 Setup Time (msec): 8
+h(I):5.0
+ g(n)= 1.0 h(n)=4.0
+ g(n)= 2.0 h(n)=3.0
+ g(n)= 3.0 h(n)=2.0
+ g(n)= 4.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive o__4__7_)
+1.0: (drive o__4__7_ o__5__7_ east)
+2.0: (drive o__5__7_ o__5__6_ south)
+3.0: (drive o__5__6_ o__5__5_ south)
+4.0: (leave o__5__5_)
+
+Plan-Length:5
+Metric (Search):5.0
+Planning Time (msec): 22
+Heuristic Time (msec): 11
+Search Time (msec): 20
+Expanded Nodes:6
+States Evaluated:10
+Number of Dead-Ends detected:0
+Number of Duplicates detected:4
+
+=== SINGLE_AGENT car-3 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 24
+Aibr Preprocessing
+UFX:false
+|F|:98
+|X|:0
+|A|:166
+|P|:0
+|E|:0
+H1 Setup Time (msec): 7
+h(I):7.0
+ g(n)= 1.0 h(n)=6.0
+ g(n)= 2.0 h(n)=5.0
+ g(n)= 3.0 h(n)=4.0
+ g(n)= 4.0 h(n)=3.0
+ g(n)= 5.0 h(n)=2.0
+ g(n)= 6.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive o__0__5_)
+1.0: (drive o__0__5_ o__1__5_ east)
+2.0: (drive o__1__5_ o__2__5_ east)
+3.0: (drive o__2__5_ o__3__5_ east)
+4.0: (drive o__3__5_ o__3__6_ north)
+5.0: (drive o__3__6_ o__4__6_ east)
+6.0: (leave o__4__6_)
+
+Plan-Length:7
+Metric (Search):7.0
+Planning Time (msec): 25
+Heuristic Time (msec): 14
+Search Time (msec): 24
+Expanded Nodes:8
+States Evaluated:19
+Number of Dead-Ends detected:0
+Number of Duplicates detected:7
+
+=== SINGLE_AGENT car-4 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 20
+Aibr Preprocessing
+UFX:false
+|F|:98
+|X|:0
+|A|:166
+|P|:0
+|E|:0
+H1 Setup Time (msec): 8
+h(I):4.0
+ g(n)= 1.0 h(n)=3.0
+ g(n)= 2.0 h(n)=2.0
+ g(n)= 3.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive o__3__3_)
+1.0: (drive o__3__3_ o__4__3_ east)
+2.0: (drive o__4__3_ o__4__4_ north)
+3.0: (leave o__4__4_)
+
+Plan-Length:4
+Metric (Search):4.0
+Planning Time (msec): 25
+Heuristic Time (msec): 13
+Search Time (msec): 23
+Expanded Nodes:5
+States Evaluated:12
+Number of Dead-Ends detected:0
+Number of Duplicates detected:3
+
+=== SINGLE_AGENT car-5 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 20
+Aibr Preprocessing
+UFX:false
+|F|:98
+|X|:0
+|A|:166
+|P|:0
+|E|:0
+H1 Setup Time (msec): 8
+h(I):8.0
+ g(n)= 1.0 h(n)=7.0
+ g(n)= 2.0 h(n)=6.0
+ g(n)= 3.0 h(n)=5.0
+ g(n)= 4.0 h(n)=4.0
+ g(n)= 5.0 h(n)=3.0
+ g(n)= 6.0 h(n)=2.0
+ g(n)= 7.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive o__5__1_)
+1.0: (drive o__5__1_ o__4__1_ west)
+2.0: (drive o__4__1_ o__3__1_ west)
+3.0: (drive o__3__1_ o__3__2_ north)
+4.0: (drive o__3__2_ o__2__2_ west)
+5.0: (drive o__2__2_ o__1__2_ west)
+6.0: (drive o__1__2_ o__0__2_ west)
+7.0: (leave o__0__2_)
+
+Plan-Length:8
+Metric (Search):8.0
+Planning Time (msec): 25
+Heuristic Time (msec): 15
+Search Time (msec): 24
+Expanded Nodes:9
+States Evaluated:21
+Number of Dead-Ends detected:0
+Number of Duplicates detected:8
+
+=== SINGLE_AGENT car-6 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 19
+Aibr Preprocessing
+UFX:false
+|F|:98
+|X|:0
+|A|:166
+|P|:0
+|E|:0
+H1 Setup Time (msec): 8
+h(I):3.0
+ g(n)= 1.0 h(n)=2.0
+ g(n)= 2.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive o__1__7_)
+1.0: (drive o__1__7_ o__0__7_ west)
+2.0: (leave o__0__7_)
+
+Plan-Length:3
+Metric (Search):3.0
+Planning Time (msec): 21
+Heuristic Time (msec): 11
+Search Time (msec): 19
+Expanded Nodes:4
+States Evaluated:7
+Number of Dead-Ends detected:0
+Number of Duplicates detected:1
+
+=== SINGLE_AGENT car-7 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 27
+Aibr Preprocessing
+UFX:false
+|F|:98
+|X|:0
+|A|:166
+|P|:0
+|E|:0
+H1 Setup Time (msec): 8
+h(I):6.0
+ g(n)= 1.0 h(n)=5.0
+ g(n)= 2.0 h(n)=4.0
+ g(n)= 3.0 h(n)=3.0
+ g(n)= 4.0 h(n)=2.0
+ g(n)= 5.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive o__0__6_)
+1.0: (drive o__0__6_ o__0__5_ south)
+2.0: (drive o__0__5_ o__1__5_ east)
+3.0: (drive o__1__5_ o__2__5_ east)
+4.0: (drive o__2__5_ o__3__5_ east)
+5.0: (leave o__3__5_)
+
+Plan-Length:6
+Metric (Search):6.0
+Planning Time (msec): 23
+Heuristic Time (msec): 14
+Search Time (msec): 22
+Expanded Nodes:7
+States Evaluated:16
+Number of Dead-Ends detected:0
+Number of Duplicates detected:5
+
+=== ROBUSTNESS SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 511
+Aibr Preprocessing
+UFX:false
+|F|:2588
+|X|:0
+|A|:5329
+|P|:0
+|E|:0
+H1 Setup Time (msec): 93
+h(I):6.0
+ g(n)= 1.0 h(n)=5.0
+ g(n)= 2.0 h(n)=4.0
+ g(n)= 3.0 h(n)=3.0
+-------------Time: 10s ; Expanded Nodes: 694 (Avg-Speed 69.0 n/s); Evaluated States: 10865
+-------------Time: 20s ; Expanded Nodes: 1399 (Avg-Speed 69.0 n/s); Evaluated States: 22067
+-------------Time: 30s ; Expanded Nodes: 2117 (Avg-Speed 70.0 n/s); Evaluated States: 32937
+-------------Time: 40s ; Expanded Nodes: 2763 (Avg-Speed 69.0 n/s); Evaluated States: 44033
+-------------Time: 50s ; Expanded Nodes: 3461 (Avg-Speed 69.0 n/s); Evaluated States: 55420
+ g(n)= 33.0 h(n)=2.0
+ g(n)= 34.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (s_ra___car_6__arrive o__1__7_)
+1.0: (s_ra___car_6__drive o__1__7_ o__0__7_ west)
+2.0: (s_ra___car_7__arrive o__0__6_)
+3.0: (s_ra___car_5__arrive o__5__1_)
+4.0: (s_ra___car_3__arrive o__0__5_)
+5.0: (s_ra___car_5__drive o__5__1_ o__4__1_ west)
+6.0: (s_ra___car_5__drive o__4__1_ o__4__0_ south)
+7.0: (s_ra___car_2__arrive o__4__7_)
+8.0: (s_ra___car_5__drive o__4__0_ o__3__0_ west)
+9.0: (s_ra___car_2__drive o__4__7_ o__4__6_ south)
+10.0: (s_ra___car_5__drive o__3__0_ o__2__0_ west)
+11.0: (s_ra___car_3__drive o__0__5_ o__1__5_ east)
+12.0: (s_ra___car_3__drive o__1__5_ o__1__6_ north)
+13.0: (s_ra___car_3__drive o__1__6_ o__1__7_ north)
+14.0: (s_ra___car_4__arrive o__3__3_)
+15.0: (s_ra___car_4__drive o__3__3_ o__4__3_ east)
+16.0: (s_ra___car_5__drive o__2__0_ o__2__1_ north)
+17.0: (s_ra___car_5__drive o__2__1_ o__3__1_ east)
+18.0: (s_ra___car_2__drive o__4__6_ o__3__6_ west)
+19.0: (s_ra___car_3__drive o__1__7_ o__1__6_ south)
+20.0: (s_ra___car_0__arrive o__5__4_)
+21.0: (s_ra___car_5__drive o__3__1_ o__4__1_ east)
+22.0: (s_ra___car_3__drive o__1__6_ o__2__6_ east)
+23.0: (s_ra___car_3__drive o__2__6_ o__2__5_ south)
+24.0: (s_ra___car_3__drive o__2__5_ o__3__5_ east)
+25.0: (s_ra___car_3__drive o__3__5_ o__3__4_ south)
+26.0: (s_ra___car_0__drive o__5__4_ o__5__5_ north)
+27.0: (s_ra___car_0__drive o__5__5_ o__4__5_ west)
+28.0: (s_ra___car_0__drive o__4__5_ o__4__6_ north)
+29.0: (s_ra___car_3__drive o__3__4_ o__2__4_ west)
+30.0: (s_ra___car_0__drive o__4__6_ o__4__7_ north)
+31.0: (s_ra___car_0__drive o__4__7_ o__5__7_ east)
+32.0: (f_ra_1__car_6__drive o__0__7_ o__0__6_ south)
+33.0: (l_ra__car_0__leave o__5__7_)
+34.0: (goals_not_achieved_car_0_0)
+
+Plan-Length:35
+Metric (Search):35.0
+Planning Time (msec): 55609
+Heuristic Time (msec): 53737
+Search Time (msec): 55606
+Expanded Nodes:3811
+States Evaluated:61592
+Number of Dead-Ends detected:54
+Number of Duplicates detected:26332

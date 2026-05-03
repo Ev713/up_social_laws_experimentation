@@ -1,0 +1,131 @@
+=== CASE ===
+domain: numeric_expedition
+instance_file: pfile1.json
+has_social_law: True
+problem_name: sl_expedition_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_expedition/pfile1
+verifier: general
+
+=== SINGLE_AGENT s0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 13
+Aibr Preprocessing
+UFX:false
+|F|:6
+|X|:13
+|A|:22
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):5.0
+ g(n)= 2.0 h(n)=4.0
+ g(n)= 4.0 h(n)=3.0
+ g(n)= 6.0 h(n)=2.0
+ g(n)= 14.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (retrieve_supplies wa0)
+1.0: (retrieve_supplies wa0)
+2.0: (retrieve_supplies wa0)
+3.0: (move_forwards wa0 wa1)
+4.0: (store_supplies wa1)
+5.0: (move_backwards wa1 wa0)
+6.0: (retrieve_supplies wa0)
+7.0: (retrieve_supplies wa0)
+8.0: (retrieve_supplies wa0)
+9.0: (move_forwards wa0 wa1)
+10.0: (retrieve_supplies wa1)
+11.0: (move_forwards wa1 wa2)
+12.0: (move_forwards wa2 wa3)
+13.0: (move_forwards wa3 wa4)
+14.0: (move_forwards wa4 wa5)
+
+Plan-Length:15
+Metric (Search):15.0
+Planning Time (msec): 22
+Heuristic Time (msec): 15
+Search Time (msec): 21
+Expanded Nodes:55
+States Evaluated:91
+Number of Dead-Ends detected:32
+Number of Duplicates detected:44
+
+=== SINGLE_AGENT s1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 14
+Aibr Preprocessing
+UFX:false
+|F|:6
+|X|:13
+|A|:22
+|P|:0
+|E|:0
+H1 Setup Time (msec): 6
+h(I):5.0
+ g(n)= 2.0 h(n)=4.0
+ g(n)= 4.0 h(n)=3.0
+ g(n)= 6.0 h(n)=2.0
+ g(n)= 14.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (retrieve_supplies wa0)
+1.0: (retrieve_supplies wa0)
+2.0: (retrieve_supplies wa0)
+3.0: (move_forwards wa0 wa1)
+4.0: (store_supplies wa1)
+5.0: (move_backwards wa1 wa0)
+6.0: (retrieve_supplies wa0)
+7.0: (retrieve_supplies wa0)
+8.0: (retrieve_supplies wa0)
+9.0: (move_forwards wa0 wa1)
+10.0: (retrieve_supplies wa1)
+11.0: (move_forwards wa1 wa2)
+12.0: (move_forwards wa2 wa3)
+13.0: (move_forwards wa3 wa4)
+14.0: (move_forwards wa4 wa5)
+
+Plan-Length:15
+Metric (Search):15.0
+Planning Time (msec): 28
+Heuristic Time (msec): 15
+Search Time (msec): 25
+Expanded Nodes:55
+States Evaluated:91
+Number of Dead-Ends detected:32
+Number of Duplicates detected:44
+
+=== ROBUSTNESS UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 94
+Aibr Preprocessing
+UFX:false
+|F|:78
+|X|:46
+|A|:207
+|P|:0
+|E|:0
+H1 Setup Time (msec): 10
+h(I):7.0
+ g(n)= 2.0 h(n)=6.0
+ g(n)= 6.0 h(n)=5.0
+ g(n)= 14.0 h(n)=4.0
+ g(n)= 28.0 h(n)=3.0
+-------------Time: 10s ; Expanded Nodes: 60649 (Avg-Speed 6064.0 n/s); Evaluated States: 109427
+-------------Time: 20s ; Expanded Nodes: 134512 (Avg-Speed 6725.0 n/s); Evaluated States: 215467
+-------------Time: 30s ; Expanded Nodes: 211543 (Avg-Speed 7051.0 n/s); Evaluated States: 322546
+Problem unsolvable
+Metric (Search):-1.0
+Planning Time (msec): 32479
+Heuristic Time (msec): 27480
+Search Time (msec): 0
+Expanded Nodes:271805
+States Evaluated:341856
+Number of Dead-Ends detected:48837
+Number of Duplicates detected:782241

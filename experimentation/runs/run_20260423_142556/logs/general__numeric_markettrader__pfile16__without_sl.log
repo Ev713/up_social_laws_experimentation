@@ -1,0 +1,162 @@
+=== CASE ===
+domain: numeric_markettrader
+instance_file: pfile16.json
+has_social_law: False
+problem_name: market_trader_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_markettrader/pfile16
+verifier: general
+
+=== SINGLE_AGENT camel0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 111
+Aibr Preprocessing
+UFX:false
+|F|:10
+|X|:68
+|A|:211
+|P|:0
+|E|:0
+H1 Setup Time (msec): 14
+h(I):2.857143
+ g(n)= 1.0 h(n)=2.142857
+ g(n)= 2.0 h(n)=1.2857143
+ g(n)= 4.0 h(n)=0.85714287
+Problem Solved
+
+Found Plan:
+0.0: (buy_g0_m0)
+1.0: (travel_m0_m2)
+2.0: (sell_g0_m2)
+3.0: (buy_g0_m2)
+4.0: (sell_g0_m2)
+
+Plan-Length:5
+Metric (Search):5.0
+Planning Time (msec): 71
+Heuristic Time (msec): 57
+Search Time (msec): 69
+Expanded Nodes:6
+States Evaluated:59
+Number of Dead-Ends detected:1
+Number of Duplicates detected:0
+
+=== SINGLE_AGENT camel1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 114
+Aibr Preprocessing
+UFX:false
+|F|:10
+|X|:68
+|A|:211
+|P|:0
+|E|:0
+H1 Setup Time (msec): 14
+h(I):2.857143
+ g(n)= 1.0 h(n)=2.142857
+ g(n)= 2.0 h(n)=1.2857143
+ g(n)= 4.0 h(n)=0.85714287
+Problem Solved
+
+Found Plan:
+0.0: (buy_g0_m0)
+1.0: (travel_m0_m2)
+2.0: (sell_g0_m2)
+3.0: (buy_g0_m2)
+4.0: (sell_g0_m2)
+
+Plan-Length:5
+Metric (Search):5.0
+Planning Time (msec): 59
+Heuristic Time (msec): 46
+Search Time (msec): 57
+Expanded Nodes:6
+States Evaluated:59
+Number of Dead-Ends detected:1
+Number of Duplicates detected:0
+
+=== SINGLE_AGENT camel2 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 111
+Aibr Preprocessing
+UFX:false
+|F|:10
+|X|:68
+|A|:211
+|P|:0
+|E|:0
+H1 Setup Time (msec): 10
+h(I):2.857143
+ g(n)= 1.0 h(n)=2.142857
+ g(n)= 2.0 h(n)=1.2857143
+ g(n)= 4.0 h(n)=0.85714287
+Problem Solved
+
+Found Plan:
+0.0: (buy_g0_m0)
+1.0: (travel_m0_m2)
+2.0: (sell_g0_m2)
+3.0: (buy_g0_m2)
+4.0: (sell_g0_m2)
+
+Plan-Length:5
+Metric (Search):5.0
+Planning Time (msec): 48
+Heuristic Time (msec): 36
+Search Time (msec): 45
+Expanded Nodes:6
+States Evaluated:59
+Number of Dead-Ends detected:1
+Number of Duplicates detected:0
+
+=== SINGLE_AGENT camel3 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 89
+Aibr Preprocessing
+UFX:false
+|F|:10
+|X|:68
+|A|:211
+|P|:0
+|E|:0
+H1 Setup Time (msec): 16
+h(I):2.857143
+ g(n)= 1.0 h(n)=2.142857
+ g(n)= 2.0 h(n)=1.2857143
+ g(n)= 4.0 h(n)=0.85714287
+Problem Solved
+
+Found Plan:
+0.0: (buy_g0_m0)
+1.0: (travel_m0_m2)
+2.0: (sell_g0_m2)
+3.0: (buy_g0_m2)
+4.0: (sell_g0_m2)
+
+Plan-Length:5
+Metric (Search):5.0
+Planning Time (msec): 77
+Heuristic Time (msec): 52
+Search Time (msec): 74
+Expanded Nodes:6
+States Evaluated:59
+Number of Dead-Ends detected:1
+Number of Duplicates detected:0
+
+=== ROBUSTNESS UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 8029
+Aibr Preprocessing
+Problem Detected as Unsolvable by AIBR during preprocessing
+UFX:false
+|F|:940
+|X|:364
+Unsolvable Problem

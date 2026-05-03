@@ -1,0 +1,143 @@
+=== CASE ===
+domain: numeric_grid
+instance_file: pfile1.json
+has_social_law: True
+problem_name: grid_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_grid/pfile1
+verifier: general
+
+=== SINGLE_AGENT a0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 16
+Aibr Preprocessing
+UFX:false
+|F|:42
+|X|:0
+|A|:25
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):23.0
+ g(n)= 1.0 h(n)=11.0
+ g(n)= 2.0 h(n)=10.0
+ g(n)= 3.0 h(n)=9.0
+ g(n)= 4.0 h(n)=8.0
+ g(n)= 5.0 h(n)=7.0
+ g(n)= 6.0 h(n)=6.0
+ g(n)= 7.0 h(n)=5.0
+ g(n)= 8.0 h(n)=4.0
+ g(n)= 9.0 h(n)=3.0
+ g(n)= 10.0 h(n)=2.0
+ g(n)= 11.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (appear)
+1.0: (move_up_0_2)
+2.0: (move_right_0_3)
+3.0: (move_right_1_3)
+4.0: (move_right_2_3)
+5.0: (move_right_3_3)
+6.0: (move_down_4_3)
+7.0: (move_down_4_2)
+8.0: (move_down_4_1)
+9.0: (move_left_4_0)
+10.0: (move_left_3_0)
+11.0: (leave)
+
+Plan-Length:12
+Metric (Search):12.0
+Planning Time (msec): 19
+Heuristic Time (msec): 6
+Search Time (msec): 16
+Expanded Nodes:13
+States Evaluated:17
+Number of Dead-Ends detected:0
+Number of Duplicates detected:0
+
+=== SINGLE_AGENT a1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 13
+Aibr Preprocessing
+UFX:false
+|F|:42
+|X|:0
+|A|:25
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):15.0
+ g(n)= 1.0 h(n)=7.0
+ g(n)= 2.0 h(n)=6.0
+ g(n)= 3.0 h(n)=5.0
+ g(n)= 4.0 h(n)=4.0
+ g(n)= 5.0 h(n)=3.0
+ g(n)= 6.0 h(n)=2.0
+ g(n)= 7.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (appear)
+1.0: (move_right_3_3)
+2.0: (move_down_4_3)
+3.0: (move_down_4_2)
+4.0: (move_down_4_1)
+5.0: (move_left_4_0)
+6.0: (move_left_3_0)
+7.0: (leave)
+
+Plan-Length:8
+Metric (Search):8.0
+Planning Time (msec): 14
+Heuristic Time (msec): 5
+Search Time (msec): 12
+Expanded Nodes:9
+States Evaluated:12
+Number of Dead-Ends detected:0
+Number of Duplicates detected:0
+
+=== ROBUSTNESS UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 93
+Aibr Preprocessing
+UFX:false
+|F|:209
+|X|:0
+|A|:542
+|P|:0
+|E|:0
+H1 Setup Time (msec): 17
+h(I):43.0
+ g(n)= 1.0 h(n)=31.0
+ g(n)= 2.0 h(n)=24.0
+ g(n)= 3.0 h(n)=23.0
+ g(n)= 4.0 h(n)=22.0
+ g(n)= 5.0 h(n)=21.0
+ g(n)= 6.0 h(n)=20.0
+ g(n)= 7.0 h(n)=19.0
+ g(n)= 8.0 h(n)=18.0
+ g(n)= 9.0 h(n)=17.0
+ g(n)= 10.0 h(n)=16.0
+ g(n)= 11.0 h(n)=15.0
+ g(n)= 12.0 h(n)=14.0
+ g(n)= 13.0 h(n)=13.0
+ g(n)= 14.0 h(n)=12.0
+ g(n)= 15.0 h(n)=10.0
+ g(n)= 16.0 h(n)=9.0
+ g(n)= 17.0 h(n)=8.0
+ g(n)= 18.0 h(n)=7.0
+ g(n)= 19.0 h(n)=6.0
+Problem unsolvable
+Metric (Search):-1.0
+Planning Time (msec): 451
+Heuristic Time (msec): 388
+Search Time (msec): 0
+Expanded Nodes:1783
+States Evaluated:1839
+Number of Dead-Ends detected:240
+Number of Duplicates detected:2026

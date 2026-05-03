@@ -1,0 +1,102 @@
+{
+  "places": [
+    "p0"
+  ],
+  "boats": [],
+  "trains": [],
+  "resources": [
+    "timber"
+  ],
+  "agents": [
+    "a0",
+    "a1"
+  ],
+  "bounds": {
+    "pollution": 8,
+    "resource-use": 8,
+    "housing": 1,
+    "available": 6,
+    "labour": 14,
+    "carts-at": 2
+  },
+  "init_values": {
+    "global": [
+      [
+        "woodland",
+        [
+          "p0"
+        ]
+      ],
+      [
+        "is_timber",
+        [
+          "timber"
+        ]
+      ],
+      [
+        "=",
+        [
+          "pollution",
+          []
+        ],
+        "0"
+      ],
+      [
+        "=",
+        [
+          "resource-use",
+          []
+        ],
+        "0"
+      ],
+      [
+        "=",
+        [
+          "housing",
+          [
+            "p0"
+          ]
+        ],
+        "0"
+      ]
+    ],
+    "a0": [
+      [
+        "=",
+        [
+          "labour",
+          []
+        ],
+        "0"
+      ]
+    ],
+    "a1": [
+      [
+        "=",
+        [
+          "labour",
+          []
+        ],
+        "0"
+      ]
+    ]
+  },
+  "goals": {
+    "a0": [
+      [
+        "has-coal-stack",
+        [
+          "p0"
+        ]
+      ]
+    ],
+    "a1": [
+      [
+        "has-coal-stack",
+        [
+          "p0"
+        ]
+      ]
+    ]
+  }
+}

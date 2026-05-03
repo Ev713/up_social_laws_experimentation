@@ -1,0 +1,141 @@
+=== CASE ===
+domain: numeric_zenotravel
+instance_file: pfile4.json
+has_social_law: False
+problem_name: zenotravel_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_zenotravel/pfile4
+verifier: general
+
+=== SINGLE_AGENT plane1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 15
+Aibr Preprocessing
+UFX:false
+|F|:23
+|X|:3
+|A|:53
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):8.213867
+ g(n)= 1.0 h(n)=8.0
+ g(n)= 2.0 h(n)=7.2929688
+ g(n)= 3.0 h(n)=6.2929688
+ g(n)= 4.0 h(n)=6.0
+ g(n)= 5.0 h(n)=5.5629883
+ g(n)= 6.0 h(n)=4.5629883
+ g(n)= 7.0 h(n)=4.0
+ g(n)= 10.0 h(n)=3.0
+ g(n)= 11.0 h(n)=2.161621
+ g(n)= 12.0 h(n)=1.1616211
+ g(n)= 13.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (refuel_1024)
+1.0: (fly_slow_city2_city1)
+2.0: (board person2 city1)
+3.0: (refuel_1024)
+4.0: (fly_slow_city1_city0)
+5.0: (board person4 city0)
+6.0: (refuel_2048)
+7.0: (refuel_1024)
+8.0: (fly_slow_city0_city2)
+9.0: (debark person2 city2)
+10.0: (fly_slow_city2_city1)
+11.0: (debark person4 city1)
+12.0: (refuel_1024)
+13.0: (fly_slow_city1_city0)
+
+Plan-Length:14
+Metric (Search):14.0
+Planning Time (msec): 43
+Heuristic Time (msec): 32
+Search Time (msec): 42
+Expanded Nodes:28
+States Evaluated:342
+Number of Dead-Ends detected:0
+Number of Duplicates detected:103
+
+=== SINGLE_AGENT plane2 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 14
+Aibr Preprocessing
+UFX:false
+|F|:23
+|X|:3
+|A|:55
+|P|:0
+|E|:0
+H1 Setup Time (msec): 6
+h(I):0.0
+Problem Solved
+
+Found Plan:
+
+Plan-Length:0
+Metric (Search):0.0
+Planning Time (msec): 9
+Heuristic Time (msec): 6
+Search Time (msec): 8
+Expanded Nodes:1
+States Evaluated:1
+Number of Dead-Ends detected:0
+Number of Duplicates detected:0
+
+=== ROBUSTNESS SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 151
+Aibr Preprocessing
+UFX:false
+|F|:193
+|X|:12
+|A|:406
+|P|:0
+|E|:0
+H1 Setup Time (msec): 22
+h(I):887.0
+ g(n)= 1.0 h(n)=10.0
+ g(n)= 2.0 h(n)=9.0
+ g(n)= 3.0 h(n)=8.0
+ g(n)= 4.0 h(n)=7.0
+ g(n)= 5.0 h(n)=6.0
+ g(n)= 8.0 h(n)=5.0
+ g(n)= 11.0 h(n)=4.0
+ g(n)= 11.0 h(n)=3.0
+ g(n)= 14.0 h(n)=2.0
+ g(n)= 15.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (s_ra___plane1__refuel_4096)
+1.0: (s_ra___plane1__fly_fast_city2_city1)
+2.0: (s_ra___plane1__board person2 city1)
+3.0: (s_ra___plane1__fly_slow_city1_city0)
+4.0: (s_ra___plane1__board person4 city0)
+5.0: (s_ra___plane2__refuel_256)
+6.0: (s_ra___plane1__fly_slow_city0_city1)
+7.0: (s_ra___plane1__debark person4 city1)
+8.0: (s_ra___plane1__fly_slow_city1_city0)
+9.0: (s_ra___plane1__fly_slow_city0_city2)
+10.0: (s_ra___plane1__debark person2 city2)
+11.0: (s_ra___plane2__board person5 city2)
+12.0: (f_ra_0__plane1__board person5 city2)
+13.0: (l_ra__plane1__debark person5 city2)
+14.0: (l_ra__plane1__fly_slow_city2_city0)
+15.0: (goals_not_achieved_plane1_2)
+
+Plan-Length:16
+Metric (Search):16.0
+Planning Time (msec): 1058
+Heuristic Time (msec): 995
+Search Time (msec): 1055
+Expanded Nodes:485
+States Evaluated:7345
+Number of Dead-Ends detected:102
+Number of Duplicates detected:1339

@@ -1,0 +1,278 @@
+=== CASE ===
+domain: numeric_civ
+instance_file: pfile17.json
+has_social_law: True
+problem_name: sl_civ_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_civ/pfile17
+verifier: general
+
+=== SINGLE_AGENT a0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 43
+Aibr Preprocessing
+UFX:false
+|F|:30
+|X|:46
+|A|:122
+|P|:0
+|E|:0
+H1 Setup Time (msec): 7
+h(I):522.0
+ g(n)= 1.0 h(n)=386.0
+ g(n)= 2.0 h(n)=248.0
+ g(n)= 3.0 h(n)=192.0
+ g(n)= 4.0 h(n)=180.0
+ g(n)= 5.0 h(n)=168.0
+ g(n)= 6.0 h(n)=156.0
+ g(n)= 7.0 h(n)=152.0
+ g(n)= 8.0 h(n)=146.0
+ g(n)= 9.0 h(n)=142.0
+ g(n)= 10.0 h(n)=140.0
+ g(n)= 11.0 h(n)=138.0
+ g(n)= 13.0 h(n)=128.0
+ g(n)= 14.0 h(n)=124.0
+ g(n)= 16.0 h(n)=110.0
+ g(n)= 18.0 h(n)=92.0
+ g(n)= 20.0 h(n)=84.0
+ g(n)= 22.0 h(n)=76.0
+ g(n)= 23.0 h(n)=70.0
+ g(n)= 24.0 h(n)=68.0
+ g(n)= 25.0 h(n)=62.0
+ g(n)= 27.0 h(n)=59.0
+ g(n)= 29.0 h(n)=52.0
+ g(n)= 30.0 h(n)=48.0
+ g(n)= 31.0 h(n)=42.0
+ g(n)= 33.0 h(n)=40.0
+ g(n)= 35.0 h(n)=36.0
+ g(n)= 36.0 h(n)=32.0
+ g(n)= 37.0 h(n)=31.0
+ g(n)= 48.0 h(n)=27.0
+ g(n)= 49.0 h(n)=23.0
+ g(n)= 56.0 h(n)=21.0
+ g(n)= 58.0 h(n)=19.0
+ g(n)= 59.0 h(n)=17.0
+ g(n)= 60.0 h(n)=16.0
+ g(n)= 66.0 h(n)=15.0
+ g(n)= 67.0 h(n)=13.0
+ g(n)= 68.0 h(n)=12.0
+ g(n)= 69.0 h(n)=10.0
+ g(n)= 74.0 h(n)=9.0
+ g(n)= 75.0 h(n)=8.0
+ g(n)= 77.0 h(n)=7.0
+ g(n)= 80.0 h(n)=6.0
+ g(n)= 81.0 h(n)=5.0
+ g(n)= 90.0 h(n)=4.0
+ g(n)= 91.0 h(n)=3.0
+ g(n)= 92.0 h(n)=2.0
+ g(n)= 94.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (build_cabin p0)
+1.0: (fell_timber p0 timber)
+2.0: (fell_timber p0 timber)
+3.0: (build_quarry p0)
+4.0: (break_stone p0 stone)
+5.0: (break_stone p0 stone)
+6.0: (build_cabin p1)
+7.0: (fell_timber p1 timber)
+8.0: (fell_timber p1 timber)
+9.0: (build_quarry p1)
+10.0: (break_stone p1 stone)
+11.0: (fell_timber p1 timber)
+12.0: (build_sawmill p1 timber)
+13.0: (break_stone p1 stone)
+14.0: (fell_timber p1 timber)
+15.0: (saw_wood p1 timber wood)
+16.0: (fell_timber p1 timber)
+17.0: (saw_wood p1 timber wood)
+18.0: (fell_timber p1 timber)
+19.0: (build_coal_stack p1 timber)
+20.0: (fell_timber p1 timber)
+21.0: (burn_coal p1 timber coal)
+22.0: (burn_coal p1 timber coal)
+23.0: (fell_timber p1 timber)
+24.0: (build_cart p1 timber)
+25.0: (fell_timber p0 timber)
+26.0: (build_sawmill p0 timber)
+27.0: (fell_timber p0 timber)
+28.0: (saw_wood p0 timber wood)
+29.0: (saw_wood p0 timber wood)
+30.0: (fell_timber p0 timber)
+31.0: (fell_timber p0 timber)
+32.0: (build_coal_stack p0 timber)
+33.0: (fell_timber p0 timber)
+34.0: (burn_coal p0 timber coal)
+35.0: (burn_coal p0 timber coal)
+36.0: (build_house p1 wood stone)
+37.0: (move_laden_cart p1 p2 wood)
+38.0: (move_empty_cart p2 p1)
+39.0: (fell_timber p1 timber)
+40.0: (break_stone p0 stone)
+41.0: (move_laden_cart p1 p0 stone)
+42.0: (fell_timber p1 timber)
+43.0: (move_empty_cart p0 p1)
+44.0: (saw_wood p1 timber wood)
+45.0: (saw_wood p1 timber wood)
+46.0: (build_mine p1 wood)
+47.0: (mine_ore p1 ore)
+48.0: (move_laden_cart p1 p0 ore)
+49.0: (build_cabin p2)
+50.0: (fell_timber p2 timber)
+51.0: (break_stone p1 stone)
+52.0: (fell_timber p1 timber)
+53.0: (break_stone p1 stone)
+54.0: (saw_wood p1 timber wood)
+55.0: (mine_ore p1 ore)
+56.0: (fell_timber p1 timber)
+57.0: (saw_wood p1 timber wood)
+58.0: (build_ironworks p1 stone wood)
+59.0: (move_empty_cart p0 p1)
+60.0: (build_quarry p2)
+61.0: (fell_timber p1 timber)
+62.0: (fell_timber p2 timber)
+63.0: (burn_coal p1 timber coal)
+64.0: (fell_timber p1 timber)
+65.0: (make_iron p1 ore coal iron)
+66.0: (burn_coal p1 timber coal)
+67.0: (mine_ore p1 ore)
+68.0: (make_iron p1 ore coal iron)
+69.0: (fell_timber p0 timber)
+70.0: (fell_timber p0 timber)
+71.0: (saw_wood p0 timber wood)
+72.0: (saw_wood p0 timber wood)
+73.0: (build_mine p0 wood)
+74.0: (mine_ore p0 ore)
+75.0: (build_train p1 t0 iron)
+76.0: (unload_train t0 p1 iron)
+77.0: (unload_train t0 p1 iron)
+78.0: (move_laden_cart p1 p0 iron)
+79.0: (move_empty_cart p0 p1)
+80.0: (move_laden_cart p1 p0 iron)
+81.0: (fell_timber p0 timber)
+82.0: (fell_timber p2 timber)
+83.0: (unload_train t0 p1 wood)
+84.0: (unload_train t0 p1 wood)
+85.0: (burn_coal p0 timber coal)
+86.0: (unload_train t0 p1 iron)
+87.0: (load_train t0 p1 wood)
+88.0: (build_rail p1 p0 wood iron)
+89.0: (move_train t0 p1 p0)
+90.0: (unload_train t0 p0 iron)
+91.0: (unload_train t0 p0 iron)
+92.0: (break_stone p0 stone)
+93.0: (build_docks p0 stone wood)
+94.0: (build_wharf p0 stone iron)
+
+Plan-Length:95
+Metric (Search):95.0
+Planning Time (msec): 4640
+Heuristic Time (msec): 4390
+Search Time (msec): 4639
+Expanded Nodes:6255
+States Evaluated:80567
+Number of Dead-Ends detected:0
+Number of Duplicates detected:56394
+
+=== SINGLE_AGENT a1 INTERNAL_ERROR ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 47
+Aibr Preprocessing
+UFX:false
+|F|:27
+|X|:39
+|A|:85
+|P|:0
+|E|:0
+H1 Setup Time (msec): 10
+h(I):1012.0
+ g(n)= 1.0 h(n)=732.0
+ g(n)= 2.0 h(n)=452.0
+ g(n)= 3.0 h(n)=344.0
+ g(n)= 4.0 h(n)=320.0
+ g(n)= 5.0 h(n)=296.0
+ g(n)= 6.0 h(n)=272.0
+ g(n)= 8.0 h(n)=218.0
+ g(n)= 10.0 h(n)=164.0
+ g(n)= 13.0 h(n)=112.0
+ g(n)= 15.0 h(n)=96.0
+ g(n)= 18.0 h(n)=80.0
+ g(n)= 19.0 h(n)=64.0
+ g(n)= 29.0 h(n)=48.0
+ g(n)= 30.0 h(n)=32.0
+ g(n)= 38.0 h(n)=28.0
+ g(n)= 39.0 h(n)=24.0
+ g(n)= 44.0 h(n)=22.0
+ g(n)= 45.0 h(n)=16.0
+ g(n)= 48.0 h(n)=14.0
+ g(n)= 50.0 h(n)=12.0
+ g(n)= 51.0 h(n)=10.0
+ g(n)= 59.0 h(n)=8.0
+ g(n)= 71.0 h(n)=6.0
+ g(n)= 72.0 h(n)=4.0
+ g(n)= 82.0 h(n)=3.0
+-------------Time: 10s ; Expanded Nodes: 39591 (Avg-Speed 3959.0 n/s); Evaluated States: 291704
+-------------Time: 20s ; Expanded Nodes: 93094 (Avg-Speed 4654.0 n/s); Evaluated States: 615584
+-------------Time: 30s ; Expanded Nodes: 133782 (Avg-Speed 4459.0 n/s); Evaluated States: 904451
+-------------Time: 40s ; Expanded Nodes: 183086 (Avg-Speed 4577.0 n/s); Evaluated States: 1221197
+-------------Time: 50s ; Expanded Nodes: 237928 (Avg-Speed 4758.0 n/s); Evaluated States: 1540286
+-------------Time: 60s ; Expanded Nodes: 293789 (Avg-Speed 4896.0 n/s); Evaluated States: 1855739
+-------------Time: 70s ; Expanded Nodes: 355760 (Avg-Speed 5082.0 n/s); Evaluated States: 2170350
+-------------Time: 80s ; Expanded Nodes: 413998 (Avg-Speed 5174.0 n/s); Evaluated States: 2481782
+-------------Time: 90s ; Expanded Nodes: 461116 (Avg-Speed 5123.0 n/s); Evaluated States: 2798371
+-------------Time: 100s ; Expanded Nodes: 504958 (Avg-Speed 5049.0 n/s); Evaluated States: 3103918
+-------------Time: 110s ; Expanded Nodes: 552383 (Avg-Speed 5021.0 n/s); Evaluated States: 3400805
+-------------Time: 120s ; Expanded Nodes: 608231 (Avg-Speed 5068.0 n/s); Evaluated States: 3717852
+-------------Time: 130s ; Expanded Nodes: 659676 (Avg-Speed 5074.0 n/s); Evaluated States: 4041871
+-------------Time: 140s ; Expanded Nodes: 711457 (Avg-Speed 5081.0 n/s); Evaluated States: 4354813
+-------------Time: 150s ; Expanded Nodes: 757021 (Avg-Speed 5046.0 n/s); Evaluated States: 4662165
+-------------Time: 160s ; Expanded Nodes: 807539 (Avg-Speed 5047.0 n/s); Evaluated States: 4989572
+-------------Time: 170s ; Expanded Nodes: 851170 (Avg-Speed 5006.0 n/s); Evaluated States: 5327617
+-------------Time: 180s ; Expanded Nodes: 896244 (Avg-Speed 4979.0 n/s); Evaluated States: 5657920
+-------------Time: 190s ; Expanded Nodes: 941563 (Avg-Speed 4955.0 n/s); Evaluated States: 5985546
+-------------Time: 201s ; Expanded Nodes: 984362 (Avg-Speed 4897.0 n/s); Evaluated States: 6296697
+-------------Time: 211s ; Expanded Nodes: 1029636 (Avg-Speed 4879.0 n/s); Evaluated States: 6580942
+-------------Time: 221s ; Expanded Nodes: 1083068 (Avg-Speed 4900.0 n/s); Evaluated States: 6915448
+-------------Time: 231s ; Expanded Nodes: 1131346 (Avg-Speed 4897.0 n/s); Evaluated States: 7254123
+-------------Time: 241s ; Expanded Nodes: 1181992 (Avg-Speed 4904.0 n/s); Evaluated States: 7579574
+-------------Time: 251s ; Expanded Nodes: 1233113 (Avg-Speed 4912.0 n/s); Evaluated States: 7912093
+-------------Time: 261s ; Expanded Nodes: 1286475 (Avg-Speed 4929.0 n/s); Evaluated States: 8236926
+-------------Time: 271s ; Expanded Nodes: 1336618 (Avg-Speed 4932.0 n/s); Evaluated States: 8569503
+-------------Time: 281s ; Expanded Nodes: 1387914 (Avg-Speed 4939.0 n/s); Evaluated States: 8895398
+-------------Time: 291s ; Expanded Nodes: 1440254 (Avg-Speed 4949.0 n/s); Evaluated States: 9219685
+-------------Time: 301s ; Expanded Nodes: 1489386 (Avg-Speed 4948.0 n/s); Evaluated States: 9549755
+-------------Time: 311s ; Expanded Nodes: 1539470 (Avg-Speed 4950.0 n/s); Evaluated States: 9868506
+-------------Time: 321s ; Expanded Nodes: 1574116 (Avg-Speed 4903.0 n/s); Evaluated States: 10151118
+-------------Time: 331s ; Expanded Nodes: 1612743 (Avg-Speed 4872.0 n/s); Evaluated States: 10458608
+-------------Time: 341s ; Expanded Nodes: 1652690 (Avg-Speed 4846.0 n/s); Evaluated States: 10752932
+-------------Time: 351s ; Expanded Nodes: 1693699 (Avg-Speed 4825.0 n/s); Evaluated States: 11054564
+-------------Time: 361s ; Expanded Nodes: 1733280 (Avg-Speed 4801.0 n/s); Evaluated States: 11364368
+-------------Time: 371s ; Expanded Nodes: 1772445 (Avg-Speed 4777.0 n/s); Evaluated States: 11663386
+-------------Time: 381s ; Expanded Nodes: 1814959 (Avg-Speed 4763.0 n/s); Evaluated States: 11953328
+-------------Time: 391s ; Expanded Nodes: 1851663 (Avg-Speed 4735.0 n/s); Evaluated States: 12217123
+-------------Time: 401s ; Expanded Nodes: 1892461 (Avg-Speed 4719.0 n/s); Evaluated States: 12491534
+-------------Time: 411s ; Expanded Nodes: 1918001 (Avg-Speed 4666.0 n/s); Evaluated States: 12666223
+-------------Time: 421s ; Expanded Nodes: 1958076 (Avg-Speed 4651.0 n/s); Evaluated States: 12938716
+-------------Time: 431s ; Expanded Nodes: 1997334 (Avg-Speed 4634.0 n/s); Evaluated States: 13204661
+-------------Time: 441s ; Expanded Nodes: 2036899 (Avg-Speed 4618.0 n/s); Evaluated States: 13466034
+-------------Time: 451s ; Expanded Nodes: 2076220 (Avg-Speed 4603.0 n/s); Evaluated States: 13721533
+-------------Time: 461s ; Expanded Nodes: 2115162 (Avg-Speed 4588.0 n/s); Evaluated States: 13973797
+-------------Time: 471s ; Expanded Nodes: 2149803 (Avg-Speed 4564.0 n/s); Evaluated States: 14195658
+-------------Time: 481s ; Expanded Nodes: 2186436 (Avg-Speed 4545.0 n/s); Evaluated States: 14459820
+-------------Time: 491s ; Expanded Nodes: 2224356 (Avg-Speed 4530.0 n/s); Evaluated States: 14710276
+-------------Time: 501s ; Expanded Nodes: 2258898 (Avg-Speed 4508.0 n/s); Evaluated States: 14936779
+-------------Time: 512s ; Expanded Nodes: 2266456 (Avg-Speed 4426.0 n/s); Evaluated States: 14991581
+-------------Time: 522s ; Expanded Nodes: 2273277 (Avg-Speed 4354.0 n/s); Evaluated States: 15038232
+-------------Time: 533s ; Expanded Nodes: 2274206 (Avg-Speed 4266.0 n/s); Evaluated States: 15044049
+-------------Time: 543s ; Expanded Nodes: 2274669 (Avg-Speed 4189.0 n/s); Evaluated States: 15046490
+-------------Time: 554s ; Expanded Nodes: 2275012 (Avg-Speed 4106.0 n/s); Evaluated States: 15048965
+-------------Time: 564s ; Expanded Nodes: 2275909 (Avg-Speed 4035.0 n/s); Evaluated States: 15055470
+-------------Time: 574s ; Expanded Nodes: 2276361 (Avg-Speed 3965.0 n/s); Evaluated States: 15058531
+-------------Time: 584s ; Expanded Nodes: 2276705 (Avg-Speed 3898.0 n/s); Evaluated States: 15061046
+-------------Time: 595s ; Expanded Nodes: 2276957 (Avg-Speed 3826.0 n/s); Evaluated States: 15062638
+-------------Time: 605s ; Expanded Nodes: 2277182 (Avg-Speed 3763.0 n/s); Evaluated States: 15064143
+-------------Time: 615s ; Expanded Nodes: 2277425 (Avg-Speed 3703.0 n/s); Evaluated States: 15065608
+-------------Time: 625s ; Expanded Nodes: 2277657 (Avg-Speed 3644.0 n/s); Evaluated States: 15067082

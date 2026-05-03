@@ -1,0 +1,181 @@
+=== CASE ===
+domain: numeric_markettrader
+instance_file: pfile5.json
+has_social_law: False
+problem_name: market_trader_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_markettrader/pfile5
+verifier: general
+
+=== SINGLE_AGENT camel0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 21
+Aibr Preprocessing
+UFX:false
+|F|:6
+|X|:16
+|A|:50
+|P|:0
+|E|:0
+H1 Setup Time (msec): 7
+h(I):6.4
+ g(n)= 1.0 h(n)=6.0
+ g(n)= 2.0 h(n)=5.714286
+ g(n)= 3.0 h(n)=5.142857
+ g(n)= 4.0 h(n)=4.571429
+ g(n)= 5.0 h(n)=4.5714283
+ g(n)= 6.0 h(n)=3.5714285
+ g(n)= 8.0 h(n)=2.5714285
+ g(n)= 10.0 h(n)=1.5714285
+ g(n)= 12.0 h(n)=0.5714286
+Problem Solved
+
+Found Plan:
+0.0: (travel_london_cesis)
+1.0: (travel_cesis_simnas)
+2.0: (buy_gummybears_simnas)
+3.0: (travel_simnas_copenhagen)
+4.0: (sell_gummybears_copenhagen)
+5.0: (buy_gummybears_copenhagen)
+6.0: (sell_gummybears_copenhagen)
+7.0: (buy_gummybears_copenhagen)
+8.0: (sell_gummybears_copenhagen)
+9.0: (buy_gummybears_copenhagen)
+10.0: (sell_gummybears_copenhagen)
+11.0: (buy_gummybears_copenhagen)
+12.0: (sell_gummybears_copenhagen)
+
+Plan-Length:13
+Metric (Search):13.0
+Planning Time (msec): 30
+Heuristic Time (msec): 17
+Search Time (msec): 27
+Expanded Nodes:14
+States Evaluated:61
+Number of Dead-Ends detected:9
+Number of Duplicates detected:1
+
+=== SINGLE_AGENT camel1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 20
+Aibr Preprocessing
+UFX:false
+|F|:6
+|X|:16
+|A|:52
+|P|:0
+|E|:0
+H1 Setup Time (msec): 6
+h(I):6.4
+ g(n)= 1.0 h(n)=6.0
+ g(n)= 2.0 h(n)=5.6
+ g(n)= 3.0 h(n)=5.285714
+ g(n)= 4.0 h(n)=4.571429
+ g(n)= 5.0 h(n)=4.5714283
+ g(n)= 6.0 h(n)=3.5714285
+ g(n)= 8.0 h(n)=2.5714285
+ g(n)= 10.0 h(n)=1.5714285
+ g(n)= 12.0 h(n)=0.5714286
+Problem Solved
+
+Found Plan:
+0.0: (travel_seda_simnas)
+1.0: (buy_gummybears_simnas)
+2.0: (travel_simnas_london)
+3.0: (travel_london_copenhagen)
+4.0: (sell_gummybears_copenhagen)
+5.0: (buy_gummybears_copenhagen)
+6.0: (sell_gummybears_copenhagen)
+7.0: (buy_gummybears_copenhagen)
+8.0: (sell_gummybears_copenhagen)
+9.0: (buy_gummybears_copenhagen)
+10.0: (sell_gummybears_copenhagen)
+11.0: (buy_gummybears_copenhagen)
+12.0: (sell_gummybears_copenhagen)
+
+Plan-Length:13
+Metric (Search):13.0
+Planning Time (msec): 27
+Heuristic Time (msec): 16
+Search Time (msec): 25
+Expanded Nodes:14
+States Evaluated:71
+Number of Dead-Ends detected:6
+Number of Duplicates detected:2
+
+=== ROBUSTNESS UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 461
+Aibr Preprocessing
+UFX:false
+|F|:136
+|X|:52
+|A|:413
+|P|:0
+|E|:0
+H1 Setup Time (msec): 22
+h(I):25.0
+ g(n)= 1.0 h(n)=21.0
+ g(n)= 2.0 h(n)=5.0
+ g(n)= 7.0 h(n)=3.0
+-------------Time: 10s ; Expanded Nodes: 8232 (Avg-Speed 823.0 n/s); Evaluated States: 36720
+-------------Time: 20s ; Expanded Nodes: 16779 (Avg-Speed 838.0 n/s); Evaluated States: 74301
+-------------Time: 30s ; Expanded Nodes: 25111 (Avg-Speed 837.0 n/s); Evaluated States: 111917
+-------------Time: 40s ; Expanded Nodes: 34050 (Avg-Speed 851.0 n/s); Evaluated States: 149368
+-------------Time: 50s ; Expanded Nodes: 42586 (Avg-Speed 851.0 n/s); Evaluated States: 186843
+-------------Time: 60s ; Expanded Nodes: 50896 (Avg-Speed 848.0 n/s); Evaluated States: 224156
+-------------Time: 70s ; Expanded Nodes: 59111 (Avg-Speed 844.0 n/s); Evaluated States: 261892
+-------------Time: 80s ; Expanded Nodes: 67847 (Avg-Speed 848.0 n/s); Evaluated States: 299311
+-------------Time: 90s ; Expanded Nodes: 76559 (Avg-Speed 850.0 n/s); Evaluated States: 336465
+-------------Time: 100s ; Expanded Nodes: 85134 (Avg-Speed 851.0 n/s); Evaluated States: 373893
+-------------Time: 110s ; Expanded Nodes: 93698 (Avg-Speed 851.0 n/s); Evaluated States: 411216
+-------------Time: 120s ; Expanded Nodes: 102241 (Avg-Speed 852.0 n/s); Evaluated States: 448724
+-------------Time: 130s ; Expanded Nodes: 111071 (Avg-Speed 854.0 n/s); Evaluated States: 485586
+-------------Time: 140s ; Expanded Nodes: 119790 (Avg-Speed 855.0 n/s); Evaluated States: 522349
+-------------Time: 150s ; Expanded Nodes: 128430 (Avg-Speed 856.0 n/s); Evaluated States: 559672
+-------------Time: 160s ; Expanded Nodes: 137038 (Avg-Speed 856.0 n/s); Evaluated States: 597078
+-------------Time: 170s ; Expanded Nodes: 146082 (Avg-Speed 859.0 n/s); Evaluated States: 634528
+-------------Time: 180s ; Expanded Nodes: 155224 (Avg-Speed 862.0 n/s); Evaluated States: 671895
+-------------Time: 190s ; Expanded Nodes: 164190 (Avg-Speed 864.0 n/s); Evaluated States: 708998
+-------------Time: 200s ; Expanded Nodes: 172945 (Avg-Speed 864.0 n/s); Evaluated States: 746331
+-------------Time: 210s ; Expanded Nodes: 181631 (Avg-Speed 864.0 n/s); Evaluated States: 783630
+-------------Time: 220s ; Expanded Nodes: 189512 (Avg-Speed 861.0 n/s); Evaluated States: 821285
+-------------Time: 230s ; Expanded Nodes: 196245 (Avg-Speed 853.0 n/s); Evaluated States: 859222
+-------------Time: 240s ; Expanded Nodes: 203403 (Avg-Speed 847.0 n/s); Evaluated States: 897314
+-------------Time: 250s ; Expanded Nodes: 210653 (Avg-Speed 842.0 n/s); Evaluated States: 935296
+-------------Time: 260s ; Expanded Nodes: 218312 (Avg-Speed 839.0 n/s); Evaluated States: 973064
+-------------Time: 270s ; Expanded Nodes: 225958 (Avg-Speed 836.0 n/s); Evaluated States: 1010536
+-------------Time: 280s ; Expanded Nodes: 234058 (Avg-Speed 835.0 n/s); Evaluated States: 1048322
+-------------Time: 290s ; Expanded Nodes: 241496 (Avg-Speed 832.0 n/s); Evaluated States: 1082191
+-------------Time: 300s ; Expanded Nodes: 249283 (Avg-Speed 830.0 n/s); Evaluated States: 1115535
+-------------Time: 310s ; Expanded Nodes: 257231 (Avg-Speed 829.0 n/s); Evaluated States: 1149164
+-------------Time: 320s ; Expanded Nodes: 265439 (Avg-Speed 829.0 n/s); Evaluated States: 1182302
+-------------Time: 330s ; Expanded Nodes: 274293 (Avg-Speed 831.0 n/s); Evaluated States: 1215769
+-------------Time: 340s ; Expanded Nodes: 284216 (Avg-Speed 835.0 n/s); Evaluated States: 1251996
+-------------Time: 350s ; Expanded Nodes: 293370 (Avg-Speed 838.0 n/s); Evaluated States: 1288161
+-------------Time: 360s ; Expanded Nodes: 301688 (Avg-Speed 838.0 n/s); Evaluated States: 1325181
+-------------Time: 370s ; Expanded Nodes: 317250 (Avg-Speed 857.0 n/s); Evaluated States: 1360523
+-------------Time: 380s ; Expanded Nodes: 334328 (Avg-Speed 879.0 n/s); Evaluated States: 1394109
+-------------Time: 390s ; Expanded Nodes: 346946 (Avg-Speed 889.0 n/s); Evaluated States: 1430268
+-------------Time: 400s ; Expanded Nodes: 362135 (Avg-Speed 905.0 n/s); Evaluated States: 1465999
+-------------Time: 410s ; Expanded Nodes: 382987 (Avg-Speed 934.0 n/s); Evaluated States: 1500730
+-------------Time: 420s ; Expanded Nodes: 404225 (Avg-Speed 962.0 n/s); Evaluated States: 1534857
+-------------Time: 430s ; Expanded Nodes: 426498 (Avg-Speed 991.0 n/s); Evaluated States: 1568867
+-------------Time: 440s ; Expanded Nodes: 453605 (Avg-Speed 1030.0 n/s); Evaluated States: 1601822
+-------------Time: 450s ; Expanded Nodes: 480173 (Avg-Speed 1067.0 n/s); Evaluated States: 1634619
+-------------Time: 460s ; Expanded Nodes: 547153 (Avg-Speed 1189.0 n/s); Evaluated States: 1661661
+-------------Time: 470s ; Expanded Nodes: 653705 (Avg-Speed 1390.0 n/s); Evaluated States: 1683136
+-------------Time: 480s ; Expanded Nodes: 817217 (Avg-Speed 1702.0 n/s); Evaluated States: 1697105
+Problem unsolvable
+Metric (Search):-1.0
+Planning Time (msec): 483923
+Heuristic Time (msec): 442830
+Search Time (msec): 0
+Expanded Nodes:923823
+States Evaluated:1697883
+Number of Dead-Ends detected:240627
+Number of Duplicates detected:5877772

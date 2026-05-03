@@ -1,0 +1,34 @@
+{
+  "waypoint": ["wa0", "wa1", "wa2"],
+  "agents": ["s0", "s1"],
+
+  "init_values": {
+    "global": [
+      ["=", ["waypoint_supplies", ["wa0"]], "6"],
+      ["=", ["waypoint_supplies", ["wa1"]], "0"],
+      ["=", ["waypoint_supplies", ["wa2"]], "0"],
+      ["is_next", ["wa0", "wa1"]],
+      ["is_next", ["wa1", "wa2"]]
+    ],
+    "s0": [
+      ["at", ["wa0"]],
+      ["=", ["sled_capacity", []], "3"],
+      ["=", ["sled_supplies", []], "1"]
+    ],
+    "s1": [
+      ["at", ["wa0"]],
+      ["=", ["sled_capacity", []], "3"],
+      ["=", ["sled_supplies", []], "1"]
+    ]
+  },
+
+  "goals": {
+    "global": [],
+    "s0": [
+      ["at", ["wa2"]]
+    ],
+    "s1": [
+      ["at", ["wa2"]]
+    ]
+  }
+}

@@ -1,0 +1,351 @@
+=== CASE ===
+domain: grid
+instance_file: pfile14.json
+has_social_law: False
+problem_name: grid_pfile14
+verifier: simple
+
+=== CONVERSION ===
+=== SNP CONVERSION ===
+Converted problem: grid_pfile14_NUM_STRIPS
+
+=== SINGLE_AGENT car-0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 17
+Aibr Preprocessing
+UFX:false
+|F|:66
+|X|:0
+|A|:106
+|P|:0
+|E|:0
+H1 Setup Time (msec): 7
+h(I):8.0
+ g(n)= 1.0 h(n)=7.0
+ g(n)= 2.0 h(n)=6.0
+ g(n)= 3.0 h(n)=5.0
+ g(n)= 4.0 h(n)=4.0
+ g(n)= 5.0 h(n)=3.0
+ g(n)= 6.0 h(n)=2.0
+ g(n)= 7.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive o__7__0_)
+1.0: (drive o__7__0_ o__7__1_ north)
+2.0: (drive o__7__1_ o__7__2_ north)
+3.0: (drive o__7__2_ o__6__2_ west)
+4.0: (drive o__6__2_ o__5__2_ west)
+5.0: (drive o__5__2_ o__4__2_ west)
+6.0: (drive o__4__2_ o__3__2_ west)
+7.0: (leave o__3__2_)
+
+Plan-Length:8
+Metric (Search):8.0
+Planning Time (msec): 22
+Heuristic Time (msec): 9
+Search Time (msec): 21
+Expanded Nodes:9
+States Evaluated:20
+Number of Dead-Ends detected:0
+Number of Duplicates detected:7
+
+=== SINGLE_AGENT car-1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 16
+Aibr Preprocessing
+UFX:false
+|F|:66
+|X|:0
+|A|:106
+|P|:0
+|E|:0
+H1 Setup Time (msec): 7
+h(I):3.0
+ g(n)= 1.0 h(n)=2.0
+ g(n)= 2.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive o__6__0_)
+1.0: (drive o__6__0_ o__5__0_ west)
+2.0: (leave o__5__0_)
+
+Plan-Length:3
+Metric (Search):3.0
+Planning Time (msec): 17
+Heuristic Time (msec): 8
+Search Time (msec): 16
+Expanded Nodes:4
+States Evaluated:8
+Number of Dead-Ends detected:0
+Number of Duplicates detected:1
+
+=== SINGLE_AGENT car-2 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 16
+Aibr Preprocessing
+UFX:false
+|F|:66
+|X|:0
+|A|:106
+|P|:0
+|E|:0
+H1 Setup Time (msec): 7
+h(I):9.0
+ g(n)= 1.0 h(n)=8.0
+ g(n)= 2.0 h(n)=7.0
+ g(n)= 3.0 h(n)=6.0
+ g(n)= 4.0 h(n)=5.0
+ g(n)= 5.0 h(n)=4.0
+ g(n)= 6.0 h(n)=3.0
+ g(n)= 7.0 h(n)=2.0
+ g(n)= 8.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive o__6__0_)
+1.0: (drive o__6__0_ o__5__0_ west)
+2.0: (drive o__5__0_ o__5__1_ north)
+3.0: (drive o__5__1_ o__4__1_ west)
+4.0: (drive o__4__1_ o__3__1_ west)
+5.0: (drive o__3__1_ o__3__2_ north)
+6.0: (drive o__3__2_ o__2__2_ west)
+7.0: (drive o__2__2_ o__1__2_ west)
+8.0: (leave o__1__2_)
+
+Plan-Length:9
+Metric (Search):9.0
+Planning Time (msec): 23
+Heuristic Time (msec): 13
+Search Time (msec): 22
+Expanded Nodes:10
+States Evaluated:22
+Number of Dead-Ends detected:0
+Number of Duplicates detected:11
+
+=== SINGLE_AGENT car-3 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 16
+Aibr Preprocessing
+UFX:false
+|F|:66
+|X|:0
+|A|:106
+|P|:0
+|E|:0
+H1 Setup Time (msec): 6
+h(I):4.0
+ g(n)= 1.0 h(n)=3.0
+ g(n)= 2.0 h(n)=2.0
+ g(n)= 3.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive o__4__3_)
+1.0: (drive o__4__3_ o__4__2_ south)
+2.0: (drive o__4__2_ o__4__1_ south)
+3.0: (leave o__4__1_)
+
+Plan-Length:4
+Metric (Search):4.0
+Planning Time (msec): 19
+Heuristic Time (msec): 9
+Search Time (msec): 17
+Expanded Nodes:5
+States Evaluated:12
+Number of Dead-Ends detected:0
+Number of Duplicates detected:2
+
+=== SINGLE_AGENT car-4 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 16
+Aibr Preprocessing
+UFX:false
+|F|:66
+|X|:0
+|A|:106
+|P|:0
+|E|:0
+H1 Setup Time (msec): 6
+h(I):7.0
+ g(n)= 1.0 h(n)=6.0
+ g(n)= 2.0 h(n)=5.0
+ g(n)= 3.0 h(n)=4.0
+ g(n)= 4.0 h(n)=3.0
+ g(n)= 5.0 h(n)=2.0
+ g(n)= 6.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive o__0__1_)
+1.0: (drive o__0__1_ o__1__1_ east)
+2.0: (drive o__1__1_ o__1__2_ north)
+3.0: (drive o__1__2_ o__2__2_ east)
+4.0: (drive o__2__2_ o__3__2_ east)
+5.0: (drive o__3__2_ o__4__2_ east)
+6.0: (leave o__4__2_)
+
+Plan-Length:7
+Metric (Search):7.0
+Planning Time (msec): 24
+Heuristic Time (msec): 12
+Search Time (msec): 21
+Expanded Nodes:8
+States Evaluated:19
+Number of Dead-Ends detected:0
+Number of Duplicates detected:7
+
+=== SINGLE_AGENT car-5 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 19
+Aibr Preprocessing
+UFX:false
+|F|:66
+|X|:0
+|A|:106
+|P|:0
+|E|:0
+H1 Setup Time (msec): 6
+h(I):4.0
+ g(n)= 1.0 h(n)=3.0
+ g(n)= 2.0 h(n)=2.0
+ g(n)= 3.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive o__0__2_)
+1.0: (drive o__0__2_ o__0__1_ south)
+2.0: (drive o__0__1_ o__0__0_ south)
+3.0: (leave o__0__0_)
+
+Plan-Length:4
+Metric (Search):4.0
+Planning Time (msec): 21
+Heuristic Time (msec): 10
+Search Time (msec): 19
+Expanded Nodes:5
+States Evaluated:9
+Number of Dead-Ends detected:0
+Number of Duplicates detected:2
+
+=== ROBUSTNESS SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 173
+Aibr Preprocessing
+UFX:false
+|F|:641
+|X|:0
+|A|:2550
+|P|:0
+|E|:0
+H1 Setup Time (msec): 47
+h(I):43.0
+ g(n)= 1.0 h(n)=41.0
+ g(n)= 2.0 h(n)=39.0
+ g(n)= 3.0 h(n)=38.0
+ g(n)= 4.0 h(n)=37.0
+ g(n)= 5.0 h(n)=36.0
+ g(n)= 6.0 h(n)=35.0
+ g(n)= 7.0 h(n)=34.0
+ g(n)= 8.0 h(n)=33.0
+ g(n)= 9.0 h(n)=32.0
+ g(n)= 10.0 h(n)=31.0
+ g(n)= 11.0 h(n)=30.0
+ g(n)= 12.0 h(n)=29.0
+ g(n)= 13.0 h(n)=28.0
+ g(n)= 14.0 h(n)=27.0
+ g(n)= 15.0 h(n)=26.0
+ g(n)= 16.0 h(n)=25.0
+ g(n)= 17.0 h(n)=24.0
+ g(n)= 18.0 h(n)=23.0
+ g(n)= 19.0 h(n)=22.0
+ g(n)= 20.0 h(n)=21.0
+ g(n)= 21.0 h(n)=20.0
+ g(n)= 22.0 h(n)=19.0
+ g(n)= 23.0 h(n)=18.0
+ g(n)= 24.0 h(n)=17.0
+ g(n)= 25.0 h(n)=16.0
+ g(n)= 26.0 h(n)=15.0
+ g(n)= 27.0 h(n)=14.0
+ g(n)= 28.0 h(n)=13.0
+ g(n)= 29.0 h(n)=12.0
+ g(n)= 30.0 h(n)=11.0
+ g(n)= 31.0 h(n)=10.0
+ g(n)= 32.0 h(n)=9.0
+ g(n)= 33.0 h(n)=8.0
+ g(n)= 34.0 h(n)=7.0
+ g(n)= 35.0 h(n)=6.0
+ g(n)= 36.0 h(n)=5.0
+ g(n)= 37.0 h(n)=4.0
+ g(n)= 38.0 h(n)=3.0
+ g(n)= 39.0 h(n)=2.0
+ g(n)= 40.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (s__car_1__arrive o__6__0_)
+1.0: (f_not_free_l___car_2__arrive o__6__0_)
+2.0: (l_cf__car_4__arrive o__0__1_)
+3.0: (l_cf__car_5__arrive o__0__2_)
+4.0: (l_cf__car_0__arrive o__7__0_)
+5.0: (l_cf__car_3__arrive o__4__3_)
+6.0: (l_cf__car_3__drive o__4__3_ o__4__2_ south)
+7.0: (l_cf__car_5__drive o__0__2_ o__0__1_ south)
+8.0: (l_cf__car_2__drive o__6__0_ o__5__0_ west)
+9.0: (l_cf__car_4__drive o__0__1_ o__1__1_ east)
+10.0: (l_cf__car_0__drive o__7__0_ o__7__1_ north)
+11.0: (l_cf__car_1__drive o__6__0_ o__5__0_ west)
+12.0: (l_cf__car_5__drive o__0__1_ o__0__0_ south)
+13.0: (l_cf__car_1__leave o__5__0_)
+14.0: (l_cf__car_4__drive o__1__1_ o__1__2_ north)
+15.0: (l_cf__car_3__drive o__4__2_ o__4__1_ south)
+16.0: (l_cf__car_0__drive o__7__1_ o__6__1_ west)
+17.0: (l_cf__car_2__drive o__5__0_ o__5__1_ north)
+18.0: (l_cf__car_0__drive o__6__1_ o__6__2_ north)
+19.0: (l_cf__car_2__drive o__5__1_ o__4__1_ west)
+20.0: (l_cf__car_4__drive o__1__2_ o__2__2_ east)
+21.0: (l_cf__car_5__leave o__0__0_)
+22.0: (l_cf__car_3__leave o__4__1_)
+23.0: (l_cf__car_4__drive o__2__2_ o__3__2_ east)
+24.0: (l_cf__car_0__drive o__6__2_ o__5__2_ west)
+25.0: (l_cf__car_2__drive o__4__1_ o__3__1_ west)
+26.0: (l_cf__car_0__drive o__5__2_ o__4__2_ west)
+27.0: (l_cf__car_2__drive o__3__1_ o__3__2_ north)
+28.0: (l_cf__car_4__drive o__3__2_ o__4__2_ east)
+29.0: (l_cf__car_2__drive o__3__2_ o__2__2_ west)
+30.0: (l_cf__car_4__leave o__4__2_)
+31.0: (l_cf__car_0__drive o__4__2_ o__3__2_ west)
+32.0: (l_cf__car_0__leave o__3__2_)
+33.0: (l_cf__car_2__drive o__2__2_ o__1__2_ west)
+34.0: (l_cf__car_2__leave o__1__2_)
+35.0: (end_f_car_1)
+36.0: (end_f_car_3)
+37.0: (end_f_car_5)
+38.0: (end_f_car_4)
+39.0: (end_f_car_0)
+40.0: (end_f_car_2)
+
+Plan-Length:41
+Metric (Search):41.0
+Planning Time (msec): 398
+Heuristic Time (msec): 360
+Search Time (msec): 396
+Expanded Nodes:42
+States Evaluated:487
+Number of Dead-Ends detected:52
+Number of Duplicates detected:44

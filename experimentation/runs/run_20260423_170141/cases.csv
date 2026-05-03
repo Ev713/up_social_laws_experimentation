@@ -1,0 +1,6 @@
+case_id,domain,instance,has_social_law
+numeric_markettrader__pfile2__without_sl,numeric_markettrader,pfile2.json,False
+numeric_markettrader__pfile3__without_sl,numeric_markettrader,pfile3.json,False
+numeric_markettrader__pfile4__without_sl,numeric_markettrader,pfile4.json,False
+numeric_markettrader__pfile5__without_sl,numeric_markettrader,pfile5.json,False
+numeric_markettrader__pfile6__without_sl,numeric_markettrader,pfile6.json,False

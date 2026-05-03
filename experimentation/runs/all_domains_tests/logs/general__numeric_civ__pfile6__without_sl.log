@@ -1,0 +1,95 @@
+=== CASE ===
+domain: numeric_civ
+instance_file: pfile6.json
+has_social_law: False
+problem_name: civ_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_civ/pfile6
+verifier: general
+
+=== SINGLE_AGENT a0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 16
+Aibr Preprocessing
+UFX:false
+|F|:6
+|X|:5
+|A|:14
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):13.0
+ g(n)= 1.0 h(n)=10.0
+ g(n)= 2.0 h(n)=7.0
+ g(n)= 3.0 h(n)=5.0
+ g(n)= 4.0 h(n)=4.0
+ g(n)= 5.0 h(n)=3.0
+ g(n)= 7.0 h(n)=2.0
+ g(n)= 8.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (build_cabin p0)
+1.0: (fell_timber p0 timber)
+2.0: (fell_timber p0 timber)
+3.0: (build_sawmill p0 timber)
+4.0: (fell_timber p0 timber)
+5.0: (fell_timber p0 timber)
+6.0: (saw_wood p0 timber wood)
+7.0: (saw_wood p0 timber wood)
+8.0: (build_mine p0 wood)
+
+Plan-Length:9
+Metric (Search):9.0
+Planning Time (msec): 14
+Heuristic Time (msec): 6
+Search Time (msec): 12
+Expanded Nodes:11
+States Evaluated:32
+Number of Dead-Ends detected:0
+Number of Duplicates detected:7
+
+=== SINGLE_AGENT a1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 15
+Aibr Preprocessing
+UFX:false
+|F|:6
+|X|:5
+|A|:14
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):3.0
+ g(n)= 1.0 h(n)=2.0
+ g(n)= 2.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (build_cabin p0)
+1.0: (fell_timber p0 timber)
+2.0: (build_coal_stack p0 timber)
+
+Plan-Length:3
+Metric (Search):3.0
+Planning Time (msec): 10
+Heuristic Time (msec): 3
+Search Time (msec): 8
+Expanded Nodes:4
+States Evaluated:8
+Number of Dead-Ends detected:0
+Number of Duplicates detected:1
+
+=== ROBUSTNESS UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 142
+Aibr Preprocessing
+Problem Detected as Unsolvable by AIBR during preprocessing
+UFX:false
+|F|:59
+|X|:15
+Unsolvable Problem

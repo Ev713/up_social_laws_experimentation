@@ -1,0 +1,774 @@
+=== CASE ===
+domain: numeric_expedition
+instance_file: pfile13.json
+has_social_law: True
+problem_name: sl_expedition_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_expedition/pfile13
+verifier: simple
+
+=== CONVERSION ===
+=== SNP CONVERSION ===
+Converted problem: sl_expedition_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_expedition/pfile13_NUM_STRIPS
+
+=== COMPILER OUTPUT ===
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+
+=== SINGLE_AGENT s0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 31
+Aibr Preprocessing
+UFX:false
+|F|:8
+|X|:18
+|A|:30
+|P|:0
+|E|:0
+H1 Setup Time (msec): 8
+h(I):7.0
+ g(n)= 2.0 h(n)=6.0
+ g(n)= 4.0 h(n)=5.0
+ g(n)= 6.0 h(n)=4.0
+ g(n)= 22.0 h(n)=3.0
+ g(n)= 50.0 h(n)=2.0
+ g(n)= 88.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (retrieve_supplies wa0)
+1.0: (retrieve_supplies wa0)
+2.0: (retrieve_supplies wa0)
+3.0: (move_forwards wa0 wa1)
+4.0: (store_supplies wa1)
+5.0: (move_backwards wa1 wa0)
+6.0: (retrieve_supplies wa0)
+7.0: (retrieve_supplies wa0)
+8.0: (retrieve_supplies wa0)
+9.0: (move_forwards wa0 wa1)
+10.0: (store_supplies wa1)
+11.0: (move_backwards wa1 wa0)
+12.0: (retrieve_supplies wa0)
+13.0: (retrieve_supplies wa0)
+14.0: (retrieve_supplies wa0)
+15.0: (move_forwards wa0 wa1)
+16.0: (store_supplies wa1)
+17.0: (move_backwards wa1 wa0)
+18.0: (retrieve_supplies wa0)
+19.0: (retrieve_supplies wa0)
+20.0: (retrieve_supplies wa0)
+21.0: (move_forwards wa0 wa1)
+22.0: (move_backwards wa1 wa0)
+23.0: (retrieve_supplies wa0)
+24.0: (retrieve_supplies wa0)
+25.0: (move_forwards wa0 wa1)
+26.0: (retrieve_supplies wa1)
+27.0: (move_forwards wa1 wa2)
+28.0: (store_supplies wa2)
+29.0: (store_supplies wa2)
+30.0: (move_backwards wa2 wa1)
+31.0: (retrieve_supplies wa1)
+32.0: (retrieve_supplies wa1)
+33.0: (move_backwards wa1 wa0)
+34.0: (retrieve_supplies wa0)
+35.0: (retrieve_supplies wa0)
+36.0: (retrieve_supplies wa0)
+37.0: (move_forwards wa0 wa1)
+38.0: (store_supplies wa1)
+39.0: (move_backwards wa1 wa0)
+40.0: (retrieve_supplies wa0)
+41.0: (retrieve_supplies wa0)
+42.0: (retrieve_supplies wa0)
+43.0: (move_forwards wa0 wa1)
+44.0: (store_supplies wa1)
+45.0: (move_backwards wa1 wa0)
+46.0: (retrieve_supplies wa0)
+47.0: (retrieve_supplies wa0)
+48.0: (retrieve_supplies wa0)
+49.0: (move_forwards wa0 wa1)
+50.0: (store_supplies wa1)
+51.0: (move_backwards wa1 wa0)
+52.0: (retrieve_supplies wa0)
+53.0: (retrieve_supplies wa0)
+54.0: (retrieve_supplies wa0)
+55.0: (move_forwards wa0 wa1)
+56.0: (store_supplies wa1)
+57.0: (move_backwards wa1 wa0)
+58.0: (retrieve_supplies wa0)
+59.0: (retrieve_supplies wa0)
+60.0: (retrieve_supplies wa0)
+61.0: (move_forwards wa0 wa1)
+62.0: (store_supplies wa1)
+63.0: (move_backwards wa1 wa0)
+64.0: (retrieve_supplies wa0)
+65.0: (retrieve_supplies wa0)
+66.0: (retrieve_supplies wa0)
+67.0: (move_forwards wa0 wa1)
+68.0: (retrieve_supplies wa1)
+69.0: (move_forwards wa1 wa2)
+70.0: (retrieve_supplies wa2)
+71.0: (move_forwards wa2 wa3)
+72.0: (store_supplies wa3)
+73.0: (store_supplies wa3)
+74.0: (move_backwards wa3 wa2)
+75.0: (retrieve_supplies wa2)
+76.0: (move_backwards wa2 wa1)
+77.0: (retrieve_supplies wa1)
+78.0: (retrieve_supplies wa1)
+79.0: (retrieve_supplies wa1)
+80.0: (retrieve_supplies wa1)
+81.0: (move_forwards wa1 wa2)
+82.0: (move_forwards wa2 wa3)
+83.0: (retrieve_supplies wa3)
+84.0: (retrieve_supplies wa3)
+85.0: (move_forwards wa3 wa4)
+86.0: (move_forwards wa4 wa5)
+87.0: (move_forwards wa5 wa6)
+88.0: (move_forwards wa6 wa7)
+
+Plan-Length:89
+Metric (Search):89.0
+Planning Time (msec): 408
+Heuristic Time (msec): 217
+Search Time (msec): 404
+Expanded Nodes:8810
+States Evaluated:11043
+Number of Dead-Ends detected:3932
+Number of Duplicates detected:10518
+
+=== SINGLE_AGENT s1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 36
+Aibr Preprocessing
+UFX:false
+|F|:8
+|X|:18
+|A|:30
+|P|:0
+|E|:0
+H1 Setup Time (msec): 11
+h(I):7.0
+ g(n)= 2.0 h(n)=6.0
+ g(n)= 4.0 h(n)=5.0
+ g(n)= 6.0 h(n)=4.0
+ g(n)= 14.0 h(n)=3.0
+ g(n)= 76.0 h(n)=2.0
+ g(n)= 126.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (retrieve_supplies wb0)
+1.0: (retrieve_supplies wb0)
+2.0: (retrieve_supplies wb0)
+3.0: (move_forwards wb0 wb1)
+4.0: (store_supplies wb1)
+5.0: (move_backwards wb1 wb0)
+6.0: (retrieve_supplies wb0)
+7.0: (retrieve_supplies wb0)
+8.0: (retrieve_supplies wb0)
+9.0: (move_forwards wb0 wb1)
+10.0: (move_forwards wb1 wb2)
+11.0: (move_backwards wb2 wb1)
+12.0: (retrieve_supplies wb1)
+13.0: (move_backwards wb1 wb0)
+14.0: (retrieve_supplies wb0)
+15.0: (retrieve_supplies wb0)
+16.0: (retrieve_supplies wb0)
+17.0: (move_forwards wb0 wb1)
+18.0: (store_supplies wb1)
+19.0: (move_backwards wb1 wb0)
+20.0: (retrieve_supplies wb0)
+21.0: (retrieve_supplies wb0)
+22.0: (retrieve_supplies wb0)
+23.0: (move_forwards wb0 wb1)
+24.0: (store_supplies wb1)
+25.0: (move_backwards wb1 wb0)
+26.0: (retrieve_supplies wb0)
+27.0: (retrieve_supplies wb0)
+28.0: (retrieve_supplies wb0)
+29.0: (move_forwards wb0 wb1)
+30.0: (retrieve_supplies wb1)
+31.0: (move_forwards wb1 wb2)
+32.0: (store_supplies wb2)
+33.0: (move_backwards wb2 wb1)
+34.0: (retrieve_supplies wb1)
+35.0: (move_backwards wb1 wb0)
+36.0: (retrieve_supplies wb0)
+37.0: (retrieve_supplies wb0)
+38.0: (retrieve_supplies wb0)
+39.0: (move_forwards wb0 wb1)
+40.0: (store_supplies wb1)
+41.0: (move_backwards wb1 wb0)
+42.0: (retrieve_supplies wb0)
+43.0: (retrieve_supplies wb0)
+44.0: (retrieve_supplies wb0)
+45.0: (move_forwards wb0 wb1)
+46.0: (store_supplies wb1)
+47.0: (move_backwards wb1 wb0)
+48.0: (retrieve_supplies wb0)
+49.0: (retrieve_supplies wb0)
+50.0: (retrieve_supplies wb0)
+51.0: (move_forwards wb0 wb1)
+52.0: (store_supplies wb1)
+53.0: (move_backwards wb1 wb0)
+54.0: (retrieve_supplies wb0)
+55.0: (retrieve_supplies wb0)
+56.0: (retrieve_supplies wb0)
+57.0: (move_forwards wb0 wb1)
+58.0: (store_supplies wb1)
+59.0: (move_backwards wb1 wb0)
+60.0: (retrieve_supplies wb0)
+61.0: (retrieve_supplies wb0)
+62.0: (retrieve_supplies wb0)
+63.0: (move_forwards wb0 wb1)
+64.0: (store_supplies wb1)
+65.0: (move_backwards wb1 wb0)
+66.0: (retrieve_supplies wb0)
+67.0: (retrieve_supplies wb0)
+68.0: (retrieve_supplies wb0)
+69.0: (move_forwards wb0 wb1)
+70.0: (retrieve_supplies wb1)
+71.0: (move_forwards wb1 wb2)
+72.0: (store_supplies wb2)
+73.0: (move_backwards wb2 wb1)
+74.0: (retrieve_supplies wb1)
+75.0: (retrieve_supplies wb1)
+76.0: (retrieve_supplies wb1)
+77.0: (move_forwards wb1 wb2)
+78.0: (retrieve_supplies wb2)
+79.0: (move_forwards wb2 wb3)
+80.0: (store_supplies wb3)
+81.0: (move_backwards wb3 wb2)
+82.0: (retrieve_supplies wb2)
+83.0: (move_backwards wb2 wb1)
+84.0: (retrieve_supplies wb1)
+85.0: (move_backwards wb1 wb0)
+86.0: (retrieve_supplies wb0)
+87.0: (retrieve_supplies wb0)
+88.0: (retrieve_supplies wb0)
+89.0: (move_forwards wb0 wb1)
+90.0: (store_supplies wb1)
+91.0: (move_backwards wb1 wb0)
+92.0: (retrieve_supplies wb0)
+93.0: (retrieve_supplies wb0)
+94.0: (retrieve_supplies wb0)
+95.0: (move_forwards wb0 wb1)
+96.0: (store_supplies wb1)
+97.0: (move_backwards wb1 wb0)
+98.0: (retrieve_supplies wb0)
+99.0: (retrieve_supplies wb0)
+100.0: (retrieve_supplies wb0)
+101.0: (move_forwards wb0 wb1)
+102.0: (store_supplies wb1)
+103.0: (move_backwards wb1 wb0)
+104.0: (retrieve_supplies wb0)
+105.0: (retrieve_supplies wb0)
+106.0: (retrieve_supplies wb0)
+107.0: (move_forwards wb0 wb1)
+108.0: (retrieve_supplies wb1)
+109.0: (move_forwards wb1 wb2)
+110.0: (store_supplies wb2)
+111.0: (move_backwards wb2 wb1)
+112.0: (retrieve_supplies wb1)
+113.0: (move_backwards wb1 wb0)
+114.0: (retrieve_supplies wb0)
+115.0: (retrieve_supplies wb0)
+116.0: (retrieve_supplies wb0)
+117.0: (move_forwards wb0 wb1)
+118.0: (retrieve_supplies wb1)
+119.0: (move_forwards wb1 wb2)
+120.0: (retrieve_supplies wb2)
+121.0: (move_forwards wb2 wb3)
+122.0: (retrieve_supplies wb3)
+123.0: (move_forwards wb3 wb4)
+124.0: (move_forwards wb4 wb5)
+125.0: (move_forwards wb5 wb6)
+126.0: (move_forwards wb6 wb7)
+
+Plan-Length:127
+Metric (Search):127.0
+Planning Time (msec): 319
+Heuristic Time (msec): 166
+Search Time (msec): 316
+Expanded Nodes:9599
+States Evaluated:13909
+Number of Dead-Ends detected:4848
+Number of Duplicates detected:11313
+
+=== SINGLE_AGENT s2 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 29
+Aibr Preprocessing
+UFX:false
+|F|:8
+|X|:18
+|A|:30
+|P|:0
+|E|:0
+H1 Setup Time (msec): 7
+h(I):7.0
+ g(n)= 2.0 h(n)=6.0
+ g(n)= 4.0 h(n)=5.0
+ g(n)= 6.0 h(n)=4.0
+ g(n)= 22.0 h(n)=3.0
+ g(n)= 50.0 h(n)=2.0
+ g(n)= 88.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (retrieve_supplies wa0)
+1.0: (retrieve_supplies wa0)
+2.0: (retrieve_supplies wa0)
+3.0: (move_forwards wa0 wa1)
+4.0: (store_supplies wa1)
+5.0: (move_backwards wa1 wa0)
+6.0: (retrieve_supplies wa0)
+7.0: (retrieve_supplies wa0)
+8.0: (retrieve_supplies wa0)
+9.0: (move_forwards wa0 wa1)
+10.0: (store_supplies wa1)
+11.0: (move_backwards wa1 wa0)
+12.0: (retrieve_supplies wa0)
+13.0: (retrieve_supplies wa0)
+14.0: (retrieve_supplies wa0)
+15.0: (move_forwards wa0 wa1)
+16.0: (store_supplies wa1)
+17.0: (move_backwards wa1 wa0)
+18.0: (retrieve_supplies wa0)
+19.0: (retrieve_supplies wa0)
+20.0: (retrieve_supplies wa0)
+21.0: (move_forwards wa0 wa1)
+22.0: (move_backwards wa1 wa0)
+23.0: (retrieve_supplies wa0)
+24.0: (retrieve_supplies wa0)
+25.0: (move_forwards wa0 wa1)
+26.0: (retrieve_supplies wa1)
+27.0: (move_forwards wa1 wa2)
+28.0: (store_supplies wa2)
+29.0: (store_supplies wa2)
+30.0: (move_backwards wa2 wa1)
+31.0: (retrieve_supplies wa1)
+32.0: (retrieve_supplies wa1)
+33.0: (move_backwards wa1 wa0)
+34.0: (retrieve_supplies wa0)
+35.0: (retrieve_supplies wa0)
+36.0: (retrieve_supplies wa0)
+37.0: (move_forwards wa0 wa1)
+38.0: (store_supplies wa1)
+39.0: (move_backwards wa1 wa0)
+40.0: (retrieve_supplies wa0)
+41.0: (retrieve_supplies wa0)
+42.0: (retrieve_supplies wa0)
+43.0: (move_forwards wa0 wa1)
+44.0: (store_supplies wa1)
+45.0: (move_backwards wa1 wa0)
+46.0: (retrieve_supplies wa0)
+47.0: (retrieve_supplies wa0)
+48.0: (retrieve_supplies wa0)
+49.0: (move_forwards wa0 wa1)
+50.0: (store_supplies wa1)
+51.0: (move_backwards wa1 wa0)
+52.0: (retrieve_supplies wa0)
+53.0: (retrieve_supplies wa0)
+54.0: (retrieve_supplies wa0)
+55.0: (move_forwards wa0 wa1)
+56.0: (store_supplies wa1)
+57.0: (move_backwards wa1 wa0)
+58.0: (retrieve_supplies wa0)
+59.0: (retrieve_supplies wa0)
+60.0: (retrieve_supplies wa0)
+61.0: (move_forwards wa0 wa1)
+62.0: (store_supplies wa1)
+63.0: (move_backwards wa1 wa0)
+64.0: (retrieve_supplies wa0)
+65.0: (retrieve_supplies wa0)
+66.0: (retrieve_supplies wa0)
+67.0: (move_forwards wa0 wa1)
+68.0: (retrieve_supplies wa1)
+69.0: (move_forwards wa1 wa2)
+70.0: (retrieve_supplies wa2)
+71.0: (move_forwards wa2 wa3)
+72.0: (store_supplies wa3)
+73.0: (store_supplies wa3)
+74.0: (move_backwards wa3 wa2)
+75.0: (retrieve_supplies wa2)
+76.0: (move_backwards wa2 wa1)
+77.0: (retrieve_supplies wa1)
+78.0: (retrieve_supplies wa1)
+79.0: (retrieve_supplies wa1)
+80.0: (retrieve_supplies wa1)
+81.0: (move_forwards wa1 wa2)
+82.0: (move_forwards wa2 wa3)
+83.0: (retrieve_supplies wa3)
+84.0: (retrieve_supplies wa3)
+85.0: (move_forwards wa3 wa4)
+86.0: (move_forwards wa4 wa5)
+87.0: (move_forwards wa5 wa6)
+88.0: (move_forwards wa6 wa7)
+
+Plan-Length:89
+Metric (Search):89.0
+Planning Time (msec): 332
+Heuristic Time (msec): 180
+Search Time (msec): 328
+Expanded Nodes:8810
+States Evaluated:11043
+Number of Dead-Ends detected:3932
+Number of Duplicates detected:10518
+
+=== SINGLE_AGENT s3 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 24
+Aibr Preprocessing
+UFX:false
+|F|:8
+|X|:18
+|A|:30
+|P|:0
+|E|:0
+H1 Setup Time (msec): 6
+h(I):7.0
+ g(n)= 2.0 h(n)=6.0
+ g(n)= 4.0 h(n)=5.0
+ g(n)= 6.0 h(n)=4.0
+ g(n)= 22.0 h(n)=3.0
+ g(n)= 50.0 h(n)=2.0
+ g(n)= 88.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (retrieve_supplies wa0)
+1.0: (retrieve_supplies wa0)
+2.0: (retrieve_supplies wa0)
+3.0: (move_forwards wa0 wa1)
+4.0: (store_supplies wa1)
+5.0: (move_backwards wa1 wa0)
+6.0: (retrieve_supplies wa0)
+7.0: (retrieve_supplies wa0)
+8.0: (retrieve_supplies wa0)
+9.0: (move_forwards wa0 wa1)
+10.0: (store_supplies wa1)
+11.0: (move_backwards wa1 wa0)
+12.0: (retrieve_supplies wa0)
+13.0: (retrieve_supplies wa0)
+14.0: (retrieve_supplies wa0)
+15.0: (move_forwards wa0 wa1)
+16.0: (store_supplies wa1)
+17.0: (move_backwards wa1 wa0)
+18.0: (retrieve_supplies wa0)
+19.0: (retrieve_supplies wa0)
+20.0: (retrieve_supplies wa0)
+21.0: (move_forwards wa0 wa1)
+22.0: (move_backwards wa1 wa0)
+23.0: (retrieve_supplies wa0)
+24.0: (retrieve_supplies wa0)
+25.0: (move_forwards wa0 wa1)
+26.0: (retrieve_supplies wa1)
+27.0: (move_forwards wa1 wa2)
+28.0: (store_supplies wa2)
+29.0: (store_supplies wa2)
+30.0: (move_backwards wa2 wa1)
+31.0: (retrieve_supplies wa1)
+32.0: (retrieve_supplies wa1)
+33.0: (move_backwards wa1 wa0)
+34.0: (retrieve_supplies wa0)
+35.0: (retrieve_supplies wa0)
+36.0: (retrieve_supplies wa0)
+37.0: (move_forwards wa0 wa1)
+38.0: (store_supplies wa1)
+39.0: (move_backwards wa1 wa0)
+40.0: (retrieve_supplies wa0)
+41.0: (retrieve_supplies wa0)
+42.0: (retrieve_supplies wa0)
+43.0: (move_forwards wa0 wa1)
+44.0: (store_supplies wa1)
+45.0: (move_backwards wa1 wa0)
+46.0: (retrieve_supplies wa0)
+47.0: (retrieve_supplies wa0)
+48.0: (retrieve_supplies wa0)
+49.0: (move_forwards wa0 wa1)
+50.0: (store_supplies wa1)
+51.0: (move_backwards wa1 wa0)
+52.0: (retrieve_supplies wa0)
+53.0: (retrieve_supplies wa0)
+54.0: (retrieve_supplies wa0)
+55.0: (move_forwards wa0 wa1)
+56.0: (store_supplies wa1)
+57.0: (move_backwards wa1 wa0)
+58.0: (retrieve_supplies wa0)
+59.0: (retrieve_supplies wa0)
+60.0: (retrieve_supplies wa0)
+61.0: (move_forwards wa0 wa1)
+62.0: (store_supplies wa1)
+63.0: (move_backwards wa1 wa0)
+64.0: (retrieve_supplies wa0)
+65.0: (retrieve_supplies wa0)
+66.0: (retrieve_supplies wa0)
+67.0: (move_forwards wa0 wa1)
+68.0: (retrieve_supplies wa1)
+69.0: (move_forwards wa1 wa2)
+70.0: (retrieve_supplies wa2)
+71.0: (move_forwards wa2 wa3)
+72.0: (store_supplies wa3)
+73.0: (store_supplies wa3)
+74.0: (move_backwards wa3 wa2)
+75.0: (retrieve_supplies wa2)
+76.0: (move_backwards wa2 wa1)
+77.0: (retrieve_supplies wa1)
+78.0: (retrieve_supplies wa1)
+79.0: (retrieve_supplies wa1)
+80.0: (retrieve_supplies wa1)
+81.0: (move_forwards wa1 wa2)
+82.0: (move_forwards wa2 wa3)
+83.0: (retrieve_supplies wa3)
+84.0: (retrieve_supplies wa3)
+85.0: (move_forwards wa3 wa4)
+86.0: (move_forwards wa4 wa5)
+87.0: (move_forwards wa5 wa6)
+88.0: (move_forwards wa6 wa7)
+
+Plan-Length:89
+Metric (Search):89.0
+Planning Time (msec): 321
+Heuristic Time (msec): 180
+Search Time (msec): 318
+Expanded Nodes:8810
+States Evaluated:11043
+Number of Dead-Ends detected:3932
+Number of Duplicates detected:10518
+
+=== ROBUSTNESS TIMEOUT ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 194
+Aibr Preprocessing
+UFX:false
+|F|:71
+|X|:176
+|A|:552
+|P|:0
+|E|:0
+H1 Setup Time (msec): 27
+h(I):33.0
+ g(n)= 2.0 h(n)=32.0
+ g(n)= 4.0 h(n)=31.0
+ g(n)= 6.0 h(n)=30.0
+ g(n)= 8.0 h(n)=29.0
+ g(n)= 10.0 h(n)=28.0
+ g(n)= 12.0 h(n)=27.0
+ g(n)= 20.0 h(n)=26.0
+ g(n)= 80.0 h(n)=25.0
+-------------Time: 10s ; Expanded Nodes: 2891 (Avg-Speed 289.0 n/s); Evaluated States: 21736
+-------------Time: 20s ; Expanded Nodes: 5941 (Avg-Speed 297.0 n/s); Evaluated States: 44492
+-------------Time: 30s ; Expanded Nodes: 8979 (Avg-Speed 299.0 n/s); Evaluated States: 66914
+-------------Time: 40s ; Expanded Nodes: 12009 (Avg-Speed 300.0 n/s); Evaluated States: 89198
+-------------Time: 50s ; Expanded Nodes: 14992 (Avg-Speed 299.0 n/s); Evaluated States: 111413
+-------------Time: 60s ; Expanded Nodes: 17985 (Avg-Speed 299.0 n/s); Evaluated States: 133605
+ g(n)= 136.0 h(n)=24.0
+ g(n)= 137.0 h(n)=23.0
+-------------Time: 70s ; Expanded Nodes: 20988 (Avg-Speed 299.0 n/s); Evaluated States: 155727
+-------------Time: 80s ; Expanded Nodes: 24010 (Avg-Speed 300.0 n/s); Evaluated States: 177940
+-------------Time: 90s ; Expanded Nodes: 27103 (Avg-Speed 301.0 n/s); Evaluated States: 200332
+-------------Time: 100s ; Expanded Nodes: 29998 (Avg-Speed 299.0 n/s); Evaluated States: 221880
+-------------Time: 110s ; Expanded Nodes: 32983 (Avg-Speed 299.0 n/s); Evaluated States: 243950
+-------------Time: 120s ; Expanded Nodes: 35928 (Avg-Speed 299.0 n/s); Evaluated States: 265487
+-------------Time: 130s ; Expanded Nodes: 38915 (Avg-Speed 299.0 n/s); Evaluated States: 286598
+-------------Time: 140s ; Expanded Nodes: 41799 (Avg-Speed 298.0 n/s); Evaluated States: 308220
+-------------Time: 150s ; Expanded Nodes: 44846 (Avg-Speed 298.0 n/s); Evaluated States: 330748
+ g(n)= 135.0 h(n)=22.0
+ g(n)= 137.0 h(n)=21.0
+ g(n)= 145.0 h(n)=20.0
+ g(n)= 169.0 h(n)=19.0
+-------------Time: 160s ; Expanded Nodes: 48762 (Avg-Speed 304.0 n/s); Evaluated States: 354907
+ g(n)= 175.0 h(n)=18.0
+ g(n)= 177.0 h(n)=17.0
+ g(n)= 185.0 h(n)=16.0
+ g(n)= 211.0 h(n)=15.0
+-------------Time: 170s ; Expanded Nodes: 54766 (Avg-Speed 322.0 n/s); Evaluated States: 381700
+-------------Time: 180s ; Expanded Nodes: 61327 (Avg-Speed 340.0 n/s); Evaluated States: 405666
+ g(n)= 215.0 h(n)=14.0
+ g(n)= 217.0 h(n)=13.0
+ g(n)= 225.0 h(n)=12.0
+ g(n)= 249.0 h(n)=11.0
+-------------Time: 190s ; Expanded Nodes: 69198 (Avg-Speed 364.0 n/s); Evaluated States: 423066
+-------------Time: 200s ; Expanded Nodes: 78572 (Avg-Speed 392.0 n/s); Evaluated States: 438145
+ g(n)= 291.0 h(n)=10.0
+ g(n)= 292.0 h(n)=9.0
+-------------Time: 210s ; Expanded Nodes: 91558 (Avg-Speed 435.0 n/s); Evaluated States: 451409
+-------------Time: 220s ; Expanded Nodes: 98693 (Avg-Speed 448.0 n/s); Evaluated States: 467670
+-------------Time: 230s ; Expanded Nodes: 109402 (Avg-Speed 475.0 n/s); Evaluated States: 481952
+-------------Time: 240s ; Expanded Nodes: 121326 (Avg-Speed 505.0 n/s); Evaluated States: 496274
+-------------Time: 250s ; Expanded Nodes: 128892 (Avg-Speed 515.0 n/s); Evaluated States: 513283
+-------------Time: 260s ; Expanded Nodes: 140992 (Avg-Speed 542.0 n/s); Evaluated States: 527379
+-------------Time: 270s ; Expanded Nodes: 151606 (Avg-Speed 561.0 n/s); Evaluated States: 542435
+-------------Time: 280s ; Expanded Nodes: 159194 (Avg-Speed 568.0 n/s); Evaluated States: 559500
+-------------Time: 290s ; Expanded Nodes: 173830 (Avg-Speed 599.0 n/s); Evaluated States: 572115
+-------------Time: 300s ; Expanded Nodes: 182800 (Avg-Speed 609.0 n/s); Evaluated States: 588795
+-------------Time: 310s ; Expanded Nodes: 192398 (Avg-Speed 620.0 n/s); Evaluated States: 604145
+-------------Time: 320s ; Expanded Nodes: 205518 (Avg-Speed 642.0 n/s); Evaluated States: 617990
+-------------Time: 330s ; Expanded Nodes: 213211 (Avg-Speed 646.0 n/s); Evaluated States: 635219
+-------------Time: 340s ; Expanded Nodes: 225370 (Avg-Speed 662.0 n/s); Evaluated States: 649058
+-------------Time: 350s ; Expanded Nodes: 235841 (Avg-Speed 673.0 n/s); Evaluated States: 664513
+-------------Time: 360s ; Expanded Nodes: 243787 (Avg-Speed 677.0 n/s); Evaluated States: 681563
+-------------Time: 370s ; Expanded Nodes: 258556 (Avg-Speed 698.0 n/s); Evaluated States: 693396
+-------------Time: 380s ; Expanded Nodes: 265830 (Avg-Speed 699.0 n/s); Evaluated States: 710580
+-------------Time: 390s ; Expanded Nodes: 274806 (Avg-Speed 704.0 n/s); Evaluated States: 726006
+-------------Time: 400s ; Expanded Nodes: 288188 (Avg-Speed 720.0 n/s); Evaluated States: 738399
+-------------Time: 410s ; Expanded Nodes: 295560 (Avg-Speed 720.0 n/s); Evaluated States: 754999
+-------------Time: 420s ; Expanded Nodes: 309036 (Avg-Speed 735.0 n/s); Evaluated States: 767531
+-------------Time: 430s ; Expanded Nodes: 318272 (Avg-Speed 740.0 n/s); Evaluated States: 783379
+-------------Time: 440s ; Expanded Nodes: 326207 (Avg-Speed 741.0 n/s); Evaluated States: 798772
+-------------Time: 450s ; Expanded Nodes: 340593 (Avg-Speed 756.0 n/s); Evaluated States: 811317
+-------------Time: 460s ; Expanded Nodes: 347840 (Avg-Speed 756.0 n/s); Evaluated States: 828162
+-------------Time: 470s ; Expanded Nodes: 357007 (Avg-Speed 759.0 n/s); Evaluated States: 842948
+-------------Time: 480s ; Expanded Nodes: 370052 (Avg-Speed 770.0 n/s); Evaluated States: 855430
+-------------Time: 490s ; Expanded Nodes: 377077 (Avg-Speed 769.0 n/s); Evaluated States: 871411
+-------------Time: 500s ; Expanded Nodes: 389103 (Avg-Speed 778.0 n/s); Evaluated States: 884912
+-------------Time: 510s ; Expanded Nodes: 399565 (Avg-Speed 783.0 n/s); Evaluated States: 900060
+-------------Time: 520s ; Expanded Nodes: 409804 (Avg-Speed 788.0 n/s); Evaluated States: 915467
+-------------Time: 530s ; Expanded Nodes: 423086 (Avg-Speed 798.0 n/s); Evaluated States: 928374
+-------------Time: 540s ; Expanded Nodes: 430442 (Avg-Speed 797.0 n/s); Evaluated States: 945421
+-------------Time: 550s ; Expanded Nodes: 439200 (Avg-Speed 798.0 n/s); Evaluated States: 960972
+-------------Time: 560s ; Expanded Nodes: 453192 (Avg-Speed 809.0 n/s); Evaluated States: 973408
+-------------Time: 570s ; Expanded Nodes: 460471 (Avg-Speed 807.0 n/s); Evaluated States: 990131
+-------------Time: 580s ; Expanded Nodes: 473074 (Avg-Speed 815.0 n/s); Evaluated States: 1003480
+-------------Time: 590s ; Expanded Nodes: 482990 (Avg-Speed 818.0 n/s); Evaluated States: 1018840
+-------------Time: 600s ; Expanded Nodes: 492044 (Avg-Speed 820.0 n/s); Evaluated States: 1034336
+-------------Time: 610s ; Expanded Nodes: 505748 (Avg-Speed 829.0 n/s); Evaluated States: 1047496
+-------------Time: 620s ; Expanded Nodes: 513444 (Avg-Speed 828.0 n/s); Evaluated States: 1064675
+-------------Time: 630s ; Expanded Nodes: 527657 (Avg-Speed 837.0 n/s); Evaluated States: 1077187
+-------------Time: 640s ; Expanded Nodes: 536236 (Avg-Speed 837.0 n/s); Evaluated States: 1093746
+-------------Time: 650s ; Expanded Nodes: 544115 (Avg-Speed 837.0 n/s); Evaluated States: 1110997
+-------------Time: 660s ; Expanded Nodes: 558939 (Avg-Speed 846.0 n/s); Evaluated States: 1122904
+-------------Time: 670s ; Expanded Nodes: 566953 (Avg-Speed 846.0 n/s); Evaluated States: 1139612
+-------------Time: 680s ; Expanded Nodes: 579170 (Avg-Speed 851.0 n/s); Evaluated States: 1153760
+-------------Time: 690s ; Expanded Nodes: 589746 (Avg-Speed 854.0 n/s); Evaluated States: 1169196
+-------------Time: 700s ; Expanded Nodes: 597853 (Avg-Speed 854.0 n/s); Evaluated States: 1186163
+-------------Time: 710s ; Expanded Nodes: 612930 (Avg-Speed 863.0 n/s); Evaluated States: 1198218
+-------------Time: 720s ; Expanded Nodes: 620370 (Avg-Speed 861.0 n/s); Evaluated States: 1215342
+-------------Time: 730s ; Expanded Nodes: 629109 (Avg-Speed 861.0 n/s); Evaluated States: 1231139
+-------------Time: 740s ; Expanded Nodes: 642975 (Avg-Speed 868.0 n/s); Evaluated States: 1243755
+-------------Time: 750s ; Expanded Nodes: 650495 (Avg-Speed 867.0 n/s); Evaluated States: 1260491
+-------------Time: 760s ; Expanded Nodes: 664219 (Avg-Speed 873.0 n/s); Evaluated States: 1272615
+-------------Time: 770s ; Expanded Nodes: 672753 (Avg-Speed 873.0 n/s); Evaluated States: 1288764
+-------------Time: 780s ; Expanded Nodes: 684781 (Avg-Speed 877.0 n/s); Evaluated States: 1302485
+-------------Time: 790s ; Expanded Nodes: 695358 (Avg-Speed 880.0 n/s); Evaluated States: 1317194
+-------------Time: 800s ; Expanded Nodes: 702639 (Avg-Speed 878.0 n/s); Evaluated States: 1333766
+-------------Time: 810s ; Expanded Nodes: 715824 (Avg-Speed 883.0 n/s); Evaluated States: 1345493
+-------------Time: 820s ; Expanded Nodes: 724594 (Avg-Speed 883.0 n/s); Evaluated States: 1361146
+-------------Time: 830s ; Expanded Nodes: 736331 (Avg-Speed 887.0 n/s); Evaluated States: 1374342
+-------------Time: 840s ; Expanded Nodes: 746710 (Avg-Speed 888.0 n/s); Evaluated States: 1388684
+-------------Time: 850s ; Expanded Nodes: 754161 (Avg-Speed 887.0 n/s); Evaluated States: 1405713
+-------------Time: 860s ; Expanded Nodes: 764762 (Avg-Speed 889.0 n/s); Evaluated States: 1420498
+-------------Time: 870s ; Expanded Nodes: 776997 (Avg-Speed 893.0 n/s); Evaluated States: 1434387
+-------------Time: 880s ; Expanded Nodes: 784439 (Avg-Speed 891.0 n/s); Evaluated States: 1451069
+-------------Time: 890s ; Expanded Nodes: 797757 (Avg-Speed 896.0 n/s); Evaluated States: 1463774

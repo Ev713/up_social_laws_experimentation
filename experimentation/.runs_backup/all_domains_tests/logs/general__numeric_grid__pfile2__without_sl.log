@@ -1,0 +1,134 @@
+=== CASE ===
+domain: numeric_grid
+instance_file: pfile2.json
+has_social_law: False
+problem_name: grid_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_grid/pfile2
+verifier: general
+
+=== SINGLE_AGENT a0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 17
+Aibr Preprocessing
+UFX:false
+|F|:42
+|X|:0
+|A|:64
+|P|:0
+|E|:0
+H1 Setup Time (msec): 6
+h(I):7.0
+ g(n)= 1.0 h(n)=3.0
+ g(n)= 2.0 h(n)=2.0
+ g(n)= 3.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (appear)
+1.0: (move_up_4_1)
+2.0: (move_up_4_2)
+3.0: (leave)
+
+Plan-Length:4
+Metric (Search):4.0
+Planning Time (msec): 15
+Heuristic Time (msec): 5
+Search Time (msec): 14
+Expanded Nodes:5
+States Evaluated:9
+Number of Dead-Ends detected:0
+Number of Duplicates detected:2
+
+=== SINGLE_AGENT a1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 16
+Aibr Preprocessing
+UFX:false
+|F|:42
+|X|:0
+|A|:64
+|P|:0
+|E|:0
+H1 Setup Time (msec): 6
+h(I):7.0
+ g(n)= 1.0 h(n)=3.0
+ g(n)= 2.0 h(n)=2.0
+ g(n)= 3.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (appear)
+1.0: (move_up_3_0)
+2.0: (move_right_3_1)
+3.0: (leave)
+
+Plan-Length:4
+Metric (Search):4.0
+Planning Time (msec): 16
+Heuristic Time (msec): 7
+Search Time (msec): 15
+Expanded Nodes:5
+States Evaluated:10
+Number of Dead-Ends detected:0
+Number of Duplicates detected:3
+
+=== ROBUSTNESS SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 185
+Aibr Preprocessing
+UFX:false
+|F|:287
+|X|:0
+|A|:1400
+|P|:0
+|E|:0
+H1 Setup Time (msec): 36
+h(I):19.0
+ g(n)= 1.0 h(n)=15.0
+ g(n)= 2.0 h(n)=12.0
+ g(n)= 3.0 h(n)=10.0
+ g(n)= 4.0 h(n)=9.0
+ g(n)= 5.0 h(n)=8.0
+ g(n)= 6.0 h(n)=7.0
+ g(n)= 7.0 h(n)=6.0
+ g(n)= 15.0 h(n)=4.0
+ g(n)= 16.0 h(n)=3.0
+ g(n)= 17.0 h(n)=2.0
+ g(n)= 18.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (s_ra___a1__appear)
+1.0: (s_ra___a0__appear)
+2.0: (s_ra___a0__move_up_4_1)
+3.0: (s_ra___a1__move_up_3_0)
+4.0: (s_ra___a1__move_right_3_1)
+5.0: (w_ra_0__a1__move_up_4_1)
+6.0: (w_ra_0__a0__move_down_4_2)
+7.0: (d0__a0__move_down_4_2)
+8.0: (d0__a1__move_up_4_1)
+9.0: (start_stage_2)
+10.0: (l_a__a0__move_down_4_2)
+11.0: (l_ra__a0__move_up_4_1)
+12.0: (l_ra__a0__move_up_4_2)
+13.0: (l_ra__a0__leave)
+14.0: (a1_take_turn)
+15.0: (l_a__a1__move_up_4_1)
+16.0: (l_ra__a1__move_down_4_2)
+17.0: (l_ra__a1__leave)
+18.0: (declare_deadlock)
+
+Plan-Length:19
+Metric (Search):19.0
+Planning Time (msec): 2872
+Heuristic Time (msec): 2637
+Search Time (msec): 2869
+Expanded Nodes:3502
+States Evaluated:3880
+Number of Dead-Ends detected:564
+Number of Duplicates detected:10453

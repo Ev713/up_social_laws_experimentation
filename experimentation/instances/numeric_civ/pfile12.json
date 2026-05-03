@@ -1,0 +1,205 @@
+{
+  "places": [
+    "p0",
+    "p1"
+  ],
+  "boats": [],
+  "trains": [],
+  "resources": [
+    "timber",
+    "stone",
+    "ore",
+    "coal",
+    "wood",
+    "iron"
+  ],
+  "agents": [
+    "a0",
+    "a1"
+  ],
+  "bounds": {
+    "pollution": 28,
+    "resource-use": 28,
+    "housing": 4,
+    "available": 16,
+    "labour": 54,
+    "carts-at": 4
+  },
+  "init_values": {
+    "global": [
+      [
+        "metalliferous",
+        [
+          "p0"
+        ]
+      ],
+      [
+        "mountain",
+        [
+          "p0"
+        ]
+      ],
+      [
+        "woodland",
+        [
+          "p0"
+        ]
+      ],
+      [
+        "mountain",
+        [
+          "p1"
+        ]
+      ],
+      [
+        "woodland",
+        [
+          "p1"
+        ]
+      ],
+      [
+        "is_timber",
+        [
+          "timber"
+        ]
+      ],
+      [
+        "is_stone",
+        [
+          "stone"
+        ]
+      ],
+      [
+        "is_ore",
+        [
+          "ore"
+        ]
+      ],
+      [
+        "is_coal",
+        [
+          "coal"
+        ]
+      ],
+      [
+        "is_wood",
+        [
+          "wood"
+        ]
+      ],
+      [
+        "is_iron",
+        [
+          "iron"
+        ]
+      ],
+      [
+        "connected-by-land",
+        [
+          "p0",
+          "p1"
+        ]
+      ],
+      [
+        "connected-by-land",
+        [
+          "p1",
+          "p0"
+        ]
+      ],
+      [
+        "=",
+        [
+          "pollution",
+          []
+        ],
+        "0"
+      ],
+      [
+        "=",
+        [
+          "resource-use",
+          []
+        ],
+        "0"
+      ],
+      [
+        "=",
+        [
+          "housing",
+          [
+            "p0"
+          ]
+        ],
+        "0"
+      ],
+      [
+        "=",
+        [
+          "housing",
+          [
+            "p1"
+          ]
+        ],
+        "0"
+      ]
+    ],
+    "a0": [
+      [
+        "=",
+        [
+          "labour",
+          []
+        ],
+        "0"
+      ]
+    ],
+    "a1": [
+      [
+        "=",
+        [
+          "labour",
+          []
+        ],
+        "0"
+      ]
+    ]
+  },
+  "goals": {
+    "global": [
+      [
+        "connected-by-rail",
+        [
+          "p0",
+          "p1"
+        ]
+      ],
+      [
+        ">=",
+        [
+          "housing",
+          [
+            "p0"
+          ]
+        ],
+        "1"
+      ]
+    ],
+    "a0": [
+      [
+        "has-sawmill",
+        [
+          "p0"
+        ]
+      ]
+    ],
+    "a1": [
+      [
+        "has-cabin",
+        [
+          "p1"
+        ]
+      ]
+    ]
+  }
+}

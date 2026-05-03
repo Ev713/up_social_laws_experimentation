@@ -1,0 +1,130 @@
+{
+  "places": [
+    "p0"
+  ],
+  "boats": [],
+  "trains": [],
+  "resources": [
+    "timber",
+    "stone",
+    "wood"
+  ],
+  "agents": [
+    "a0",
+    "a1"
+  ],
+  "bounds": {
+    "pollution": 12,
+    "resource-use": 12,
+    "housing": 2,
+    "available": 8,
+    "labour": 22,
+    "carts-at": 2
+  },
+  "init_values": {
+    "global": [
+      [
+        "mountain",
+        [
+          "p0"
+        ]
+      ],
+      [
+        "woodland",
+        [
+          "p0"
+        ]
+      ],
+      [
+        "is_timber",
+        [
+          "timber"
+        ]
+      ],
+      [
+        "is_stone",
+        [
+          "stone"
+        ]
+      ],
+      [
+        "is_wood",
+        [
+          "wood"
+        ]
+      ],
+      [
+        "=",
+        [
+          "pollution",
+          []
+        ],
+        "0"
+      ],
+      [
+        "=",
+        [
+          "resource-use",
+          []
+        ],
+        "0"
+      ],
+      [
+        "=",
+        [
+          "housing",
+          [
+            "p0"
+          ]
+        ],
+        "0"
+      ]
+    ],
+    "a0": [
+      [
+        "=",
+        [
+          "labour",
+          []
+        ],
+        "0"
+      ]
+    ],
+    "a1": [
+      [
+        "=",
+        [
+          "labour",
+          []
+        ],
+        "0"
+      ]
+    ]
+  },
+  "goals": {
+    "global": [
+      [
+        "has-quarry",
+        [
+          "p0"
+        ]
+      ]
+    ],
+    "a0": [
+      [
+        "has-sawmill",
+        [
+          "p0"
+        ]
+      ]
+    ],
+    "a1": [
+      [
+        "has-cabin",
+        [
+          "p0"
+        ]
+      ]
+    ]
+  }
+}

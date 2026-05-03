@@ -1,0 +1,3 @@
+case_id,domain,instance,has_social_law
+civ__pfile1__with_sl,civ,pfile1.json,True
+civ__pfile1__without_sl,civ,pfile1.json,False

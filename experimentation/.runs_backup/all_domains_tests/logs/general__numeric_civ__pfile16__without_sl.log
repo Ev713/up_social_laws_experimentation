@@ -1,0 +1,119 @@
+=== CASE ===
+domain: numeric_civ
+instance_file: pfile16.json
+has_social_law: False
+problem_name: civ_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_civ/pfile16
+verifier: general
+
+=== SINGLE_AGENT a0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 29
+Aibr Preprocessing
+UFX:false
+|F|:19
+|X|:17
+|A|:62
+|P|:0
+|E|:0
+H1 Setup Time (msec): 6
+h(I):48.0
+ g(n)= 1.0 h(n)=40.0
+ g(n)= 2.0 h(n)=32.0
+ g(n)= 3.0 h(n)=29.0
+ g(n)= 4.0 h(n)=26.0
+ g(n)= 5.0 h(n)=23.0
+ g(n)= 6.0 h(n)=20.0
+ g(n)= 7.0 h(n)=19.0
+ g(n)= 9.0 h(n)=16.0
+ g(n)= 11.0 h(n)=13.0
+ g(n)= 12.0 h(n)=12.0
+ g(n)= 13.0 h(n)=10.0
+ g(n)= 16.0 h(n)=9.0
+ g(n)= 18.0 h(n)=8.0
+ g(n)= 19.0 h(n)=7.0
+ g(n)= 24.0 h(n)=6.0
+ g(n)= 25.0 h(n)=5.0
+ g(n)= 39.0 h(n)=4.0
+ g(n)= 42.0 h(n)=3.0
+ g(n)= 51.0 h(n)=2.0
+ g(n)= 52.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (build_cabin p1)
+1.0: (fell_timber p1 timber)
+2.0: (build_quarry p1)
+3.0: (fell_timber p1 timber)
+4.0: (break_stone p1 stone)
+5.0: (break_stone p1 stone)
+6.0: (build_cabin p0)
+7.0: (fell_timber p1 timber)
+8.0: (build_sawmill p1 timber)
+9.0: (fell_timber p1 timber)
+10.0: (saw_wood p1 timber wood)
+11.0: (saw_wood p1 timber wood)
+12.0: (fell_timber p1 timber)
+13.0: (build_quarry p0)
+14.0: (fell_timber p1 timber)
+15.0: (build_coal_stack p1 timber)
+16.0: (fell_timber p1 timber)
+17.0: (burn_coal p1 timber coal)
+18.0: (burn_coal p1 timber coal)
+19.0: (fell_timber p1 timber)
+20.0: (fell_timber p1 timber)
+21.0: (saw_wood p1 timber wood)
+22.0: (saw_wood p1 timber wood)
+23.0: (build_mine p1 wood)
+24.0: (mine_ore p1 ore)
+25.0: (fell_timber p0 timber)
+26.0: (fell_timber p1 timber)
+27.0: (fell_timber p1 timber)
+28.0: (fell_timber p1 timber)
+29.0: (build_cabin p2)
+30.0: (fell_timber p2 timber)
+31.0: (build_cart p1 timber)
+32.0: (build_cart p2 timber)
+33.0: (move_empty_cart p1 p0)
+34.0: (saw_wood p1 timber wood)
+35.0: (break_stone p1 stone)
+36.0: (break_stone p1 stone)
+37.0: (build_docks p1 stone wood)
+38.0: (saw_wood p1 timber wood)
+39.0: (break_stone p1 stone)
+40.0: (break_stone p1 stone)
+41.0: (build_ironworks p1 stone wood)
+42.0: (fell_timber p0 timber)
+43.0: (fell_timber p1 timber)
+44.0: (fell_timber p1 timber)
+45.0: (move_empty_cart p2 p1)
+46.0: (mine_ore p1 ore)
+47.0: (fell_timber p0 timber)
+48.0: (burn_coal p1 timber coal)
+49.0: (make_iron p1 ore coal iron)
+50.0: (burn_coal p1 timber coal)
+51.0: (make_iron p1 ore coal iron)
+52.0: (build_wharf p1 stone iron)
+
+Plan-Length:53
+Metric (Search):53.0
+Planning Time (msec): 272
+Heuristic Time (msec): 210
+Search Time (msec): 271
+Expanded Nodes:1492
+States Evaluated:10842
+Number of Dead-Ends detected:0
+Number of Duplicates detected:15114
+
+=== SINGLE_AGENT a1 UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 27
+Aibr Preprocessing
+Problem Detected as Unsolvable by AIBR during preprocessing
+UFX:false
+|F|:30
+|X|:25
+Unsolvable Problem

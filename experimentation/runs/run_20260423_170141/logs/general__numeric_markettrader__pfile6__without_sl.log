@@ -1,0 +1,129 @@
+=== CASE ===
+domain: numeric_markettrader
+instance_file: pfile6.json
+has_social_law: False
+problem_name: market_trader_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_markettrader/pfile6
+verifier: general
+
+=== SINGLE_AGENT camel0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 29
+Aibr Preprocessing
+UFX:false
+|F|:5
+|X|:6
+|A|:33
+|P|:0
+|E|:0
+H1 Setup Time (msec): 9
+h(I):2.5
+ g(n)= 1.0 h(n)=1.75
+ g(n)= 2.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (buy_g0_m0)
+1.0: (travel_m0_m1)
+2.0: (sell_g0_m1)
+
+Plan-Length:3
+Metric (Search):3.0
+Planning Time (msec): 27
+Heuristic Time (msec): 13
+Search Time (msec): 23
+Expanded Nodes:4
+States Evaluated:18
+Number of Dead-Ends detected:0
+Number of Duplicates detected:0
+
+=== SINGLE_AGENT camel1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 52
+Aibr Preprocessing
+UFX:false
+|F|:5
+|X|:6
+|A|:33
+|P|:0
+|E|:0
+H1 Setup Time (msec): 15
+h(I):2.5
+ g(n)= 1.0 h(n)=1.75
+ g(n)= 2.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (buy_g0_m0)
+1.0: (travel_m0_m1)
+2.0: (sell_g0_m1)
+
+Plan-Length:3
+Metric (Search):3.0
+Planning Time (msec): 27
+Heuristic Time (msec): 14
+Search Time (msec): 24
+Expanded Nodes:4
+States Evaluated:18
+Number of Dead-Ends detected:0
+Number of Duplicates detected:0
+
+=== ROBUSTNESS SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 729
+Aibr Preprocessing
+UFX:false
+|F|:96
+|X|:22
+|A|:277
+|P|:0
+|E|:0
+H1 Setup Time (msec): 24
+h(I):8.0
+ g(n)= 1.0 h(n)=6.25
+ g(n)= 2.0 h(n)=5.5
+ g(n)= 3.0 h(n)=4.75
+ g(n)= 4.0 h(n)=3.75
+ g(n)= 5.0 h(n)=3.0
+ g(n)= 8.0 h(n)=2.5714285
+ g(n)= 11.0 h(n)=2.5
+ g(n)= 12.0 h(n)=2.2857141
+ g(n)= 12.0 h(n)=2.0
+ g(n)= 18.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (s_ra___camel0__buy_g0_m0)
+1.0: (s_ra___camel0__travel_m0_m1)
+2.0: (s_ra___camel1__buy_g0_m0)
+3.0: (s_ra___camel0__sell_g0_m1)
+4.0: (s_ra___camel1__travel_m0_m1)
+5.0: (s_ra___camel1__sell_g0_m1)
+6.0: (s_ra___camel1__buy_g1_m1)
+7.0: (s_ra___camel1__travel_m1_m3)
+8.0: (s_ra___camel1__sell_g1_m3)
+9.0: (s_ra___camel1__travel_m3_m0)
+10.0: (s_ra___camel1__buy_g0_m0)
+11.0: (s_ra___camel1__travel_m0_m1)
+12.0: (s_ra___camel1__buy_g1_m1)
+13.0: (s_ra___camel1__sell_g0_m1)
+14.0: (s_ra___camel1__travel_m1_m0)
+15.0: (s_ra___camel1__sell_g1_m0)
+16.0: (s_ra___camel1__buy_g0_m0)
+17.0: (f_ra_3__camel1__buy_g0_m0)
+18.0: (declare_fail)
+
+Plan-Length:19
+Metric (Search):19.0
+Planning Time (msec): 483
+Heuristic Time (msec): 409
+Search Time (msec): 478
+Expanded Nodes:51
+States Evaluated:468
+Number of Dead-Ends detected:63
+Number of Duplicates detected:50

@@ -1,0 +1,38 @@
+{"persons": ["person1", "person2", "person3", "person4", "person5", "person6", "person7", "person8"],
+"citys": ["city0", "city1", "city2", "city3", "city4", "city5"],
+"flevels": ["fl0", "fl1", "fl2", "fl3", "fl4", "fl5", "fl6"],
+"agents": ["plane1", "plane2", "plane3"],
+
+"init_values": {
+"global": [
+["person_at", ["person1", "city4"]],
+["person_at", ["person2", "city4"]],
+["person_at", ["person3", "city0"]],
+["person_at", ["person4", "city4"]],
+["person_at", ["person5", "city1"]],
+["person_at", ["person6", "city2"]],
+["person_at", ["person7", "city5"]],
+["person_at", ["person8", "city5"]],
+["next", ["fl0", "fl1"]],
+["next", ["fl1", "fl2"]],
+["next", ["fl2", "fl3"]],
+["next", ["fl3", "fl4"]],
+["next", ["fl4", "fl5"]],
+["next", ["fl5", "fl6"]]],
+
+"plane1":[["aircraft_at", ["city2"]], ["fuel-level", ["fl3"]]],
+"plane2":[["aircraft_at", ["city3"]], ["fuel-level", ["fl6"]]],
+"plane3":[["aircraft_at", ["city5"]], ["fuel-level", ["fl2"]]]
+
+},
+"goals": [
+["person_at", ["person1", "city2"]],
+["person_at", ["person2", "city1"]],
+["person_at", ["person3", "city1"]],
+["person_at", ["person4", "city4"]],
+["person_at", ["person5", "city4"]],
+["person_at", ["person6", "city1"]],
+["person_at", ["person7", "city3"]],
+["person_at", ["person8", "city4"]]
+
+]}

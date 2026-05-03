@@ -1,0 +1,147 @@
+=== CASE ===
+domain: numeric_grid
+instance_file: pfile1.json
+has_social_law: False
+problem_name: grid_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_grid/pfile1
+verifier: general
+
+=== SINGLE_AGENT a0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 17
+Aibr Preprocessing
+UFX:false
+|F|:42
+|X|:0
+|A|:64
+|P|:0
+|E|:0
+H1 Setup Time (msec): 6
+h(I):11.0
+ g(n)= 1.0 h(n)=5.0
+ g(n)= 2.0 h(n)=4.0
+ g(n)= 3.0 h(n)=3.0
+ g(n)= 4.0 h(n)=2.0
+ g(n)= 5.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (appear)
+1.0: (move_right_0_2)
+2.0: (move_right_1_2)
+3.0: (move_down_2_2)
+4.0: (move_down_2_1)
+5.0: (leave)
+
+Plan-Length:6
+Metric (Search):6.0
+Planning Time (msec): 18
+Heuristic Time (msec): 9
+Search Time (msec): 16
+Expanded Nodes:7
+States Evaluated:16
+Number of Dead-Ends detected:0
+Number of Duplicates detected:5
+
+=== SINGLE_AGENT a1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 16
+Aibr Preprocessing
+UFX:false
+|F|:42
+|X|:0
+|A|:64
+|P|:0
+|E|:0
+H1 Setup Time (msec): 6
+h(I):11.0
+ g(n)= 1.0 h(n)=5.0
+ g(n)= 2.0 h(n)=4.0
+ g(n)= 3.0 h(n)=3.0
+ g(n)= 4.0 h(n)=2.0
+ g(n)= 5.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (appear)
+1.0: (move_down_3_3)
+2.0: (move_left_3_2)
+3.0: (move_down_2_2)
+4.0: (move_down_2_1)
+5.0: (leave)
+
+Plan-Length:6
+Metric (Search):6.0
+Planning Time (msec): 18
+Heuristic Time (msec): 8
+Search Time (msec): 16
+Expanded Nodes:7
+States Evaluated:15
+Number of Dead-Ends detected:0
+Number of Duplicates detected:6
+
+=== ROBUSTNESS SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 212
+Aibr Preprocessing
+UFX:false
+|F|:287
+|X|:0
+|A|:1400
+|P|:0
+|E|:0
+H1 Setup Time (msec): 39
+h(I):27.0
+ g(n)= 1.0 h(n)=21.0
+ g(n)= 2.0 h(n)=15.0
+ g(n)= 3.0 h(n)=14.0
+ g(n)= 4.0 h(n)=13.0
+ g(n)= 5.0 h(n)=12.0
+ g(n)= 6.0 h(n)=11.0
+ g(n)= 7.0 h(n)=10.0
+ g(n)= 8.0 h(n)=9.0
+ g(n)= 10.0 h(n)=7.0
+ g(n)= 11.0 h(n)=6.0
+ g(n)= 17.0 h(n)=4.0
+ g(n)= 18.0 h(n)=3.0
+ g(n)= 19.0 h(n)=2.0
+ g(n)= 20.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (s_ra___a0__appear)
+1.0: (s_ra___a1__appear)
+2.0: (s_ra___a1__move_down_3_3)
+3.0: (s_ra___a0__move_right_0_2)
+4.0: (s_ra___a0__move_down_1_2)
+5.0: (s_ra___a1__move_down_3_2)
+6.0: (s_ra___a0__move_right_1_1)
+7.0: (s_ra___a1__move_down_3_1)
+8.0: (s_ra___a1__move_left_3_0)
+9.0: (w_ra_0__a0__move_down_2_1)
+10.0: (w_ra_0__a1__move_up_2_0)
+11.0: (d0__a0__move_down_2_1)
+12.0: (d0__a1__move_up_2_0)
+13.0: (start_stage_2)
+14.0: (l_a__a0__move_down_2_1)
+15.0: (l_ra__a0__leave)
+16.0: (a1_take_turn)
+17.0: (l_a__a1__move_up_2_0)
+18.0: (l_ra__a1__move_down_2_1)
+19.0: (l_ra__a1__leave)
+20.0: (declare_deadlock)
+
+Plan-Length:21
+Metric (Search):21.0
+Planning Time (msec): 2896
+Heuristic Time (msec): 2669
+Search Time (msec): 2894
+Expanded Nodes:3499
+States Evaluated:4036
+Number of Dead-Ends detected:589
+Number of Duplicates detected:10613

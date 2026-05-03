@@ -1,0 +1,83 @@
+{
+  "instance": "pfile3.json",
+  "seed": 0,
+  "max_steps": 12,
+  "planner_timeout_seconds": 30,
+  "initial_status": "ROBUST_RATIONAL",
+  "steps": [
+    {
+      "step": 1,
+      "mutation": "lowered travel cost for ['m1', 'm0']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    },
+    {
+      "step": 2,
+      "mutation": "lowered source price for ['g0', 'm0']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    },
+    {
+      "step": 3,
+      "mutation": "lowered source price for ['g0', 'm0']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    },
+    {
+      "step": 4,
+      "mutation": "reduced stock for ['g0', 'm0']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    },
+    {
+      "step": 5,
+      "mutation": "reduced stock for ['g0', 'm0']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    },
+    {
+      "step": 6,
+      "mutation": "lowered source price for ['g0', 'm0']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    },
+    {
+      "step": 7,
+      "mutation": "reduced stock for ['g0', 'm0']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    },
+    {
+      "step": 8,
+      "mutation": "lowered travel cost for ['m2', 'm3']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    },
+    {
+      "step": 9,
+      "mutation": "lowered travel cost for ['m0', 'm2']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    },
+    {
+      "step": 10,
+      "mutation": "lowered travel cost for ['m2', 'm3']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    },
+    {
+      "step": 11,
+      "mutation": "lowered travel cost for ['m3', 'm2']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    },
+    {
+      "step": 12,
+      "mutation": "reduced stock for ['g0', 'm0']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    }
+  ],
+  "final_status": "ROBUST_RATIONAL",
+  "final_planner_status": "UNSOLVABLE_PROVEN"
+}

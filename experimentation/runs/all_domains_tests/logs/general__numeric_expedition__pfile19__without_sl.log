@@ -1,0 +1,87 @@
+=== CASE ===
+domain: numeric_expedition
+instance_file: pfile19.json
+has_social_law: False
+problem_name: expedition_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_expedition/pfile19
+verifier: general
+
+=== SINGLE_AGENT s0 INTERNAL_ERROR ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 22
+Aibr Preprocessing
+UFX:false
+|F|:14
+|X|:15
+|A|:54
+|P|:0
+|E|:0
+H1 Setup Time (msec): 6
+h(I):13.0
+ g(n)= 2.0 h(n)=12.0
+ g(n)= 4.0 h(n)=11.0
+ g(n)= 6.0 h(n)=10.0
+ g(n)= 14.0 h(n)=9.0
+ g(n)= 108.0 h(n)=8.0
+ g(n)= 186.0 h(n)=7.0
+-------------Time: 10s ; Expanded Nodes: 369892 (Avg-Speed 36989.0 n/s); Evaluated States: 581758
+-------------Time: 20s ; Expanded Nodes: 755296 (Avg-Speed 37764.0 n/s); Evaluated States: 1180503
+-------------Time: 30s ; Expanded Nodes: 1121513 (Avg-Speed 37383.0 n/s); Evaluated States: 1745917
+ g(n)= 684.0 h(n)=6.0
+-------------Time: 40s ; Expanded Nodes: 1500547 (Avg-Speed 37513.0 n/s); Evaluated States: 2334113
+-------------Time: 50s ; Expanded Nodes: 1883737 (Avg-Speed 37674.0 n/s); Evaluated States: 2922966
+-------------Time: 60s ; Expanded Nodes: 2274243 (Avg-Speed 37904.0 n/s); Evaluated States: 3531570
+-------------Time: 70s ; Expanded Nodes: 2661201 (Avg-Speed 38017.0 n/s); Evaluated States: 4134466
+-------------Time: 80s ; Expanded Nodes: 3049052 (Avg-Speed 38113.0 n/s); Evaluated States: 4733732
+-------------Time: 90s ; Expanded Nodes: 3432791 (Avg-Speed 38142.0 n/s); Evaluated States: 5327146
+-------------Time: 100s ; Expanded Nodes: 3809700 (Avg-Speed 38097.0 n/s); Evaluated States: 5908762
+-------------Time: 110s ; Expanded Nodes: 4156742 (Avg-Speed 37788.0 n/s); Evaluated States: 6442156
+-------------Time: 120s ; Expanded Nodes: 4558986 (Avg-Speed 37991.0 n/s); Evaluated States: 7049334
+-------------Time: 130s ; Expanded Nodes: 4956840 (Avg-Speed 38129.0 n/s); Evaluated States: 7651898
+-------------Time: 140s ; Expanded Nodes: 5352536 (Avg-Speed 38232.0 n/s); Evaluated States: 8249802
+-------------Time: 150s ; Expanded Nodes: 5746686 (Avg-Speed 38311.0 n/s); Evaluated States: 8845344
+-------------Time: 160s ; Expanded Nodes: 6104067 (Avg-Speed 38150.0 n/s); Evaluated States: 9385629
+-------------Time: 170s ; Expanded Nodes: 6481189 (Avg-Speed 38124.0 n/s); Evaluated States: 9949981
+-------------Time: 180s ; Expanded Nodes: 6874166 (Avg-Speed 38189.0 n/s); Evaluated States: 10543778
+-------------Time: 190s ; Expanded Nodes: 7264236 (Avg-Speed 38232.0 n/s); Evaluated States: 11132668
+-------------Time: 200s ; Expanded Nodes: 7641783 (Avg-Speed 38208.0 n/s); Evaluated States: 11700725
+-------------Time: 210s ; Expanded Nodes: 8041060 (Avg-Speed 38290.0 n/s); Evaluated States: 12304657
+-------------Time: 220s ; Expanded Nodes: 8435394 (Avg-Speed 38342.0 n/s); Evaluated States: 12908288
+-------------Time: 230s ; Expanded Nodes: 8823951 (Avg-Speed 38365.0 n/s); Evaluated States: 13506492
+-------------Time: 240s ; Expanded Nodes: 9213847 (Avg-Speed 38391.0 n/s); Evaluated States: 14102834
+-------------Time: 250s ; Expanded Nodes: 9581975 (Avg-Speed 38327.0 n/s); Evaluated States: 14663744
+-------------Time: 260s ; Expanded Nodes: 9901256 (Avg-Speed 38081.0 n/s); Evaluated States: 15148696
+-------------Time: 270s ; Expanded Nodes: 10262040 (Avg-Speed 38007.0 n/s); Evaluated States: 15697040
+-------------Time: 280s ; Expanded Nodes: 10616917 (Avg-Speed 37917.0 n/s); Evaluated States: 16232808
+-------------Time: 290s ; Expanded Nodes: 10972757 (Avg-Speed 37837.0 n/s); Evaluated States: 16771381
+-------------Time: 300s ; Expanded Nodes: 11334988 (Avg-Speed 37783.0 n/s); Evaluated States: 17319030
+-------------Time: 310s ; Expanded Nodes: 11694210 (Avg-Speed 37723.0 n/s); Evaluated States: 17861964
+-------------Time: 320s ; Expanded Nodes: 12041716 (Avg-Speed 37630.0 n/s); Evaluated States: 18387626
+-------------Time: 330s ; Expanded Nodes: 12394350 (Avg-Speed 37558.0 n/s); Evaluated States: 18919383
+-------------Time: 340s ; Expanded Nodes: 12746030 (Avg-Speed 37488.0 n/s); Evaluated States: 19445492
+-------------Time: 350s ; Expanded Nodes: 13093402 (Avg-Speed 37409.0 n/s); Evaluated States: 19968161
+-------------Time: 360s ; Expanded Nodes: 13402606 (Avg-Speed 37229.0 n/s); Evaluated States: 20435564
+-------------Time: 370s ; Expanded Nodes: 13725722 (Avg-Speed 37096.0 n/s); Evaluated States: 20923953
+-------------Time: 380s ; Expanded Nodes: 14048915 (Avg-Speed 36970.0 n/s); Evaluated States: 21411141
+-------------Time: 390s ; Expanded Nodes: 14347916 (Avg-Speed 36789.0 n/s); Evaluated States: 21862776
+-------------Time: 400s ; Expanded Nodes: 14658018 (Avg-Speed 36645.0 n/s); Evaluated States: 22329798
+-------------Time: 410s ; Expanded Nodes: 14979130 (Avg-Speed 36534.0 n/s); Evaluated States: 22809145
+-------------Time: 420s ; Expanded Nodes: 15277596 (Avg-Speed 36375.0 n/s); Evaluated States: 23259448
+-------------Time: 430s ; Expanded Nodes: 15519781 (Avg-Speed 36092.0 n/s); Evaluated States: 23624366
+-------------Time: 440s ; Expanded Nodes: 15826278 (Avg-Speed 35968.0 n/s); Evaluated States: 24085588
+-------------Time: 450s ; Expanded Nodes: 16117595 (Avg-Speed 35816.0 n/s); Evaluated States: 24522418
+-------------Time: 460s ; Expanded Nodes: 16407300 (Avg-Speed 35668.0 n/s); Evaluated States: 24958279
+-------------Time: 470s ; Expanded Nodes: 16587528 (Avg-Speed 35292.0 n/s); Evaluated States: 25229408
+-------------Time: 481s ; Expanded Nodes: 16650238 (Avg-Speed 34615.0 n/s); Evaluated States: 25324396
+-------------Time: 491s ; Expanded Nodes: 16700568 (Avg-Speed 34013.0 n/s); Evaluated States: 25400199
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at it.unimi.dsi.fastutil.objects.Object2FloatOpenHashMap.rehash(Object2FloatOpenHashMap.java:900)
+	at it.unimi.dsi.fastutil.objects.Object2FloatOpenHashMap.insert(Object2FloatOpenHashMap.java:212)
+	at it.unimi.dsi.fastutil.objects.Object2FloatOpenHashMap.put(Object2FloatOpenHashMap.java:219)
+	at com.hstairs.ppmajal.search.WAStar.queueSuccessor(WAStar.java:61)
+	at com.hstairs.ppmajal.search.WAStar.search(WAStar.java:139)
+	at com.hstairs.ppmajal.PDDLProblem.PDDLPlanner.plan(PDDLPlanner.java:85)
+	at planners.ENHSP.search(ENHSP.java:545)
+	at planners.ENHSP.planning(ENHSP.java:209)
+	at main.main(main.java:31)

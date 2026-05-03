@@ -1,0 +1,3 @@
+time,name,has_social_law,result
+0.3132004737854004,sl_civ_pfile1,True,SocialLawRobustnessStatus.NON_ROBUST_SINGLE_AGENT
+0.28893065452575684,civ_pfile1,False,SocialLawRobustnessStatus.NON_ROBUST_SINGLE_AGENT

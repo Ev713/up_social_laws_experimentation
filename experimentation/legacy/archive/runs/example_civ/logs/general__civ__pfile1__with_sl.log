@@ -1,0 +1,83 @@
+=== CASE ===
+domain: civ
+instance_file: pfile1.json
+has_social_law: True
+problem_name: sl_civ_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/numeric_problems_instances/civ/json/pfile1
+verifier: general
+
+=== SINGLE_AGENT a0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 17
+Aibr Preprocessing
+UFX:false
+|F|:3
+|X|:2
+|A|:5
+|P|:0
+|E|:0
+H1 Setup Time (msec): 6
+h(I):1.0
+Problem Solved
+
+Found Plan:
+0.0: (build_cabin p0)
+
+Plan-Length:1
+Metric (Search):1.0
+Planning Time (msec): 8
+Heuristic Time (msec): 3
+Search Time (msec): 7
+Expanded Nodes:2
+States Evaluated:2
+Number of Dead-Ends detected:0
+Number of Duplicates detected:0
+
+=== SINGLE_AGENT a1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 22
+Aibr Preprocessing
+UFX:false
+|F|:3
+|X|:2
+|A|:5
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):1.0
+Problem Solved
+
+Found Plan:
+0.0: (build_cabin p0)
+
+Plan-Length:1
+Metric (Search):1.0
+Planning Time (msec): 8
+Heuristic Time (msec): 3
+Search Time (msec): 6
+Expanded Nodes:2
+States Evaluated:2
+Number of Dead-Ends detected:0
+Number of Duplicates detected:0
+
+=== ROBUSTNESS TIMEOUT ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 347
+Aibr Preprocessing
+UFX:false
+|F|:26
+|X|:7
+|A|:37
+|P|:0
+|E|:0
+H1 Setup Time (msec): 8
+h(I):4.0
+ g(n)= 2.0 h(n)=3.0
+-------------Time: 10s ; Expanded Nodes: 390558 (Avg-Speed 39055.0 n/s); Evaluated States: 779624
+-------------Time: 20s ; Expanded Nodes: 785422 (Avg-Speed 39271.0 n/s); Evaluated States: 1569335
+-------------Time: 30s ; Expanded Nodes: 1172204 (Avg-Speed 39073.0 n/s); Evaluated States: 2342761

@@ -1,0 +1,17 @@
+{
+  "id": "example_numeric_civ",
+  "output_dir": "./experimentation/runs",
+  "limits": {
+    "engine": "enhsp",
+    "memory_bytes": 16000000000,
+    "cpu_seconds": 1800,
+    "wall_timeout_seconds": 3600,
+    "planner_timeout_seconds": 30
+  },
+  "domains": ["numeric_civ"],
+  "instances": {
+    "numeric_civ": [1]
+  },
+  "verifiers": ["general", "simple"],
+  "social_law": ["with", "without"]
+}

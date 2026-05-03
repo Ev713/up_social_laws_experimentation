@@ -1,0 +1,179 @@
+=== CASE ===
+domain: driverlog
+instance_file: pfile7.json
+has_social_law: True
+problem_name: driverlog
+verifier: general
+
+=== SINGLE_AGENT driver1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 16
+Aibr Preprocessing
+UFX:false
+|F|:57
+|X|:0
+|A|:156
+|P|:0
+|E|:0
+H1 Setup Time (msec): 7
+h(I):12.0
+ g(n)= 1.0 h(n)=6.0
+ g(n)= 2.0 h(n)=5.0
+ g(n)= 4.0 h(n)=4.0
+ g(n)= 5.0 h(n)=3.0
+ g(n)= 6.0 h(n)=2.0
+ g(n)= 7.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (board_truck s1 truck2)
+1.0: (load_truck truck2 package5 s1)
+2.0: (drive_truck s1 s0 truck2)
+3.0: (unload_truck truck2 package5 s0)
+4.0: (drive_truck s0 s2 truck2)
+5.0: (load_truck truck2 package2 s2)
+6.0: (drive_truck s2 s1 truck2)
+7.0: (unload_truck truck2 package2 s1)
+
+Plan-Length:8
+Metric (Search):8.0
+Planning Time (msec): 26
+Heuristic Time (msec): 17
+Search Time (msec): 24
+Expanded Nodes:10
+States Evaluated:37
+Number of Dead-Ends detected:0
+Number of Duplicates detected:12
+
+=== SINGLE_AGENT driver2 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 24
+Aibr Preprocessing
+UFX:false
+|F|:57
+|X|:0
+|A|:156
+|P|:0
+|E|:0
+H1 Setup Time (msec): 7
+h(I):4.0
+ g(n)= 1.0 h(n)=3.0
+ g(n)= 2.0 h(n)=2.0
+ g(n)= 3.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (walk s2 p2_1)
+1.0: (walk p2_1 s1)
+2.0: (board_truck s1 truck2)
+3.0: (drive_truck s1 s0 truck2)
+
+Plan-Length:4
+Metric (Search):4.0
+Planning Time (msec): 21
+Heuristic Time (msec): 9
+Search Time (msec): 18
+Expanded Nodes:5
+States Evaluated:13
+Number of Dead-Ends detected:0
+Number of Duplicates detected:3
+
+=== SINGLE_AGENT driver3 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 17
+Aibr Preprocessing
+UFX:false
+|F|:57
+|X|:0
+|A|:156
+|P|:0
+|E|:0
+H1 Setup Time (msec): 7
+h(I):12.0
+ g(n)= 1.0 h(n)=9.0
+ g(n)= 2.0 h(n)=6.0
+ g(n)= 3.0 h(n)=3.0
+ g(n)= 4.0 h(n)=2.0
+ g(n)= 5.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (walk s2 p2_1)
+1.0: (walk p2_1 s1)
+2.0: (board_truck s1 truck2)
+3.0: (load_truck truck2 package4 s1)
+4.0: (drive_truck s1 s2 truck2)
+5.0: (unload_truck truck2 package4 s2)
+
+Plan-Length:6
+Metric (Search):6.0
+Planning Time (msec): 22
+Heuristic Time (msec): 12
+Search Time (msec): 20
+Expanded Nodes:7
+States Evaluated:21
+Number of Dead-Ends detected:0
+Number of Duplicates detected:6
+
+=== ROBUSTNESS SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 102
+Aibr Preprocessing
+UFX:false
+|F|:727
+|X|:0
+|A|:2202
+|P|:0
+|E|:0
+H1 Setup Time (msec): 30
+h(I):23.0
+ g(n)= 1.0 h(n)=13.0
+ g(n)= 2.0 h(n)=12.0
+ g(n)= 3.0 h(n)=11.0
+ g(n)= 4.0 h(n)=10.0
+ g(n)= 5.0 h(n)=9.0
+ g(n)= 6.0 h(n)=8.0
+ g(n)= 7.0 h(n)=7.0
+ g(n)= 9.0 h(n)=6.0
+ g(n)= 10.0 h(n)=5.0
+ g(n)= 12.0 h(n)=4.0
+ g(n)= 13.0 h(n)=3.0
+ g(n)= 14.0 h(n)=2.0
+ g(n)= 15.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (s_ra___driver1__board_truck s1 truck2)
+1.0: (s_ra___driver1__load_truck truck2 package4 s1)
+2.0: (s_ra___driver1__load_truck truck2 package5 s1)
+3.0: (s_ra___driver1__drive_truck s1 s2 truck2)
+4.0: (s_ra___driver1__load_truck truck2 package2 s2)
+5.0: (s_ra___driver1__drive_truck s2 s0 truck2)
+6.0: (s_ra___driver1__unload_truck truck2 package5 s0)
+7.0: (s_ra___driver2__walk s2 p2_1)
+8.0: (s_ra___driver2__walk p2_1 s1)
+9.0: (f_ra_2__driver2__board_truck s1 truck2)
+10.0: (l_ra__driver1__drive_truck s0 s2 truck2)
+11.0: (l_ra__driver1__unload_truck truck2 package4 s2)
+12.0: (l_ra__driver1__drive_truck s2 s1 truck2)
+13.0: (l_ra__driver1__unload_truck truck2 package2 s1)
+14.0: (l_ra__driver1__drive_truck s1 s0 truck2)
+15.0: (goals_not_achieved_driver1_1)
+
+Plan-Length:16
+Metric (Search):16.0
+Planning Time (msec): 195
+Heuristic Time (msec): 177
+Search Time (msec): 194
+Expanded Nodes:18
+States Evaluated:145
+Number of Dead-Ends detected:4
+Number of Duplicates detected:24

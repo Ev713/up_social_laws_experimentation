@@ -1,0 +1,239 @@
+{
+  "places": [
+    "p0",
+    "p1"
+  ],
+  "boats": [],
+  "trains": [
+    "t0"
+  ],
+  "resources": [
+    "timber",
+    "stone",
+    "ore",
+    "coal",
+    "wood",
+    "iron"
+  ],
+  "agents": [
+    "a0",
+    "a1"
+  ],
+  "bounds": {
+    "pollution": 30,
+    "resource-use": 30,
+    "housing": 4,
+    "available": 17,
+    "labour": 58,
+    "carts-at": 4,
+    "boat-capacity": 3,
+    "train-capacity": 3,
+    "boat-load": 4,
+    "train-load": 4
+  },
+  "init_values": {
+    "global": [
+      [
+        "metalliferous",
+        [
+          "p0"
+        ]
+      ],
+      [
+        "mountain",
+        [
+          "p0"
+        ]
+      ],
+      [
+        "woodland",
+        [
+          "p0"
+        ]
+      ],
+      [
+        "mountain",
+        [
+          "p1"
+        ]
+      ],
+      [
+        "woodland",
+        [
+          "p1"
+        ]
+      ],
+      [
+        "is_timber",
+        [
+          "timber"
+        ]
+      ],
+      [
+        "is_stone",
+        [
+          "stone"
+        ]
+      ],
+      [
+        "is_ore",
+        [
+          "ore"
+        ]
+      ],
+      [
+        "is_coal",
+        [
+          "coal"
+        ]
+      ],
+      [
+        "is_wood",
+        [
+          "wood"
+        ]
+      ],
+      [
+        "is_iron",
+        [
+          "iron"
+        ]
+      ],
+      [
+        "connected-by-land",
+        [
+          "p0",
+          "p1"
+        ]
+      ],
+      [
+        "connected-by-land",
+        [
+          "p1",
+          "p0"
+        ]
+      ],
+      [
+        "=",
+        [
+          "pollution",
+          []
+        ],
+        "0"
+      ],
+      [
+        "=",
+        [
+          "resource-use",
+          []
+        ],
+        "0"
+      ],
+      [
+        "=",
+        [
+          "housing",
+          [
+            "p0"
+          ]
+        ],
+        "0"
+      ],
+      [
+        "=",
+        [
+          "housing",
+          [
+            "p1"
+          ]
+        ],
+        "0"
+      ],
+      [
+        "=",
+        [
+          "train-capacity",
+          [
+            "t0",
+            "p0"
+          ]
+        ],
+        "1"
+      ],
+      [
+        "=",
+        [
+          "train-capacity",
+          [
+            "t0",
+            "p1"
+          ]
+        ],
+        "1"
+      ],
+      [
+        "=",
+        [
+          "train-space-in",
+          [
+            "t0"
+          ]
+        ],
+        "3"
+      ]
+    ],
+    "a0": [
+      [
+        "=",
+        [
+          "labour",
+          []
+        ],
+        "0"
+      ],
+      [
+        "assigned-train",
+        [
+          "t0"
+        ]
+      ]
+    ],
+    "a1": [
+      [
+        "=",
+        [
+          "labour",
+          []
+        ],
+        "0"
+      ]
+    ]
+  },
+  "goals": {
+    "global": [
+      [
+        "connected-by-rail",
+        [
+          "p0",
+          "p1"
+        ]
+      ]
+    ],
+    "a0": [
+      [
+        "owns_train",
+        [
+          "t0"
+        ]
+      ]
+    ],
+    "a1": [
+      [
+        "has-cabin",
+        [
+          "p1"
+        ]
+      ]
+    ]
+  }
+}

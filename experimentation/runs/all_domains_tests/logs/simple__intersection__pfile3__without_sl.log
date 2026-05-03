@@ -1,0 +1,172 @@
+=== CASE ===
+domain: intersection
+instance_file: pfile3.json
+has_social_law: False
+problem_name: intersection
+verifier: simple
+
+=== CONVERSION ===
+=== SNP CONVERSION ===
+Converted problem: intersection_NUM_STRIPS
+
+=== SINGLE_AGENT car-north SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 11
+Aibr Preprocessing
+UFX:false
+|F|:10
+|X|:0
+|A|:4
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):4.0
+ g(n)= 1.0 h(n)=3.0
+ g(n)= 2.0 h(n)=2.0
+ g(n)= 3.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive south_ent)
+1.0: (drive south_ent cross_se north)
+2.0: (drive cross_se cross_ne north)
+3.0: (drive cross_ne north_ex north)
+
+Plan-Length:4
+Metric (Search):4.0
+Planning Time (msec): 14
+Heuristic Time (msec): 5
+Search Time (msec): 12
+Expanded Nodes:5
+States Evaluated:5
+Number of Dead-Ends detected:0
+Number of Duplicates detected:0
+
+=== SINGLE_AGENT car-west SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 10
+Aibr Preprocessing
+UFX:false
+|F|:10
+|X|:0
+|A|:4
+|P|:0
+|E|:0
+H1 Setup Time (msec): 4
+h(I):4.0
+ g(n)= 1.0 h(n)=3.0
+ g(n)= 2.0 h(n)=2.0
+ g(n)= 3.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive east_ent)
+1.0: (drive east_ent cross_ne west)
+2.0: (drive cross_ne cross_nw west)
+3.0: (drive cross_nw west_ex west)
+
+Plan-Length:4
+Metric (Search):4.0
+Planning Time (msec): 16
+Heuristic Time (msec): 5
+Search Time (msec): 13
+Expanded Nodes:5
+States Evaluated:5
+Number of Dead-Ends detected:0
+Number of Duplicates detected:0
+
+=== SINGLE_AGENT car-east SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 10
+Aibr Preprocessing
+UFX:false
+|F|:10
+|X|:0
+|A|:4
+|P|:0
+|E|:0
+H1 Setup Time (msec): 4
+h(I):4.0
+ g(n)= 1.0 h(n)=3.0
+ g(n)= 2.0 h(n)=2.0
+ g(n)= 3.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive west_ent)
+1.0: (drive west_ent cross_sw east)
+2.0: (drive cross_sw cross_se east)
+3.0: (drive cross_se east_ex east)
+
+Plan-Length:4
+Metric (Search):4.0
+Planning Time (msec): 14
+Heuristic Time (msec): 5
+Search Time (msec): 12
+Expanded Nodes:5
+States Evaluated:5
+Number of Dead-Ends detected:0
+Number of Duplicates detected:0
+
+=== ROBUSTNESS SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 35
+Aibr Preprocessing
+UFX:false
+|F|:68
+|X|:0
+|A|:66
+|P|:0
+|E|:0
+H1 Setup Time (msec): 6
+h(I):17.0
+ g(n)= 1.0 h(n)=16.0
+ g(n)= 2.0 h(n)=15.0
+ g(n)= 3.0 h(n)=14.0
+ g(n)= 4.0 h(n)=13.0
+ g(n)= 5.0 h(n)=11.0
+ g(n)= 6.0 h(n)=9.0
+ g(n)= 7.0 h(n)=8.0
+ g(n)= 8.0 h(n)=7.0
+ g(n)= 9.0 h(n)=6.0
+ g(n)= 10.0 h(n)=5.0
+ g(n)= 11.0 h(n)=4.0
+ g(n)= 12.0 h(n)=3.0
+ g(n)= 13.0 h(n)=2.0
+ g(n)= 14.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (s__car_east__arrive west_ent)
+1.0: (s__car_west__arrive east_ent)
+2.0: (s__car_north__arrive south_ent)
+3.0: (s__car_east__drive west_ent cross_sw east)
+4.0: (s__car_north__drive south_ent cross_se north)
+5.0: (wt_free_l2___car_east__drive cross_sw cross_se east)
+6.0: (s__car_west__drive east_ent cross_ne west)
+7.0: (s__car_west__drive cross_ne cross_nw west)
+8.0: (s__car_north__drive cross_se cross_ne north)
+9.0: (s__car_north__drive cross_ne north_ex north)
+10.0: (l_wt__car_east__drive cross_se east_ex east)
+11.0: (s__car_west__drive cross_nw west_ex west)
+12.0: (end_f_car_east)
+13.0: (end_s_car_west)
+14.0: (end_s_car_north)
+
+Plan-Length:15
+Metric (Search):15.0
+Planning Time (msec): 23
+Heuristic Time (msec): 14
+Search Time (msec): 22
+Expanded Nodes:16
+States Evaluated:40
+Number of Dead-Ends detected:3
+Number of Duplicates detected:0

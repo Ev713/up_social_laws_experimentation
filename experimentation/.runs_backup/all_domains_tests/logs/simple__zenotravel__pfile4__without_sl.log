@@ -1,0 +1,139 @@
+=== CASE ===
+domain: zenotravel
+instance_file: pfile4.json
+has_social_law: False
+problem_name: Zenotravel
+verifier: simple
+
+=== CONVERSION ===
+=== SNP CONVERSION ===
+Converted problem: Zenotravel_NUM_STRIPS
+
+=== SINGLE_AGENT plane1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 21
+Aibr Preprocessing
+UFX:false
+|F|:36
+|X|:0
+|A|:240
+|P|:0
+|E|:0
+H1 Setup Time (msec): 8
+h(I):3.0
+ g(n)= 2.0 h(n)=2.0
+ g(n)= 3.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (fly city2 city0 fl5 fl4)
+1.0: (board person1 city0)
+2.0: (zoom city0 city2 fl4 fl3 fl2)
+3.0: (debark person1 city2)
+
+Plan-Length:4
+Metric (Search):4.0
+Planning Time (msec): 32
+Heuristic Time (msec): 21
+Search Time (msec): 29
+Expanded Nodes:5
+States Evaluated:40
+Number of Dead-Ends detected:10
+Number of Duplicates detected:3
+
+=== SINGLE_AGENT plane2 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 19
+Aibr Preprocessing
+UFX:false
+|F|:36
+|X|:0
+|A|:240
+|P|:0
+|E|:0
+H1 Setup Time (msec): 14
+h(I):7.0
+ g(n)= 1.0 h(n)=6.0
+ g(n)= 2.0 h(n)=4.0
+ g(n)= 3.0 h(n)=3.0
+ g(n)= 5.0 h(n)=2.0
+ g(n)= 6.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (board person4 city1)
+1.0: (fly city1 city3 fl3 fl2)
+2.0: (debark person4 city3)
+3.0: (zoom city3 city0 fl2 fl1 fl0)
+4.0: (board person2 city0)
+5.0: (zoom city0 city3 fl2 fl1 fl0)
+6.0: (debark person2 city3)
+
+Plan-Length:7
+Metric (Search):7.0
+Planning Time (msec): 50
+Heuristic Time (msec): 35
+Search Time (msec): 48
+Expanded Nodes:10
+States Evaluated:78
+Number of Dead-Ends detected:8
+Number of Duplicates detected:15
+
+=== ROBUSTNESS SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 129
+Aibr Preprocessing
+UFX:false
+|F|:129
+|X|:0
+|A|:1924
+|P|:0
+|E|:0
+H1 Setup Time (msec): 55
+h(I):14.0
+ g(n)= 1.0 h(n)=13.0
+ g(n)= 2.0 h(n)=11.0
+ g(n)= 3.0 h(n)=10.0
+ g(n)= 5.0 h(n)=9.0
+ g(n)= 6.0 h(n)=8.0
+ g(n)= 7.0 h(n)=7.0
+ g(n)= 8.0 h(n)=6.0
+ g(n)= 9.0 h(n)=5.0
+ g(n)= 11.0 h(n)=4.0
+ g(n)= 12.0 h(n)=3.0
+ g(n)= 13.0 h(n)=2.0
+ g(n)= 14.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (s__plane2__board person4 city1)
+1.0: (s__plane2__zoom city1 city3 fl3 fl2 fl1)
+2.0: (s__plane2__debark person4 city3)
+3.0: (s__plane1__fly city2 city1 fl5 fl4)
+4.0: (f_not_person_at_p__c___plane1__board person4 city1)
+5.0: (l_cf__plane1__zoom city1 city0 fl4 fl3 fl2)
+6.0: (l_cf__plane1__board person1 city0)
+7.0: (l_cf__plane1__zoom city0 city2 fl4 fl3 fl2)
+8.0: (l_cf__plane1__debark person1 city2)
+9.0: (l_cf__plane2__zoom city3 city0 fl3 fl2 fl1)
+10.0: (l_cf__plane2__board person2 city0)
+11.0: (l_cf__plane2__zoom city0 city3 fl3 fl2 fl1)
+12.0: (l_cf__plane2__debark person2 city3)
+13.0: (end_f_plane1)
+14.0: (end_f_plane2)
+
+Plan-Length:15
+Metric (Search):15.0
+Planning Time (msec): 448
+Heuristic Time (msec): 418
+Search Time (msec): 446
+Expanded Nodes:23
+States Evaluated:534
+Number of Dead-Ends detected:74
+Number of Duplicates detected:81

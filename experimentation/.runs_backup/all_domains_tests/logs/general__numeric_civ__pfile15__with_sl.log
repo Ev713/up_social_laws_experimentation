@@ -1,0 +1,86 @@
+=== CASE ===
+domain: numeric_civ
+instance_file: pfile15.json
+has_social_law: True
+problem_name: sl_civ_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_civ/pfile15
+verifier: general
+
+=== SINGLE_AGENT a0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 33
+Aibr Preprocessing
+UFX:false
+|F|:18
+|X|:35
+|A|:61
+|P|:0
+|E|:0
+H1 Setup Time (msec): 6
+h(I):61.0
+ g(n)= 1.0 h(n)=53.0
+ g(n)= 2.0 h(n)=43.0
+ g(n)= 3.0 h(n)=35.0
+ g(n)= 4.0 h(n)=31.0
+ g(n)= 5.0 h(n)=25.0
+ g(n)= 6.0 h(n)=21.0
+ g(n)= 7.0 h(n)=19.0
+ g(n)= 8.0 h(n)=17.0
+ g(n)= 9.0 h(n)=15.0
+ g(n)= 10.0 h(n)=14.0
+ g(n)= 12.0 h(n)=12.0
+ g(n)= 15.0 h(n)=10.0
+ g(n)= 17.0 h(n)=8.0
+ g(n)= 18.0 h(n)=6.0
+ g(n)= 19.0 h(n)=5.0
+ g(n)= 21.0 h(n)=3.0
+ g(n)= 22.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (build_cabin p2)
+1.0: (fell_timber p2 timber)
+2.0: (fell_timber p2 timber)
+3.0: (build_cabin p1)
+4.0: (fell_timber p1 timber)
+5.0: (fell_timber p1 timber)
+6.0: (build_quarry p1)
+7.0: (break_stone p1 stone)
+8.0: (break_stone p1 stone)
+9.0: (build_cabin p0)
+10.0: (fell_timber p1 timber)
+11.0: (build_sawmill p1 timber)
+12.0: (build_quarry p0)
+13.0: (fell_timber p2 timber)
+14.0: (build_sawmill p2 timber)
+15.0: (fell_timber p1 timber)
+16.0: (saw_wood p1 timber wood)
+17.0: (saw_wood p1 timber wood)
+18.0: (build_docks p1 stone wood)
+19.0: (fell_timber p2 timber)
+20.0: (saw_wood p2 timber wood)
+21.0: (saw_wood p2 timber wood)
+22.0: (build_mine p2 wood)
+
+Plan-Length:23
+Metric (Search):23.0
+Planning Time (msec): 56
+Heuristic Time (msec): 36
+Search Time (msec): 53
+Expanded Nodes:34
+States Evaluated:306
+Number of Dead-Ends detected:0
+Number of Duplicates detected:18
+
+=== SINGLE_AGENT a1 UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 29
+Aibr Preprocessing
+Problem Detected as Unsolvable by AIBR during preprocessing
+UFX:false
+|F|:21
+|X|:39
+Unsolvable Problem

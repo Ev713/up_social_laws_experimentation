@@ -1,38 +1,45 @@
+from io import StringIO
+from pathlib import Path
+
 from unified_planning.model import Fluent, InstantaneousAction
 from unified_planning.model.multi_agent import Agent
 from unified_planning.shortcuts import RealType, BoolType, Not, GE, OneshotPlanner
 
-from experimentation.experimentator import simulate_problem
 from experimentation.problem_generators import problem_generator, expedition_generator
 from experimentation.problem_generators.expedition_generator import ExpeditionGenerator
 from experimentation.problem_generators.grid_generator import GridGenerator
 from experimentation.problem_generators.market_trader_generator import MarketTraderGenerator
 from experimentation.problem_generators.numeric_grid_generator import NumericGridGenerator
 from experimentation.problem_generators.numeric_civ_generator import NumericCivGenerator
+from experimentation.problem_generators.numeric_zenotravel_generator import NumericZenotravelGenerator
 
 from up_social_laws import snp_to_num_strips
 from up_social_laws.robustness_verification import SimpleNumericRobustnessVerifier
 from up_social_laws.ma_problem_waitfor import MultiAgentProblemWithWaitfor
 from up_social_laws.robustness_checker import SocialLawRobustnessChecker
 from up_social_laws.single_agent_projection import SingleAgentProjection
-from up_social_laws.snp_to_num_strips import NumericStripsProblemConverter, MultiAgentWithWaitforNumericStripsProblemConverter
+from up_social_laws.snp_to_num_strips import NumericStripsProblemConverter, MultiAgentNumericStripsProblemConverter, MultiAgentWithWaitforNumericStripsProblemConverter
 from up_social_laws.social_law import SocialLaw
 
 def get_expedition_problem(sl=True):
     exp = ExpeditionGenerator()
-    return exp.generate_problem('/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/numeric_problems_instances/expedition/test/minimal.json', sl)
+    return exp.generate_problem('/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_expedition/minimal.json', sl)
 
 def get_markettrader_problem(sl=True):
     pg = MarketTraderGenerator()
-    return pg.generate_problem('/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/numeric_problems_instances/markettrader/generated_json/pfile1.json', sl)
+    return pg.generate_problem('/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_markettrader/pfile1.json', sl)
 
 def get_grid_problem(sl=True):
     pg = NumericGridGenerator()
-    return pg.generate_problem('/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/numeric_problems_instances/grid/json/pfile1.json', sl)
+    return pg.generate_problem('/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_grid/pfile1.json', sl)
 
 def get_civ_problem(sl=True):
     pg = NumericCivGenerator()
-    return pg.generate_problem('/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/numeric_problems_instances/civ/json/pfile1.json', sl)
+    return pg.generate_problem('/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_civ/pfile1.json', sl)
+
+def get_numeric_zenotravel_problem(sl=True):
+    pg = NumericZenotravelGenerator()
+    return pg.generate_problem('/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_zenotravel/pfile1.json', sl)
 
 def gen_problem_with_social_law():
     problem = MultiAgentProblemWithWaitfor('simple_numeric_tool_problem')
@@ -114,17 +121,139 @@ def gen_problem_with_social_law():
 
     return problem
 
-if __name__ == '__main__':
-    problem = get_civ_problem(sl=False)
-    problem = MultiAgentWithWaitforNumericStripsProblemConverter(problem).compile()
-    print(problem)
-    slrc = SocialLawRobustnessChecker(robustness_verifier_name='SimpleNumericRobustnessVerifier')
-    compiled = SimpleNumericRobustnessVerifier().compile(problem).problem
-    sa_problem = SingleAgentProjection(problem.agents[0]).compile(problem).problem
-    #print(compiled)
-    #print(sa_problem)
-    #simulate_problem(compiled, print_state=True)
 
-    with OneshotPlanner(problem_kind=sa_problem.kind) as planner:
-        planning_result = planner.solve(sa_problem)
-        print(planning_result)
+def test_linear_effects_table_supports_assign_increase_decrease():
+    problem = MultiAgentProblemWithWaitfor('numeric_effect_kinds')
+    agent = Agent(name='agent1', ma_problem=problem)
+
+    level = Fluent('level', RealType())
+    agent.add_fluent(level, default_initial_value=0)
+
+    assign = InstantaneousAction('assign')
+    assign.add_effect(level, level + 3)
+
+    increase = InstantaneousAction('increase')
+    increase.add_increase_effect(level, 2)
+
+    decrease = InstantaneousAction('decrease')
+    decrease.add_decrease_effect(level, 4)
+
+    agent.add_action(assign)
+    agent.add_action(increase)
+    agent.add_action(decrease)
+    problem.add_agent(agent)
+
+    table = MultiAgentNumericStripsProblemConverter(problem).create_linear_effects_table()
+    changes = {row['action_id'][1]: row['change'] for _, row in table.iterrows()}
+
+    assert changes['assign'] == 3
+    assert changes['increase'] == 2
+    assert changes['decrease'] == -4
+
+
+def test_simple_numeric_robustness_copy_preserves_inc_dec_effect_kinds():
+    problem = MultiAgentProblemWithWaitfor('numeric_effect_copy')
+    agent = Agent(name='agent1', ma_problem=problem)
+
+    level = Fluent('level', RealType())
+    agent.add_fluent(level, default_initial_value=0)
+
+    increase = InstantaneousAction('increase')
+    increase.add_increase_effect(level, 2)
+
+    decrease = InstantaneousAction('decrease')
+    decrease.add_decrease_effect(level, 4)
+
+    agent.add_action(increase)
+    agent.add_action(decrease)
+    problem.add_agent(agent)
+
+    verifier = SimpleNumericRobustnessVerifier()
+    verifier.initialize_problem(problem)
+
+    copied_increase = verifier.create_action_copy(problem, agent, increase, 'copy')
+    copied_decrease = verifier.create_action_copy(problem, agent, decrease, 'copy')
+
+    assert copied_increase.effects[0].is_increase()
+    assert copied_increase.effects[0].value.constant_value() == 2
+    assert copied_decrease.effects[0].is_decrease()
+    assert copied_decrease.effects[0].value.constant_value() == 4
+
+
+def test_civ_integer_fluents_are_bounded():
+    problem = get_civ_problem(sl=False)
+
+    fluents = list(problem.ma_environment.fluents)
+    for agent in problem.agents:
+        fluents.extend(agent.fluents)
+
+    for fluent in fluents:
+        if fluent.type.is_int_type():
+            assert fluent.type.lower_bound is not None
+            assert fluent.type.upper_bound is not None
+
+
+def test_markettrader_simple_numeric_compilation_works():
+    problem = get_markettrader_problem(sl=False)
+    snp_problem = MultiAgentWithWaitforNumericStripsProblemConverter(problem).compile()
+    compiled = SimpleNumericRobustnessVerifier().compile(snp_problem).problem
+    assert compiled is not None
+
+
+def test_numeric_zenotravel_simple_numeric_compilation_works():
+    for sl in (False, True):
+        problem = get_numeric_zenotravel_problem(sl=sl)
+        snp_problem = MultiAgentWithWaitforNumericStripsProblemConverter(problem).compile()
+        compiled = SimpleNumericRobustnessVerifier().compile(snp_problem).problem
+        assert compiled is not None
+
+
+def test_numeric_grid_simple_numeric_compilation_works():
+    for sl in (False, True):
+        problem = get_grid_problem(sl=sl)
+        snp_problem = MultiAgentWithWaitforNumericStripsProblemConverter(problem).compile()
+        compiled = SimpleNumericRobustnessVerifier().compile(snp_problem).problem
+        assert compiled is not None
+
+def solve_with_log(problem, log_path, planner_name='enhsp', timeout=None):
+    stream = StringIO()
+    with OneshotPlanner(name=planner_name, problem_kind=problem.kind) as planner:
+        result = planner.solve(problem, timeout=timeout, output_stream=stream)
+    log_path.write_text(stream.getvalue())
+    return result
+
+def safe_log_name(name):
+    return name.replace('/', '_').replace('\\', '_').replace(':', '_')
+
+if __name__ == '__main__':
+    logs_dir = Path(__file__).resolve().parent / ".logs"
+    logs_dir.mkdir(exist_ok=True)
+
+    ma_problem = get_civ_problem(sl=True)
+
+    simple_problem = MultiAgentWithWaitforNumericStripsProblemConverter(ma_problem).compile()
+    print(f"Simple numeric source problem: {simple_problem.name}")
+    for agent in simple_problem.agents:
+        sap = SingleAgentProjection(agent)
+        sap.skip_checks = True
+        sa_problem = sap.compile(simple_problem).problem
+        sa_log_path = logs_dir / f"{safe_log_name(simple_problem.name)}_{agent.name}_single_agent.log"
+        sa_result = solve_with_log(sa_problem, sa_log_path)
+        print(f"Single-agent projection for {agent.name}: {sa_result.status}")
+        print(f"  log: {sa_log_path}")
+
+    simple_compiled = SimpleNumericRobustnessVerifier().compile(simple_problem).problem
+    simple_log_path = logs_dir / f"{safe_log_name(simple_compiled.name)}_robustness.log"
+    simple_result = solve_with_log(simple_compiled, simple_log_path)
+    print(f"Simple robustness compilation: {simple_result.status}")
+    print(f"  log: {simple_log_path}")
+
+    general_checker = SocialLawRobustnessChecker(
+        robustness_verifier_name='WaitingActionRobustnessVerifier'
+    )
+    general_checker.skip_checks = True
+    general_compiled = general_checker.get_compiled(ma_problem)
+    general_log_path = logs_dir / f"{safe_log_name(general_compiled.name)}_robustness.log"
+    general_result = solve_with_log(general_compiled, general_log_path, timeout=30)
+    print(f"General robustness compilation: {general_result.status}")
+    print(f"  log: {general_log_path}")

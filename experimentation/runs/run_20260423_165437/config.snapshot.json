@@ -1,0 +1,25 @@
+{
+  "run_id": "run_20260423_165437",
+  "output_dir": "/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs",
+  "domains": [
+    "numeric_markettrader"
+  ],
+  "instances": {
+    "numeric_markettrader": [
+      "pfile1.json"
+    ]
+  },
+  "social_law_options": [
+    false
+  ],
+  "verifiers": [
+    "general"
+  ],
+  "limits": {
+    "engine": "enhsp",
+    "planner_timeout_seconds": 30,
+    "wall_timeout_seconds": 30,
+    "cpu_seconds": 30,
+    "memory_bytes": 16000000000
+  }
+}

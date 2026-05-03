@@ -1,0 +1,542 @@
+=== CASE ===
+domain: numeric_expedition
+instance_file: pfile2.json
+has_social_law: False
+problem_name: expedition_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_expedition/pfile2
+verifier: simple
+
+=== CONVERSION ===
+=== SNP CONVERSION ===
+Converted problem: expedition_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_expedition/pfile2_NUM_STRIPS
+
+=== COMPILER OUTPUT ===
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+
+=== SINGLE_AGENT s0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 13
+Aibr Preprocessing
+UFX:false
+|F|:7
+|X|:9
+|A|:26
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):6.0
+ g(n)= 2.0 h(n)=5.0
+ g(n)= 4.0 h(n)=4.0
+ g(n)= 6.0 h(n)=3.0
+ g(n)= 22.0 h(n)=2.0
+ g(n)= 106.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (retrieve_supplies wa0)
+1.0: (retrieve_supplies wa0)
+2.0: (retrieve_supplies wa0)
+3.0: (move_forwards wa0 wa1)
+4.0: (move_backwards wa1 wa0)
+5.0: (retrieve_supplies wa0)
+6.0: (retrieve_supplies wa0)
+7.0: (move_forwards wa0 wa1)
+8.0: (move_backwards wa1 wa0)
+9.0: (retrieve_supplies wa0)
+10.0: (retrieve_supplies wa0)
+11.0: (move_forwards wa0 wa1)
+12.0: (store_supplies wa1)
+13.0: (move_backwards wa1 wa0)
+14.0: (retrieve_supplies wa0)
+15.0: (retrieve_supplies wa0)
+16.0: (retrieve_supplies wa0)
+17.0: (move_forwards wa0 wa1)
+18.0: (retrieve_supplies wa1)
+19.0: (move_forwards wa1 wa2)
+20.0: (move_backwards wa2 wa1)
+21.0: (move_backwards wa1 wa0)
+22.0: (retrieve_supplies wa0)
+23.0: (retrieve_supplies wa0)
+24.0: (move_forwards wa0 wa1)
+25.0: (move_backwards wa1 wa0)
+26.0: (retrieve_supplies wa0)
+27.0: (retrieve_supplies wa0)
+28.0: (retrieve_supplies wa0)
+29.0: (move_forwards wa0 wa1)
+30.0: (move_backwards wa1 wa0)
+31.0: (retrieve_supplies wa0)
+32.0: (retrieve_supplies wa0)
+33.0: (move_forwards wa0 wa1)
+34.0: (store_supplies wa1)
+35.0: (move_backwards wa1 wa0)
+36.0: (retrieve_supplies wa0)
+37.0: (retrieve_supplies wa0)
+38.0: (retrieve_supplies wa0)
+39.0: (move_forwards wa0 wa1)
+40.0: (store_supplies wa1)
+41.0: (move_backwards wa1 wa0)
+42.0: (retrieve_supplies wa0)
+43.0: (retrieve_supplies wa0)
+44.0: (move_forwards wa0 wa1)
+45.0: (move_backwards wa1 wa0)
+46.0: (retrieve_supplies wa0)
+47.0: (retrieve_supplies wa0)
+48.0: (move_forwards wa0 wa1)
+49.0: (retrieve_supplies wa1)
+50.0: (retrieve_supplies wa1)
+51.0: (move_forwards wa1 wa2)
+52.0: (move_backwards wa2 wa1)
+53.0: (move_backwards wa1 wa0)
+54.0: (retrieve_supplies wa0)
+55.0: (retrieve_supplies wa0)
+56.0: (move_forwards wa0 wa1)
+57.0: (move_backwards wa1 wa0)
+58.0: (retrieve_supplies wa0)
+59.0: (retrieve_supplies wa0)
+60.0: (move_forwards wa0 wa1)
+61.0: (move_backwards wa1 wa0)
+62.0: (retrieve_supplies wa0)
+63.0: (retrieve_supplies wa0)
+64.0: (retrieve_supplies wa0)
+65.0: (move_forwards wa0 wa1)
+66.0: (store_supplies wa1)
+67.0: (move_backwards wa1 wa0)
+68.0: (retrieve_supplies wa0)
+69.0: (retrieve_supplies wa0)
+70.0: (retrieve_supplies wa0)
+71.0: (move_forwards wa0 wa1)
+72.0: (store_supplies wa1)
+73.0: (move_backwards wa1 wa0)
+74.0: (retrieve_supplies wa0)
+75.0: (retrieve_supplies wa0)
+76.0: (retrieve_supplies wa0)
+77.0: (move_forwards wa0 wa1)
+78.0: (store_supplies wa1)
+79.0: (move_backwards wa1 wa0)
+80.0: (retrieve_supplies wa0)
+81.0: (retrieve_supplies wa0)
+82.0: (retrieve_supplies wa0)
+83.0: (move_forwards wa0 wa1)
+84.0: (retrieve_supplies wa1)
+85.0: (move_forwards wa1 wa2)
+86.0: (store_supplies wa2)
+87.0: (move_backwards wa2 wa1)
+88.0: (retrieve_supplies wa1)
+89.0: (retrieve_supplies wa1)
+90.0: (move_backwards wa1 wa0)
+91.0: (retrieve_supplies wa0)
+92.0: (retrieve_supplies wa0)
+93.0: (move_forwards wa0 wa1)
+94.0: (store_supplies wa1)
+95.0: (move_backwards wa1 wa0)
+96.0: (retrieve_supplies wa0)
+97.0: (retrieve_supplies wa0)
+98.0: (retrieve_supplies wa0)
+99.0: (move_forwards wa0 wa1)
+100.0: (retrieve_supplies wa1)
+101.0: (move_forwards wa1 wa2)
+102.0: (retrieve_supplies wa2)
+103.0: (move_forwards wa2 wa3)
+104.0: (move_forwards wa3 wa4)
+105.0: (move_forwards wa4 wa5)
+106.0: (move_forwards wa5 wa6)
+
+Plan-Length:107
+Metric (Search):107.0
+Planning Time (msec): 70
+Heuristic Time (msec): 41
+Search Time (msec): 69
+Expanded Nodes:952
+States Evaluated:1466
+Number of Dead-Ends detected:568
+Number of Duplicates detected:888
+
+=== SINGLE_AGENT s1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 14
+Aibr Preprocessing
+UFX:false
+|F|:7
+|X|:9
+|A|:26
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):6.0
+ g(n)= 2.0 h(n)=5.0
+ g(n)= 4.0 h(n)=4.0
+ g(n)= 6.0 h(n)=3.0
+ g(n)= 22.0 h(n)=2.0
+ g(n)= 106.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (retrieve_supplies wa0)
+1.0: (retrieve_supplies wa0)
+2.0: (retrieve_supplies wa0)
+3.0: (move_forwards wa0 wa1)
+4.0: (move_backwards wa1 wa0)
+5.0: (retrieve_supplies wa0)
+6.0: (retrieve_supplies wa0)
+7.0: (move_forwards wa0 wa1)
+8.0: (move_backwards wa1 wa0)
+9.0: (retrieve_supplies wa0)
+10.0: (retrieve_supplies wa0)
+11.0: (move_forwards wa0 wa1)
+12.0: (store_supplies wa1)
+13.0: (move_backwards wa1 wa0)
+14.0: (retrieve_supplies wa0)
+15.0: (retrieve_supplies wa0)
+16.0: (retrieve_supplies wa0)
+17.0: (move_forwards wa0 wa1)
+18.0: (retrieve_supplies wa1)
+19.0: (move_forwards wa1 wa2)
+20.0: (move_backwards wa2 wa1)
+21.0: (move_backwards wa1 wa0)
+22.0: (retrieve_supplies wa0)
+23.0: (retrieve_supplies wa0)
+24.0: (move_forwards wa0 wa1)
+25.0: (move_backwards wa1 wa0)
+26.0: (retrieve_supplies wa0)
+27.0: (retrieve_supplies wa0)
+28.0: (retrieve_supplies wa0)
+29.0: (move_forwards wa0 wa1)
+30.0: (move_backwards wa1 wa0)
+31.0: (retrieve_supplies wa0)
+32.0: (retrieve_supplies wa0)
+33.0: (move_forwards wa0 wa1)
+34.0: (store_supplies wa1)
+35.0: (move_backwards wa1 wa0)
+36.0: (retrieve_supplies wa0)
+37.0: (retrieve_supplies wa0)
+38.0: (retrieve_supplies wa0)
+39.0: (move_forwards wa0 wa1)
+40.0: (store_supplies wa1)
+41.0: (move_backwards wa1 wa0)
+42.0: (retrieve_supplies wa0)
+43.0: (retrieve_supplies wa0)
+44.0: (move_forwards wa0 wa1)
+45.0: (move_backwards wa1 wa0)
+46.0: (retrieve_supplies wa0)
+47.0: (retrieve_supplies wa0)
+48.0: (move_forwards wa0 wa1)
+49.0: (retrieve_supplies wa1)
+50.0: (retrieve_supplies wa1)
+51.0: (move_forwards wa1 wa2)
+52.0: (move_backwards wa2 wa1)
+53.0: (move_backwards wa1 wa0)
+54.0: (retrieve_supplies wa0)
+55.0: (retrieve_supplies wa0)
+56.0: (move_forwards wa0 wa1)
+57.0: (move_backwards wa1 wa0)
+58.0: (retrieve_supplies wa0)
+59.0: (retrieve_supplies wa0)
+60.0: (move_forwards wa0 wa1)
+61.0: (move_backwards wa1 wa0)
+62.0: (retrieve_supplies wa0)
+63.0: (retrieve_supplies wa0)
+64.0: (retrieve_supplies wa0)
+65.0: (move_forwards wa0 wa1)
+66.0: (store_supplies wa1)
+67.0: (move_backwards wa1 wa0)
+68.0: (retrieve_supplies wa0)
+69.0: (retrieve_supplies wa0)
+70.0: (retrieve_supplies wa0)
+71.0: (move_forwards wa0 wa1)
+72.0: (store_supplies wa1)
+73.0: (move_backwards wa1 wa0)
+74.0: (retrieve_supplies wa0)
+75.0: (retrieve_supplies wa0)
+76.0: (retrieve_supplies wa0)
+77.0: (move_forwards wa0 wa1)
+78.0: (store_supplies wa1)
+79.0: (move_backwards wa1 wa0)
+80.0: (retrieve_supplies wa0)
+81.0: (retrieve_supplies wa0)
+82.0: (retrieve_supplies wa0)
+83.0: (move_forwards wa0 wa1)
+84.0: (retrieve_supplies wa1)
+85.0: (move_forwards wa1 wa2)
+86.0: (store_supplies wa2)
+87.0: (move_backwards wa2 wa1)
+88.0: (retrieve_supplies wa1)
+89.0: (retrieve_supplies wa1)
+90.0: (move_backwards wa1 wa0)
+91.0: (retrieve_supplies wa0)
+92.0: (retrieve_supplies wa0)
+93.0: (move_forwards wa0 wa1)
+94.0: (store_supplies wa1)
+95.0: (move_backwards wa1 wa0)
+96.0: (retrieve_supplies wa0)
+97.0: (retrieve_supplies wa0)
+98.0: (retrieve_supplies wa0)
+99.0: (move_forwards wa0 wa1)
+100.0: (retrieve_supplies wa1)
+101.0: (move_forwards wa1 wa2)
+102.0: (retrieve_supplies wa2)
+103.0: (move_forwards wa2 wa3)
+104.0: (move_forwards wa3 wa4)
+105.0: (move_forwards wa4 wa5)
+106.0: (move_forwards wa5 wa6)
+
+Plan-Length:107
+Metric (Search):107.0
+Planning Time (msec): 66
+Heuristic Time (msec): 39
+Search Time (msec): 63
+Expanded Nodes:952
+States Evaluated:1466
+Number of Dead-Ends detected:568
+Number of Duplicates detected:888
+
+=== ROBUSTNESS SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 50
+Aibr Preprocessing
+UFX:false
+|F|:33
+|X|:36
+|A|:226
+|P|:0
+|E|:0
+H1 Setup Time (msec): 12
+h(I):15.0
+ g(n)= 2.0 h(n)=14.0
+ g(n)= 4.0 h(n)=13.0
+ g(n)= 6.0 h(n)=12.0
+ g(n)= 8.0 h(n)=11.0
+ g(n)= 16.0 h(n)=10.0
+ g(n)= 40.0 h(n)=9.0
+ g(n)= 41.0 h(n)=8.0
+ g(n)= 121.0 h(n)=7.0
+ g(n)= 127.0 h(n)=6.0
+ g(n)= 129.0 h(n)=5.0
+ g(n)= 137.0 h(n)=4.0
+ g(n)= 165.0 h(n)=3.0
+ g(n)= 166.0 h(n)=2.0
+ g(n)= 167.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (s__s0__retrieve_supplies wa0)
+1.0: (s__s0__move_forwards wa0 wa1)
+2.0: (s__s1__retrieve_supplies wa0)
+3.0: (s__s1__retrieve_supplies wa0)
+4.0: (s__s1__retrieve_supplies wa0)
+5.0: (s__s1__move_forwards wa0 wa1)
+6.0: (s__s1__store_supplies wa1)
+7.0: (s__s1__move_backwards wa1 wa0)
+8.0: (s__s1__retrieve_supplies wa0)
+9.0: (s__s1__retrieve_supplies wa0)
+10.0: (s__s1__retrieve_supplies wa0)
+11.0: (s__s1__move_forwards wa0 wa1)
+12.0: (s__s1__store_supplies wa1)
+13.0: (s__s1__move_backwards wa1 wa0)
+14.0: (s__s1__retrieve_supplies wa0)
+15.0: (s__s1__retrieve_supplies wa0)
+16.0: (s__s1__retrieve_supplies wa0)
+17.0: (s__s1__move_forwards wa0 wa1)
+18.0: (s__s1__retrieve_supplies wa1)
+19.0: (s__s1__move_forwards wa1 wa2)
+20.0: (s__s1__store_supplies wa2)
+21.0: (s__s1__move_backwards wa2 wa1)
+22.0: (s__s1__retrieve_supplies wa1)
+23.0: (s__s1__move_backwards wa1 wa0)
+24.0: (s__s1__retrieve_supplies wa0)
+25.0: (s__s1__retrieve_supplies wa0)
+26.0: (s__s1__retrieve_supplies wa0)
+27.0: (s__s1__move_forwards wa0 wa1)
+28.0: (s__s1__move_backwards wa1 wa0)
+29.0: (s__s1__retrieve_supplies wa0)
+30.0: (s__s1__retrieve_supplies wa0)
+31.0: (s__s1__move_forwards wa0 wa1)
+32.0: (s__s1__move_backwards wa1 wa0)
+33.0: (s__s1__retrieve_supplies wa0)
+34.0: (s__s1__retrieve_supplies wa0)
+35.0: (s__s1__move_forwards wa0 wa1)
+36.0: (s__s1__move_backwards wa1 wa0)
+37.0: (s__s1__retrieve_supplies wa0)
+38.0: (s__s1__retrieve_supplies wa0)
+39.0: (s__s1__move_forwards wa0 wa1)
+40.0: (s__s1__store_supplies wa1)
+41.0: (s__s1__move_backwards wa1 wa0)
+42.0: (s__s1__retrieve_supplies wa0)
+43.0: (s__s1__retrieve_supplies wa0)
+44.0: (s__s1__retrieve_supplies wa0)
+45.0: (s__s1__move_forwards wa0 wa1)
+46.0: (s__s1__move_backwards wa1 wa0)
+47.0: (s__s1__retrieve_supplies wa0)
+48.0: (s__s1__retrieve_supplies wa0)
+49.0: (s__s1__move_forwards wa0 wa1)
+50.0: (s__s1__store_supplies wa1)
+51.0: (s__s1__move_backwards wa1 wa0)
+52.0: (s__s1__retrieve_supplies wa0)
+53.0: (s__s1__retrieve_supplies wa0)
+54.0: (s__s1__retrieve_supplies wa0)
+55.0: (s__s1__move_forwards wa0 wa1)
+56.0: (s__s1__store_supplies wa1)
+57.0: (s__s1__move_backwards wa1 wa0)
+58.0: (s__s1__retrieve_supplies wa0)
+59.0: (s__s1__retrieve_supplies wa0)
+60.0: (s__s1__retrieve_supplies wa0)
+61.0: (s__s1__move_forwards wa0 wa1)
+62.0: (s__s1__store_supplies wa1)
+63.0: (s__s1__move_backwards wa1 wa0)
+64.0: (s__s1__retrieve_supplies wa0)
+65.0: (s__s1__retrieve_supplies wa0)
+66.0: (s__s1__move_forwards wa0 wa1)
+67.0: (s__s1__move_backwards wa1 wa0)
+68.0: (s__s1__retrieve_supplies wa0)
+69.0: (s__s1__retrieve_supplies wa0)
+70.0: (s__s1__retrieve_supplies wa0)
+71.0: (s__s1__move_forwards wa0 wa1)
+72.0: (s__s1__retrieve_supplies wa1)
+73.0: (s__s1__move_forwards wa1 wa2)
+74.0: (s__s1__store_supplies wa2)
+75.0: (s__s1__move_backwards wa2 wa1)
+76.0: (s__s1__retrieve_supplies wa1)
+77.0: (s__s1__retrieve_supplies wa1)
+78.0: (s__s1__move_backwards wa1 wa0)
+79.0: (s__s1__retrieve_supplies wa0)
+80.0: (s__s1__retrieve_supplies wa0)
+81.0: (s__s1__move_forwards wa0 wa1)
+82.0: (s__s1__retrieve_supplies wa1)
+83.0: (s__s1__move_forwards wa1 wa2)
+84.0: (s__s1__move_backwards wa2 wa1)
+85.0: (s__s1__move_backwards wa1 wa0)
+86.0: (s__s1__retrieve_supplies wa0)
+87.0: (s__s1__retrieve_supplies wa0)
+88.0: (s__s1__retrieve_supplies wa0)
+89.0: (s__s1__move_forwards wa0 wa1)
+90.0: (s__s1__store_supplies wa1)
+91.0: (s__s1__move_backwards wa1 wa0)
+92.0: (s__s1__retrieve_supplies wa0)
+93.0: (s__s1__retrieve_supplies wa0)
+94.0: (s__s1__retrieve_supplies wa0)
+95.0: (s__s1__move_forwards wa0 wa1)
+96.0: (s__s1__move_backwards wa1 wa0)
+97.0: (s__s1__retrieve_supplies wa0)
+98.0: (s__s1__retrieve_supplies wa0)
+99.0: (s__s1__move_forwards wa0 wa1)
+100.0: (s__s1__move_backwards wa1 wa0)
+101.0: (s__s1__retrieve_supplies wa0)
+102.0: (s__s1__retrieve_supplies wa0)
+103.0: (s__s1__move_forwards wa0 wa1)
+104.0: (s__s1__store_supplies wa1)
+105.0: (s__s1__move_backwards wa1 wa0)
+106.0: (s__s1__retrieve_supplies wa0)
+107.0: (s__s1__retrieve_supplies wa0)
+108.0: (s__s1__move_forwards wa0 wa1)
+109.0: (s__s1__retrieve_supplies wa1)
+110.0: (s__s1__move_backwards wa1 wa0)
+111.0: (s__s1__retrieve_supplies wa0)
+112.0: (f_not__1______s1__p1_waypoint_supplies___w____s1__retrieve_supplies wa0)
+113.0: (l_cf__s1__move_forwards wa0 wa1)
+114.0: (l_cf__s1__move_forwards wa1 wa2)
+115.0: (l_cf__s1__retrieve_supplies wa2)
+116.0: (l_cf__s1__retrieve_supplies wa2)
+117.0: (l_cf__s1__move_forwards wa2 wa3)
+118.0: (l_cf__s1__move_forwards wa3 wa4)
+119.0: (l_cf__s1__move_forwards wa4 wa5)
+120.0: (l_cf__s1__move_forwards wa5 wa6)
+121.0: (l_cf__s0__move_backwards wa1 wa0)
+122.0: (l_cf__s0__retrieve_supplies wa0)
+123.0: (l_cf__s0__retrieve_supplies wa0)
+124.0: (l_cf__s0__retrieve_supplies wa0)
+125.0: (l_cf__s0__retrieve_supplies wa0)
+126.0: (l_cf__s0__move_forwards wa0 wa1)
+127.0: (l_cf__s0__move_backwards wa1 wa0)
+128.0: (l_cf__s0__retrieve_supplies wa0)
+129.0: (l_cf__s0__retrieve_supplies wa0)
+130.0: (l_cf__s0__move_forwards wa0 wa1)
+131.0: (l_cf__s0__store_supplies wa1)
+132.0: (l_cf__s0__move_backwards wa1 wa0)
+133.0: (l_cf__s0__retrieve_supplies wa0)
+134.0: (l_cf__s0__retrieve_supplies wa0)
+135.0: (l_cf__s0__retrieve_supplies wa0)
+136.0: (l_cf__s0__move_forwards wa0 wa1)
+137.0: (l_cf__s0__store_supplies wa1)
+138.0: (l_cf__s0__move_backwards wa1 wa0)
+139.0: (l_cf__s0__retrieve_supplies wa0)
+140.0: (l_cf__s0__retrieve_supplies wa0)
+141.0: (l_cf__s0__retrieve_supplies wa0)
+142.0: (l_cf__s0__move_forwards wa0 wa1)
+143.0: (l_cf__s0__retrieve_supplies wa1)
+144.0: (l_cf__s0__move_forwards wa1 wa2)
+145.0: (l_cf__s0__store_supplies wa2)
+146.0: (l_cf__s0__move_backwards wa2 wa1)
+147.0: (l_cf__s0__retrieve_supplies wa1)
+148.0: (l_cf__s0__move_backwards wa1 wa0)
+149.0: (l_cf__s0__retrieve_supplies wa0)
+150.0: (l_cf__s0__retrieve_supplies wa0)
+151.0: (l_cf__s0__retrieve_supplies wa0)
+152.0: (l_cf__s0__move_forwards wa0 wa1)
+153.0: (l_cf__s0__store_supplies wa1)
+154.0: (l_cf__s0__move_backwards wa1 wa0)
+155.0: (l_cf__s0__retrieve_supplies wa0)
+156.0: (l_cf__s0__retrieve_supplies wa0)
+157.0: (l_cf__s0__retrieve_supplies wa0)
+158.0: (l_cf__s0__move_forwards wa0 wa1)
+159.0: (l_cf__s0__retrieve_supplies wa1)
+160.0: (l_cf__s0__move_forwards wa1 wa2)
+161.0: (l_cf__s0__retrieve_supplies wa2)
+162.0: (l_cf__s0__move_forwards wa2 wa3)
+163.0: (l_cf__s0__move_forwards wa3 wa4)
+164.0: (l_cf__s0__move_forwards wa4 wa5)
+165.0: (l_cf__s0__move_forwards wa5 wa6)
+166.0: (end_f_s1)
+167.0: (end_f_s0)
+
+Plan-Length:168
+Metric (Search):168.0
+Planning Time (msec): 2497
+Heuristic Time (msec): 2292
+Search Time (msec): 2494
+Expanded Nodes:6307
+States Evaluated:19454
+Number of Dead-Ends detected:9432
+Number of Duplicates detected:6763

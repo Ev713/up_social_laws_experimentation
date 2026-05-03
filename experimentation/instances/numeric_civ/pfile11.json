@@ -1,0 +1,194 @@
+{
+  "places": [
+    "p0",
+    "p1"
+  ],
+  "boats": [],
+  "trains": [],
+  "resources": [
+    "timber",
+    "stone",
+    "ore",
+    "coal",
+    "wood",
+    "iron"
+  ],
+  "agents": [
+    "a0",
+    "a1"
+  ],
+  "bounds": {
+    "pollution": 26,
+    "resource-use": 26,
+    "housing": 3,
+    "available": 15,
+    "labour": 50,
+    "carts-at": 4
+  },
+  "init_values": {
+    "global": [
+      [
+        "mountain",
+        [
+          "p0"
+        ]
+      ],
+      [
+        "woodland",
+        [
+          "p0"
+        ]
+      ],
+      [
+        "metalliferous",
+        [
+          "p1"
+        ]
+      ],
+      [
+        "woodland",
+        [
+          "p1"
+        ]
+      ],
+      [
+        "is_timber",
+        [
+          "timber"
+        ]
+      ],
+      [
+        "is_stone",
+        [
+          "stone"
+        ]
+      ],
+      [
+        "is_ore",
+        [
+          "ore"
+        ]
+      ],
+      [
+        "is_coal",
+        [
+          "coal"
+        ]
+      ],
+      [
+        "is_wood",
+        [
+          "wood"
+        ]
+      ],
+      [
+        "is_iron",
+        [
+          "iron"
+        ]
+      ],
+      [
+        "connected-by-land",
+        [
+          "p0",
+          "p1"
+        ]
+      ],
+      [
+        "connected-by-land",
+        [
+          "p1",
+          "p0"
+        ]
+      ],
+      [
+        "=",
+        [
+          "pollution",
+          []
+        ],
+        "0"
+      ],
+      [
+        "=",
+        [
+          "resource-use",
+          []
+        ],
+        "0"
+      ],
+      [
+        "=",
+        [
+          "housing",
+          [
+            "p0"
+          ]
+        ],
+        "0"
+      ],
+      [
+        "=",
+        [
+          "housing",
+          [
+            "p1"
+          ]
+        ],
+        "0"
+      ]
+    ],
+    "a0": [
+      [
+        "=",
+        [
+          "labour",
+          []
+        ],
+        "0"
+      ]
+    ],
+    "a1": [
+      [
+        "=",
+        [
+          "labour",
+          []
+        ],
+        "0"
+      ]
+    ]
+  },
+  "goals": {
+    "global": [
+      [
+        "has-quarry",
+        [
+          "p0"
+        ]
+      ],
+      [
+        "has-mine",
+        [
+          "p1"
+        ]
+      ]
+    ],
+    "a0": [
+      [
+        "has-cabin",
+        [
+          "p0"
+        ]
+      ]
+    ],
+    "a1": [
+      [
+        "has-cabin",
+        [
+          "p1"
+        ]
+      ]
+    ]
+  }
+}

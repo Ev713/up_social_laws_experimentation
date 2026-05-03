@@ -1,0 +1,23 @@
+[2026-04-23 17:01:41] Starting robustness suite 'run_20260423_170141' with 5 cases and 1 verifiers (5 case/verifier pairs).
+[2026-04-23 17:01:41] Run directory: /home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_170141
+[2026-04-23 17:01:41] Results CSV: /home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_170141/results.csv
+[2026-04-23 17:01:41] Case manifest: /home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_170141/cases.csv
+[2026-04-23 17:01:41] Warnings file: /home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_170141/warnings.txt
+[2026-04-23 17:01:41] Limits: engine=enhsp, planner_timeout_seconds=30, wall_timeout_seconds=30, cpu_seconds=30, memory_bytes=16000000000
+[2026-04-23 17:01:41] Case 1/5: domain=numeric_markettrader, instance=pfile2.json, social_law=without_sl
+[2026-04-23 17:01:41] Starting pair 1/5: case_id=numeric_markettrader__pfile2__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 17:01:43] Finished pair 1/5: case_id=numeric_markettrader__pfile2__without_sl, verifier=general, status=NON_ROBUST_MULTI_AGENT_FAIL, planner_status=SOLVED_SATISFICING, elapsed_seconds=2.568, wall_clock_seconds=2.589, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_170141/logs/general__numeric_markettrader__pfile2__without_sl.log
+[2026-04-23 17:01:43] Case 2/5: domain=numeric_markettrader, instance=pfile3.json, social_law=without_sl
+[2026-04-23 17:01:43] Starting pair 2/5: case_id=numeric_markettrader__pfile3__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 17:01:49] Finished pair 2/5: case_id=numeric_markettrader__pfile3__without_sl, verifier=general, status=NON_ROBUST_MULTI_AGENT_FAIL, planner_status=SOLVED_SATISFICING, elapsed_seconds=6.061, wall_clock_seconds=6.135, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_170141/logs/general__numeric_markettrader__pfile3__without_sl.log
+[2026-04-23 17:01:49] Case 3/5: domain=numeric_markettrader, instance=pfile4.json, social_law=without_sl
+[2026-04-23 17:01:49] Starting pair 3/5: case_id=numeric_markettrader__pfile4__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 17:01:56] Finished pair 3/5: case_id=numeric_markettrader__pfile4__without_sl, verifier=general, status=NON_ROBUST_MULTI_AGENT_FAIL, planner_status=SOLVED_SATISFICING, elapsed_seconds=6.322, wall_clock_seconds=6.342, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_170141/logs/general__numeric_markettrader__pfile4__without_sl.log
+[2026-04-23 17:01:56] Case 4/5: domain=numeric_markettrader, instance=pfile5.json, social_law=without_sl
+[2026-04-23 17:01:56] Starting pair 4/5: case_id=numeric_markettrader__pfile5__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 17:02:05] Finished pair 4/5: case_id=numeric_markettrader__pfile5__without_sl, verifier=general, status=NON_ROBUST_MULTI_AGENT_FAIL, planner_status=SOLVED_SATISFICING, elapsed_seconds=9.025, wall_clock_seconds=9.044, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_170141/logs/general__numeric_markettrader__pfile5__without_sl.log
+[2026-04-23 17:02:05] Case 5/5: domain=numeric_markettrader, instance=pfile6.json, social_law=without_sl
+[2026-04-23 17:02:05] Starting pair 5/5: case_id=numeric_markettrader__pfile6__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 17:02:13] Finished pair 5/5: case_id=numeric_markettrader__pfile6__without_sl, verifier=general, status=NON_ROBUST_MULTI_AGENT_FAIL, planner_status=SOLVED_SATISFICING, elapsed_seconds=8.145, wall_clock_seconds=8.167, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_170141/logs/general__numeric_markettrader__pfile6__without_sl.log
+[2026-04-23 17:02:13] Run stopped after 5/5 pairs.
+[2026-04-23 17:02:13] Status summary so far: NON_ROBUST_MULTI_AGENT_FAIL=5

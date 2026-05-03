@@ -1,0 +1,25 @@
+{
+  "run_id": "run_20260427_170331",
+  "output_dir": "/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs",
+  "domains": [
+    "numeric_zenotravel"
+  ],
+  "instances": {
+    "numeric_zenotravel": [
+      "pfile1.json"
+    ]
+  },
+  "social_law_options": [
+    false
+  ],
+  "verifiers": [
+    "simple"
+  ],
+  "limits": {
+    "engine": "enhsp",
+    "planner_timeout_seconds": 120,
+    "wall_timeout_seconds": 120,
+    "cpu_seconds": 120,
+    "memory_bytes": 16000000000
+  }
+}

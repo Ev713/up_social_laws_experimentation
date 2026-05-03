@@ -1,0 +1,11 @@
+[2026-04-23 16:12:38] Starting robustness suite 'run_20260423_161238' with 1 cases and 1 verifiers (1 case/verifier pairs).
+[2026-04-23 16:12:38] Run directory: /home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_161238
+[2026-04-23 16:12:38] Results CSV: /home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_161238/results.csv
+[2026-04-23 16:12:38] Case manifest: /home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_161238/cases.csv
+[2026-04-23 16:12:38] Warnings file: /home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_161238/warnings.txt
+[2026-04-23 16:12:38] Limits: engine=enhsp, planner_timeout_seconds=30, wall_timeout_seconds=30, cpu_seconds=30, memory_bytes=16000000000
+[2026-04-23 16:12:38] Case 1/1: domain=numeric_markettrader, instance=pfile1.json, social_law=without_sl
+[2026-04-23 16:12:38] Starting pair 1/1: case_id=numeric_markettrader__pfile1__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 16:12:40] Finished pair 1/1: case_id=numeric_markettrader__pfile1__without_sl, verifier=general, status=ROBUST_RATIONAL, planner_status=UNSOLVABLE_PROVEN, elapsed_seconds=1.82, wall_clock_seconds=1.842, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_161238/logs/general__numeric_markettrader__pfile1__without_sl.log
+[2026-04-23 16:12:40] Run stopped after 1/1 pairs.
+[2026-04-23 16:12:40] Status summary so far: ROBUST_RATIONAL=1

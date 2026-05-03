@@ -1,0 +1,187 @@
+=== CASE ===
+domain: numeric_expedition
+instance_file: pfile1.json
+has_social_law: True
+problem_name: sl_expedition_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_expedition/pfile1
+verifier: simple
+
+=== CONVERSION ===
+=== SNP CONVERSION ===
+Converted problem: sl_expedition_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_expedition/pfile1_NUM_STRIPS
+
+=== COMPILER OUTPUT ===
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+
+=== SINGLE_AGENT s0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 15
+Aibr Preprocessing
+UFX:false
+|F|:6
+|X|:14
+|A|:22
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):5.0
+ g(n)= 2.0 h(n)=4.0
+ g(n)= 4.0 h(n)=3.0
+ g(n)= 6.0 h(n)=2.0
+ g(n)= 14.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (retrieve_supplies wa0)
+1.0: (retrieve_supplies wa0)
+2.0: (retrieve_supplies wa0)
+3.0: (move_forwards wa0 wa1)
+4.0: (store_supplies wa1)
+5.0: (move_backwards wa1 wa0)
+6.0: (retrieve_supplies wa0)
+7.0: (retrieve_supplies wa0)
+8.0: (retrieve_supplies wa0)
+9.0: (move_forwards wa0 wa1)
+10.0: (retrieve_supplies wa1)
+11.0: (move_forwards wa1 wa2)
+12.0: (move_forwards wa2 wa3)
+13.0: (move_forwards wa3 wa4)
+14.0: (move_forwards wa4 wa5)
+
+Plan-Length:15
+Metric (Search):15.0
+Planning Time (msec): 28
+Heuristic Time (msec): 13
+Search Time (msec): 26
+Expanded Nodes:55
+States Evaluated:91
+Number of Dead-Ends detected:32
+Number of Duplicates detected:44
+
+=== SINGLE_AGENT s1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 14
+Aibr Preprocessing
+UFX:false
+|F|:6
+|X|:14
+|A|:22
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):5.0
+ g(n)= 2.0 h(n)=4.0
+ g(n)= 4.0 h(n)=3.0
+ g(n)= 6.0 h(n)=2.0
+ g(n)= 14.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (retrieve_supplies wa0)
+1.0: (retrieve_supplies wa0)
+2.0: (retrieve_supplies wa0)
+3.0: (move_forwards wa0 wa1)
+4.0: (store_supplies wa1)
+5.0: (move_backwards wa1 wa0)
+6.0: (retrieve_supplies wa0)
+7.0: (retrieve_supplies wa0)
+8.0: (retrieve_supplies wa0)
+9.0: (move_forwards wa0 wa1)
+10.0: (retrieve_supplies wa1)
+11.0: (move_forwards wa1 wa2)
+12.0: (move_forwards wa2 wa3)
+13.0: (move_forwards wa3 wa4)
+14.0: (move_forwards wa4 wa5)
+
+Plan-Length:15
+Metric (Search):15.0
+Planning Time (msec): 31
+Heuristic Time (msec): 17
+Search Time (msec): 30
+Expanded Nodes:55
+States Evaluated:91
+Number of Dead-Ends detected:32
+Number of Duplicates detected:44
+
+=== ROBUSTNESS UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 57
+Aibr Preprocessing
+UFX:false
+|F|:29
+|X|:56
+|A|:204
+|P|:0
+|E|:0
+H1 Setup Time (msec): 10
+h(I):13.0
+ g(n)= 2.0 h(n)=12.0
+ g(n)= 4.0 h(n)=11.0
+ g(n)= 6.0 h(n)=10.0
+ g(n)= 8.0 h(n)=9.0
+ g(n)= 16.0 h(n)=8.0
+ g(n)= 17.0 h(n)=7.0
+ g(n)= 19.0 h(n)=6.0
+ g(n)= 27.0 h(n)=5.0
+ g(n)= 43.0 h(n)=4.0
+-------------Time: 10s ; Expanded Nodes: 38765 (Avg-Speed 3876.0 n/s); Evaluated States: 72181
+-------------Time: 20s ; Expanded Nodes: 84444 (Avg-Speed 4222.0 n/s); Evaluated States: 147081
+-------------Time: 30s ; Expanded Nodes: 145794 (Avg-Speed 4859.0 n/s); Evaluated States: 217688
+-------------Time: 40s ; Expanded Nodes: 213572 (Avg-Speed 5339.0 n/s); Evaluated States: 291493
+Problem unsolvable
+Metric (Search):-1.0
+Planning Time (msec): 41143
+Heuristic Time (msec): 36416
+Search Time (msec): 0
+Expanded Nodes:232694
+States Evaluated:298562
+Number of Dead-Ends detected:203279
+Number of Duplicates detected:719906

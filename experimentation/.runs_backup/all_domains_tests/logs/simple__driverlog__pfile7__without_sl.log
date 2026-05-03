@@ -1,0 +1,194 @@
+=== CASE ===
+domain: driverlog
+instance_file: pfile7.json
+has_social_law: False
+problem_name: driverlog
+verifier: simple
+
+=== CONVERSION ===
+=== SNP CONVERSION ===
+Converted problem: driverlog_NUM_STRIPS
+
+=== SINGLE_AGENT driver1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 17
+Aibr Preprocessing
+UFX:false
+|F|:57
+|X|:0
+|A|:156
+|P|:0
+|E|:0
+H1 Setup Time (msec): 7
+h(I):12.0
+ g(n)= 1.0 h(n)=6.0
+ g(n)= 2.0 h(n)=5.0
+ g(n)= 4.0 h(n)=4.0
+ g(n)= 5.0 h(n)=3.0
+ g(n)= 6.0 h(n)=2.0
+ g(n)= 7.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (board_truck s1 truck2)
+1.0: (load_truck truck2 package5 s1)
+2.0: (drive_truck s1 s2 truck2)
+3.0: (load_truck truck2 package2 s2)
+4.0: (drive_truck s2 s0 truck2)
+5.0: (unload_truck truck2 package5 s0)
+6.0: (drive_truck s0 s1 truck2)
+7.0: (unload_truck truck2 package2 s1)
+
+Plan-Length:8
+Metric (Search):8.0
+Planning Time (msec): 29
+Heuristic Time (msec): 19
+Search Time (msec): 28
+Expanded Nodes:15
+States Evaluated:63
+Number of Dead-Ends detected:0
+Number of Duplicates detected:21
+
+=== SINGLE_AGENT driver2 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 19
+Aibr Preprocessing
+UFX:false
+|F|:57
+|X|:0
+|A|:156
+|P|:0
+|E|:0
+H1 Setup Time (msec): 11
+h(I):4.0
+ g(n)= 1.0 h(n)=3.0
+ g(n)= 2.0 h(n)=2.0
+ g(n)= 3.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (walk s2 p2_1)
+1.0: (walk p2_1 s1)
+2.0: (board_truck s1 truck2)
+3.0: (drive_truck s1 s0 truck2)
+
+Plan-Length:4
+Metric (Search):4.0
+Planning Time (msec): 27
+Heuristic Time (msec): 12
+Search Time (msec): 25
+Expanded Nodes:5
+States Evaluated:13
+Number of Dead-Ends detected:0
+Number of Duplicates detected:3
+
+=== SINGLE_AGENT driver3 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 18
+Aibr Preprocessing
+UFX:false
+|F|:57
+|X|:0
+|A|:156
+|P|:0
+|E|:0
+H1 Setup Time (msec): 7
+h(I):12.0
+ g(n)= 1.0 h(n)=9.0
+ g(n)= 2.0 h(n)=6.0
+ g(n)= 3.0 h(n)=3.0
+ g(n)= 4.0 h(n)=2.0
+ g(n)= 5.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (walk s2 p2_1)
+1.0: (walk p2_1 s1)
+2.0: (board_truck s1 truck1)
+3.0: (load_truck truck1 package4 s1)
+4.0: (drive_truck s1 s2 truck1)
+5.0: (unload_truck truck1 package4 s2)
+
+Plan-Length:6
+Metric (Search):6.0
+Planning Time (msec): 23
+Heuristic Time (msec): 11
+Search Time (msec): 20
+Expanded Nodes:7
+States Evaluated:21
+Number of Dead-Ends detected:0
+Number of Duplicates detected:6
+
+=== ROBUSTNESS SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 85
+Aibr Preprocessing
+UFX:false
+|F|:252
+|X|:0
+|A|:2193
+|P|:0
+|E|:0
+H1 Setup Time (msec): 31
+h(I):33.0
+ g(n)= 1.0 h(n)=27.0
+ g(n)= 2.0 h(n)=24.0
+ g(n)= 3.0 h(n)=20.0
+ g(n)= 4.0 h(n)=16.0
+ g(n)= 5.0 h(n)=15.0
+ g(n)= 6.0 h(n)=14.0
+ g(n)= 7.0 h(n)=13.0
+ g(n)= 8.0 h(n)=12.0
+ g(n)= 9.0 h(n)=11.0
+ g(n)= 10.0 h(n)=10.0
+ g(n)= 11.0 h(n)=9.0
+ g(n)= 12.0 h(n)=8.0
+ g(n)= 14.0 h(n)=7.0
+ g(n)= 15.0 h(n)=6.0
+ g(n)= 16.0 h(n)=5.0
+ g(n)= 17.0 h(n)=4.0
+ g(n)= 18.0 h(n)=3.0
+ g(n)= 19.0 h(n)=2.0
+ g(n)= 20.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (s__driver1__board_truck s1 truck3)
+1.0: (s__driver3__walk s2 p2_1)
+2.0: (s__driver3__walk p2_1 s1)
+3.0: (f_not_empty_truck___driver3__board_truck s1 truck3)
+4.0: (l_cf__driver2__walk s2 p2_1)
+5.0: (l_cf__driver1__load_truck truck3 package5 s1)
+6.0: (l_cf__driver2__walk p2_1 s1)
+7.0: (l_cf__driver2__board_truck s1 truck2)
+8.0: (l_cf__driver2__drive_truck s1 s0 truck2)
+9.0: (l_cf__driver3__load_truck truck3 package4 s1)
+10.0: (l_cf__driver3__drive_truck s1 s2 truck3)
+11.0: (l_cf__driver3__unload_truck truck3 package4 s2)
+12.0: (l_cf__driver1__drive_truck s1 s2 truck3)
+13.0: (l_cf__driver1__load_truck truck3 package2 s2)
+14.0: (l_cf__driver1__drive_truck s2 s0 truck3)
+15.0: (l_cf__driver1__unload_truck truck3 package5 s0)
+16.0: (l_cf__driver1__drive_truck s0 s1 truck3)
+17.0: (l_cf__driver1__unload_truck truck3 package2 s1)
+18.0: (end_f_driver2)
+19.0: (end_f_driver1)
+20.0: (end_f_driver3)
+
+Plan-Length:21
+Metric (Search):21.0
+Planning Time (msec): 231
+Heuristic Time (msec): 212
+Search Time (msec): 230
+Expanded Nodes:23
+States Evaluated:275
+Number of Dead-Ends detected:17
+Number of Duplicates detected:29

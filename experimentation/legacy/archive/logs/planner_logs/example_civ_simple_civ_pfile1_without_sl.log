@@ -1,0 +1,12 @@
+=== SINGLE_AGENT a0 STATUS PlanGenerationResultStatus.UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 16
+Aibr Preprocessing
+Problem Detected as Unsolvable by AIBR during preprocessing
+UFX:false
+|F|:3
+|X|:1
+Unsolvable Problem
+

@@ -1,0 +1,1 @@
+UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 1] // Value type: integer[20, 20]

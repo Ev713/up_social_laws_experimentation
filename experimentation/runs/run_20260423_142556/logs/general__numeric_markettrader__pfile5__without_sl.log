@@ -1,0 +1,114 @@
+=== CASE ===
+domain: numeric_markettrader
+instance_file: pfile5.json
+has_social_law: False
+problem_name: market_trader_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_markettrader/pfile5
+verifier: general
+
+=== SINGLE_AGENT camel0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 33
+Aibr Preprocessing
+UFX:false
+|F|:5
+|X|:14
+|A|:41
+|P|:0
+|E|:0
+H1 Setup Time (msec): 10
+h(I):3.0
+ g(n)= 1.0 h(n)=2.4285715
+ g(n)= 2.0 h(n)=1.5714285
+ g(n)= 4.0 h(n)=1.1428572
+ g(n)= 6.0 h(n)=0.71428573
+Problem Solved
+
+Found Plan:
+0.0: (buy_g0_m0)
+1.0: (travel_m0_m1)
+2.0: (sell_g0_m1)
+3.0: (buy_g0_m1)
+4.0: (sell_g0_m1)
+5.0: (buy_g0_m1)
+6.0: (sell_g0_m1)
+
+Plan-Length:7
+Metric (Search):7.0
+Planning Time (msec): 40
+Heuristic Time (msec): 21
+Search Time (msec): 36
+Expanded Nodes:8
+States Evaluated:42
+Number of Dead-Ends detected:3
+Number of Duplicates detected:4
+
+=== SINGLE_AGENT camel1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 44
+Aibr Preprocessing
+UFX:false
+|F|:5
+|X|:14
+|A|:41
+|P|:0
+|E|:0
+H1 Setup Time (msec): 16
+h(I):2.75
+ g(n)= 2.0 h(n)=2.3333333
+ g(n)= 4.0 h(n)=1.8333334
+ g(n)= 5.0 h(n)=1.8333333
+ g(n)= 6.0 h(n)=1.3333334
+ g(n)= 8.0 h(n)=0.8333333
+Problem Solved
+
+Found Plan:
+0.0: (buy_g1_m1)
+1.0: (travel_m1_m3)
+2.0: (sell_g1_m3)
+3.0: (buy_g1_m3)
+4.0: (sell_g1_m3)
+5.0: (buy_g1_m3)
+6.0: (sell_g1_m3)
+7.0: (buy_g1_m3)
+8.0: (sell_g1_m3)
+
+Plan-Length:9
+Metric (Search):9.0
+Planning Time (msec): 44
+Heuristic Time (msec): 23
+Search Time (msec): 39
+Expanded Nodes:11
+States Evaluated:52
+Number of Dead-Ends detected:4
+Number of Duplicates detected:7
+
+=== ROBUSTNESS INTERNAL_ERROR ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 504
+Aibr Preprocessing
+UFX:false
+|F|:112
+|X|:46
+|A|:333
+|P|:0
+|E|:0
+H1 Setup Time (msec): 30
+h(I):10.0
+ g(n)= 1.0 h(n)=9.0
+ g(n)= 5.0 h(n)=3.0
+-------------Time: 10s ; Expanded Nodes: 4398 (Avg-Speed 439.0 n/s); Evaluated States: 31961
+-------------Time: 20s ; Expanded Nodes: 9553 (Avg-Speed 477.0 n/s); Evaluated States: 67331
+-------------Time: 30s ; Expanded Nodes: 14552 (Avg-Speed 485.0 n/s); Evaluated States: 102590
+-------------Time: 40s ; Expanded Nodes: 19760 (Avg-Speed 494.0 n/s); Evaluated States: 137873
+-------------Time: 50s ; Expanded Nodes: 24837 (Avg-Speed 496.0 n/s); Evaluated States: 172721
+-------------Time: 60s ; Expanded Nodes: 32053 (Avg-Speed 534.0 n/s); Evaluated States: 206915
+-------------Time: 70s ; Expanded Nodes: 39093 (Avg-Speed 558.0 n/s); Evaluated States: 240079
+-------------Time: 80s ; Expanded Nodes: 44883 (Avg-Speed 561.0 n/s); Evaluated States: 277009
+-------------Time: 90s ; Expanded Nodes: 51072 (Avg-Speed 567.0 n/s); Evaluated States: 315424
+-------------Time: 100s ; Expanded Nodes: 56350 (Avg-Speed 563.0 n/s); Evaluated States: 353660

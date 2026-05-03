@@ -1,0 +1,163 @@
+{
+  "places": [
+    "p0"
+  ],
+  "boats": [],
+  "trains": [],
+  "resources": [
+    "timber",
+    "stone",
+    "ore",
+    "coal",
+    "wood",
+    "iron"
+  ],
+  "agents": [
+    "a0",
+    "a1"
+  ],
+  "bounds": {
+    "pollution": 18,
+    "resource-use": 18,
+    "housing": 2,
+    "available": 11,
+    "labour": 34,
+    "carts-at": 3
+  },
+  "init_values": {
+    "global": [
+      [
+        "metalliferous",
+        [
+          "p0"
+        ]
+      ],
+      [
+        "mountain",
+        [
+          "p0"
+        ]
+      ],
+      [
+        "woodland",
+        [
+          "p0"
+        ]
+      ],
+      [
+        "is_timber",
+        [
+          "timber"
+        ]
+      ],
+      [
+        "is_stone",
+        [
+          "stone"
+        ]
+      ],
+      [
+        "is_ore",
+        [
+          "ore"
+        ]
+      ],
+      [
+        "is_coal",
+        [
+          "coal"
+        ]
+      ],
+      [
+        "is_wood",
+        [
+          "wood"
+        ]
+      ],
+      [
+        "is_iron",
+        [
+          "iron"
+        ]
+      ],
+      [
+        "=",
+        [
+          "pollution",
+          []
+        ],
+        "0"
+      ],
+      [
+        "=",
+        [
+          "resource-use",
+          []
+        ],
+        "0"
+      ],
+      [
+        "=",
+        [
+          "housing",
+          [
+            "p0"
+          ]
+        ],
+        "0"
+      ]
+    ],
+    "a0": [
+      [
+        "=",
+        [
+          "labour",
+          []
+        ],
+        "0"
+      ]
+    ],
+    "a1": [
+      [
+        "=",
+        [
+          "labour",
+          []
+        ],
+        "0"
+      ]
+    ]
+  },
+  "goals": {
+    "global": [
+      [
+        "has-mine",
+        [
+          "p0"
+        ]
+      ],
+      [
+        "has-ironworks",
+        [
+          "p0"
+        ]
+      ]
+    ],
+    "a0": [
+      [
+        "has-sawmill",
+        [
+          "p0"
+        ]
+      ]
+    ],
+    "a1": [
+      [
+        "has-coal-stack",
+        [
+          "p0"
+        ]
+      ]
+    ]
+  }
+}

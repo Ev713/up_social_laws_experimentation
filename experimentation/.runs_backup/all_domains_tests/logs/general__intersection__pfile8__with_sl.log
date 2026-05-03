@@ -1,0 +1,183 @@
+=== CASE ===
+domain: intersection
+instance_file: pfile8.json
+has_social_law: True
+problem_name: sl_intersection
+verifier: general
+
+=== SINGLE_AGENT car-north SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 12
+Aibr Preprocessing
+UFX:false
+|F|:10
+|X|:0
+|A|:4
+|P|:0
+|E|:0
+H1 Setup Time (msec): 4
+h(I):4.0
+ g(n)= 1.0 h(n)=3.0
+ g(n)= 2.0 h(n)=2.0
+ g(n)= 3.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive south_ent)
+1.0: (drive south_ent cross_se north cross_ne)
+2.0: (drive cross_se cross_ne north dummy)
+3.0: (drive cross_ne north_ex north dummy)
+
+Plan-Length:4
+Metric (Search):4.0
+Planning Time (msec): 13
+Heuristic Time (msec): 5
+Search Time (msec): 12
+Expanded Nodes:5
+States Evaluated:5
+Number of Dead-Ends detected:0
+Number of Duplicates detected:0
+
+=== SINGLE_AGENT car-south SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 13
+Aibr Preprocessing
+UFX:false
+|F|:10
+|X|:0
+|A|:4
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):4.0
+ g(n)= 1.0 h(n)=3.0
+ g(n)= 2.0 h(n)=2.0
+ g(n)= 3.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive north_ent)
+1.0: (drive north_ent cross_nw south cross_sw)
+2.0: (drive cross_nw cross_sw south dummy)
+3.0: (drive cross_sw south_ex south dummy)
+
+Plan-Length:4
+Metric (Search):4.0
+Planning Time (msec): 14
+Heuristic Time (msec): 5
+Search Time (msec): 12
+Expanded Nodes:5
+States Evaluated:5
+Number of Dead-Ends detected:0
+Number of Duplicates detected:0
+
+=== SINGLE_AGENT car-west SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 16
+Aibr Preprocessing
+UFX:false
+|F|:10
+|X|:0
+|A|:4
+|P|:0
+|E|:0
+H1 Setup Time (msec): 4
+h(I):4.0
+ g(n)= 1.0 h(n)=3.0
+ g(n)= 2.0 h(n)=2.0
+ g(n)= 3.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive east_ent)
+1.0: (drive east_ent cross_ne west cross_nw)
+2.0: (drive cross_ne cross_nw west dummy)
+3.0: (drive cross_nw west_ex west dummy)
+
+Plan-Length:4
+Metric (Search):4.0
+Planning Time (msec): 15
+Heuristic Time (msec): 6
+Search Time (msec): 14
+Expanded Nodes:5
+States Evaluated:5
+Number of Dead-Ends detected:0
+Number of Duplicates detected:0
+
+=== SINGLE_AGENT car-east SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 12
+Aibr Preprocessing
+UFX:false
+|F|:10
+|X|:0
+|A|:4
+|P|:0
+|E|:0
+H1 Setup Time (msec): 4
+h(I):4.0
+ g(n)= 1.0 h(n)=3.0
+ g(n)= 2.0 h(n)=2.0
+ g(n)= 3.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (arrive west_ent)
+1.0: (drive west_ent cross_sw east cross_se)
+2.0: (drive cross_sw cross_se east dummy)
+3.0: (drive cross_se east_ex east dummy)
+
+Plan-Length:4
+Metric (Search):4.0
+Planning Time (msec): 13
+Heuristic Time (msec): 5
+Search Time (msec): 12
+Expanded Nodes:5
+States Evaluated:5
+Number of Dead-Ends detected:0
+Number of Duplicates detected:0
+
+=== ROBUSTNESS UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 571
+Aibr Preprocessing
+UFX:false
+|F|:109
+|X|:0
+|A|:182
+|P|:0
+|E|:0
+H1 Setup Time (msec): 8
+h(I):21.0
+ g(n)= 1.0 h(n)=20.0
+ g(n)= 2.0 h(n)=19.0
+ g(n)= 3.0 h(n)=18.0
+ g(n)= 4.0 h(n)=17.0
+ g(n)= 6.0 h(n)=16.0
+ g(n)= 7.0 h(n)=14.0
+ g(n)= 8.0 h(n)=13.0
+ g(n)= 10.0 h(n)=12.0
+ g(n)= 11.0 h(n)=10.0
+ g(n)= 12.0 h(n)=9.0
+ g(n)= 13.0 h(n)=8.0
+ g(n)= 14.0 h(n)=7.0
+ g(n)= 15.0 h(n)=6.0
+Problem unsolvable
+Metric (Search):-1.0
+Planning Time (msec): 220
+Heuristic Time (msec): 163
+Search Time (msec): 0
+Expanded Nodes:1286
+States Evaluated:1286
+Number of Dead-Ends detected:1896
+Number of Duplicates detected:3567

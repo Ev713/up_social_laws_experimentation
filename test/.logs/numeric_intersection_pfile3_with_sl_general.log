@@ -1,0 +1,26 @@
+=== CASE ===
+domain: numeric_intersection
+instance_file: pfile3.json
+has_social_law: True
+problem_name: numeric_intersection_n3
+verifier: general
+
+=== SINGLE_AGENT car-south-1 INTERNAL_ERROR ===
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/ym/Documents/GitHub/up_social_laws_experimentation/.venv/bin/python -m translate /tmp/tmp1ev0eky9/domain.pddl /tmp/tmp1ev0eky9/problem.pddl --sas-file output.sas
+Parsing...
+Parsing domain
+	->Parsing requirements
+Error in requirements.
+Reason: Invalid requirement. Got: :numeric-fluents
+Expected: :strips, :adl, :typing, :negation, :equality, :negative-preconditions, :disjunctive-preconditions, :existential-preconditions, :universal-preconditions, :quantified-preconditions, :conditional-effects, :derived-predicates, :action-costs
+translate exit code: 31
+
+Driver aborting after translate
+INFO     Planner time: 0.15s

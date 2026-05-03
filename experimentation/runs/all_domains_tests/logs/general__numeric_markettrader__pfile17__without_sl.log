@@ -1,0 +1,178 @@
+=== CASE ===
+domain: numeric_markettrader
+instance_file: pfile17.json
+has_social_law: False
+problem_name: market_trader_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_markettrader/pfile17
+verifier: general
+
+=== SINGLE_AGENT camel0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 132
+Aibr Preprocessing
+UFX:false
+|F|:14
+|X|:92
+|A|:321
+|P|:0
+|E|:0
+H1 Setup Time (msec): 13
+h(I):10.111111
+ g(n)= 1.0 h(n)=8.5
+ g(n)= 2.0 h(n)=7.6
+ g(n)= 3.0 h(n)=6.9
+ g(n)= 5.0 h(n)=5.9
+ g(n)= 7.0 h(n)=4.9
+ g(n)= 9.0 h(n)=3.9
+ g(n)= 11.0 h(n)=2.9
+ g(n)= 13.0 h(n)=1.9
+ g(n)= 15.0 h(n)=0.9
+Problem Solved
+
+Found Plan:
+0.0: (travel_edinburgh_bonn)
+1.0: (buy_footballs_bonn)
+2.0: (travel_bonn_daugavpils)
+3.0: (sell_footballs_daugavpils)
+4.0: (buy_footballs_daugavpils)
+5.0: (sell_footballs_daugavpils)
+6.0: (buy_footballs_daugavpils)
+7.0: (sell_footballs_daugavpils)
+8.0: (buy_footballs_daugavpils)
+9.0: (sell_footballs_daugavpils)
+10.0: (buy_footballs_daugavpils)
+11.0: (sell_footballs_daugavpils)
+12.0: (buy_footballs_daugavpils)
+13.0: (sell_footballs_daugavpils)
+14.0: (buy_footballs_daugavpils)
+15.0: (sell_footballs_daugavpils)
+
+Plan-Length:16
+Metric (Search):16.0
+Planning Time (msec): 129
+Heuristic Time (msec): 114
+Search Time (msec): 128
+Expanded Nodes:17
+States Evaluated:197
+Number of Dead-Ends detected:6
+Number of Duplicates detected:0
+
+=== SINGLE_AGENT camel1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 137
+Aibr Preprocessing
+UFX:false
+|F|:14
+|X|:92
+|A|:329
+|P|:0
+|E|:0
+H1 Setup Time (msec): 13
+h(I):8.4
+ g(n)= 1.0 h(n)=7.5
+ g(n)= 2.0 h(n)=6.8
+ g(n)= 4.0 h(n)=5.8
+ g(n)= 6.0 h(n)=4.8
+ g(n)= 8.0 h(n)=3.8
+ g(n)= 10.0 h(n)=2.8
+ g(n)= 12.0 h(n)=1.8
+ g(n)= 14.0 h(n)=0.8
+Problem Solved
+
+Found Plan:
+0.0: (buy_footballs_bonn)
+1.0: (travel_bonn_daugavpils)
+2.0: (sell_footballs_daugavpils)
+3.0: (buy_footballs_daugavpils)
+4.0: (sell_footballs_daugavpils)
+5.0: (buy_footballs_daugavpils)
+6.0: (sell_footballs_daugavpils)
+7.0: (buy_footballs_daugavpils)
+8.0: (sell_footballs_daugavpils)
+9.0: (buy_footballs_daugavpils)
+10.0: (sell_footballs_daugavpils)
+11.0: (buy_footballs_daugavpils)
+12.0: (sell_footballs_daugavpils)
+13.0: (buy_footballs_daugavpils)
+14.0: (sell_footballs_daugavpils)
+
+Plan-Length:15
+Metric (Search):15.0
+Planning Time (msec): 117
+Heuristic Time (msec): 101
+Search Time (msec): 114
+Expanded Nodes:16
+States Evaluated:205
+Number of Dead-Ends detected:5
+Number of Duplicates detected:0
+
+=== SINGLE_AGENT camel2 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 114
+Aibr Preprocessing
+UFX:false
+|F|:14
+|X|:92
+|A|:323
+|P|:0
+|E|:0
+H1 Setup Time (msec): 10
+h(I):9.4
+ g(n)= 1.0 h(n)=8.6
+ g(n)= 2.0 h(n)=7.8
+ g(n)= 3.0 h(n)=7.1
+ g(n)= 5.0 h(n)=6.1
+ g(n)= 7.0 h(n)=5.1
+ g(n)= 9.0 h(n)=4.1
+ g(n)= 11.0 h(n)=3.1
+ g(n)= 13.0 h(n)=2.1
+ g(n)= 15.0 h(n)=1.1
+ g(n)= 17.0 h(n)=0.1
+Problem Solved
+
+Found Plan:
+0.0: (travel_rome_daugavpils)
+1.0: (buy_turingmachines_daugavpils)
+2.0: (travel_daugavpils_seda)
+3.0: (sell_turingmachines_seda)
+4.0: (buy_turingmachines_seda)
+5.0: (sell_turingmachines_seda)
+6.0: (buy_turingmachines_seda)
+7.0: (sell_turingmachines_seda)
+8.0: (buy_turingmachines_seda)
+9.0: (sell_turingmachines_seda)
+10.0: (buy_turingmachines_seda)
+11.0: (sell_turingmachines_seda)
+12.0: (buy_turingmachines_seda)
+13.0: (sell_turingmachines_seda)
+14.0: (buy_turingmachines_seda)
+15.0: (sell_turingmachines_seda)
+16.0: (buy_turingmachines_seda)
+17.0: (sell_turingmachines_seda)
+
+Plan-Length:18
+Metric (Search):18.0
+Planning Time (msec): 109
+Heuristic Time (msec): 93
+Search Time (msec): 107
+Expanded Nodes:19
+States Evaluated:237
+Number of Dead-Ends detected:6
+Number of Duplicates detected:3
+
+=== ROBUSTNESS UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 9259
+Aibr Preprocessing
+Problem Detected as Unsolvable by AIBR during preprocessing
+UFX:false
+|F|:1150
+|X|:384
+Unsolvable Problem

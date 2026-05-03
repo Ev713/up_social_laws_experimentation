@@ -1,0 +1,12 @@
+[2026-04-27 17:03:31] Starting robustness suite 'run_20260427_170331' with 1 cases and 1 verifiers (1 case/verifier pairs).
+[2026-04-27 17:03:31] Run directory: /home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260427_170331
+[2026-04-27 17:03:31] Results CSV: /home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260427_170331/results.csv
+[2026-04-27 17:03:31] Case manifest: /home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260427_170331/cases.csv
+[2026-04-27 17:03:31] Warnings file: /home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260427_170331/warnings.txt
+[2026-04-27 17:03:31] Limits: engine=enhsp, planner_timeout_seconds=120, wall_timeout_seconds=120, cpu_seconds=120, memory_bytes=16000000000
+[2026-04-27 17:03:31] Case 1/1: domain=numeric_zenotravel, instance=pfile1.json, social_law=without_sl
+[2026-04-27 17:03:31] Starting pair 1/1: case_id=numeric_zenotravel__pfile1__without_sl, verifier=simple (1/1 for this case)
+[2026-04-27 17:05:21] Finished pair 1/1: case_id=numeric_zenotravel__pfile1__without_sl, verifier=simple, status=UNKNOWN, planner_status=INTERNAL_ERROR, elapsed_seconds=110.529, wall_clock_seconds=110.557, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260427_170331/logs/simple__numeric_zenotravel__pfile1__without_sl.log
+[2026-04-27 17:05:21] Warnings for numeric_zenotravel__pfile1__without_sl/simple: Compiled robustness problem returned INTERNAL_ERROR.
+[2026-04-27 17:05:21] Run stopped after 1/1 pairs.
+[2026-04-27 17:05:21] Status summary so far: UNKNOWN=1

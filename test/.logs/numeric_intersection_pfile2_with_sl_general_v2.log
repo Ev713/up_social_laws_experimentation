@@ -1,0 +1,16 @@
+=== CASE ===
+domain: numeric_intersection
+instance_file: pfile2.json
+has_social_law: True
+problem_name: numeric_intersection_n2
+verifier: general
+
+=== SINGLE_AGENT car-south-1 UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 11
+UFX:false
+|F|:3
+|X|:0
+Unsolvable Problem

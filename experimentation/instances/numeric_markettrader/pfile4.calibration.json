@@ -1,0 +1,59 @@
+{
+  "instance": "pfile4.json",
+  "seed": 0,
+  "max_steps": 8,
+  "planner_timeout_seconds": 30,
+  "initial_status": "ROBUST_RATIONAL",
+  "steps": [
+    {
+      "step": 1,
+      "mutation": "raised sellprice for ['g0', 'm3']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    },
+    {
+      "step": 2,
+      "mutation": "lowered price for ['g1', 'm1']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    },
+    {
+      "step": 3,
+      "mutation": "lowered price for ['g0', 'm1']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    },
+    {
+      "step": 4,
+      "mutation": "increased stock for ['g0', 'm0']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    },
+    {
+      "step": 5,
+      "mutation": "increased stock for ['g0', 'm0']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    },
+    {
+      "step": 6,
+      "mutation": "lowered price for ['g1', 'm3']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    },
+    {
+      "step": 7,
+      "mutation": "increased stock for ['g0', 'm0']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    },
+    {
+      "step": 8,
+      "mutation": "raised sellprice for ['g1', 'm3']",
+      "status": "ROBUST_RATIONAL",
+      "planner_status": "UNSOLVABLE_PROVEN"
+    }
+  ],
+  "final_status": "ROBUST_RATIONAL",
+  "final_planner_status": "UNSOLVABLE_PROVEN"
+}

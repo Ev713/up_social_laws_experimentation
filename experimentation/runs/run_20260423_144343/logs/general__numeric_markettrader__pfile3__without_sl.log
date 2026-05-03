@@ -1,0 +1,34 @@
+=== CASE ===
+domain: numeric_markettrader
+instance_file: pfile3.json
+has_social_law: False
+problem_name: market_trader_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_markettrader/pfile3
+verifier: general
+
+=== SINGLE_AGENT camel0 UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 22
+Aibr Preprocessing
+UFX:false
+|F|:4
+|X|:4
+|A|:18
+|P|:0
+|E|:0
+H1 Setup Time (msec): 9
+h(I):2.0
+ g(n)= 2.0 h(n)=1.8333334
+ g(n)= 4.0 h(n)=1.6666666
+ g(n)= 6.0 h(n)=1.5
+ g(n)= 8.0 h(n)=1.3333334
+Problem unsolvable
+Metric (Search):-1.0
+Planning Time (msec): 142
+Heuristic Time (msec): 65
+Search Time (msec): 0
+Expanded Nodes:1118
+States Evaluated:1495
+Number of Dead-Ends detected:652
+Number of Duplicates detected:1925

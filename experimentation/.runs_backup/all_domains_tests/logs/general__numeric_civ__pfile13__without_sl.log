@@ -1,0 +1,135 @@
+=== CASE ===
+domain: numeric_civ
+instance_file: pfile13.json
+has_social_law: False
+problem_name: civ_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_civ/pfile13
+verifier: general
+
+=== SINGLE_AGENT a0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 31
+Aibr Preprocessing
+UFX:false
+|F|:17
+|X|:17
+|A|:72
+|P|:0
+|E|:0
+H1 Setup Time (msec): 11
+h(I):70.0
+ g(n)= 1.0 h(n)=56.0
+ g(n)= 2.0 h(n)=42.0
+ g(n)= 3.0 h(n)=37.0
+ g(n)= 4.0 h(n)=35.0
+ g(n)= 5.0 h(n)=33.0
+ g(n)= 6.0 h(n)=31.0
+ g(n)= 8.0 h(n)=26.0
+ g(n)= 10.0 h(n)=21.0
+ g(n)= 12.0 h(n)=17.0
+ g(n)= 14.0 h(n)=15.0
+ g(n)= 16.0 h(n)=13.0
+ g(n)= 17.0 h(n)=11.0
+ g(n)= 26.0 h(n)=9.0
+ g(n)= 27.0 h(n)=7.0
+ g(n)= 29.0 h(n)=6.0
+ g(n)= 30.0 h(n)=5.0
+ g(n)= 35.0 h(n)=4.0
+ g(n)= 36.0 h(n)=3.0
+ g(n)= 37.0 h(n)=2.0
+ g(n)= 39.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (build_cabin p0)
+1.0: (fell_timber p0 timber)
+2.0: (fell_timber p0 timber)
+3.0: (build_quarry p0)
+4.0: (break_stone p0 stone)
+5.0: (break_stone p0 stone)
+6.0: (fell_timber p0 timber)
+7.0: (build_sawmill p0 timber)
+8.0: (fell_timber p0 timber)
+9.0: (saw_wood p0 timber wood)
+10.0: (fell_timber p0 timber)
+11.0: (saw_wood p0 timber wood)
+12.0: (fell_timber p0 timber)
+13.0: (build_coal_stack p0 timber)
+14.0: (fell_timber p0 timber)
+15.0: (burn_coal p0 timber coal)
+16.0: (burn_coal p0 timber coal)
+17.0: (build_cabin p1)
+18.0: (build_quarry p1)
+19.0: (break_stone p0 stone)
+20.0: (break_stone p1 stone)
+21.0: (fell_timber p0 timber)
+22.0: (fell_timber p0 timber)
+23.0: (saw_wood p0 timber wood)
+24.0: (saw_wood p0 timber wood)
+25.0: (build_mine p0 wood)
+26.0: (mine_ore p0 ore)
+27.0: (fell_timber p0 timber)
+28.0: (build_ironworks p0 stone wood)
+29.0: (saw_wood p0 timber wood)
+30.0: (fell_timber p0 timber)
+31.0: (fell_timber p0 timber)
+32.0: (burn_coal p0 timber coal)
+33.0: (burn_coal p0 timber coal)
+34.0: (make_iron p0 ore coal iron)
+35.0: (mine_ore p0 ore)
+36.0: (make_iron p0 ore coal iron)
+37.0: (build_train p0 t0 iron)
+38.0: (unload_train t0 p0 iron)
+39.0: (build_rail p0 p1 wood iron)
+
+Plan-Length:40
+Metric (Search):40.0
+Planning Time (msec): 125
+Heuristic Time (msec): 93
+Search Time (msec): 123
+Expanded Nodes:211
+States Evaluated:1352
+Number of Dead-Ends detected:0
+Number of Duplicates detected:580
+
+=== SINGLE_AGENT a1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 32
+Aibr Preprocessing
+UFX:false
+|F|:12
+|X|:12
+|A|:38
+|P|:0
+|E|:0
+H1 Setup Time (msec): 8
+h(I):1.0
+Problem Solved
+
+Found Plan:
+0.0: (build_cabin p1)
+
+Plan-Length:1
+Metric (Search):1.0
+Planning Time (msec): 12
+Heuristic Time (msec): 6
+Search Time (msec): 9
+Expanded Nodes:2
+States Evaluated:5
+Number of Dead-Ends detected:0
+Number of Duplicates detected:0
+
+=== ROBUSTNESS UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 261
+Aibr Preprocessing
+Problem Detected as Unsolvable by AIBR during preprocessing
+UFX:false
+|F|:216
+|X|:53
+Unsolvable Problem

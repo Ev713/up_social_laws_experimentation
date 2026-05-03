@@ -1,0 +1,16 @@
+=== CASE ===
+domain: numeric_civ
+instance_file: pfile10.json
+has_social_law: False
+problem_name: civ_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_civ/pfile10
+verifier: general
+
+=== SINGLE_AGENT a0 UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 15
+UFX:false
+|F|:7
+|X|:5
+Unsolvable Problem

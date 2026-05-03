@@ -1,0 +1,143 @@
+=== CASE ===
+domain: numeric_civ
+instance_file: pfile12.json
+has_social_law: True
+problem_name: sl_civ_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_civ/pfile12
+verifier: general
+
+=== SINGLE_AGENT a0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 23
+Aibr Preprocessing
+UFX:false
+|F|:12
+|X|:24
+|A|:38
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):256.0
+ g(n)= 1.0 h(n)=182.0
+ g(n)= 2.0 h(n)=108.0
+ g(n)= 3.0 h(n)=78.0
+ g(n)= 4.0 h(n)=74.0
+ g(n)= 5.0 h(n)=70.0
+ g(n)= 6.0 h(n)=66.0
+ g(n)= 8.0 h(n)=51.0
+ g(n)= 10.0 h(n)=37.0
+ g(n)= 12.0 h(n)=25.0
+ g(n)= 14.0 h(n)=21.0
+ g(n)= 16.0 h(n)=17.0
+ g(n)= 17.0 h(n)=13.0
+ g(n)= 28.0 h(n)=9.0
+ g(n)= 29.0 h(n)=5.0
+ g(n)= 32.0 h(n)=3.0
+ g(n)= 33.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (build_cabin p0)
+1.0: (fell_timber p0 timber)
+2.0: (fell_timber p0 timber)
+3.0: (build_quarry p0)
+4.0: (break_stone p0 stone)
+5.0: (break_stone p0 stone)
+6.0: (fell_timber p0 timber)
+7.0: (build_sawmill p0 timber)
+8.0: (fell_timber p0 timber)
+9.0: (saw_wood p0 timber wood)
+10.0: (fell_timber p0 timber)
+11.0: (saw_wood p0 timber wood)
+12.0: (fell_timber p0 timber)
+13.0: (build_coal_stack p0 timber)
+14.0: (fell_timber p0 timber)
+15.0: (burn_coal p0 timber coal)
+16.0: (burn_coal p0 timber coal)
+17.0: (build_cabin p1)
+18.0: (build_quarry p1)
+19.0: (fell_timber p0 timber)
+20.0: (build_cart p0 timber)
+21.0: (fell_timber p0 timber)
+22.0: (fell_timber p1 timber)
+23.0: (build_coal_stack p1 timber)
+24.0: (fell_timber p0 timber)
+25.0: (saw_wood p0 timber wood)
+26.0: (saw_wood p0 timber wood)
+27.0: (build_mine p0 wood)
+28.0: (mine_ore p0 ore)
+29.0: (fell_timber p0 timber)
+30.0: (saw_wood p0 timber wood)
+31.0: (build_ironworks p0 stone wood)
+32.0: (make_iron p0 ore coal iron)
+33.0: (build_rail p0 p1 wood iron)
+
+Plan-Length:34
+Metric (Search):34.0
+Planning Time (msec): 126
+Heuristic Time (msec): 101
+Search Time (msec): 125
+Expanded Nodes:247
+States Evaluated:2076
+Number of Dead-Ends detected:0
+Number of Duplicates detected:767
+
+=== SINGLE_AGENT a1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 22
+Aibr Preprocessing
+UFX:false
+|F|:12
+|X|:25
+|A|:38
+|P|:0
+|E|:0
+H1 Setup Time (msec): 6
+h(I):30.0
+ g(n)= 1.0 h(n)=22.0
+ g(n)= 2.0 h(n)=14.0
+ g(n)= 3.0 h(n)=10.0
+ g(n)= 4.0 h(n)=8.0
+ g(n)= 5.0 h(n)=6.0
+ g(n)= 6.0 h(n)=5.0
+ g(n)= 9.0 h(n)=3.0
+ g(n)= 10.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (build_cabin p0)
+1.0: (fell_timber p0 timber)
+2.0: (fell_timber p0 timber)
+3.0: (build_quarry p0)
+4.0: (break_stone p0 stone)
+5.0: (build_cabin p1)
+6.0: (build_quarry p1)
+7.0: (fell_timber p0 timber)
+8.0: (build_sawmill p0 timber)
+9.0: (saw_wood p0 timber wood)
+10.0: (build_house p0 wood stone)
+
+Plan-Length:11
+Metric (Search):11.0
+Planning Time (msec): 29
+Heuristic Time (msec): 20
+Search Time (msec): 27
+Expanded Nodes:14
+States Evaluated:82
+Number of Dead-Ends detected:0
+Number of Duplicates detected:3
+
+=== ROBUSTNESS UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 291
+Aibr Preprocessing
+Problem Detected as Unsolvable by AIBR during preprocessing
+UFX:false
+|F|:141
+|X|:95
+Unsolvable Problem

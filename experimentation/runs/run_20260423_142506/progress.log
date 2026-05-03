@@ -1,0 +1,88 @@
+[2026-04-23 14:25:06] Starting robustness suite 'run_20260423_142506' with 20 cases and 1 verifiers (20 case/verifier pairs).
+[2026-04-23 14:25:06] Run directory: /home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506
+[2026-04-23 14:25:06] Results CSV: /home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/results.csv
+[2026-04-23 14:25:06] Case manifest: /home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/cases.csv
+[2026-04-23 14:25:06] Warnings file: /home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/warnings.txt
+[2026-04-23 14:25:06] Limits: engine=enhsp, planner_timeout_seconds=120, wall_timeout_seconds=120, cpu_seconds=120, memory_bytes=16000000000
+[2026-04-23 14:25:06] Case 1/20: domain=numeric_markettrader, instance=pfile1.json, social_law=without_sl
+[2026-04-23 14:25:06] Starting pair 1/20: case_id=numeric_markettrader__pfile1__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:06] Finished pair 1/20: case_id=numeric_markettrader__pfile1__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.024, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile1__without_sl.log
+[2026-04-23 14:25:06] Warnings for numeric_markettrader__pfile1__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 9] // Value type: integer[20, 20]
+[2026-04-23 14:25:06] Case 2/20: domain=numeric_markettrader, instance=pfile2.json, social_law=without_sl
+[2026-04-23 14:25:06] Starting pair 2/20: case_id=numeric_markettrader__pfile2__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:06] Finished pair 2/20: case_id=numeric_markettrader__pfile2__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.023, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile2__without_sl.log
+[2026-04-23 14:25:06] Warnings for numeric_markettrader__pfile2__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 9] // Value type: integer[20, 20]
+[2026-04-23 14:25:06] Case 3/20: domain=numeric_markettrader, instance=pfile3.json, social_law=without_sl
+[2026-04-23 14:25:06] Starting pair 3/20: case_id=numeric_markettrader__pfile3__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:06] Finished pair 3/20: case_id=numeric_markettrader__pfile3__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.021, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile3__without_sl.log
+[2026-04-23 14:25:06] Warnings for numeric_markettrader__pfile3__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 9] // Value type: integer[20, 20]
+[2026-04-23 14:25:06] Case 4/20: domain=numeric_markettrader, instance=pfile4.json, social_law=without_sl
+[2026-04-23 14:25:06] Starting pair 4/20: case_id=numeric_markettrader__pfile4__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:06] Finished pair 4/20: case_id=numeric_markettrader__pfile4__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.023, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile4__without_sl.log
+[2026-04-23 14:25:06] Warnings for numeric_markettrader__pfile4__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 11] // Value type: integer[20, 20]
+[2026-04-23 14:25:06] Case 5/20: domain=numeric_markettrader, instance=pfile5.json, social_law=without_sl
+[2026-04-23 14:25:06] Starting pair 5/20: case_id=numeric_markettrader__pfile5__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:06] Finished pair 5/20: case_id=numeric_markettrader__pfile5__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.021, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile5__without_sl.log
+[2026-04-23 14:25:06] Warnings for numeric_markettrader__pfile5__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 11] // Value type: integer[20, 20]
+[2026-04-23 14:25:06] Case 6/20: domain=numeric_markettrader, instance=pfile6.json, social_law=without_sl
+[2026-04-23 14:25:06] Starting pair 6/20: case_id=numeric_markettrader__pfile6__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:06] Finished pair 6/20: case_id=numeric_markettrader__pfile6__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.02, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile6__without_sl.log
+[2026-04-23 14:25:06] Warnings for numeric_markettrader__pfile6__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 11] // Value type: integer[20, 20]
+[2026-04-23 14:25:06] Case 7/20: domain=numeric_markettrader, instance=pfile7.json, social_law=without_sl
+[2026-04-23 14:25:06] Starting pair 7/20: case_id=numeric_markettrader__pfile7__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:06] Finished pair 7/20: case_id=numeric_markettrader__pfile7__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.026, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile7__without_sl.log
+[2026-04-23 14:25:06] Warnings for numeric_markettrader__pfile7__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 12] // Value type: integer[20, 20]
+[2026-04-23 14:25:06] Case 8/20: domain=numeric_markettrader, instance=pfile8.json, social_law=without_sl
+[2026-04-23 14:25:06] Starting pair 8/20: case_id=numeric_markettrader__pfile8__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:06] Finished pair 8/20: case_id=numeric_markettrader__pfile8__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.028, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile8__without_sl.log
+[2026-04-23 14:25:06] Warnings for numeric_markettrader__pfile8__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 13] // Value type: integer[20, 20]
+[2026-04-23 14:25:06] Case 9/20: domain=numeric_markettrader, instance=pfile9.json, social_law=without_sl
+[2026-04-23 14:25:06] Starting pair 9/20: case_id=numeric_markettrader__pfile9__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:06] Finished pair 9/20: case_id=numeric_markettrader__pfile9__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.025, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile9__without_sl.log
+[2026-04-23 14:25:06] Warnings for numeric_markettrader__pfile9__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 13] // Value type: integer[20, 20]
+[2026-04-23 14:25:06] Case 10/20: domain=numeric_markettrader, instance=pfile10.json, social_law=without_sl
+[2026-04-23 14:25:06] Starting pair 10/20: case_id=numeric_markettrader__pfile10__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:06] Finished pair 10/20: case_id=numeric_markettrader__pfile10__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.025, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile10__without_sl.log
+[2026-04-23 14:25:06] Warnings for numeric_markettrader__pfile10__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 14] // Value type: integer[20, 20]
+[2026-04-23 14:25:06] Case 11/20: domain=numeric_markettrader, instance=pfile11.json, social_law=without_sl
+[2026-04-23 14:25:06] Starting pair 11/20: case_id=numeric_markettrader__pfile11__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:06] Finished pair 11/20: case_id=numeric_markettrader__pfile11__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.022, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile11__without_sl.log
+[2026-04-23 14:25:06] Warnings for numeric_markettrader__pfile11__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 14] // Value type: integer[20, 20]
+[2026-04-23 14:25:06] Case 12/20: domain=numeric_markettrader, instance=pfile12.json, social_law=without_sl
+[2026-04-23 14:25:06] Starting pair 12/20: case_id=numeric_markettrader__pfile12__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:06] Finished pair 12/20: case_id=numeric_markettrader__pfile12__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.022, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile12__without_sl.log
+[2026-04-23 14:25:06] Warnings for numeric_markettrader__pfile12__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 15] // Value type: integer[20, 20]
+[2026-04-23 14:25:06] Case 13/20: domain=numeric_markettrader, instance=pfile13.json, social_law=without_sl
+[2026-04-23 14:25:06] Starting pair 13/20: case_id=numeric_markettrader__pfile13__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:06] Finished pair 13/20: case_id=numeric_markettrader__pfile13__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.023, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile13__without_sl.log
+[2026-04-23 14:25:06] Warnings for numeric_markettrader__pfile13__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 16] // Value type: integer[20, 20]
+[2026-04-23 14:25:06] Case 14/20: domain=numeric_markettrader, instance=pfile14.json, social_law=without_sl
+[2026-04-23 14:25:06] Starting pair 14/20: case_id=numeric_markettrader__pfile14__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:06] Finished pair 14/20: case_id=numeric_markettrader__pfile14__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.021, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile14__without_sl.log
+[2026-04-23 14:25:06] Warnings for numeric_markettrader__pfile14__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 16] // Value type: integer[20, 20]
+[2026-04-23 14:25:06] Case 15/20: domain=numeric_markettrader, instance=pfile15.json, social_law=without_sl
+[2026-04-23 14:25:06] Starting pair 15/20: case_id=numeric_markettrader__pfile15__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:06] Finished pair 15/20: case_id=numeric_markettrader__pfile15__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.022, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile15__without_sl.log
+[2026-04-23 14:25:06] Warnings for numeric_markettrader__pfile15__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 16] // Value type: integer[20, 20]
+[2026-04-23 14:25:06] Case 16/20: domain=numeric_markettrader, instance=pfile16.json, social_law=without_sl
+[2026-04-23 14:25:06] Starting pair 16/20: case_id=numeric_markettrader__pfile16__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:06] Finished pair 16/20: case_id=numeric_markettrader__pfile16__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.022, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile16__without_sl.log
+[2026-04-23 14:25:06] Warnings for numeric_markettrader__pfile16__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 18] // Value type: integer[20, 20]
+[2026-04-23 14:25:06] Case 17/20: domain=numeric_markettrader, instance=pfile17.json, social_law=without_sl
+[2026-04-23 14:25:06] Starting pair 17/20: case_id=numeric_markettrader__pfile17__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:06] Finished pair 17/20: case_id=numeric_markettrader__pfile17__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.026, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile17__without_sl.log
+[2026-04-23 14:25:06] Warnings for numeric_markettrader__pfile17__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 18] // Value type: integer[20, 20]
+[2026-04-23 14:25:06] Case 18/20: domain=numeric_markettrader, instance=pfile18.json, social_law=without_sl
+[2026-04-23 14:25:06] Starting pair 18/20: case_id=numeric_markettrader__pfile18__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:07] Finished pair 18/20: case_id=numeric_markettrader__pfile18__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.028, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile18__without_sl.log
+[2026-04-23 14:25:07] Warnings for numeric_markettrader__pfile18__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 18] // Value type: integer[20, 20]
+[2026-04-23 14:25:07] Case 19/20: domain=numeric_markettrader, instance=pfile19.json, social_law=without_sl
+[2026-04-23 14:25:07] Starting pair 19/20: case_id=numeric_markettrader__pfile19__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:07] Finished pair 19/20: case_id=numeric_markettrader__pfile19__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.026, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile19__without_sl.log
+[2026-04-23 14:25:07] Warnings for numeric_markettrader__pfile19__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 19] // Value type: integer[20, 20]
+[2026-04-23 14:25:07] Case 20/20: domain=numeric_markettrader, instance=pfile20.json, social_law=without_sl
+[2026-04-23 14:25:07] Starting pair 20/20: case_id=numeric_markettrader__pfile20__without_sl, verifier=general (1/1 for this case)
+[2026-04-23 14:25:07] Finished pair 20/20: case_id=numeric_markettrader__pfile20__without_sl, verifier=general, status=UNKNOWN, planner_status=WORKER_ERROR, elapsed_seconds=0, wall_clock_seconds=0.025, log_file=/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/runs/run_20260423_142506/logs/general__numeric_markettrader__pfile20__without_sl.log
+[2026-04-23 14:25:07] Warnings for numeric_markettrader__pfile20__without_sl/general: UPTypeError: InstantaneousAction effect has an incompatible value type. Fluent type: integer[0, 19] // Value type: integer[20, 20]
+[2026-04-23 14:25:07] Run stopped after 20/20 pairs.
+[2026-04-23 14:25:07] Status summary so far: UNKNOWN=20

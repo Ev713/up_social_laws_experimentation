@@ -1,0 +1,132 @@
+=== CASE ===
+domain: numeric_civ
+instance_file: pfile2.json
+has_social_law: True
+problem_name: sl_civ_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_civ/pfile2
+verifier: general
+
+=== SINGLE_AGENT a0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 15
+Aibr Preprocessing
+UFX:false
+|F|:3
+|X|:2
+|A|:5
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):5.0
+ g(n)= 1.0 h(n)=3.0
+ g(n)= 2.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (build_cabin p0)
+1.0: (fell_timber p0 timber)
+2.0: (build_coal_stack p0 timber)
+
+Plan-Length:3
+Metric (Search):3.0
+Planning Time (msec): 9
+Heuristic Time (msec): 3
+Search Time (msec): 7
+Expanded Nodes:4
+States Evaluated:5
+Number of Dead-Ends detected:0
+Number of Duplicates detected:1
+
+=== SINGLE_AGENT a1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 20
+Aibr Preprocessing
+UFX:false
+|F|:3
+|X|:2
+|A|:5
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):5.0
+ g(n)= 1.0 h(n)=3.0
+ g(n)= 2.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (build_cabin p0)
+1.0: (fell_timber p0 timber)
+2.0: (build_coal_stack p0 timber)
+
+Plan-Length:3
+Metric (Search):3.0
+Planning Time (msec): 9
+Heuristic Time (msec): 3
+Search Time (msec): 6
+Expanded Nodes:4
+States Evaluated:5
+Number of Dead-Ends detected:0
+Number of Duplicates detected:1
+
+=== ROBUSTNESS INTERNAL_ERROR ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 258
+Aibr Preprocessing
+UFX:false
+|F|:26
+|X|:7
+|A|:37
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):8.0
+ g(n)= 1.0 h(n)=6.0
+ g(n)= 2.0 h(n)=3.0
+-------------Time: 10s ; Expanded Nodes: 437619 (Avg-Speed 43761.0 n/s); Evaluated States: 864286
+-------------Time: 20s ; Expanded Nodes: 858700 (Avg-Speed 42935.0 n/s); Evaluated States: 1706427
+-------------Time: 30s ; Expanded Nodes: 1256837 (Avg-Speed 41894.0 n/s); Evaluated States: 2502548
+-------------Time: 40s ; Expanded Nodes: 1709917 (Avg-Speed 42747.0 n/s); Evaluated States: 3408682
+-------------Time: 50s ; Expanded Nodes: 2125935 (Avg-Speed 42518.0 n/s); Evaluated States: 4240125
+-------------Time: 60s ; Expanded Nodes: 2576999 (Avg-Speed 42949.0 n/s); Evaluated States: 5141826
+-------------Time: 70s ; Expanded Nodes: 3032054 (Avg-Speed 43315.0 n/s); Evaluated States: 6051707
+-------------Time: 80s ; Expanded Nodes: 3471026 (Avg-Speed 43387.0 n/s); Evaluated States: 6929423
+-------------Time: 90s ; Expanded Nodes: 3874544 (Avg-Speed 43050.0 n/s); Evaluated States: 7736451
+-------------Time: 100s ; Expanded Nodes: 4306778 (Avg-Speed 43067.0 n/s); Evaluated States: 8600428
+-------------Time: 110s ; Expanded Nodes: 4749592 (Avg-Speed 43178.0 n/s); Evaluated States: 9485384
+-------------Time: 120s ; Expanded Nodes: 5171364 (Avg-Speed 43094.0 n/s); Evaluated States: 10328825
+-------------Time: 130s ; Expanded Nodes: 5532068 (Avg-Speed 42554.0 n/s); Evaluated States: 11049993
+-------------Time: 140s ; Expanded Nodes: 5967648 (Avg-Speed 42626.0 n/s); Evaluated States: 11921133
+-------------Time: 150s ; Expanded Nodes: 6418269 (Avg-Speed 42788.0 n/s); Evaluated States: 12822367
+-------------Time: 160s ; Expanded Nodes: 6861705 (Avg-Speed 42885.0 n/s); Evaluated States: 13709237
+-------------Time: 170s ; Expanded Nodes: 7304478 (Avg-Speed 42967.0 n/s); Evaluated States: 14594783
+-------------Time: 180s ; Expanded Nodes: 7731069 (Avg-Speed 42950.0 n/s); Evaluated States: 15447963
+-------------Time: 190s ; Expanded Nodes: 8149809 (Avg-Speed 42893.0 n/s); Evaluated States: 16285443
+-------------Time: 200s ; Expanded Nodes: 8507343 (Avg-Speed 42536.0 n/s); Evaluated States: 17000490
+-------------Time: 210s ; Expanded Nodes: 8932125 (Avg-Speed 42533.0 n/s); Evaluated States: 17850053
+-------------Time: 220s ; Expanded Nodes: 9325082 (Avg-Speed 42386.0 n/s); Evaluated States: 18635966
+-------------Time: 230s ; Expanded Nodes: 9659094 (Avg-Speed 41996.0 n/s); Evaluated States: 19303982
+-------------Time: 240s ; Expanded Nodes: 10073178 (Avg-Speed 41971.0 n/s); Evaluated States: 20132146
+-------------Time: 250s ; Expanded Nodes: 10470334 (Avg-Speed 41881.0 n/s); Evaluated States: 20926411
+-------------Time: 260s ; Expanded Nodes: 10870716 (Avg-Speed 41810.0 n/s); Evaluated States: 21726960
+-------------Time: 270s ; Expanded Nodes: 11278570 (Avg-Speed 41772.0 n/s); Evaluated States: 22542662
+-------------Time: 280s ; Expanded Nodes: 11596064 (Avg-Speed 41414.0 n/s); Evaluated States: 23177642
+-------------Time: 290s ; Expanded Nodes: 11926041 (Avg-Speed 41124.0 n/s); Evaluated States: 23837596
+-------------Time: 300s ; Expanded Nodes: 12138082 (Avg-Speed 40460.0 n/s); Evaluated States: 24261676
+-------------Time: 310s ; Expanded Nodes: 12265553 (Avg-Speed 39566.0 n/s); Evaluated States: 24516618
+-------------Time: 321s ; Expanded Nodes: 12351629 (Avg-Speed 38478.0 n/s); Evaluated States: 24688770
+-------------Time: 332s ; Expanded Nodes: 12441355 (Avg-Speed 37473.0 n/s); Evaluated States: 24868222
+-------------Time: 342s ; Expanded Nodes: 12495779 (Avg-Speed 36537.0 n/s); Evaluated States: 24977070
+-------------Time: 354s ; Expanded Nodes: 12513920 (Avg-Speed 35350.0 n/s); Evaluated States: 25013352
+-------------Time: 364s ; Expanded Nodes: 12524217 (Avg-Speed 34407.0 n/s); Evaluated States: 25033946
+-------------Time: 374s ; Expanded Nodes: 12529610 (Avg-Speed 33501.0 n/s); Evaluated States: 25044732
+-------------Time: 385s ; Expanded Nodes: 12532552 (Avg-Speed 32552.0 n/s); Evaluated States: 25050616
+-------------Time: 400s ; Expanded Nodes: 12535494 (Avg-Speed 31338.0 n/s); Evaluated States: 25056500
+-------------Time: 411s ; Expanded Nodes: 12558538 (Avg-Speed 30556.0 n/s); Evaluated States: 25102588
+-------------Time: 422s ; Expanded Nodes: 12561480 (Avg-Speed 29766.0 n/s); Evaluated States: 25108472
+-------------Time: 433s ; Expanded Nodes: 12564422 (Avg-Speed 29017.0 n/s); Evaluated States: 25114356
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space: failed reallocation of scalar replaced objects

@@ -1,0 +1,140 @@
+=== CASE ===
+domain: numeric_grid
+instance_file: pfile4.json
+has_social_law: True
+problem_name: grid_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_grid/pfile4
+verifier: general
+
+=== SINGLE_AGENT a0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 14
+Aibr Preprocessing
+UFX:false
+|F|:62
+|X|:0
+|A|:36
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):13.0
+ g(n)= 1.0 h(n)=6.0
+ g(n)= 2.0 h(n)=5.0
+ g(n)= 3.0 h(n)=4.0
+ g(n)= 4.0 h(n)=3.0
+ g(n)= 5.0 h(n)=2.0
+ g(n)= 6.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (appear)
+1.0: (move_left_2_0)
+2.0: (move_left_1_0)
+3.0: (move_up_0_0)
+4.0: (move_up_0_1)
+5.0: (move_up_0_2)
+6.0: (leave)
+
+Plan-Length:7
+Metric (Search):7.0
+Planning Time (msec): 14
+Heuristic Time (msec): 4
+Search Time (msec): 11
+Expanded Nodes:8
+States Evaluated:10
+Number of Dead-Ends detected:0
+Number of Duplicates detected:0
+
+=== SINGLE_AGENT a1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 15
+Aibr Preprocessing
+UFX:false
+|F|:62
+|X|:0
+|A|:36
+|P|:0
+|E|:0
+H1 Setup Time (msec): 5
+h(I):23.0
+ g(n)= 1.0 h(n)=11.0
+ g(n)= 2.0 h(n)=10.0
+ g(n)= 3.0 h(n)=9.0
+ g(n)= 4.0 h(n)=8.0
+ g(n)= 5.0 h(n)=7.0
+ g(n)= 6.0 h(n)=6.0
+ g(n)= 7.0 h(n)=5.0
+ g(n)= 8.0 h(n)=4.0
+ g(n)= 9.0 h(n)=3.0
+ g(n)= 10.0 h(n)=2.0
+ g(n)= 11.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (appear)
+1.0: (move_right_1_4)
+2.0: (move_right_2_4)
+3.0: (move_down_3_4)
+4.0: (move_down_3_3)
+5.0: (move_down_3_2)
+6.0: (move_down_3_1)
+7.0: (move_left_3_0)
+8.0: (move_up_2_0)
+9.0: (move_up_2_1)
+10.0: (move_up_2_2)
+11.0: (leave)
+
+Plan-Length:12
+Metric (Search):12.0
+Planning Time (msec): 15
+Heuristic Time (msec): 5
+Search Time (msec): 13
+Expanded Nodes:13
+States Evaluated:16
+Number of Dead-Ends detected:0
+Number of Duplicates detected:1
+
+=== ROBUSTNESS UNSOLVABLE_PROVEN ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 148
+Aibr Preprocessing
+UFX:false
+|F|:301
+|X|:0
+|A|:784
+|P|:0
+|E|:0
+H1 Setup Time (msec): 19
+h(I):41.0
+ g(n)= 1.0 h(n)=29.0
+ g(n)= 2.0 h(n)=23.0
+ g(n)= 3.0 h(n)=21.0
+ g(n)= 4.0 h(n)=20.0
+ g(n)= 5.0 h(n)=19.0
+ g(n)= 6.0 h(n)=18.0
+ g(n)= 7.0 h(n)=17.0
+ g(n)= 8.0 h(n)=16.0
+ g(n)= 9.0 h(n)=15.0
+ g(n)= 10.0 h(n)=14.0
+ g(n)= 11.0 h(n)=13.0
+ g(n)= 12.0 h(n)=12.0
+ g(n)= 13.0 h(n)=11.0
+ g(n)= 14.0 h(n)=10.0
+ g(n)= 15.0 h(n)=9.0
+ g(n)= 16.0 h(n)=8.0
+ g(n)= 17.0 h(n)=7.0
+ g(n)= 18.0 h(n)=6.0
+Problem unsolvable
+Metric (Search):-1.0
+Planning Time (msec): 1393
+Heuristic Time (msec): 1203
+Search Time (msec): 0
+Expanded Nodes:4032
+States Evaluated:4253
+Number of Dead-Ends detected:334
+Number of Duplicates detected:4521

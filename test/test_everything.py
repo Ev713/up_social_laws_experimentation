@@ -9,7 +9,7 @@ long_dash = "-----------------"
 
 def test_expedition_generation():
     prob_gen = ExpeditionGenerator()
-    prob_gen.instances_folder = "numeric_problems_instances/expedition/json"
+    prob_gen.instances_folder = "instances/numeric_expedition"
     for instance_id in range(1, 21):
         instance_name = f'pfile{instance_id}.json'
         prob = prob_gen.generate_problem(instance_name)
@@ -17,7 +17,7 @@ def test_expedition_generation():
 
 def test_numeric_zenotrvel_generation():
     prob_gen = NumericZenotravelGenerator()
-    prob_gen.instances_folder = "numeric_problems_instances/zenotravel/json"
+    prob_gen.instances_folder = "instances/numeric_zenotravel"
     for instance_id in range(1, 21):
         instance_name = f'pfile{instance_id}.json'
         prob = prob_gen.generate_problem(instance_name)
@@ -26,7 +26,7 @@ def test_numeric_zenotrvel_generation():
 
 def test_markettrader_generation():
     prob_gen = MarketTraderGenerator()
-    prob_gen.instances_folder = "numeric_problems_instances/markettrader/json"
+    prob_gen.instances_folder = "instances/numeric_markettrader"
     for instance_id in range(1, 21):
         instance_name = f'pfile{instance_id}.json'
         prob = prob_gen.generate_problem(instance_name)
@@ -36,7 +36,7 @@ def test_markettrader_generation():
 def get_expedition_problems():
     problems = []
     prob_gen = ExpeditionGenerator()
-    prob_gen.instances_folder = "numeric_problems_instances/expedition/json"
+    prob_gen.instances_folder = "instances/numeric_expedition"
     for instance_id in range(1, 21):
         instance_name = f'pfile{instance_id}.json'
         problems.append(prob_gen.generate_problem(instance_name))
@@ -45,7 +45,7 @@ def get_expedition_problems():
 def get_numeric_zenotravel_problems():
     problems = []
     prob_gen = NumericZenotravelGenerator()
-    prob_gen.instances_folder = "numeric_problems_instances/zenotravel/json"
+    prob_gen.instances_folder = "instances/numeric_zenotravel"
     for instance_id in range(1, 21):
         instance_name = f'pfile{instance_id}.json'
         problems.append(prob_gen.generate_problem(instance_name))
@@ -54,7 +54,7 @@ def get_numeric_zenotravel_problems():
 def get_markettrader_problems():
     problems = []
     prob_gen = MarketTraderGenerator()
-    prob_gen.instances_folder = "numeric_problems_instances/markettrader/json"
+    prob_gen.instances_folder = "instances/numeric_markettrader"
     for instance_id in range(1, 21):
         instance_name = f'pfile{instance_id}.json'
         problems.append(prob_gen.generate_problem(instance_name))

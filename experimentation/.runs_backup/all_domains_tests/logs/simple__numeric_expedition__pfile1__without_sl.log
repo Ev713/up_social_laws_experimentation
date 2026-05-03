@@ -1,0 +1,256 @@
+=== CASE ===
+domain: numeric_expedition
+instance_file: pfile1.json
+has_social_law: False
+problem_name: expedition_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_expedition/pfile1
+verifier: simple
+
+=== CONVERSION ===
+=== SNP CONVERSION ===
+Converted problem: expedition_/home/ym/Documents/GitHub/up_social_laws_experimentation/experimentation/instances/numeric_expedition/pfile1_NUM_STRIPS
+
+=== COMPILER OUTPUT ===
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+Warning, weird things with wt^phi happen
+
+=== SINGLE_AGENT s0 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 14
+Aibr Preprocessing
+UFX:false
+|F|:6
+|X|:8
+|A|:22
+|P|:0
+|E|:0
+H1 Setup Time (msec): 4
+h(I):5.0
+ g(n)= 2.0 h(n)=4.0
+ g(n)= 4.0 h(n)=3.0
+ g(n)= 6.0 h(n)=2.0
+ g(n)= 14.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (retrieve_supplies wa0)
+1.0: (retrieve_supplies wa0)
+2.0: (retrieve_supplies wa0)
+3.0: (move_forwards wa0 wa1)
+4.0: (store_supplies wa1)
+5.0: (move_backwards wa1 wa0)
+6.0: (retrieve_supplies wa0)
+7.0: (retrieve_supplies wa0)
+8.0: (retrieve_supplies wa0)
+9.0: (move_forwards wa0 wa1)
+10.0: (retrieve_supplies wa1)
+11.0: (move_forwards wa1 wa2)
+12.0: (move_forwards wa2 wa3)
+13.0: (move_forwards wa3 wa4)
+14.0: (move_forwards wa4 wa5)
+
+Plan-Length:15
+Metric (Search):15.0
+Planning Time (msec): 22
+Heuristic Time (msec): 10
+Search Time (msec): 21
+Expanded Nodes:55
+States Evaluated:91
+Number of Dead-Ends detected:32
+Number of Duplicates detected:44
+
+=== SINGLE_AGENT s1 SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 12
+Aibr Preprocessing
+UFX:false
+|F|:6
+|X|:8
+|A|:22
+|P|:0
+|E|:0
+H1 Setup Time (msec): 8
+h(I):5.0
+ g(n)= 2.0 h(n)=4.0
+ g(n)= 4.0 h(n)=3.0
+ g(n)= 6.0 h(n)=2.0
+ g(n)= 14.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (retrieve_supplies wa0)
+1.0: (retrieve_supplies wa0)
+2.0: (retrieve_supplies wa0)
+3.0: (move_forwards wa0 wa1)
+4.0: (store_supplies wa1)
+5.0: (move_backwards wa1 wa0)
+6.0: (retrieve_supplies wa0)
+7.0: (retrieve_supplies wa0)
+8.0: (retrieve_supplies wa0)
+9.0: (move_forwards wa0 wa1)
+10.0: (retrieve_supplies wa1)
+11.0: (move_forwards wa1 wa2)
+12.0: (move_forwards wa2 wa3)
+13.0: (move_forwards wa3 wa4)
+14.0: (move_forwards wa4 wa5)
+
+Plan-Length:15
+Metric (Search):15.0
+Planning Time (msec): 24
+Heuristic Time (msec): 14
+Search Time (msec): 23
+Expanded Nodes:55
+States Evaluated:91
+Number of Dead-Ends detected:32
+Number of Duplicates detected:44
+
+=== ROBUSTNESS SOLVED_SATISFICING ===
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 64
+Aibr Preprocessing
+UFX:false
+|F|:29
+|X|:32
+|A|:192
+|P|:0
+|E|:0
+H1 Setup Time (msec): 11
+h(I):13.0
+ g(n)= 2.0 h(n)=12.0
+ g(n)= 4.0 h(n)=11.0
+ g(n)= 6.0 h(n)=10.0
+ g(n)= 8.0 h(n)=9.0
+ g(n)= 16.0 h(n)=8.0
+ g(n)= 17.0 h(n)=7.0
+ g(n)= 51.0 h(n)=6.0
+ g(n)= 57.0 h(n)=5.0
+ g(n)= 59.0 h(n)=4.0
+ g(n)= 67.0 h(n)=3.0
+ g(n)= 68.0 h(n)=2.0
+ g(n)= 69.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (s__s0__retrieve_supplies wa0)
+1.0: (s__s0__move_forwards wa0 wa1)
+2.0: (s__s1__retrieve_supplies wa0)
+3.0: (s__s1__retrieve_supplies wa0)
+4.0: (s__s1__retrieve_supplies wa0)
+5.0: (s__s1__move_forwards wa0 wa1)
+6.0: (s__s1__store_supplies wa1)
+7.0: (s__s1__move_backwards wa1 wa0)
+8.0: (s__s1__retrieve_supplies wa0)
+9.0: (s__s1__retrieve_supplies wa0)
+10.0: (s__s1__retrieve_supplies wa0)
+11.0: (s__s1__move_forwards wa0 wa1)
+12.0: (s__s1__store_supplies wa1)
+13.0: (s__s1__move_backwards wa1 wa0)
+14.0: (s__s1__retrieve_supplies wa0)
+15.0: (s__s1__move_forwards wa0 wa1)
+16.0: (s__s1__retrieve_supplies wa1)
+17.0: (s__s1__move_backwards wa1 wa0)
+18.0: (s__s1__retrieve_supplies wa0)
+19.0: (s__s1__retrieve_supplies wa0)
+20.0: (s__s1__retrieve_supplies wa0)
+21.0: (s__s1__move_forwards wa0 wa1)
+22.0: (s__s1__move_backwards wa1 wa0)
+23.0: (s__s1__retrieve_supplies wa0)
+24.0: (s__s1__retrieve_supplies wa0)
+25.0: (s__s1__move_forwards wa0 wa1)
+26.0: (s__s1__store_supplies wa1)
+27.0: (s__s1__move_backwards wa1 wa0)
+28.0: (s__s1__retrieve_supplies wa0)
+29.0: (s__s1__retrieve_supplies wa0)
+30.0: (s__s1__retrieve_supplies wa0)
+31.0: (s__s1__move_forwards wa0 wa1)
+32.0: (s__s1__move_backwards wa1 wa0)
+33.0: (s__s1__retrieve_supplies wa0)
+34.0: (s__s1__retrieve_supplies wa0)
+35.0: (s__s1__move_forwards wa0 wa1)
+36.0: (s__s1__retrieve_supplies wa1)
+37.0: (s__s1__move_forwards wa1 wa2)
+38.0: (s__s1__store_supplies wa2)
+39.0: (s__s1__move_backwards wa2 wa1)
+40.0: (s__s1__retrieve_supplies wa1)
+41.0: (s__s1__move_backwards wa1 wa0)
+42.0: (s__s1__retrieve_supplies wa0)
+43.0: (s__s1__retrieve_supplies wa0)
+44.0: (f_not__1______s1__p1_waypoint_supplies___w____s1__retrieve_supplies wa0)
+45.0: (l_cf__s1__move_forwards wa0 wa1)
+46.0: (l_cf__s1__move_forwards wa1 wa2)
+47.0: (l_cf__s1__retrieve_supplies wa2)
+48.0: (l_cf__s1__move_forwards wa2 wa3)
+49.0: (l_cf__s1__move_forwards wa3 wa4)
+50.0: (l_cf__s1__move_forwards wa4 wa5)
+51.0: (l_cf__s0__move_backwards wa1 wa0)
+52.0: (l_cf__s0__retrieve_supplies wa0)
+53.0: (l_cf__s0__retrieve_supplies wa0)
+54.0: (l_cf__s0__retrieve_supplies wa0)
+55.0: (l_cf__s0__retrieve_supplies wa0)
+56.0: (l_cf__s0__move_forwards wa0 wa1)
+57.0: (l_cf__s0__store_supplies wa1)
+58.0: (l_cf__s0__move_backwards wa1 wa0)
+59.0: (l_cf__s0__retrieve_supplies wa0)
+60.0: (l_cf__s0__retrieve_supplies wa0)
+61.0: (l_cf__s0__retrieve_supplies wa0)
+62.0: (l_cf__s0__move_forwards wa0 wa1)
+63.0: (l_cf__s0__retrieve_supplies wa1)
+64.0: (l_cf__s0__move_forwards wa1 wa2)
+65.0: (l_cf__s0__move_forwards wa2 wa3)
+66.0: (l_cf__s0__move_forwards wa3 wa4)
+67.0: (l_cf__s0__move_forwards wa4 wa5)
+68.0: (end_f_s1)
+69.0: (end_f_s0)
+
+Plan-Length:70
+Metric (Search):70.0
+Planning Time (msec): 359
+Heuristic Time (msec): 301
+Search Time (msec): 356
+Expanded Nodes:608
+States Evaluated:1934
+Number of Dead-Ends detected:934
+Number of Duplicates detected:563

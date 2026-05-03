@@ -265,9 +265,16 @@ class LinearEffectData(NumStripsEffectData):
         self.target_fluent = None
         self.change = 0
         if fluent_expr is not None:
-
             target_var, expr_node = fluent_expr.fluent, fluent_expr.value
             self.target_fluent = AtomicFluent.from_fnode(target_var)
+            if fluent_expr.is_increase():
+                assert is_constant(expr_node)
+                self.change = constant_value(expr_node)
+                return
+            if fluent_expr.is_decrease():
+                assert is_constant(expr_node)
+                self.change = -constant_value(expr_node)
+                return
 
             try:
                 lin_expr = parse_linear_expression(expr_node)
@@ -809,7 +816,11 @@ class NumericStripsProblemConverter:
             adjusted_v = curr_v + new_value
             self.numeric_strips_problem.set_initial_value(fluent_expr, adjusted_v)
         else:
-            self.get_action(action_id).add_effect(fluent_expr, Plus(fluent_expr, new_value))
+            action = self.get_action(action_id)
+            if new_value > 0:
+                action.add_increase_effect(fluent_expr, new_value)
+            elif new_value < 0:
+                action.add_decrease_effect(fluent_expr, -new_value)
 
 
 class MultiAgentNumericStripsProblemConverter(NumericStripsProblemConverter):
