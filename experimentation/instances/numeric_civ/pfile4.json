@@ -126,5 +126,16 @@
         ]
       ]
     ]
-  }
+  },
+  "features": {
+    "carts": false,
+    "water": false,
+    "rail": false
+  },
+  "enabled_actions": [
+    "build-cabin",
+    "build-quarry",
+    "fell-timber",
+    "build-sawmill"
+  ]
 }

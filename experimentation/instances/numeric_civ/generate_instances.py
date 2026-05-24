@@ -54,6 +54,9 @@ def make_instance(
     boats=None,
     agent_init_extra=None,
     global_init_extra=None,
+    features=None,
+    enabled_actions=None,
+    disabled_actions=None,
 ):
     resources = resources or ALL_RESOURCES
     land_edges = symmetric(land_edges or [])
@@ -101,6 +104,12 @@ def make_instance(
         "init_values": init_values,
         "goals": goals,
     }
+    if features is not None:
+        data["features"] = features
+    if enabled_actions is not None:
+        data["enabled_actions"] = enabled_actions
+    if disabled_actions is not None:
+        data["disabled_actions"] = disabled_actions
     return data
 
 
@@ -111,6 +120,8 @@ INSTANCES = {
         terrains={"p0": {"woodland"}},
         resources=["timber"],
         goals={"a0": [["has-coal-stack", ["p0"]]], "a1": [["has-coal-stack", ["p0"]]]},
+        features={"carts": False, "water": False, "rail": False},
+        enabled_actions=["build-cabin", "fell-timber", "build-coal-stack"],
     ),
     3: make_instance(
         3,
@@ -118,6 +129,8 @@ INSTANCES = {
         terrains={"p0": {"woodland"}},
         resources=["timber", "wood"],
         goals={"a0": [["has-sawmill", ["p0"]]], "a1": [["has-sawmill", ["p0"]]]},
+        features={"carts": False, "water": False, "rail": False},
+        enabled_actions=["build-cabin", "fell-timber", "build-sawmill"],
     ),
     4: make_instance(
         4,
@@ -125,6 +138,8 @@ INSTANCES = {
         terrains={"p0": {"woodland", "mountain"}},
         resources=["timber", "stone", "wood"],
         goals={"global": [["has-quarry", ["p0"]]], "a0": [["has-sawmill", ["p0"]]], "a1": [["has-cabin", ["p0"]]]},
+        features={"carts": False, "water": False, "rail": False},
+        enabled_actions=["build-cabin", "build-quarry", "fell-timber", "build-sawmill"],
     ),
     5: make_instance(
         5,
@@ -132,6 +147,8 @@ INSTANCES = {
         terrains={"p0": {"woodland", "mountain"}},
         resources=["timber", "stone", "wood"],
         goals={"global": [[">=", ["housing", ["p0"]], "1"]], "a0": [["has-sawmill", ["p0"]]], "a1": [["has-cabin", ["p0"]]]},
+        features={"carts": False, "water": False, "rail": False},
+        enabled_actions=["build-cabin", "build-quarry", "fell-timber", "break-stone", "build-sawmill", "saw-wood", "build-house"],
     ),
     6: make_instance(
         6,

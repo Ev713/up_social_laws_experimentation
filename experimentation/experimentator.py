@@ -4,9 +4,9 @@ import sys
 from experimentation.robustness_runner import (
     RobustnessSuiteRunner,
     build_runner_from_config_path,
-    main as robustness_runner_main,
     parse_config,
 )
+from experimentation.cli import main as cli_main
 
 
 def run_experiments_from_config(config_path):
@@ -19,7 +19,7 @@ def build_runner(config_path) -> RobustnessSuiteRunner:
 
 
 def main(argv=None):
-    robustness_runner_main(argv)
+    cli_main(["run", *(argv or [])])
 
 
 if __name__ == "__main__":

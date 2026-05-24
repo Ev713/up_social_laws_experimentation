@@ -19,7 +19,7 @@ def main():
     limits = ResourceLimits(engine=args.engine, planner_timeout_seconds=args.planner_timeout)
     result = evaluate_problem(case, args.verifier, limits)
 
-    output = Path(args.output) if args.output else Path("test/.logs") / f"{case.case_id}__{args.verifier}.log"
+    output = Path(args.output) if args.output else Path("experimentation/tests/.logs") / f"{case.case_id}__{args.verifier}.log"
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(result.pop("log_text"))
 

@@ -4,6 +4,14 @@
   "trains": [],
   "resources": ["timber"],
   "agents": ["a0", "a1"],
+  "features": {
+    "carts": false,
+    "water": false,
+    "rail": false
+  },
+  "enabled_actions": [
+    "build-cabin"
+  ],
 
   "bounds": {
     "pollution": 2,

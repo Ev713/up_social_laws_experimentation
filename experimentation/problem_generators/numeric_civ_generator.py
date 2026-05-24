@@ -71,6 +71,26 @@ class NumericCivGenerator(NumericProblemGenerator):
 
     def bounded_int_type(self, fluent_name):
         return IntType(0, self._get_int_bound(fluent_name))
+
+    def _feature_enabled(self, name, default=True):
+        features = self.instance_data.get('features', {})
+        if name in features:
+            return bool(features[name])
+        return default
+
+    def _action_enabled(self, name):
+        enabled_actions = self.instance_data.get('enabled_actions')
+        if enabled_actions is not None:
+            return name in enabled_actions
+        disabled_actions = self.instance_data.get('disabled_actions', [])
+        return name not in disabled_actions
+
+    def _add_action_if_enabled(self, agent, action, name=None):
+        if action is None:
+            return
+        action_name = name or action.name
+        if self._action_enabled(action_name):
+            agent.add_action(action)
     
     def add_social_law(self):
         """
@@ -81,6 +101,21 @@ class NumericCivGenerator(NumericProblemGenerator):
         """
         sl = SocialLaw()
         sl.skip_checks = True
+
+        def has_action(agent_name, action_name):
+            return any(action.name == action_name for action in self.problem.agent(agent_name).actions)
+
+        def add_precondition(agent_name, action_name, *args):
+            if self._action_enabled(action_name) and has_action(agent_name, action_name):
+                sl.add_precondition_to_action(agent_name, action_name, *args)
+
+        def add_effect(agent_name, action_name, *args):
+            if self._action_enabled(action_name) and has_action(agent_name, action_name):
+                sl.add_effect(agent_name, action_name, *args)
+
+        def add_waitfor(agent_name, action_name, *args):
+            if self._action_enabled(action_name) and has_action(agent_name, action_name):
+                sl.add_waitfor_annotation(agent_name, action_name, *args)
         
         # 1. Add agent-specific available fluents for each resource at each place
         for agent in self.problem.agents:
@@ -97,105 +132,105 @@ class NumericCivGenerator(NumericProblemGenerator):
             
             # load/unload boat and train actions
             if self.has_boats:
-                sl.add_precondition_to_action(agent.name, 'load-boat', 'personal-available', ('r', 'p'), '>=', 1)
-                sl.add_effect(agent.name, 'load-boat', 'personal-available', ('r', 'p'), 1, '-')
-                sl.add_effect(agent.name, 'unload-boat', 'personal-available', ('r', 'p'), 1, '+')
+                add_precondition(agent.name, 'load-boat', 'personal-available', ('r', 'p'), '>=', 1)
+                add_effect(agent.name, 'load-boat', 'personal-available', ('r', 'p'), 1, '-')
+                add_effect(agent.name, 'unload-boat', 'personal-available', ('r', 'p'), 1, '+')
 
             if self.has_trains:
-                sl.add_precondition_to_action(agent.name, 'load-train', 'personal-available', ('r', 'p'), '>=', 1)
-                sl.add_effect(agent.name, 'load-train', 'personal-available', ('r', 'p'), 1, '-')
-                sl.add_effect(agent.name, 'unload-train', 'personal-available', ('r', 'p'), 1, '+')
+                add_precondition(agent.name, 'load-train', 'personal-available', ('r', 'p'), '>=', 1)
+                add_effect(agent.name, 'load-train', 'personal-available', ('r', 'p'), 1, '-')
+                add_effect(agent.name, 'unload-train', 'personal-available', ('r', 'p'), 1, '+')
             
             # move_laden_cart action
-            sl.add_precondition_to_action(agent.name, 'move-laden-cart', 'personal-available', ('r', 'p1'), '>=', 1)
-            sl.add_effect(agent.name, 'move-laden-cart', 'personal-available', ('r', 'p1'), 1, '-')
-            sl.add_effect(agent.name, 'move-laden-cart', 'personal-available', ('r', 'p2'), 1, '+')
+            add_precondition(agent.name, 'move-laden-cart', 'personal-available', ('r', 'p1'), '>=', 1)
+            add_effect(agent.name, 'move-laden-cart', 'personal-available', ('r', 'p1'), 1, '-')
+            add_effect(agent.name, 'move-laden-cart', 'personal-available', ('r', 'p2'), 1, '+')
             
             # build_coal_stack
-            sl.add_precondition_to_action(agent.name, 'build-coal-stack', 'personal-available', ('r', 'p'), '>=', 1)
-            sl.add_effect(agent.name, 'build-coal-stack', 'personal-available', ('r', 'p'), 1, '-')
+            add_precondition(agent.name, 'build-coal-stack', 'personal-available', ('r', 'p'), '>=', 1)
+            add_effect(agent.name, 'build-coal-stack', 'personal-available', ('r', 'p'), 1, '-')
             
             # build_sawmill
-            sl.add_precondition_to_action(agent.name, 'build-sawmill', 'personal-available', ('r', 'p'), '>=', 2)
-            sl.add_effect(agent.name, 'build-sawmill', 'personal-available', ('r', 'p'), 2, '-')
+            add_precondition(agent.name, 'build-sawmill', 'personal-available', ('r', 'p'), '>=', 2)
+            add_effect(agent.name, 'build-sawmill', 'personal-available', ('r', 'p'), 2, '-')
             
             # build_mine
-            sl.add_precondition_to_action(agent.name, 'build-mine', 'personal-available', ('r', 'p'), '>=', 2)
-            sl.add_effect(agent.name, 'build-mine', 'personal-available', ('r', 'p'), 2, '-')
+            add_precondition(agent.name, 'build-mine', 'personal-available', ('r', 'p'), '>=', 2)
+            add_effect(agent.name, 'build-mine', 'personal-available', ('r', 'p'), 2, '-')
             
             # build_ironworks (uses r1 and r2)
-            sl.add_precondition_to_action(agent.name, 'build-ironworks', 'personal-available', ('r1', 'p'), '>=', 2)
-            sl.add_effect(agent.name, 'build-ironworks', 'personal-available', ('r1', 'p'), 2, '-')
-            sl.add_precondition_to_action(agent.name, 'build-ironworks', 'personal-available', ('r2', 'p'), '>=', 2)
-            sl.add_effect(agent.name, 'build-ironworks', 'personal-available', ('r2', 'p'), 2, '-')
+            add_precondition(agent.name, 'build-ironworks', 'personal-available', ('r1', 'p'), '>=', 2)
+            add_effect(agent.name, 'build-ironworks', 'personal-available', ('r1', 'p'), 2, '-')
+            add_precondition(agent.name, 'build-ironworks', 'personal-available', ('r2', 'p'), '>=', 2)
+            add_effect(agent.name, 'build-ironworks', 'personal-available', ('r2', 'p'), 2, '-')
             
             # build_docks (uses r1 and r2)
-            sl.add_precondition_to_action(agent.name, 'build-docks', 'personal-available', ('r1', 'p'), '>=', 2)
-            sl.add_effect(agent.name, 'build-docks', 'personal-available', ('r1', 'p'), 2, '-')
-            sl.add_precondition_to_action(agent.name, 'build-docks', 'personal-available', ('r2', 'p'), '>=', 2)
-            sl.add_effect(agent.name, 'build-docks', 'personal-available', ('r2', 'p'), 2, '-')
+            add_precondition(agent.name, 'build-docks', 'personal-available', ('r1', 'p'), '>=', 2)
+            add_effect(agent.name, 'build-docks', 'personal-available', ('r1', 'p'), 2, '-')
+            add_precondition(agent.name, 'build-docks', 'personal-available', ('r2', 'p'), '>=', 2)
+            add_effect(agent.name, 'build-docks', 'personal-available', ('r2', 'p'), 2, '-')
             
             if self.has_boats:
-                sl.add_precondition_to_action(agent.name, 'build-wharf', 'personal-available', ('r1', 'p'), '>=', 2)
-                sl.add_effect(agent.name, 'build-wharf', 'personal-available', ('r1', 'p'), 2, '-')
-                sl.add_precondition_to_action(agent.name, 'build-wharf', 'personal-available', ('r2', 'p'), '>=', 2)
-                sl.add_effect(agent.name, 'build-wharf', 'personal-available', ('r2', 'p'), 2, '-')
+                add_precondition(agent.name, 'build-wharf', 'personal-available', ('r1', 'p'), '>=', 2)
+                add_effect(agent.name, 'build-wharf', 'personal-available', ('r1', 'p'), 2, '-')
+                add_precondition(agent.name, 'build-wharf', 'personal-available', ('r2', 'p'), '>=', 2)
+                add_effect(agent.name, 'build-wharf', 'personal-available', ('r2', 'p'), 2, '-')
             
             # build_rail (uses r1 and r2)
-            sl.add_precondition_to_action(agent.name, 'build-rail', 'personal-available', ('r1', 'p1'), '>=', 1)
-            sl.add_effect(agent.name, 'build-rail', 'personal-available', ('r1', 'p1'), 1, '-')
-            sl.add_precondition_to_action(agent.name, 'build-rail', 'personal-available', ('r2', 'p1'), '>=', 1)
-            sl.add_effect(agent.name, 'build-rail', 'personal-available', ('r2', 'p1'), 1, '-')
+            add_precondition(agent.name, 'build-rail', 'personal-available', ('r1', 'p1'), '>=', 1)
+            add_effect(agent.name, 'build-rail', 'personal-available', ('r1', 'p1'), 1, '-')
+            add_precondition(agent.name, 'build-rail', 'personal-available', ('r2', 'p1'), '>=', 1)
+            add_effect(agent.name, 'build-rail', 'personal-available', ('r2', 'p1'), 1, '-')
             
             # build_house (uses r1 and r2)
-            sl.add_precondition_to_action(agent.name, 'build-house', 'personal-available', ('r1', 'p'), '>=', 1)
-            sl.add_effect(agent.name, 'build-house', 'personal-available', ('r1', 'p'), 1, '-')
-            sl.add_precondition_to_action(agent.name, 'build-house', 'personal-available', ('r2', 'p'), '>=', 1)
-            sl.add_effect(agent.name, 'build-house', 'personal-available', ('r2', 'p'), 1, '-')
+            add_precondition(agent.name, 'build-house', 'personal-available', ('r1', 'p'), '>=', 1)
+            add_effect(agent.name, 'build-house', 'personal-available', ('r1', 'p'), 1, '-')
+            add_precondition(agent.name, 'build-house', 'personal-available', ('r2', 'p'), '>=', 1)
+            add_effect(agent.name, 'build-house', 'personal-available', ('r2', 'p'), 1, '-')
             
             # build_cart
-            sl.add_precondition_to_action(agent.name, 'build-cart', 'personal-available', ('r', 'p'), '>=', 1)
-            sl.add_effect(agent.name, 'build-cart', 'personal-available', ('r', 'p'), 1, '-')
+            add_precondition(agent.name, 'build-cart', 'personal-available', ('r', 'p'), '>=', 1)
+            add_effect(agent.name, 'build-cart', 'personal-available', ('r', 'p'), 1, '-')
             
             if self.has_trains:
-                sl.add_precondition_to_action(agent.name, 'build-train', 'personal-available', ('r', 'p'), '>=', 2)
-                sl.add_effect(agent.name, 'build-train', 'personal-available', ('r', 'p'), 2, '-')
+                add_precondition(agent.name, 'build-train', 'personal-available', ('r', 'p'), '>=', 2)
+                add_effect(agent.name, 'build-train', 'personal-available', ('r', 'p'), 2, '-')
             
             if self.has_boats:
-                sl.add_precondition_to_action(agent.name, 'build-ship', 'personal-available', ('r', 'p'), '>=', 4)
-                sl.add_effect(agent.name, 'build-ship', 'personal-available', ('r', 'p'), 4, '-')
+                add_precondition(agent.name, 'build-ship', 'personal-available', ('r', 'p'), '>=', 4)
+                add_effect(agent.name, 'build-ship', 'personal-available', ('r', 'p'), 4, '-')
             
             # burn_coal (uses r1 and r2)
-            sl.add_precondition_to_action(agent.name, 'burn-coal', 'personal-available', ('r1', 'p'), '>=', 1)
-            sl.add_effect(agent.name, 'burn-coal', 'personal-available', ('r1', 'p'), 1, '-')
-            sl.add_effect(agent.name, 'burn-coal', 'personal-available', ('r2', 'p'), 1, '+')
+            add_precondition(agent.name, 'burn-coal', 'personal-available', ('r1', 'p'), '>=', 1)
+            add_effect(agent.name, 'burn-coal', 'personal-available', ('r1', 'p'), 1, '-')
+            add_effect(agent.name, 'burn-coal', 'personal-available', ('r2', 'p'), 1, '+')
             
             # saw_wood (uses r1 and r2)
-            sl.add_precondition_to_action(agent.name, 'saw-wood', 'personal-available', ('r1', 'p'), '>=', 1)
-            sl.add_effect(agent.name, 'saw-wood', 'personal-available', ('r1', 'p'), 1, '-')
-            sl.add_effect(agent.name, 'saw-wood', 'personal-available', ('r2', 'p'), 1, '+')
+            add_precondition(agent.name, 'saw-wood', 'personal-available', ('r1', 'p'), '>=', 1)
+            add_effect(agent.name, 'saw-wood', 'personal-available', ('r1', 'p'), 1, '-')
+            add_effect(agent.name, 'saw-wood', 'personal-available', ('r2', 'p'), 1, '+')
             
             # make_iron (uses r1, r2, produces r3)
-            sl.add_precondition_to_action(agent.name, 'make-iron', 'personal-available', ('r1', 'p'), '>=', 1)
-            sl.add_effect(agent.name, 'make-iron', 'personal-available', ('r1', 'p'), 1, '-')
-            sl.add_precondition_to_action(agent.name, 'make-iron', 'personal-available', ('r2', 'p'), '>=', 2)
-            sl.add_effect(agent.name, 'make-iron', 'personal-available', ('r2', 'p'), 2, '-')
-            sl.add_effect(agent.name, 'make-iron', 'personal-available', ('r3', 'p'), 1, '+')
+            add_precondition(agent.name, 'make-iron', 'personal-available', ('r1', 'p'), '>=', 1)
+            add_effect(agent.name, 'make-iron', 'personal-available', ('r1', 'p'), 1, '-')
+            add_precondition(agent.name, 'make-iron', 'personal-available', ('r2', 'p'), '>=', 2)
+            add_effect(agent.name, 'make-iron', 'personal-available', ('r2', 'p'), 2, '-')
+            add_effect(agent.name, 'make-iron', 'personal-available', ('r3', 'p'), 1, '+')
             
             # fell_timber, break_stone, mine_ore produce resources
-            sl.add_effect(agent.name, 'fell-timber', 'personal-available', ('r', 'p'), 1, '+')
-            sl.add_effect(agent.name, 'break-stone', 'personal-available', ('r', 'p'), 1, '+')
-            sl.add_effect(agent.name, 'mine-ore', 'personal-available', ('r', 'p'), 1, '+')
+            add_effect(agent.name, 'fell-timber', 'personal-available', ('r', 'p'), 1, '+')
+            add_effect(agent.name, 'break-stone', 'personal-available', ('r', 'p'), 1, '+')
+            add_effect(agent.name, 'mine-ore', 'personal-available', ('r', 'p'), 1, '+')
             
         # 2. Add waitfor annotations for movement-capacity preconditions
         # move_train and move_ship have preconditions on train/boat capacity
         # Convert to waitfor - wait until capacity is positive
         for agent in self.problem.agents:
             if self.has_trains:
-                sl.add_waitfor_annotation(agent.name, 'move-train', 'train-capacity', ('t', 'p2'), '>=', 1)
+                add_waitfor(agent.name, 'move-train', 'train-capacity', ('t', 'p2'), '>=', 1)
             if self.has_boats:
-                sl.add_waitfor_annotation(agent.name, 'move-ship', 'boat-capacity', ('p2',), '>=', 1)
-                sl.add_waitfor_annotation(agent.name, 'move-ship-to-wharf', 'boat-capacity', ('p2',), '>=', 1)
+                add_waitfor(agent.name, 'move-ship', 'boat-capacity', ('p2',), '>=', 1)
+                add_waitfor(agent.name, 'move-ship-to-wharf', 'boat-capacity', ('p2',), '>=', 1)
 
         # 3. Boats must finish in wharf-safe states.
         if self.has_boats:
@@ -209,8 +244,11 @@ class NumericCivGenerator(NumericProblemGenerator):
     def generate_problem(self, file_name, sl=False):
         self.problem = MultiAgentProblemWithWaitfor('civ_' + file_name.replace('.json', ''))
         self.load_instance_data(file_name)
-        self.has_boats = len(self.instance_data.get('boats', [])) > 0
-        self.has_trains = len(self.instance_data.get('trains', [])) > 0
+        self.has_boats = len(self.instance_data.get('boats', [])) > 0 and self._feature_enabled('boats')
+        self.has_trains = len(self.instance_data.get('trains', [])) > 0 and self._feature_enabled('trains')
+        has_carts = self._feature_enabled('carts')
+        has_water = self._feature_enabled('water', self.has_boats)
+        has_rail = self._feature_enabled('rail', self.has_trains)
         
         # Define types
         place = UserType('place')
@@ -483,8 +521,6 @@ class NumericCivGenerator(NumericProblemGenerator):
         build_coal_stack_r = build_coal_stack.parameter('r')  # timber
         build_coal_stack.add_precondition(is_timber(build_coal_stack_r))
         build_coal_stack.add_precondition(GE(available(build_coal_stack_r, build_coal_stack_p), 1))
-        build_coal_stack.add_precondition(GE(available(build_coal_stack_r, build_coal_stack_p), 1))
-        build_coal_stack.add_precondition(GE(available(build_coal_stack_r, build_coal_stack_p), 1))
         build_coal_stack.add_precondition(Not(has_coal_stack(build_coal_stack_p)))
         build_coal_stack.add_effect(has_coal_stack(build_coal_stack_p), True)
         dec(build_coal_stack, available(build_coal_stack_r, build_coal_stack_p), 1)
@@ -731,7 +767,8 @@ class NumericCivGenerator(NumericProblemGenerator):
             agent.add_fluent(has_cabin, default_initial_value=False)
             agent.add_fluent(has_coal_stack, default_initial_value=False)
             agent.add_fluent(has_sawmill, default_initial_value=False)
-            agent.add_fluent(carts_at, default_initial_value=0)
+            if has_carts:
+                agent.add_fluent(carts_at, default_initial_value=0)
             if self.has_boats:
                 agent.add_fluent(owns_boat, default_initial_value=False)
                 agent.add_fluent(assigned_boat, default_initial_value=False)
@@ -741,44 +778,48 @@ class NumericCivGenerator(NumericProblemGenerator):
 
             # Add all actions to each agent
             if self.has_boats:
-                agent.add_action(load_boat)
-                agent.add_action(unload_boat)
+                self._add_action_if_enabled(agent, load_boat)
+                self._add_action_if_enabled(agent, unload_boat)
             if self.has_trains:
-                agent.add_action(load_train)
-                agent.add_action(unload_train)
-            agent.add_action(move_empty_cart)
-            agent.add_action(move_laden_cart)
+                self._add_action_if_enabled(agent, load_train)
+                self._add_action_if_enabled(agent, unload_train)
+            if has_carts:
+                self._add_action_if_enabled(agent, move_empty_cart)
+                self._add_action_if_enabled(agent, move_laden_cart)
             if self.has_trains:
-                agent.add_action(move_train)
+                self._add_action_if_enabled(agent, move_train)
             if self.has_boats:
-                agent.add_action(move_ship)
-                agent.add_action(move_ship_to_wharf)
-            agent.add_action(build_cabin)
-            agent.add_action(build_quarry)
-            agent.add_action(build_coal_stack)
-            agent.add_action(build_sawmill)
-            agent.add_action(build_mine)
-            agent.add_action(build_ironworks)
-            agent.add_action(build_docks)
+                self._add_action_if_enabled(agent, move_ship)
+                self._add_action_if_enabled(agent, move_ship_to_wharf)
+            self._add_action_if_enabled(agent, build_cabin)
+            self._add_action_if_enabled(agent, build_quarry)
+            self._add_action_if_enabled(agent, build_coal_stack)
+            self._add_action_if_enabled(agent, build_sawmill)
+            self._add_action_if_enabled(agent, build_mine)
+            self._add_action_if_enabled(agent, build_ironworks)
+            if has_water:
+                self._add_action_if_enabled(agent, build_docks)
             if self.has_boats:
-                agent.add_action(build_wharf)
-            agent.add_action(build_rail)
-            agent.add_action(build_house)
-            agent.add_action(build_cart)
+                self._add_action_if_enabled(agent, build_wharf)
+            if has_rail:
+                self._add_action_if_enabled(agent, build_rail)
+            self._add_action_if_enabled(agent, build_house)
+            if has_carts:
+                self._add_action_if_enabled(agent, build_cart)
             if self.has_trains:
-                agent.add_action(build_train)
+                self._add_action_if_enabled(agent, build_train)
             if self.has_boats:
-                agent.add_action(build_ship)
-            agent.add_action(fell_timber)
-            agent.add_action(break_stone)
-            agent.add_action(mine_ore)
-            agent.add_action(burn_coal)
-            agent.add_action(saw_wood)
-            agent.add_action(make_iron)
+                self._add_action_if_enabled(agent, build_ship)
+            self._add_action_if_enabled(agent, fell_timber)
+            self._add_action_if_enabled(agent, break_stone)
+            self._add_action_if_enabled(agent, mine_ore)
+            self._add_action_if_enabled(agent, burn_coal)
+            self._add_action_if_enabled(agent, saw_wood)
+            self._add_action_if_enabled(agent, make_iron)
             if self.has_trains:
-                agent.add_action(dismantle_train)
+                self._add_action_if_enabled(agent, dismantle_train)
             if self.has_boats:
-                agent.add_action(dismantle_boat)
+                self._add_action_if_enabled(agent, dismantle_boat)
         
         self.set_init_values()
         self.set_goals()

@@ -1,7 +1,7 @@
 """Experimentation package init.
 
 This file makes the `experimentation` folder a Python package so
-you can run modules with `python -m experimentation.experimentator`.
+you can run experiment utilities with `python -m experimentation.cli`.
 """
 
 __all__ = []

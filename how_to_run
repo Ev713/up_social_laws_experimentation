@@ -1,7 +1,7 @@
 
 evgeny@evgeny-mishlyakov-u:~/SocialLaws/up-social-laws$ pip install -e .
 
-evgeny@evgeny-mishlyakov-u:~/SocialLaws/up-social-laws$ pytest-3 test/test_social_law.py 
+evgeny@evgeny-mishlyakov-u:~/SocialLaws/up-social-laws$ pytest-3 experimentation/tests/test_social_law.py
 
 
 blueprints:

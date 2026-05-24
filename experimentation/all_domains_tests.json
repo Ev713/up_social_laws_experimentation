@@ -8,10 +8,12 @@
     "cpu_seconds": 1800,
     "memory_bytes": 16000000000
   },
+  "excluded_domains": {
+    "numeric_civ": "Excluded from full experiments: currently broken/unstable and produces non-actionable internal errors.",
+    "numeric_grid": "Excluded from full experiments: current model is not genuinely numeric after simple compilation; coordinate fluents are redundant bookkeeping and the run fails under the intended verifier setup."
+  },
   "domains": [
-    "numeric_civ",
     "numeric_expedition",
-    "numeric_grid",
     "numeric_intersection",
     "numeric_markettrader",
     "numeric_zenotravel",
