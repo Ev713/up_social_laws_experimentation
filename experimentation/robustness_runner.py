@@ -18,6 +18,7 @@ from unified_planning.engines.results import (
     POSITIVE_OUTCOMES,
     PlanGenerationResultStatus,
 )
+from unified_planning.io import PDDLReader, PDDLWriter
 from unified_planning.shortcuts import Compiler, OneshotPlanner, get_environment
 
 from experimentation.problem_generators.blocksworld_generator import BlocksworldGenerator
@@ -385,7 +386,47 @@ def classify_multi_agent_status(plan) -> SocialLawRobustnessStatus:
     return status
 
 
-def compile_for_verifier(problem, verifier: VerifierSpec):
+def pddl_cache_path(cache_root: Path, case: ProblemCase, verifier_label: str) -> Path:
+    return cache_root / f"{_safe_name(verifier_label)}__{_safe_name(case.case_id)}"
+
+
+def pddl_cache_files(cache_dir: Path) -> Tuple[Path, Path, Path]:
+    return cache_dir / "domain.pddl", cache_dir / "problem.pddl", cache_dir / "metadata.json"
+
+
+def has_pddl_cache(cache_dir: Path) -> bool:
+    domain_path, problem_path, metadata_path = pddl_cache_files(cache_dir)
+    return domain_path.exists() and problem_path.exists() and metadata_path.exists()
+
+
+def write_pddl_cache(cache_dir: Path, case: ProblemCase, verifier: VerifierSpec, source_problem, compiled_problem):
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    domain_path, problem_path, metadata_path = pddl_cache_files(cache_dir)
+    writer = PDDLWriter(compiled_problem)
+    writer.write_domain(str(domain_path))
+    writer.write_problem(str(problem_path))
+    metadata = {
+        "cache_version": 1,
+        "case_id": case.case_id,
+        "domain": case.domain,
+        "instance": case.instance_file,
+        "has_social_law": case.has_social_law,
+        "verifier": verifier.label,
+        "source_problem_name": source_problem.name,
+        "compiled_problem_name": compiled_problem.name,
+    }
+    metadata_path.write_text(json.dumps(metadata, indent=2) + "\n")
+
+
+def read_pddl_cache(cache_dir: Path):
+    domain_path, problem_path, metadata_path = pddl_cache_files(cache_dir)
+    reader = PDDLReader()
+    problem = reader.parse_problem(str(domain_path), str(problem_path))
+    metadata = json.loads(metadata_path.read_text())
+    return problem, metadata
+
+
+def prepare_source_for_verifier(problem, verifier: VerifierSpec):
     source_problem = problem
     conversion_log = StringIO()
     side_output = StringIO()
@@ -394,6 +435,18 @@ def compile_for_verifier(problem, verifier: VerifierSpec):
             conversion_log.write("=== SNP CONVERSION ===\n")
             source_problem = MultiAgentWithWaitforNumericStripsProblemConverter(problem).compile()
             conversion_log.write(f"Converted problem: {source_problem.name}\n\n")
+    captured = side_output.getvalue().strip()
+    if captured:
+        conversion_log.write("=== SOURCE PREPARATION OUTPUT ===\n")
+        conversion_log.write(captured)
+        conversion_log.write("\n\n")
+    return source_problem, conversion_log.getvalue()
+
+
+def compile_source_for_verifier(source_problem, verifier: VerifierSpec):
+    compiler_log = StringIO()
+    side_output = StringIO()
+    with contextlib.redirect_stdout(side_output), contextlib.redirect_stderr(side_output):
         rbv = Compiler(
             name=verifier.compiler_name,
             problem_kind=source_problem.kind,
@@ -403,13 +456,19 @@ def compile_for_verifier(problem, verifier: VerifierSpec):
         compiled = rbv.compile(source_problem).problem
     captured = side_output.getvalue().strip()
     if captured:
-        conversion_log.write("=== COMPILER OUTPUT ===\n")
-        conversion_log.write(captured)
-        conversion_log.write("\n\n")
-    return source_problem, compiled, conversion_log.getvalue()
+        compiler_log.write("=== COMPILER OUTPUT ===\n")
+        compiler_log.write(captured)
+        compiler_log.write("\n\n")
+    return compiled, compiler_log.getvalue()
 
 
-def evaluate_problem(case: ProblemCase, verifier_label: str, limits: ResourceLimits):
+def compile_for_verifier(problem, verifier: VerifierSpec):
+    source_problem, conversion_log = prepare_source_for_verifier(problem, verifier)
+    compiled, compiler_log = compile_source_for_verifier(source_problem, verifier)
+    return source_problem, compiled, conversion_log + compiler_log
+
+
+def evaluate_problem(case: ProblemCase, verifier_label: str, limits: ResourceLimits, pddl_cache_root: Optional[Path] = None, use_pddl_cache: bool = False, write_pddl_cache_enabled: bool = False):
     verifier = VERIFIER_SPECS[verifier_label]
     sections: List[Tuple[str, str]] = []
     started = time.time()
@@ -424,9 +483,32 @@ def evaluate_problem(case: ProblemCase, verifier_label: str, limits: ResourceLim
         f"verifier: {verifier.label}",
     ])))
 
-    source_problem, compiled_problem, conversion_log = compile_for_verifier(problem, verifier)
+    source_problem = None
+    compiled_problem = None
+    conversion_log = ""
+    cache_metadata = None
+    cache_dir = pddl_cache_path(pddl_cache_root, case, verifier.label) if pddl_cache_root else None
+
+    source_problem, conversion_log = prepare_source_for_verifier(problem, verifier)
     if conversion_log:
         sections.append(("CONVERSION", conversion_log))
+
+    if use_pddl_cache and cache_dir and has_pddl_cache(cache_dir):
+        try:
+            compiled_problem, cache_metadata = read_pddl_cache(cache_dir)
+            sections.append(("PDDL CACHE", f"Loaded compiled robustness problem from {cache_dir}"))
+            sections.append(("PDDL CACHE METADATA", json.dumps(cache_metadata, indent=2)))
+        except Exception as exc:
+            warning_messages.append(f"Failed to read PDDL cache at {cache_dir}: {type(exc).__name__}: {exc}")
+            sections.append(("PDDL CACHE", f"Failed to read {cache_dir}; recompiling. {type(exc).__name__}: {exc}"))
+
+    if compiled_problem is None:
+        compiled_problem, compiler_log = compile_source_for_verifier(source_problem, verifier)
+        if compiler_log:
+            sections.append(("CONVERSION", compiler_log))
+        if write_pddl_cache_enabled and cache_dir:
+            write_pddl_cache(cache_dir, case, verifier, source_problem, compiled_problem)
+            sections.append(("PDDL CACHE", f"Wrote compiled robustness problem to {cache_dir}"))
 
     single_agent_statuses = []
     for agent in source_problem.agents:
@@ -512,12 +594,20 @@ def _set_limits(limits: ResourceLimits):
     resource.setrlimit(resource.RLIMIT_CPU, (limits.cpu_seconds, limits.cpu_seconds))
 
 
-def _worker(case_data, verifier_label: str, limits_data, queue: Queue):
+def _worker(case_data, verifier_label: str, limits_data, queue: Queue, pddl_cache_root: Optional[str] = None, use_pddl_cache: bool = False, write_pddl_cache_enabled: bool = False):
     try:
         limits = ResourceLimits(**limits_data)
         _set_limits(limits)
         case = ProblemCase(**case_data)
-        result = evaluate_problem(case, verifier_label, limits)
+        cache_root = Path(pddl_cache_root) if pddl_cache_root else None
+        result = evaluate_problem(
+            case,
+            verifier_label,
+            limits,
+            pddl_cache_root=cache_root,
+            use_pddl_cache=use_pddl_cache,
+            write_pddl_cache_enabled=write_pddl_cache_enabled,
+        )
         queue.put({"ok": True, "result": result})
     except Exception as exc:
         queue.put({
@@ -538,6 +628,7 @@ class RobustnessSuiteRunner:
         self.warnings_txt = self.run_dir / "warnings.txt"
         self.config_snapshot = self.run_dir / "config.snapshot.json"
         self.progress_log = self.run_dir / "progress.log"
+        self.pddl_cache_dir = self.run_dir / "compiled_pddl"
 
     def write_config_snapshot(self):
         snapshot = {
@@ -606,11 +697,19 @@ class RobustnessSuiteRunner:
     def log_path_for(self, case: ProblemCase, verifier_label: str) -> Path:
         return self.logs_dir / f"{_safe_name(verifier_label)}__{_safe_name(case.case_id)}.log"
 
-    def run_case(self, case: ProblemCase, verifier_label: str) -> Dict[str, object]:
+    def run_case(self, case: ProblemCase, verifier_label: str, use_pddl_cache: bool = False, write_pddl_cache_enabled: bool = False) -> Dict[str, object]:
         queue: Queue = Queue()
         process = Process(
             target=_worker,
-            args=(asdict(case), verifier_label, asdict(self.config.limits), queue),
+            args=(
+                asdict(case),
+                verifier_label,
+                asdict(self.config.limits),
+                queue,
+                str(self.pddl_cache_dir),
+                use_pddl_cache,
+                write_pddl_cache_enabled,
+            ),
         )
         process.start()
         process.join(self.config.limits.wall_timeout_seconds)
@@ -670,7 +769,7 @@ class RobustnessSuiteRunner:
             "log_text": worker_result["error"] + "\n",
         }
 
-    def run(self, resume: bool = False) -> List[Dict[str, object]]:
+    def run(self, resume: bool = False, use_pddl_cache: bool = False, write_pddl_cache_enabled: bool = False) -> List[Dict[str, object]]:
         cases, warnings = build_cases(self.config)
         existing_results: List[Dict[str, object]] = []
         completed_pairs = set()
@@ -707,6 +806,11 @@ class RobustnessSuiteRunner:
         reporter.emit(f"Results CSV: {self.results_csv}")
         reporter.emit(f"Case manifest: {self.cases_csv}")
         reporter.emit(f"Warnings file: {self.warnings_txt}")
+        if use_pddl_cache or write_pddl_cache_enabled:
+            reporter.emit(
+                f"PDDL cache: directory={self.pddl_cache_dir}, "
+                f"use={use_pddl_cache}, write={write_pddl_cache_enabled}"
+            )
         reporter.emit(
             "Limits: "
             f"engine={self.config.limits.engine}, "
@@ -745,7 +849,12 @@ class RobustnessSuiteRunner:
                         f"verifier={verifier_label} ({verifier_index}/{len(self.config.verifiers)} for this case)"
                     )
                     started = time.time()
-                    result = self.run_case(case, verifier_label)
+                    result = self.run_case(
+                        case,
+                        verifier_label,
+                        use_pddl_cache=use_pddl_cache,
+                        write_pddl_cache_enabled=write_pddl_cache_enabled,
+                    )
                     elapsed = time.time() - started
                     log_path = self.log_path_for(case, verifier_label)
                     log_path.write_text(result.pop("log_text"))
@@ -788,6 +897,16 @@ def make_arg_parser():
         action="store_true",
         help="Resume an existing run directory by keeping prior results and continuing unfinished case/verifier pairs.",
     )
+    parser.add_argument(
+        "--use-pddl-cache",
+        action="store_true",
+        help="Reuse compiled robustness PDDL from the run directory when available.",
+    )
+    parser.add_argument(
+        "--write-pddl-cache",
+        action="store_true",
+        help="Write compiled robustness PDDL into the run directory.",
+    )
     return parser
 
 
@@ -795,7 +914,11 @@ def main(argv=None):
     parser = make_arg_parser()
     args = parser.parse_args(argv)
     runner = build_runner_from_config_path(Path(args.config).resolve())
-    results = runner.run(resume=args.resume)
+    results = runner.run(
+        resume=args.resume,
+        use_pddl_cache=args.use_pddl_cache,
+        write_pddl_cache_enabled=args.write_pddl_cache,
+    )
     print(f"Run directory: {runner.run_dir}")
     print(f"Cases: {len(results)}")
     status_counts: Dict[str, int] = {}

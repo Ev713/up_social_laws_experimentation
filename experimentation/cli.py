@@ -15,6 +15,8 @@ from experimentation.robustness_runner import (
     evaluate_problem,
     load_problem,
     parse_config,
+    pddl_cache_path,
+    write_pddl_cache,
 )
 
 
@@ -31,7 +33,11 @@ TIMEOUT_PLANNER_STATUSES = {
 
 def run_suite(args):
     runner = build_runner_from_config_path(Path(args.config).resolve())
-    results = runner.run(resume=args.resume)
+    results = runner.run(
+        resume=args.resume,
+        use_pddl_cache=args.use_pddl_cache,
+        write_pddl_cache_enabled=args.write_pddl_cache,
+    )
     print(f"Run directory: {runner.run_dir}")
     print(f"Cases: {len(results)}")
     status_counts = {}
@@ -43,7 +49,11 @@ def run_suite(args):
 
 def run_expected_check(args):
     runner = build_runner_from_config_path(Path(args.config).resolve())
-    results = runner.run(resume=args.resume)
+    results = runner.run(
+        resume=args.resume,
+        use_pddl_cache=args.use_pddl_cache,
+        write_pddl_cache_enabled=args.write_pddl_cache,
+    )
 
     checks_path = runner.run_dir / "expectation_checks.csv"
     warnings_path = runner.run_dir / "expectation_warnings.txt"
@@ -125,6 +135,8 @@ def run_loading_check(args):
     config = parse_config(Path(args.config).resolve())
     cases, warnings = build_cases(config)
 
+    run_dir = config.output_dir / config.run_id
+    cache_root = run_dir / "compiled_pddl"
     out_dir = config.output_dir / f"{config.run_id}__loading_check"
     out_dir.mkdir(parents=True, exist_ok=True)
     csv_path = out_dir / "loading_results.csv"
@@ -143,6 +155,8 @@ def run_loading_check(args):
     reporter.emit(f"Output directory: {out_dir}")
     reporter.emit(f"Loading results CSV: {csv_path}")
     reporter.emit(f"Warnings file: {warnings_path}")
+    if args.write_pddl_cache:
+        reporter.emit(f"PDDL cache write enabled: {cache_root}")
     if warnings:
         reporter.emit(f"Case generation warnings: {len(warnings)}")
 
@@ -159,6 +173,7 @@ def run_loading_check(args):
                     "problem_name",
                     "compiled_problem_name",
                     "details",
+                    "pddl_cache_dir",
                 ],
             )
             writer.writeheader()
@@ -176,7 +191,12 @@ def run_loading_check(args):
                     verifier = VERIFIER_SPECS[verifier_label]
                     try:
                         problem = load_problem(case)
-                        _, compiled_problem, _ = compile_for_verifier(problem, verifier)
+                        source_problem, compiled_problem, _ = compile_for_verifier(problem, verifier)
+                        cache_dir = ""
+                        if args.write_pddl_cache:
+                            target_cache_dir = pddl_cache_path(cache_root, case, verifier.label)
+                            write_pddl_cache(target_cache_dir, case, verifier, source_problem, compiled_problem)
+                            cache_dir = str(target_cache_dir)
                         writer.writerow({
                             "case_id": case.case_id,
                             "verifier": verifier_label,
@@ -184,6 +204,7 @@ def run_loading_check(args):
                             "problem_name": problem.name,
                             "compiled_problem_name": compiled_problem.name,
                             "details": "",
+                            "pddl_cache_dir": cache_dir,
                         })
                         reporter.emit(
                             f"Finished pair {completed}/{total_pairs}: case_id={case.case_id}, "
@@ -200,6 +221,7 @@ def run_loading_check(args):
                             "problem_name": "",
                             "compiled_problem_name": "",
                             "details": details,
+                            "pddl_cache_dir": "",
                         })
                         reporter.emit(
                             f"Finished pair {completed}/{total_pairs}: case_id={case.case_id}, "
@@ -221,7 +243,15 @@ def run_loading_check(args):
 def run_single_case(args):
     case = ProblemCase(domain=args.domain, instance_file=args.instance, has_social_law=args.with_sl)
     limits = ResourceLimits(engine=args.engine, planner_timeout_seconds=args.planner_timeout)
-    result = evaluate_problem(case, args.verifier, limits)
+    cache_root = Path(args.pddl_cache_root) if args.pddl_cache_root else None
+    result = evaluate_problem(
+        case,
+        args.verifier,
+        limits,
+        pddl_cache_root=cache_root,
+        use_pddl_cache=args.use_pddl_cache,
+        write_pddl_cache_enabled=args.write_pddl_cache,
+    )
 
     output = Path(args.output) if args.output else Path("experimentation/tests/.logs") / f"{case.case_id}__{args.verifier}.log"
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -421,15 +451,20 @@ def build_parser():
     run_parser = subparsers.add_parser("run", help="Run robustness experiments from a JSON config.")
     run_parser.add_argument("config", help="Path to JSON config file.")
     run_parser.add_argument("--resume", action="store_true", help="Resume an existing run directory.")
+    run_parser.add_argument("--use-pddl-cache", action="store_true", help="Reuse compiled robustness PDDL from the run directory when available.")
+    run_parser.add_argument("--write-pddl-cache", action="store_true", help="Write compiled robustness PDDL into the run directory.")
     run_parser.set_defaults(func=run_suite)
 
     expected_parser = subparsers.add_parser("expected-check", help="Run a suite and validate expected outcomes.")
     expected_parser.add_argument("config", help="Path to JSON config file.")
     expected_parser.add_argument("--resume", action="store_true", help="Resume an existing run directory.")
+    expected_parser.add_argument("--use-pddl-cache", action="store_true", help="Reuse compiled robustness PDDL from the run directory when available.")
+    expected_parser.add_argument("--write-pddl-cache", action="store_true", help="Write compiled robustness PDDL into the run directory.")
     expected_parser.set_defaults(func=run_expected_check)
 
     loading_parser = subparsers.add_parser("loading-check", help="Load and compile configured cases.")
     loading_parser.add_argument("config", help="Path to JSON config file.")
+    loading_parser.add_argument("--write-pddl-cache", action="store_true", help="Write compiled robustness PDDL into the run directory.")
     loading_parser.set_defaults(func=run_loading_check)
 
     single_parser = subparsers.add_parser("single-case", help="Run one case/verifier pair and write a debug log.")
@@ -440,6 +475,9 @@ def build_parser():
     single_parser.add_argument("--engine", default="enhsp")
     single_parser.add_argument("--planner-timeout", type=int, default=None)
     single_parser.add_argument("--output", default=None)
+    single_parser.add_argument("--pddl-cache-root", default=None, help="Compiled PDDL cache root to use for this single case.")
+    single_parser.add_argument("--use-pddl-cache", action="store_true", help="Reuse compiled robustness PDDL when available.")
+    single_parser.add_argument("--write-pddl-cache", action="store_true", help="Write compiled robustness PDDL after compilation.")
     single_parser.set_defaults(func=run_single_case)
 
     simulator_parser = subparsers.add_parser("simulate", help="Interactively simulate a compiled robustness problem.")

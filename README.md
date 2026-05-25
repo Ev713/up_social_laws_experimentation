@@ -44,6 +44,18 @@ Check that configured cases load and compile:
 python -m experimentation.cli loading-check experimentation/all_domains_tests.json
 ```
 
+Populate the compiled robustness PDDL cache during the loading check:
+
+```bash
+python -m experimentation.cli loading-check experimentation/all_domains_tests.json --write-pddl-cache
+```
+
+Reuse cached compiled robustness PDDL during a full run:
+
+```bash
+python -m experimentation.cli run experimentation/all_domains_tests.json --use-pddl-cache
+```
+
 Run the suite and validate expected robustness outcomes:
 
 ```bash
@@ -72,7 +84,10 @@ python -m experimentation.cli analyze experimentation/runs/all_domains_tests
 
 `experimentation/all_domains_tests.json` is the full active experiment config.
 It writes run artifacts under `experimentation/runs/`, uses the `enhsp` engine by
-default, and currently runs both the `general` and `simple` verifiers.
+default, and currently runs both the `general` and `simple` verifiers. When
+`--write-pddl-cache` is enabled, compiled robustness problems are written under
+`experimentation/runs/<run_id>/compiled_pddl/` as `domain.pddl`, `problem.pddl`,
+and `metadata.json` files.
 
 The config intentionally excludes `numeric_civ` and `numeric_grid`: `numeric_civ`
 is currently broken/unstable, and `numeric_grid` is not genuinely numeric after
