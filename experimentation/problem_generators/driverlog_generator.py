@@ -20,16 +20,49 @@ class DriverLogGenerator(ProblemGenerator):
             return {agent_name: goals_data.get(agent_name, []) for agent_name in agent_names}
 
         agent_goals = {agent_name: [] for agent_name in agent_names}
-        for goal_index, goaltuple in enumerate(goals_data):
-            agent_name = agent_names[goal_index % len(agent_names)]
+        truck_owner = {
+            truck_name: agent_name
+            for agent_name, truck_name in zip(agent_names, self.instance_data['trucks'])
+        }
+
+        package_goal_index = 0
+        for goaltuple in goals_data:
+            if goaltuple[0] == 'at' and goaltuple[1][0] in truck_owner:
+                agent_goals[truck_owner[goaltuple[1][0]]].append(goaltuple)
+                continue
+
+            agent_name = agent_names[package_goal_index % len(agent_names)]
             agent_goals[agent_name].append(goaltuple)
+            package_goal_index += 1
         return agent_goals
 
     def add_social_law(self):
         driverlog_sl = SocialLaw()
         agent_goals = self._agent_goal_map()
 
-        for agent_name, truck_name in zip(self.instance_data['agents'], self.instance_data['trucks']):
+        default_truck_by_agent = dict(zip(self.instance_data['agents'], self.instance_data['trucks']))
+        assigned_truck_by_agent = {}
+        assigned_trucks = set()
+
+        for agent_name, goals in agent_goals.items():
+            truck_goals = [
+                goaltuple[1][0]
+                for goaltuple in goals
+                if goaltuple[0] == 'at' and goaltuple[1][0] in self.instance_data['trucks']
+            ]
+            unique_truck_goals = set(truck_goals)
+            if len(unique_truck_goals) > 1:
+                raise ValueError(f"Agent {agent_name} has goals for multiple trucks: {sorted(unique_truck_goals)}")
+            if unique_truck_goals:
+                truck_name = next(iter(unique_truck_goals))
+            else:
+                truck_name = default_truck_by_agent[agent_name]
+            if truck_name in assigned_trucks:
+                raise ValueError(f"Truck {truck_name} is assigned to multiple agents by Driverlog social law goals.")
+            assigned_truck_by_agent[agent_name] = truck_name
+            assigned_trucks.add(truck_name)
+
+        for agent_name, truck_name in assigned_truck_by_agent.items():
             driverlog_sl.add_new_fluent(agent_name, 'assigned_truck', (("t", "truck"),), False)
             driverlog_sl.set_initial_value_for_new_fluent(agent_name, 'assigned_truck', (truck_name,), True)
             driverlog_sl.add_new_fluent(agent_name, 'assigned_package', (("p", "package"),), False)
