@@ -10,8 +10,10 @@ from up_social_laws.ma_problem_waitfor import MultiAgentProblemWithWaitfor
 class NumericIntersectionGenerator(ProblemGenerator):
     def __init__(self):
         super().__init__()
+        self.m = 1
         self.n = 1
-        self.grid_size = 3
+        self.grid_height = 3
+        self.grid_width = 3
         self.vertical_cols = []
         self.horizontal_rows = []
         self.road_locs = []
@@ -22,17 +24,30 @@ class NumericIntersectionGenerator(ProblemGenerator):
     def location_name(self, row, col):
         return f"r{row}_c{col}"
 
+    def read_grid_params(self):
+        if "m" in self.instance_data and "n" in self.instance_data:
+            self.m = int(self.instance_data["m"])
+            self.n = int(self.instance_data["n"])
+        else:
+            self.m = int(self.instance_data.get("n", 1))
+            self.n = self.m
+        if self.m < 1 or self.n < 1:
+            raise ValueError(f"Intersection grid requires m,n >= 1, got m={self.m}, n={self.n}")
+        if self.m > self.n:
+            raise ValueError(f"Intersection grid requires m <= n, got m={self.m}, n={self.n}")
+
     def _build_geometry(self):
-        self.grid_size = (2 * self.n) + 1
-        self.vertical_cols = list(range(1, self.grid_size, 2))
-        self.horizontal_rows = list(range(1, self.grid_size, 2))
+        self.grid_height = (2 * self.m) + 1
+        self.grid_width = (2 * self.n) + 1
+        self.vertical_cols = list(range(1, self.grid_width, 2))
+        self.horizontal_rows = list(range(1, self.grid_height, 2))
 
         road_locs = set()
         for col in self.vertical_cols:
-            for row in range(self.grid_size):
+            for row in range(self.grid_height):
                 road_locs.add((row, col))
         for row in self.horizontal_rows:
-            for col in range(self.grid_size):
+            for col in range(self.grid_width):
                 road_locs.add((row, col))
         self.road_locs = sorted(road_locs)
 
@@ -43,12 +58,16 @@ class NumericIntersectionGenerator(ProblemGenerator):
         for lane_index, col in enumerate(self.vertical_cols, start=1):
             agent_name = f"car-south-{lane_index}"
             self.agent_lane[agent_name] = lane_index
-            self.route_map[agent_name] = [self.location_name(row, col) for row in range(self.grid_size)]
+            self.route_map[agent_name] = [
+                self.location_name(row, col) for row in range(self.grid_height)
+            ]
 
         for lane_index, row in enumerate(self.horizontal_rows, start=1):
             agent_name = f"car-west-{lane_index}"
             self.agent_lane[agent_name] = lane_index
-            self.route_map[agent_name] = [self.location_name(row, col) for col in range(self.grid_size - 1, -1, -1)]
+            self.route_map[agent_name] = [
+                self.location_name(row, col) for col in range(self.grid_width - 1, -1, -1)
+            ]
 
     def _conflicting_south_agent(self, dst_name):
         row, col = (int(piece[1:]) for piece in dst_name.split("_"))
@@ -60,15 +79,17 @@ class NumericIntersectionGenerator(ProblemGenerator):
     def generate_problem(self, file_name=None, sl=False):
         if file_name is not None:
             self.load_instance_data(file_name)
-            self.n = int(self.instance_data.get("n", 1))
+            self.read_grid_params()
         else:
+            self.m = 1
             self.n = 1
 
         self._build_geometry()
         self._build_routes()
         self.state = {}
 
-        self.problem = MultiAgentProblemWithWaitfor(f"numeric_intersection_n{self.n}")
+        self.problem = MultiAgentProblemWithWaitfor(f"numeric_intersection_m{self.m}_n{self.n}")
+        max_progress = max(self.grid_height, self.grid_width) - 1
 
         loc = unified_planning.shortcuts.UserType("loc")
 
@@ -85,7 +106,7 @@ class NumericIntersectionGenerator(ProblemGenerator):
 
             at = Fluent(f"{agent_name}_at", BoolType(), l=loc)
             on_map = Fluent(f"{agent_name}_on_map", BoolType())
-            progress = Fluent(f"{agent_name}_progress", IntType(0, self.grid_size - 1))
+            progress = Fluent(f"{agent_name}_progress", IntType(0, max_progress))
             start = Fluent(f"{agent_name}_start", BoolType(), l=loc)
             self.state[agent_name] = {
                 "at": at,

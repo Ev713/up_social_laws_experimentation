@@ -103,24 +103,23 @@ def populate_grid():
         write_json(dst / f"pfile{i}.json", data)
 
 
+def intersection_instance_pairs(count=20):
+    pairs = []
+    n = 1
+    while len(pairs) < count:
+        for m in range(1, n + 1):
+            pairs.append((m, n))
+            if len(pairs) == count:
+                break
+        n += 1
+    return pairs
+
+
 def populate_intersection():
     dst = ROOT / "intersection"
     dst.mkdir(parents=True, exist_ok=True)
-    templates = [
-        {"cars": ["car-north", "car-south"], "yields_list": [], "wait_drive": True, "durative": False},
-        {"cars": ["car-east", "car-west"], "yields_list": [], "wait_drive": True, "durative": False},
-        {"cars": ["car-north", "car-east", "car-west"], "yields_list": [], "wait_drive": True, "durative": False},
-        {"cars": ["car-north", "car-south", "car-east", "car-west"], "yields_list": [], "wait_drive": True, "durative": False},
-        {"cars": ["car-north", "car-south", "car-east", "car-west"], "yields_list": [["south-ent", "cross-ne"]], "wait_drive": True, "durative": False},
-        {"cars": ["car-north", "car-south", "car-east", "car-west"], "yields_list": [["south-ent", "cross-ne"], ["north-ent", "cross-sw"]], "wait_drive": True, "durative": False},
-        {"cars": ["car-north", "car-south", "car-east", "car-west"], "yields_list": [["south-ent", "cross-ne"], ["north-ent", "cross-sw"], ["east-ent", "cross-nw"]], "wait_drive": True, "durative": False},
-        {"cars": ["car-north", "car-south", "car-east", "car-west"], "yields_list": [["south-ent", "cross-ne"], ["north-ent", "cross-sw"], ["east-ent", "cross-nw"], ["west-ent", "cross-se"]], "wait_drive": True, "durative": False},
-        {"cars": ["car-north", "car-south", "car-east"], "yields_list": [["south-ent", "cross-ne"]], "wait_drive": True, "durative": True},
-        {"cars": ["car-north", "car-south", "car-east", "car-west"], "yields_list": [["south-ent", "cross-ne"]], "wait_drive": True, "durative": True},
-    ]
-    for i in range(20):
-        template = templates[min(i, len(templates) - 1)]
-        write_json(dst / f"pfile{i + 1}.json", template)
+    for i, (m, n) in enumerate(intersection_instance_pairs(20), start=1):
+        write_json(dst / f"pfile{i}.json", {"m": m, "n": n})
 
 
 def main():

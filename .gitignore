@@ -1,0 +1,13 @@
+# Local Python environment
+.venv/
+.env
+.env.*
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Remote experiment artifacts (kept locally, not in git)
+experimentation/server_data/
+
+# Debug logs from `experimentation.cli single-case`
+experimentation/tests/.logs/

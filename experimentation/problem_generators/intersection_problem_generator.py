@@ -11,8 +11,10 @@ from up_social_laws.social_law import SocialLaw
 class IntersectionProblemGenerator(ProblemGenerator):
     def __init__(self):
         super().__init__()
+        self.m = 1
         self.n = 1
-        self.grid_size = 3
+        self.grid_height = 3
+        self.grid_width = 3
         self.road_locs = set()
         self.vertical_cols = []
         self.horizontal_rows = []
@@ -20,18 +22,32 @@ class IntersectionProblemGenerator(ProblemGenerator):
     def location_name(self, row, col):
         return f"r{row}_c{col}"
 
+    def read_grid_params(self):
+        if "m" in self.instance_data and "n" in self.instance_data:
+            self.m = int(self.instance_data["m"])
+            self.n = int(self.instance_data["n"])
+        else:
+            # Legacy square instances used a single "n" for both dimensions.
+            self.m = int(self.instance_data.get("n", 1))
+            self.n = self.m
+        if self.m < 1 or self.n < 1:
+            raise ValueError(f"Intersection grid requires m,n >= 1, got m={self.m}, n={self.n}")
+        if self.m > self.n:
+            raise ValueError(f"Intersection grid requires m <= n, got m={self.m}, n={self.n}")
+
     def lane_coordinates(self):
-        self.grid_size = (2 * self.n) + 1
-        self.vertical_cols = list(range(1, self.grid_size, 2))
-        self.horizontal_rows = list(range(1, self.grid_size, 2))
+        self.grid_height = (2 * self.m) + 1
+        self.grid_width = (2 * self.n) + 1
+        self.vertical_cols = list(range(1, self.grid_width, 2))
+        self.horizontal_rows = list(range(1, self.grid_height, 2))
         self.road_locs = set()
 
         for col in self.vertical_cols:
-            for row in range(self.grid_size):
+            for row in range(self.grid_height):
                 self.road_locs.add((row, col))
 
         for row in self.horizontal_rows:
-            for col in range(self.grid_size):
+            for col in range(self.grid_width):
                 self.road_locs.add((row, col))
 
     def is_intersection(self, row, col):
@@ -76,11 +92,12 @@ class IntersectionProblemGenerator(ProblemGenerator):
     def generate_problem(self, file_name=None, sl=False):
         if file_name is not None:
             self.load_instance_data(file_name)
-            self.n = int(self.instance_data.get("n", 1))
-            problem_name = f"intersection_n{self.n}"
+            self.read_grid_params()
+            problem_name = f"intersection_m{self.m}_n{self.n}"
         else:
+            self.m = 1
             self.n = 1
-            problem_name = "intersection_n1"
+            problem_name = "intersection_m1_n1"
 
         self.lane_coordinates()
         self.problem = MultiAgentProblemWithWaitfor(problem_name)
@@ -104,7 +121,7 @@ class IntersectionProblemGenerator(ProblemGenerator):
         )
 
         for col in self.vertical_cols:
-            for row in range(self.grid_size - 1):
+            for row in range(self.grid_height - 1):
                 self.problem.set_initial_value(
                     connected(
                         self.problem.object(self.location_name(row, col)),
@@ -115,7 +132,7 @@ class IntersectionProblemGenerator(ProblemGenerator):
                 )
 
         for row in self.horizontal_rows:
-            for col in range(1, self.grid_size):
+            for col in range(1, self.grid_width):
                 self.problem.set_initial_value(
                     connected(
                         self.problem.object(self.location_name(row, col)),
@@ -164,7 +181,7 @@ class IntersectionProblemGenerator(ProblemGenerator):
             agent.add_action(drive)
 
             start_obj = self.problem.object(self.location_name(0, col))
-            goal_obj = self.problem.object(self.location_name(self.grid_size - 1, col))
+            goal_obj = self.problem.object(self.location_name(self.grid_height - 1, col))
             south_obj = self.problem.object("south")
 
             self.problem.set_initial_value(Dot(agent, agent.fluent("start")(start_obj)), True)
@@ -182,7 +199,7 @@ class IntersectionProblemGenerator(ProblemGenerator):
             agent.add_action(arrive)
             agent.add_action(drive)
 
-            start_obj = self.problem.object(self.location_name(row, self.grid_size - 1))
+            start_obj = self.problem.object(self.location_name(row, self.grid_width - 1))
             goal_obj = self.problem.object(self.location_name(row, 0))
             west_obj = self.problem.object("west")
 
