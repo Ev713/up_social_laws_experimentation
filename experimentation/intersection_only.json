@@ -1,5 +1,5 @@
 {
-  "id": "all_domains_tests",
+  "id": "intersections_only",
   "output_dir": "./experimentation/runs",
   "limits": {
     "engine": "enhsp",
