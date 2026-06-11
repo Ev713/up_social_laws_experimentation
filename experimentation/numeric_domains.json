@@ -1,5 +1,5 @@
 {
-  "id": "all_domains_tests",
+  "id": "numeric_domains",
   "output_dir": "./experimentation/runs",
   "limits": {
     "engine": "enhsp",
