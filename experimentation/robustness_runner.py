@@ -24,12 +24,9 @@ from unified_planning.shortcuts import Compiler, OneshotPlanner, get_environment
 from experimentation.problem_generators.blocksworld_generator import BlocksworldGenerator
 from experimentation.problem_generators.driverlog_generator import DriverLogGenerator
 from experimentation.problem_generators.expedition_generator import ExpeditionGenerator
-from experimentation.problem_generators.grid_generator import GridGenerator
 from experimentation.problem_generators.intersection_problem_generator import IntersectionProblemGenerator
 from experimentation.problem_generators.market_trader_generator import MarketTraderGenerator
 from experimentation.problem_generators.numeric_civ_generator import NumericCivGenerator
-from experimentation.problem_generators.numeric_grid_generator import NumericGridGenerator
-from experimentation.problem_generators.numeric_intersection_generator import NumericIntersectionGenerator
 from experimentation.problem_generators.numeric_zenotravel_generator import NumericZenotravelGenerator
 from experimentation.problem_generators.zenotravel_generator import ZenoTravelGenerator
 from up_social_laws.robustness_checker import SocialLawRobustnessStatus
@@ -114,12 +111,6 @@ class RunnerConfig:
 
 
 DOMAIN_SPECS: Dict[str, DomainSpec] = {
-    "numeric_grid": DomainSpec(
-        name="numeric_grid",
-        generator_cls=NumericGridGenerator,
-        instances_dir=PROJECT_ROOT / "experimentation" / "instances" / "numeric_grid",
-        supports_social_law=True,
-    ),
     "numeric_zenotravel": DomainSpec(
         name="numeric_zenotravel",
         generator_cls=NumericZenotravelGenerator,
@@ -171,12 +162,6 @@ DOMAIN_SPECS: Dict[str, DomainSpec] = {
     "intersection": DomainSpec(
         name="intersection",
         generator_cls=IntersectionProblemGenerator,
-        instances_dir=PROJECT_ROOT / "experimentation" / "instances" / "intersection",
-        supports_social_law=True,
-    ),
-    "numeric_intersection": DomainSpec(
-        name="numeric_intersection",
-        generator_cls=NumericIntersectionGenerator,
         instances_dir=PROJECT_ROOT / "experimentation" / "instances" / "intersection",
         supports_social_law=True,
     ),
